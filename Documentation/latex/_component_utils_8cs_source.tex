@@ -1,0 +1,26 @@
+\doxysection{Component\+Utils.\+cs}
+\hypertarget{_component_utils_8cs_source}{}\label{_component_utils_8cs_source}\index{Tools/ComponentUtils.cs@{Tools/ComponentUtils.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Reflection;}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00004}\mbox{\hyperlink{namespace_tools}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_tools}{Tools}}}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00009}\mbox{\hyperlink{class_tools_1_1_component_utils}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_tools_1_1_component_utils}{ComponentUtils}}}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00018}\mbox{\hyperlink{class_tools_1_1_component_utils_a451c1bbf3b1f4d5d8933382cf2dfebb6}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ T\ \mbox{\hyperlink{class_tools_1_1_component_utils_a451c1bbf3b1f4d5d8933382cf2dfebb6}{ReplaceComponent<T>}}(T\ original,\ T\ replacement)\ where\ T\ :\ Component}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ FieldInfo[]\ fields\ =\ typeof(T).GetFields();}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (FieldInfo\ field\ \textcolor{keywordflow}{in}\ fields)}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ field.SetValue(original,\ field.GetValue(replacement));}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ original;}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_component_utils_8cs_source_l00030}00030\ \}}
+
+\end{DoxyCode}

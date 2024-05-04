@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_spawnables_1_1_pickups" xml:lang="en-US">
+<title>Spawnables.Pickups Namespace Reference</title>
+<indexterm><primary>Spawnables.Pickups</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_pickups_1_1_multiplier_pickup">MultiplierPickup</link></para>
+
+<para>Grabbing this pickup increases the score multiplier. The score multiplier is reset by taking damage or by letting the pickup leave the playfield. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_pickups_1_1_pickup">Pickup</link></para>
+
+<para>Entity increasing player&apos;s resources when picked up. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

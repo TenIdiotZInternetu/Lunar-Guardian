@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__score_data_8cs_source" xml:lang="en-US">
+<title>ScoreData.cs</title>
+<indexterm><primary>Scripts/Serialization/ScoreData.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__score_data_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System;
+<anchor xml:id="__score_data_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>System.IO;
+<anchor xml:id="__score_data_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>System.Runtime.Serialization;
+<anchor xml:id="__score_data_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>Unity.VisualScripting;
+<anchor xml:id="__score_data_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__score_data_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.SocialPlatforms.Impl;
+<anchor xml:id="__score_data_8cs_source_1l00007"/>00007 
+<anchor xml:id="__score_data_8cs_source_1l00008"/>00008 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_serialization">Serialization</link>
+<anchor xml:id="__score_data_8cs_source_1l00009"/>00009 {
+<anchor xml:id="__score_data_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;[System.Serializable]
+<anchor xml:id="__score_data_8cs_source_1l00014"/><link linkend="_class_serialization_1_1_score_data">00014</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_serialization_1_1_score_data">ScoreData</link>
+<anchor xml:id="__score_data_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__score_data_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;---------------------&#32;Constants&#32;---------------------&#32;*/</emphasis>
+<anchor xml:id="__score_data_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__score_data_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;SAVE_PATH&#32;=&#32;<emphasis role="stringliteral">&quot;scores.dat&quot;</emphasis>;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Relative&#32;path&#32;to&#32;the&#32;save&#32;file</emphasis>
+<anchor xml:id="__score_data_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;MAX_SAVED_SCORES&#32;=&#32;30;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Scores&#32;worse&#32;than&#32;the&#32;30th&#32;best&#32;are&#32;not&#32;saved</emphasis>
+<anchor xml:id="__score_data_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__score_data_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;AUTHORS_PB&#32;=&#32;37000;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Mentioned&#32;so&#32;the&#32;leaderboard&#32;doesn&apos;t&#32;look&#32;empty</emphasis>
+<anchor xml:id="__score_data_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;AUTHOR&#32;=&#32;<emphasis role="stringliteral">&quot;TIZI&quot;</emphasis>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;That&apos;s&#32;me!</emphasis>
+<anchor xml:id="__score_data_8cs_source_1l00023"/>00023 
+<anchor xml:id="__score_data_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Public&#32;Fields&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__score_data_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__score_data_8cs_source_1l00029"/><link linkend="_class_serialization_1_1_score_data_1adc99decbd8f765a5af197c2c88211e4e">00029</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;<link linkend="_class_serialization_1_1_score_data_1adc99decbd8f765a5af197c2c88211e4e">names</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>[MAX_SAVED_SCORES];
+<anchor xml:id="__score_data_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__score_data_8cs_source_1l00034"/><link linkend="_class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf">00034</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>[]&#32;<link linkend="_class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf">sortedScores</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>[MAX_SAVED_SCORES];
+<anchor xml:id="__score_data_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__score_data_8cs_source_1l00039"/><link linkend="_class_serialization_1_1_score_data_1a69d2493e8a51b7aba3af2e2fe74d8d37">00039</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_serialization_1_1_score_data_1a69d2493e8a51b7aba3af2e2fe74d8d37">savedScoresCount</link>&#32;=&#32;0;
+<anchor xml:id="__score_data_8cs_source_1l00040"/>00040 
+<anchor xml:id="__score_data_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Public&#32;Methods&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__score_data_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__score_data_8cs_source_1l00047"/><link linkend="_class_serialization_1_1_score_data_1a74cf69194846ff3656b5e1377c39cbda">00047</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_serialization_1_1_score_data">ScoreData</link>&#32;<link linkend="_class_serialization_1_1_score_data_1a74cf69194846ff3656b5e1377c39cbda">LoadScores</link>()
+<anchor xml:id="__score_data_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__score_data_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>
+<anchor xml:id="__score_data_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__score_data_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_serialization_1_1_save_system">SaveSystem</link>.LoadData&lt;<link linkend="_class_serialization_1_1_score_data">ScoreData</link>&gt;(SAVE_PATH);
+<anchor xml:id="__score_data_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__score_data_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(FileNotFoundException&#32;e)
+<anchor xml:id="__score_data_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__score_data_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;newData&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_serialization_1_1_score_data">ScoreData</link>();
+<anchor xml:id="__score_data_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;newData.AddScore(AUTHORS_PB,&#32;AUTHOR);
+<anchor xml:id="__score_data_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_serialization_1_1_save_system">SaveSystem</link>.SaveData(newData,&#32;SAVE_PATH);
+<anchor xml:id="__score_data_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;newData;
+<anchor xml:id="__score_data_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__score_data_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__score_data_8cs_source_1l00061"/>00061 
+<anchor xml:id="__score_data_8cs_source_1l00068"/><link linkend="_class_serialization_1_1_score_data_1a886e39b99d6ac17e2906dc536227ecbe">00068</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_serialization_1_1_score_data_1a886e39b99d6ac17e2906dc536227ecbe">AddScore</link>(<emphasis role="keywordtype">int</emphasis>&#32;score,&#32;<emphasis role="keywordtype">string</emphasis>&#32;name)
+<anchor xml:id="__score_data_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__score_data_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;lowestScore&#32;=&#32;<link linkend="_class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf">sortedScores</link>[^1];
+<anchor xml:id="__score_data_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(score&#32;&lt;&#32;lowestScore)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__score_data_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__score_data_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;<link linkend="_class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf">sortedScores</link>.Length&#32;-&#32;1;&#32;i&#32;&gt;=&#32;0&#32;;&#32;i--)
+<anchor xml:id="__score_data_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__score_data_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;comparedScore&#32;=&#32;<link linkend="_class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf">sortedScores</link>[i];
+<anchor xml:id="__score_data_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(score&#32;&lt;=&#32;comparedScore)&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__score_data_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__score_data_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Push&#32;lower&#32;score&#32;down</emphasis>
+<anchor xml:id="__score_data_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;!=&#32;<link linkend="_class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf">sortedScores</link>.Length&#32;-&#32;1)
+<anchor xml:id="__score_data_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__score_data_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf">sortedScores</link>[i&#32;+&#32;1]&#32;=&#32;comparedScore;
+<anchor xml:id="__score_data_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_serialization_1_1_score_data_1adc99decbd8f765a5af197c2c88211e4e">names</link>[i&#32;+&#32;1]&#32;=&#32;<link linkend="_class_serialization_1_1_score_data_1adc99decbd8f765a5af197c2c88211e4e">names</link>[i];
+<anchor xml:id="__score_data_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__score_data_8cs_source_1l00084"/>00084 
+<anchor xml:id="__score_data_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf">sortedScores</link>[i]&#32;=&#32;score;
+<anchor xml:id="__score_data_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_serialization_1_1_score_data_1adc99decbd8f765a5af197c2c88211e4e">names</link>[i]&#32;=&#32;name;
+<anchor xml:id="__score_data_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__score_data_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__score_data_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_serialization_1_1_score_data_1a69d2493e8a51b7aba3af2e2fe74d8d37">savedScoresCount</link>&#32;=&#32;Math.Min(<link linkend="_class_serialization_1_1_score_data_1a69d2493e8a51b7aba3af2e2fe74d8d37">savedScoresCount</link>&#32;+&#32;1,&#32;MAX_SAVED_SCORES);
+<anchor xml:id="__score_data_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__score_data_8cs_source_1l00091"/>00091 
+<anchor xml:id="__score_data_8cs_source_1l00098"/><link linkend="_class_serialization_1_1_score_data_1a02238a4e4ab88f5e93908f6dd4c098da">00098</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_serialization_1_1_score_data_1a02238a4e4ab88f5e93908f6dd4c098da">AddScoreAndSave</link>(<emphasis role="keywordtype">int</emphasis>&#32;score,&#32;<emphasis role="keywordtype">string</emphasis>&#32;name)
+<anchor xml:id="__score_data_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__score_data_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_serialization_1_1_score_data_1a886e39b99d6ac17e2906dc536227ecbe">AddScore</link>(score,&#32;name);
+<anchor xml:id="__score_data_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_serialization_1_1_save_system">SaveSystem</link>.SaveData(<emphasis role="keyword">this</emphasis>,&#32;SAVE_PATH);
+<anchor xml:id="__score_data_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__score_data_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__score_data_8cs_source_1l00104"/>00104 }
+</programlisting></section>

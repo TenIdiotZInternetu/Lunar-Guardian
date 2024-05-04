@@ -1,0 +1,575 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_path_creator_data" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::PathCreatorData</compoundname>
+    <sectiondef kind="event">
+      <memberdef kind="event" id="class_path_creation_1_1_path_creator_data_1a1a264dd03e9b0ad444cb08f36323659d" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>System.Action</type>
+        <definition>System.Action bezierOrVertexPathModified</definition>
+        <argsstring></argsstring>
+        <name>bezierOrVertexPathModified</name>
+        <qualifiedname>PathCreation.PathCreatorData.bezierOrVertexPathModified</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="9" column="35" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_path_creation_1_1_path_creator_data_1a6c4c4da7e07092b2010b4319bb8b27cd" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>System.Action</type>
+        <definition>System.Action bezierCreated</definition>
+        <argsstring></argsstring>
+        <name>bezierCreated</name>
+        <qualifiedname>PathCreation.PathCreatorData.bezierCreated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="10" column="35" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1af6a6e2cb1af85d8b5cb0d871f202b05e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_path_creation_1_1_bezier_path" kindref="compound">BezierPath</ref></type>
+        <definition>BezierPath _bezierPath</definition>
+        <argsstring></argsstring>
+        <name>_bezierPath</name>
+        <qualifiedname>PathCreation.PathCreatorData._bezierPath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="13" column="20" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a71fc8ab28369b9ff04f0eb58b1c90b18" prot="private" static="no" mutable="no">
+        <type><ref refid="class_path_creation_1_1_vertex_path" kindref="compound">VertexPath</ref></type>
+        <definition>VertexPath _vertexPath</definition>
+        <argsstring></argsstring>
+        <name>_vertexPath</name>
+        <qualifiedname>PathCreation.PathCreatorData._vertexPath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="14" column="20" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a7916b03392b49fe88aa2d7c7adb41e18" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vertexPathUpToDate</definition>
+        <argsstring></argsstring>
+        <name>vertexPathUpToDate</name>
+        <qualifiedname>PathCreation.PathCreatorData.vertexPathUpToDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="17" column="14" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a5a162f11e22430b8095d3ca46d4327fe" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float vertexPathMaxAngleError</definition>
+        <argsstring></argsstring>
+        <name>vertexPathMaxAngleError</name>
+        <qualifiedname>PathCreation.PathCreatorData.vertexPathMaxAngleError</qualifiedname>
+        <initializer>= .3f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="20" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a3658d2e7c039e7e3e2d1a10ac9cc2b49" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float vertexPathMinVertexSpacing</definition>
+        <argsstring></argsstring>
+        <name>vertexPathMinVertexSpacing</name>
+        <qualifiedname>PathCreation.PathCreatorData.vertexPathMinVertexSpacing</qualifiedname>
+        <initializer>= 0.01f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="21" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1abdd625f7fdc98740d3f2b43cf2bf7962" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool showTransformTool</definition>
+        <argsstring></argsstring>
+        <name>showTransformTool</name>
+        <qualifiedname>PathCreation.PathCreatorData.showTransformTool</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="24" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a7e7d0bdbde2130869ac4a69e97a4e4bf" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool showPathBounds</definition>
+        <argsstring></argsstring>
+        <name>showPathBounds</name>
+        <qualifiedname>PathCreation.PathCreatorData.showPathBounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="25" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a57df9dfbf7bb6a30e241e42a56613b12" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool showPerSegmentBounds</definition>
+        <argsstring></argsstring>
+        <name>showPerSegmentBounds</name>
+        <qualifiedname>PathCreation.PathCreatorData.showPerSegmentBounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="26" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a8e4788b0f113b1fde1b117713009198b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool displayAnchorPoints</definition>
+        <argsstring></argsstring>
+        <name>displayAnchorPoints</name>
+        <qualifiedname>PathCreation.PathCreatorData.displayAnchorPoints</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="27" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a58cc72da9a86544fdaa66741c9e2944b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool displayControlPoints</definition>
+        <argsstring></argsstring>
+        <name>displayControlPoints</name>
+        <qualifiedname>PathCreation.PathCreatorData.displayControlPoints</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="28" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a57235976566d5eea76d445dd9f49a9e0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float bezierHandleScale</definition>
+        <argsstring></argsstring>
+        <name>bezierHandleScale</name>
+        <qualifiedname>PathCreation.PathCreatorData.bezierHandleScale</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="29" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a1290669941f746d33cac7eacc5883167" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool globalDisplaySettingsFoldout</definition>
+        <argsstring></argsstring>
+        <name>globalDisplaySettingsFoldout</name>
+        <qualifiedname>PathCreation.PathCreatorData.globalDisplaySettingsFoldout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="30" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a827fe4ea0ba4e4ec7cba1a6e27cb38a1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool keepConstantHandleSize</definition>
+        <argsstring></argsstring>
+        <name>keepConstantHandleSize</name>
+        <qualifiedname>PathCreation.PathCreatorData.keepConstantHandleSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="31" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1abb8fd8c0312b2ed01f43a2c93bab30f3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool showNormalsInVertexMode</definition>
+        <argsstring></argsstring>
+        <name>showNormalsInVertexMode</name>
+        <qualifiedname>PathCreation.PathCreatorData.showNormalsInVertexMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="34" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1abb88c8d06915e9fb7f8a70c2b10e8b6b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool showBezierPathInVertexMode</definition>
+        <argsstring></argsstring>
+        <name>showBezierPathInVertexMode</name>
+        <qualifiedname>PathCreation.PathCreatorData.showBezierPathInVertexMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="35" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a0298fdb2f00cb033c9f78f8a3d6e40ed" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool showDisplayOptions</definition>
+        <argsstring></argsstring>
+        <name>showDisplayOptions</name>
+        <qualifiedname>PathCreation.PathCreatorData.showDisplayOptions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="38" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1abb521c3a40da349c7458e9f1df371e3a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool showPathOptions</definition>
+        <argsstring></argsstring>
+        <name>showPathOptions</name>
+        <qualifiedname>PathCreation.PathCreatorData.showPathOptions</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="39" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a7bb918475fd5b1c7a35ec9bcacddd688" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool showVertexPathDisplayOptions</definition>
+        <argsstring></argsstring>
+        <name>showVertexPathDisplayOptions</name>
+        <qualifiedname>PathCreation.PathCreatorData.showVertexPathDisplayOptions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="40" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a3732ca3597b619e2e7e1ff6ded2efcf1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool showVertexPathOptions</definition>
+        <argsstring></argsstring>
+        <name>showVertexPathOptions</name>
+        <qualifiedname>PathCreation.PathCreatorData.showVertexPathOptions</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="41" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a56290dd8fbfe02a80b275b8262a04f82" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool showNormals</definition>
+        <argsstring></argsstring>
+        <name>showNormals</name>
+        <qualifiedname>PathCreation.PathCreatorData.showNormals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="42" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1a2eec400acaa70fa39ca205a2fb18e945" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool showNormalsHelpInfo</definition>
+        <argsstring></argsstring>
+        <name>showNormalsHelpInfo</name>
+        <qualifiedname>PathCreation.PathCreatorData.showNormalsHelpInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="43" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_data_1ab81bd7203a4363b9a47a128224b8eb61" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tabIndex</definition>
+        <argsstring></argsstring>
+        <name>tabIndex</name>
+        <qualifiedname>PathCreation.PathCreatorData.tabIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="44" column="20" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_path_creation_1_1_path_creator_data_1a0028a8eff418f01f8802838688fd6965" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_path_creation_1_1_bezier_path" kindref="compound">BezierPath</ref></type>
+        <definition>BezierPath bezierPath</definition>
+        <argsstring></argsstring>
+        <name>bezierPath</name>
+        <qualifiedname>PathCreation.PathCreatorData.bezierPath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="78" column="27" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="78" bodyend="96"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_path_creation_1_1_path_creator_data_1acbe5d40937b0bbc44bd8fca7b12c1727" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Initialize</definition>
+        <argsstring>(bool defaultIs2D)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>PathCreation.PathCreatorData.Initialize</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>defaultIs2D</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="46" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="46" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_path_creator_data_1acc31b1632b72bb8c330153d714deb827" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ResetBezierPath</definition>
+        <argsstring>(Vector3 centre, bool defaultIs2D=false)</argsstring>
+        <name>ResetBezierPath</name>
+        <qualifiedname>PathCreation.PathCreatorData.ResetBezierPath</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>centre</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>defaultIs2D</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="55" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_path_creator_data_1a17d278a1b0db08233d0acd74a8250dc4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_path_creation_1_1_vertex_path" kindref="compound">VertexPath</ref></type>
+        <definition>VertexPath GetVertexPath</definition>
+        <argsstring>(Transform transform)</argsstring>
+        <name>GetVertexPath</name>
+        <qualifiedname>PathCreation.PathCreatorData.GetVertexPath</qualifiedname>
+        <param>
+          <type>Transform</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="99" column="27" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="99" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_path_creator_data_1a40163931e9dde41f21b98f08197f2c05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PathTransformed</definition>
+        <argsstring>()</argsstring>
+        <name>PathTransformed</name>
+        <qualifiedname>PathCreation.PathCreatorData.PathTransformed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="108" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="108" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_path_creator_data_1a40126137d7eaea642495bf28d6b27256" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void VertexPathSettingsChanged</definition>
+        <argsstring>()</argsstring>
+        <name>VertexPathSettingsChanged</name>
+        <qualifiedname>PathCreation.PathCreatorData.VertexPathSettingsChanged</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="114" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="114" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_path_creator_data_1a6cd85faff3df62df9ebad64feaf59dd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PathModifiedByUndo</definition>
+        <argsstring>()</argsstring>
+        <name>PathModifiedByUndo</name>
+        <qualifiedname>PathCreation.PathCreatorData.PathModifiedByUndo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="121" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="121" bodyend="126"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_path_creation_1_1_path_creator_data_1acfbe80c640850cdd9e20a697865db067" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateBezier</definition>
+        <argsstring>(Vector3 centre, bool defaultIs2D=false)</argsstring>
+        <name>CreateBezier</name>
+        <qualifiedname>PathCreation.PathCreatorData.CreateBezier</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>centre</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>defaultIs2D</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="59" column="14" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="59" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_path_creator_data_1a72ae6399ed49c412e49ef73bb9371908" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BezierPathEdited</definition>
+        <argsstring>()</argsstring>
+        <name>BezierPathEdited</name>
+        <qualifiedname>PathCreation.PathCreatorData.BezierPathEdited</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="128" column="14" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="128" bodyend="133"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Stores state data for the path creator editor. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>BezierPath</label>
+        <link refid="class_path_creation_1_1_bezier_path"/>
+      </node>
+      <node id="3">
+        <label>VertexPath</label>
+        <link refid="class_path_creation_1_1_vertex_path"/>
+      </node>
+      <node id="1">
+        <label>PathCreatorData</label>
+        <link refid="class_path_creation_1_1_path_creator_data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_bezierPath</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_vertexPath</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" line="8" column="11" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreatorData.cs" bodystart="8" bodyend="135"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_path_creator_data_1af6a6e2cb1af85d8b5cb0d871f202b05e" prot="private" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>_bezierPath</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a71fc8ab28369b9ff04f0eb58b1c90b18" prot="private" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>_vertexPath</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a6c4c4da7e07092b2010b4319bb8b27cd" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>bezierCreated</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a57235976566d5eea76d445dd9f49a9e0" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>bezierHandleScale</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a1a264dd03e9b0ad444cb08f36323659d" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>bezierOrVertexPathModified</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a0028a8eff418f01f8802838688fd6965" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>bezierPath</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a72ae6399ed49c412e49ef73bb9371908" prot="private" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>BezierPathEdited</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1acfbe80c640850cdd9e20a697865db067" prot="private" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>CreateBezier</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a8e4788b0f113b1fde1b117713009198b" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>displayAnchorPoints</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a58cc72da9a86544fdaa66741c9e2944b" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>displayControlPoints</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a17d278a1b0db08233d0acd74a8250dc4" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>GetVertexPath</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a1290669941f746d33cac7eacc5883167" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>globalDisplaySettingsFoldout</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1acbe5d40937b0bbc44bd8fca7b12c1727" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>Initialize</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a827fe4ea0ba4e4ec7cba1a6e27cb38a1" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>keepConstantHandleSize</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a6cd85faff3df62df9ebad64feaf59dd1" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>PathModifiedByUndo</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a40163931e9dde41f21b98f08197f2c05" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>PathTransformed</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1acc31b1632b72bb8c330153d714deb827" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>ResetBezierPath</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1abb88c8d06915e9fb7f8a70c2b10e8b6b" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>showBezierPathInVertexMode</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a0298fdb2f00cb033c9f78f8a3d6e40ed" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>showDisplayOptions</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a56290dd8fbfe02a80b275b8262a04f82" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>showNormals</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a2eec400acaa70fa39ca205a2fb18e945" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>showNormalsHelpInfo</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1abb8fd8c0312b2ed01f43a2c93bab30f3" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>showNormalsInVertexMode</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a7e7d0bdbde2130869ac4a69e97a4e4bf" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>showPathBounds</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1abb521c3a40da349c7458e9f1df371e3a" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>showPathOptions</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a57df9dfbf7bb6a30e241e42a56613b12" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>showPerSegmentBounds</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1abdd625f7fdc98740d3f2b43cf2bf7962" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>showTransformTool</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a7bb918475fd5b1c7a35ec9bcacddd688" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>showVertexPathDisplayOptions</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a3732ca3597b619e2e7e1ff6ded2efcf1" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>showVertexPathOptions</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1ab81bd7203a4363b9a47a128224b8eb61" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>tabIndex</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a5a162f11e22430b8095d3ca46d4327fe" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>vertexPathMaxAngleError</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a3658d2e7c039e7e3e2d1a10ac9cc2b49" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>vertexPathMinVertexSpacing</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a40126137d7eaea642495bf28d6b27256" prot="public" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>VertexPathSettingsChanged</name></member>
+      <member refid="class_path_creation_1_1_path_creator_data_1a7916b03392b49fe88aa2d7c7adb41e18" prot="private" virt="non-virtual"><scope>PathCreation::PathCreatorData</scope><name>vertexPathUpToDate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

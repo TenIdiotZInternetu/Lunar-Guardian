@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data" kind="struct" language="C#" prot="public">
+    <compoundname>PathCreation::VertexPath::TimeOnPathData</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data_1a4ab18404d0348108af4e3c276a9b3ded" prot="public" static="no" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int previousIndex</definition>
+        <argsstring></argsstring>
+        <name>previousIndex</name>
+        <qualifiedname>PathCreation.VertexPath.TimeOnPathData.previousIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="330" column="33" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data_1af363a2f70d4aec9a396df5bbfc43b17a" prot="public" static="no" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int nextIndex</definition>
+        <argsstring></argsstring>
+        <name>nextIndex</name>
+        <qualifiedname>PathCreation.VertexPath.TimeOnPathData.nextIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="331" column="33" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data_1aba7b9741b1b71aca18ad624064b6183c" prot="public" static="no" mutable="no">
+        <type>readonly float</type>
+        <definition>readonly float percentBetweenIndices</definition>
+        <argsstring></argsstring>
+        <name>percentBetweenIndices</name>
+        <qualifiedname>PathCreation.VertexPath.TimeOnPathData.percentBetweenIndices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="332" column="35" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="332" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data_1a5cbacd4baf6e8bd2d95d70fde0b4771c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TimeOnPathData</definition>
+        <argsstring>(int prev, int next, float percentBetweenIndices)</argsstring>
+        <name>TimeOnPathData</name>
+        <qualifiedname>PathCreation.VertexPath.TimeOnPathData.TimeOnPathData</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>prev</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>next</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>percentBetweenIndices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="334" column="20" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="334" bodyend="338"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="329" column="15" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="329" bodyend="339"/>
+    <listofallmembers>
+      <member refid="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data_1af363a2f70d4aec9a396df5bbfc43b17a" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath::TimeOnPathData</scope><name>nextIndex</name></member>
+      <member refid="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data_1aba7b9741b1b71aca18ad624064b6183c" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath::TimeOnPathData</scope><name>percentBetweenIndices</name></member>
+      <member refid="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data_1a4ab18404d0348108af4e3c276a9b3ded" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath::TimeOnPathData</scope><name>previousIndex</name></member>
+      <member refid="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data_1a5cbacd4baf6e8bd2d95d70fde0b4771c" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath::TimeOnPathData</scope><name>TimeOnPathData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

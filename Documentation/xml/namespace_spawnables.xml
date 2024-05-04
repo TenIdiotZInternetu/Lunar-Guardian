@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_spawnables" kind="namespace" language="C#">
+    <compoundname>Spawnables</compoundname>
+    <innerclass refid="class_spawnables_1_1_despawn_collider" prot="public">Spawnables::DespawnCollider</innerclass>
+    <innerclass refid="class_spawnables_1_1_entity" prot="public">Spawnables::Entity</innerclass>
+    <innerclass refid="class_spawnables_1_1_object_pool" prot="public">Spawnables::ObjectPool</innerclass>
+    <innerclass refid="class_spawnables_1_1_object_pool_manager" prot="public">Spawnables::ObjectPoolManager</innerclass>
+    <innerclass refid="class_spawnables_1_1_spin" prot="public">Spawnables::Spin</innerclass>
+    <innernamespace refid="namespace_spawnables_1_1_enemy_scripts">Spawnables::EnemyScripts</innernamespace>
+    <innernamespace refid="namespace_spawnables_1_1_pickups">Spawnables::Pickups</innernamespace>
+    <innernamespace refid="namespace_spawnables_1_1_weapons">Spawnables::Weapons</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Spawnables/DespawnCollider.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

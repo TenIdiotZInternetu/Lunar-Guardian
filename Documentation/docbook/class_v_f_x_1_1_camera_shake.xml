@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_v_f_x_1_1_camera_shake" xml:lang="en-US">
+<title>CameraShake Class Reference</title>
+<indexterm><primary>CameraShake</primary></indexterm>
+<para>
+
+<para>Shakes the camera violently, by displacing it rapidly over time. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_v_f_x_1_1_camera_shake_1a5ef9d62171f0aadec56201559383772f"/>void <emphasis role="strong">ShakeCamera</emphasis> ()</para>
+
+<para>Starts shaking the camera violently. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_v_f_x_1_1_camera_shake_1a2008f4ab70b5e4104c2ca43932536ddf"/>Camera <emphasis role="strong">camera</emphasis></para>
+
+<para>Camera to shake. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_v_f_x_1_1_camera_shake_1a2dc31d4e55d1ff0903621376b55fd950"/>AnimationCurve <emphasis role="strong">shakeCurve</emphasis></para>
+
+<para>Intensity multiplier of the shake over time. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_v_f_x_1_1_camera_shake_1a2dfe87f3417747242e8f043dd4f3fb59"/>float <emphasis role="strong">intensity</emphasis></para>
+
+<para>Distance the camera will be displaced from its original position. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_v_f_x_1_1_camera_shake_1a8d2dee94459105e68841839ad2b49520"/>float <emphasis role="strong">refreshRate</emphasis></para>
+
+<para>Amount of displacements per second. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__camera_shake_8cs_source_1l00009">9</link> of file <link linkend="__camera_shake_8cs_source">CameraShake.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/VFX/CameraShake.cs</section>
+</section>

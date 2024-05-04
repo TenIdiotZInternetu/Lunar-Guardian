@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info" kind="struct" language="C#" prot="public">
+    <compoundname>PathCreationEditor::ScreenSpacePolyLine::MouseInfo</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a16f8092e69978d611a55bd3363193876" prot="public" static="no" mutable="no">
+        <type>readonly float</type>
+        <definition>readonly float mouseDstToLine</definition>
+        <argsstring></argsstring>
+        <name>mouseDstToLine</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.MouseInfo.mouseDstToLine</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="196" column="35" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a01ead506993ba33170ce45f849505f86" prot="public" static="no" mutable="no">
+        <type>readonly Vector3</type>
+        <definition>readonly Vector3 closestWorldPointToMouse</definition>
+        <argsstring></argsstring>
+        <name>closestWorldPointToMouse</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.MouseInfo.closestWorldPointToMouse</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="197" column="37" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a5ef92f329351db516693d90dfb7135d3" prot="public" static="no" mutable="no">
+        <type>readonly float</type>
+        <definition>readonly float distanceAlongPathWorld</definition>
+        <argsstring></argsstring>
+        <name>distanceAlongPathWorld</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.MouseInfo.distanceAlongPathWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="198" column="35" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a7b073fcecef0564ec06fcf13ad816b97" prot="public" static="no" mutable="no">
+        <type>readonly float</type>
+        <definition>readonly float timeOnPath</definition>
+        <argsstring></argsstring>
+        <name>timeOnPath</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.MouseInfo.timeOnPath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="199" column="35" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a734fbc48f50ac483bf1a495f11b63e0b" prot="public" static="no" mutable="no">
+        <type>readonly float</type>
+        <definition>readonly float timeOnBezierSegment</definition>
+        <argsstring></argsstring>
+        <name>timeOnBezierSegment</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.MouseInfo.timeOnBezierSegment</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="200" column="35" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1adc6cd23a29d18903c17f14aa60efb3c7" prot="public" static="no" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int closestSegmentIndex</definition>
+        <argsstring></argsstring>
+        <name>closestSegmentIndex</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.MouseInfo.closestSegmentIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="201" column="33" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="201" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a69424f31a1f09a835bf90a9e15b2a676" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MouseInfo</definition>
+        <argsstring>(float mouseDstToLine, Vector3 closestWorldPointToMouse, float distanceAlongPathWorld, float timeOnPath, float timeOnBezierSegment, int closestSegmentIndex)</argsstring>
+        <name>MouseInfo</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.MouseInfo.MouseInfo</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>mouseDstToLine</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>closestWorldPointToMouse</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>distanceAlongPathWorld</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>timeOnPath</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>timeOnBezierSegment</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>closestSegmentIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="204" column="20" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="204" bodyend="212"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="194" column="15" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="195" bodyend="213"/>
+    <listofallmembers>
+      <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1adc6cd23a29d18903c17f14aa60efb3c7" prot="public" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine::MouseInfo</scope><name>closestSegmentIndex</name></member>
+      <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a01ead506993ba33170ce45f849505f86" prot="public" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine::MouseInfo</scope><name>closestWorldPointToMouse</name></member>
+      <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a5ef92f329351db516693d90dfb7135d3" prot="public" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine::MouseInfo</scope><name>distanceAlongPathWorld</name></member>
+      <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a16f8092e69978d611a55bd3363193876" prot="public" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine::MouseInfo</scope><name>mouseDstToLine</name></member>
+      <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a69424f31a1f09a835bf90a9e15b2a676" prot="public" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine::MouseInfo</scope><name>MouseInfo</name></member>
+      <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a734fbc48f50ac483bf1a495f11b63e0b" prot="public" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine::MouseInfo</scope><name>timeOnBezierSegment</name></member>
+      <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a7b073fcecef0564ec06fcf13ad816b97" prot="public" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine::MouseInfo</scope><name>timeOnPath</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

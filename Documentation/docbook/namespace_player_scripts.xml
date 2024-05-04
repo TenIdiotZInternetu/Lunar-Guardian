@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_player_scripts" xml:lang="en-US">
+<title>PlayerScripts Namespace Reference</title>
+<indexterm><primary>PlayerScripts</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_player_scripts_1_1_bomb_controller">BombController</link></para>
+
+<para>Defines effects of deploying a bomb by player. The bomb deals gradual damage to all enemies and destroys projectiles for specified amount of time. The damage is dealt only during frames called damage ticks. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_player_scripts_1_1_controls">Controls</link></para>
+
+<para>Listens to the Unity&apos;s Input Manager and triggers events based on the input. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_player_scripts_1_1_player">Player</link></para>
+
+<para>Controls player&apos;s movement and responses to his actions. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_player_scripts_1_1_player_hitbox">PlayerHitbox</link></para>
+
+<para>Takes responsibility and responses to being hit by enemy objects. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_player_scripts_1_1_player_status">PlayerStatus</link></para>
+
+<para>Records state of player&apos;s resources and provides methods to change them. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

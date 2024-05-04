@@ -1,0 +1,65 @@
+\doxysection{Paused\+State.\+cs}
+\hypertarget{_paused_state_8cs_source}{}\label{_paused_state_8cs_source}\index{Scripts/GameManager/States/PausedState.cs@{Scripts/GameManager/States/PausedState.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_player_scripts}{PlayerScripts}};}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_spawnables}{Spawnables}};}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_u_i_1_1_menus}{UI.Menus}};}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_game_manager}{GameManager}}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00011}\mbox{\hyperlink{class_game_manager_1_1_paused_state}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_manager_1_1_paused_state}{PausedState}}\ :\ \mbox{\hyperlink{class_game_manager_1_1_game_state}{GameState}}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00018}\mbox{\hyperlink{class_game_manager_1_1_paused_state_a13b2ec7901bb67df6b6d8e1e931e9b04}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_manager_1_1_playing_state}{PlayingState}}\ \mbox{\hyperlink{class_game_manager_1_1_paused_state_a13b2ec7901bb67df6b6d8e1e931e9b04}{playingState}};}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00023}\mbox{\hyperlink{class_game_manager_1_1_paused_state_a8669cdf1b0df4e9df579b33bb6ad3a4d}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ PauseMenu\ \mbox{\hyperlink{class_game_manager_1_1_paused_state_a8669cdf1b0df4e9df579b33bb6ad3a4d}{pauseMenu}};}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ ChangeToThisState()}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_1_1_paused_state_a8669cdf1b0df4e9df579b33bb6ad3a4d}{pauseMenu}}.OpenMenu();}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.CancelRelease\ +=\ EnableUnpausing;}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ LeaveThisState()}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Prevent\ unpausing\ immediately\ after\ pausing}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Cancel\ -\/=\ Unpause;}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Closes\ the\ menu\ and\ returns\ to\ the\ playing\ state}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Unpause()}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_manager_1_1_paused_state_a8669cdf1b0df4e9df579b33bb6ad3a4d}{pauseMenu}}.CloseMenu();}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_game_manager_1_1_paused_state_a13b2ec7901bb67df6b6d8e1e931e9b04}{playingState}}\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ NullReferenceException(\textcolor{stringliteral}{"{}playingState\ not\ specified"{}});}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_game_manager}{GameManager}}.Instance.ChangeState(\mbox{\hyperlink{class_game_manager_1_1_paused_state_a13b2ec7901bb67df6b6d8e1e931e9b04}{playingState}});}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Prevents\ unpausing\ immediately\ after\ pausing}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ EnableUnpausing()}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.CancelRelease\ -\/=\ EnableUnpausing;}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Cancel\ +=\ Unpause;}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Unsubscribe\ from\ the\ event\ when\ the\ object\ is\ destroyed}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.CancelRelease\ -\/=\ EnableUnpausing;}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Cancel\ -\/=\ Unpause;}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_paused_state_8cs_source_l00068}00068\ \}}
+
+\end{DoxyCode}

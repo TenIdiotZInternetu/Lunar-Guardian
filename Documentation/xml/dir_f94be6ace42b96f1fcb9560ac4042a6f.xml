@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_f94be6ace42b96f1fcb9560ac4042a6f" kind="dir">
+    <compoundname>Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates</compoundname>
+    <innerdir refid="dir_e4869bc0ae7f5de5d81919d4d94196aa">Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States</innerdir>
+    <innerfile refid="_game_manager_8cs">GameManager.cs</innerfile>
+    <innerfile refid="_game_state_8cs">GameState.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tools_1_1_component_utils" xml:lang="en-US">
+<title>ComponentUtils Class Reference</title>
+<indexterm><primary>ComponentUtils</primary></indexterm>
+<para>
+
+<para>A collection of utilities for working with Components. </para>
+ 
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static T <link linkend="_class_tools_1_1_component_utils_1a451c1bbf3b1f4d5d8933382cf2dfebb6">ReplaceComponent&lt; T &gt;</link> (T original, T replacement)</para>
+
+<para>Overwrites the values of all fields of a component with the values of another component. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__component_utils_8cs_source_1l00009">9</link> of file <link linkend="__component_utils_8cs_source">ComponentUtils.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_tools_1_1_component_utils_1a451c1bbf3b1f4d5d8933382cf2dfebb6"/><section>
+    <title>ReplaceComponent&lt; T &gt;()</title>
+<indexterm><primary>ReplaceComponent&lt; T &gt;</primary><secondary>ComponentUtils</secondary></indexterm>
+<indexterm><primary>ComponentUtils</primary><secondary>ReplaceComponent&lt; T &gt;</secondary></indexterm>
+<para><computeroutput>static T ReplaceComponent&lt; T &gt; (T original, T replacement)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>original</entry><entry>
+<para>The overwritten component </para>
+</entry>
+                            </row>
+                            <row>
+<entry>replacement</entry><entry>
+<para>The component with desired values </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>Type of the component </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The original component with overwritten values </para>
+</formalpara>
+</para>
+<simplesect><title>Type Constraints</title>
+<para><emphasis role="strong">T:Component</emphasis></para>
+</simplesect>
+<para>
+Definition at line <link linkend="__component_utils_8cs_source_1l00018">18</link> of file <link linkend="__component_utils_8cs_source">ComponentUtils.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Tools/ComponentUtils.cs</section>
+</section>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_u_i_1_1_menu_screen" xml:lang="en-US">
+<title>MenuScreen Class Reference</title>
+<indexterm><primary>MenuScreen</primary></indexterm>
+<para>
+
+<para>A menu screen&apos;s functionality. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<para>
+Inherited by CreditsScreen, GameOverScreen, Leaderboard, MainMenu, and PauseMenu.</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_menu_screen_1af174fffa9aacfd03387706ff553bd993"/>void <emphasis role="strong">OpenMenu</emphasis> ()</para>
+
+<para>Sets the menu to be active and informs listeners. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_menu_screen_1aff7779f56c25e6d968cec59627708181"/>void <emphasis role="strong">CloseMenu</emphasis> ()</para>
+
+<para>Informs listeners and wait for them to finish before deactivating the menu. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_menu_screen_1a515a4e1ef9fb8f7b823ca9ef62b206f0"/>float <emphasis role="strong">onCloseDelay</emphasis> = 0.3f</para>
+
+<para>Amount of time to wait before deactivating the menu, to let <link linkend="_namespace_v_f_x">VFX</link> finish playing. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_menu_screen_1abde5dcaf50e31d0608c1835c31d45ce5"/>UnityEvent <emphasis role="strong">menuLeftEvent</emphasis></para>
+
+<para>Event invoked when the menu is closed. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_menu_screen_1a3f204271959196687c31ad5b0f8c19d2"/>UnityEvent <emphasis role="strong">menuOpenedEvent</emphasis></para>
+
+<para>Event invoked when the menu is opened. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__menu_screen_8cs_source_1l00010">10</link> of file <link linkend="__menu_screen_8cs_source">MenuScreen.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/UI/MenuScreen.cs</section>
+</section>

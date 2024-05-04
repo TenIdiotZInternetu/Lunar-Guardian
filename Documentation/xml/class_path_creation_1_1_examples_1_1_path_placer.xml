@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_examples_1_1_path_placer" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::Examples::PathPlacer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">PathSceneTool</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_path_placer_1ad6d3141bf24aaf85fa7573865a1934f6" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject prefab</definition>
+        <argsstring></argsstring>
+        <name>prefab</name>
+        <qualifiedname>PathCreation.Examples.PathPlacer.prefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" line="9" column="27" bodyfile="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_path_placer_1ad916a2ee554f92b628f0bc4c37912c22" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject holder</definition>
+        <argsstring></argsstring>
+        <name>holder</name>
+        <qualifiedname>PathCreation.Examples.PathPlacer.holder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" line="10" column="27" bodyfile="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_path_placer_1aedc6398ddf4719ad026969c7a74ab8ba" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float spacing</definition>
+        <argsstring></argsstring>
+        <name>spacing</name>
+        <qualifiedname>PathCreation.Examples.PathPlacer.spacing</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" line="11" column="22" bodyfile="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_path_placer_1ab635b8d4c5142116dd4da765a2e90ced" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float minSpacing</definition>
+        <argsstring></argsstring>
+        <name>minSpacing</name>
+        <qualifiedname>PathCreation.Examples.PathPlacer.minSpacing</qualifiedname>
+        <initializer>= .1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" line="13" column="21" bodyfile="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_path_creation_1_1_examples_1_1_path_placer_1a724f5d055e6b787a27a1d448a6726073" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Generate</definition>
+        <argsstring>()</argsstring>
+        <name>Generate</name>
+        <qualifiedname>PathCreation.Examples.PathPlacer.Generate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" line="15" column="14" bodyfile="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" bodystart="15" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_examples_1_1_path_placer_1a657566cf7c585b2c926b4065f855eaef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DestroyObjects</definition>
+        <argsstring>()</argsstring>
+        <name>DestroyObjects</name>
+        <qualifiedname>PathCreation.Examples.PathPlacer.DestroyObjects</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" line="33" column="14" bodyfile="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" bodystart="33" bodyend="38"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_path_creation_1_1_examples_1_1_path_placer_1a33561722c7f3a8c711f902daafe6ee0c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void PathUpdated</definition>
+        <argsstring>()</argsstring>
+        <name>PathUpdated</name>
+        <qualifiedname>PathCreation.Examples.PathPlacer.PathUpdated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" line="40" column="33" bodyfile="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" bodystart="40" bodyend="44"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" line="7" column="11" bodyfile="Tools/PathCreator/Examples/Scripts/PathPlacer.cs" bodystart="7" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a85625f1795d00ceac2bf81b4f37dc762" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>autoUpdate</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_placer_1a657566cf7c585b2c926b4065f855eaef" prot="private" virt="non-virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>DestroyObjects</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_placer_1a724f5d055e6b787a27a1d448a6726073" prot="private" virt="non-virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>Generate</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_placer_1ad916a2ee554f92b628f0bc4c37912c22" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>holder</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_placer_1ab635b8d4c5142116dd4da765a2e90ced" prot="private" virt="non-virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>minSpacing</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a1be5f5b23715843a7bfc4f2ebd6c7894" prot="protected" virt="virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>OnDestroy</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a672894ed718b5d8f0fffcf806e162321" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>onDestroyed</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a3eb739a083bdb5ade4c81c07af150bd7" prot="protected" virt="non-virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>path</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a3e5fa7ee8f7d749982ca79cfb1a570f5" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>pathCreator</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_placer_1a33561722c7f3a8c711f902daafe6ee0c" prot="protected" virt="non-virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>PathUpdated</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_placer_1ad6d3141bf24aaf85fa7573865a1934f6" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>prefab</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_placer_1aedc6398ddf4719ad026969c7a74ab8ba" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>spacing</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a62f2d6c011abac5a7b991a8561c60b5a" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathPlacer</scope><name>TriggerUpdate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

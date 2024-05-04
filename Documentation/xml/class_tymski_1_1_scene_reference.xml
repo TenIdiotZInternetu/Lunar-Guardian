@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_tymski_1_1_scene_reference" kind="class" language="C#" prot="public">
+    <compoundname>Tymski::SceneReference</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ISerializationCallbackReceiver</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tymski_1_1_scene_reference_1a333251a8f40ea9ca30b7a16238a1fd92" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string scenePath</definition>
+        <argsstring></argsstring>
+        <name>scenePath</name>
+        <qualifiedname>Tymski.SceneReference.scenePath</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/SceneReference.cs" line="52" column="24" bodyfile="Tools/SceneReference.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_tymski_1_1_scene_reference_1a769ec561c3faa4167f96022cc18223d5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string ScenePath</definition>
+        <argsstring></argsstring>
+        <name>ScenePath</name>
+        <qualifiedname>Tymski.SceneReference.ScenePath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/SceneReference.cs" line="55" column="23" bodyfile="Tools/SceneReference.cs" bodystart="56" bodyend="75"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_tymski_1_1_scene_reference_1a6ccb028b5e2d827141c5ba711609f8fb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>implicit</type>
+        <definition>static implicit operator string</definition>
+        <argsstring>(SceneReference sceneReference)</argsstring>
+        <name>operator string</name>
+        <qualifiedname>Tymski.SceneReference.operator string</qualifiedname>
+        <param>
+          <type><ref refid="class_tymski_1_1_scene_reference" kindref="compound">SceneReference</ref></type>
+          <declname>sceneReference</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/SceneReference.cs" line="77" column="32" bodyfile="Tools/SceneReference.cs" bodystart="77" bodyend="80"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tymski_1_1_scene_reference_1a72c4055ca88e935619de54f1aeb8f5f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnBeforeSerialize</definition>
+        <argsstring>()</argsstring>
+        <name>OnBeforeSerialize</name>
+        <qualifiedname>Tymski.SceneReference.OnBeforeSerialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/SceneReference.cs" line="83" column="21" bodyfile="Tools/SceneReference.cs" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tymski_1_1_scene_reference_1af97f96776a06243e316547fce49d877a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnAfterDeserialize</definition>
+        <argsstring>()</argsstring>
+        <name>OnAfterDeserialize</name>
+        <qualifiedname>Tymski.SceneReference.OnAfterDeserialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/SceneReference.cs" line="91" column="21" bodyfile="Tools/SceneReference.cs" bodystart="91" bodyend="97"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A wrapper that provides the means to safely serialize Scene Asset References. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/SceneReference.cs" line="34" column="11" bodyfile="Tools/SceneReference.cs" bodystart="35" bodyend="143"/>
+    <listofallmembers>
+      <member refid="class_tymski_1_1_scene_reference_1af97f96776a06243e316547fce49d877a" prot="public" virt="non-virtual"><scope>Tymski::SceneReference</scope><name>OnAfterDeserialize</name></member>
+      <member refid="class_tymski_1_1_scene_reference_1a72c4055ca88e935619de54f1aeb8f5f2" prot="public" virt="non-virtual"><scope>Tymski::SceneReference</scope><name>OnBeforeSerialize</name></member>
+      <member refid="class_tymski_1_1_scene_reference_1a6ccb028b5e2d827141c5ba711609f8fb" prot="public" virt="non-virtual"><scope>Tymski::SceneReference</scope><name>operator string</name></member>
+      <member refid="class_tymski_1_1_scene_reference_1a333251a8f40ea9ca30b7a16238a1fd92" prot="private" virt="non-virtual"><scope>Tymski::SceneReference</scope><name>scenePath</name></member>
+      <member refid="class_tymski_1_1_scene_reference_1a769ec561c3faa4167f96022cc18223d5" prot="public" virt="non-virtual"><scope>Tymski::SceneReference</scope><name>ScenePath</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

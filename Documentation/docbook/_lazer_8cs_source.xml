@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__lazer_8cs_source" xml:lang="en-US">
+<title>Lazer.cs</title>
+<indexterm><primary>Scripts/Spawnables/Weapons/Shootables/Lazer.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__lazer_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__lazer_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_player_scripts">PlayerScripts</link>;
+<anchor xml:id="__lazer_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__lazer_8cs_source_1l00004"/>00004 
+<anchor xml:id="__lazer_8cs_source_1l00005"/>00005 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_spawnables_1_1_weapons">Spawnables.Weapons</link>
+<anchor xml:id="__lazer_8cs_source_1l00006"/>00006 {
+<anchor xml:id="__lazer_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;[RequireComponent(typeof(LineRenderer))]
+<anchor xml:id="__lazer_8cs_source_1l00012"/><link linkend="_class_spawnables_1_1_weapons_1_1_lazer">00012</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_spawnables_1_1_weapons_1_1_lazer">Lazer</link>&#32;:&#32;MonoBehaviour,&#32;<link linkend="_interface_spawnables_1_1_weapons_1_1_i_shootable">IShootable</link>
+<anchor xml:id="__lazer_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__lazer_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;---------------------&#32;Constant&#32;---------------------&#32;*/</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;MAX_LENGTH&#32;=&#32;50;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Maximum&#32;length&#32;of&#32;the&#32;LineRenderer</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;HITBOX_LAYER_NAME&#32;=&#32;<emphasis role="stringliteral">&quot;PlayerHitbox&quot;</emphasis>;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Name&#32;of&#32;the&#32;layer&#32;containing&#32;the&#32;player&#32;hitbox</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;------------------&#32;Public&#32;Fields&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00024"/><link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1aca09286cd8b3d4183f0d74bad38fff6e">00024</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1aca09286cd8b3d4183f0d74bad38fff6e">cooldown</link>;
+<anchor xml:id="__lazer_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00029"/><link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a37c4954b4cdd996e6103aecf92c46b01">00029</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a37c4954b4cdd996e6103aecf92c46b01">telegraphDuration</link>;
+<anchor xml:id="__lazer_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00034"/><link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1adba37386a0608ae910fb8a39d466242e">00034</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1adba37386a0608ae910fb8a39d466242e">releaseDuration</link>;
+<anchor xml:id="__lazer_8cs_source_1l00035"/>00035 
+<anchor xml:id="__lazer_8cs_source_1l00039"/><link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1ae3d3f20000c1c2a415675e0509944701">00039</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Material&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1ae3d3f20000c1c2a415675e0509944701">telegraphMaterial</link>;
+<anchor xml:id="__lazer_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00044"/><link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a337f1138e3750743beef8fcadbc3204f">00044</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Material&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a337f1138e3750743beef8fcadbc3204f">releaseMaterial</link>;
+<anchor xml:id="__lazer_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00049"/><link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1afa70b6a0bd5a37ceefcbd8995e1115ee">00049</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1afa70b6a0bd5a37ceefcbd8995e1115ee">telegraphWidth</link>;
+<anchor xml:id="__lazer_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00054"/><link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a7cc7db7d095fdd382aa63650b7f3885c">00054</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a7cc7db7d095fdd382aa63650b7f3885c">releaseWidth</link>;
+<anchor xml:id="__lazer_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;------------------&#32;Private&#32;Fields&#32;------------------&#32;*/</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;LineRenderer&#32;_lineRenderer;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Visualizes&#32;the&#32;lazer&#32;beam</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_playerHitboxLayer;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Layer&#32;mask&#32;index&#32;containing&#32;the&#32;player&#32;hitbox</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00060"/>00060 
+<anchor xml:id="__lazer_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;_emitting;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;True&#32;if&#32;the&#32;lazer&#32;is&#32;currently&#32;in&#32;the&#32;Telegraph&#32;or&#32;Release&#32;phase</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;_timeOfLastShot;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Time&#32;in&#32;seconds&#32;when&#32;the&#32;lazer&#32;was&#32;last&#32;shot&#32;&#32;</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;------------------&#32;Unity&#32;Callbacks&#32;-----------------&#32;*/</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__lazer_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lazer_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_timeOfLastShot&#32;=&#32;Time.time&#32;-&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1aca09286cd8b3d4183f0d74bad38fff6e">cooldown</link>;
+<anchor xml:id="__lazer_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_lineRenderer&#32;=&#32;GetComponent&lt;LineRenderer&gt;();
+<anchor xml:id="__lazer_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_lineRenderer.enabled&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__lazer_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_lineRenderer.useWorldSpace&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__lazer_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_lineRenderer.SetPosition(0,&#32;transform.position);
+<anchor xml:id="__lazer_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_playerHitboxLayer&#32;=&#32;1&#32;&lt;&lt;&#32;LayerMask.NameToLayer(HITBOX_LAYER_NAME);
+<anchor xml:id="__lazer_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;
+<anchor xml:id="__lazer_8cs_source_1l00077"/>00077 
+<anchor xml:id="__lazer_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;------------------&#32;Public&#32;Methods&#32;------------------&#32;*/</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Starts&#32;the&#32;Telegraph&#32;phase&#32;when&#32;the&#32;spent&#32;enough&#32;time&#32;in&#32;the&#32;Cooldown&#32;phase</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00081"/><link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a26a2e3c2d07dea6a2fd1d38eac284ee6">00081</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a26a2e3c2d07dea6a2fd1d38eac284ee6">OnShoot</link>()
+<anchor xml:id="__lazer_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lazer_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_emitting)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__lazer_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Time.time&#32;-&#32;_timeOfLastShot&#32;&lt;&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1aca09286cd8b3d4183f0d74bad38fff6e">cooldown</link>)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__lazer_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartCoroutine(Telegraph());
+<anchor xml:id="__lazer_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_emitting&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__lazer_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lazer_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;------------------&#32;Private&#32;Methods&#32;-----------------&#32;*/</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00091"/>00091 
+<anchor xml:id="__lazer_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Coroutine&#32;for&#32;the&#32;Telegraph&#32;phase,&#32;beam&#32;is&#32;visualized&#32;but&#32;not&#32;active</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;IEnumerator&#32;Telegraph()
+<anchor xml:id="__lazer_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lazer_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_lineRenderer.enabled&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__lazer_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ChangeAppearance(<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1ae3d3f20000c1c2a415675e0509944701">telegraphMaterial</link>,&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1afa70b6a0bd5a37ceefcbd8995e1115ee">telegraphWidth</link>);
+<anchor xml:id="__lazer_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;timeOfTelegraphEnd&#32;=&#32;Time.time&#32;+&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a37c4954b4cdd996e6103aecf92c46b01">telegraphDuration</link>;
+<anchor xml:id="__lazer_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(Time.time&#32;&lt;&#32;timeOfTelegraphEnd)
+<anchor xml:id="__lazer_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lazer_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdatePosition();
+<anchor xml:id="__lazer_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__lazer_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lazer_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartCoroutine(Release());
+<anchor xml:id="__lazer_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lazer_8cs_source_1l00107"/>00107 
+<anchor xml:id="__lazer_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Coroutine&#32;for&#32;the&#32;Release&#32;phase,&#32;beam&#32;is&#32;active&#32;and&#32;deals&#32;damage</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;IEnumerator&#32;Release()
+<anchor xml:id="__lazer_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lazer_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ChangeAppearance(<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a337f1138e3750743beef8fcadbc3204f">releaseMaterial</link>,&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a7cc7db7d095fdd382aa63650b7f3885c">releaseWidth</link>);
+<anchor xml:id="__lazer_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;timeOfReleaseEnd&#32;=&#32;Time.time&#32;+&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1adba37386a0608ae910fb8a39d466242e">releaseDuration</link>;
+<anchor xml:id="__lazer_8cs_source_1l00113"/>00113 
+<anchor xml:id="__lazer_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(Time.time&#32;&lt;&#32;timeOfReleaseEnd)
+<anchor xml:id="__lazer_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lazer_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UpdatePosition();
+<anchor xml:id="__lazer_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CheckDamages();
+<anchor xml:id="__lazer_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__lazer_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lazer_8cs_source_1l00120"/>00120 
+<anchor xml:id="__lazer_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_lineRenderer.enabled&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__lazer_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_timeOfLastShot&#32;=&#32;Time.time;
+<anchor xml:id="__lazer_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_emitting&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__lazer_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lazer_8cs_source_1l00125"/>00125 
+<anchor xml:id="__lazer_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;the&#32;start&#32;and&#32;end&#32;position&#32;of&#32;the&#32;LineRenderer</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;UpdatePosition()
+<anchor xml:id="__lazer_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lazer_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;startPoint&#32;=&#32;transform.position;
+<anchor xml:id="__lazer_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_lineRenderer.SetPosition(0,&#32;startPoint);
+<anchor xml:id="__lazer_8cs_source_1l00131"/>00131 
+<anchor xml:id="__lazer_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;endPoint&#32;=&#32;startPoint&#32;+&#32;transform.rotation&#32;*&#32;Vector3.up&#32;*&#32;MAX_LENGTH;
+<anchor xml:id="__lazer_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_lineRenderer.SetPosition(1,&#32;endPoint);
+<anchor xml:id="__lazer_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lazer_8cs_source_1l00135"/>00135 
+<anchor xml:id="__lazer_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Use&#32;Box&#32;raycast&#32;to&#32;check&#32;if&#32;the&#32;beam&#32;hits&#32;the&#32;player</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;CheckDamages()
+<anchor xml:id="__lazer_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lazer_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector2&#32;origin&#32;=&#32;transform.position;
+<anchor xml:id="__lazer_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector2&#32;size&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Vector2(<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a7cc7db7d095fdd382aa63650b7f3885c">releaseWidth</link>,&#32;<link linkend="_class_spawnables_1_1_weapons_1_1_lazer_1a7cc7db7d095fdd382aa63650b7f3885c">releaseWidth</link>)&#32;/&#32;2;
+<anchor xml:id="__lazer_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector2&#32;direction&#32;=&#32;transform.rotation&#32;*&#32;Vector2.up;
+<anchor xml:id="__lazer_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;RaycastHit2D&#32;hitInfo&#32;=&#32;Physics2D.BoxCast(origin,&#32;size,&#32;0,&#32;direction,&#32;MAX_LENGTH,&#32;_playerHitboxLayer);
+<anchor xml:id="__lazer_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_hitbox">PlayerHitbox</link>&#32;playerHitbox&#32;=&#32;hitInfo.collider?.GetComponent&lt;<link linkend="_class_player_scripts_1_1_player_hitbox">PlayerHitbox</link>&gt;();
+<anchor xml:id="__lazer_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(playerHitbox&#32;==&#32;<emphasis role="keyword">null</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__lazer_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;playerHitbox.<link linkend="_class_player_scripts_1_1_player_hitbox_1ae77a2b3d16e04654d819c8db25cc6055">AttemptHit</link>(hitInfo.collider.gameObject);
+<anchor xml:id="__lazer_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lazer_8cs_source_1l00150"/>00150 
+<anchor xml:id="__lazer_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Change&#32;the&#32;width&#32;and&#32;material&#32;of&#32;the&#32;LineRenderer</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;ChangeAppearance(Material&#32;material,&#32;<emphasis role="keywordtype">float</emphasis>&#32;width)
+<anchor xml:id="__lazer_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lazer_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_lineRenderer.widthMultiplier&#32;=&#32;width;
+<anchor xml:id="__lazer_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_lineRenderer.material&#32;=&#32;material;
+<anchor xml:id="__lazer_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lazer_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__lazer_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Draw&#32;a&#32;sphere&#32;at&#32;the&#32;position&#32;of&#32;the&#32;lazer&#32;start&#32;point</emphasis>
+<anchor xml:id="__lazer_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDrawGizmos()
+<anchor xml:id="__lazer_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__lazer_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Gizmos.color&#32;=&#32;Color.cyan;
+<anchor xml:id="__lazer_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Gizmos.DrawWireSphere(transform.position,&#32;0.05f);
+<anchor xml:id="__lazer_8cs_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__lazer_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__lazer_8cs_source_1l00165"/>00165 }
+</programlisting></section>

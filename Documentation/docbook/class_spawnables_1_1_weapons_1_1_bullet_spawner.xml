@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_weapons_1_1_bullet_spawner" xml:lang="en-US">
+<title>BulletSpawner Class Reference</title>
+<indexterm><primary>BulletSpawner</primary></indexterm>
+<para>
+
+<para>Spawns a specified projectile when shot either by the player or an enemy. </para>
+ 
+</para>
+<para>Inheritance diagram for BulletSpawner:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_weapons_1_1_bullet_spawner.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_weapons_1_1_bullet_spawner_1a26a2e3c2d07dea6a2fd1d38eac284ee6"/>void <emphasis role="strong">OnShoot</emphasis> ()</para>
+
+<para>Spawn a projectile at the spawner&apos;s position and rotation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_weapons_1_1_bullet_spawner_1ac75394cf2122bc1c1dc73f2f02d99f8d"/>GameObject <emphasis role="strong">projectile</emphasis></para>
+
+<para>Projectile to spawn. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__bullet_spawner_8cs_source_1l00008">8</link> of file <link linkend="__bullet_spawner_8cs_source">BulletSpawner.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs</section>
+</section>

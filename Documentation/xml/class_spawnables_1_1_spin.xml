@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_spin" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Spin</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_spin_1ad1de9af57e9b1558e00f6c1bfb55842e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float angularSpeed</definition>
+        <argsstring></argsstring>
+        <name>angularSpeed</name>
+        <qualifiedname>Spawnables.Spin.angularSpeed</qualifiedname>
+        <briefdescription>
+<para>Amount of degrees to rotate per second. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Spin.cs" line="16" column="22" bodyfile="Scripts/Spawnables/Spin.cs" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_spawnables_1_1_spin_1aa7acf4963bf20f52909be8da9a763001" compoundref="_spin_8cs" startline="31" endline="34">Spin.ChangeDirection</referencedby>
+        <referencedby refid="class_spawnables_1_1_spin_1a61f6c71bc4b9fbeea12a3554c9882857" compoundref="_spin_8cs" startline="40" endline="43">Spin.ChangeSpeed</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_spin_1aec0783b5a136e042adcc47bae4fe5291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>Spawnables.Spin.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Spin.cs" line="21" column="14" bodyfile="Scripts/Spawnables/Spin.cs" bodystart="21" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spawnables_1_1_spin_1aa7acf4963bf20f52909be8da9a763001" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeDirection</definition>
+        <argsstring>()</argsstring>
+        <name>ChangeDirection</name>
+        <qualifiedname>Spawnables.Spin.ChangeDirection</qualifiedname>
+        <briefdescription>
+<para>Changes the direction of rotation from clockwise to counterclockwise or vice versa. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Spin.cs" line="31" column="21" bodyfile="Scripts/Spawnables/Spin.cs" bodystart="31" bodyend="34"/>
+        <references refid="class_spawnables_1_1_spin_1ad1de9af57e9b1558e00f6c1bfb55842e" compoundref="_spin_8cs" startline="16">Spin.angularSpeed</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_spin_1a61f6c71bc4b9fbeea12a3554c9882857" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeSpeed</definition>
+        <argsstring>(float newSpeed)</argsstring>
+        <name>ChangeSpeed</name>
+        <qualifiedname>Spawnables.Spin.ChangeSpeed</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>newSpeed</declname>
+        </param>
+        <briefdescription>
+<para>Sets the angular speed to a new value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newSpeed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New value of the angular speed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Spin.cs" line="40" column="21" bodyfile="Scripts/Spawnables/Spin.cs" bodystart="40" bodyend="43"/>
+        <references refid="class_spawnables_1_1_spin_1ad1de9af57e9b1558e00f6c1bfb55842e" compoundref="_spin_8cs" startline="16">Spin.angularSpeed</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Rotates the object each frame. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Spawnables/Spin.cs" line="9" column="11" bodyfile="Scripts/Spawnables/Spin.cs" bodystart="10" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_spin_1ad1de9af57e9b1558e00f6c1bfb55842e" prot="public" virt="non-virtual"><scope>Spawnables::Spin</scope><name>angularSpeed</name></member>
+      <member refid="class_spawnables_1_1_spin_1aa7acf4963bf20f52909be8da9a763001" prot="public" virt="non-virtual"><scope>Spawnables::Spin</scope><name>ChangeDirection</name></member>
+      <member refid="class_spawnables_1_1_spin_1a61f6c71bc4b9fbeea12a3554c9882857" prot="public" virt="non-virtual"><scope>Spawnables::Spin</scope><name>ChangeSpeed</name></member>
+      <member refid="class_spawnables_1_1_spin_1aec0783b5a136e042adcc47bae4fe5291" prot="private" virt="non-virtual"><scope>Spawnables::Spin</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

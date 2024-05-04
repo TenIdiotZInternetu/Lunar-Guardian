@@ -1,0 +1,128 @@
+\doxysection{Cubic\+Bezier\+Utility.\+cs}
+\hypertarget{_cubic_bezier_utility_8cs_source}{}\label{_cubic_bezier_utility_8cs_source}\index{Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs@{Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00005}\mbox{\hyperlink{namespace_path_creation_1_1_utility}{00005}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_path_creation_1_1_utility}{PathCreation.Utility}}\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00009}\mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility}{CubicBezierUtility}}\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00012}\mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_aa10b9a048602039356790289036154cf}{00012}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_aa10b9a048602039356790289036154cf}{EvaluateCurve}}\ (Vector3[]\ points,\ \textcolor{keywordtype}{float}\ t)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_aa10b9a048602039356790289036154cf}{EvaluateCurve}}\ (points[0],\ points[1],\ points[2],\ points[3],\ t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00017}\mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a3924a60bf6600991d05938fa22a316a0}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a3924a60bf6600991d05938fa22a316a0}{EvaluateCurve}}\ (Vector3\ a1,\ Vector3\ c1,\ Vector3\ c2,\ Vector3\ a2,\ \textcolor{keywordtype}{float}\ t)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ t\ =\ Mathf.Clamp01\ (t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (1\ -\/\ t)\ *\ (1\ -\/\ t)\ *\ (1\ -\/\ t)\ *\ a1\ +\ 3\ *\ (1\ -\/\ t)\ *\ (1\ -\/\ t)\ *\ t\ *\ c1\ +\ 3\ *\ (1\ -\/\ t)\ *\ t\ *\ t\ *\ c2\ +\ t\ *\ t\ *\ t\ *\ a2;}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00024}\mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_ae7f1a0b7bd942f5b2aacd1a2a0348f49}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_ae7f1a0b7bd942f5b2aacd1a2a0348f49}{EvaluateCurveDerivative}}\ (Vector3[]\ points,\ \textcolor{keywordtype}{float}\ t)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_ae7f1a0b7bd942f5b2aacd1a2a0348f49}{EvaluateCurveDerivative}}\ (points[0],\ points[1],\ points[2],\ points[3],\ t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00030}\mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a18597c3735c05f9e2b99294f97ad95da}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a18597c3735c05f9e2b99294f97ad95da}{EvaluateCurveDerivative}}\ (Vector3\ a1,\ Vector3\ c1,\ Vector3\ c2,\ Vector3\ a2,\ \textcolor{keywordtype}{float}\ t)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ t\ =\ Mathf.Clamp01\ (t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 3\ *\ (1\ -\/\ t)\ *\ (1\ -\/\ t)\ *\ (c1\ -\/\ a1)\ +\ 6\ *\ (1\ -\/\ t)\ *\ t\ *\ (c2\ -\/\ c1)\ +\ 3\ *\ t\ *\ t\ *\ (a2\ -\/\ c2);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00036}\mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a5d0e6187acba520d0cbe50d6e3b6ab0b}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a5d0e6187acba520d0cbe50d6e3b6ab0b}{EvaluateCurveSecondDerivative}}\ (Vector3[]\ points,\ \textcolor{keywordtype}{float}\ t)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a5d0e6187acba520d0cbe50d6e3b6ab0b}{EvaluateCurveSecondDerivative}}\ (points[0],\ points[1],\ points[2],\ points[3],\ t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00041}\mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a1e2c8ca7c07bb85c24390f5021501f08}{00041}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a1e2c8ca7c07bb85c24390f5021501f08}{EvaluateCurveSecondDerivative}}\ (Vector3\ a1,\ Vector3\ c1,\ Vector3\ c2,\ Vector3\ a2,\ \textcolor{keywordtype}{float}\ t)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ t\ =\ Mathf.Clamp01\ (t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 6\ *\ (1\ -\/\ t)\ *\ (c2\ -\/\ 2\ *\ c1\ +\ a1)\ +\ 6\ *\ t\ *\ (a2\ -\/\ 2\ *\ c2\ +\ c1);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00047}\mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_aa19757e831a55fc0f70851b17e99d56d}{00047}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_aa19757e831a55fc0f70851b17e99d56d}{Normal}}\ (Vector3[]\ points,\ \textcolor{keywordtype}{float}\ t)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_aa19757e831a55fc0f70851b17e99d56d}{Normal}}\ (points[0],\ points[1],\ points[2],\ points[3],\ t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00052}\mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a16421b9a7ecebac1ddda7bacef1e4313}{00052}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a16421b9a7ecebac1ddda7bacef1e4313}{Normal}}\ (Vector3\ a1,\ Vector3\ c1,\ Vector3\ c2,\ Vector3\ a2,\ \textcolor{keywordtype}{float}\ t)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ tangent\ =\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_ae7f1a0b7bd942f5b2aacd1a2a0348f49}{EvaluateCurveDerivative}}\ (a1,\ c1,\ c2,\ a2,\ t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ nextTangent\ =\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a5d0e6187acba520d0cbe50d6e3b6ab0b}{EvaluateCurveSecondDerivative}}\ (a1,\ c1,\ c2,\ a2,\ t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ c\ =\ Vector3.Cross\ (nextTangent,\ tangent);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Vector3.Cross\ (c,\ tangent).normalized;}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Bounds\ CalculateSegmentBounds\ (Vector3\ p0,\ Vector3\ p1,\ Vector3\ p2,\ Vector3\ p3)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ MinMax3D\ minMax\ =\ \textcolor{keyword}{new}\ MinMax3D\ ();}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ minMax.AddValue\ (p0);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ minMax.AddValue\ (p3);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ List<float>\ extremePointTimes\ =\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_abb4a51d397c7d96a204bb4b98baaad82}{ExtremePointTimes}}\ (p0,p1,p2,p3);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\textcolor{keywordtype}{float}\ t\ \textcolor{keywordflow}{in}\ extremePointTimes)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minMax.AddValue\ (CubicBezierUtility.EvaluateCurve\ (p0,\ p1,\ p2,\ p3,\ t));}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Bounds\ ((minMax.Min\ +\ minMax.Max)\ /\ 2,\ minMax.Max\ -\/\ minMax.Min);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00073}\mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a7ce04896014036624bf0ecb82b849318}{00073}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3[][]\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a7ce04896014036624bf0ecb82b849318}{SplitCurve}}\ (Vector3[]\ points,\ \textcolor{keywordtype}{float}\ t)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ a1\ =\ Vector3.Lerp\ (points[0],\ points[1],\ t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ a2\ =\ Vector3.Lerp\ (points[1],\ points[2],\ t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ a3\ =\ Vector3.Lerp\ (points[2],\ points[3],\ t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ b1\ =\ Vector3.Lerp\ (a1,\ a2,\ t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ b2\ =\ Vector3.Lerp\ (a2,\ a3,\ t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ pointOnCurve\ =\ Vector3.Lerp\ (b1,\ b2,\ t);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Vector3[][]\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Vector3[]\ \{\ points[0],\ a1,\ b1,\ pointOnCurve\ \},}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Vector3[]\ \{\ pointOnCurve,\ b2,\ a3,\ points[3]\ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Crude,\ but\ fast\ estimation\ of\ curve\ length.}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ EstimateCurveLength\ (Vector3\ p0,\ Vector3\ p1,\ Vector3\ p2,\ Vector3\ p3)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ controlNetLength\ =\ (p0\ -\/\ p1).magnitude\ +\ (p1\ -\/\ p2).magnitude\ +\ (p2\ -\/\ p3).magnitude;}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ estimatedCurveLength\ =\ (p0\ -\/\ p3).magnitude\ +\ controlNetLength\ /\ 2f;}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ estimatedCurveLength;}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00095}\mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_abb4a51d397c7d96a204bb4b98baaad82}{00095}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<float>\ \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_abb4a51d397c7d96a204bb4b98baaad82}{ExtremePointTimes}}\ (Vector3\ p0,\ Vector3\ p1,\ Vector3\ p2,\ Vector3\ p3)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ coefficients\ of\ derivative\ function}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ a\ =\ 3\ *\ (-\/p0\ +\ 3\ *\ p1\ -\/\ 3\ *\ p2\ +\ p3);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ b\ =\ 6\ *\ (p0\ -\/\ 2\ *\ p1\ +\ p2);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ c\ =\ 3\ *\ (p1\ -\/\ p0);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ List<float>\ times\ =\ \textcolor{keyword}{new}\ List<float>\ ();}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ times.AddRange\ (StationaryPointTimes\ (a.x,\ b.x,\ c.x));}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ times.AddRange\ (StationaryPointTimes\ (a.y,\ b.y,\ c.y));}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ times.AddRange\ (StationaryPointTimes\ (a.z,\ b.z,\ c.z));}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ times;}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Finds\ times\ of\ stationary\ points\ on\ curve\ defined\ by\ ax\string^2\ +\ bx\ +\ c.}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Only\ times\ between\ 0\ and\ 1\ are\ considered\ as\ Bezier\ only\ uses\ values\ in\ that\ range}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ IEnumerable<float>\ StationaryPointTimes\ (\textcolor{keywordtype}{float}\ a,\ \textcolor{keywordtype}{float}\ b,\ \textcolor{keywordtype}{float}\ c)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ List<float>\ times\ =\ \textcolor{keyword}{new}\ List<float>\ ();}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ from\ quadratic\ equation:\ y\ =\ [-\/b\ +-\/\ sqrt(b\string^2\ -\/\ 4ac)]/2a}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (a\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ discriminant\ =\ b\ *\ b\ -\/\ 4\ *\ a\ *\ c;}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (discriminant\ >=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ s\ =\ Mathf.Sqrt\ (discriminant);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t1\ =\ (-\/b\ +\ s)\ /\ (2\ *\ a);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (t1\ >=\ 0\ \&\&\ t1\ <=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ times.Add\ (t1);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (discriminant\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t2\ =\ (-\/b\ -\/\ s)\ /\ (2\ *\ a);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (t2\ >=\ 0\ \&\&\ t2\ <=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ times.Add\ (t2);}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ times;}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00135}00135\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cubic_bezier_utility_8cs_source_l00136}00136\ \}}
+
+\end{DoxyCode}

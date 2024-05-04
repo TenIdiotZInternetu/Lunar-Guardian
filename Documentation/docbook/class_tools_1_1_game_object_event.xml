@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_tools_1_1_game_object_event" xml:lang="en-US">
+<title>GameObjectEvent Class Reference</title>
+<indexterm><primary>GameObjectEvent</primary></indexterm>
+<para>
+
+<para>Unity Event with GameObject parameter. </para>
+ 
+</para>
+<para>
+Inherits UnityEvent&lt; GameObject &gt;.</para>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__custom_events_8cs_source_1l00011">11</link> of file <link linkend="__custom_events_8cs_source">CustomEvents.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Tools/CustomEvents.cs</section>
+</section>

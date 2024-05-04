@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::Utility::CubicBezierUtility</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1aa10b9a048602039356790289036154cf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 EvaluateCurve</definition>
+        <argsstring>(Vector3[] points, float t)</argsstring>
+        <name>EvaluateCurve</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.EvaluateCurve</qualifiedname>
+        <param>
+          <type>Vector3[]</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Returns point at time &apos;t&apos; (between 0 and 1) along bezier curve defined by 4 points (anchor_1, control_1, control_2, anchor_2) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="12" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="12" bodyend="14"/>
+        <references refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1aa10b9a048602039356790289036154cf" compoundref="_cubic_bezier_utility_8cs" startline="12" endline="14">CubicBezierUtility.EvaluateCurve</references>
+        <referencedby refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1aa10b9a048602039356790289036154cf" compoundref="_cubic_bezier_utility_8cs" startline="12" endline="14">CubicBezierUtility.EvaluateCurve</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a3924a60bf6600991d05938fa22a316a0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 EvaluateCurve</definition>
+        <argsstring>(Vector3 a1, Vector3 c1, Vector3 c2, Vector3 a2, float t)</argsstring>
+        <name>EvaluateCurve</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.EvaluateCurve</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>a1</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>c1</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>c2</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>a2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Returns point at time &apos;t&apos; (between 0 and 1) along bezier curve defined by 4 points (anchor_1, control_1, control_2, anchor_2) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="17" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1ae7f1a0b7bd942f5b2aacd1a2a0348f49" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 EvaluateCurveDerivative</definition>
+        <argsstring>(Vector3[] points, float t)</argsstring>
+        <name>EvaluateCurveDerivative</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.EvaluateCurveDerivative</qualifiedname>
+        <param>
+          <type>Vector3[]</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a vector tangent to the point at time &apos;t&apos; This is the vector tangent to the curve at that point </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="24" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="24" bodyend="26"/>
+        <references refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1ae7f1a0b7bd942f5b2aacd1a2a0348f49" compoundref="_cubic_bezier_utility_8cs" startline="24" endline="26">CubicBezierUtility.EvaluateCurveDerivative</references>
+        <referencedby refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1ae7f1a0b7bd942f5b2aacd1a2a0348f49" compoundref="_cubic_bezier_utility_8cs" startline="24" endline="26">CubicBezierUtility.EvaluateCurveDerivative</referencedby>
+        <referencedby refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a16421b9a7ecebac1ddda7bacef1e4313" compoundref="_cubic_bezier_utility_8cs" startline="52" endline="57">CubicBezierUtility.Normal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a18597c3735c05f9e2b99294f97ad95da" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 EvaluateCurveDerivative</definition>
+        <argsstring>(Vector3 a1, Vector3 c1, Vector3 c2, Vector3 a2, float t)</argsstring>
+        <name>EvaluateCurveDerivative</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.EvaluateCurveDerivative</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>a1</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>c1</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>c2</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>a2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the derivative of the curve at time &apos;t&apos; This is the vector tangent to the curve at that point </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="30" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a5d0e6187acba520d0cbe50d6e3b6ab0b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 EvaluateCurveSecondDerivative</definition>
+        <argsstring>(Vector3[] points, float t)</argsstring>
+        <name>EvaluateCurveSecondDerivative</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.EvaluateCurveSecondDerivative</qualifiedname>
+        <param>
+          <type>Vector3[]</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Returns the second derivative of the curve at time &apos;t&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="36" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="36" bodyend="38"/>
+        <references refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a5d0e6187acba520d0cbe50d6e3b6ab0b" compoundref="_cubic_bezier_utility_8cs" startline="36" endline="38">CubicBezierUtility.EvaluateCurveSecondDerivative</references>
+        <referencedby refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a5d0e6187acba520d0cbe50d6e3b6ab0b" compoundref="_cubic_bezier_utility_8cs" startline="36" endline="38">CubicBezierUtility.EvaluateCurveSecondDerivative</referencedby>
+        <referencedby refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a16421b9a7ecebac1ddda7bacef1e4313" compoundref="_cubic_bezier_utility_8cs" startline="52" endline="57">CubicBezierUtility.Normal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a1e2c8ca7c07bb85c24390f5021501f08" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 EvaluateCurveSecondDerivative</definition>
+        <argsstring>(Vector3 a1, Vector3 c1, Vector3 c2, Vector3 a2, float t)</argsstring>
+        <name>EvaluateCurveSecondDerivative</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.EvaluateCurveSecondDerivative</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>a1</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>c1</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>c2</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>a2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Returns the second derivative of the curve at time &apos;t&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="41" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1aa19757e831a55fc0f70851b17e99d56d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 Normal</definition>
+        <argsstring>(Vector3[] points, float t)</argsstring>
+        <name>Normal</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.Normal</qualifiedname>
+        <param>
+          <type>Vector3[]</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the normal vector (vector perpendicular to the curve) at specified time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="47" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="47" bodyend="49"/>
+        <references refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1aa19757e831a55fc0f70851b17e99d56d" compoundref="_cubic_bezier_utility_8cs" startline="47" endline="49">CubicBezierUtility.Normal</references>
+        <referencedby refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1aa19757e831a55fc0f70851b17e99d56d" compoundref="_cubic_bezier_utility_8cs" startline="47" endline="49">CubicBezierUtility.Normal</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a16421b9a7ecebac1ddda7bacef1e4313" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 Normal</definition>
+        <argsstring>(Vector3 a1, Vector3 c1, Vector3 c2, Vector3 a2, float t)</argsstring>
+        <name>Normal</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.Normal</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>a1</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>c1</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>c2</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>a2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the normal vector (vector perpendicular to the curve) at specified time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="52" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="52" bodyend="57"/>
+        <references refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1ae7f1a0b7bd942f5b2aacd1a2a0348f49" compoundref="_cubic_bezier_utility_8cs" startline="24" endline="26">CubicBezierUtility.EvaluateCurveDerivative</references>
+        <references refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a5d0e6187acba520d0cbe50d6e3b6ab0b" compoundref="_cubic_bezier_utility_8cs" startline="36" endline="38">CubicBezierUtility.EvaluateCurveSecondDerivative</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a6321a63a289fb77cf196ba607050375d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Bounds</type>
+        <definition>static Bounds CalculateSegmentBounds</definition>
+        <argsstring>(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3)</argsstring>
+        <name>CalculateSegmentBounds</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.CalculateSegmentBounds</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>p0</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>p2</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>p3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="59" column="30" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="59" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a7ce04896014036624bf0ecb82b849318" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3[][]</type>
+        <definition>static Vector3[][] SplitCurve</definition>
+        <argsstring>(Vector3[] points, float t)</argsstring>
+        <name>SplitCurve</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.SplitCurve</qualifiedname>
+        <param>
+          <type>Vector3[]</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Splits curve into two curves at time t. Returns 2 arrays of 4 points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="73" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="73" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a1b2303522faefd60bbbfea9c6ce4d9c7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float EstimateCurveLength</definition>
+        <argsstring>(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3)</argsstring>
+        <name>EstimateCurveLength</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.EstimateCurveLength</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>p0</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>p2</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>p3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="88" column="29" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1abb4a51d397c7d96a204bb4b98baaad82" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; float &gt;</type>
+        <definition>static List&lt; float &gt; ExtremePointTimes</definition>
+        <argsstring>(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3)</argsstring>
+        <name>ExtremePointTimes</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.ExtremePointTimes</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>p0</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>p2</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>p3</declname>
+        </param>
+        <briefdescription>
+<para>Times of stationary points on curve (points where derivative is zero on any axis) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="95" column="28" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="95" bodyend="106"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a91b9e9f5835f45b65cb529e4976c732b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerable&lt; float &gt;</type>
+        <definition>static IEnumerable&lt; float &gt; StationaryPointTimes</definition>
+        <argsstring>(float a, float b, float c)</argsstring>
+        <name>StationaryPointTimes</name>
+        <qualifiedname>PathCreation.Utility.CubicBezierUtility.StationaryPointTimes</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="110" column="28" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="110" bodyend="133"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Collection of functions related to cubic bezier curves (a curve with a start and end &apos;anchor&apos; point, and two &apos;control&apos; points to define the shape of the curve between the anchors) </para>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="9" column="19" bodyfile="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" bodystart="9" bodyend="135"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a6321a63a289fb77cf196ba607050375d" prot="public" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>CalculateSegmentBounds</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a1b2303522faefd60bbbfea9c6ce4d9c7" prot="public" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>EstimateCurveLength</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1aa10b9a048602039356790289036154cf" prot="public" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>EvaluateCurve</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a3924a60bf6600991d05938fa22a316a0" prot="public" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>EvaluateCurve</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1ae7f1a0b7bd942f5b2aacd1a2a0348f49" prot="public" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>EvaluateCurveDerivative</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a18597c3735c05f9e2b99294f97ad95da" prot="public" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>EvaluateCurveDerivative</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a5d0e6187acba520d0cbe50d6e3b6ab0b" prot="public" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>EvaluateCurveSecondDerivative</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a1e2c8ca7c07bb85c24390f5021501f08" prot="public" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>EvaluateCurveSecondDerivative</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1abb4a51d397c7d96a204bb4b98baaad82" prot="public" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>ExtremePointTimes</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1aa19757e831a55fc0f70851b17e99d56d" prot="public" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>Normal</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a16421b9a7ecebac1ddda7bacef1e4313" prot="public" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>Normal</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a7ce04896014036624bf0ecb82b849318" prot="public" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>SplitCurve</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a91b9e9f5835f45b65cb529e4976c732b" prot="private" virt="non-virtual"><scope>PathCreation::Utility::CubicBezierUtility</scope><name>StationaryPointTimes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_movement_patterns" kind="namespace" language="C#">
+    <compoundname>MovementPatterns</compoundname>
+    <innerclass refid="class_movement_patterns_1_1_chasing_m_p" prot="public">MovementPatterns::ChasingMP</innerclass>
+    <innerclass refid="class_movement_patterns_1_1_follow_path" prot="public">MovementPatterns::FollowPath</innerclass>
+    <innerclass refid="class_movement_patterns_1_1_linear_m_p" prot="public">MovementPatterns::LinearMP</innerclass>
+    <innerclass refid="class_movement_patterns_1_1_movement_pattern" prot="public">MovementPatterns::MovementPattern</innerclass>
+    <innerclass refid="class_movement_patterns_1_1_orbiting_m_p" prot="public">MovementPatterns::OrbitingMP</innerclass>
+    <innerclass refid="class_movement_patterns_1_1_sinusoid_m_p" prot="public">MovementPatterns::SinusoidMP</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/MovementPatterns/ChasingMP.cs" line="4" column="1"/>
+  </compounddef>
+</doxygen>

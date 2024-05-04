@@ -1,0 +1,48 @@
+\doxysection{Linear\+MP Class Reference}
+\hypertarget{class_movement_patterns_1_1_linear_m_p}{}\label{class_movement_patterns_1_1_linear_m_p}\index{LinearMP@{LinearMP}}
+
+
+Moves along a straight line.  
+
+
+Inheritance diagram for Linear\+MP\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_movement_patterns_1_1_linear_m_p}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_movement_patterns_1_1_linear_m_p_a7f7e4724cf57d59513b39c5ecc81adc8}\label{class_movement_patterns_1_1_linear_m_p_a7f7e4724cf57d59513b39c5ecc81adc8} 
+float {\bfseries speed}
+\begin{DoxyCompactList}\small\item\em Distance travelled in one second. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_linear_m_p_a97712bccaedef08f6d8c525bdda2f7ef}\label{class_movement_patterns_1_1_linear_m_p_a97712bccaedef08f6d8c525bdda2f7ef} 
+float {\bfseries acceleration}
+\begin{DoxyCompactList}\small\item\em Rate of change of speed. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_linear_m_p_add450a0a83c646aa48b83eeafbf0b902}\label{class_movement_patterns_1_1_linear_m_p_add450a0a83c646aa48b83eeafbf0b902} 
+bool {\bfseries follows\+Rotation}
+\begin{DoxyCompactList}\small\item\em If true, the slope of the line is determined by the entity\textquotesingle{}s rotation. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_linear_m_p_aeedcd9bc1fcd3a20ade597dbe82176a7}\label{class_movement_patterns_1_1_linear_m_p_aeedcd9bc1fcd3a20ade597dbe82176a7} 
+float {\bfseries direction\+In\+Degrees}
+\begin{DoxyCompactList}\small\item\em If follows\+Rotation is false, this is the angle of the slope in degrees, where 0 is up. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern}{Movement\+Pattern}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern_a04f0e6cf979d3b51e259545b3d33933d}{Initialize}} (\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Sets parameters of the movement pattern based on the entity\textquotesingle{}s state. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern_a784a22d17e4193114212035e8eb6ac0f}{Get\+Next\+Position}} (\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Calculates the position of the entity in the next frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_linear_m_p_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_linear_m_p_8cs_source}{Linear\+MP.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Movement\+Patterns/Linear\+MP.\+cs\end{DoxyCompactItemize}

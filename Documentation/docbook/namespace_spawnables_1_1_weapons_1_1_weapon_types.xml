@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_spawnables_1_1_weapons_1_1_weapon_types" xml:lang="en-US">
+<title>Spawnables.Weapons.WeaponTypes Namespace Reference</title>
+<indexterm><primary>Spawnables.Weapons.WeaponTypes</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun">ScatterGun</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_projectiles_1_1_lazer" xml:lang="en-US">
+<title>Spawnables.Projectiles.Lazer Class Reference</title>
+<indexterm><primary>Spawnables.Projectiles.Lazer</primary></indexterm>
+Inheritance diagram for Spawnables.Projectiles.Lazer:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_projectiles_1_1_lazer__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Spawnables.Projectiles.Lazer:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_projectiles_1_1_lazer__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_spawnables_1_1_projectiles_1_1_lazer_1a0ef18114ac207dc6872de820e0fc2288">OnShoot</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_spawnables_1_1_projectiles_1_1_lazer_1a9bf4584038259eb018240ce057453cae">cooldown</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_spawnables_1_1_projectiles_1_1_lazer_1a362e84fce241717c7b5f667f800209a1">telegraphDuration</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_spawnables_1_1_projectiles_1_1_lazer_1aff4e6c290d21b01d09005f33fe41f181">releaseDuration</link></para>
+</listitem>
+            <listitem><para>Material <link linkend="_class_spawnables_1_1_projectiles_1_1_lazer_1a8441c2011d78dc08ae8c91ab67c53858">telegraphMaterial</link></para>
+</listitem>
+            <listitem><para>Material <link linkend="_class_spawnables_1_1_projectiles_1_1_lazer_1a46030a8f510888c49542aabd5759edb0">releaseMaterial</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_spawnables_1_1_projectiles_1_1_lazer_1a3ea079e8cb2bb7f79d0bdf71ff6990b1">telegraphWidth</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_spawnables_1_1_projectiles_1_1_lazer_1adc09c637e8d157b01610b439c0510cdb">releaseWidth</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__lazer_8cs_source_1l00008">8</link> of file <link linkend="__lazer_8cs_source">Lazer.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_lazer_1a0ef18114ac207dc6872de820e0fc2288"/><section>
+    <title>OnShoot()</title>
+<indexterm><primary>OnShoot</primary><secondary>Spawnables.Projectiles.Lazer</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Lazer</primary><secondary>OnShoot</secondary></indexterm>
+<para><computeroutput>void Spawnables.Projectiles.Lazer.OnShoot ( )</computeroutput></para><para>
+Implements <link linkend="_interface_spawnables_1_1_projectiles_1_1_i_shootable">Spawnables.Projectiles.IShootable</link>.</para>
+<para>
+Definition at line <link linkend="__lazer_8cs_source_1l00041">41</link> of file <link linkend="__lazer_8cs_source">Lazer.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_lazer_1a9bf4584038259eb018240ce057453cae"/><section>
+    <title>cooldown</title>
+<indexterm><primary>cooldown</primary><secondary>Spawnables.Projectiles.Lazer</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Lazer</primary><secondary>cooldown</secondary></indexterm>
+<para><computeroutput>float Spawnables.Projectiles.Lazer.cooldown</computeroutput></para><para>
+Definition at line <link linkend="__lazer_8cs_source_1l00013">13</link> of file <link linkend="__lazer_8cs_source">Lazer.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_lazer_1aff4e6c290d21b01d09005f33fe41f181"/><section>
+    <title>releaseDuration</title>
+<indexterm><primary>releaseDuration</primary><secondary>Spawnables.Projectiles.Lazer</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Lazer</primary><secondary>releaseDuration</secondary></indexterm>
+<para><computeroutput>float Spawnables.Projectiles.Lazer.releaseDuration</computeroutput></para><para>
+Definition at line <link linkend="__lazer_8cs_source_1l00015">15</link> of file <link linkend="__lazer_8cs_source">Lazer.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_lazer_1a46030a8f510888c49542aabd5759edb0"/><section>
+    <title>releaseMaterial</title>
+<indexterm><primary>releaseMaterial</primary><secondary>Spawnables.Projectiles.Lazer</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Lazer</primary><secondary>releaseMaterial</secondary></indexterm>
+<para><computeroutput>Material Spawnables.Projectiles.Lazer.releaseMaterial</computeroutput></para><para>
+Definition at line <link linkend="__lazer_8cs_source_1l00018">18</link> of file <link linkend="__lazer_8cs_source">Lazer.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_lazer_1adc09c637e8d157b01610b439c0510cdb"/><section>
+    <title>releaseWidth</title>
+<indexterm><primary>releaseWidth</primary><secondary>Spawnables.Projectiles.Lazer</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Lazer</primary><secondary>releaseWidth</secondary></indexterm>
+<para><computeroutput>float Spawnables.Projectiles.Lazer.releaseWidth</computeroutput></para><para>
+Definition at line <link linkend="__lazer_8cs_source_1l00020">20</link> of file <link linkend="__lazer_8cs_source">Lazer.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_lazer_1a362e84fce241717c7b5f667f800209a1"/><section>
+    <title>telegraphDuration</title>
+<indexterm><primary>telegraphDuration</primary><secondary>Spawnables.Projectiles.Lazer</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Lazer</primary><secondary>telegraphDuration</secondary></indexterm>
+<para><computeroutput>float Spawnables.Projectiles.Lazer.telegraphDuration</computeroutput></para><para>
+Definition at line <link linkend="__lazer_8cs_source_1l00014">14</link> of file <link linkend="__lazer_8cs_source">Lazer.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_lazer_1a8441c2011d78dc08ae8c91ab67c53858"/><section>
+    <title>telegraphMaterial</title>
+<indexterm><primary>telegraphMaterial</primary><secondary>Spawnables.Projectiles.Lazer</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Lazer</primary><secondary>telegraphMaterial</secondary></indexterm>
+<para><computeroutput>Material Spawnables.Projectiles.Lazer.telegraphMaterial</computeroutput></para><para>
+Definition at line <link linkend="__lazer_8cs_source_1l00017">17</link> of file <link linkend="__lazer_8cs_source">Lazer.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_lazer_1a3ea079e8cb2bb7f79d0bdf71ff6990b1"/><section>
+    <title>telegraphWidth</title>
+<indexterm><primary>telegraphWidth</primary><secondary>Spawnables.Projectiles.Lazer</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Lazer</primary><secondary>telegraphWidth</secondary></indexterm>
+<para><computeroutput>float Spawnables.Projectiles.Lazer.telegraphWidth</computeroutput></para><para>
+Definition at line <link linkend="__lazer_8cs_source_1l00019">19</link> of file <link linkend="__lazer_8cs_source">Lazer.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs</section>
+</section>

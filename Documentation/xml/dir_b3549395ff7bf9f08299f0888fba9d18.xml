@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_b3549395ff7bf9f08299f0888fba9d18" kind="dir">
+    <compoundname>Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Core/Editor</compoundname>
+    <innerdir refid="dir_6999310172a63d222ddbc10c3144c00b">Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Core/Editor/Helper</innerdir>
+    <innerfile refid="_path_editor_8cs">PathEditor.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Core/Editor/"/>
+  </compounddef>
+</doxygen>

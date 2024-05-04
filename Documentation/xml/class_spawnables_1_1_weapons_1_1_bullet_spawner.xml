@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_weapons_1_1_bullet_spawner" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Weapons::BulletSpawner</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <basecompoundref refid="interface_spawnables_1_1_weapons_1_1_i_shootable" prot="public" virt="non-virtual">IShootable</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_bullet_spawner_1a2db3e95a5ad198dc7375a72e3974fa78" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float GIZMO_RADIUS</definition>
+        <argsstring></argsstring>
+        <name>GIZMO_RADIUS</name>
+        <qualifiedname>Spawnables.Weapons.BulletSpawner.GIZMO_RADIUS</qualifiedname>
+        <initializer>= 0.05f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="12" column="29" bodyfile="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_bullet_spawner_1ac75394cf2122bc1c1dc73f2f02d99f8d" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject projectile</definition>
+        <argsstring></argsstring>
+        <name>projectile</name>
+        <qualifiedname>Spawnables.Weapons.BulletSpawner.projectile</qualifiedname>
+        <briefdescription>
+<para>Projectile to spawn. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="19" column="27" bodyfile="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1a26a2e3c2d07dea6a2fd1d38eac284ee6" compoundref="_bullet_spawner_8cs" startline="38" endline="41">BulletSpawner.OnShoot</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_bullet_spawner_1a44e52aa723ffbb2a09a735e5ba46fba9" prot="private" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform _thisTransform</definition>
+        <argsstring></argsstring>
+        <name>_thisTransform</name>
+        <qualifiedname>Spawnables.Weapons.BulletSpawner._thisTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="24" column="27" bodyfile="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_bullet_spawner_1ae4b513cddd594f1c359e4f0a3e79a8c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Spawnables.Weapons.BulletSpawner.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="28" column="21" bodyfile="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_bullet_spawner_1a26a2e3c2d07dea6a2fd1d38eac284ee6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnShoot</definition>
+        <argsstring>()</argsstring>
+        <name>OnShoot</name>
+        <qualifiedname>Spawnables.Weapons.BulletSpawner.OnShoot</qualifiedname>
+        <reimplements refid="interface_spawnables_1_1_weapons_1_1_i_shootable_1a26a2e3c2d07dea6a2fd1d38eac284ee6">OnShoot</reimplements>
+        <briefdescription>
+<para>Spawn a projectile at the spawner&apos;s position and rotation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="38" column="21" bodyfile="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="38" bodyend="41"/>
+        <references refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1ac75394cf2122bc1c1dc73f2f02d99f8d" compoundref="_bullet_spawner_8cs" startline="19">BulletSpawner.projectile</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_bullet_spawner_1ac51c75fd06c6783b6553902c86ac9d71" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnDrawGizmos</definition>
+        <argsstring>()</argsstring>
+        <name>OnDrawGizmos</name>
+        <qualifiedname>Spawnables.Weapons.BulletSpawner.OnDrawGizmos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="45" column="22" bodyfile="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="45" bodyend="49"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Spawns a specified projectile when shot either by the player or an enemy. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BulletSpawner</label>
+        <link refid="class_spawnables_1_1_weapons_1_1_bullet_spawner"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IShootable</label>
+        <link refid="interface_spawnables_1_1_weapons_1_1_i_shootable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BulletSpawner</label>
+        <link refid="class_spawnables_1_1_weapons_1_1_bullet_spawner"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IShootable</label>
+        <link refid="interface_spawnables_1_1_weapons_1_1_i_shootable"/>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="8" column="11" bodyfile="Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="9" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1a44e52aa723ffbb2a09a735e5ba46fba9" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::BulletSpawner</scope><name>_thisTransform</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1ae4b513cddd594f1c359e4f0a3e79a8c6" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::BulletSpawner</scope><name>Awake</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1a2db3e95a5ad198dc7375a72e3974fa78" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::BulletSpawner</scope><name>GIZMO_RADIUS</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1ac51c75fd06c6783b6553902c86ac9d71" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::BulletSpawner</scope><name>OnDrawGizmos</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1a26a2e3c2d07dea6a2fd1d38eac284ee6" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::BulletSpawner</scope><name>OnShoot</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1ac75394cf2122bc1c1dc73f2f02d99f8d" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::BulletSpawner</scope><name>projectile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

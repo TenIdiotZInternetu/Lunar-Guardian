@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_projectiles_1_1_projectile" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Projectiles::Projectile</compoundname>
+    <basecompoundref refid="class_spawnables_1_1_entity" prot="public" virt="non-virtual">Spawnables.Entity</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_projectile_1a6fe67c75859e656868cf6a8cc6fe5399" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Spawnables.Projectiles.Projectile.Damage</definition>
+        <argsstring></argsstring>
+        <name>Damage</name>
+        <qualifiedname>Spawnables.Projectiles.Projectile.Damage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Projectile.cs" line="11" column="20" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Projectile.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_projectile_1a2c3a208ce2ed63a4fabf48087d74f688" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.Projectile.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Spawnables.Projectiles.Projectile.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Projectile.cs" line="13" column="14" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Projectile.cs" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_projectile_1abcd9bf0c1361c7e16c230dc9f61a47a3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.Projectile.Disperse</definition>
+        <argsstring>()</argsstring>
+        <name>Disperse</name>
+        <qualifiedname>Spawnables.Projectiles.Projectile.Disperse</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Projectile.cs" line="18" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Projectile.cs" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_projectile_1a685497be72a86e0e673b2e8e9eb06c5e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.Projectile.OnBombDamageTick</definition>
+        <argsstring>(int damage)</argsstring>
+        <name>OnBombDamageTick</name>
+        <qualifiedname>Spawnables.Projectiles.Projectile.OnBombDamageTick</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>damage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Projectile.cs" line="23" column="14" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Projectile.cs" bodystart="23" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="class_spawnables_1_1_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.Projectiles.Projectile</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_projectile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="class_spawnables_1_1_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>movementPattern</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="4">
+        <label>MovementPatterns.MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Spawnables.Projectiles.Projectile</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_projectile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Projectile.cs" line="9" column="11" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Projectile.cs" bodystart="10" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_entity_1a0e534e0a5dc3d5be68d63adf023d1a87" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>ChangeMovementPattern</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_projectile_1a6fe67c75859e656868cf6a8cc6fe5399" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>Damage</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_projectile_1abcd9bf0c1361c7e16c230dc9f61a47a3" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>Disperse</name></member>
+      <member refid="class_spawnables_1_1_entity_1a38bd7c6d5011258e88d49a831fff7cc8" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>LifeTime</name></member>
+      <member refid="class_spawnables_1_1_entity_1ac77f3047be8fba42b0df52f38ed755dc" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>movementPattern</name></member>
+      <member refid="class_spawnables_1_1_entity_1ad43fe32eadfb0c50037d0c68993e5852" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>MPLifeTime</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_projectile_1a685497be72a86e0e673b2e8e9eb06c5e" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>OnBombDamageTick</name></member>
+      <member refid="class_spawnables_1_1_entity_1a19b1b8096e1697f6e627e1ed81cba513" prot="protected" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>OnEnable</name></member>
+      <member refid="class_spawnables_1_1_entity_1a706c0dab9a89aa357b001e391a9a4e3f" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>SpawnKey</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_projectile_1a2c3a208ce2ed63a4fabf48087d74f688" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>Start</name></member>
+      <member refid="class_spawnables_1_1_entity_1aa8e60f085b3ac758ec502d2f8a830781" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>StartMoving</name></member>
+      <member refid="class_spawnables_1_1_entity_1a2a4297fee39fb117430d93d334670fcb" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>StopMoving</name></member>
+      <member refid="class_spawnables_1_1_entity_1a47e9d6e9fce6ff417b777a1e87d892dc" prot="protected" virt="non-virtual"><scope>Spawnables::Projectiles::Projectile</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_spawnables_1_1_collectibles" xml:lang="en-US">
+<title>Spawnables.Collectibles Namespace Reference</title>
+<indexterm><primary>Spawnables.Collectibles</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_collectibles_1_1_multiplier_pickup">MultiplierPickup</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_collectibles_1_1_pickup">Pickup</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

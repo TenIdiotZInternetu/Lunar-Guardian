@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_movement_patterns_1_1_linear_m_p" xml:lang="en-US">
+<title>LinearMP Class Reference</title>
+<indexterm><primary>LinearMP</primary></indexterm>
+<para>
+
+<para>Moves along a straight line. </para>
+ 
+</para>
+<para>Inheritance diagram for LinearMP:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_patterns_1_1_linear_m_p.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_movement_patterns_1_1_linear_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8"/>float <emphasis role="strong">speed</emphasis></para>
+
+<para>Distance travelled in one second. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_movement_patterns_1_1_linear_m_p_1a97712bccaedef08f6d8c525bdda2f7ef"/>float <emphasis role="strong">acceleration</emphasis></para>
+
+<para>Rate of change of speed. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_movement_patterns_1_1_linear_m_p_1add450a0a83c646aa48b83eeafbf0b902"/>bool <emphasis role="strong">followsRotation</emphasis></para>
+
+<para>If true, the slope of the line is determined by the entity&apos;s rotation. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_movement_patterns_1_1_linear_m_p_1aeedcd9bc1fcd3a20ade597dbe82176a7"/>float <emphasis role="strong">directionInDegrees</emphasis></para>
+
+<para>If followsRotation is false, this is the angle of the slope in degrees, where 0 is up. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Member Functions inherited from <link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_movement_patterns_1_1_movement_pattern_1a04f0e6cf979d3b51e259545b3d33933d">Initialize</link> (<link linkend="_class_spawnables_1_1_entity">Entity</link> entity)</para>
+
+<para>Sets parameters of the movement pattern based on the entity&apos;s state. </para>
+</listitem>
+            <listitem><para>Vector3 <link linkend="_class_movement_patterns_1_1_movement_pattern_1a784a22d17e4193114212035e8eb6ac0f">GetNextPosition</link> (<link linkend="_class_spawnables_1_1_entity">Entity</link> entity)</para>
+
+<para>Calculates the position of the entity in the next frame. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__linear_m_p_8cs_source_1l00012">12</link> of file <link linkend="__linear_m_p_8cs_source">LinearMP.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/MovementPatterns/LinearMP.cs</section>
+</section>

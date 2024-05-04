@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_game_states_1_1_game_state" xml:lang="en-US">
+<title>GameStates.GameState Class Reference</title>
+<indexterm><primary>GameStates.GameState</primary></indexterm>
+<para>
+
+<para>A state governed by the GameManager. </para>
+ 
+</para>
+Inheritance diagram for GameStates.GameState:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_game_states_1_1_game_state__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for GameStates.GameState:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_game_states_1_1_game_state__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_game_states_1_1_game_state_1a26e38c77aa2b029e411421e10ca81e8a"/>void <emphasis role="strong">ChangeToThisState</emphasis> ()</para>
+
+<para>Takes actions needed to define this state. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_game_states_1_1_game_state_1af986bfbbe19e8336fd98573abf1bc933"/>void <emphasis role="strong">LeaveThisState</emphasis> ()</para>
+
+<para>Undoes changes made by this state. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A state governed by the GameManager. </para>
+<para>
+Definition at line <link linkend="__game_state_8cs_source_1l00008">8</link> of file <link linkend="__game_state_8cs_source">GameState.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameState.cs</section>
+</section>

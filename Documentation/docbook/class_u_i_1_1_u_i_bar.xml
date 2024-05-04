@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_u_i_1_1_u_i_bar" xml:lang="en-US">
+<title>UIBar Class Reference</title>
+<indexterm><primary>UIBar</primary></indexterm>
+<para>
+
+<para>A bar shown during gameplay that displays a resource. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_u_i_1_1_u_i_bar_1adb6c09387f72b5cf33c10e5351adf1e4">ChangeMaxValue</link> (int value)</para>
+
+<para>Changes highest displayed value, effectively scaling the bar. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_u_i_bar_1a4454f3007c5543b6151be6a1f8755d53"/><link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">PlayerStatus.ResourceType</link> <emphasis role="strong">resourceType</emphasis></para>
+
+<para>Resourse to display. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_u_i_1_1_u_i_bar_1a573276585d13fcf5637192cab8b129ba">ChangeValue</link> (float value)</para>
+
+<para>Changes the value of the bar. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__u_i_bar_8cs_source_1l00011">11</link> of file <link linkend="__u_i_bar_8cs_source">UIBar.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_u_i_1_1_u_i_bar_1adb6c09387f72b5cf33c10e5351adf1e4"/><section>
+    <title>ChangeMaxValue()</title>
+<indexterm><primary>ChangeMaxValue</primary><secondary>UIBar</secondary></indexterm>
+<indexterm><primary>UIBar</primary><secondary>ChangeMaxValue</secondary></indexterm>
+<para><computeroutput>void ChangeMaxValue (int value)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>The new highest value of the bar </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__u_i_bar_8cs_source_1l00039">39</link> of file <link linkend="__u_i_bar_8cs_source">UIBar.cs</link>.</para>
+</section>
+<anchor xml:id="_class_u_i_1_1_u_i_bar_1a573276585d13fcf5637192cab8b129ba"/><section>
+    <title>ChangeValue()</title>
+<indexterm><primary>ChangeValue</primary><secondary>UIBar</secondary></indexterm>
+<indexterm><primary>UIBar</primary><secondary>ChangeValue</secondary></indexterm>
+<para><computeroutput>void ChangeValue (float value)<computeroutput>[private]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>value</entry><entry>
+<para>The value to be displayed </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__u_i_bar_8cs_source_1l00051">51</link> of file <link linkend="__u_i_bar_8cs_source">UIBar.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/UI/UIBar.cs</section>
+</section>

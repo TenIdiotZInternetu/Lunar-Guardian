@@ -1,0 +1,402 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_global_display_settings" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::GlobalDisplaySettings</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ScriptableObject</basecompoundref>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_path_creation_1_1_global_display_settings_1a126a76c59a74d758b3d0cdc357315fac" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>HandleType</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.HandleType</qualifiedname>
+        <enumvalue id="class_path_creation_1_1_global_display_settings_1a126a76c59a74d758b3d0cdc357315facab7095f057db3fefa7325ad93a04e14fd" prot="public">
+          <name>Sphere</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_path_creation_1_1_global_display_settings_1a126a76c59a74d758b3d0cdc357315faca30954d90085f6eaaf5817917fc5fecb3" prot="public">
+          <name>Circle</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_path_creation_1_1_global_display_settings_1a126a76c59a74d758b3d0cdc357315facaceb46ca115d05c51aa5a16a8867c3304" prot="public">
+          <name>Square</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="11" column="15" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1ae4f4a1e1a3745aca3b9148f4e7d116c6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float anchorSize</definition>
+        <argsstring></argsstring>
+        <name>anchorSize</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.anchorSize</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="14" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1aa432b2bd40c3a712099c18f3114cd462" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float controlSize</definition>
+        <argsstring></argsstring>
+        <name>controlSize</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.controlSize</qualifiedname>
+        <initializer>= 7f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="15" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1aa4e2fb37b8923a648bfb4347bb75f8f6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool visibleBehindObjects</definition>
+        <argsstring></argsstring>
+        <name>visibleBehindObjects</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.visibleBehindObjects</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="18" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1ad81d70efe803c0653474b0db0f488c3c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool visibleWhenNotSelected</definition>
+        <argsstring></argsstring>
+        <name>visibleWhenNotSelected</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.visibleWhenNotSelected</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="20" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1af29276ea146b120ddafe535280dd2d03" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hideAutoControls</definition>
+        <argsstring></argsstring>
+        <name>hideAutoControls</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.hideAutoControls</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="22" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1a30a6e91a3fbfcb8cecdb732b2b5fd0a8" prot="public" static="no" mutable="no">
+        <type>HandleType</type>
+        <definition>HandleType anchorShape</definition>
+        <argsstring></argsstring>
+        <name>anchorShape</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.anchorShape</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="23" column="27" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1a84deef0cb92f4fce6630dee6cac8e0c3" prot="public" static="no" mutable="no">
+        <type>HandleType</type>
+        <definition>HandleType controlShape</definition>
+        <argsstring></argsstring>
+        <name>controlShape</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.controlShape</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="24" column="27" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1acc70eb29358bf90f1962884301c1f2fb" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color anchor</definition>
+        <argsstring></argsstring>
+        <name>anchor</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.anchor</qualifiedname>
+        <initializer>= new Color(0.95f, 0.25f, 0.25f, 0.85f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="28" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1adf4c2aabca23fa9cbf1c151c296f6ad9" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color anchorHighlighted</definition>
+        <argsstring></argsstring>
+        <name>anchorHighlighted</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.anchorHighlighted</qualifiedname>
+        <initializer>= new Color(1, 0.57f, 0.4f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="29" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1a71da7411a178a17e60a891eefeb7f663" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color anchorSelected</definition>
+        <argsstring></argsstring>
+        <name>anchorSelected</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.anchorSelected</qualifiedname>
+        <initializer>= Color.white</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="30" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1af9eac170ce8aa811b495cf9212146b7b" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color control</definition>
+        <argsstring></argsstring>
+        <name>control</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.control</qualifiedname>
+        <initializer>= new Color(0.35f, 0.6f, 1, 0.85f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="33" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1ab01b006451102777e4815e3dc3aefebf" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color controlHighlighted</definition>
+        <argsstring></argsstring>
+        <name>controlHighlighted</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.controlHighlighted</qualifiedname>
+        <initializer>= new Color(0.8f, 0.67f, 0.97f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="34" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1a424e6c75e329ffedb288fd360ffd8f61" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color controlSelected</definition>
+        <argsstring></argsstring>
+        <name>controlSelected</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.controlSelected</qualifiedname>
+        <initializer>= Color.white</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="35" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1a65a96bc0055f6079235f0b61a946b0e5" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color handleDisabled</definition>
+        <argsstring></argsstring>
+        <name>handleDisabled</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.handleDisabled</qualifiedname>
+        <initializer>= new Color(1, 1, 1, 0.2f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="36" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1ad1011e3eba773d266dcaf875688399cf" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color controlLine</definition>
+        <argsstring></argsstring>
+        <name>controlLine</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.controlLine</qualifiedname>
+        <initializer>= new Color(0, 0, 0, 0.35f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="37" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1a53f6533769edf49ff672d3cbafa34d13" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color bezierPath</definition>
+        <argsstring></argsstring>
+        <name>bezierPath</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.bezierPath</qualifiedname>
+        <initializer>= Color.green</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="40" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1a6d6fcda2a5165c699c6e958570977ab3" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color highlightedPath</definition>
+        <argsstring></argsstring>
+        <name>highlightedPath</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.highlightedPath</qualifiedname>
+        <initializer>= new Color(1, 0.6f, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="41" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1ad814e257985494b65b112a3b17264d80" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color bounds</definition>
+        <argsstring></argsstring>
+        <name>bounds</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.bounds</qualifiedname>
+        <initializer>= new Color(1, 1, 1, .4f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="42" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1a597ce946140cf4336d6d1dda53321e26" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color segmentBounds</definition>
+        <argsstring></argsstring>
+        <name>segmentBounds</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.segmentBounds</qualifiedname>
+        <initializer>= new Color(1, 1, 1, .4f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="43" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1aa9650eba5097cefcc25e7dd394f8b5d6" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color vertexPath</definition>
+        <argsstring></argsstring>
+        <name>vertexPath</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.vertexPath</qualifiedname>
+        <initializer>= Color.white</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="46" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1a2054366d9e55eaa4d96c1d55655a8031" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color normals</definition>
+        <argsstring></argsstring>
+        <name>normals</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.normals</qualifiedname>
+        <initializer>= Color.yellow</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="49" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_global_display_settings_1a19cf020622780d02da092f32d3d34e2e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float normalsLength</definition>
+        <argsstring></argsstring>
+        <name>normalsLength</name>
+        <qualifiedname>PathCreation.GlobalDisplaySettings.normalsLength</qualifiedname>
+        <initializer>= .1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="51" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" line="8" column="11" bodyfile="Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs" bodystart="9" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_global_display_settings_1acc70eb29358bf90f1962884301c1f2fb" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>anchor</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1adf4c2aabca23fa9cbf1c151c296f6ad9" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>anchorHighlighted</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1a71da7411a178a17e60a891eefeb7f663" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>anchorSelected</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1a30a6e91a3fbfcb8cecdb732b2b5fd0a8" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>anchorShape</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1ae4f4a1e1a3745aca3b9148f4e7d116c6" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>anchorSize</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1a53f6533769edf49ff672d3cbafa34d13" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>bezierPath</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1ad814e257985494b65b112a3b17264d80" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>bounds</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1af9eac170ce8aa811b495cf9212146b7b" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>control</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1ab01b006451102777e4815e3dc3aefebf" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>controlHighlighted</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1ad1011e3eba773d266dcaf875688399cf" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>controlLine</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1a424e6c75e329ffedb288fd360ffd8f61" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>controlSelected</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1a84deef0cb92f4fce6630dee6cac8e0c3" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>controlShape</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1aa432b2bd40c3a712099c18f3114cd462" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>controlSize</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1a65a96bc0055f6079235f0b61a946b0e5" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>handleDisabled</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1a126a76c59a74d758b3d0cdc357315fac" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>HandleType</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1af29276ea146b120ddafe535280dd2d03" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>hideAutoControls</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1a6d6fcda2a5165c699c6e958570977ab3" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>highlightedPath</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1a2054366d9e55eaa4d96c1d55655a8031" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>normals</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1a19cf020622780d02da092f32d3d34e2e" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>normalsLength</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1a597ce946140cf4336d6d1dda53321e26" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>segmentBounds</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1aa9650eba5097cefcc25e7dd394f8b5d6" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>vertexPath</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1aa4e2fb37b8923a648bfb4347bb75f8f6" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>visibleBehindObjects</name></member>
+      <member refid="class_path_creation_1_1_global_display_settings_1ad81d70efe803c0653474b0db0f488c3c" prot="public" virt="non-virtual"><scope>PathCreation::GlobalDisplaySettings</scope><name>visibleWhenNotSelected</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

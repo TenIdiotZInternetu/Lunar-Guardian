@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__custom_events_8cs_source" xml:lang="en-US">
+<title>CustomEvents.cs</title>
+<indexterm><primary>Tools/CustomEvents.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__custom_events_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System;
+<anchor xml:id="__custom_events_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_game_manager">GameManager</link>;
+<anchor xml:id="__custom_events_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__custom_events_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.Events;
+<anchor xml:id="__custom_events_8cs_source_1l00005"/>00005 
+<anchor xml:id="__custom_events_8cs_source_1l00006"/>00006 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_tools">Tools</link>
+<anchor xml:id="__custom_events_8cs_source_1l00007"/>00007 {
+<anchor xml:id="__custom_events_8cs_source_1l00011"/><link linkend="_class_tools_1_1_game_object_event">00011</link> &#32;&#32;&#32;&#32;[Serializable]&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_tools_1_1_game_object_event">GameObjectEvent</link>&#32;:&#32;UnityEvent&lt;GameObject&gt;&#32;{}
+<anchor xml:id="__custom_events_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;
+<anchor xml:id="__custom_events_8cs_source_1l00016"/><link linkend="_class_tools_1_1_game_state_event">00016</link> &#32;&#32;&#32;&#32;[Serializable]&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_tools_1_1_game_state_event">GameStateEvent</link>&#32;:&#32;UnityEvent&lt;GameState&gt;&#32;{}
+<anchor xml:id="__custom_events_8cs_source_1l00017"/>00017 }
+</programlisting></section>

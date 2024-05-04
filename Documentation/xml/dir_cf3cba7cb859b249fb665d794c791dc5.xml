@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_cf3cba7cb859b249fb665d794c791dc5" kind="dir">
+    <compoundname>Scripts/UI</compoundname>
+    <innerdir refid="dir_3a1ea4fc27265532435bc2bb2ed9200d">Scripts/UI/Menus</innerdir>
+    <innerfile refid="_menu_screen_8cs">MenuScreen.cs</innerfile>
+    <innerfile refid="_text_display_8cs">TextDisplay.cs</innerfile>
+    <innerfile refid="_u_i_bar_8cs">UIBar.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/UI/"/>
+  </compounddef>
+</doxygen>

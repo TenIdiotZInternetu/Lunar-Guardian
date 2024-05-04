@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_player_scripts_1_1_controls" xml:lang="en-US">
+<title>Controls Class Reference</title>
+<indexterm><primary>Controls</primary></indexterm>
+<para>
+
+<para>Listens to the Unity&apos;s Input Manager and triggers events based on the input. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1a698aa7a1bcf8c024ca5b44b35a2a49db"/>static float <emphasis role="strong">MoveHorizontal</emphasis></para>
+
+<para>Value of the Input Manager&apos;s virtual horizontal axis (A/D) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1aaef34645c77748c8b64dd8ac3ede4b16"/>static float <emphasis role="strong">MoveVertical</emphasis></para>
+
+<para>Value of the Input Manager&apos;s virtual vertical axis (W/S) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1ac711d62a538e7d73ed78e76dc4146c2b"/>static bool <emphasis role="strong">IsFocused</emphasis></para>
+
+<para>True if the focus button is held down. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1ac34dfff63d43fcc26bcb5a575de25dd4"/>static Action <emphasis role="strong">Action1</emphasis></para>
+
+<para>Invoked when the primary action button is pressed (K/Z) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1a6c415bf89d7a793fffe97f670ad448d9"/>static Action <emphasis role="strong">Action1Release</emphasis></para>
+
+<para>Invoked when the primary action button is released (K/Z) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1aeade3269d21ec1b08e689191790886d9"/>static Action <emphasis role="strong">Action2</emphasis></para>
+
+<para>Invoked when the secondary action button is pressed (L/X) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1a9bcbd3ded58670f66a8410c8f63c1b31"/>static Action <emphasis role="strong">Action2Release</emphasis></para>
+
+<para>Invoked when the secondary action button is pressed (L/X) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1a45f7d5809a598560cf6e169188f018f1"/>static Action <emphasis role="strong">Submit</emphasis></para>
+
+<para>Invoked when the submit button is pressed (Enter) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1a4e385af209adbcafa65342406807f1cf"/>static Action <emphasis role="strong">SubmitRelease</emphasis></para>
+
+<para>Invoked when the submit button is released (Enter) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1a27a4fdf4f091f1fe86a5fcf8de52b2e4"/>static Action <emphasis role="strong">Cancel</emphasis></para>
+
+<para>Invoked when the cancel button is pressed (Esc) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1a9d0db37622e49d09bfd17e0c5b7fa577"/>static Action <emphasis role="strong">CancelRelease</emphasis></para>
+
+<para>Invoked when the cancel button is released (Esc) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1a8d0b222d6d06818a5151fd23df2da016"/>static EventHandler&lt; float &gt; <emphasis role="strong">MovesUp</emphasis></para>
+
+<para>Invoked when the vertical axis is moved upwards, with its value as a parameter. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1a8ba5a5665ee6f8854162f487826f4c51"/>static EventHandler&lt; float &gt; <emphasis role="strong">MovesDown</emphasis></para>
+
+<para>Invoked when the vertical axis is moved downwards, with its value as a parameter. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1ae06b60159d0a60d5d71a73194814716b"/>static EventHandler&lt; float &gt; <emphasis role="strong">MovesLeft</emphasis></para>
+
+<para>Invoked when the horizontal axis is moved left, with its value as a parameter. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_controls_1a9f726fb1cb518889a257f9689e1671c8"/>static EventHandler&lt; float &gt; <emphasis role="strong">MovesRight</emphasis></para>
+
+<para>Invoked when the horizontal axis is moved right, with its value as a parameter. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__controls_8cs_source_1l00009">9</link> of file <link linkend="__controls_8cs_source">Controls.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/PlayerScripts/Controls.cs</section>
+</section>

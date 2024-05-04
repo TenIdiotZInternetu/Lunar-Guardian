@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_editor_1_1_path_editor" xml:lang="en-US">
+<title>PathEditor Class Reference</title>
+<indexterm><primary>PathEditor</primary></indexterm>
+<para>
+
+<para>Editor class for the creation of Bezier and Vertex paths. </para>
+ 
+</para>
+<para>
+Inherits Editor.</para>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__path_editor_8cs_source_1l00012">12</link> of file <link linkend="__path_editor_8cs_source">PathEditor.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Tools/PathCreator/Core/Editor/PathEditor.cs</section>
+</section>

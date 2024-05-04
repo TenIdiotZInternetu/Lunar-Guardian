@@ -1,0 +1,12 @@
+digraph "Scripts/Spawnables/EnemyScripts"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_13140bceb48af6e09ee6fd903342f194 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Spawnables", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_13140bceb48af6e09ee6fd903342f194.html",tooltip=""]
+  dir_0b370823c80b465727cf8360a94972e3 [label="EnemyScripts", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_0b370823c80b465727cf8360a94972e3.html",tooltip=""];
+  }
+}

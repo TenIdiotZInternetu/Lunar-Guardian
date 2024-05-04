@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_13140bceb48af6e09ee6fd903342f194" kind="dir">
+    <compoundname>Scripts/Spawnables</compoundname>
+    <innerdir refid="dir_0b370823c80b465727cf8360a94972e3">Scripts/Spawnables/EnemyScripts</innerdir>
+    <innerdir refid="dir_d90b04812ee32755b145205ada42e864">Scripts/Spawnables/Pickups</innerdir>
+    <innerdir refid="dir_d8fabea03d8baa91dace0c5ded09a54f">Scripts/Spawnables/Weapons</innerdir>
+    <innerfile refid="_despawn_collider_8cs">DespawnCollider.cs</innerfile>
+    <innerfile refid="_entity_8cs">Entity.cs</innerfile>
+    <innerfile refid="_object_pool_8cs">ObjectPool.cs</innerfile>
+    <innerfile refid="_object_pool_manager_8cs">ObjectPoolManager.cs</innerfile>
+    <innerfile refid="_spin_8cs">Spin.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Spawnables/"/>
+  </compounddef>
+</doxygen>

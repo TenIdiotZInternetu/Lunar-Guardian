@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_u_i_1_1_text_display" kind="class" language="C#" prot="public">
+    <compoundname>UI::TextDisplay</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_u_i_1_1_text_display_1a19a1f5b6e7bf5a627bccfc1d457881d7" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float PREVIEW_VALUE</definition>
+        <argsstring></argsstring>
+        <name>PREVIEW_VALUE</name>
+        <qualifiedname>UI.TextDisplay.PREVIEW_VALUE</qualifiedname>
+        <initializer>= 1.23f</initializer>
+        <briefdescription>
+<para>Value to be used for previewing in the editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="22" column="29" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_u_i_1_1_text_display_1a5a081c4d3cc97ef24f7039396d49da52" prot="public" static="no" mutable="no">
+        <type><ref refid="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1" kindref="member">PlayerStatus.ResourceType</ref></type>
+        <definition>PlayerStatus.ResourceType trackedResource</definition>
+        <argsstring></argsstring>
+        <name>trackedResource</name>
+        <qualifiedname>UI.TextDisplay.trackedResource</qualifiedname>
+        <briefdescription>
+<para>Resource to track and display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="29" column="41" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_i_1_1_text_display_1a578255b360c9bb86a17fab48cb065b6f" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string format</definition>
+        <argsstring></argsstring>
+        <name>format</name>
+        <qualifiedname>UI.TextDisplay.format</qualifiedname>
+        <initializer>= &quot;{0}&quot;</initializer>
+        <briefdescription>
+<para>Format of the final string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="34" column="23" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_i_1_1_text_display_1ae9a50054b4ccbe11fda7b55f5b53caf6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float defaultValue</definition>
+        <argsstring></argsstring>
+        <name>defaultValue</name>
+        <qualifiedname>UI.TextDisplay.defaultValue</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Initial value of the resource. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="39" column="22" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_i_1_1_text_display_1aab5e819719646d067216464e3bc3c866" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hideWhenDefault</definition>
+        <argsstring></argsstring>
+        <name>hideWhenDefault</name>
+        <qualifiedname>UI.TextDisplay.hideWhenDefault</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether to hide the text when the value is the default. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="44" column="21" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_i_1_1_text_display_1a3091f3616f264e5b18a6b808442ea8cf" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool addSeparators</definition>
+        <argsstring></argsstring>
+        <name>addSeparators</name>
+        <qualifiedname>UI.TextDisplay.addSeparators</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether to add separators between groups of digits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="49" column="21" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_i_1_1_text_display_1a883acae029fb2d80ac05fb397d13af6d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int separatorInterval</definition>
+        <argsstring></argsstring>
+        <name>separatorInterval</name>
+        <qualifiedname>UI.TextDisplay.separatorInterval</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+<para>Number of digits between separators. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="55" column="20" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_i_1_1_text_display_1ae6765bd280185095bb23d3370f0faa79" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int zeroPadding</definition>
+        <argsstring></argsstring>
+        <name>zeroPadding</name>
+        <qualifiedname>UI.TextDisplay.zeroPadding</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Amount of zeros to pad the value wit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="60" column="20" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_u_i_1_1_text_display_1a26f7696df8982770b7ef926807672a1a" prot="private" static="no" mutable="no">
+        <type>TMP_Text</type>
+        <definition>TMP_Text _tmpComponent</definition>
+        <argsstring></argsstring>
+        <name>_tmpComponent</name>
+        <qualifiedname>UI.TextDisplay._tmpComponent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="64" column="26" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_i_1_1_text_display_1a349f21766bdaae2a41606e4e728b3f56" prot="private" static="no" mutable="no">
+        <type>StringBuilder</type>
+        <definition>StringBuilder _stringBuilder</definition>
+        <argsstring></argsstring>
+        <name>_stringBuilder</name>
+        <qualifiedname>UI.TextDisplay._stringBuilder</qualifiedname>
+        <initializer>= new()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="65" column="31" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_u_i_1_1_text_display_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>UI.TextDisplay.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="70" column="14" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="70" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_i_1_1_text_display_1a755e7a04dbc0bc114ebd52997a9a2a42" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnValidate</definition>
+        <argsstring>()</argsstring>
+        <name>OnValidate</name>
+        <qualifiedname>UI.TextDisplay.OnValidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="77" column="14" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="77" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_i_1_1_text_display_1a5cf1146c9b734fe28ca5d78b07838090" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateText</definition>
+        <argsstring>(float value)</argsstring>
+        <name>UpdateText</name>
+        <qualifiedname>UI.TextDisplay.UpdateText</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="90" column="22" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="90" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_i_1_1_text_display_1a6084a58003891c70ea7f563a1a27741d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddSeparators</definition>
+        <argsstring>()</argsstring>
+        <name>AddSeparators</name>
+        <qualifiedname>UI.TextDisplay.AddSeparators</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/TextDisplay.cs" line="111" column="22" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="111" bodyend="125"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Tracks a PlayerStatus resource and displays it as formatted text. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>PlayerStatus</label>
+        <link refid="class_player_scripts_1_1_player_status"/>
+      </node>
+      <node id="1">
+        <label>TextDisplay</label>
+        <link refid="class_u_i_1_1_text_display"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>trackedResource</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/UI/TextDisplay.cs" line="15" column="11" bodyfile="Scripts/UI/TextDisplay.cs" bodystart="16" bodyend="126"/>
+    <listofallmembers>
+      <member refid="class_u_i_1_1_text_display_1a349f21766bdaae2a41606e4e728b3f56" prot="private" virt="non-virtual"><scope>UI::TextDisplay</scope><name>_stringBuilder</name></member>
+      <member refid="class_u_i_1_1_text_display_1a26f7696df8982770b7ef926807672a1a" prot="private" virt="non-virtual"><scope>UI::TextDisplay</scope><name>_tmpComponent</name></member>
+      <member refid="class_u_i_1_1_text_display_1a3091f3616f264e5b18a6b808442ea8cf" prot="public" virt="non-virtual"><scope>UI::TextDisplay</scope><name>addSeparators</name></member>
+      <member refid="class_u_i_1_1_text_display_1a6084a58003891c70ea7f563a1a27741d" prot="private" virt="non-virtual"><scope>UI::TextDisplay</scope><name>AddSeparators</name></member>
+      <member refid="class_u_i_1_1_text_display_1ae9a50054b4ccbe11fda7b55f5b53caf6" prot="public" virt="non-virtual"><scope>UI::TextDisplay</scope><name>defaultValue</name></member>
+      <member refid="class_u_i_1_1_text_display_1a578255b360c9bb86a17fab48cb065b6f" prot="public" virt="non-virtual"><scope>UI::TextDisplay</scope><name>format</name></member>
+      <member refid="class_u_i_1_1_text_display_1aab5e819719646d067216464e3bc3c866" prot="public" virt="non-virtual"><scope>UI::TextDisplay</scope><name>hideWhenDefault</name></member>
+      <member refid="class_u_i_1_1_text_display_1a755e7a04dbc0bc114ebd52997a9a2a42" prot="private" virt="non-virtual"><scope>UI::TextDisplay</scope><name>OnValidate</name></member>
+      <member refid="class_u_i_1_1_text_display_1a19a1f5b6e7bf5a627bccfc1d457881d7" prot="private" virt="non-virtual"><scope>UI::TextDisplay</scope><name>PREVIEW_VALUE</name></member>
+      <member refid="class_u_i_1_1_text_display_1a883acae029fb2d80ac05fb397d13af6d" prot="public" virt="non-virtual"><scope>UI::TextDisplay</scope><name>separatorInterval</name></member>
+      <member refid="class_u_i_1_1_text_display_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" virt="non-virtual"><scope>UI::TextDisplay</scope><name>Start</name></member>
+      <member refid="class_u_i_1_1_text_display_1a5a081c4d3cc97ef24f7039396d49da52" prot="public" virt="non-virtual"><scope>UI::TextDisplay</scope><name>trackedResource</name></member>
+      <member refid="class_u_i_1_1_text_display_1a5cf1146c9b734fe28ca5d78b07838090" prot="private" virt="non-virtual"><scope>UI::TextDisplay</scope><name>UpdateText</name></member>
+      <member refid="class_u_i_1_1_text_display_1ae6765bd280185095bb23d3370f0faa79" prot="public" virt="non-virtual"><scope>UI::TextDisplay</scope><name>zeroPadding</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

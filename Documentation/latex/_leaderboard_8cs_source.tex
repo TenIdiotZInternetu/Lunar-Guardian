@@ -1,0 +1,82 @@
+\doxysection{Leaderboard.\+cs}
+\hypertarget{_leaderboard_8cs_source}{}\label{_leaderboard_8cs_source}\index{Scripts/UI/Menus/Leaderboard.cs@{Scripts/UI/Menus/Leaderboard.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_serialization}{Serialization}};}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine.SocialPlatforms.Impl;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_u_i_1_1_menus}{UI.Menus}}}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Leaderboard\ :\ MenuScreen}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ MainMenu\ mainMenu;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ TMP\_Text\ entryTemplate;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ maxEntryCount\ =\ 8;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ maxNameLength\ =\ 8;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector2\ offset\ =\ \textcolor{keyword}{new}\ Vector2(10,\ -\/32);}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_serialization_1_1_score_data}{ScoreData}}\ \_scoreData;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \_scoreData\ =\ \mbox{\hyperlink{class_serialization_1_1_score_data}{ScoreData}}.\mbox{\hyperlink{class_serialization_1_1_score_data_a74cf69194846ff3656b5e1377c39cbda}{LoadScores}}();}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ GenerateEntries();}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_1_1_menu_screen_aff7779f56c25e6d968cec59627708181}{CloseMenu}}();}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ entryTemplate.gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ GoToMainMenu()}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_1_1_menu_screen_aff7779f56c25e6d968cec59627708181}{CloseMenu}}();}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ mainMenu.OpenMenu();}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ GenerateEntries()}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ entryCount\ =\ Mathf.Min(maxEntryCount,\ \_scoreData.\mbox{\hyperlink{class_serialization_1_1_score_data_a69d2493e8a51b7aba3af2e2fe74d8d37}{savedScoresCount}});}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ entryCount;\ i++)}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(i\ +\ \_scoreData.\mbox{\hyperlink{class_serialization_1_1_score_data_adc99decbd8f765a5af197c2c88211e4e}{names}}[i]);}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ creditObject\ =\ Instantiate(entryTemplate,\ transform);}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ creditObject.rectTransform.anchoredPosition\ +=\ offset\ *\ i;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ format\ =\ entryTemplate.text;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ position\ =\ i\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ player\ =\ FixNameLength(\_scoreData.\mbox{\hyperlink{class_serialization_1_1_score_data_adc99decbd8f765a5af197c2c88211e4e}{names}}[i]);}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ score\ =\ \_scoreData.\mbox{\hyperlink{class_serialization_1_1_score_data_ade11c9990d17f7c70b0869f760e0d5cf}{sortedScores}}[i];}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ creditObject.text\ =\ String.Format(format,\ position,\ player,\ score);}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ FixNameLength(\textcolor{keywordtype}{string}\ playersName)}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (playersName.Length\ >\ maxNameLength)}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ playersName\ =\ playersName.Substring(0,\ maxNameLength);}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (playersName.Length\ <\ maxNameLength\ \&\&\ playersName.Length\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ playersName\ =\ playersName.PadRight(maxNameLength,\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (playersName\ ==\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ playersName\ =\ \textcolor{keyword}{new}\ String(\textcolor{charliteral}{'.'},\ maxNameLength);}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ playersName;}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_leaderboard_8cs_source_l00076}00076\ \}}
+
+\end{DoxyCode}

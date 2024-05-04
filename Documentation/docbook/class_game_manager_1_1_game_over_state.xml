@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_game_manager_1_1_game_over_state" xml:lang="en-US">
+<title>GameOverState Class Reference</title>
+<indexterm><primary>GameOverState</primary></indexterm>
+<para>
+
+<para>State reached upon losing all health. </para>
+ 
+</para>
+<para>Inheritance diagram for GameOverState:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_game_manager_1_1_game_over_state.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Member Functions inherited from <link linkend="_class_game_manager_1_1_game_state">GameState</link>        <itemizedlist>
+            <listitem><para>void <emphasis role="strong">ChangeToThisState</emphasis> ()</para>
+
+<para>Takes actions needed to define this state. </para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">LeaveThisState</emphasis> ()</para>
+
+<para>Undoes changes made by this state. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__game_over_state_8cs_source_1l00009">9</link> of file <link linkend="__game_over_state_8cs_source">GameOverState.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/GameManager/States/GameOverState.cs</section>
+</section>

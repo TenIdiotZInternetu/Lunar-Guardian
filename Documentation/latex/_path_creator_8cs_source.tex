@@ -1,0 +1,115 @@
+\doxysection{Path\+Creator.\+cs}
+\hypertarget{_path_creator_8cs_source}{}\label{_path_creator_8cs_source}\index{Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs@{Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_path_creation}{PathCreation}}\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }PathCreator\ :\ MonoBehaviour\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ System.Action\ pathUpdated;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ [SerializeField,\ HideInInspector]}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ PathCreatorData\ editorData;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ [SerializeField,\ HideInInspector]}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ initialized;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ GlobalDisplaySettings\ globalEditorDisplaySettings;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vertex\ path\ created\ from\ the\ current\ bezier\ path}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ VertexPath\ path\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!initialized)\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ InitializeEditorData\ (\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ editorData.GetVertexPath(transform);}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ bezier\ path\ created\ in\ the\ editor}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ BezierPath\ bezierPath\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!initialized)\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ InitializeEditorData\ (\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ editorData.bezierPath;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!initialized)\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ InitializeEditorData\ (\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ editorData.bezierPath\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00045}00045\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Internal\ methods}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ InitializeEditorData\ (\textcolor{keywordtype}{bool}\ in2DMode)\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (editorData\ ==\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ editorData\ =\ \textcolor{keyword}{new}\ PathCreatorData\ ();}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ editorData.bezierOrVertexPathModified\ -\/=\ TriggerPathUpdate;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ editorData.bezierOrVertexPathModified\ +=\ TriggerPathUpdate;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ editorData.Initialize\ (in2DMode);}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ initialized\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ PathCreatorData\ EditorData\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ editorData;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ TriggerPathUpdate\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pathUpdated\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pathUpdated\ ();}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00072}00072\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draw\ the\ path\ when\ path\ objected\ is\ not\ selected\ (if\ enabled\ in\ settings)}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ OnDrawGizmos\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Only\ draw\ path\ gizmo\ if\ the\ path\ object\ is\ not\ selected}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (editor\ script\ is\ resposible\ for\ drawing\ when\ selected)}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ selectedObj\ =\ UnityEditor.Selection.activeGameObject;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (selectedObj\ !=\ gameObject)\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (path\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ path.UpdateTransform\ (transform);}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (globalEditorDisplaySettings\ ==\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ globalEditorDisplaySettings\ =\ GlobalDisplaySettings.Load\ ();}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (globalEditorDisplaySettings.visibleWhenNotSelected)\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.color\ =\ globalEditorDisplaySettings.bezierPath;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ path.NumPoints;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nextI\ =\ i\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nextI\ >=\ path.NumPoints)\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (path.isClosedLoop)\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextI\ \%=\ path.NumPoints;}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.DrawLine\ (path.GetPoint\ (i),\ path.GetPoint\ (nextI));}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00108}00108\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00110}00110\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_creator_8cs_source_l00112}00112\ \}}
+
+\end{DoxyCode}

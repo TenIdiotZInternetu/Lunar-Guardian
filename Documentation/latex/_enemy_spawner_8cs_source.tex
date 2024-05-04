@@ -1,0 +1,53 @@
+\doxysection{Enemy\+Spawner.\+cs}
+\hypertarget{_enemy_spawner_8cs_source}{}\label{_enemy_spawner_8cs_source}\index{Scripts/Spawnables/EnemyScripts/EnemySpawner.cs@{Scripts/Spawnables/EnemyScripts/EnemySpawner.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_spawnables_1_1_enemy_scripts}{Spawnables.EnemyScripts}}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00008}\mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner}{EnemySpawner}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ GIZMO\_RADIUS\ =\ 0.5f;\ \ \ \ \ \textcolor{comment}{//\ Radius\ of\ the\ gizmo\ sphere,\ marking\ position\ of\ spawner}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/=-\/-\/-\/-\/\ Public\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00019}\mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_ad6d3141bf24aaf85fa7573865a1934f6}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_ad6d3141bf24aaf85fa7573865a1934f6}{prefab}};}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00024}\mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_a97df6cb71ca1ed54f2f4fadb312c9bb3}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_a97df6cb71ca1ed54f2f4fadb312c9bb3}{interval}}\ =\ 1f;}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00029}\mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_a07debaa5993cfc8e6ecde1f620c7135a}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_a07debaa5993cfc8e6ecde1f620c7135a}{maxCount}};}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \_timeOfLastSpawn;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Exact\ time\ in\ seconds}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_spawnedCount;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Amount\ of\ enemies\ spawned\ yet}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Unity\ Callbacks\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Spawns\ next\ enemy\ if\ the\ spawner\ is\ not\ on\ cooldown\ and\ the\ max\ count\ is\ not\ reached}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ onCooldown\ =\ Time.time\ -\/\ \_timeOfLastSpawn\ <\ \mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_a97df6cb71ca1ed54f2f4fadb312c9bb3}{interval}};}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (onCooldown\ \&\&\ \_timeOfLastSpawn\ !=\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_spawnedCount\ >=\ \mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_a07debaa5993cfc8e6ecde1f620c7135a}{maxCount}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \_timeOfLastSpawn\ =\ Time.time;}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \_spawnedCount++;}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_spawnables_1_1_object_pool_manager}{ObjectPoolManager}}.Spawn<\mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy}{Enemy}}>(\mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_ad6d3141bf24aaf85fa7573865a1934f6}{prefab}},\ transform.position,\ \mbox{\hyperlink{class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_ad6d3141bf24aaf85fa7573865a1934f6}{prefab}}.transform.rotation);}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draws\ a\ red\ sphere\ in\ the\ editor,\ marking\ position\ of\ the\ spawner}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDrawGizmos()}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.color\ =\ Color.red;}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.DrawWireSphere(transform.position,\ GIZMO\_RADIUS);}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_enemy_spawner_8cs_source_l00059}00059\ \}}
+
+\end{DoxyCode}

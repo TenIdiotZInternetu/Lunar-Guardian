@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_55c683271e8c58654a7fb91ef07b8f4b" kind="dir">
+    <compoundname>Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization</compoundname>
+    <innerfile refid="_save_system_8cs">SaveSystem.cs</innerfile>
+    <innerfile refid="_score_data_8cs">ScoreData.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_enemy_scripts_1_1_enemy" xml:lang="en-US">
+<title>Enemy Class Reference</title>
+<indexterm><primary>Enemy</primary></indexterm>
+<para>
+
+<para>Defininf characteristics of an enemy entity. </para>
+ 
+</para>
+<para>Inheritance diagram for Enemy:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_enemy_scripts_1_1_enemy.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop">LootDrop</link></para>
+
+<para>Described possible loot drops from the enemy. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_enemy_scripts_1_1_enemy_1a9f94e91fe2b696b2a0352a89444fa922"/>bool <emphasis role="strong">tracksPlayer</emphasis> = false</para>
+
+<para>Whether the enemy rotates towards the player. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_enemy_scripts_1_1_enemy_1afa3c4cbe95c95ff9cd8bdc9e4cec4a5f"/>int <emphasis role="strong">maxHealth</emphasis></para>
+
+<para>Maximum health of the enemy. Health at spawn. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_enemy_scripts_1_1_enemy_1a803745769a1671fc8dfc4fb99dfe4f1f"/>int <emphasis role="strong">scoreReward</emphasis></para>
+
+<para>Score reward for killing this enemy. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_enemy_scripts_1_1_enemy_1ab5c0981193c6066813423a05842fafe5"/>List&lt; <link linkend="_class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop">LootDrop</link> &gt; <emphasis role="strong">drops</emphasis></para>
+
+<para>List of items that can be dropped on death. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_class_spawnables_1_1_entity">Entity</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link> <emphasis role="strong">movementPattern</emphasis></para>
+
+<para>Movement pattern that determines the position of the entity in the next frame. </para>
+</listitem>
+            <listitem><para>string <emphasis role="strong">SpawnKey</emphasis></para>
+
+<para>A key to identify the entity among the ObjectPools. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Member Functions inherited from <link linkend="_class_spawnables_1_1_entity">Entity</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef">SetMovementPattern</link> (<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link> newMovementPattern)</para>
+
+<para>Changes the MovementPattern of the entity. </para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">StartMoving</emphasis> ()</para>
+
+<para>Tells the entity to start using its MovementPattern. </para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">StopMoving</emphasis> ()</para>
+
+<para>Tells the entity to stop using its MovementPattern. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_class_spawnables_1_1_entity">Entity</link>        <itemizedlist>
+            <listitem><para>float <emphasis role="strong">LifeTime</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Time passed since the entity was enabled. </para>
+</listitem>
+            <listitem><para>float <emphasis role="strong">MPLifeTime</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Time passed since the MovementPattern was last set. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__enemy_8cs_source_1l00012">12</link> of file <link linkend="__enemy_8cs_source">Enemy.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/Spawnables/EnemyScripts/Enemy.cs</section>
+</section>

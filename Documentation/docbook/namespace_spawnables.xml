@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_spawnables" xml:lang="en-US">
+<title>Spawnables Namespace Reference</title>
+<indexterm><primary>Spawnables</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_despawn_collider">DespawnCollider</link></para>
+
+<para>Border collider that despawns objects that leave its area. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_entity">Entity</link></para>
+
+<para>An object that can be spawned from the ObjectPool and moved by the MovementPattern class. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_object_pool">ObjectPool</link></para>
+
+<para>A set of pre-instantiated entities of a specified prefab that can be spawned and despawned by the ObjectPoolManager. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_object_pool_manager">ObjectPoolManager</link></para>
+
+<para>Manages spawning and despawning entities from the assigned ObjectPools. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_spin">Spin</link></para>
+
+<para>Rotates the object each frame. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

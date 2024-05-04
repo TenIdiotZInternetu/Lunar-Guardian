@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Weapons::WeaponTypes::ScatterGun</compoundname>
+    <basecompoundref refid="class_spawnables_1_1_projectiles_1_1_weapon" prot="public" virt="non-virtual">Spawnables.Projectiles.Weapon</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_1a328d19b3000db8616cbf018de1c09729" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_spawnables_1_1_projectiles_1_1_projectile" kindref="compound">Projectile</ref> &gt;</type>
+        <definition>List&lt;Projectile&gt; Spawnables.Weapons.WeaponTypes.ScatterGun.projectileRoster</definition>
+        <argsstring></argsstring>
+        <name>projectileRoster</name>
+        <qualifiedname>Spawnables.Weapons.WeaponTypes.ScatterGun.projectileRoster</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" line="12" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_1a6eb41b734637048b2609a7b33e15d041" prot="public" static="no" mutable="no">
+        <type>AnimationCurve</type>
+        <definition>AnimationCurve Spawnables.Weapons.WeaponTypes.ScatterGun.rotationAtSpawnDistribution</definition>
+        <argsstring></argsstring>
+        <name>rotationAtSpawnDistribution</name>
+        <qualifiedname>Spawnables.Weapons.WeaponTypes.ScatterGun.rotationAtSpawnDistribution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" line="13" column="31" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_1a4eeb4f6041ab96e03613ed3768b1fe84" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Spawnables.Weapons.WeaponTypes.ScatterGun.TryShooting</definition>
+        <argsstring>()</argsstring>
+        <name>TryShooting</name>
+        <qualifiedname>Spawnables.Weapons.WeaponTypes.ScatterGun.TryShooting</qualifiedname>
+        <reimplements refid="class_spawnables_1_1_projectiles_1_1_weapon_1a381b56e44b1e2d16546efa9470410941">TryShooting</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" line="15" column="33" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" bodystart="15" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_1afc9736a7449d5bf0751f56fa7874f8e7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator Spawnables.Weapons.WeaponTypes.ScatterGun.Scatter</definition>
+        <argsstring>()</argsstring>
+        <name>Scatter</name>
+        <qualifiedname>Spawnables.Weapons.WeaponTypes.ScatterGun.Scatter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" line="27" column="29" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" bodystart="27" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_1ad5686a93d31b01e4de66c2cbab98995b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Weapons.WeaponTypes.ScatterGun.RotateSpawners</definition>
+        <argsstring>()</argsstring>
+        <name>RotateSpawners</name>
+        <qualifiedname>Spawnables.Weapons.WeaponTypes.ScatterGun.RotateSpawners</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" line="39" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" bodystart="39" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_1ab852e0bbaf7d52990b559fdccccae399" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Weapons.WeaponTypes.ScatterGun.ChooseProjectile</definition>
+        <argsstring>()</argsstring>
+        <name>ChooseProjectile</name>
+        <qualifiedname>Spawnables.Weapons.WeaponTypes.ScatterGun.ChooseProjectile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" line="59" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" bodystart="59" bodyend="71"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.Weapons.WeaponTypes.ScatterGun</label>
+        <link refid="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Weapon</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_weapon"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.Weapons.WeaponTypes.ScatterGun</label>
+        <link refid="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Weapon</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_weapon"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" line="10" column="11" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/ScatterGun.cs" bodystart="11" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1a944b4dd9708c072eb9527351c9501e85" prot="protected" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>_bulletsShot</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1aa874678199e51f9c31adb40eb4d5ce65" prot="protected" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>_timeOfLastShot</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1aa408fa0ee15bcd0ca127959f9a076ca4" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>bulletsInCharge</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1a8932601de8c9532f23a655d8ef5d703d" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>chargeTime</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_1ab852e0bbaf7d52990b559fdccccae399" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>ChooseProjectile</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1acf54945fc4090d93243aa11fc9d4b580" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>cooldown</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1a3626f55fe1a3285ca6e225253a1affcd" prot="protected" virt="virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>DetectShootables</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1a0cf56eb6f75687c192f8a5a3578d4836" prot="protected" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>GunHeads</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1ab842db32ed2b9b4e4cd73784ac15249b" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>HasAggro</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1a2d2742c41b48396b2fb921cc19845651" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>isPlayers</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1a208a81719298181321bbef16ec73448f" prot="protected" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>OnShootEvent</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_1a328d19b3000db8616cbf018de1c09729" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>projectileRoster</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1adbc309f01c4819954baf0944844dddae" prot="protected" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>Recharge</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_1ad5686a93d31b01e4de66c2cbab98995b" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>RotateSpawners</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_1a6eb41b734637048b2609a7b33e15d041" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>rotationAtSpawnDistribution</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_1afc9736a7449d5bf0751f56fa7874f8e7" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>Scatter</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_1a4eeb4f6041ab96e03613ed3768b1fe84" prot="protected" virt="virtual"><scope>Spawnables::Weapons::WeaponTypes::ScatterGun</scope><name>TryShooting</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

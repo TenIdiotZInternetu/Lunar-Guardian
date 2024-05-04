@@ -1,0 +1,75 @@
+\doxysection{Linear\+MP.\+cs}
+\hypertarget{_linear_m_p_8cs_source}{}\label{_linear_m_p_8cs_source}\index{Scripts/MovementPatterns/LinearMP.cs@{Scripts/MovementPatterns/LinearMP.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }MyBox;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_spawnables}{Spawnables}};}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_movement_patterns}{MovementPatterns}}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00011}00011\ \ \ \ \ [Serializable]}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00012}\mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p}{LinearMP}}\ :\ \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern}{MovementPattern}}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Inspector\ Variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00019}\mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_a7f7e4724cf57d59513b39c5ecc81adc8}{00019}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_a7f7e4724cf57d59513b39c5ecc81adc8}{speed}};}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00024}\mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_a97712bccaedef08f6d8c525bdda2f7ef}{00024}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_a97712bccaedef08f6d8c525bdda2f7ef}{acceleration}};}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00029}\mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_add450a0a83c646aa48b83eeafbf0b902}{00029}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_add450a0a83c646aa48b83eeafbf0b902}{followsRotation}};}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ [SerializeField,\ ConditionalField(nameof(\mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_add450a0a83c646aa48b83eeafbf0b902}{followsRotation}}),\ inverse:\ true)]}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00035}\mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_aeedcd9bc1fcd3a20ade597dbe82176a7}{00035}}\ \ \ \ \ \ \ \ \ private\ float\ \mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_aeedcd9bc1fcd3a20ade597dbe82176a7}{directionInDegrees}};}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Vector3\ \_direction;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}}\ entity)}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ OnValidate();}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ Vector3\ GetNextPosition(\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}}\ entity)}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ localDirection\ =\ \_direction;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ followsRotation\ is\ true,\ the\ direction\ is\ determined\ by\ the\ entity's\ rotation}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_add450a0a83c646aa48b83eeafbf0b902}{followsRotation}})}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ rotation\ =\ entity.transform.rotation.eulerAngles.z;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ localDirection\ =\ Quaternion.Euler(0,\ 0,\ rotation)\ *\ Vector3.up;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ localDirection\ =\ localDirection.normalized;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ currentPosition\ =\ entity.transform.position;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ currentSpeed\ =\ Mathf.Max(\mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_a7f7e4724cf57d59513b39c5ecc81adc8}{speed}}\ +\ \mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_a97712bccaedef08f6d8c525bdda2f7ef}{acceleration}}\ *\ entity.\mbox{\hyperlink{class_spawnables_1_1_entity_a3f4ec4fa85ad2f8f95ea03016cf311ba}{MPLifeTime}},\ 0);}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentPosition\ +\ localDirection\ *\ (currentSpeed\ *\ Time.deltaTime);}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Editor-\/only\ callbacks\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Changes\ angle\ of\ the\ slope,\ so\ it\ can\ be\ immediately\ seen\ in\ the\ editor}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ OnValidate()}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \_direction\ =\ Quaternion.Euler(0,\ 0,\ \mbox{\hyperlink{class_movement_patterns_1_1_linear_m_p_aeedcd9bc1fcd3a20ade597dbe82176a7}{directionInDegrees}})\ *\ Vector3.up;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \_direction\ =\ \_direction.normalized;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00075}00075\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draws\ a\ line\ in\ the\ editor\ to\ show\ the\ direction\ of\ the\ slope}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ OnDrawGizmosSelected()}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.color\ =\ Color.green;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ position\ =\ transform.position;}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.DrawLine(position,\ position\ +\ \_direction);}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_linear_m_p_8cs_source_l00084}00084\ \}}
+
+\end{DoxyCode}

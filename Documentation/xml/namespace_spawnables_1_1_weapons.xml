@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_spawnables_1_1_weapons" kind="namespace" language="C#">
+    <compoundname>Spawnables::Weapons</compoundname>
+    <innerclass refid="class_spawnables_1_1_weapons_1_1_bullet_spawner" prot="public">Spawnables::Weapons::BulletSpawner</innerclass>
+    <innerclass refid="class_spawnables_1_1_weapons_1_1_gatling_gun" prot="public">Spawnables::Weapons::GatlingGun</innerclass>
+    <innerclass refid="interface_spawnables_1_1_weapons_1_1_i_shootable" prot="public">Spawnables::Weapons::IShootable</innerclass>
+    <innerclass refid="class_spawnables_1_1_weapons_1_1_lazer" prot="public">Spawnables::Weapons::Lazer</innerclass>
+    <innerclass refid="class_spawnables_1_1_weapons_1_1_projectile" prot="public">Spawnables::Weapons::Projectile</innerclass>
+    <innerclass refid="class_spawnables_1_1_weapons_1_1_scatter_gun" prot="public">Spawnables::Weapons::ScatterGun</innerclass>
+    <innerclass refid="class_spawnables_1_1_weapons_1_1_weapon" prot="public">Spawnables::Weapons::Weapon</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Spawnables/Weapons/Projectile.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

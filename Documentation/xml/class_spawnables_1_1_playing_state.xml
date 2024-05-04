@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_playing_state" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::PlayingState</compoundname>
+    <basecompoundref refid="class_game_states_1_1_game_state" prot="public" virt="non-virtual">GameStates.GameState</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_playing_state_1a9d547da2eaba043d221964b314275c3b" prot="public" static="no" mutable="no">
+        <type><ref refid="class_spawnables_1_1_paused_state" kindref="compound">PausedState</ref></type>
+        <definition>PausedState Spawnables.PlayingState.pausedState</definition>
+        <argsstring></argsstring>
+        <name>pausedState</name>
+        <qualifiedname>Spawnables.PlayingState.pausedState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" line="10" column="28" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spawnables_1_1_playing_state_1a78b6fffdc41633cf61113855a7de97ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Spawnables.PlayingState.ChangeToThisState</definition>
+        <argsstring>()</argsstring>
+        <name>ChangeToThisState</name>
+        <qualifiedname>Spawnables.PlayingState.ChangeToThisState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" line="12" column="30" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" bodystart="12" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_playing_state_1a29ae19b2261855f475b022d50077108e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Spawnables.PlayingState.LeaveThisState</definition>
+        <argsstring>()</argsstring>
+        <name>LeaveThisState</name>
+        <qualifiedname>Spawnables.PlayingState.LeaveThisState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" line="20" column="30" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" bodystart="20" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_playing_state_1afd18d5b76f283b76c1cb9dad13037281" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.PlayingState.Pause</definition>
+        <argsstring>()</argsstring>
+        <name>Pause</name>
+        <qualifiedname>Spawnables.PlayingState.Pause</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" line="26" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" bodystart="26" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_playing_state_1a81a17c39d5e5826dc511ce969b8ffb9e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.PlayingState.EnablePausing</definition>
+        <argsstring>()</argsstring>
+        <name>EnablePausing</name>
+        <qualifiedname>Spawnables.PlayingState.EnablePausing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" line="36" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" bodystart="36" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_playing_state_1a8b3fb6a189650a46daf621a91f4877f7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.PlayingState.OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>Spawnables.PlayingState.OnDestroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" line="42" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" bodystart="42" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>GameState</label>
+        <link refid="class_game_states_1_1_game_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.PlayingState</label>
+        <link refid="class_spawnables_1_1_playing_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>GameState</label>
+        <link refid="class_game_states_1_1_game_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ISerializationCallbackReceiver</label>
+      </node>
+      <node id="7">
+        <label>MenuScreen</label>
+        <link refid="class_u_i_1_1_menus_1_1_menu_screen"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.PlayingState</label>
+        <link refid="class_spawnables_1_1_playing_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>pausedState</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Spawnables.PausedState</label>
+        <link refid="class_spawnables_1_1_paused_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>playingState</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>pauseMenu</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Spawnables.PlayingState</label>
+        <link refid="class_spawnables_1_1_playing_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>pausedState</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Tymski.SceneReference</label>
+        <link refid="class_tymski_1_1_scene_reference"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>UI.Menus.PauseMenu</label>
+        <link refid="class_u_i_1_1_menus_1_1_pause_menu"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>mainMenuScene</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" line="8" column="11" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs" bodystart="9" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_playing_state_1a78b6fffdc41633cf61113855a7de97ed" prot="public" virt="non-virtual"><scope>Spawnables::PlayingState</scope><name>ChangeToThisState</name></member>
+      <member refid="class_spawnables_1_1_playing_state_1a81a17c39d5e5826dc511ce969b8ffb9e" prot="private" virt="non-virtual"><scope>Spawnables::PlayingState</scope><name>EnablePausing</name></member>
+      <member refid="class_spawnables_1_1_playing_state_1a29ae19b2261855f475b022d50077108e" prot="public" virt="non-virtual"><scope>Spawnables::PlayingState</scope><name>LeaveThisState</name></member>
+      <member refid="class_spawnables_1_1_playing_state_1a8b3fb6a189650a46daf621a91f4877f7" prot="private" virt="non-virtual"><scope>Spawnables::PlayingState</scope><name>OnDestroy</name></member>
+      <member refid="class_spawnables_1_1_playing_state_1afd18d5b76f283b76c1cb9dad13037281" prot="private" virt="non-virtual"><scope>Spawnables::PlayingState</scope><name>Pause</name></member>
+      <member refid="class_spawnables_1_1_playing_state_1a9d547da2eaba043d221964b314275c3b" prot="public" virt="non-virtual"><scope>Spawnables::PlayingState</scope><name>pausedState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

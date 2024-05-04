@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_weapons_1_1_projectile" xml:lang="en-US">
+<title>Projectile Class Reference</title>
+<indexterm><primary>Projectile</primary></indexterm>
+<para>
+
+<para>An entity whose purpose is to deal damage to enemies or the player. </para>
+ 
+</para>
+<para>Inheritance diagram for Projectile:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_weapons_1_1_projectile.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_weapons_1_1_projectile_1a9b39867abc3f09243fcdc739bd9e6c90"/>int <emphasis role="strong">damage</emphasis></para>
+
+<para>Damage dealt to enemies when owned by the player. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_class_spawnables_1_1_entity">Entity</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link> <emphasis role="strong">movementPattern</emphasis></para>
+
+<para>Movement pattern that determines the position of the entity in the next frame. </para>
+</listitem>
+            <listitem><para>string <emphasis role="strong">SpawnKey</emphasis></para>
+
+<para>A key to identify the entity among the ObjectPools. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Member Functions inherited from <link linkend="_class_spawnables_1_1_entity">Entity</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef">SetMovementPattern</link> (<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link> newMovementPattern)</para>
+
+<para>Changes the MovementPattern of the entity. </para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">StartMoving</emphasis> ()</para>
+
+<para>Tells the entity to start using its MovementPattern. </para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">StopMoving</emphasis> ()</para>
+
+<para>Tells the entity to stop using its MovementPattern. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_class_spawnables_1_1_entity">Entity</link>        <itemizedlist>
+            <listitem><para>float <emphasis role="strong">LifeTime</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Time passed since the entity was enabled. </para>
+</listitem>
+            <listitem><para>float <emphasis role="strong">MPLifeTime</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Time passed since the MovementPattern was last set. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__projectile_8cs_source_1l00008">8</link> of file <link linkend="__projectile_8cs_source">Projectile.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/Spawnables/Weapons/Projectile.cs</section>
+</section>

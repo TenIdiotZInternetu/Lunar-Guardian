@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_player_scripts_1_1_player_hitbox" xml:lang="en-US">
+<title>PlayerHitbox Class Reference</title>
+<indexterm><primary>PlayerHitbox</primary></indexterm>
+<para>
+
+<para>Takes responsibility and responses to being hit by enemy objects. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_player_scripts_1_1_player_hitbox_1ae77a2b3d16e04654d819c8db25cc6055">AttemptHit</link> (GameObject damageSource)</para>
+
+<para>Deals damage to player if they&apos;re not invincible. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_scripts_1_1_player_hitbox_1a542f630d26b87b7485284fa8e1156389">ChangeBombState</link> (bool state)</para>
+
+<para>Changes bomb state. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_hitbox_1ad8698c75e7c1602cb0b8b51275dc73f7"/>float <emphasis role="strong">invincibilityTime</emphasis></para>
+
+<para>Time window in which the player cannot take damage after taking a hit. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_hitbox_1abd9abcb1ce3bcdd0d9c99534620685bc"/><link linkend="_class_tools_1_1_game_object_event">GameObjectEvent</link> <emphasis role="strong">onTakesHitEvent</emphasis></para>
+
+<para>Invoked when the player takes a hit. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__player_hitbox_8cs_source_1l00013">13</link> of file <link linkend="__player_hitbox_8cs_source">PlayerHitbox.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_player_scripts_1_1_player_hitbox_1ae77a2b3d16e04654d819c8db25cc6055"/><section>
+    <title>AttemptHit()</title>
+<indexterm><primary>AttemptHit</primary><secondary>PlayerHitbox</secondary></indexterm>
+<indexterm><primary>PlayerHitbox</primary><secondary>AttemptHit</secondary></indexterm>
+<para><computeroutput>void AttemptHit (GameObject damageSource)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>damageSource</entry><entry>
+<para>Object causing the damage </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_hitbox_8cs_source_1l00064">64</link> of file <link linkend="__player_hitbox_8cs_source">PlayerHitbox.cs</link>.</para>
+</section>
+<anchor xml:id="_class_player_scripts_1_1_player_hitbox_1a542f630d26b87b7485284fa8e1156389"/><section>
+    <title>ChangeBombState()</title>
+<indexterm><primary>ChangeBombState</primary><secondary>PlayerHitbox</secondary></indexterm>
+<indexterm><primary>PlayerHitbox</primary><secondary>ChangeBombState</secondary></indexterm>
+<para><computeroutput>void ChangeBombState (bool state)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry>
+<para>Whether the bomb effects still last </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_hitbox_8cs_source_1l00074">74</link> of file <link linkend="__player_hitbox_8cs_source">PlayerHitbox.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/PlayerScripts/PlayerHitbox.cs</section>
+</section>

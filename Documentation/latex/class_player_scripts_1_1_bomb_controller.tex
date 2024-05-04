@@ -1,0 +1,53 @@
+\doxysection{Bomb\+Controller Class Reference}
+\hypertarget{class_player_scripts_1_1_bomb_controller}{}\label{class_player_scripts_1_1_bomb_controller}\index{BombController@{BombController}}
+
+
+Defines effects of deploying a bomb by player. The bomb deals gradual damage to all enemies and destroys projectiles for specified amount of time. The damage is dealt only during frames called damage ticks.  
+
+
+
+
+Inherits Mono\+Behaviour.
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_bomb_controller_a6ffe3551433e872831d7751d22cc161e}\label{class_player_scripts_1_1_bomb_controller_a6ffe3551433e872831d7751d22cc161e} 
+IEnumerator {\bfseries Deploy\+Bomb} ()
+\begin{DoxyCompactList}\small\item\em Coroutine that deals damage and destroys projectiles on each damage tick. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_bomb_controller_a8f009855b884a4c8e1a1338ca159ae3a}\label{class_player_scripts_1_1_bomb_controller_a8f009855b884a4c8e1a1338ca159ae3a} 
+float {\bfseries initial\+Damage}
+\begin{DoxyCompactList}\small\item\em Damage dealt by the bomb at the beginning of its effect. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_bomb_controller_aa2d1fa06b56bbaf068cc697526223c62}\label{class_player_scripts_1_1_bomb_controller_aa2d1fa06b56bbaf068cc697526223c62} 
+Animation\+Curve {\bfseries damage\+Curve}
+\begin{DoxyCompactList}\small\item\em Damage multiplier of the bomb in the specified time. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_bomb_controller_a8a032a6ba98f3847d521c82627d0b3fa}\label{class_player_scripts_1_1_bomb_controller_a8a032a6ba98f3847d521c82627d0b3fa} 
+float {\bfseries damage\+Tick\+Interval}
+\begin{DoxyCompactList}\small\item\em Time between damage ticks. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_bomb_controller_a3dad052ab5c9e0bb950da5e6dad2ae1f}\label{class_player_scripts_1_1_bomb_controller_a3dad052ab5c9e0bb950da5e6dad2ae1f} 
+Unity\+Event {\bfseries on\+Bomb\+Deployed}
+\begin{DoxyCompactList}\small\item\em Event invoked when the bomb is deployed by player. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_bomb_controller_a48237faed031e6039bebb05e668c2e35}\label{class_player_scripts_1_1_bomb_controller_a48237faed031e6039bebb05e668c2e35} 
+Unity\+Event {\bfseries on\+Bomb\+Effect\+End}
+\begin{DoxyCompactList}\small\item\em Event invoked when the bomb stops dealing any more damage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_bomb_controller_a60d6f37c71fa8b172e436e6d558890ff}\label{class_player_scripts_1_1_bomb_controller_a60d6f37c71fa8b172e436e6d558890ff} 
+static Action$<$ int $>$ {\bfseries On\+Bomb\+Damage\+Tick}
+\begin{DoxyCompactList}\small\item\em Event invoked every time the bomb deals damage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_bomb_controller_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_bomb_controller_8cs_source}{Bomb\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Player\+Scripts/Bomb\+Controller.\+cs\end{DoxyCompactItemize}

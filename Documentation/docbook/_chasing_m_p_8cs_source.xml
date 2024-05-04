@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__chasing_m_p_8cs_source" xml:lang="en-US">
+<title>ChasingMP.cs</title>
+<indexterm><primary>Scripts/MovementPatterns/ChasingMP.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__chasing_m_p_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_spawnables">Spawnables</link>;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00003"/>00003 
+<anchor xml:id="__chasing_m_p_8cs_source_1l00004"/><link linkend="_namespace_movement_patterns">00004</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_movement_patterns">MovementPatterns</link>
+<anchor xml:id="__chasing_m_p_8cs_source_1l00005"/>00005 {
+<anchor xml:id="__chasing_m_p_8cs_source_1l00009"/><link linkend="_class_movement_patterns_1_1_chasing_m_p">00009</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_movement_patterns_1_1_chasing_m_p">ChasingMP</link>&#32;:&#32;<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link>
+<anchor xml:id="__chasing_m_p_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__chasing_m_p_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Inspector&#32;Variables&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__chasing_m_p_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00016"/><link linkend="_class_movement_patterns_1_1_chasing_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3">00016</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3">target</link>;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00021"/><link linkend="_class_movement_patterns_1_1_chasing_m_p_1aa1e558f5ba6fb97ca16dcc4e4af6b111">00021</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1aa1e558f5ba6fb97ca16dcc4e4af6b111">lockOnTime</link>;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00026"/><link linkend="_class_movement_patterns_1_1_chasing_m_p_1affd81e3b392c1ddde52ebf03f358c907">00026</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1affd81e3b392c1ddde52ebf03f358c907">chaseTime</link>;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00031"/><link linkend="_class_movement_patterns_1_1_chasing_m_p_1a2fe30ccd8492359ecb32bef8f8985272">00031</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1a2fe30ccd8492359ecb32bef8f8985272">attractionRate</link>;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00036"/><link linkend="_class_movement_patterns_1_1_chasing_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8">00036</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8">speed</link>;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00041"/><link linkend="_class_movement_patterns_1_1_chasing_m_p_1a97712bccaedef08f6d8c525bdda2f7ef">00041</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1a97712bccaedef08f6d8c525bdda2f7ef">acceleration</link>;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;----------------------&#32;Public&#32;Methods&#32;----------------------&#32;*/</emphasis>
+<anchor xml:id="__chasing_m_p_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Initialize(<link linkend="_class_spawnables_1_1_entity">Entity</link>&#32;entity)&#32;{&#32;}
+<anchor xml:id="__chasing_m_p_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;Vector3&#32;GetNextPosition(<link linkend="_class_spawnables_1_1_entity">Entity</link>&#32;entity)
+<anchor xml:id="__chasing_m_p_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__chasing_m_p_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Defining&#32;current&#32;state&#32;of&#32;the&#32;entity</emphasis>
+<anchor xml:id="__chasing_m_p_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Transform&#32;entityTransform&#32;=&#32;entity.transform;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;currentPosition&#32;=&#32;entityTransform.position;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Quaternion&#32;currentRotation&#32;=&#32;entityTransform.rotation;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;currentSpeed&#32;=&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8">speed</link>&#32;+&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1a97712bccaedef08f6d8c525bdda2f7ef">acceleration</link>&#32;*&#32;entity.<link linkend="_class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba">MPLifeTime</link>;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;the&#32;entity&#32;is&#32;not&#32;locked&#32;on&#32;the&#32;target,&#32;it&#32;continues&#32;in&#32;a&#32;straight&#32;line</emphasis>
+<anchor xml:id="__chasing_m_p_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(entity.<link linkend="_class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba">MPLifeTime</link>&#32;&lt;&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1aa1e558f5ba6fb97ca16dcc4e4af6b111">lockOnTime</link>&#32;||&#32;entity.<link linkend="_class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba">MPLifeTime</link>&#32;&gt;&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1aa1e558f5ba6fb97ca16dcc4e4af6b111">lockOnTime</link>&#32;+&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1affd81e3b392c1ddde52ebf03f358c907">chaseTime</link>)
+<anchor xml:id="__chasing_m_p_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__chasing_m_p_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;currentPosition&#32;+&#32;currentRotation&#32;*&#32;Vector3.up&#32;*&#32;(currentSpeed&#32;*&#32;Time.deltaTime);
+<anchor xml:id="__chasing_m_p_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__chasing_m_p_8cs_source_1l00061"/>00061 
+<anchor xml:id="__chasing_m_p_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Defining&#32;desired&#32;state</emphasis>
+<anchor xml:id="__chasing_m_p_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;targetPosition&#32;=&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3">target</link>.transform.position;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Quaternion&#32;targetRotation&#32;=&#32;Quaternion.LookRotation(Vector3.forward,&#32;targetPosition&#32;-&#32;currentPosition);
+<anchor xml:id="__chasing_m_p_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Difference&#32;between&#32;current&#32;and&#32;desired&#32;state</emphasis>
+<anchor xml:id="__chasing_m_p_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;rotationDifference&#32;=&#32;Quaternion.Angle(currentRotation,&#32;targetRotation);
+<anchor xml:id="__chasing_m_p_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;distanceFromTarget&#32;=&#32;Mathf.Max(Vector3.Distance(currentPosition,&#32;targetPosition),&#32;1.2f);
+<anchor xml:id="__chasing_m_p_8cs_source_1l00069"/>00069 
+<anchor xml:id="__chasing_m_p_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Calculating&#32;rotation&#32;of&#32;the&#32;entity&#32;towards&#32;the&#32;target</emphasis>
+<anchor xml:id="__chasing_m_p_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;distanceFactor&#32;=&#32;1&#32;+&#32;1&#32;/&#32;Mathf.Log(distanceFromTarget,&#32;5);
+<anchor xml:id="__chasing_m_p_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;slerpRate&#32;=&#32;<link linkend="_class_movement_patterns_1_1_chasing_m_p_1a2fe30ccd8492359ecb32bef8f8985272">attractionRate</link>&#32;*&#32;Time.deltaTime&#32;*&#32;rotationDifference&#32;*&#32;distanceFactor;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Quaternion&#32;finalRotation&#32;=&#32;Quaternion.RotateTowards(currentRotation,&#32;targetRotation,&#32;slerpRate);
+<anchor xml:id="__chasing_m_p_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Calculating&#32;final&#32;position&#32;of&#32;the&#32;entity</emphasis>
+<anchor xml:id="__chasing_m_p_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;momentum&#32;=&#32;finalRotation&#32;*&#32;Vector3.up&#32;*&#32;(currentSpeed&#32;*&#32;Time.deltaTime);
+<anchor xml:id="__chasing_m_p_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entityTransform.rotation&#32;=&#32;finalRotation;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;finalPosition&#32;=&#32;currentPosition&#32;+&#32;momentum;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;finalPosition;
+<anchor xml:id="__chasing_m_p_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__chasing_m_p_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__chasing_m_p_8cs_source_1l00084"/>00084 }
+</programlisting></section>

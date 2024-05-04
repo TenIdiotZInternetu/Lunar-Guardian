@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_examples_1_1_path_spawner" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::Examples::PathSpawner</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_path_spawner_1ac54490f38af7fa8763d6f32366cefc5c" prot="public" static="no" mutable="no">
+        <type>PathCreator</type>
+        <definition>PathCreator pathPrefab</definition>
+        <argsstring></argsstring>
+        <name>pathPrefab</name>
+        <qualifiedname>PathCreation.Examples.PathSpawner.pathPrefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathSpawner.cs" line="10" column="28" bodyfile="Tools/PathCreator/Examples/Scripts/PathSpawner.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_path_spawner_1a2d0e6e5a57c71bf9770bef3b7a4b2c14" prot="public" static="no" mutable="no">
+        <type>PathFollower</type>
+        <definition>PathFollower followerPrefab</definition>
+        <argsstring></argsstring>
+        <name>followerPrefab</name>
+        <qualifiedname>PathCreation.Examples.PathSpawner.followerPrefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathSpawner.cs" line="11" column="29" bodyfile="Tools/PathCreator/Examples/Scripts/PathSpawner.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_path_spawner_1ae1128b3b4d8e8055f95e12211191603b" prot="public" static="no" mutable="no">
+        <type>Transform[]</type>
+        <definition>Transform [] spawnPoints</definition>
+        <argsstring></argsstring>
+        <name>spawnPoints</name>
+        <qualifiedname>PathCreation.Examples.PathSpawner.spawnPoints</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathSpawner.cs" line="12" column="26" bodyfile="Tools/PathCreator/Examples/Scripts/PathSpawner.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_path_creation_1_1_examples_1_1_path_spawner_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>PathCreation.Examples.PathSpawner.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathSpawner.cs" line="14" column="14" bodyfile="Tools/PathCreator/Examples/Scripts/PathSpawner.cs" bodystart="14" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Examples/Scripts/PathSpawner.cs" line="8" column="11" bodyfile="Tools/PathCreator/Examples/Scripts/PathSpawner.cs" bodystart="8" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_examples_1_1_path_spawner_1a2d0e6e5a57c71bf9770bef3b7a4b2c14" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathSpawner</scope><name>followerPrefab</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_spawner_1ac54490f38af7fa8763d6f32366cefc5c" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathSpawner</scope><name>pathPrefab</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_spawner_1ae1128b3b4d8e8055f95e12211191603b" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathSpawner</scope><name>spawnPoints</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_spawner_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" virt="non-virtual"><scope>PathCreation::Examples::PathSpawner</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

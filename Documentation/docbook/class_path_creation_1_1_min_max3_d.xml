@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_1_1_min_max3_d" xml:lang="en-US">
+<title>PathCreation.MinMax3D Class Reference</title>
+<indexterm><primary>PathCreation.MinMax3D</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_path_creation_1_1_min_max3_d_1ac4825ed1d332261109d5ca96a0938c9e">AddValue</link> (Vector3 v)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>Vector3 <link linkend="_class_path_creation_1_1_min_max3_d_1a593bf661831ec577381148adf7fc8229">Min</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para>Vector3 <link linkend="_class_path_creation_1_1_min_max3_d_1a6eab16883147d761aba6ccc6b563a100">Max</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__min_max3_d_8cs_source_1l00004">4</link> of file <link linkend="__min_max3_d_8cs_source">MinMax3D.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_min_max3_d_1a518ab14da3cd58cf21e818462d6269ad"/><section>
+    <title>MinMax3D()</title>
+<indexterm><primary>MinMax3D</primary><secondary>PathCreation.MinMax3D</secondary></indexterm>
+<indexterm><primary>PathCreation.MinMax3D</primary><secondary>MinMax3D</secondary></indexterm>
+<para><computeroutput>PathCreation.MinMax3D.MinMax3D ( )</computeroutput></para><para>
+Definition at line <link linkend="__min_max3_d_8cs_source_1l00009">9</link> of file <link linkend="__min_max3_d_8cs_source">MinMax3D.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_min_max3_d_1ac4825ed1d332261109d5ca96a0938c9e"/><section>
+    <title>AddValue()</title>
+<indexterm><primary>AddValue</primary><secondary>PathCreation.MinMax3D</secondary></indexterm>
+<indexterm><primary>PathCreation.MinMax3D</primary><secondary>AddValue</secondary></indexterm>
+<para><computeroutput>void PathCreation.MinMax3D.AddValue (Vector3 v)</computeroutput></para><para>
+Definition at line <link linkend="__min_max3_d_8cs_source_1l00015">15</link> of file <link linkend="__min_max3_d_8cs_source">MinMax3D.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_min_max3_d_1a6eab16883147d761aba6ccc6b563a100"/><section>
+    <title>Max</title>
+<indexterm><primary>Max</primary><secondary>PathCreation.MinMax3D</secondary></indexterm>
+<indexterm><primary>PathCreation.MinMax3D</primary><secondary>Max</secondary></indexterm>
+<para><computeroutput>Vector3 PathCreation.MinMax3D.Max<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__min_max3_d_8cs_source_1l00007">7</link> of file <link linkend="__min_max3_d_8cs_source">MinMax3D.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_min_max3_d_1a593bf661831ec577381148adf7fc8229"/><section>
+    <title>Min</title>
+<indexterm><primary>Min</primary><secondary>PathCreation.MinMax3D</secondary></indexterm>
+<indexterm><primary>PathCreation.MinMax3D</primary><secondary>Min</secondary></indexterm>
+<para><computeroutput>Vector3 PathCreation.MinMax3D.Min<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__min_max3_d_8cs_source_1l00006">6</link> of file <link linkend="__min_max3_d_8cs_source">MinMax3D.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Core/Runtime/Objects/MinMax3D.cs</section>
+</section>

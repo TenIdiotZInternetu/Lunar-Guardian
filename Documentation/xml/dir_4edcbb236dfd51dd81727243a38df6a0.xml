@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_4edcbb236dfd51dd81727243a38df6a0" kind="dir">
+    <compoundname>Scripts</compoundname>
+    <innerdir refid="dir_6a5d9bd0d15b3d82d5ebd95a22231102">Scripts/GameManager</innerdir>
+    <innerdir refid="dir_ce58371bc42e65f15a61509a4f57bb51">Scripts/MovementPatterns</innerdir>
+    <innerdir refid="dir_bd79789affcc55005b088fc254a18d50">Scripts/PlayerScripts</innerdir>
+    <innerdir refid="dir_d5e5e8b81582d784d387573a321f0836">Scripts/Serialization</innerdir>
+    <innerdir refid="dir_13140bceb48af6e09ee6fd903342f194">Scripts/Spawnables</innerdir>
+    <innerdir refid="dir_cf3cba7cb859b249fb665d794c791dc5">Scripts/UI</innerdir>
+    <innerdir refid="dir_fab3c42a677c4afce78526fdbbd9e116">Scripts/VFX</innerdir>
+    <innerfile refid="_credits_so_8cs">CreditsSo.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/"/>
+  </compounddef>
+</doxygen>

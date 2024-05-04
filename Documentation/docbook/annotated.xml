@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link><link linkend="_class_player_scripts_1_1_bomb_controller">BombController</link>
+<para>Defines effects of deploying a bomb by player. The bomb deals gradual damage to all enemies and destroys projectiles for specified amount of time. The damage is dealt only during frames called damage ticks </para>
+<link linkend="_class_spawnables_1_1_weapons_1_1_bullet_spawner">BulletSpawner</link>
+<para>Spawns a specified projectile when shot either by the player or an enemy </para>
+<link linkend="_class_v_f_x_1_1_camera_shake">CameraShake</link>
+<para>Shakes the camera violently, by displacing it rapidly over time </para>
+<link linkend="_class_movement_patterns_1_1_chasing_m_p">ChasingMP</link>
+<para>Entity chases a target for a set amount of time and then continues in a straight line </para>
+<link linkend="_class_tools_1_1_component_utils">ComponentUtils</link>
+<para>A collection of utilities for working with Components </para>
+<link linkend="_class_player_scripts_1_1_controls">Controls</link>
+<para>Listens to the Unity&apos;s Input Manager and triggers events based on the input </para>
+<link linkend="_class_path_creation_1_1_utility_1_1_cubic_bezier_utility">CubicBezierUtility</link><link linkend="_class_v_f_x_1_1_damage_flash">DamageFlash</link>
+<para>Changes opacity of the tint material repeatedly to create a flashing effect </para>
+<link linkend="_class_spawnables_1_1_despawn_collider">DespawnCollider</link>
+<para>Border collider that despawns objects that leave its area </para>
+<link linkend="_class_spawnables_1_1_enemy_scripts_1_1_enemy">Enemy</link>
+<para>Defininf characteristics of an enemy entity </para>
+<link linkend="_class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner">EnemySpawner</link>
+<para>Repeatedly spawns specified enemies at a given interval </para>
+<link linkend="_class_spawnables_1_1_entity">Entity</link>
+<para>An object that can be spawned from the ObjectPool and moved by the MovementPattern class </para>
+<link linkend="_class_v_f_x_1_1_fade_canvas">FadeCanvas</link>
+<para>Changes the alpha of a canvas to either 0 or 1 over time </para>
+<link linkend="_class_movement_patterns_1_1_follow_path">FollowPath</link>
+<para>Utilizes PathCreator tool created by Sebastian Lague. Traces a path and moves along it </para>
+<link linkend="_class_game_manager_1_1_game_manager">GameManager</link>
+<para>A state machine that controls the flow of the gameplay </para>
+<link linkend="_class_tools_1_1_game_object_event">GameObjectEvent</link>
+<para>Unity Event with GameObject parameter </para>
+<link linkend="_class_game_manager_1_1_game_over_state">GameOverState</link>
+<para>State reached upon losing all health </para>
+<link linkend="_class_game_manager_1_1_game_state">GameState</link>
+<para>A state governed by the <link linkend="_namespace_game_manager">GameManager</link> </para>
+<link linkend="_class_tools_1_1_game_state_event">GameStateEvent</link>
+<para>Unity Event with GameState parameter </para>
+<link linkend="_interface_spawnables_1_1_weapons_1_1_i_shootable">IShootable</link>
+<para>Contract for entities activated by a weapon, able to hurt either enemies or the player </para>
+<link linkend="_class_spawnables_1_1_weapons_1_1_lazer">Lazer</link>
+<para>A lazer beam damaging the player or entities by shooting raycasts, visualized by a LineRenderer. The lazer has 3 phases: Cooldown, Telegraph and Release. The beam deals damage only during the Release phase </para>
+<link linkend="_class_movement_patterns_1_1_linear_m_p">LinearMP</link>
+<para>Moves along a straight line </para>
+<link linkend="_class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop">Enemy.LootDrop</link>
+<para>Described possible loot drops from the enemy </para>
+<link linkend="_class_u_i_1_1_menu_screen">MenuScreen</link>
+<para>A menu screen&apos;s functionality </para>
+<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link>
+<para>Defines calculations for the position of an entity in the next frame based on its properties </para>
+<link linkend="_class_spawnables_1_1_pickups_1_1_multiplier_pickup">MultiplierPickup</link>
+<para>Grabbing this pickup increases the score multiplier. The score multiplier is reset by taking damage or by letting the pickup leave the playfield </para>
+<link linkend="_class_spawnables_1_1_object_pool">ObjectPool</link>
+<para>A set of pre-instantiated entities of a specified prefab that can be spawned and despawned by the ObjectPoolManager </para>
+<link linkend="_class_spawnables_1_1_object_pool_manager">ObjectPoolManager</link>
+<para>Manages spawning and despawning entities from the assigned ObjectPools </para>
+<link linkend="_class_movement_patterns_1_1_orbiting_m_p">OrbitingMP</link>
+<para>Forms a circular orbit around targeted object </para>
+<link linkend="_class_v_f_x_1_1_pan_camera">PanCamera</link>
+<para>Smoothly pans the camera to a target position </para>
+<link linkend="_class_path_creation_1_1_path_creator_data">PathCreatorData</link>
+<para>Stores state data for the path creator editor </para>
+<link linkend="_class_path_creation_editor_1_1_path_editor">PathEditor</link>
+<para>Editor class for the creation of Bezier and Vertex paths </para>
+<link linkend="_class_game_manager_1_1_paused_state">PausedState</link>
+<para>State reached pressing the pause button </para>
+<link linkend="_class_spawnables_1_1_pickups_1_1_pickup">Pickup</link>
+<para>Entity increasing player&apos;s resources when picked up </para>
+<link linkend="_class_player_scripts_1_1_player">Player</link>
+<para>Controls player&apos;s movement and responses to his actions </para>
+<link linkend="_class_player_scripts_1_1_player_hitbox">PlayerHitbox</link>
+<para>Takes responsibility and responses to being hit by enemy objects </para>
+<link linkend="_class_player_scripts_1_1_player_status">PlayerStatus</link>
+<para>Records state of player&apos;s resources and provides methods to change them </para>
+<link linkend="_class_game_manager_1_1_playing_state">PlayingState</link>
+<para>Default state of the level, when gameplay occurs </para>
+<link linkend="_class_spawnables_1_1_weapons_1_1_projectile">Projectile</link>
+<para>An entity whose purpose is to deal damage to enemies or the player </para>
+<link linkend="_class_spawnables_1_1_pickups_1_1_pickup_1_1_reward">Pickup.Reward</link>
+<para>Resources gained by touching the pickup </para>
+<link linkend="_class_serialization_1_1_save_system">SaveSystem</link>
+<para>System for saving and loading object data on local machine </para>
+<link linkend="_class_tymski_1_1_scene_reference">SceneReference</link>
+<para>A wrapper that provides the means to safely serialize Scene Asset References </para>
+<link linkend="_class_serialization_1_1_score_data">ScoreData</link>
+<para>Serializable data of highest achieved scores </para>
+<link linkend="_class_movement_patterns_1_1_sinusoid_m_p">SinusoidMP</link>
+<para>Produces and follows a sine wave shaped path. The sine wave can be rotated by specifying the axis of oscillation </para>
+<link linkend="_class_spawnables_1_1_spin">Spin</link>
+<para>Rotates the object each frame </para>
+<link linkend="_class_u_i_1_1_text_display">TextDisplay</link>
+<para>Tracks a PlayerStatus resource and displays it as formatted text </para>
+<link linkend="_class_u_i_1_1_u_i_bar">UIBar</link>
+<para>A bar shown during gameplay that displays a resource </para>
+<link linkend="_class_path_creation_1_1_vertex_path">VertexPath</link><link linkend="_class_spawnables_1_1_weapons_1_1_weapon">Weapon</link>
+<para>An object responsible for timing and spawning projectiles or other IShootables </para>
+</section>

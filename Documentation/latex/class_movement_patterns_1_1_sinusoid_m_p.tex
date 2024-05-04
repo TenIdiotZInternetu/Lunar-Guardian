@@ -1,0 +1,66 @@
+\doxysection{Sinusoid\+MP Class Reference}
+\hypertarget{class_movement_patterns_1_1_sinusoid_m_p}{}\label{class_movement_patterns_1_1_sinusoid_m_p}\index{SinusoidMP@{SinusoidMP}}
+
+
+Produces and follows a sine wave shaped path. The sine wave can be rotated by specifying the axis of oscillation.  
+
+
+Inheritance diagram for Sinusoid\+MP\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_movement_patterns_1_1_sinusoid_m_p}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_movement_patterns_1_1_sinusoid_m_p_a0f4b7f8bb73293dc7c2eeba244b07628}\label{class_movement_patterns_1_1_sinusoid_m_p_a0f4b7f8bb73293dc7c2eeba244b07628} 
+bool {\bfseries stays\+In\+Line}
+\begin{DoxyCompactList}\small\item\em if true, produces oscillating movement along a straight line, perpendicular to the given axis of oscillation. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_sinusoid_m_p_a7f7e4724cf57d59513b39c5ecc81adc8}\label{class_movement_patterns_1_1_sinusoid_m_p_a7f7e4724cf57d59513b39c5ecc81adc8} 
+float {\bfseries speed}
+\begin{DoxyCompactList}\small\item\em Rate of change of the sine function\textquotesingle{}s argument. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_sinusoid_m_p_a31bef58f966d97b1ace9bd3a58ffd9a6}\label{class_movement_patterns_1_1_sinusoid_m_p_a31bef58f966d97b1ace9bd3a58ffd9a6} 
+float {\bfseries amplitude}
+\begin{DoxyCompactList}\small\item\em Amplitude of the sine wave. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_sinusoid_m_p_acdfc8898c9e67fbcec81f3b04ae61bd9}\label{class_movement_patterns_1_1_sinusoid_m_p_acdfc8898c9e67fbcec81f3b04ae61bd9} 
+float {\bfseries frequency}
+\begin{DoxyCompactList}\small\item\em Frequency of the sine wave. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_sinusoid_m_p_a275dd6dafe5d4455e599ffd15feb06f8}\label{class_movement_patterns_1_1_sinusoid_m_p_a275dd6dafe5d4455e599ffd15feb06f8} 
+float {\bfseries phase}
+\begin{DoxyCompactList}\small\item\em Phase of the sine wave. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_sinusoid_m_p_a97712bccaedef08f6d8c525bdda2f7ef}\label{class_movement_patterns_1_1_sinusoid_m_p_a97712bccaedef08f6d8c525bdda2f7ef} 
+float {\bfseries acceleration}
+\begin{DoxyCompactList}\small\item\em Rate of change of speed. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_sinusoid_m_p_ab1f333cb00c0c43b1ccdc49b2e6132aa}\label{class_movement_patterns_1_1_sinusoid_m_p_ab1f333cb00c0c43b1ccdc49b2e6132aa} 
+float {\bfseries amplitude\+Change}
+\begin{DoxyCompactList}\small\item\em Rate of change of amplitude. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_sinusoid_m_p_a07562c5f8a18a0608dc6234f2b7e64de}\label{class_movement_patterns_1_1_sinusoid_m_p_a07562c5f8a18a0608dc6234f2b7e64de} 
+float {\bfseries frequency\+Change}
+\begin{DoxyCompactList}\small\item\em Rate of change of frequency. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_sinusoid_m_p_abc2ccff0697104d506d36bc08b2c4ab9}\label{class_movement_patterns_1_1_sinusoid_m_p_abc2ccff0697104d506d36bc08b2c4ab9} 
+float {\bfseries phase\+Shift}
+\begin{DoxyCompactList}\small\item\em Rate of change of phase. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_sinusoid_m_p_a5ec5b5c6929e155f22c198c68a53bbfc}\label{class_movement_patterns_1_1_sinusoid_m_p_a5ec5b5c6929e155f22c198c68a53bbfc} 
+float {\bfseries axis\+Rotation}
+\begin{DoxyCompactList}\small\item\em Rotation of the axis of oscillation in degrees, where 0 is up. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern}{Movement\+Pattern}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern_a04f0e6cf979d3b51e259545b3d33933d}{Initialize}} (\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Sets parameters of the movement pattern based on the entity\textquotesingle{}s state. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern_a784a22d17e4193114212035e8eb6ac0f}{Get\+Next\+Position}} (\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Calculates the position of the entity in the next frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_sinusoid_m_p_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_sinusoid_m_p_8cs_source}{Sinusoid\+MP.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Movement\+Patterns/Sinusoid\+MP.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_spawnables_1_1_weapons" xml:lang="en-US">
+<title>Spawnables.Weapons Namespace Reference</title>
+<indexterm><primary>Spawnables.Weapons</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_weapons_1_1_bullet_spawner">BulletSpawner</link></para>
+
+<para>Spawns a specified projectile when shot either by the player or an enemy. </para>
+</listitem>
+            <listitem><para>interface <link linkend="_interface_spawnables_1_1_weapons_1_1_i_shootable">IShootable</link></para>
+
+<para>Contract for entities activated by a weapon, able to hurt either enemies or the player. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_weapons_1_1_lazer">Lazer</link></para>
+
+<para>A lazer beam damaging the player or entities by shooting raycasts, visualized by a LineRenderer. The lazer has 3 phases: Cooldown, Telegraph and Release. The beam deals damage only during the Release phase. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_weapons_1_1_projectile">Projectile</link></para>
+
+<para>An entity whose purpose is to deal damage to enemies or the player. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_weapons_1_1_weapon">Weapon</link></para>
+
+<para>An object responsible for timing and spawning projectiles or other IShootables. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

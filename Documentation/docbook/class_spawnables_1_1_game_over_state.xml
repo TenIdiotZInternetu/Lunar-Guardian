@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_game_over_state" xml:lang="en-US">
+<title>Spawnables.GameOverState Class Reference</title>
+<indexterm><primary>Spawnables.GameOverState</primary></indexterm>
+Inheritance diagram for Spawnables.GameOverState:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_game_over_state__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Spawnables.GameOverState:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_game_over_state__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_spawnables_1_1_game_over_state_1ada7062efcd96faa6206f40c537a9c305">ChangeToThisState</link> ()</para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_spawnables_1_1_game_over_state_1ae9bd9392ca246a64edff56212dbdd94d">LeaveThisState</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_game_states_1_1_game_state">GameStates.GameState</link>        <itemizedlist>
+            <listitem><para>void <emphasis role="strong">ChangeToThisState</emphasis> ()</para>
+
+<para>Takes actions needed to define this state. </para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">LeaveThisState</emphasis> ()</para>
+
+<para>Undoes changes made by this state. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_u_i_1_1_menus_1_1_game_over_screen">GameOverScreen</link> <link linkend="_class_spawnables_1_1_game_over_state_1a264441e9f90016700dc2e207e677df76">gameOverScreen</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__game_over_state_8cs_source_1l00009">9</link> of file <link linkend="__game_over_state_8cs_source">GameOverState.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_game_over_state_1ada7062efcd96faa6206f40c537a9c305"/><section>
+    <title>ChangeToThisState()</title>
+<indexterm><primary>ChangeToThisState</primary><secondary>Spawnables.GameOverState</secondary></indexterm>
+<indexterm><primary>Spawnables.GameOverState</primary><secondary>ChangeToThisState</secondary></indexterm>
+<para><computeroutput>override void Spawnables.GameOverState.ChangeToThisState ( )</computeroutput></para><para>
+Definition at line <link linkend="__game_over_state_8cs_source_1l00018">18</link> of file <link linkend="__game_over_state_8cs_source">GameOverState.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_game_over_state_1ae9bd9392ca246a64edff56212dbdd94d"/><section>
+    <title>LeaveThisState()</title>
+<indexterm><primary>LeaveThisState</primary><secondary>Spawnables.GameOverState</secondary></indexterm>
+<indexterm><primary>Spawnables.GameOverState</primary><secondary>LeaveThisState</secondary></indexterm>
+<para><computeroutput>override void Spawnables.GameOverState.LeaveThisState ( )</computeroutput></para><para>
+Definition at line <link linkend="__game_over_state_8cs_source_1l00023">23</link> of file <link linkend="__game_over_state_8cs_source">GameOverState.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_game_over_state_1a264441e9f90016700dc2e207e677df76"/><section>
+    <title>gameOverScreen</title>
+<indexterm><primary>gameOverScreen</primary><secondary>Spawnables.GameOverState</secondary></indexterm>
+<indexterm><primary>Spawnables.GameOverState</primary><secondary>gameOverScreen</secondary></indexterm>
+<para><computeroutput><link linkend="_class_u_i_1_1_menus_1_1_game_over_screen">GameOverScreen</link> Spawnables.GameOverState.gameOverScreen</computeroutput></para><para>
+Definition at line <link linkend="__game_over_state_8cs_source_1l00011">11</link> of file <link linkend="__game_over_state_8cs_source">GameOverState.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs</section>
+</section>

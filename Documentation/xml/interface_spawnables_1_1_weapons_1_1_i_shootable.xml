@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="interface_spawnables_1_1_weapons_1_1_i_shootable" kind="interface" language="C#" prot="public">
+    <compoundname>Spawnables::Weapons::IShootable</compoundname>
+    <derivedcompoundref refid="class_spawnables_1_1_weapons_1_1_bullet_spawner" prot="public" virt="non-virtual">BulletSpawner</derivedcompoundref>
+    <derivedcompoundref refid="class_spawnables_1_1_weapons_1_1_lazer" prot="public" virt="non-virtual">Lazer</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_spawnables_1_1_weapons_1_1_i_shootable_1a26a2e3c2d07dea6a2fd1d38eac284ee6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnShoot</definition>
+        <argsstring>()</argsstring>
+        <name>OnShoot</name>
+        <qualifiedname>Spawnables.Weapons.IShootable.OnShoot</qualifiedname>
+        <reimplementedby refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1a26a2e3c2d07dea6a2fd1d38eac284ee6">OnShoot</reimplementedby>
+        <reimplementedby refid="class_spawnables_1_1_weapons_1_1_lazer_1a26a2e3c2d07dea6a2fd1d38eac284ee6">OnShoot</reimplementedby>
+        <briefdescription>
+<para>Called when the weapon is activated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/IShootable.cs" line="11" column="21"/>
+        <referencedby refid="class_spawnables_1_1_weapons_1_1_weapon_1af30926fa5f4a553c1c8a0458592e36d6" compoundref="_weapon_8cs" startline="83" endline="92">Weapon.DetectShootables</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Contract for entities activated by a weapon, able to hurt either enemies or the player. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>IShootable</label>
+        <link refid="interface_spawnables_1_1_weapons_1_1_i_shootable"/>
+      </node>
+      <node id="2">
+        <label>BulletSpawner</label>
+        <link refid="class_spawnables_1_1_weapons_1_1_bullet_spawner"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Lazer</label>
+        <link refid="class_spawnables_1_1_weapons_1_1_lazer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="Scripts/Spawnables/Weapons/Shootables/IShootable.cs" line="6" column="22" bodyfile="Scripts/Spawnables/Weapons/Shootables/IShootable.cs" bodystart="7" bodyend="12"/>
+    <listofallmembers>
+      <member refid="interface_spawnables_1_1_weapons_1_1_i_shootable_1a26a2e3c2d07dea6a2fd1d38eac284ee6" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::IShootable</scope><name>OnShoot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

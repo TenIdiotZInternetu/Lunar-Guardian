@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__entity_8cs_source" xml:lang="en-US">
+<title>Entity.cs</title>
+<indexterm><primary>Scripts/Spawnables/Entity.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__entity_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System;
+<anchor xml:id="__entity_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_movement_patterns">MovementPatterns</link>;
+<anchor xml:id="__entity_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEditor;
+<anchor xml:id="__entity_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__entity_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.SceneManagement;
+<anchor xml:id="__entity_8cs_source_1l00006"/>00006 
+<anchor xml:id="__entity_8cs_source_1l00007"/>00007 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_spawnables">Spawnables</link>
+<anchor xml:id="__entity_8cs_source_1l00008"/>00008 {
+<anchor xml:id="__entity_8cs_source_1l00012"/><link linkend="_class_spawnables_1_1_entity">00012</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_spawnables_1_1_entity">Entity</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__entity_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__entity_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------------&#32;Properties&#32;--------------------*/</emphasis>
+<anchor xml:id="__entity_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__entity_8cs_source_1l00019"/><link linkend="_class_spawnables_1_1_entity_1a8f2052c5dc85bf163c873f99c285216a">00019</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_spawnables_1_1_entity_1a8f2052c5dc85bf163c873f99c285216a">LifeTime</link>&#32;=&gt;&#32;Time.time&#32;-&#32;_timeEnabled;
+<anchor xml:id="__entity_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__entity_8cs_source_1l00024"/><link linkend="_class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba">00024</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba">MPLifeTime</link>&#32;=&gt;&#32;Time.time&#32;-&#32;_timeMPChanged;
+<anchor xml:id="__entity_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__entity_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------------&#32;Public&#32;Fields&#32;--------------------*/</emphasis>
+<anchor xml:id="__entity_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__entity_8cs_source_1l00031"/><link linkend="_class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2">00031</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link>&#32;<link linkend="_class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2">movementPattern</link>;
+<anchor xml:id="__entity_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__entity_8cs_source_1l00036"/><link linkend="_class_spawnables_1_1_entity_1a2d356d7b3c35033282092fae9a836766">00036</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_spawnables_1_1_entity_1a2d356d7b3c35033282092fae9a836766">SpawnKey</link>;
+<anchor xml:id="__entity_8cs_source_1l00037"/>00037 
+<anchor xml:id="__entity_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------------&#32;Private&#32;Fields&#32;--------------------*/</emphasis>
+<anchor xml:id="__entity_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__entity_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;_isMoving&#32;=&#32;<emphasis role="keyword">true</emphasis>;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;True&#32;if&#32;the&#32;entity&#32;should&#32;be&#32;moved&#32;by&#32;the&#32;MovementPattern</emphasis>
+<anchor xml:id="__entity_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;_timeEnabled;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Time&#32;when&#32;the&#32;entity&#32;was&#32;enabled&#32;in&#32;seconds</emphasis>
+<anchor xml:id="__entity_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;_timeMPChanged;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Time&#32;when&#32;the&#32;MovementPattern&#32;was&#32;last&#32;set&#32;in&#32;seconds</emphasis>
+<anchor xml:id="__entity_8cs_source_1l00043"/>00043 
+<anchor xml:id="__entity_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------------&#32;Unity&#32;Callbacks&#32;--------------------*/</emphasis>
+<anchor xml:id="__entity_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__entity_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">protected</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnEnable()
+<anchor xml:id="__entity_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__entity_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_timeEnabled&#32;=&#32;Time.time;
+<anchor xml:id="__entity_8cs_source_1l00049"/>00049 
+<anchor xml:id="__entity_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2">movementPattern</link>&#32;!=&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__entity_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__entity_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef">SetMovementPattern</link>(<link linkend="_class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2">movementPattern</link>);
+<anchor xml:id="__entity_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__entity_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__entity_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__entity_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">protected</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Update()
+<anchor xml:id="__entity_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__entity_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2">movementPattern</link>&#32;!=&#32;<emphasis role="keyword">null</emphasis>&#32;&amp;&amp;&#32;_isMoving)
+<anchor xml:id="__entity_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__entity_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;transform.position&#32;=&#32;<link linkend="_class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2">movementPattern</link>.<link linkend="_class_movement_patterns_1_1_movement_pattern_1a784a22d17e4193114212035e8eb6ac0f">GetNextPosition</link>(<emphasis role="keyword">this</emphasis>);
+<anchor xml:id="__entity_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__entity_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__entity_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__entity_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;--------------------&#32;Public&#32;Methods&#32;--------------------&#32;*/</emphasis>
+<anchor xml:id="__entity_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__entity_8cs_source_1l00070"/><link linkend="_class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef">00070</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef">SetMovementPattern</link>(<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link>&#32;newMovementPattern)
+<anchor xml:id="__entity_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__entity_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2">movementPattern</link>&#32;=&#32;newMovementPattern;
+<anchor xml:id="__entity_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2">movementPattern</link>.<link linkend="_class_movement_patterns_1_1_movement_pattern_1a04f0e6cf979d3b51e259545b3d33933d">Initialize</link>(<emphasis role="keyword">this</emphasis>);
+<anchor xml:id="__entity_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_timeMPChanged&#32;=&#32;Time.time;
+<anchor xml:id="__entity_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__entity_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__entity_8cs_source_1l00080"/><link linkend="_class_spawnables_1_1_entity_1aa71998873389201c17d7773339f63ebe">00080</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_spawnables_1_1_entity_1aa71998873389201c17d7773339f63ebe">StartMoving</link>()&#32;=&gt;&#32;_isMoving&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__entity_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__entity_8cs_source_1l00085"/><link linkend="_class_spawnables_1_1_entity_1a147504656ad9822da09c2c6461aad435">00085</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_spawnables_1_1_entity_1a147504656ad9822da09c2c6461aad435">StopMoving</link>()&#32;=&gt;&#32;_isMoving&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__entity_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__entity_8cs_source_1l00087"/>00087 }
+</programlisting></section>

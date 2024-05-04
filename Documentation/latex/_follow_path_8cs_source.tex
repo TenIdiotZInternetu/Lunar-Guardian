@@ -1,0 +1,36 @@
+\doxysection{Follow\+Path.\+cs}
+\hypertarget{_follow_path_8cs_source}{}\label{_follow_path_8cs_source}\index{Scripts/MovementPatterns/FollowPath.cs@{Scripts/MovementPatterns/FollowPath.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_path_creation}{PathCreation}};}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_path_creation_1_1_examples}{PathCreation.Examples}};}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_spawnables}{Spawnables}};}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_movement_patterns}{MovementPatterns}}}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00011}\mbox{\hyperlink{class_movement_patterns_1_1_follow_path}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_movement_patterns_1_1_follow_path}{FollowPath}}\ :\ \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern}{MovementPattern}}}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Inspector\ Variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00017}\mbox{\hyperlink{class_movement_patterns_1_1_follow_path_ac38836c583abd23c619e142bf15897cb}{00017}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ PathCreator\ \mbox{\hyperlink{class_movement_patterns_1_1_follow_path_ac38836c583abd23c619e142bf15897cb}{path}};}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00022}\mbox{\hyperlink{class_movement_patterns_1_1_follow_path_a7f7e4724cf57d59513b39c5ecc81adc8}{00022}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_movement_patterns_1_1_follow_path_a7f7e4724cf57d59513b39c5ecc81adc8}{speed}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00027}\mbox{\hyperlink{class_movement_patterns_1_1_follow_path_a97712bccaedef08f6d8c525bdda2f7ef}{00027}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_movement_patterns_1_1_follow_path_a97712bccaedef08f6d8c525bdda2f7ef}{acceleration}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}}\ entity)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ Vector3\ GetNextPosition(\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}}\ entity)}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ distanceTravelled\ =\ \mbox{\hyperlink{class_movement_patterns_1_1_follow_path_a7f7e4724cf57d59513b39c5ecc81adc8}{speed}}\ *\ entity.\mbox{\hyperlink{class_spawnables_1_1_entity_a3f4ec4fa85ad2f8f95ea03016cf311ba}{MPLifeTime}};}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ currentSpeed\ =\ \mbox{\hyperlink{class_movement_patterns_1_1_follow_path_a7f7e4724cf57d59513b39c5ecc81adc8}{speed}}\ +\ \mbox{\hyperlink{class_movement_patterns_1_1_follow_path_a97712bccaedef08f6d8c525bdda2f7ef}{acceleration}}\ *\ entity.\mbox{\hyperlink{class_spawnables_1_1_entity_a3f4ec4fa85ad2f8f95ea03016cf311ba}{MPLifeTime}};}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_movement_patterns_1_1_follow_path_ac38836c583abd23c619e142bf15897cb}{path}}.path.GetPointAtDistance(distanceTravelled);}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_follow_path_8cs_source_l00042}00042\ \}}
+
+\end{DoxyCode}

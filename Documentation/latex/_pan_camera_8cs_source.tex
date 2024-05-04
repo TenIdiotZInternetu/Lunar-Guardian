@@ -1,0 +1,48 @@
+\doxysection{Pan\+Camera.\+cs}
+\hypertarget{_pan_camera_8cs_source}{}\label{_pan_camera_8cs_source}\index{Scripts/VFX/PanCamera.cs@{Scripts/VFX/PanCamera.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_v_f_x}{VFX}}}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00010}\mbox{\hyperlink{class_v_f_x_1_1_pan_camera}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_v_f_x_1_1_pan_camera}{PanCamera}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00017}\mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a2008f4ab70b5e4104c2ca43932536ddf}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Camera\ \mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a2008f4ab70b5e4104c2ca43932536ddf}{camera}};}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00022}\mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a94137b92fe146aa56a9aea3e94aefd0a}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a94137b92fe146aa56a9aea3e94aefd0a}{targetPosition}};}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00027}\mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a515dbc8cdce3d6b2091228e7c6d2036f}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ AnimationCurve\ \mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a515dbc8cdce3d6b2091228e7c6d2036f}{curve}};}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Unity\ Callbacks\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00034}\mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a7cc5efcfaf1700331f7c5ed6b38fae16}{00034}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a7cc5efcfaf1700331f7c5ed6b38fae16}{PanToPosition}}()}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ StartCoroutine(Pan());}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Coroutine\ that\ smoothly\ moves\ the\ camera\ to\ the\ target\ position}}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ IEnumerator\ Pan()}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ timePassed\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ startPosition\ =\ \mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a2008f4ab70b5e4104c2ca43932536ddf}{camera}}.transform.position;}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (timePassed\ <\ \mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a515dbc8cdce3d6b2091228e7c6d2036f}{curve}}.keys[\mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a515dbc8cdce3d6b2091228e7c6d2036f}{curve}}.length\ -\/\ 1].time)}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timePassed\ +=\ Time.deltaTime;}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ \mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a515dbc8cdce3d6b2091228e7c6d2036f}{curve}}.Evaluate(timePassed);}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ camera.transform.position\ =\ Vector3.LerpUnclamped(startPosition,\ \mbox{\hyperlink{class_v_f_x_1_1_pan_camera_a94137b92fe146aa56a9aea3e94aefd0a}{targetPosition}},\ t);}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pan_camera_8cs_source_l00057}00057\ \}}
+
+\end{DoxyCode}

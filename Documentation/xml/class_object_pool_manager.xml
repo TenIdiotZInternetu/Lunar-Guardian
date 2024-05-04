@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_object_pool_manager" kind="class" language="C#" prot="public">
+    <compoundname>ObjectPoolManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_object_pool_manager_1a27bec5d29ebf31936a3b026a13a86e12" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_object_pool_manager" kindref="compound">ObjectPoolManager</ref></type>
+        <definition>ObjectPoolManager ObjectPoolManager.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <qualifiedname>ObjectPoolManager.Instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" line="10" column="37" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_object_pool_manager_1aa86fc3f2e880e032bf25765fec1b6c2f" prot="private" static="yes" mutable="no">
+        <type>Dictionary&lt; string, <ref refid="class_object_pool" kindref="compound">ObjectPool</ref> &gt;</type>
+        <definition>Dictionary&lt;string, ObjectPool&gt; ObjectPoolManager._poolTable</definition>
+        <argsstring></argsstring>
+        <name>_poolTable</name>
+        <qualifiedname>ObjectPoolManager._poolTable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" line="11" column="31" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_object_pool_manager_1a4322a41de00a69895bc3dacc6cc1b3c9" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_object_pool" kindref="compound">ObjectPool</ref> &gt;</type>
+        <definition>List&lt;ObjectPool&gt; ObjectPoolManager.objectPools</definition>
+        <argsstring></argsstring>
+        <name>objectPools</name>
+        <qualifiedname>ObjectPoolManager.objectPools</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" line="13" column="17" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_object_pool_manager_1a50041e09d32285d477f711e65ca22d5c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ObjectPoolManager.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>ObjectPoolManager.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" line="16" column="10" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" bodystart="16" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_object_pool_manager_1ab2ab065aca74600e0cce42ee92f677cd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>GameObject</type>
+        <definition>static GameObject ObjectPoolManager.Spawn&lt; T &gt;</definition>
+        <argsstring>(GameObject prefab, Vector3 position, Quaternion rotation)</argsstring>
+        <name>Spawn&lt; T &gt;</name>
+        <qualifiedname>ObjectPoolManager.Spawn&lt; T &gt;</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>prefab</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>Quaternion</type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" line="30" column="19" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" bodystart="30" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_object_pool_manager_1a37d26cc103c48c68b4f4e3070d5f930e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>GameObject</type>
+        <definition>static GameObject ObjectPoolManager.Despawn</definition>
+        <argsstring>(GameObject obj)</argsstring>
+        <name>Despawn</name>
+        <qualifiedname>ObjectPoolManager.Despawn</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" line="59" column="30" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" bodystart="59" bodyend="68"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>ObjectPoolManager</label>
+        <link refid="class_object_pool_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>ObjectPoolManager</label>
+        <link refid="class_object_pool_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" line="8" column="7" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs" bodystart="9" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_object_pool_manager_1aa86fc3f2e880e032bf25765fec1b6c2f" prot="private" virt="non-virtual"><scope>ObjectPoolManager</scope><name>_poolTable</name></member>
+      <member refid="class_object_pool_manager_1a37d26cc103c48c68b4f4e3070d5f930e" prot="public" virt="non-virtual"><scope>ObjectPoolManager</scope><name>Despawn</name></member>
+      <member refid="class_object_pool_manager_1a27bec5d29ebf31936a3b026a13a86e12" prot="public" virt="non-virtual"><scope>ObjectPoolManager</scope><name>Instance</name></member>
+      <member refid="class_object_pool_manager_1a4322a41de00a69895bc3dacc6cc1b3c9" prot="public" virt="non-virtual"><scope>ObjectPoolManager</scope><name>objectPools</name></member>
+      <member refid="class_object_pool_manager_1ab2ab065aca74600e0cce42ee92f677cd" prot="public" virt="non-virtual"><scope>ObjectPoolManager</scope><name>Spawn&lt; T &gt;</name></member>
+      <member refid="class_object_pool_manager_1a50041e09d32285d477f711e65ca22d5c" prot="private" virt="non-virtual"><scope>ObjectPoolManager</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

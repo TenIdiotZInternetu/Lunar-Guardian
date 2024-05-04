@@ -1,0 +1,121 @@
+\doxysection{Player Class Reference}
+\hypertarget{class_player_scripts_1_1_player}{}\label{class_player_scripts_1_1_player}\index{Player@{Player}}
+
+
+Controls player\textquotesingle{}s movement and responses to his actions.  
+
+
+
+
+Inherits Mono\+Behaviour.
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_scripts_1_1_player_a542f630d26b87b7485284fa8e1156389}{Change\+Bomb\+State}} (bool state)
+\begin{DoxyCompactList}\small\item\em Changes bomb state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_scripts_1_1_player_ae734336ad894a9f83096e0eb022ce694}{Change\+Weapon}} (float power\+Level)
+\begin{DoxyCompactList}\small\item\em Changes currently used set of weapons. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_scripts_1_1_player_a619889203db83ef8efe43d453d9e554c}{Change\+Weapon}} (int power\+Level)
+\begin{DoxyCompactList}\small\item\em Changes currently used set of weapons. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_scripts_1_1_player_addcd78ec1b749bf71dd27fd1965f2efc}{Change\+Control}} (\mbox{\hyperlink{class_game_manager_1_1_game_state}{Game\+State}} state)
+\begin{DoxyCompactList}\small\item\em Changes whether the player has control over the character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_player_a631e83154e218047a2889c328a40d351}\label{class_player_scripts_1_1_player_a631e83154e218047a2889c328a40d351} 
+float {\bfseries movement\+Speed}
+\begin{DoxyCompactList}\small\item\em Distance travelled in one second of held movement key. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_player_a207b8b7bc7cd8c7389acca3a3c9779fd}\label{class_player_scripts_1_1_player_a207b8b7bc7cd8c7389acca3a3c9779fd} 
+float {\bfseries focus\+Speed\+Modifier}
+\begin{DoxyCompactList}\small\item\em Ratio at which the movement speed is decreased when focused. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_player_a4dcef5cc05e1394c1e520d61393c92f3}\label{class_player_scripts_1_1_player_a4dcef5cc05e1394c1e520d61393c92f3} 
+\mbox{\hyperlink{class_player_scripts_1_1_bomb_controller}{Bomb\+Controller}} {\bfseries bomb\+Behaviour}
+\begin{DoxyCompactList}\small\item\em Appropriate Bomb\+Controller activated upon deploying a bomb by the player. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_player_aaca2015f54b311502fd2cb2cab74dd61}\label{class_player_scripts_1_1_player_aaca2015f54b311502fd2cb2cab74dd61} 
+Game\+Object {\bfseries current\+Weapon\+Set}
+\begin{DoxyCompactList}\small\item\em A set of weapons used by the player at current power level when shooting. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_player_aff94192c9014da40699a48789c696f3d}\label{class_player_scripts_1_1_player_aff94192c9014da40699a48789c696f3d} 
+List$<$ Game\+Object $>$ {\bfseries weapon\+Sets}
+\begin{DoxyCompactList}\small\item\em List of weapons used at appropriate power levels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_player_a7fdf773501c77d7fe9587f9cafffee5f}\label{class_player_scripts_1_1_player_a7fdf773501c77d7fe9587f9cafffee5f} 
+static \mbox{\hyperlink{class_player_scripts_1_1_player}{Player}} {\bfseries Instance}
+\begin{DoxyCompactList}\small\item\em Singleton instance of the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_scripts_1_1_player_a542f630d26b87b7485284fa8e1156389}\label{class_player_scripts_1_1_player_a542f630d26b87b7485284fa8e1156389} 
+\index{Player@{Player}!ChangeBombState@{ChangeBombState}}
+\index{ChangeBombState@{ChangeBombState}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{ChangeBombState()}{ChangeBombState()}}
+{\footnotesize\ttfamily void Change\+Bomb\+State (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Whether the bomb effects still last \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00088}{88}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+\Hypertarget{class_player_scripts_1_1_player_ae734336ad894a9f83096e0eb022ce694}\label{class_player_scripts_1_1_player_ae734336ad894a9f83096e0eb022ce694} 
+\index{Player@{Player}!ChangeWeapon@{ChangeWeapon}}
+\index{ChangeWeapon@{ChangeWeapon}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{ChangeWeapon()}{ChangeWeapon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Change\+Weapon (\begin{DoxyParamCaption}\item[{float}]{power\+Level }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em power\+Level} & Player\textquotesingle{}s power level \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00097}{97}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+\Hypertarget{class_player_scripts_1_1_player_a619889203db83ef8efe43d453d9e554c}\label{class_player_scripts_1_1_player_a619889203db83ef8efe43d453d9e554c} 
+\index{Player@{Player}!ChangeWeapon@{ChangeWeapon}}
+\index{ChangeWeapon@{ChangeWeapon}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{ChangeWeapon()}{ChangeWeapon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Change\+Weapon (\begin{DoxyParamCaption}\item[{int}]{power\+Level }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em power\+Level} & Player\textquotesingle{}s power level \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00106}{106}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+\Hypertarget{class_player_scripts_1_1_player_addcd78ec1b749bf71dd27fd1965f2efc}\label{class_player_scripts_1_1_player_addcd78ec1b749bf71dd27fd1965f2efc} 
+\index{Player@{Player}!ChangeControl@{ChangeControl}}
+\index{ChangeControl@{ChangeControl}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{ChangeControl()}{ChangeControl()}}
+{\footnotesize\ttfamily void Change\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_manager_1_1_game_state}{Game\+State}}}]{state }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Current Game\+State of the game \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_8cs_source_l00117}{117}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Player\+Scripts/Player.\+cs\end{DoxyCompactItemize}

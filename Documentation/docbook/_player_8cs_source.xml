@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__player_8cs_source" xml:lang="en-US">
+<title>Player.cs</title>
+<indexterm><primary>Scripts/PlayerScripts/Player.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__player_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System;
+<anchor xml:id="__player_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__player_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_game_manager">GameManager</link>;
+<anchor xml:id="__player_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_spawnables">Spawnables</link>;
+<anchor xml:id="__player_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_spawnables_1_1_weapons">Spawnables.Weapons</link>;
+<anchor xml:id="__player_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__player_8cs_source_1l00007"/>00007 
+<anchor xml:id="__player_8cs_source_1l00008"/>00008 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_player_scripts">PlayerScripts</link>
+<anchor xml:id="__player_8cs_source_1l00009"/>00009 {
+<anchor xml:id="__player_8cs_source_1l00013"/><link linkend="_class_player_scripts_1_1_player">00013</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_player_scripts_1_1_player">Player</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__player_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Static&#32;Fields&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__player_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00020"/><link linkend="_class_player_scripts_1_1_player_1a7fdf773501c77d7fe9587f9cafffee5f">00020</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player">Player</link>&#32;<link linkend="_class_player_scripts_1_1_player_1a7fdf773501c77d7fe9587f9cafffee5f">Instance</link>;
+<anchor xml:id="__player_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Public&#32;Fields&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__player_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00027"/><link linkend="_class_player_scripts_1_1_player_1a631e83154e218047a2889c328a40d351">00027</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_1a631e83154e218047a2889c328a40d351">movementSpeed</link>;
+<anchor xml:id="__player_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00032"/><link linkend="_class_player_scripts_1_1_player_1a207b8b7bc7cd8c7389acca3a3c9779fd">00032</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_1a207b8b7bc7cd8c7389acca3a3c9779fd">focusSpeedModifier</link>;
+<anchor xml:id="__player_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00037"/><link linkend="_class_player_scripts_1_1_player_1a4dcef5cc05e1394c1e520d61393c92f3">00037</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_player_scripts_1_1_bomb_controller">BombController</link>&#32;<link linkend="_class_player_scripts_1_1_player_1a4dcef5cc05e1394c1e520d61393c92f3">bombBehaviour</link>;
+<anchor xml:id="__player_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00042"/><link linkend="_class_player_scripts_1_1_player_1aaca2015f54b311502fd2cb2cab74dd61">00042</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;GameObject&#32;<link linkend="_class_player_scripts_1_1_player_1aaca2015f54b311502fd2cb2cab74dd61">currentWeaponSet</link>;
+<anchor xml:id="__player_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00047"/><link linkend="_class_player_scripts_1_1_player_1aff94192c9014da40699a48789c696f3d">00047</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;List&lt;GameObject&gt;&#32;<link linkend="_class_player_scripts_1_1_player_1aff94192c9014da40699a48789c696f3d">weaponSets</link>;
+<anchor xml:id="__player_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Private&#32;Fields&#32;--------------------&#32;*/</emphasis>
+<anchor xml:id="__player_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Rigidbody2D&#32;_rigidbody;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Rigidbody&#32;of&#32;the&#32;player</emphasis>
+<anchor xml:id="__player_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;_hasControl&#32;=&#32;<emphasis role="keyword">false</emphasis>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Whether&#32;the&#32;player&#32;has&#32;control&#32;over&#32;the&#32;character</emphasis>
+<anchor xml:id="__player_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;_hasBombs&#32;=&#32;<emphasis role="keyword">true</emphasis>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Whether&#32;the&#32;player&#32;has&#32;bombs&#32;left</emphasis>
+<anchor xml:id="__player_8cs_source_1l00054"/>00054 
+<anchor xml:id="__player_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Whether&#32;the&#32;player&#32;has&#32;deployed&#32;a&#32;bomb&#32;of&#32;which&#32;effects&#32;have&#32;not&#32;ended&#32;yet</emphasis>
+<anchor xml:id="__player_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;_inBombState&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__player_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;------------------&#32;Unity&#32;Callbacks&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__player_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Sets&#32;appropriate&#32;responses&#32;to&#32;player&apos;s&#32;actions</emphasis>
+<anchor xml:id="__player_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__player_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_1a7fdf773501c77d7fe9587f9cafffee5f">Instance</link>&#32;=&#32;<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="__player_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_rigidbody&#32;=&#32;GetComponent&lt;Rigidbody2D&gt;();
+<anchor xml:id="__player_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PlayerStatus.BombsChangedEvent&#32;+=&#32;CheckBombs;
+<anchor xml:id="__player_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PlayerStatus.PowerLevelChangedEvent&#32;+=&#32;<link linkend="_class_player_scripts_1_1_player_1ae734336ad894a9f83096e0eb022ce694">ChangeWeapon</link>;
+<anchor xml:id="__player_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Controls.Action2&#32;+=&#32;DeployBomb;
+<anchor xml:id="__player_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_8cs_source_1l00070"/>00070 
+<anchor xml:id="__player_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Determines&#32;the&#32;velocity&#32;of&#32;the&#32;player</emphasis>
+<anchor xml:id="__player_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;FixedUpdate()
+<anchor xml:id="__player_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;movementVector&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Vector3(<link linkend="_class_player_scripts_1_1_controls">Controls</link>.<link linkend="_class_player_scripts_1_1_controls_1a698aa7a1bcf8c024ca5b44b35a2a49db">MoveHorizontal</link>,&#32;<link linkend="_class_player_scripts_1_1_controls">Controls</link>.<link linkend="_class_player_scripts_1_1_controls_1aaef34645c77748c8b64dd8ac3ede4b16">MoveVertical</link>,&#32;0);
+<anchor xml:id="__player_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector2&#32;velocity&#32;=&#32;movementVector.normalized&#32;*&#32;(<link linkend="_class_player_scripts_1_1_player_1a631e83154e218047a2889c328a40d351">movementSpeed</link>);
+<anchor xml:id="__player_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_player_scripts_1_1_controls">Controls</link>.<link linkend="_class_player_scripts_1_1_controls_1ac711d62a538e7d73ed78e76dc4146c2b">IsFocused</link>)&#32;velocity&#32;*=&#32;<link linkend="_class_player_scripts_1_1_player_1a207b8b7bc7cd8c7389acca3a3c9779fd">focusSpeedModifier</link>;
+<anchor xml:id="__player_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_rigidbody.velocity&#32;=&#32;velocity;
+<anchor xml:id="__player_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;------------------&#32;Public&#32;Methods&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__player_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00088"/><link linkend="_class_player_scripts_1_1_player_1a542f630d26b87b7485284fa8e1156389">00088</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_1a542f630d26b87b7485284fa8e1156389">ChangeBombState</link>(<emphasis role="keywordtype">bool</emphasis>&#32;state)
+<anchor xml:id="__player_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_inBombState&#32;=&#32;state;
+<anchor xml:id="__player_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00097"/><link linkend="_class_player_scripts_1_1_player_1ae734336ad894a9f83096e0eb022ce694">00097</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_1ae734336ad894a9f83096e0eb022ce694">ChangeWeapon</link>(<emphasis role="keywordtype">float</emphasis>&#32;powerLevel)
+<anchor xml:id="__player_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_1ae734336ad894a9f83096e0eb022ce694">ChangeWeapon</link>((<emphasis role="keywordtype">int</emphasis>)&#32;powerLevel);
+<anchor xml:id="__player_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00106"/><link linkend="_class_player_scripts_1_1_player_1a619889203db83ef8efe43d453d9e554c">00106</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_1a619889203db83ef8efe43d453d9e554c">ChangeWeapon</link>(<emphasis role="keywordtype">int</emphasis>&#32;powerLevel)
+<anchor xml:id="__player_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_1aaca2015f54b311502fd2cb2cab74dd61">currentWeaponSet</link>.gameObject.SetActive(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="__player_8cs_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_1aaca2015f54b311502fd2cb2cab74dd61">currentWeaponSet</link>&#32;=&#32;<link linkend="_class_player_scripts_1_1_player_1aff94192c9014da40699a48789c696f3d">weaponSets</link>[powerLevel];
+<anchor xml:id="__player_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_1aaca2015f54b311502fd2cb2cab74dd61">currentWeaponSet</link>.gameObject.SetActive(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__player_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00117"/><link linkend="_class_player_scripts_1_1_player_1addcd78ec1b749bf71dd27fd1965f2efc">00117</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_1addcd78ec1b749bf71dd27fd1965f2efc">ChangeControl</link>(<link linkend="_class_game_manager_1_1_game_state">GameState</link>&#32;state)
+<anchor xml:id="__player_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_hasControl&#32;=&#32;state&#32;is&#32;<link linkend="_class_game_manager_1_1_playing_state">PlayingState</link>;
+<anchor xml:id="__player_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_8cs_source_1l00121"/>00121 
+<anchor xml:id="__player_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;------------------&#32;Private&#32;Methods&#32;------------------&#32;*/</emphasis>
+<anchor xml:id="__player_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Deploys&#32;a&#32;bomb&#32;if&#32;the&#32;player&#32;has&#32;control&#32;over&#32;the&#32;character,&#32;has&#32;bombs&#32;left&#32;</emphasis>
+<anchor xml:id="__player_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;and&#32;there&#32;is&#32;not&#32;a&#32;bomb&#32;deployed&#32;already</emphasis>
+<anchor xml:id="__player_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;DeployBomb()
+<anchor xml:id="__player_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!_hasControl&#32;||&#32;!_hasBombs&#32;||&#32;_inBombState)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__player_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartCoroutine(<link linkend="_class_player_scripts_1_1_player_1a4dcef5cc05e1394c1e520d61393c92f3">bombBehaviour</link>.<link linkend="_class_player_scripts_1_1_bomb_controller_1a6ffe3551433e872831d7751d22cc161e">DeployBomb</link>());
+<anchor xml:id="__player_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_status">PlayerStatus</link>.<link linkend="_class_player_scripts_1_1_player_status_1aeac2eae8e304f20bc75eb574b2df8964">Instance</link>.<link linkend="_class_player_scripts_1_1_player_status_1a93b8c4270f1e17b9624d0dd78b593e98">ChangeBombs</link>(-1);
+<anchor xml:id="__player_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Checks&#32;whether&#32;the&#32;player&#32;has&#32;bombs&#32;left</emphasis>
+<anchor xml:id="__player_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;CheckBombs(<emphasis role="keywordtype">float</emphasis>&#32;bombs)
+<anchor xml:id="__player_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_hasBombs&#32;=&#32;bombs&#32;&gt;&#32;0;
+<anchor xml:id="__player_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_8cs_source_1l00138"/>00138 
+<anchor xml:id="__player_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Unsuscribes&#32;from&#32;events</emphasis>
+<anchor xml:id="__player_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDestroy()
+<anchor xml:id="__player_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PlayerStatus.BombsChangedEvent&#32;-=&#32;CheckBombs;
+<anchor xml:id="__player_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PlayerStatus.PowerLevelChangedEvent&#32;-=&#32;<link linkend="_class_player_scripts_1_1_player_1ae734336ad894a9f83096e0eb022ce694">ChangeWeapon</link>;
+<anchor xml:id="__player_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Controls.Action2&#32;-=&#32;DeployBomb;
+<anchor xml:id="__player_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_8cs_source_1l00147"/>00147 }
+</programlisting></section>

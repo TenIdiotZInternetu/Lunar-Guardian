@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_8e5f756b31bf9a5a15fca1e4b3c00ff9" kind="dir">
+    <compoundname>Kodiky/Unity/Lunar Guardian/Assets/Scripts/UI/Menus</compoundname>
+    <innerfile refid="_credits_screen_8cs">CreditsScreen.cs</innerfile>
+    <innerfile refid="_game_over_screen_8cs">GameOverScreen.cs</innerfile>
+    <innerfile refid="_leaderboard_8cs">Leaderboard.cs</innerfile>
+    <innerfile refid="_main_menu_8cs">MainMenu.cs</innerfile>
+    <innerfile refid="_pause_menu_8cs">PauseMenu.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/UI/Menus/"/>
+  </compounddef>
+</doxygen>

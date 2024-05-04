@@ -1,0 +1,94 @@
+\doxysection{Object\+Pool\+Manager Class Reference}
+\hypertarget{class_spawnables_1_1_object_pool_manager}{}\label{class_spawnables_1_1_object_pool_manager}\index{ObjectPoolManager@{ObjectPoolManager}}
+
+
+Manages spawning and despawning entities from the assigned Object\+Pools.  
+
+
+
+
+Inherits Mono\+Behaviour.
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Game\+Object \mbox{\hyperlink{class_spawnables_1_1_object_pool_manager_a1b48a33c40b4670ebae60da1682f7733}{Spawn$<$ T $>$}} (Game\+Object prefab, Vector3 position, Quaternion rotation)
+\begin{DoxyCompactList}\small\item\em Activates an entity extracted from a pool in the pool table. Replaces the Entity component of the object from the pool with the from the prefab. \end{DoxyCompactList}\item 
+static Game\+Object \mbox{\hyperlink{class_spawnables_1_1_object_pool_manager_a6bbeac8b46389ccaa0b7d2d24f805c6f}{Despawn}} (Game\+Object obj)
+\begin{DoxyCompactList}\small\item\em Returns an entity back to the pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_spawnables_1_1_object_pool_manager_a21c67f4c5da485082f9ee48de4eedae0}\label{class_spawnables_1_1_object_pool_manager_a21c67f4c5da485082f9ee48de4eedae0} 
+List$<$ \mbox{\hyperlink{class_spawnables_1_1_object_pool}{Object\+Pool}} $>$ {\bfseries object\+Pools}
+\begin{DoxyCompactList}\small\item\em List of all available Object\+Pools. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_spawnables_1_1_object_pool_manager_a7d0ed446b05362b239bde80534497927}\label{class_spawnables_1_1_object_pool_manager_a7d0ed446b05362b239bde80534497927} 
+static \mbox{\hyperlink{class_spawnables_1_1_object_pool_manager}{Object\+Pool\+Manager}} {\bfseries Instance}
+\begin{DoxyCompactList}\small\item\em Singleton instance of the Object\+Pool\+Manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_object_pool_manager_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_object_pool_manager_8cs_source}{Object\+Pool\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_spawnables_1_1_object_pool_manager_a1b48a33c40b4670ebae60da1682f7733}\label{class_spawnables_1_1_object_pool_manager_a1b48a33c40b4670ebae60da1682f7733} 
+\index{ObjectPoolManager@{ObjectPoolManager}!Spawn$<$ T $>$@{Spawn$<$ T $>$}}
+\index{Spawn$<$ T $>$@{Spawn$<$ T $>$}!ObjectPoolManager@{ObjectPoolManager}}
+\doxysubsubsection{\texorpdfstring{Spawn$<$ T $>$()}{Spawn< T >()}}
+{\footnotesize\ttfamily static Game\+Object Spawn$<$ T $>$ (\begin{DoxyParamCaption}\item[{Game\+Object}]{prefab,  }\item[{Vector3}]{position,  }\item[{Quaternion}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefab} & Entity to be spawned \\
+\hline
+{\em position} & Position at which the entity should be spawned \\
+\hline
+{\em rotation} & Rotation of the spawned entity \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type inheriting from Entity \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The Spawned Entity 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em Entity}]\end{description}
+\end{Desc}
+
+
+Definition at line \mbox{\hyperlink{_object_pool_manager_8cs_source_l00058}{58}} of file \mbox{\hyperlink{_object_pool_manager_8cs_source}{Object\+Pool\+Manager.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_object_pool_manager_a6bbeac8b46389ccaa0b7d2d24f805c6f}\label{class_spawnables_1_1_object_pool_manager_a6bbeac8b46389ccaa0b7d2d24f805c6f} 
+\index{ObjectPoolManager@{ObjectPoolManager}!Despawn@{Despawn}}
+\index{Despawn@{Despawn}!ObjectPoolManager@{ObjectPoolManager}}
+\doxysubsubsection{\texorpdfstring{Despawn()}{Despawn()}}
+{\footnotesize\ttfamily static Game\+Object Despawn (\begin{DoxyParamCaption}\item[{Game\+Object}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Entity to be returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The returned entity 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_object_pool_manager_8cs_source_l00091}{91}} of file \mbox{\hyperlink{_object_pool_manager_8cs_source}{Object\+Pool\+Manager.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Spawnables/Object\+Pool\+Manager.\+cs\end{DoxyCompactItemize}

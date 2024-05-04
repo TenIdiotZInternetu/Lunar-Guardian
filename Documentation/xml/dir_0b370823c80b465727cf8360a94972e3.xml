@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_0b370823c80b465727cf8360a94972e3" kind="dir">
+    <compoundname>Scripts/Spawnables/EnemyScripts</compoundname>
+    <innerfile refid="_enemy_8cs">Enemy.cs</innerfile>
+    <innerfile refid="_enemy_controller_8cs">EnemyController.cs</innerfile>
+    <innerfile refid="_enemy_spawner_8cs">EnemySpawner.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Spawnables/EnemyScripts/"/>
+  </compounddef>
+</doxygen>

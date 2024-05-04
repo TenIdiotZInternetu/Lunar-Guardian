@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_fab3c42a677c4afce78526fdbbd9e116" kind="dir">
+    <compoundname>Scripts/VFX</compoundname>
+    <innerfile refid="_camera_shake_8cs">CameraShake.cs</innerfile>
+    <innerfile refid="_damage_flash_8cs">DamageFlash.cs</innerfile>
+    <innerfile refid="_fade_canvas_8cs">FadeCanvas.cs</innerfile>
+    <innerfile refid="_pan_camera_8cs">PanCamera.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/VFX/"/>
+  </compounddef>
+</doxygen>

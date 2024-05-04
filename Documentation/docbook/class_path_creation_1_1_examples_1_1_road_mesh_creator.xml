@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_1_1_examples_1_1_road_mesh_creator" xml:lang="en-US">
+<title>PathCreation.Examples.RoadMeshCreator Class Reference</title>
+<indexterm><primary>PathCreation.Examples.RoadMeshCreator</primary></indexterm>
+Inheritance diagram for PathCreation.Examples.RoadMeshCreator:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_examples_1_1_road_mesh_creator__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for PathCreation.Examples.RoadMeshCreator:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_examples_1_1_road_mesh_creator__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1a50883c103b32adc8a41bd90dec366db2">roadWidth</link> = .4f</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1a6cc91a26dfce4bf1b8637e9ee86f17dd">thickness</link> = .15f</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1a995cdb8d6201ff43a781d89834c06490">flattenSurface</link></para>
+</listitem>
+            <listitem><para>Material <link linkend="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1a0cc42e30a02c05f732b38a8990987847">roadMaterial</link></para>
+</listitem>
+            <listitem><para>Material <link linkend="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1ac340c0169fa64ff3dfd92182040ee68a">undersideMaterial</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1aa77a8e2188cb3726765999310dc6fd21">textureTiling</link> = 1</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool">PathCreation.Examples.PathSceneTool</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_path_creation_1_1_path_creator">PathCreator</link> <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1acc49024bbd6fea74d56f071789022594">pathCreator</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1ab9d47ca76d42b8ca2ca2f5a4498d1da5">autoUpdate</link> = true</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1a70b3bf1e1608e55c2948ada95300e76d">PathUpdated</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Member Functions inherited from <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool">PathCreation.Examples.PathSceneTool</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1a1eefdc23d778713205de0eb65d3d5dc1">OnDestroy</link> ()</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">PathUpdated</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Member Functions inherited from <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool">PathCreation.Examples.PathSceneTool</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1aa341e881e4581ab0612442b623375db2">TriggerUpdate</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool">PathCreation.Examples.PathSceneTool</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_path_creation_1_1_vertex_path">VertexPath</link> <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1a532e008bb82cbd1c9d928f669253ddd8">path</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+Events inherited from <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool">PathCreation.Examples.PathSceneTool</link>        <itemizedlist>
+            <listitem><para>System.Action <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1ae513084a84a343f4998ccc8d7f878ee2">onDestroyed</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__road_mesh_creator_8cs_source_1l00006">6</link> of file <link linkend="__road_mesh_creator_8cs_source">RoadMeshCreator.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1a70b3bf1e1608e55c2948ada95300e76d"/><section>
+    <title>PathUpdated()</title>
+<indexterm><primary>PathUpdated</primary><secondary>PathCreation.Examples.RoadMeshCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.RoadMeshCreator</primary><secondary>PathUpdated</secondary></indexterm>
+<para><computeroutput>override void PathCreation.Examples.RoadMeshCreator.PathUpdated ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__road_mesh_creator_8cs_source_1l00025">25</link> of file <link linkend="__road_mesh_creator_8cs_source">RoadMeshCreator.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1a995cdb8d6201ff43a781d89834c06490"/><section>
+    <title>flattenSurface</title>
+<indexterm><primary>flattenSurface</primary><secondary>PathCreation.Examples.RoadMeshCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.RoadMeshCreator</primary><secondary>flattenSurface</secondary></indexterm>
+<para><computeroutput>bool PathCreation.Examples.RoadMeshCreator.flattenSurface</computeroutput></para><para>
+Definition at line <link linkend="__road_mesh_creator_8cs_source_1l00011">11</link> of file <link linkend="__road_mesh_creator_8cs_source">RoadMeshCreator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1a0cc42e30a02c05f732b38a8990987847"/><section>
+    <title>roadMaterial</title>
+<indexterm><primary>roadMaterial</primary><secondary>PathCreation.Examples.RoadMeshCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.RoadMeshCreator</primary><secondary>roadMaterial</secondary></indexterm>
+<para><computeroutput>Material PathCreation.Examples.RoadMeshCreator.roadMaterial</computeroutput></para><para>
+Definition at line <link linkend="__road_mesh_creator_8cs_source_1l00014">14</link> of file <link linkend="__road_mesh_creator_8cs_source">RoadMeshCreator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1a50883c103b32adc8a41bd90dec366db2"/><section>
+    <title>roadWidth</title>
+<indexterm><primary>roadWidth</primary><secondary>PathCreation.Examples.RoadMeshCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.RoadMeshCreator</primary><secondary>roadWidth</secondary></indexterm>
+<para><computeroutput>float PathCreation.Examples.RoadMeshCreator.roadWidth = .4f</computeroutput></para><para>
+Definition at line <link linkend="__road_mesh_creator_8cs_source_1l00008">8</link> of file <link linkend="__road_mesh_creator_8cs_source">RoadMeshCreator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1aa77a8e2188cb3726765999310dc6fd21"/><section>
+    <title>textureTiling</title>
+<indexterm><primary>textureTiling</primary><secondary>PathCreation.Examples.RoadMeshCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.RoadMeshCreator</primary><secondary>textureTiling</secondary></indexterm>
+<para><computeroutput>float PathCreation.Examples.RoadMeshCreator.textureTiling = 1</computeroutput></para><para>
+Definition at line <link linkend="__road_mesh_creator_8cs_source_1l00016">16</link> of file <link linkend="__road_mesh_creator_8cs_source">RoadMeshCreator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1a6cc91a26dfce4bf1b8637e9ee86f17dd"/><section>
+    <title>thickness</title>
+<indexterm><primary>thickness</primary><secondary>PathCreation.Examples.RoadMeshCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.RoadMeshCreator</primary><secondary>thickness</secondary></indexterm>
+<para><computeroutput>float PathCreation.Examples.RoadMeshCreator.thickness = .15f</computeroutput></para><para>
+Definition at line <link linkend="__road_mesh_creator_8cs_source_1l00010">10</link> of file <link linkend="__road_mesh_creator_8cs_source">RoadMeshCreator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_road_mesh_creator_1ac340c0169fa64ff3dfd92182040ee68a"/><section>
+    <title>undersideMaterial</title>
+<indexterm><primary>undersideMaterial</primary><secondary>PathCreation.Examples.RoadMeshCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.RoadMeshCreator</primary><secondary>undersideMaterial</secondary></indexterm>
+<para><computeroutput>Material PathCreation.Examples.RoadMeshCreator.undersideMaterial</computeroutput></para><para>
+Definition at line <link linkend="__road_mesh_creator_8cs_source_1l00015">15</link> of file <link linkend="__road_mesh_creator_8cs_source">RoadMeshCreator.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs</section>
+</section>

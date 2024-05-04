@@ -1,0 +1,187 @@
+\doxysection{Spawnables.\+Projectiles.\+Weapon Class Reference}
+\hypertarget{class_spawnables_1_1_projectiles_1_1_weapon}{}\label{class_spawnables_1_1_projectiles_1_1_weapon}\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+
+
+Inheritance diagram for Spawnables.\+Projectiles.\+Weapon\+:
+% FIG 0
+
+
+Collaboration diagram for Spawnables.\+Projectiles.\+Weapon\+:
+% FIG 1
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_acf54945fc4090d93243aa11fc9d4b580}{cooldown}}
+\item 
+float \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a8932601de8c9532f23a655d8ef5d703d}{charge\+Time}}
+\item 
+int \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_aa408fa0ee15bcd0ca127959f9a076ca4}{bullets\+In\+Charge}}
+\item 
+bool \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a2d2742c41b48396b2fb921cc19845651}{is\+Players}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a3626f55fe1a3285ca6e225253a1affcd}{Detect\+Shootables}} ()
+\item 
+virtual void \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a381b56e44b1e2d16546efa9470410941}{Try\+Shooting}} ()
+\item 
+void \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_adbc309f01c4819954baf0944844dddae}{Recharge}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_aa874678199e51f9c31adb40eb4d5ce65}{\+\_\+time\+Of\+Last\+Shot}}
+\item 
+int \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a944b4dd9708c072eb9527351c9501e85}{\+\_\+bullets\+Shot}} = 0
+\item 
+List$<$ \mbox{\hyperlink{interface_spawnables_1_1_projectiles_1_1_i_shootable}{IShootable}} $>$ \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a0cf56eb6f75687c192f8a5a3578d4836}{Gun\+Heads}} = new()
+\item 
+Action \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a208a81719298181321bbef16ec73448f}{On\+Shoot\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_ab842db32ed2b9b4e4cd73784ac15249b}{Has\+Aggro}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_spawnables_1_1_projectiles_1_1_weapon_a3626f55fe1a3285ca6e225253a1affcd}\label{class_spawnables_1_1_projectiles_1_1_weapon_a3626f55fe1a3285ca6e225253a1affcd} 
+\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}!DetectShootables@{DetectShootables}}
+\index{DetectShootables@{DetectShootables}!Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+\doxysubsubsection{\texorpdfstring{DetectShootables()}{DetectShootables()}}
+{\footnotesize\ttfamily virtual void Spawnables.\+Projectiles.\+Weapon.\+Detect\+Shootables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_projectiles_1_1_weapon_adbc309f01c4819954baf0944844dddae}\label{class_spawnables_1_1_projectiles_1_1_weapon_adbc309f01c4819954baf0944844dddae} 
+\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}!Recharge@{Recharge}}
+\index{Recharge@{Recharge}!Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+\doxysubsubsection{\texorpdfstring{Recharge()}{Recharge()}}
+{\footnotesize\ttfamily void Spawnables.\+Projectiles.\+Weapon.\+Recharge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00064}{64}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_projectiles_1_1_weapon_a381b56e44b1e2d16546efa9470410941}\label{class_spawnables_1_1_projectiles_1_1_weapon_a381b56e44b1e2d16546efa9470410941} 
+\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}!TryShooting@{TryShooting}}
+\index{TryShooting@{TryShooting}!Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+\doxysubsubsection{\texorpdfstring{TryShooting()}{TryShooting()}}
+{\footnotesize\ttfamily virtual void Spawnables.\+Projectiles.\+Weapon.\+Try\+Shooting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00049}{49}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_spawnables_1_1_projectiles_1_1_weapon_a944b4dd9708c072eb9527351c9501e85}\label{class_spawnables_1_1_projectiles_1_1_weapon_a944b4dd9708c072eb9527351c9501e85} 
+\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}!\_bulletsShot@{\_bulletsShot}}
+\index{\_bulletsShot@{\_bulletsShot}!Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+\doxysubsubsection{\texorpdfstring{\_bulletsShot}{\_bulletsShot}}
+{\footnotesize\ttfamily int Spawnables.\+Projectiles.\+Weapon.\+\_\+bullets\+Shot = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_projectiles_1_1_weapon_aa874678199e51f9c31adb40eb4d5ce65}\label{class_spawnables_1_1_projectiles_1_1_weapon_aa874678199e51f9c31adb40eb4d5ce65} 
+\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}!\_timeOfLastShot@{\_timeOfLastShot}}
+\index{\_timeOfLastShot@{\_timeOfLastShot}!Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+\doxysubsubsection{\texorpdfstring{\_timeOfLastShot}{\_timeOfLastShot}}
+{\footnotesize\ttfamily float Spawnables.\+Projectiles.\+Weapon.\+\_\+time\+Of\+Last\+Shot\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_projectiles_1_1_weapon_aa408fa0ee15bcd0ca127959f9a076ca4}\label{class_spawnables_1_1_projectiles_1_1_weapon_aa408fa0ee15bcd0ca127959f9a076ca4} 
+\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}!bulletsInCharge@{bulletsInCharge}}
+\index{bulletsInCharge@{bulletsInCharge}!Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+\doxysubsubsection{\texorpdfstring{bulletsInCharge}{bulletsInCharge}}
+{\footnotesize\ttfamily int Spawnables.\+Projectiles.\+Weapon.\+bullets\+In\+Charge}
+
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_projectiles_1_1_weapon_a8932601de8c9532f23a655d8ef5d703d}\label{class_spawnables_1_1_projectiles_1_1_weapon_a8932601de8c9532f23a655d8ef5d703d} 
+\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}!chargeTime@{chargeTime}}
+\index{chargeTime@{chargeTime}!Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+\doxysubsubsection{\texorpdfstring{chargeTime}{chargeTime}}
+{\footnotesize\ttfamily float Spawnables.\+Projectiles.\+Weapon.\+charge\+Time}
+
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_projectiles_1_1_weapon_acf54945fc4090d93243aa11fc9d4b580}\label{class_spawnables_1_1_projectiles_1_1_weapon_acf54945fc4090d93243aa11fc9d4b580} 
+\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}!cooldown@{cooldown}}
+\index{cooldown@{cooldown}!Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+\doxysubsubsection{\texorpdfstring{cooldown}{cooldown}}
+{\footnotesize\ttfamily float Spawnables.\+Projectiles.\+Weapon.\+cooldown}
+
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_projectiles_1_1_weapon_a0cf56eb6f75687c192f8a5a3578d4836}\label{class_spawnables_1_1_projectiles_1_1_weapon_a0cf56eb6f75687c192f8a5a3578d4836} 
+\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}!GunHeads@{GunHeads}}
+\index{GunHeads@{GunHeads}!Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+\doxysubsubsection{\texorpdfstring{GunHeads}{GunHeads}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{interface_spawnables_1_1_projectiles_1_1_i_shootable}{IShootable}}$>$ Spawnables.\+Projectiles.\+Weapon.\+Gun\+Heads = new()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_projectiles_1_1_weapon_a2d2742c41b48396b2fb921cc19845651}\label{class_spawnables_1_1_projectiles_1_1_weapon_a2d2742c41b48396b2fb921cc19845651} 
+\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}!isPlayers@{isPlayers}}
+\index{isPlayers@{isPlayers}!Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+\doxysubsubsection{\texorpdfstring{isPlayers}{isPlayers}}
+{\footnotesize\ttfamily bool Spawnables.\+Projectiles.\+Weapon.\+is\+Players}
+
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_projectiles_1_1_weapon_a208a81719298181321bbef16ec73448f}\label{class_spawnables_1_1_projectiles_1_1_weapon_a208a81719298181321bbef16ec73448f} 
+\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}!OnShootEvent@{OnShootEvent}}
+\index{OnShootEvent@{OnShootEvent}!Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+\doxysubsubsection{\texorpdfstring{OnShootEvent}{OnShootEvent}}
+{\footnotesize\ttfamily Action Spawnables.\+Projectiles.\+Weapon.\+On\+Shoot\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_spawnables_1_1_projectiles_1_1_weapon_ab842db32ed2b9b4e4cd73784ac15249b}\label{class_spawnables_1_1_projectiles_1_1_weapon_ab842db32ed2b9b4e4cd73784ac15249b} 
+\index{Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}!HasAggro@{HasAggro}}
+\index{HasAggro@{HasAggro}!Spawnables.Projectiles.Weapon@{Spawnables.Projectiles.Weapon}}
+\doxysubsubsection{\texorpdfstring{HasAggro}{HasAggro}}
+{\footnotesize\ttfamily bool Spawnables.\+Projectiles.\+Weapon.\+Has\+Aggro = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kodiky/\+Unity/\+Lunar Guardian/\+Assets/\+Scripts/\+Spawnables/\+Weapons/Weapon.\+cs\end{DoxyCompactItemize}

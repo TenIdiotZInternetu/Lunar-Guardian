@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__follow_path_8cs_source" xml:lang="en-US">
+<title>FollowPath.cs</title>
+<indexterm><primary>Scripts/MovementPatterns/FollowPath.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__follow_path_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_path_creation">PathCreation</link>;
+<anchor xml:id="__follow_path_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_path_creation_1_1_examples">PathCreation.Examples</link>;
+<anchor xml:id="__follow_path_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_spawnables">Spawnables</link>;
+<anchor xml:id="__follow_path_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__follow_path_8cs_source_1l00005"/>00005 
+<anchor xml:id="__follow_path_8cs_source_1l00006"/>00006 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_movement_patterns">MovementPatterns</link>
+<anchor xml:id="__follow_path_8cs_source_1l00007"/>00007 {
+<anchor xml:id="__follow_path_8cs_source_1l00011"/><link linkend="_class_movement_patterns_1_1_follow_path">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_movement_patterns_1_1_follow_path">FollowPath</link>&#32;:&#32;<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link>
+<anchor xml:id="__follow_path_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__follow_path_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Inspector&#32;Variables&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__follow_path_8cs_source_1l00017"/><link linkend="_class_movement_patterns_1_1_follow_path_1ac38836c583abd23c619e142bf15897cb">00017</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;PathCreator&#32;<link linkend="_class_movement_patterns_1_1_follow_path_1ac38836c583abd23c619e142bf15897cb">path</link>;
+<anchor xml:id="__follow_path_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__follow_path_8cs_source_1l00022"/><link linkend="_class_movement_patterns_1_1_follow_path_1a7f7e4724cf57d59513b39c5ecc81adc8">00022</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_follow_path_1a7f7e4724cf57d59513b39c5ecc81adc8">speed</link>&#32;=&#32;1;
+<anchor xml:id="__follow_path_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__follow_path_8cs_source_1l00027"/><link linkend="_class_movement_patterns_1_1_follow_path_1a97712bccaedef08f6d8c525bdda2f7ef">00027</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_follow_path_1a97712bccaedef08f6d8c525bdda2f7ef">acceleration</link>&#32;=&#32;0;
+<anchor xml:id="__follow_path_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__follow_path_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__follow_path_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;----------------------&#32;Public&#32;Methods&#32;----------------------&#32;*/</emphasis>
+<anchor xml:id="__follow_path_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__follow_path_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Initialize(<link linkend="_class_spawnables_1_1_entity">Entity</link>&#32;entity)&#32;{&#32;}
+<anchor xml:id="__follow_path_8cs_source_1l00033"/>00033 
+<anchor xml:id="__follow_path_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;Vector3&#32;GetNextPosition(<link linkend="_class_spawnables_1_1_entity">Entity</link>&#32;entity)
+<anchor xml:id="__follow_path_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__follow_path_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;distanceTravelled&#32;=&#32;<link linkend="_class_movement_patterns_1_1_follow_path_1a7f7e4724cf57d59513b39c5ecc81adc8">speed</link>&#32;*&#32;entity.<link linkend="_class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba">MPLifeTime</link>;
+<anchor xml:id="__follow_path_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__follow_path_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;currentSpeed&#32;=&#32;<link linkend="_class_movement_patterns_1_1_follow_path_1a7f7e4724cf57d59513b39c5ecc81adc8">speed</link>&#32;+&#32;<link linkend="_class_movement_patterns_1_1_follow_path_1a97712bccaedef08f6d8c525bdda2f7ef">acceleration</link>&#32;*&#32;entity.<link linkend="_class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba">MPLifeTime</link>;
+<anchor xml:id="__follow_path_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_follow_path_1ac38836c583abd23c619e142bf15897cb">path</link>.path.GetPointAtDistance(distanceTravelled);
+<anchor xml:id="__follow_path_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__follow_path_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__follow_path_8cs_source_1l00042"/>00042 }
+</programlisting></section>

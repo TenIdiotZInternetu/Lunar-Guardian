@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_projectiles_1_1_enemy_1_1_loot_drop" xml:lang="en-US">
+<title>Spawnables.Projectiles.Enemy.LootDrop Class Reference</title>
+<indexterm><primary>Spawnables.Projectiles.Enemy.LootDrop</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>GameObject <link linkend="_class_spawnables_1_1_projectiles_1_1_enemy_1_1_loot_drop_1a3dcd480308c11ac6ccf806da31087d41">item</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_spawnables_1_1_projectiles_1_1_enemy_1_1_loot_drop_1aeb321eaeb65a2bf817f35e4f039f9a67">dropChance</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_spawnables_1_1_projectiles_1_1_enemy_1_1_loot_drop_1a06d3d733f89201ffe41e9a0b50b70f7f">maxDrops</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__enemy_8cs_source_1l00012">12</link> of file <link linkend="__enemy_8cs_source">Enemy.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_enemy_1_1_loot_drop_1aeb321eaeb65a2bf817f35e4f039f9a67"/><section>
+    <title>dropChance</title>
+<indexterm><primary>dropChance</primary><secondary>Spawnables.Projectiles.Enemy.LootDrop</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Enemy.LootDrop</primary><secondary>dropChance</secondary></indexterm>
+<para><computeroutput>float Spawnables.Projectiles.Enemy.LootDrop.dropChance</computeroutput></para><para>
+Definition at line <link linkend="__enemy_8cs_source_1l00015">15</link> of file <link linkend="__enemy_8cs_source">Enemy.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_enemy_1_1_loot_drop_1a3dcd480308c11ac6ccf806da31087d41"/><section>
+    <title>item</title>
+<indexterm><primary>item</primary><secondary>Spawnables.Projectiles.Enemy.LootDrop</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Enemy.LootDrop</primary><secondary>item</secondary></indexterm>
+<para><computeroutput>GameObject Spawnables.Projectiles.Enemy.LootDrop.item</computeroutput></para><para>
+Definition at line <link linkend="__enemy_8cs_source_1l00014">14</link> of file <link linkend="__enemy_8cs_source">Enemy.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_enemy_1_1_loot_drop_1a06d3d733f89201ffe41e9a0b50b70f7f"/><section>
+    <title>maxDrops</title>
+<indexterm><primary>maxDrops</primary><secondary>Spawnables.Projectiles.Enemy.LootDrop</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Enemy.LootDrop</primary><secondary>maxDrops</secondary></indexterm>
+<para><computeroutput>int Spawnables.Projectiles.Enemy.LootDrop.maxDrops</computeroutput></para><para>
+Definition at line <link linkend="__enemy_8cs_source_1l00016">16</link> of file <link linkend="__enemy_8cs_source">Enemy.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/Enemy.cs</section>
+</section>

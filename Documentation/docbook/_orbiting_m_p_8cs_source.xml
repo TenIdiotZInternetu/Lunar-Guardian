@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__orbiting_m_p_8cs_source" xml:lang="en-US">
+<title>OrbitingMP.cs</title>
+<indexterm><primary>Scripts/MovementPatterns/OrbitingMP.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__orbiting_m_p_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_spawnables">Spawnables</link>;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEditor;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>Quaternion&#32;=&#32;UnityEngine.Quaternion;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>Vector3&#32;=&#32;UnityEngine.Vector3;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00006"/>00006 
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00007"/>00007 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_movement_patterns">MovementPatterns</link>
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00008"/>00008 {
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00012"/><link linkend="_class_movement_patterns_1_1_orbiting_m_p">00012</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_movement_patterns_1_1_orbiting_m_p">OrbitingMP</link>&#32;:&#32;<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link>
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Inspector&#32;Variables&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00019"/><link linkend="_class_movement_patterns_1_1_orbiting_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3">00019</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;GameObject&#32;<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3">target</link>;&#32;&#32;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00024"/><link linkend="_class_movement_patterns_1_1_orbiting_m_p_1a5050a760c11da521cd4aee6336f6529f">00024</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1a5050a760c11da521cd4aee6336f6529f">radius</link>;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00029"/><link linkend="_class_movement_patterns_1_1_orbiting_m_p_1a275dd6dafe5d4455e599ffd15feb06f8">00029</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1a275dd6dafe5d4455e599ffd15feb06f8">phase</link>;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00034"/><link linkend="_class_movement_patterns_1_1_orbiting_m_p_1ad1de9af57e9b1558e00f6c1bfb55842e">00034</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1ad1de9af57e9b1558e00f6c1bfb55842e">angularSpeed</link>;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00039"/><link linkend="_class_movement_patterns_1_1_orbiting_m_p_1a97712bccaedef08f6d8c525bdda2f7ef">00039</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1a97712bccaedef08f6d8c525bdda2f7ef">acceleration</link>;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;----------------------&#32;Public&#32;Methods&#32;----------------------&#32;*/</emphasis>
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Initialize(<link linkend="_class_spawnables_1_1_entity">Entity</link>&#32;entity)&#32;{&#32;}
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00043"/>00043 
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;Vector3&#32;GetNextPosition(<link linkend="_class_spawnables_1_1_entity">Entity</link>&#32;entity)
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Ensures&#32;that&#32;the&#32;entity&#32;despawns&#32;when&#32;the&#32;target&#32;despawns</emphasis>
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3">target</link>.gameObject.activeInHierarchy)
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_spawnables_1_1_object_pool_manager">ObjectPoolManager</link>.<link linkend="_class_spawnables_1_1_object_pool_manager_1a6bbeac8b46389ccaa0b7d2d24f805c6f">Despawn</link>(this.gameObject);
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;time&#32;=&#32;entity.<link linkend="_class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba">MPLifeTime</link>;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;center&#32;=&#32;<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3">target</link>.transform.position;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;currentSpeed&#32;=&#32;<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1ad1de9af57e9b1558e00f6c1bfb55842e">angularSpeed</link>&#32;+&#32;<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1a97712bccaedef08f6d8c525bdda2f7ef">acceleration</link>&#32;*&#32;time;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;angle&#32;=&#32;currentSpeed&#32;*&#32;time&#32;+&#32;<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1a275dd6dafe5d4455e599ffd15feb06f8">phase</link>;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;slope&#32;=&#32;Quaternion.Euler(0,&#32;0,&#32;angle)&#32;*&#32;Vector3.up&#32;*&#32;<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1a5050a760c11da521cd4aee6336f6529f">radius</link>;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00058"/>00058 
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;center&#32;+&#32;slope;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Editor-only&#32;Callbacks&#32;------------------&#32;*/</emphasis>
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00064"/>00064 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#if&#32;UNITY_EDITOR</emphasis>
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Draws&#32;the&#32;shape&#32;of&#32;the&#32;orbit&#32;in&#32;the&#32;editor</emphasis>
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDrawGizmosSelected()
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Handles.color&#32;=&#32;Color.green;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;center&#32;=&#32;<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3">target</link>.transform.position;
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Handles.DrawWireDisc(center,&#32;Vector3.forward,&#32;<link linkend="_class_movement_patterns_1_1_orbiting_m_p_1a5050a760c11da521cd4aee6336f6529f">radius</link>);
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00072"/>00072 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endif</emphasis>
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__orbiting_m_p_8cs_source_1l00074"/>00074 }
+</programlisting></section>

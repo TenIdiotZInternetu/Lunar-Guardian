@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info" xml:lang="en-US">
+<title>PathCreationEditor.ScreenSpacePolyLine.MouseInfo Struct Reference</title>
+<indexterm><primary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a6bd55308c34d4d8a11ac0291d93d764b">MouseInfo</link> (float mouseDstToLine, Vector3 closestWorldPointToMouse, float distanceAlongPathWorld, float timeOnPath, float timeOnBezierSegment, int closestSegmentIndex)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>readonly float <link linkend="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a70183da6668a6e411296b0f2fa3a7e04">mouseDstToLine</link></para>
+</listitem>
+            <listitem><para>readonly Vector3 <link linkend="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1ae649780cef53712b715c065a210ca942">closestWorldPointToMouse</link></para>
+</listitem>
+            <listitem><para>readonly float <link linkend="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a55226eae68bb8ebad3daf10d3cfe27c0">distanceAlongPathWorld</link></para>
+</listitem>
+            <listitem><para>readonly float <link linkend="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a6316757ae997e6be650f92d936f33982">timeOnPath</link></para>
+</listitem>
+            <listitem><para>readonly float <link linkend="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a5e2d3a42738f0a9b8257c9ab4b00d3c7">timeOnBezierSegment</link></para>
+</listitem>
+            <listitem><para>readonly int <link linkend="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a66aade224596eaa197012834009c0542">closestSegmentIndex</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__screen_space_poly_line_8cs_source_1l00194">194</link> of file <link linkend="__screen_space_poly_line_8cs_source">ScreenSpacePolyLine.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a6bd55308c34d4d8a11ac0291d93d764b"/><section>
+    <title>MouseInfo()</title>
+<indexterm><primary>MouseInfo</primary><secondary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</secondary></indexterm>
+<indexterm><primary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</primary><secondary>MouseInfo</secondary></indexterm>
+<para><computeroutput>PathCreationEditor.ScreenSpacePolyLine.MouseInfo.MouseInfo (float mouseDstToLine, Vector3 closestWorldPointToMouse, float distanceAlongPathWorld, float timeOnPath, float timeOnBezierSegment, int closestSegmentIndex)</computeroutput></para><para>
+Definition at line <link linkend="__screen_space_poly_line_8cs_source_1l00204">204</link> of file <link linkend="__screen_space_poly_line_8cs_source">ScreenSpacePolyLine.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a66aade224596eaa197012834009c0542"/><section>
+    <title>closestSegmentIndex</title>
+<indexterm><primary>closestSegmentIndex</primary><secondary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</secondary></indexterm>
+<indexterm><primary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</primary><secondary>closestSegmentIndex</secondary></indexterm>
+<para><computeroutput>readonly int PathCreationEditor.ScreenSpacePolyLine.MouseInfo.closestSegmentIndex</computeroutput></para><para>
+Definition at line <link linkend="__screen_space_poly_line_8cs_source_1l00201">201</link> of file <link linkend="__screen_space_poly_line_8cs_source">ScreenSpacePolyLine.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1ae649780cef53712b715c065a210ca942"/><section>
+    <title>closestWorldPointToMouse</title>
+<indexterm><primary>closestWorldPointToMouse</primary><secondary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</secondary></indexterm>
+<indexterm><primary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</primary><secondary>closestWorldPointToMouse</secondary></indexterm>
+<para><computeroutput>readonly Vector3 PathCreationEditor.ScreenSpacePolyLine.MouseInfo.closestWorldPointToMouse</computeroutput></para><para>
+Definition at line <link linkend="__screen_space_poly_line_8cs_source_1l00197">197</link> of file <link linkend="__screen_space_poly_line_8cs_source">ScreenSpacePolyLine.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a55226eae68bb8ebad3daf10d3cfe27c0"/><section>
+    <title>distanceAlongPathWorld</title>
+<indexterm><primary>distanceAlongPathWorld</primary><secondary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</secondary></indexterm>
+<indexterm><primary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</primary><secondary>distanceAlongPathWorld</secondary></indexterm>
+<para><computeroutput>readonly float PathCreationEditor.ScreenSpacePolyLine.MouseInfo.distanceAlongPathWorld</computeroutput></para><para>
+Definition at line <link linkend="__screen_space_poly_line_8cs_source_1l00198">198</link> of file <link linkend="__screen_space_poly_line_8cs_source">ScreenSpacePolyLine.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a70183da6668a6e411296b0f2fa3a7e04"/><section>
+    <title>mouseDstToLine</title>
+<indexterm><primary>mouseDstToLine</primary><secondary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</secondary></indexterm>
+<indexterm><primary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</primary><secondary>mouseDstToLine</secondary></indexterm>
+<para><computeroutput>readonly float PathCreationEditor.ScreenSpacePolyLine.MouseInfo.mouseDstToLine</computeroutput></para><para>
+Definition at line <link linkend="__screen_space_poly_line_8cs_source_1l00196">196</link> of file <link linkend="__screen_space_poly_line_8cs_source">ScreenSpacePolyLine.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a5e2d3a42738f0a9b8257c9ab4b00d3c7"/><section>
+    <title>timeOnBezierSegment</title>
+<indexterm><primary>timeOnBezierSegment</primary><secondary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</secondary></indexterm>
+<indexterm><primary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</primary><secondary>timeOnBezierSegment</secondary></indexterm>
+<para><computeroutput>readonly float PathCreationEditor.ScreenSpacePolyLine.MouseInfo.timeOnBezierSegment</computeroutput></para><para>
+Definition at line <link linkend="__screen_space_poly_line_8cs_source_1l00200">200</link> of file <link linkend="__screen_space_poly_line_8cs_source">ScreenSpacePolyLine.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a6316757ae997e6be650f92d936f33982"/><section>
+    <title>timeOnPath</title>
+<indexterm><primary>timeOnPath</primary><secondary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</secondary></indexterm>
+<indexterm><primary>PathCreationEditor.ScreenSpacePolyLine.MouseInfo</primary><secondary>timeOnPath</secondary></indexterm>
+<para><computeroutput>readonly float PathCreationEditor.ScreenSpacePolyLine.MouseInfo.timeOnPath</computeroutput></para><para>
+Definition at line <link linkend="__screen_space_poly_line_8cs_source_1l00199">199</link> of file <link linkend="__screen_space_poly_line_8cs_source">ScreenSpacePolyLine.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs</section>
+</section>

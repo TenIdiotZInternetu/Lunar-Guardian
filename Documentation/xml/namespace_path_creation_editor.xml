@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_path_creation_editor" kind="namespace" language="C#">
+    <compoundname>PathCreationEditor</compoundname>
+    <innerclass refid="class_path_creation_editor_1_1_mouse_utility" prot="public">PathCreationEditor::MouseUtility</innerclass>
+    <innerclass refid="class_path_creation_editor_1_1_path_editor" prot="public">PathCreationEditor::PathEditor</innerclass>
+    <innerclass refid="class_path_creation_editor_1_1_path_handle" prot="public">PathCreationEditor::PathHandle</innerclass>
+    <innerclass refid="class_path_creation_editor_1_1_screen_space_poly_line" prot="public">PathCreationEditor::ScreenSpacePolyLine</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Editor/Helper/MouseUtility.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

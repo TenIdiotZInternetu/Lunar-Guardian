@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_7fbb1baf6faa87cccabc0cd605e2052a" kind="dir">
+    <compoundname>Kodiky/Unity/Lunar Guardian/Assets/Tools</compoundname>
+    <innerdir refid="dir_b9af52cbf3a3a3c83daef5fe9b4a6c10">Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator</innerdir>
+    <innerfile refid="_component_utils_8cs">ComponentUtils.cs</innerfile>
+    <innerfile refid="_custom_events_8cs">CustomEvents.cs</innerfile>
+    <innerfile refid="_scene_reference_8cs">SceneReference.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Tools/"/>
+  </compounddef>
+</doxygen>

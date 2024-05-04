@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_movement_patterns_1_1_follow_path" xml:lang="en-US">
+<title>FollowPath Class Reference</title>
+<indexterm><primary>FollowPath</primary></indexterm>
+<para>
+
+<para>Utilizes PathCreator tool created by Sebastian Lague. Traces a path and moves along it. </para>
+ 
+</para>
+<para>Inheritance diagram for FollowPath:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_patterns_1_1_follow_path.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_movement_patterns_1_1_follow_path_1ac38836c583abd23c619e142bf15897cb"/>PathCreator <emphasis role="strong">path</emphasis></para>
+
+<para>Path to move along. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_movement_patterns_1_1_follow_path_1a7f7e4724cf57d59513b39c5ecc81adc8"/>float <emphasis role="strong">speed</emphasis> = 1</para>
+
+<para>Distance travelled in one second. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_movement_patterns_1_1_follow_path_1a97712bccaedef08f6d8c525bdda2f7ef"/>float <emphasis role="strong">acceleration</emphasis> = 0</para>
+
+<para>Rate of change of speed. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Member Functions inherited from <link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_movement_patterns_1_1_movement_pattern_1a04f0e6cf979d3b51e259545b3d33933d">Initialize</link> (<link linkend="_class_spawnables_1_1_entity">Entity</link> entity)</para>
+
+<para>Sets parameters of the movement pattern based on the entity&apos;s state. </para>
+</listitem>
+            <listitem><para>Vector3 <link linkend="_class_movement_patterns_1_1_movement_pattern_1a784a22d17e4193114212035e8eb6ac0f">GetNextPosition</link> (<link linkend="_class_spawnables_1_1_entity">Entity</link> entity)</para>
+
+<para>Calculates the position of the entity in the next frame. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__follow_path_8cs_source_1l00011">11</link> of file <link linkend="__follow_path_8cs_source">FollowPath.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/MovementPatterns/FollowPath.cs</section>
+</section>

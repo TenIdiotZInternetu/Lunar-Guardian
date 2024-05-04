@@ -1,0 +1,21 @@
+digraph "Spawnables.GameOverState"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="Spawnables.GameOverState",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [id="edge15_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="GameState",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_game_states_1_1_game_state.html",tooltip="A state governed by the GameManager."];
+  Node3 -> Node2 [id="edge16_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="MonoBehaviour",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [id="edge17_Node000001_Node000004",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" gameOverScreen",fontcolor="grey" ];
+  Node4 [id="Node000004",label="UI.Menus.GameOverScreen",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_u_i_1_1_menus_1_1_game_over_screen.html",tooltip=" "];
+  Node5 -> Node4 [id="edge18_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="MenuScreen",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",URL="$class_u_i_1_1_menus_1_1_menu_screen.html",tooltip=" "];
+  Node3 -> Node5 [id="edge19_Node000005_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 -> Node4 [id="edge20_Node000004_Node000006",dir="back",color="darkorchid3",style="dashed",tooltip=" ",label=" mainMenuScene",fontcolor="grey" ];
+  Node6 [id="Node000006",label="Tymski.SceneReference",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_tymski_1_1_scene_reference.html",tooltip="A wrapper that provides the means to safely serialize Scene Asset References."];
+  Node7 -> Node6 [id="edge21_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="ISerializationCallbackReceiver",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

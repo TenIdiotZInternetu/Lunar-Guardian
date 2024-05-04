@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_game_states_1_1_game_state" kind="class" language="C#" prot="public" abstract="yes">
+    <compoundname>GameStates::GameState</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <derivedcompoundref refid="class_spawnables_1_1_game_over_state" prot="public" virt="non-virtual">Spawnables.GameOverState</derivedcompoundref>
+    <derivedcompoundref refid="class_spawnables_1_1_paused_state" prot="public" virt="non-virtual">Spawnables.PausedState</derivedcompoundref>
+    <derivedcompoundref refid="class_spawnables_1_1_playing_state" prot="public" virt="non-virtual">Spawnables.PlayingState</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_states_1_1_game_state_1a26e38c77aa2b029e411421e10ca81e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameStates.GameState.ChangeToThisState</definition>
+        <argsstring>()</argsstring>
+        <name>ChangeToThisState</name>
+        <qualifiedname>GameStates.GameState.ChangeToThisState</qualifiedname>
+        <briefdescription>
+<para>Takes actions needed to define this state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameState.cs" line="15" column="30"/>
+        <referencedby refid="class_spawnables_1_1_game_manager_1aa14f4da9423e8c4e35eae1b54da0b9f1" compoundref="_game_manager_8cs" startline="64" endline="71">Spawnables.GameManager.ChangeState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_states_1_1_game_state_1af986bfbbe19e8336fd98573abf1bc933" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameStates.GameState.LeaveThisState</definition>
+        <argsstring>()</argsstring>
+        <name>LeaveThisState</name>
+        <qualifiedname>GameStates.GameState.LeaveThisState</qualifiedname>
+        <briefdescription>
+<para>Undoes changes made by this state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameState.cs" line="20" column="30"/>
+        <referencedby refid="class_spawnables_1_1_game_manager_1aa14f4da9423e8c4e35eae1b54da0b9f1" compoundref="_game_manager_8cs" startline="64" endline="71">Spawnables.GameManager.ChangeState</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A state governed by the GameManager. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GameStates.GameState</label>
+        <link refid="class_game_states_1_1_game_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="3">
+        <label>Spawnables.GameOverState</label>
+        <link refid="class_spawnables_1_1_game_over_state"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Spawnables.PausedState</label>
+        <link refid="class_spawnables_1_1_paused_state"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Spawnables.PlayingState</label>
+        <link refid="class_spawnables_1_1_playing_state"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GameStates.GameState</label>
+        <link refid="class_game_states_1_1_game_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameState.cs" line="8" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameState.cs" bodystart="9" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_game_states_1_1_game_state_1a26e38c77aa2b029e411421e10ca81e8a" prot="public" virt="non-virtual"><scope>GameStates::GameState</scope><name>ChangeToThisState</name></member>
+      <member refid="class_game_states_1_1_game_state_1af986bfbbe19e8336fd98573abf1bc933" prot="public" virt="non-virtual"><scope>GameStates::GameState</scope><name>LeaveThisState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

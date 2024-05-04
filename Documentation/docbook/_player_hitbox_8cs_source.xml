@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__player_hitbox_8cs_source" xml:lang="en-US">
+<title>PlayerHitbox.cs</title>
+<indexterm><primary>Scripts/PlayerScripts/PlayerHitbox.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__player_hitbox_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System;
+<anchor xml:id="__player_hitbox_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_spawnables">Spawnables</link>;
+<anchor xml:id="__player_hitbox_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_spawnables_1_1_enemy_scripts">Spawnables.EnemyScripts</link>;
+<anchor xml:id="__player_hitbox_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_tools">Tools</link>;
+<anchor xml:id="__player_hitbox_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__player_hitbox_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.Events;
+<anchor xml:id="__player_hitbox_8cs_source_1l00007"/>00007 
+<anchor xml:id="__player_hitbox_8cs_source_1l00008"/>00008 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_player_scripts">PlayerScripts</link>
+<anchor xml:id="__player_hitbox_8cs_source_1l00009"/>00009 {
+<anchor xml:id="__player_hitbox_8cs_source_1l00013"/><link linkend="_class_player_scripts_1_1_player_hitbox">00013</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_player_scripts_1_1_player_hitbox">PlayerHitbox</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__player_hitbox_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_hitbox_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*-----------------&#32;Public&#32;Fields&#32;-----------------*/</emphasis>
+<anchor xml:id="__player_hitbox_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00020"/><link linkend="_class_player_scripts_1_1_player_hitbox_1ad8698c75e7c1602cb0b8b51275dc73f7">00020</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_hitbox_1ad8698c75e7c1602cb0b8b51275dc73f7">invincibilityTime</link>;
+<anchor xml:id="__player_hitbox_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00025"/><link linkend="_class_player_scripts_1_1_player_hitbox_1abd9abcb1ce3bcdd0d9c99534620685bc">00025</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_tools_1_1_game_object_event">GameObjectEvent</link>&#32;<link linkend="_class_player_scripts_1_1_player_hitbox_1abd9abcb1ce3bcdd0d9c99534620685bc">onTakesHitEvent</link>;
+<anchor xml:id="__player_hitbox_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*-----------------&#32;Private&#32;Fields&#32;-----------------*/</emphasis>
+<anchor xml:id="__player_hitbox_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;_inBombState;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Whether&#32;the&#32;player&#32;has&#32;deployed&#32;a&#32;bomb</emphasis>
+<anchor xml:id="__player_hitbox_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;_timeOfLastHit;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Exact&#32;time&#32;in&#32;seconds</emphasis>
+<anchor xml:id="__player_hitbox_8cs_source_1l00031"/>00031 
+<anchor xml:id="__player_hitbox_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*-----------------&#32;Unity&#32;Callbacks&#32;-----------------*/</emphasis>
+<anchor xml:id="__player_hitbox_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Checks&#32;whether&#32;the&#32;player&#32;has&#32;been&#32;hit&#32;by&#32;an&#32;enemy&#32;object,&#32;and&#32;despawns&#32;it&#32;or&#32;damages&#32;it</emphasis>
+<anchor xml:id="__player_hitbox_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnTriggerEnter2D(Collider2D&#32;other)
+<anchor xml:id="__player_hitbox_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_hitbox_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(IsInvincible())&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__player_hitbox_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GameObject&#32;collidedObject&#32;=&#32;other.gameObject;
+<anchor xml:id="__player_hitbox_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;isProjectile&#32;=&#32;collidedObject.CompareTag(<emphasis role="stringliteral">&quot;EnemyProjectile&quot;</emphasis>);
+<anchor xml:id="__player_hitbox_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;isEnemy&#32;=&#32;collidedObject.CompareTag(<emphasis role="stringliteral">&quot;Enemy&quot;</emphasis>);
+<anchor xml:id="__player_hitbox_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!(isProjectile&#32;||&#32;isEnemy))&#32;<emphasis role="keywordflow">return</emphasis>;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_hitbox_1ae77a2b3d16e04654d819c8db25cc6055">AttemptHit</link>(collidedObject);
+<anchor xml:id="__player_hitbox_8cs_source_1l00046"/>00046 
+<anchor xml:id="__player_hitbox_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isProjectile)
+<anchor xml:id="__player_hitbox_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_hitbox_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_spawnables_1_1_object_pool_manager">ObjectPoolManager</link>.<link linkend="_class_spawnables_1_1_object_pool_manager_1a6bbeac8b46389ccaa0b7d2d24f805c6f">Despawn</link>(collidedObject);
+<anchor xml:id="__player_hitbox_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_hitbox_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isEnemy)
+<anchor xml:id="__player_hitbox_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_hitbox_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;collidedObject.GetComponent&lt;EnemyController&gt;().TakeDamage(50,&#32;this.gameObject);
+<anchor xml:id="__player_hitbox_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_hitbox_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_hitbox_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*-----------------&#32;Public&#32;Methods&#32;-----------------*/</emphasis>
+<anchor xml:id="__player_hitbox_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00064"/><link linkend="_class_player_scripts_1_1_player_hitbox_1ae77a2b3d16e04654d819c8db25cc6055">00064</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_hitbox_1ae77a2b3d16e04654d819c8db25cc6055">AttemptHit</link>(GameObject&#32;damageSource)
+<anchor xml:id="__player_hitbox_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_hitbox_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(IsInvincible())&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__player_hitbox_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TakeDamage(damageSource);
+<anchor xml:id="__player_hitbox_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_hitbox_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00074"/><link linkend="_class_player_scripts_1_1_player_hitbox_1a542f630d26b87b7485284fa8e1156389">00074</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_hitbox_1a542f630d26b87b7485284fa8e1156389">ChangeBombState</link>(<emphasis role="keywordtype">bool</emphasis>&#32;state)
+<anchor xml:id="__player_hitbox_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_hitbox_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_inBombState&#32;=&#32;state;
+<anchor xml:id="__player_hitbox_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_hitbox_8cs_source_1l00078"/>00078 
+<anchor xml:id="__player_hitbox_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*-----------------&#32;Private&#32;Methods&#32;-----------------*/</emphasis>
+<anchor xml:id="__player_hitbox_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Checks&#32;if&#32;the&#32;player&#32;can&#32;be&#32;damaged</emphasis>
+<anchor xml:id="__player_hitbox_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;IsInvincible()
+<anchor xml:id="__player_hitbox_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_hitbox_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;_inBombState&#32;||&#32;Time.time&#32;-&#32;_timeOfLastHit&#32;&lt;=&#32;<link linkend="_class_player_scripts_1_1_player_hitbox_1ad8698c75e7c1602cb0b8b51275dc73f7">invincibilityTime</link>;
+<anchor xml:id="__player_hitbox_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_hitbox_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00088"/>00088 
+<anchor xml:id="__player_hitbox_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Decreases&#32;player&apos;s&#32;health&#32;and&#32;resets&#32;their&#32;score&#32;multiplier</emphasis>
+<anchor xml:id="__player_hitbox_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;TakeDamage(GameObject&#32;damageSource)
+<anchor xml:id="__player_hitbox_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_hitbox_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PlayerStatus.Instance.ResetScoreMultiplier();
+<anchor xml:id="__player_hitbox_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PlayerStatus.Instance.ChangeHealth(-1);
+<anchor xml:id="__player_hitbox_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_hitbox_1abd9abcb1ce3bcdd0d9c99534620685bc">onTakesHitEvent</link>?.Invoke(damageSource);
+<anchor xml:id="__player_hitbox_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_timeOfLastHit&#32;=&#32;Time.time;
+<anchor xml:id="__player_hitbox_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_hitbox_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_hitbox_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_hitbox_8cs_source_1l00100"/>00100 }
+</programlisting></section>

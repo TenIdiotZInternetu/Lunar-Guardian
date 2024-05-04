@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_object_pool_manager" xml:lang="en-US">
+<title>ObjectPoolManager Class Reference</title>
+<indexterm><primary>ObjectPoolManager</primary></indexterm>
+Inheritance diagram for ObjectPoolManager:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_object_pool_manager__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for ObjectPoolManager:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_object_pool_manager__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static GameObject <link linkend="_class_object_pool_manager_1ab2ab065aca74600e0cce42ee92f677cd">Spawn&lt; T &gt;</link> (GameObject prefab, Vector3 position, Quaternion rotation)</para>
+</listitem>
+            <listitem><para>static GameObject <link linkend="_class_object_pool_manager_1a37d26cc103c48c68b4f4e3070d5f930e">Despawn</link> (GameObject obj)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>List&lt; <link linkend="_class_object_pool">ObjectPool</link> &gt; <link linkend="_class_object_pool_manager_1a4322a41de00a69895bc3dacc6cc1b3c9">objectPools</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_object_pool_manager">ObjectPoolManager</link> <link linkend="_class_object_pool_manager_1a27bec5d29ebf31936a3b026a13a86e12">Instance</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__object_pool_manager_8cs_source_1l00008">8</link> of file <link linkend="__object_pool_manager_8cs_source">ObjectPoolManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_object_pool_manager_1a37d26cc103c48c68b4f4e3070d5f930e"/><section>
+    <title>Despawn()</title>
+<indexterm><primary>Despawn</primary><secondary>ObjectPoolManager</secondary></indexterm>
+<indexterm><primary>ObjectPoolManager</primary><secondary>Despawn</secondary></indexterm>
+<para><computeroutput>static GameObject ObjectPoolManager.Despawn (GameObject obj)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__object_pool_manager_8cs_source_1l00059">59</link> of file <link linkend="__object_pool_manager_8cs_source">ObjectPoolManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_object_pool_manager_1ab2ab065aca74600e0cce42ee92f677cd"/><section>
+    <title>Spawn&lt; T &gt;()</title>
+<indexterm><primary>Spawn&lt; T &gt;</primary><secondary>ObjectPoolManager</secondary></indexterm>
+<indexterm><primary>ObjectPoolManager</primary><secondary>Spawn&lt; T &gt;</secondary></indexterm>
+<para><computeroutput>static GameObject ObjectPoolManager.Spawn&lt; T &gt; (GameObject prefab, Vector3 position, Quaternion rotation)<computeroutput>[static]</computeroutput></computeroutput></para><simplesect><title>Type Constraints</title>
+<para><emphasis role="strong">T:Entity</emphasis></para>
+</simplesect>
+<para>
+Definition at line <link linkend="__object_pool_manager_8cs_source_1l00030">30</link> of file <link linkend="__object_pool_manager_8cs_source">ObjectPoolManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_object_pool_manager_1a27bec5d29ebf31936a3b026a13a86e12"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>ObjectPoolManager</secondary></indexterm>
+<indexterm><primary>ObjectPoolManager</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_object_pool_manager">ObjectPoolManager</link> ObjectPoolManager.Instance<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__object_pool_manager_8cs_source_1l00010">10</link> of file <link linkend="__object_pool_manager_8cs_source">ObjectPoolManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_object_pool_manager_1a4322a41de00a69895bc3dacc6cc1b3c9"/><section>
+    <title>objectPools</title>
+<indexterm><primary>objectPools</primary><secondary>ObjectPoolManager</secondary></indexterm>
+<indexterm><primary>ObjectPoolManager</primary><secondary>objectPools</secondary></indexterm>
+<para><computeroutput>List&lt;<link linkend="_class_object_pool">ObjectPool</link>&gt; ObjectPoolManager.objectPools</computeroutput></para><para>
+Definition at line <link linkend="__object_pool_manager_8cs_source_1l00013">13</link> of file <link linkend="__object_pool_manager_8cs_source">ObjectPoolManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPoolManager.cs</section>
+</section>

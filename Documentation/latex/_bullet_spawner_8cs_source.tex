@@ -1,0 +1,48 @@
+\doxysection{Bullet\+Spawner.\+cs}
+\hypertarget{_bullet_spawner_8cs_source}{}\label{_bullet_spawner_8cs_source}\index{Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs@{Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_spawnables_1_1_weapons}{Spawnables.Weapons}}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00008}\mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_bullet_spawner}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_bullet_spawner}{BulletSpawner}}\ :\ MonoBehaviour,\ \mbox{\hyperlink{interface_spawnables_1_1_weapons_1_1_i_shootable}{IShootable}}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Constant\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ GIZMO\_RADIUS\ =\ 0.05f;}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00019}\mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_bullet_spawner_ac75394cf2122bc1c1dc73f2f02d99f8d}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_bullet_spawner_ac75394cf2122bc1c1dc73f2f02d99f8d}{projectile}};}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Transform\ of\ the\ spawner}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Transform\ \_thisTransform;}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Unity\ Callbacks\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Awake()}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \_thisTransform\ =\ GetComponent<Transform>();}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00038}\mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_bullet_spawner_a26a2e3c2d07dea6a2fd1d38eac284ee6}{00038}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_bullet_spawner_a26a2e3c2d07dea6a2fd1d38eac284ee6}{OnShoot}}()}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_spawnables_1_1_object_pool_manager}{ObjectPoolManager}}.Spawn<\mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_projectile}{Projectile}}>(\mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_bullet_spawner_ac75394cf2122bc1c1dc73f2f02d99f8d}{projectile}},\ \_thisTransform.position,\ \_thisTransform.rotation);}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDrawGizmos()}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.color\ =\ Color.cyan;}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.DrawWireSphere(transform.position,\ GIZMO\_RADIUS);}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bullet_spawner_8cs_source_l00051}00051\ \}}
+
+\end{DoxyCode}

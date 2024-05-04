@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_custom_events_8cs" kind="file" language="C#">
+    <compoundname>CustomEvents.cs</compoundname>
+    <innerclass refid="class_tools_1_1_game_object_event" prot="public">Tools::GameObjectEvent</innerclass>
+    <innerclass refid="class_tools_1_1_game_state_event" prot="public">Tools::GameStateEvent</innerclass>
+    <innernamespace refid="namespace_tools">Tools</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">System;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_game_manager" kindref="compound">GameManager</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine.Events;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_tools" kindref="compound">Tools</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="class_tools_1_1_game_object_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>[Serializable]<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_tools_1_1_game_object_event" kindref="compound">GameObjectEvent</ref><sp/>:<sp/>UnityEvent&lt;GameObject&gt;<sp/>{}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16" refid="class_tools_1_1_game_state_event" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/>[Serializable]<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_tools_1_1_game_state_event" kindref="compound">GameStateEvent</ref><sp/>:<sp/>UnityEvent&lt;GameState&gt;<sp/>{}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Tools/CustomEvents.cs"/>
+  </compounddef>
+</doxygen>

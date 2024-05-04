@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_u_i_1_1_menus_1_1_main_menu" xml:lang="en-US">
+<title>UI.Menus.MainMenu Class Reference</title>
+<indexterm><primary>UI.Menus.MainMenu</primary></indexterm>
+Inheritance diagram for UI.Menus.MainMenu:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_u_i_1_1_menus_1_1_main_menu__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for UI.Menus.MainMenu:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_u_i_1_1_menus_1_1_main_menu__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_u_i_1_1_menus_1_1_main_menu_1ad2b3dcfed79468cf59771c7987a53926">Start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_u_i_1_1_menus_1_1_main_menu_1a3ad894020f997c8e6d781a248b7a3f95">StartGame</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_u_i_1_1_menus_1_1_main_menu_1ab567f1eab74824644bdc5a06f3f9c6b7">GoToCredits</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_u_i_1_1_menus_1_1_main_menu_1ae0aeb448a95eaa9fae96218108fa39db">GoToLeaderboard</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_u_i_1_1_menus_1_1_main_menu_1a1158aa86b1ca126501d542225a17c5fa">QuitGame</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_u_i_1_1_menus_1_1_menu_screen">UI.Menus.MenuScreen</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_u_i_1_1_menus_1_1_menu_screen_1ac5ffcac8fe17399dafa228a2470f48f7">OpenMenu</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_u_i_1_1_menus_1_1_menu_screen_1a9af42083fb862f96404a9fd0336694d9">CloseMenu</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_tymski_1_1_scene_reference">SceneReference</link> <link linkend="_class_u_i_1_1_menus_1_1_main_menu_1a941fafde1e6329cff471d15d5169dfdc">level1</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_u_i_1_1_menus_1_1_credits_screen">CreditsScreen</link> <link linkend="_class_u_i_1_1_menus_1_1_main_menu_1a1e29388c03353e0c02199cd6eff12b71">creditsScreen</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_u_i_1_1_menus_1_1_leaderboard">Leaderboard</link> <link linkend="_class_u_i_1_1_menus_1_1_main_menu_1a0be645868707e641ab31aed02c436408">leaderboard</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_class_u_i_1_1_menus_1_1_menu_screen">UI.Menus.MenuScreen</link>        <itemizedlist>
+            <listitem><para>float <link linkend="_class_u_i_1_1_menus_1_1_menu_screen_1a37f8520fe6fa0ff7966b4067d2c329a4">onCloseDelay</link> = 0.3f</para>
+</listitem>
+            <listitem><para>UnityEvent <link linkend="_class_u_i_1_1_menus_1_1_menu_screen_1af1eda76a903bf4f24a9e7e9ed62be8a7">onLeftMenu</link></para>
+</listitem>
+            <listitem><para>UnityEvent <link linkend="_class_u_i_1_1_menus_1_1_menu_screen_1a7ddcd57df93c35d4d24addeac1230ab3">onOpenedMenu</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__main_menu_8cs_source_1l00009">9</link> of file <link linkend="__main_menu_8cs_source">MainMenu.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_main_menu_1ab567f1eab74824644bdc5a06f3f9c6b7"/><section>
+    <title>GoToCredits()</title>
+<indexterm><primary>GoToCredits</primary><secondary>UI.Menus.MainMenu</secondary></indexterm>
+<indexterm><primary>UI.Menus.MainMenu</primary><secondary>GoToCredits</secondary></indexterm>
+<para><computeroutput>void UI.Menus.MainMenu.GoToCredits ( )</computeroutput></para><para>
+Definition at line <link linkend="__main_menu_8cs_source_1l00026">26</link> of file <link linkend="__main_menu_8cs_source">MainMenu.cs</link>.</para>
+</section>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_main_menu_1ae0aeb448a95eaa9fae96218108fa39db"/><section>
+    <title>GoToLeaderboard()</title>
+<indexterm><primary>GoToLeaderboard</primary><secondary>UI.Menus.MainMenu</secondary></indexterm>
+<indexterm><primary>UI.Menus.MainMenu</primary><secondary>GoToLeaderboard</secondary></indexterm>
+<para><computeroutput>void UI.Menus.MainMenu.GoToLeaderboard ( )</computeroutput></para><para>
+Definition at line <link linkend="__main_menu_8cs_source_1l00032">32</link> of file <link linkend="__main_menu_8cs_source">MainMenu.cs</link>.</para>
+</section>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_main_menu_1a1158aa86b1ca126501d542225a17c5fa"/><section>
+    <title>QuitGame()</title>
+<indexterm><primary>QuitGame</primary><secondary>UI.Menus.MainMenu</secondary></indexterm>
+<indexterm><primary>UI.Menus.MainMenu</primary><secondary>QuitGame</secondary></indexterm>
+<para><computeroutput>void UI.Menus.MainMenu.QuitGame ( )</computeroutput></para><para>
+Definition at line <link linkend="__main_menu_8cs_source_1l00038">38</link> of file <link linkend="__main_menu_8cs_source">MainMenu.cs</link>.</para>
+</section>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_main_menu_1ad2b3dcfed79468cf59771c7987a53926"/><section>
+    <title>Start()</title>
+<indexterm><primary>Start</primary><secondary>UI.Menus.MainMenu</secondary></indexterm>
+<indexterm><primary>UI.Menus.MainMenu</primary><secondary>Start</secondary></indexterm>
+<para><computeroutput>void UI.Menus.MainMenu.Start ( )</computeroutput></para><para>
+Definition at line <link linkend="__main_menu_8cs_source_1l00015">15</link> of file <link linkend="__main_menu_8cs_source">MainMenu.cs</link>.</para>
+</section>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_main_menu_1a3ad894020f997c8e6d781a248b7a3f95"/><section>
+    <title>StartGame()</title>
+<indexterm><primary>StartGame</primary><secondary>UI.Menus.MainMenu</secondary></indexterm>
+<indexterm><primary>UI.Menus.MainMenu</primary><secondary>StartGame</secondary></indexterm>
+<para><computeroutput>void UI.Menus.MainMenu.StartGame ( )</computeroutput></para><para>
+Definition at line <link linkend="__main_menu_8cs_source_1l00021">21</link> of file <link linkend="__main_menu_8cs_source">MainMenu.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_main_menu_1a1e29388c03353e0c02199cd6eff12b71"/><section>
+    <title>creditsScreen</title>
+<indexterm><primary>creditsScreen</primary><secondary>UI.Menus.MainMenu</secondary></indexterm>
+<indexterm><primary>UI.Menus.MainMenu</primary><secondary>creditsScreen</secondary></indexterm>
+<para><computeroutput><link linkend="_class_u_i_1_1_menus_1_1_credits_screen">CreditsScreen</link> UI.Menus.MainMenu.creditsScreen</computeroutput></para><para>
+Definition at line <link linkend="__main_menu_8cs_source_1l00012">12</link> of file <link linkend="__main_menu_8cs_source">MainMenu.cs</link>.</para>
+</section>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_main_menu_1a0be645868707e641ab31aed02c436408"/><section>
+    <title>leaderboard</title>
+<indexterm><primary>leaderboard</primary><secondary>UI.Menus.MainMenu</secondary></indexterm>
+<indexterm><primary>UI.Menus.MainMenu</primary><secondary>leaderboard</secondary></indexterm>
+<para><computeroutput><link linkend="_class_u_i_1_1_menus_1_1_leaderboard">Leaderboard</link> UI.Menus.MainMenu.leaderboard</computeroutput></para><para>
+Definition at line <link linkend="__main_menu_8cs_source_1l00013">13</link> of file <link linkend="__main_menu_8cs_source">MainMenu.cs</link>.</para>
+</section>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_main_menu_1a941fafde1e6329cff471d15d5169dfdc"/><section>
+    <title>level1</title>
+<indexterm><primary>level1</primary><secondary>UI.Menus.MainMenu</secondary></indexterm>
+<indexterm><primary>UI.Menus.MainMenu</primary><secondary>level1</secondary></indexterm>
+<para><computeroutput><link linkend="_class_tymski_1_1_scene_reference">SceneReference</link> UI.Menus.MainMenu.level1</computeroutput></para><para>
+Definition at line <link linkend="__main_menu_8cs_source_1l00011">11</link> of file <link linkend="__main_menu_8cs_source">MainMenu.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/UI/Menus/MainMenu.cs</section>
+</section>

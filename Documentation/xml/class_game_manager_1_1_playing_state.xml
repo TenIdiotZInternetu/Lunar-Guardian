@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_game_manager_1_1_playing_state" kind="class" language="C#" prot="public">
+    <compoundname>GameManager::PlayingState</compoundname>
+    <basecompoundref refid="class_game_manager_1_1_game_state" prot="public" virt="non-virtual">GameState</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_game_manager_1_1_playing_state_1ac45036e3b51df182b64a37c7df4f7558" prot="public" static="no" mutable="no">
+        <type><ref refid="class_game_manager_1_1_paused_state" kindref="compound">PausedState</ref></type>
+        <definition>PausedState pausedState</definition>
+        <argsstring></argsstring>
+        <name>pausedState</name>
+        <qualifiedname>GameManager.PlayingState.pausedState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PlayingState.cs" line="14" column="28" bodyfile="Scripts/GameManager/States/PlayingState.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_manager_1_1_playing_state_1ad487b78af2c27a8e7d0dc0016f586461" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ChangeToThisState</definition>
+        <argsstring>()</argsstring>
+        <name>ChangeToThisState</name>
+        <qualifiedname>GameManager.PlayingState.ChangeToThisState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PlayingState.cs" line="19" column="30" bodyfile="Scripts/GameManager/States/PlayingState.cs" bodystart="19" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_manager_1_1_playing_state_1a3bb8109ac0a5a4e32bfc9608b74355c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void LeaveThisState</definition>
+        <argsstring>()</argsstring>
+        <name>LeaveThisState</name>
+        <qualifiedname>GameManager.PlayingState.LeaveThisState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PlayingState.cs" line="28" column="30" bodyfile="Scripts/GameManager/States/PlayingState.cs" bodystart="28" bodyend="32"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_game_manager_1_1_playing_state_1a70babc5227ddd16ca31dccc6cec0bb22" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pause</definition>
+        <argsstring>()</argsstring>
+        <name>Pause</name>
+        <qualifiedname>GameManager.PlayingState.Pause</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PlayingState.cs" line="37" column="22" bodyfile="Scripts/GameManager/States/PlayingState.cs" bodystart="37" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_manager_1_1_playing_state_1a3826da4e7db0244543a6917174c4ff01" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnablePausing</definition>
+        <argsstring>()</argsstring>
+        <name>EnablePausing</name>
+        <qualifiedname>GameManager.PlayingState.EnablePausing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PlayingState.cs" line="48" column="22" bodyfile="Scripts/GameManager/States/PlayingState.cs" bodystart="48" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_manager_1_1_playing_state_1ac54ce402cec4f1d67a1cef4db841d26d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>GameManager.PlayingState.OnDestroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PlayingState.cs" line="55" column="22" bodyfile="Scripts/GameManager/States/PlayingState.cs" bodystart="55" bodyend="59"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Default state of the level, when gameplay occurs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>GameState</label>
+        <link refid="class_game_manager_1_1_game_state"/>
+      </node>
+      <node id="1">
+        <label>PlayingState</label>
+        <link refid="class_game_manager_1_1_playing_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>PausedState</label>
+        <link refid="class_game_manager_1_1_paused_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>playingState</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PlayingState</label>
+        <link refid="class_game_manager_1_1_playing_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>pausedState</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GameState</label>
+        <link refid="class_game_manager_1_1_game_state"/>
+      </node>
+      <node id="1">
+        <label>PlayingState</label>
+        <link refid="class_game_manager_1_1_playing_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>pausedState</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/GameManager/States/PlayingState.cs" line="10" column="11" bodyfile="Scripts/GameManager/States/PlayingState.cs" bodystart="11" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_game_manager_1_1_playing_state_1ad487b78af2c27a8e7d0dc0016f586461" prot="public" virt="non-virtual"><scope>GameManager::PlayingState</scope><name>ChangeToThisState</name></member>
+      <member refid="class_game_manager_1_1_playing_state_1a3826da4e7db0244543a6917174c4ff01" prot="private" virt="non-virtual"><scope>GameManager::PlayingState</scope><name>EnablePausing</name></member>
+      <member refid="class_game_manager_1_1_playing_state_1a3bb8109ac0a5a4e32bfc9608b74355c6" prot="public" virt="non-virtual"><scope>GameManager::PlayingState</scope><name>LeaveThisState</name></member>
+      <member refid="class_game_manager_1_1_playing_state_1ac54ce402cec4f1d67a1cef4db841d26d" prot="private" virt="non-virtual"><scope>GameManager::PlayingState</scope><name>OnDestroy</name></member>
+      <member refid="class_game_manager_1_1_playing_state_1a70babc5227ddd16ca31dccc6cec0bb22" prot="private" virt="non-virtual"><scope>GameManager::PlayingState</scope><name>Pause</name></member>
+      <member refid="class_game_manager_1_1_playing_state_1ac45036e3b51df182b64a37c7df4f7558" prot="public" virt="non-virtual"><scope>GameManager::PlayingState</scope><name>pausedState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

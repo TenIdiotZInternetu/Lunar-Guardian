@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_projectiles_1_1_weapon_types_1_1_gatling_gun" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Projectiles::WeaponTypes::GatlingGun</compoundname>
+    <basecompoundref refid="class_spawnables_1_1_projectiles_1_1_weapon" prot="public" virt="non-virtual">Spawnables.Projectiles.Weapon</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_weapon_types_1_1_gatling_gun_1a5eb0f67fd678aaae77c9e8a3d7713992" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Spawnables.Projectiles.WeaponTypes.GatlingGun._gunHeadIndex</definition>
+        <argsstring></argsstring>
+        <name>_gunHeadIndex</name>
+        <qualifiedname>Spawnables.Projectiles.WeaponTypes.GatlingGun._gunHeadIndex</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/GatlingGun.cs" line="8" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/GatlingGun.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_weapon_types_1_1_gatling_gun_1a8b25abf3184be26e830a267592d270e1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Spawnables.Projectiles.WeaponTypes.GatlingGun._gunHeadIncrement</definition>
+        <argsstring></argsstring>
+        <name>_gunHeadIncrement</name>
+        <qualifiedname>Spawnables.Projectiles.WeaponTypes.GatlingGun._gunHeadIncrement</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/GatlingGun.cs" line="9" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/GatlingGun.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_weapon_types_1_1_gatling_gun_1ae061e1a6b1cd75096b2cacd0dd26f938" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Spawnables.Projectiles.WeaponTypes.GatlingGun.TryShooting</definition>
+        <argsstring>()</argsstring>
+        <name>TryShooting</name>
+        <qualifiedname>Spawnables.Projectiles.WeaponTypes.GatlingGun.TryShooting</qualifiedname>
+        <reimplements refid="class_spawnables_1_1_projectiles_1_1_weapon_1a381b56e44b1e2d16546efa9470410941">TryShooting</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/GatlingGun.cs" line="11" column="33" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/GatlingGun.cs" bodystart="11" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_weapon_types_1_1_gatling_gun_1afecbb7983671a3430bc04e7093badf31" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.WeaponTypes.GatlingGun.ShiftGunHeadIndex</definition>
+        <argsstring>()</argsstring>
+        <name>ShiftGunHeadIndex</name>
+        <qualifiedname>Spawnables.Projectiles.WeaponTypes.GatlingGun.ShiftGunHeadIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/GatlingGun.cs" line="28" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/GatlingGun.cs" bodystart="28" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.Projectiles.WeaponTypes.GatlingGun</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_weapon_types_1_1_gatling_gun"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Weapon</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_weapon"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.Projectiles.WeaponTypes.GatlingGun</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_weapon_types_1_1_gatling_gun"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Weapon</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_weapon"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/GatlingGun.cs" line="6" column="11" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes/GatlingGun.cs" bodystart="7" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1a944b4dd9708c072eb9527351c9501e85" prot="protected" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>_bulletsShot</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_types_1_1_gatling_gun_1a8b25abf3184be26e830a267592d270e1" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>_gunHeadIncrement</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_types_1_1_gatling_gun_1a5eb0f67fd678aaae77c9e8a3d7713992" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>_gunHeadIndex</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1aa874678199e51f9c31adb40eb4d5ce65" prot="protected" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>_timeOfLastShot</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1aa408fa0ee15bcd0ca127959f9a076ca4" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>bulletsInCharge</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1a8932601de8c9532f23a655d8ef5d703d" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>chargeTime</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1acf54945fc4090d93243aa11fc9d4b580" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>cooldown</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1a3626f55fe1a3285ca6e225253a1affcd" prot="protected" virt="virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>DetectShootables</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1a0cf56eb6f75687c192f8a5a3578d4836" prot="protected" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>GunHeads</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1ab842db32ed2b9b4e4cd73784ac15249b" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>HasAggro</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1a2d2742c41b48396b2fb921cc19845651" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>isPlayers</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1a208a81719298181321bbef16ec73448f" prot="protected" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>OnShootEvent</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_1adbc309f01c4819954baf0944844dddae" prot="protected" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>Recharge</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_types_1_1_gatling_gun_1afecbb7983671a3430bc04e7093badf31" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>ShiftGunHeadIndex</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_weapon_types_1_1_gatling_gun_1ae061e1a6b1cd75096b2cacd0dd26f938" prot="protected" virt="virtual"><scope>Spawnables::Projectiles::WeaponTypes::GatlingGun</scope><name>TryShooting</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

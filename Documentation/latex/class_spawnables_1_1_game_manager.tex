@@ -1,0 +1,162 @@
+\doxysection{Spawnables.\+Game\+Manager Class Reference}
+\hypertarget{class_spawnables_1_1_game_manager}{}\label{class_spawnables_1_1_game_manager}\index{Spawnables.GameManager@{Spawnables.GameManager}}
+
+
+A state machine that controls the flow of the gameplay.  
+
+
+
+
+Inheritance diagram for Spawnables.\+Game\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for Spawnables.\+Game\+Manager\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_spawnables_1_1_game_manager_a0615686d1bec5225721995ea7b70bb66}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_spawnables_1_1_game_manager_aa14f4da9423e8c4e35eae1b54da0b9f1}{Change\+State}} (\mbox{\hyperlink{class_game_states_1_1_game_state}{Game\+State}} new\+State)
+\begin{DoxyCompactList}\small\item\em Activates the given state and deactivates the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_spawnables_1_1_game_manager_a4fa557edb780cc051e9b7c2c68defb94}{Save\+And\+Quit}} (string players\+Name)
+\begin{DoxyCompactList}\small\item\em Saves the obtained score and returns to the main menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_states_1_1_game_state}{Game\+State}} \mbox{\hyperlink{class_spawnables_1_1_game_manager_a80fe9c54bca19e026dba46bcf9ee6d43}{initial\+State}}
+\begin{DoxyCompactList}\small\item\em State to set upon loading a scene. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tymski_1_1_scene_reference}{Scene\+Reference}} \mbox{\hyperlink{class_spawnables_1_1_game_manager_aac79c7b5597c5e61589da6f92b2531f2}{main\+Menu\+Scene}}
+\begin{DoxyCompactList}\small\item\em A scene to return to upon quitting the gameplay. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tools_1_1_game_state_event}{Game\+State\+Event}} \mbox{\hyperlink{class_spawnables_1_1_game_manager_a836dc3d2c52222fad7d5538d60b6a705}{on\+State\+Changed}}
+\begin{DoxyCompactList}\small\item\em Event with Game\+State parameter that is invoked when the state of the game changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_spawnables_1_1_game_manager}{Game\+Manager}} \mbox{\hyperlink{class_spawnables_1_1_game_manager_abd608174557d9eb5c119329878927ce4}{Instance}}
+\begin{DoxyCompactList}\small\item\em Singleton instance of the Game\+Manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A state machine that controls the flow of the gameplay. 
+
+Definition at line \mbox{\hyperlink{_game_manager_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_spawnables_1_1_game_manager_a0615686d1bec5225721995ea7b70bb66}\label{class_spawnables_1_1_game_manager_a0615686d1bec5225721995ea7b70bb66} 
+\index{Spawnables.GameManager@{Spawnables.GameManager}!Awake@{Awake}}
+\index{Awake@{Awake}!Spawnables.GameManager@{Spawnables.GameManager}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Spawnables.\+Game\+Manager.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_game_manager_8cs_source_l00049}{49}} of file \mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_game_manager_aa14f4da9423e8c4e35eae1b54da0b9f1}\label{class_spawnables_1_1_game_manager_aa14f4da9423e8c4e35eae1b54da0b9f1} 
+\index{Spawnables.GameManager@{Spawnables.GameManager}!ChangeState@{ChangeState}}
+\index{ChangeState@{ChangeState}!Spawnables.GameManager@{Spawnables.GameManager}}
+\doxysubsubsection{\texorpdfstring{ChangeState()}{ChangeState()}}
+{\footnotesize\ttfamily void Spawnables.\+Game\+Manager.\+Change\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_states_1_1_game_state}{Game\+State}}}]{new\+State }\end{DoxyParamCaption})}
+
+
+
+Activates the given state and deactivates the current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & The newly activated state \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_game_manager_8cs_source_l00064}{64}} of file \mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\Hypertarget{class_spawnables_1_1_game_manager_a4fa557edb780cc051e9b7c2c68defb94}\label{class_spawnables_1_1_game_manager_a4fa557edb780cc051e9b7c2c68defb94} 
+\index{Spawnables.GameManager@{Spawnables.GameManager}!SaveAndQuit@{SaveAndQuit}}
+\index{SaveAndQuit@{SaveAndQuit}!Spawnables.GameManager@{Spawnables.GameManager}}
+\doxysubsubsection{\texorpdfstring{SaveAndQuit()}{SaveAndQuit()}}
+{\footnotesize\ttfamily void Spawnables.\+Game\+Manager.\+Save\+And\+Quit (\begin{DoxyParamCaption}\item[{string}]{players\+Name }\end{DoxyParamCaption})}
+
+
+
+Saves the obtained score and returns to the main menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em players\+Name} & Name of the player to save to the leaderboards \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_game_manager_8cs_source_l00077}{77}} of file \mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_spawnables_1_1_game_manager_a80fe9c54bca19e026dba46bcf9ee6d43}\label{class_spawnables_1_1_game_manager_a80fe9c54bca19e026dba46bcf9ee6d43} 
+\index{Spawnables.GameManager@{Spawnables.GameManager}!initialState@{initialState}}
+\index{initialState@{initialState}!Spawnables.GameManager@{Spawnables.GameManager}}
+\doxysubsubsection{\texorpdfstring{initialState}{initialState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_states_1_1_game_state}{Game\+State}} Spawnables.\+Game\+Manager.\+initial\+State}
+
+
+
+State to set upon loading a scene. 
+
+
+
+Definition at line \mbox{\hyperlink{_game_manager_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_game_manager_abd608174557d9eb5c119329878927ce4}\label{class_spawnables_1_1_game_manager_abd608174557d9eb5c119329878927ce4} 
+\index{Spawnables.GameManager@{Spawnables.GameManager}!Instance@{Instance}}
+\index{Instance@{Instance}!Spawnables.GameManager@{Spawnables.GameManager}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_spawnables_1_1_game_manager}{Game\+Manager}} Spawnables.\+Game\+Manager.\+Instance\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Singleton instance of the Game\+Manager. 
+
+
+
+Definition at line \mbox{\hyperlink{_game_manager_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_game_manager_aac79c7b5597c5e61589da6f92b2531f2}\label{class_spawnables_1_1_game_manager_aac79c7b5597c5e61589da6f92b2531f2} 
+\index{Spawnables.GameManager@{Spawnables.GameManager}!mainMenuScene@{mainMenuScene}}
+\index{mainMenuScene@{mainMenuScene}!Spawnables.GameManager@{Spawnables.GameManager}}
+\doxysubsubsection{\texorpdfstring{mainMenuScene}{mainMenuScene}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tymski_1_1_scene_reference}{Scene\+Reference}} Spawnables.\+Game\+Manager.\+main\+Menu\+Scene}
+
+
+
+A scene to return to upon quitting the gameplay. 
+
+
+
+Definition at line \mbox{\hyperlink{_game_manager_8cs_source_l00034}{34}} of file \mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_game_manager_a836dc3d2c52222fad7d5538d60b6a705}\label{class_spawnables_1_1_game_manager_a836dc3d2c52222fad7d5538d60b6a705} 
+\index{Spawnables.GameManager@{Spawnables.GameManager}!onStateChanged@{onStateChanged}}
+\index{onStateChanged@{onStateChanged}!Spawnables.GameManager@{Spawnables.GameManager}}
+\doxysubsubsection{\texorpdfstring{onStateChanged}{onStateChanged}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tools_1_1_game_state_event}{Game\+State\+Event}} Spawnables.\+Game\+Manager.\+on\+State\+Changed}
+
+
+
+Event with Game\+State parameter that is invoked when the state of the game changes. 
+
+
+
+Definition at line \mbox{\hyperlink{_game_manager_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kodiky/\+Unity/\+Lunar Guardian/\+Assets/\+Scripts/\+Game\+States/Game\+Manager.\+cs\end{DoxyCompactItemize}

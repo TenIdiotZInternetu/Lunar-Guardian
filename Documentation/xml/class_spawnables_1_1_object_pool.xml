@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_object_pool" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::ObjectPool</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_object_pool_1a417a6199257c1c1da999cf9d2eaf6b91" prot="private" static="yes" mutable="no">
+        <type>Transform</type>
+        <definition>Transform _parentTransform</definition>
+        <argsstring></argsstring>
+        <name>_parentTransform</name>
+        <qualifiedname>Spawnables.ObjectPool._parentTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/ObjectPool.cs" line="17" column="34" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_spawnables_1_1_object_pool_1a67259580f3bed3976cf28dea92a19d30" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Key</definition>
+        <argsstring></argsstring>
+        <name>Key</name>
+        <qualifiedname>Spawnables.ObjectPool.Key</qualifiedname>
+        <briefdescription>
+<para>A key to the Dictionary of all the ObjectPools required to extract an entity from the pool <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/ObjectPool.cs" line="24" column="23" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_spawnables_1_1_object_pool_1ac2c04dade23785d51b1a68580267240a" compoundref="_object_pool_8cs" startline="66" endline="77">ObjectPool.Populate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_object_pool_1ad6d3141bf24aaf85fa7573865a1934f6" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject prefab</definition>
+        <argsstring></argsstring>
+        <name>prefab</name>
+        <qualifiedname>Spawnables.ObjectPool.prefab</qualifiedname>
+        <briefdescription>
+<para>Object prefab stored in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/ObjectPool.cs" line="31" column="27" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_spawnables_1_1_object_pool_1aca4cb1e6e94d35131eed7de40bcb6e35" compoundref="_object_pool_8cs" startline="94" endline="114">ObjectPool.Extract</referencedby>
+        <referencedby refid="class_spawnables_1_1_object_pool_1ac2c04dade23785d51b1a68580267240a" compoundref="_object_pool_8cs" startline="66" endline="77">ObjectPool.Populate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_object_pool_1aa809b812a7a8947b5266b444461aac39" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int initialPoolSize</definition>
+        <argsstring></argsstring>
+        <name>initialPoolSize</name>
+        <qualifiedname>Spawnables.ObjectPool.initialPoolSize</qualifiedname>
+        <briefdescription>
+<para>Amount of objects to instantiate when the pool is created. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/ObjectPool.cs" line="36" column="20" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_spawnables_1_1_object_pool_1ac2c04dade23785d51b1a68580267240a" compoundref="_object_pool_8cs" startline="66" endline="77">ObjectPool.Populate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_object_pool_1afcb017f7ec1034308d7328698bef57f0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int maxPoolSize</definition>
+        <argsstring></argsstring>
+        <name>maxPoolSize</name>
+        <qualifiedname>Spawnables.ObjectPool.maxPoolSize</qualifiedname>
+        <briefdescription>
+<para>Maximum amount of objects that can be stored in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/ObjectPool.cs" line="41" column="20" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_spawnables_1_1_object_pool_1aca4cb1e6e94d35131eed7de40bcb6e35" compoundref="_object_pool_8cs" startline="94" endline="114">ObjectPool.Extract</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_object_pool_1ac4e87f7c78afc7f0cf63b6d43bf9ad7a" prot="private" static="no" mutable="no">
+        <type>Queue&lt; GameObject &gt;</type>
+        <definition>Queue&lt;GameObject&gt; _pool</definition>
+        <argsstring></argsstring>
+        <name>_pool</name>
+        <qualifiedname>Spawnables.ObjectPool._pool</qualifiedname>
+        <initializer>= new()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/ObjectPool.cs" line="45" column="23" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_object_pool_1ada2825220e8612b53e039d50d994a51f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _poolSize</definition>
+        <argsstring></argsstring>
+        <name>_poolSize</name>
+        <qualifiedname>Spawnables.ObjectPool._poolSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/ObjectPool.cs" line="46" column="21" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_object_pool_1ab594e6fd1c13466eb3e81224ff93a030" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _availableInstances</definition>
+        <argsstring></argsstring>
+        <name>_availableInstances</name>
+        <qualifiedname>Spawnables.ObjectPool._availableInstances</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/ObjectPool.cs" line="47" column="21" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_spawnables_1_1_object_pool_1adc919ac837a858107c31d077706160d1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SetParentTransform</definition>
+        <argsstring>(Transform parentTransform)</argsstring>
+        <name>SetParentTransform</name>
+        <qualifiedname>Spawnables.ObjectPool.SetParentTransform</qualifiedname>
+        <param>
+          <type>Transform</type>
+          <declname>parentTransform</declname>
+        </param>
+        <briefdescription>
+<para>Sets a parent transform under which new objects in the pool are instantiated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parentTransform</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/ObjectPool.cs" line="56" column="28" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="56" bodyend="59"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spawnables_1_1_object_pool_1ac2c04dade23785d51b1a68580267240a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Populate</definition>
+        <argsstring>()</argsstring>
+        <name>Populate</name>
+        <qualifiedname>Spawnables.ObjectPool.Populate</qualifiedname>
+        <briefdescription>
+<para>Instantiates objects and adds them to the pool, to fill it up to the initialPoolSize. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/ObjectPool.cs" line="66" column="21" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="66" bodyend="77"/>
+        <references refid="class_spawnables_1_1_object_pool_1a87ee3f6fb08420df8c16ddf8be6d1947" compoundref="_object_pool_8cs" startline="83" endline="87">ObjectPool.Enqueue</references>
+        <references refid="class_spawnables_1_1_object_pool_1aa809b812a7a8947b5266b444461aac39" compoundref="_object_pool_8cs" startline="36">ObjectPool.initialPoolSize</references>
+        <references refid="class_spawnables_1_1_object_pool_1a67259580f3bed3976cf28dea92a19d30" compoundref="_object_pool_8cs" startline="24">ObjectPool.Key</references>
+        <references refid="class_spawnables_1_1_object_pool_1ad6d3141bf24aaf85fa7573865a1934f6" compoundref="_object_pool_8cs" startline="31">ObjectPool.prefab</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_object_pool_1a87ee3f6fb08420df8c16ddf8be6d1947" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Enqueue</definition>
+        <argsstring>(GameObject obj)</argsstring>
+        <name>Enqueue</name>
+        <qualifiedname>Spawnables.ObjectPool.Enqueue</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Adds an object to the queue of available objects in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Added object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/ObjectPool.cs" line="83" column="21" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="83" bodyend="87"/>
+        <referencedby refid="class_spawnables_1_1_object_pool_1ac2c04dade23785d51b1a68580267240a" compoundref="_object_pool_8cs" startline="66" endline="77">ObjectPool.Populate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_object_pool_1aca4cb1e6e94d35131eed7de40bcb6e35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>GameObject</type>
+        <definition>GameObject Extract</definition>
+        <argsstring>()</argsstring>
+        <name>Extract</name>
+        <qualifiedname>Spawnables.ObjectPool.Extract</qualifiedname>
+        <briefdescription>
+<para>Retrieves an object from the queue. If the queue is empty, instantiates a new object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Object retrieved from the pool </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>OperationCanceledException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum amount of objects in the pool has been exceeded </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/ObjectPool.cs" line="94" column="27" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="94" bodyend="114"/>
+        <references refid="class_spawnables_1_1_object_pool_1afcb017f7ec1034308d7328698bef57f0" compoundref="_object_pool_8cs" startline="41">ObjectPool.maxPoolSize</references>
+        <references refid="class_spawnables_1_1_object_pool_1ad6d3141bf24aaf85fa7573865a1934f6" compoundref="_object_pool_8cs" startline="31">ObjectPool.prefab</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A set of pre-instantiated entities of a specified prefab that can be spawned and despawned by the ObjectPoolManager. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Spawnables/ObjectPool.cs" line="13" column="11" bodyfile="Scripts/Spawnables/ObjectPool.cs" bodystart="14" bodyend="118"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_object_pool_1ab594e6fd1c13466eb3e81224ff93a030" prot="private" virt="non-virtual"><scope>Spawnables::ObjectPool</scope><name>_availableInstances</name></member>
+      <member refid="class_spawnables_1_1_object_pool_1a417a6199257c1c1da999cf9d2eaf6b91" prot="private" virt="non-virtual"><scope>Spawnables::ObjectPool</scope><name>_parentTransform</name></member>
+      <member refid="class_spawnables_1_1_object_pool_1ac4e87f7c78afc7f0cf63b6d43bf9ad7a" prot="private" virt="non-virtual"><scope>Spawnables::ObjectPool</scope><name>_pool</name></member>
+      <member refid="class_spawnables_1_1_object_pool_1ada2825220e8612b53e039d50d994a51f" prot="private" virt="non-virtual"><scope>Spawnables::ObjectPool</scope><name>_poolSize</name></member>
+      <member refid="class_spawnables_1_1_object_pool_1a87ee3f6fb08420df8c16ddf8be6d1947" prot="public" virt="non-virtual"><scope>Spawnables::ObjectPool</scope><name>Enqueue</name></member>
+      <member refid="class_spawnables_1_1_object_pool_1aca4cb1e6e94d35131eed7de40bcb6e35" prot="public" virt="non-virtual"><scope>Spawnables::ObjectPool</scope><name>Extract</name></member>
+      <member refid="class_spawnables_1_1_object_pool_1aa809b812a7a8947b5266b444461aac39" prot="public" virt="non-virtual"><scope>Spawnables::ObjectPool</scope><name>initialPoolSize</name></member>
+      <member refid="class_spawnables_1_1_object_pool_1a67259580f3bed3976cf28dea92a19d30" prot="public" virt="non-virtual"><scope>Spawnables::ObjectPool</scope><name>Key</name></member>
+      <member refid="class_spawnables_1_1_object_pool_1afcb017f7ec1034308d7328698bef57f0" prot="public" virt="non-virtual"><scope>Spawnables::ObjectPool</scope><name>maxPoolSize</name></member>
+      <member refid="class_spawnables_1_1_object_pool_1ac2c04dade23785d51b1a68580267240a" prot="public" virt="non-virtual"><scope>Spawnables::ObjectPool</scope><name>Populate</name></member>
+      <member refid="class_spawnables_1_1_object_pool_1ad6d3141bf24aaf85fa7573865a1934f6" prot="public" virt="non-virtual"><scope>Spawnables::ObjectPool</scope><name>prefab</name></member>
+      <member refid="class_spawnables_1_1_object_pool_1adc919ac837a858107c31d077706160d1" prot="public" virt="non-virtual"><scope>Spawnables::ObjectPool</scope><name>SetParentTransform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

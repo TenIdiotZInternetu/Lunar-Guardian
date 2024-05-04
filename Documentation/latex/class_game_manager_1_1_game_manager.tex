@@ -1,0 +1,81 @@
+\doxysection{Game\+Manager Class Reference}
+\hypertarget{class_game_manager_1_1_game_manager}{}\label{class_game_manager_1_1_game_manager}\index{GameManager@{GameManager}}
+
+
+A state machine that controls the flow of the gameplay.  
+
+
+
+
+Inherits Mono\+Behaviour.
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_manager_1_1_game_manager_a0e7b307d6a6d5a4a71cb7fea674c0387}{Change\+State}} (\mbox{\hyperlink{class_game_manager_1_1_game_state}{Game\+State}} new\+State)
+\begin{DoxyCompactList}\small\item\em Activates the given state and deactivates the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_manager_1_1_game_manager_adef25384ad2ee4c9637f3661c1541298}{Save\+And\+Quit}} (string players\+Name)
+\begin{DoxyCompactList}\small\item\em Saves the obtained score and returns to the main menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_manager_1_1_game_manager_a0a71679655b87f85bd97d18fd089d6d4}\label{class_game_manager_1_1_game_manager_a0a71679655b87f85bd97d18fd089d6d4} 
+\mbox{\hyperlink{class_game_manager_1_1_game_state}{Game\+State}} {\bfseries initial\+State}
+\begin{DoxyCompactList}\small\item\em State to set upon loading a scene. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_manager_1_1_game_manager_aa6a3316bd7b321507aa6695fd4255262}\label{class_game_manager_1_1_game_manager_aa6a3316bd7b321507aa6695fd4255262} 
+\mbox{\hyperlink{class_tymski_1_1_scene_reference}{Scene\+Reference}} {\bfseries main\+Menu\+Scene}
+\begin{DoxyCompactList}\small\item\em A scene to return to upon quitting the gameplay. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_manager_1_1_game_manager_ac8b6e6aaaa700863dd2ca9d30c0681dd}\label{class_game_manager_1_1_game_manager_ac8b6e6aaaa700863dd2ca9d30c0681dd} 
+\mbox{\hyperlink{class_tools_1_1_game_state_event}{Game\+State\+Event}} {\bfseries on\+State\+Changed}
+\begin{DoxyCompactList}\small\item\em Event with Game\+State parameter that is invoked when the state of the game changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_manager_1_1_game_manager_a6276f9bdbe9295f7060832971cc39f18}\label{class_game_manager_1_1_game_manager_a6276f9bdbe9295f7060832971cc39f18} 
+static \mbox{\hyperlink{class_game_manager_1_1_game_manager}{Game\+Manager}} {\bfseries Instance}
+\begin{DoxyCompactList}\small\item\em Singleton instance of the \doxylink{namespace_game_manager}{Game\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_game_manager_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_manager_1_1_game_manager_a0e7b307d6a6d5a4a71cb7fea674c0387}\label{class_game_manager_1_1_game_manager_a0e7b307d6a6d5a4a71cb7fea674c0387} 
+\index{GameManager@{GameManager}!ChangeState@{ChangeState}}
+\index{ChangeState@{ChangeState}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{ChangeState()}{ChangeState()}}
+{\footnotesize\ttfamily void Change\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_manager_1_1_game_state}{Game\+State}}}]{new\+State }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+State} & The newly activated state \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_game_manager_8cs_source_l00063}{63}} of file \mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}}.
+
+\Hypertarget{class_game_manager_1_1_game_manager_adef25384ad2ee4c9637f3661c1541298}\label{class_game_manager_1_1_game_manager_adef25384ad2ee4c9637f3661c1541298} 
+\index{GameManager@{GameManager}!SaveAndQuit@{SaveAndQuit}}
+\index{SaveAndQuit@{SaveAndQuit}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{SaveAndQuit()}{SaveAndQuit()}}
+{\footnotesize\ttfamily void Save\+And\+Quit (\begin{DoxyParamCaption}\item[{string}]{players\+Name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em players\+Name} & Name of the player to save to the leaderboards \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_game_manager_8cs_source_l00076}{76}} of file \mbox{\hyperlink{_game_manager_8cs_source}{Game\+Manager.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Game\+Manager/Game\+Manager.\+cs\end{DoxyCompactItemize}

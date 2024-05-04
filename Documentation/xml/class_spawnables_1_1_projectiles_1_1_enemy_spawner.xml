@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_projectiles_1_1_enemy_spawner" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Projectiles::EnemySpawner</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1a77f7c5a48076b3270f9e79ba209f8736" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float Spawnables.Projectiles.EnemySpawner.GIZMO_RADIUS</definition>
+        <argsstring></argsstring>
+        <name>GIZMO_RADIUS</name>
+        <qualifiedname>Spawnables.Projectiles.EnemySpawner.GIZMO_RADIUS</qualifiedname>
+        <initializer>= 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" line="8" column="29" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1a31c196a2712a3dd71e3cce3a3e36c7a9" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Spawnables.Projectiles.EnemySpawner.prefab</definition>
+        <argsstring></argsstring>
+        <name>prefab</name>
+        <qualifiedname>Spawnables.Projectiles.EnemySpawner.prefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" line="10" column="27" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1ace0b7bc219941c4c680923263e7177ea" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Spawnables.Projectiles.EnemySpawner.interval</definition>
+        <argsstring></argsstring>
+        <name>interval</name>
+        <qualifiedname>Spawnables.Projectiles.EnemySpawner.interval</qualifiedname>
+        <initializer>= 1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" line="11" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1a12bfdea64d850d05bd0fbeaafb97f125" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Spawnables.Projectiles.EnemySpawner.maxCount</definition>
+        <argsstring></argsstring>
+        <name>maxCount</name>
+        <qualifiedname>Spawnables.Projectiles.EnemySpawner.maxCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" line="12" column="20" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1a739dc0f97e718e3ed4739682f26df5d3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Spawnables.Projectiles.EnemySpawner._timeOfLastSpawn</definition>
+        <argsstring></argsstring>
+        <name>_timeOfLastSpawn</name>
+        <qualifiedname>Spawnables.Projectiles.EnemySpawner._timeOfLastSpawn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" line="14" column="23" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1a2394b5867552989ef7b7b94034c08bd6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Spawnables.Projectiles.EnemySpawner._spawnedCount</definition>
+        <argsstring></argsstring>
+        <name>_spawnedCount</name>
+        <qualifiedname>Spawnables.Projectiles.EnemySpawner._spawnedCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" line="15" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1a7d4cd503876e8fe59a19efb9a709fff9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.EnemySpawner.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>Spawnables.Projectiles.EnemySpawner.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" line="17" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" bodystart="17" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1abba5e5e3ed0a924a72924bc60c89cfe6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.EnemySpawner.OnDrawGizmos</definition>
+        <argsstring>()</argsstring>
+        <name>OnDrawGizmos</name>
+        <qualifiedname>Spawnables.Projectiles.EnemySpawner.OnDrawGizmos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" line="28" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" bodystart="28" bodyend="32"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.Projectiles.EnemySpawner</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_enemy_spawner"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.Projectiles.EnemySpawner</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_enemy_spawner"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" line="6" column="11" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemySpawner.cs" bodystart="7" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1a2394b5867552989ef7b7b94034c08bd6" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::EnemySpawner</scope><name>_spawnedCount</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1a739dc0f97e718e3ed4739682f26df5d3" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::EnemySpawner</scope><name>_timeOfLastSpawn</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1a77f7c5a48076b3270f9e79ba209f8736" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::EnemySpawner</scope><name>GIZMO_RADIUS</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1ace0b7bc219941c4c680923263e7177ea" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::EnemySpawner</scope><name>interval</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1a12bfdea64d850d05bd0fbeaafb97f125" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::EnemySpawner</scope><name>maxCount</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1abba5e5e3ed0a924a72924bc60c89cfe6" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::EnemySpawner</scope><name>OnDrawGizmos</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1a31c196a2712a3dd71e3cce3a3e36c7a9" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::EnemySpawner</scope><name>prefab</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_enemy_spawner_1a7d4cd503876e8fe59a19efb9a709fff9" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::EnemySpawner</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

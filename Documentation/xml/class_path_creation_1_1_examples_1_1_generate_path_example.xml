@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_examples_1_1_generate_path_example" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::Examples::GeneratePathExample</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_generate_path_example_1a1328e49e96817e657a1fef82447af656" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool closedLoop</definition>
+        <argsstring></argsstring>
+        <name>closedLoop</name>
+        <qualifiedname>PathCreation.Examples.GeneratePathExample.closedLoop</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/GeneratePathExample.cs" line="9" column="21" bodyfile="Tools/PathCreator/Examples/Scripts/GeneratePathExample.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_generate_path_example_1a909bc02546189b8ee5cc407ea0e5ef55" prot="public" static="no" mutable="no">
+        <type>Transform[]</type>
+        <definition>Transform [] waypoints</definition>
+        <argsstring></argsstring>
+        <name>waypoints</name>
+        <qualifiedname>PathCreation.Examples.GeneratePathExample.waypoints</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/GeneratePathExample.cs" line="10" column="26" bodyfile="Tools/PathCreator/Examples/Scripts/GeneratePathExample.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_path_creation_1_1_examples_1_1_generate_path_example_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>PathCreation.Examples.GeneratePathExample.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/GeneratePathExample.cs" line="12" column="14" bodyfile="Tools/PathCreator/Examples/Scripts/GeneratePathExample.cs" bodystart="12" bodyend="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Examples/Scripts/GeneratePathExample.cs" line="7" column="11" bodyfile="Tools/PathCreator/Examples/Scripts/GeneratePathExample.cs" bodystart="7" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_examples_1_1_generate_path_example_1a1328e49e96817e657a1fef82447af656" prot="public" virt="non-virtual"><scope>PathCreation::Examples::GeneratePathExample</scope><name>closedLoop</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_generate_path_example_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" virt="non-virtual"><scope>PathCreation::Examples::GeneratePathExample</scope><name>Start</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_generate_path_example_1a909bc02546189b8ee5cc407ea0e5ef55" prot="public" virt="non-virtual"><scope>PathCreation::Examples::GeneratePathExample</scope><name>waypoints</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

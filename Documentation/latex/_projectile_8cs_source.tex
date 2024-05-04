@@ -1,0 +1,38 @@
+\doxysection{Projectile.\+cs}
+\hypertarget{_projectile_8cs_source}{}\label{_projectile_8cs_source}\index{Scripts/Spawnables/Weapons/Projectile.cs@{Scripts/Spawnables/Weapons/Projectile.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_player_scripts}{PlayerScripts}};}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00003}\mbox{\hyperlink{namespace_spawnables_1_1_weapons}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_spawnables_1_1_weapons}{Spawnables.Weapons}}}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00008}\mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_projectile}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_projectile}{Projectile}}\ :\ \mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}}}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00015}\mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_projectile_a9b39867abc3f09243fcdc739bd9e6c90}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_projectile_a9b39867abc3f09243fcdc739bd9e6c90}{damage}};}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Unity\ Callbacks\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ BombController.OnBombDamageTick\ +=\ OnBombDamageTick;}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Despawns\ the\ projectile}}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Disperse()}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_spawnables_1_1_object_pool_manager}{ObjectPoolManager}}.\mbox{\hyperlink{class_spawnables_1_1_object_pool_manager_a6bbeac8b46389ccaa0b7d2d24f805c6f}{Despawn}}(gameObject);}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Called\ on\ BombController's\ damage\ tick}}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnBombDamageTick(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_projectile_a9b39867abc3f09243fcdc739bd9e6c90}{damage}})}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ Disperse();}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_projectile_8cs_source_l00038}00038\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Collectibles::Pickup::Reward</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward_1ac3edde316e992ccd7c1eabfbfe6137a3" prot="public" static="no" mutable="no">
+        <type>PlayerStatus.ResourceType</type>
+        <definition>PlayerStatus.ResourceType Spawnables.Collectibles.Pickup.Reward.type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>Spawnables.Collectibles.Pickup.Reward.type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" line="13" column="45" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward_1ad54bec290ec5af092e4b891e437aeb14" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Spawnables.Collectibles.Pickup.Reward.amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <qualifiedname>Spawnables.Collectibles.Pickup.Reward.amount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" line="14" column="24" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="2">
+        <label>PlayerScripts.PlayerStatus</label>
+        <link refid="class_player_scripts_1_1_player_status"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Spawnables.Collectibles.Pickup.Reward</label>
+        <link refid="class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" line="11" column="15" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" bodystart="12" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward_1ad54bec290ec5af092e4b891e437aeb14" prot="public" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup::Reward</scope><name>amount</name></member>
+      <member refid="class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward_1ac3edde316e992ccd7c1eabfbfe6137a3" prot="public" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup::Reward</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

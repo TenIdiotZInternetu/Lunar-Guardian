@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_orbiting_m_p_8cs" kind="file" language="C#">
+    <compoundname>OrbitingMP.cs</compoundname>
+    <innerclass refid="class_movement_patterns_1_1_orbiting_m_p" prot="public">MovementPatterns::OrbitingMP</innerclass>
+    <innernamespace refid="namespace_movement_patterns">MovementPatterns</innernamespace>
+    <innernamespace refid="namespace_unity_editor">UnityEditor</innernamespace>
+    <innernamespace refid="namespace_quaternion">Quaternion</innernamespace>
+    <innernamespace refid="namespace_vector3">Vector3</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_orbiting_m_p_8cs_1a3115aee88de19f0e23050e8650bc3153" prot="public" static="no">
+        <type>UnityEngine.Quaternion</type>
+        <definition>using Quaternion =  UnityEngine.Quaternion</definition>
+        <argsstring></argsstring>
+        <name>Quaternion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/OrbitingMP.cs" line="4" column="1" bodyfile="Scripts/MovementPatterns/OrbitingMP.cs" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_orbiting_m_p_8cs_1af3326292fdd04d2b384b6d781d9594f6" prot="public" static="no">
+        <type>UnityEngine.Vector3</type>
+        <definition>using Vector3 =  UnityEngine.Vector3</definition>
+        <argsstring></argsstring>
+        <name>Vector3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/OrbitingMP.cs" line="5" column="1" bodyfile="Scripts/MovementPatterns/OrbitingMP.cs" bodystart="5" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_spawnables" kindref="compound">Spawnables</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEditor;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Quaternion<sp/>=<sp/>UnityEngine.Quaternion;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Vector3<sp/>=<sp/>UnityEngine.Vector3;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_movement_patterns" kindref="compound">MovementPatterns</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12" refid="class_movement_patterns_1_1_orbiting_m_p" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_movement_patterns_1_1_orbiting_m_p" kindref="compound">OrbitingMP</ref><sp/>:<sp/><ref refid="class_movement_patterns_1_1_movement_pattern" kindref="compound">MovementPattern</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-------------------<sp/>Inspector<sp/>Variables<sp/>-------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19" refid="class_movement_patterns_1_1_orbiting_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[SerializeField]<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>GameObject<sp/><ref refid="class_movement_patterns_1_1_orbiting_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3" kindref="member">target</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="class_movement_patterns_1_1_orbiting_m_p_1a5050a760c11da521cd4aee6336f6529f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[SerializeField]<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_movement_patterns_1_1_orbiting_m_p_1a5050a760c11da521cd4aee6336f6529f" kindref="member">radius</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="class_movement_patterns_1_1_orbiting_m_p_1a275dd6dafe5d4455e599ffd15feb06f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[SerializeField]<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_movement_patterns_1_1_orbiting_m_p_1a275dd6dafe5d4455e599ffd15feb06f8" kindref="member">phase</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="class_movement_patterns_1_1_orbiting_m_p_1ad1de9af57e9b1558e00f6c1bfb55842e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[SerializeField]<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_movement_patterns_1_1_orbiting_m_p_1ad1de9af57e9b1558e00f6c1bfb55842e" kindref="member">angularSpeed</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="class_movement_patterns_1_1_orbiting_m_p_1a97712bccaedef08f6d8c525bdda2f7ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[SerializeField]<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_movement_patterns_1_1_orbiting_m_p_1a97712bccaedef08f6d8c525bdda2f7ef" kindref="member">acceleration</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>----------------------<sp/>Public<sp/>Methods<sp/>----------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Initialize(<ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref><sp/>entity)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>Vector3<sp/>GetNextPosition(<ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref><sp/>entity)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ensures<sp/>that<sp/>the<sp/>entity<sp/>despawns<sp/>when<sp/>the<sp/>target<sp/>despawns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_movement_patterns_1_1_orbiting_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3" kindref="member">target</ref>.gameObject.activeInHierarchy)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_spawnables_1_1_object_pool_manager" kindref="compound">ObjectPoolManager</ref>.<ref refid="class_spawnables_1_1_object_pool_manager_1a6bbeac8b46389ccaa0b7d2d24f805c6f" kindref="member">Despawn</ref>(this.gameObject);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time<sp/>=<sp/>entity.<ref refid="class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba" kindref="member">MPLifeTime</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>center<sp/>=<sp/><ref refid="class_movement_patterns_1_1_orbiting_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3" kindref="member">target</ref>.transform.position;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>currentSpeed<sp/>=<sp/><ref refid="class_movement_patterns_1_1_orbiting_m_p_1ad1de9af57e9b1558e00f6c1bfb55842e" kindref="member">angularSpeed</ref><sp/>+<sp/><ref refid="class_movement_patterns_1_1_orbiting_m_p_1a97712bccaedef08f6d8c525bdda2f7ef" kindref="member">acceleration</ref><sp/>*<sp/>time;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>angle<sp/>=<sp/>currentSpeed<sp/>*<sp/>time<sp/>+<sp/><ref refid="class_movement_patterns_1_1_orbiting_m_p_1a275dd6dafe5d4455e599ffd15feb06f8" kindref="member">phase</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>slope<sp/>=<sp/>Quaternion.Euler(0,<sp/>0,<sp/>angle)<sp/>*<sp/>Vector3.up<sp/>*<sp/><ref refid="class_movement_patterns_1_1_orbiting_m_p_1a5050a760c11da521cd4aee6336f6529f" kindref="member">radius</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>center<sp/>+<sp/>slope;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-------------------<sp/>Editor-only<sp/>Callbacks<sp/>------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>UNITY_EDITOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Draws<sp/>the<sp/>shape<sp/>of<sp/>the<sp/>orbit<sp/>in<sp/>the<sp/>editor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OnDrawGizmosSelected()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Handles.color<sp/>=<sp/>Color.green;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>center<sp/>=<sp/><ref refid="class_movement_patterns_1_1_orbiting_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3" kindref="member">target</ref>.transform.position;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Handles.DrawWireDisc(center,<sp/>Vector3.forward,<sp/><ref refid="class_movement_patterns_1_1_orbiting_m_p_1a5050a760c11da521cd4aee6336f6529f" kindref="member">radius</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Scripts/MovementPatterns/OrbitingMP.cs"/>
+  </compounddef>
+</doxygen>

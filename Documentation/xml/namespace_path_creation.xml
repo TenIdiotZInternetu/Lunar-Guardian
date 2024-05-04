@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_path_creation" kind="namespace" language="C#">
+    <compoundname>PathCreation</compoundname>
+    <innerclass refid="class_path_creation_1_1_bezier_path" prot="public">PathCreation::BezierPath</innerclass>
+    <innerclass refid="class_path_creation_1_1_global_display_settings" prot="public">PathCreation::GlobalDisplaySettings</innerclass>
+    <innerclass refid="class_path_creation_1_1_min_max3_d" prot="public">PathCreation::MinMax3D</innerclass>
+    <innerclass refid="class_path_creation_1_1_path_creator" prot="public">PathCreation::PathCreator</innerclass>
+    <innerclass refid="class_path_creation_1_1_path_creator_data" prot="public">PathCreation::PathCreatorData</innerclass>
+    <innerclass refid="class_path_creation_1_1_vertex_path" prot="public">PathCreation::VertexPath</innerclass>
+    <innernamespace refid="namespace_path_creation_1_1_examples">PathCreation::Examples</innernamespace>
+    <innernamespace refid="namespace_path_creation_1_1_utility">PathCreation::Utility</innernamespace>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_path_creation_1a5f054830a30396d03566389b9da868f3" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>EndOfPathInstruction</name>
+        <qualifiedname>PathCreation.EndOfPathInstruction</qualifiedname>
+        <enumvalue id="namespace_path_creation_1a5f054830a30396d03566389b9da868f3a89d7b10cb4238977d2b523dfd9ea7745" prot="public">
+          <name>Loop</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_path_creation_1a5f054830a30396d03566389b9da868f3a67f115c1fddc4ce1aeb1c754001585bc" prot="public">
+          <name>Reverse</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_path_creation_1a5f054830a30396d03566389b9da868f3a11a755d598c0c417f9a36758c3da7481" prot="public">
+          <name>Stop</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/EndOfPathInstruction.cs" line="2" column="7" bodyfile="Tools/PathCreator/Core/Runtime/Objects/EndOfPathInstruction.cs" bodystart="2" bodyend="2"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_path_creation_1aabac7c0fb8cb143209e7270b52279501" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>PathSpace</name>
+        <qualifiedname>PathCreation.PathSpace</qualifiedname>
+        <enumvalue id="namespace_path_creation_1aabac7c0fb8cb143209e7270b52279501ad16fb36f0911f878998c136191af705e" prot="public">
+          <name>xyz</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_path_creation_1aabac7c0fb8cb143209e7270b52279501a3e44107170a520582ade522fa73c1d15" prot="public">
+          <name>xy</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_path_creation_1aabac7c0fb8cb143209e7270b52279501adbd69ee9ae289a85ea34dbef8435d7c1" prot="public">
+          <name>xz</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathSpace.cs" line="2" column="7" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathSpace.cs" bodystart="2" bodyend="2"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

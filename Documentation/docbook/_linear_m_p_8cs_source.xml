@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__linear_m_p_8cs_source" xml:lang="en-US">
+<title>LinearMP.cs</title>
+<indexterm><primary>Scripts/MovementPatterns/LinearMP.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__linear_m_p_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System;
+<anchor xml:id="__linear_m_p_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>MyBox;
+<anchor xml:id="__linear_m_p_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_spawnables">Spawnables</link>;
+<anchor xml:id="__linear_m_p_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__linear_m_p_8cs_source_1l00005"/>00005 
+<anchor xml:id="__linear_m_p_8cs_source_1l00006"/>00006 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_movement_patterns">MovementPatterns</link>
+<anchor xml:id="__linear_m_p_8cs_source_1l00007"/>00007 {
+<anchor xml:id="__linear_m_p_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;[Serializable]
+<anchor xml:id="__linear_m_p_8cs_source_1l00012"/><link linkend="_class_movement_patterns_1_1_linear_m_p">00012</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_movement_patterns_1_1_linear_m_p">LinearMP</link>&#32;:&#32;<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link>
+<anchor xml:id="__linear_m_p_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__linear_m_p_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Inspector&#32;Variables&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__linear_m_p_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00019"/><link linkend="_class_movement_patterns_1_1_linear_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8">00019</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_linear_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8">speed</link>;
+<anchor xml:id="__linear_m_p_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00024"/><link linkend="_class_movement_patterns_1_1_linear_m_p_1a97712bccaedef08f6d8c525bdda2f7ef">00024</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_linear_m_p_1a97712bccaedef08f6d8c525bdda2f7ef">acceleration</link>;
+<anchor xml:id="__linear_m_p_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00029"/><link linkend="_class_movement_patterns_1_1_linear_m_p_1add450a0a83c646aa48b83eeafbf0b902">00029</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_linear_m_p_1add450a0a83c646aa48b83eeafbf0b902">followsRotation</link>;
+<anchor xml:id="__linear_m_p_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField,&#32;ConditionalField(nameof(<link linkend="_class_movement_patterns_1_1_linear_m_p_1add450a0a83c646aa48b83eeafbf0b902">followsRotation</link>),&#32;inverse:&#32;true)]
+<anchor xml:id="__linear_m_p_8cs_source_1l00035"/><link linkend="_class_movement_patterns_1_1_linear_m_p_1aeedcd9bc1fcd3a20ade597dbe82176a7">00035</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;private&#32;float&#32;<link linkend="_class_movement_patterns_1_1_linear_m_p_1aeedcd9bc1fcd3a20ade597dbe82176a7">directionInDegrees</link>;
+<anchor xml:id="__linear_m_p_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;----------------------&#32;Private&#32;Fields&#32;----------------------&#32;*/</emphasis>
+<anchor xml:id="__linear_m_p_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;_direction;
+<anchor xml:id="__linear_m_p_8cs_source_1l00041"/>00041 
+<anchor xml:id="__linear_m_p_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;----------------------&#32;Public&#32;Methods&#32;----------------------&#32;*/</emphasis>
+<anchor xml:id="__linear_m_p_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Initialize(<link linkend="_class_spawnables_1_1_entity">Entity</link>&#32;entity)
+<anchor xml:id="__linear_m_p_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__linear_m_p_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;OnValidate();
+<anchor xml:id="__linear_m_p_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__linear_m_p_8cs_source_1l00048"/>00048 
+<anchor xml:id="__linear_m_p_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;Vector3&#32;GetNextPosition(<link linkend="_class_spawnables_1_1_entity">Entity</link>&#32;entity)
+<anchor xml:id="__linear_m_p_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__linear_m_p_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;localDirection&#32;=&#32;_direction;
+<anchor xml:id="__linear_m_p_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;followsRotation&#32;is&#32;true,&#32;the&#32;direction&#32;is&#32;determined&#32;by&#32;the&#32;entity&apos;s&#32;rotation</emphasis>
+<anchor xml:id="__linear_m_p_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_movement_patterns_1_1_linear_m_p_1add450a0a83c646aa48b83eeafbf0b902">followsRotation</link>)
+<anchor xml:id="__linear_m_p_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__linear_m_p_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;rotation&#32;=&#32;entity.transform.rotation.eulerAngles.z;
+<anchor xml:id="__linear_m_p_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;localDirection&#32;=&#32;Quaternion.Euler(0,&#32;0,&#32;rotation)&#32;*&#32;Vector3.up;
+<anchor xml:id="__linear_m_p_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;localDirection&#32;=&#32;localDirection.normalized;
+<anchor xml:id="__linear_m_p_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__linear_m_p_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;currentPosition&#32;=&#32;entity.transform.position;
+<anchor xml:id="__linear_m_p_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;currentSpeed&#32;=&#32;Mathf.Max(<link linkend="_class_movement_patterns_1_1_linear_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8">speed</link>&#32;+&#32;<link linkend="_class_movement_patterns_1_1_linear_m_p_1a97712bccaedef08f6d8c525bdda2f7ef">acceleration</link>&#32;*&#32;entity.<link linkend="_class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba">MPLifeTime</link>,&#32;0);
+<anchor xml:id="__linear_m_p_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;currentPosition&#32;+&#32;localDirection&#32;*&#32;(currentSpeed&#32;*&#32;Time.deltaTime);
+<anchor xml:id="__linear_m_p_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__linear_m_p_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;---------------------&#32;Editor-only&#32;callbacks&#32;----------------------&#32;*/</emphasis>
+<anchor xml:id="__linear_m_p_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Changes&#32;angle&#32;of&#32;the&#32;slope,&#32;so&#32;it&#32;can&#32;be&#32;immediately&#32;seen&#32;in&#32;the&#32;editor</emphasis>
+<anchor xml:id="__linear_m_p_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnValidate()
+<anchor xml:id="__linear_m_p_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__linear_m_p_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_direction&#32;=&#32;Quaternion.Euler(0,&#32;0,&#32;<link linkend="_class_movement_patterns_1_1_linear_m_p_1aeedcd9bc1fcd3a20ade597dbe82176a7">directionInDegrees</link>)&#32;*&#32;Vector3.up;
+<anchor xml:id="__linear_m_p_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_direction&#32;=&#32;_direction.normalized;
+<anchor xml:id="__linear_m_p_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__linear_m_p_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;
+<anchor xml:id="__linear_m_p_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Draws&#32;a&#32;line&#32;in&#32;the&#32;editor&#32;to&#32;show&#32;the&#32;direction&#32;of&#32;the&#32;slope</emphasis>
+<anchor xml:id="__linear_m_p_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDrawGizmosSelected()
+<anchor xml:id="__linear_m_p_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__linear_m_p_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Gizmos.color&#32;=&#32;Color.green;
+<anchor xml:id="__linear_m_p_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;position&#32;=&#32;transform.position;
+<anchor xml:id="__linear_m_p_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Gizmos.DrawLine(position,&#32;position&#32;+&#32;_direction);
+<anchor xml:id="__linear_m_p_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__linear_m_p_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__linear_m_p_8cs_source_1l00084"/>00084 }
+</programlisting></section>

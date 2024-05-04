@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_enemy_scripts_1_1_enemy" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::EnemyScripts::Enemy</compoundname>
+    <basecompoundref refid="class_spawnables_1_1_entity" prot="public" virt="non-virtual">Entity</basecompoundref>
+    <innerclass refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop" prot="public">Spawnables::EnemyScripts::Enemy::LootDrop</innerclass>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_1a9f94e91fe2b696b2a0352a89444fa922" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tracksPlayer</definition>
+        <argsstring></argsstring>
+        <name>tracksPlayer</name>
+        <qualifiedname>Spawnables.EnemyScripts.Enemy.tracksPlayer</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the enemy rotates towards the player. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/Enemy.cs" line="43" column="21" bodyfile="Scripts/Spawnables/EnemyScripts/Enemy.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_1afa3c4cbe95c95ff9cd8bdc9e4cec4a5f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int maxHealth</definition>
+        <argsstring></argsstring>
+        <name>maxHealth</name>
+        <qualifiedname>Spawnables.EnemyScripts.Enemy.maxHealth</qualifiedname>
+        <briefdescription>
+<para>Maximum health of the enemy. Health at spawn. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/Enemy.cs" line="48" column="20" bodyfile="Scripts/Spawnables/EnemyScripts/Enemy.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_1a803745769a1671fc8dfc4fb99dfe4f1f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int scoreReward</definition>
+        <argsstring></argsstring>
+        <name>scoreReward</name>
+        <qualifiedname>Spawnables.EnemyScripts.Enemy.scoreReward</qualifiedname>
+        <briefdescription>
+<para>Score reward for killing this enemy. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/Enemy.cs" line="53" column="20" bodyfile="Scripts/Spawnables/EnemyScripts/Enemy.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_1ab5c0981193c6066813423a05842fafe5" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop" kindref="compound">LootDrop</ref> &gt;</type>
+        <definition>List&lt;LootDrop&gt; drops</definition>
+        <argsstring></argsstring>
+        <name>drops</name>
+        <qualifiedname>Spawnables.EnemyScripts.Enemy.drops</qualifiedname>
+        <briefdescription>
+<para>List of items that can be dropped on death. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/Enemy.cs" line="58" column="21" bodyfile="Scripts/Spawnables/EnemyScripts/Enemy.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Defininf characteristics of an enemy entity. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Enemy</label>
+        <link refid="class_spawnables_1_1_enemy_scripts_1_1_enemy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="class_spawnables_1_1_entity"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Enemy</label>
+        <link refid="class_spawnables_1_1_enemy_scripts_1_1_enemy"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="class_spawnables_1_1_entity"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>movementPattern</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/Spawnables/EnemyScripts/Enemy.cs" line="12" column="11" bodyfile="Scripts/Spawnables/EnemyScripts/Enemy.cs" bodystart="13" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_entity_1ad967bb43366194baa6f4a96dcc795a31" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>_isMoving</name></member>
+      <member refid="class_spawnables_1_1_entity_1a0d7cb683a6801bdbc9f42d6a3252e684" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>_timeEnabled</name></member>
+      <member refid="class_spawnables_1_1_entity_1a1e54b149b6984c5899c0f2f8b0cffe7e" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>_timeMPChanged</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1ab5c0981193c6066813423a05842fafe5" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>drops</name></member>
+      <member refid="class_spawnables_1_1_entity_1a8f2052c5dc85bf163c873f99c285216a" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>LifeTime</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1afa3c4cbe95c95ff9cd8bdc9e4cec4a5f" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>maxHealth</name></member>
+      <member refid="class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>movementPattern</name></member>
+      <member refid="class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>MPLifeTime</name></member>
+      <member refid="class_spawnables_1_1_entity_1a84e23ba394eacd818d2e005cc466c4d1" prot="protected" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>OnEnable</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1a803745769a1671fc8dfc4fb99dfe4f1f" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>scoreReward</name></member>
+      <member refid="class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>SetMovementPattern</name></member>
+      <member refid="class_spawnables_1_1_entity_1a2d356d7b3c35033282092fae9a836766" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>SpawnKey</name></member>
+      <member refid="class_spawnables_1_1_entity_1aa71998873389201c17d7773339f63ebe" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>StartMoving</name></member>
+      <member refid="class_spawnables_1_1_entity_1a147504656ad9822da09c2c6461aad435" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>StopMoving</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1a9f94e91fe2b696b2a0352a89444fa922" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>tracksPlayer</name></member>
+      <member refid="class_spawnables_1_1_entity_1aec0783b5a136e042adcc47bae4fe5291" prot="protected" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

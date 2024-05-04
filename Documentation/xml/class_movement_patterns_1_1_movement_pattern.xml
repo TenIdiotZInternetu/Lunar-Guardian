@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_movement_patterns_1_1_movement_pattern" kind="class" language="C#" prot="public" abstract="yes">
+    <compoundname>MovementPatterns::MovementPattern</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <derivedcompoundref refid="class_movement_patterns_1_1_chasing_m_p" prot="public" virt="non-virtual">ChasingMP</derivedcompoundref>
+    <derivedcompoundref refid="class_movement_patterns_1_1_follow_path" prot="public" virt="non-virtual">FollowPath</derivedcompoundref>
+    <derivedcompoundref refid="class_movement_patterns_1_1_linear_m_p" prot="public" virt="non-virtual">LinearMP</derivedcompoundref>
+    <derivedcompoundref refid="class_movement_patterns_1_1_orbiting_m_p" prot="public" virt="non-virtual">OrbitingMP</derivedcompoundref>
+    <derivedcompoundref refid="class_movement_patterns_1_1_sinusoid_m_p" prot="public" virt="non-virtual">SinusoidMP</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_movement_patterns_1_1_movement_pattern_1a04f0e6cf979d3b51e259545b3d33933d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Initialize</definition>
+        <argsstring>(Entity entity)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>MovementPatterns.MovementPattern.Initialize</qualifiedname>
+        <param>
+          <type><ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para>Sets parameters of the movement pattern based on the entity&apos;s state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entity to adjust the parameters to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/MovementPattern.cs" line="19" column="30"/>
+        <referencedby refid="class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef" compoundref="_entity_8cs" startline="70" endline="75">Entity.SetMovementPattern</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_movement_patterns_1_1_movement_pattern_1a784a22d17e4193114212035e8eb6ac0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetNextPosition</definition>
+        <argsstring>(Entity entity)</argsstring>
+        <name>GetNextPosition</name>
+        <qualifiedname>MovementPatterns.MovementPattern.GetNextPosition</qualifiedname>
+        <param>
+          <type><ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the position of the entity in the next frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entity of which position is calculated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The calculated position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/MovementPattern.cs" line="26" column="33"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Defines calculations for the position of an entity in the next frame based on its properties. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+      </node>
+      <node id="2">
+        <label>ChasingMP</label>
+        <link refid="class_movement_patterns_1_1_chasing_m_p"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>FollowPath</label>
+        <link refid="class_movement_patterns_1_1_follow_path"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>LinearMP</label>
+        <link refid="class_movement_patterns_1_1_linear_m_p"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>OrbitingMP</label>
+        <link refid="class_movement_patterns_1_1_orbiting_m_p"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SinusoidMP</label>
+        <link refid="class_movement_patterns_1_1_sinusoid_m_p"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="Scripts/MovementPatterns/MovementPattern.cs" line="11" column="21" bodyfile="Scripts/MovementPatterns/MovementPattern.cs" bodystart="12" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_movement_patterns_1_1_movement_pattern_1a784a22d17e4193114212035e8eb6ac0f" prot="public" virt="non-virtual"><scope>MovementPatterns::MovementPattern</scope><name>GetNextPosition</name></member>
+      <member refid="class_movement_patterns_1_1_movement_pattern_1a04f0e6cf979d3b51e259545b3d33933d" prot="public" virt="non-virtual"><scope>MovementPatterns::MovementPattern</scope><name>Initialize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_v_f_x" kind="namespace" language="C#">
+    <compoundname>VFX</compoundname>
+    <innerclass refid="class_v_f_x_1_1_camera_shake" prot="public">VFX::CameraShake</innerclass>
+    <innerclass refid="class_v_f_x_1_1_damage_flash" prot="public">VFX::DamageFlash</innerclass>
+    <innerclass refid="class_v_f_x_1_1_fade_canvas" prot="public">VFX::FadeCanvas</innerclass>
+    <innerclass refid="class_v_f_x_1_1_pan_camera" prot="public">VFX::PanCamera</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/VFX/CameraShake.cs" line="4" column="1"/>
+  </compounddef>
+</doxygen>

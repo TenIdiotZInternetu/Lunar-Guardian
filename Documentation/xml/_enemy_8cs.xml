@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_enemy_8cs" kind="file" language="C#">
+    <compoundname>Enemy.cs</compoundname>
+    <innerclass refid="class_spawnables_1_1_enemy_scripts_1_1_enemy" prot="public">Spawnables::EnemyScripts::Enemy</innerclass>
+    <innerclass refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop" prot="public">Spawnables::EnemyScripts::Enemy::LootDrop</innerclass>
+    <innernamespace refid="namespace_spawnables">Spawnables</innernamespace>
+    <innernamespace refid="namespace_spawnables_1_1_enemy_scripts">Spawnables::EnemyScripts</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">System;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="namespace_spawnables_1_1_enemy_scripts" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_spawnables_1_1_enemy_scripts" kindref="compound">Spawnables.EnemyScripts</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>[Serializable]</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>[RequireComponent(typeof(EnemyController))]</highlight></codeline>
+<codeline lineno="12" refid="class_spawnables_1_1_enemy_scripts_1_1_enemy" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_spawnables_1_1_enemy_scripts_1_1_enemy" kindref="compound">Enemy</ref><sp/>:<sp/><ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>----------------------<sp/>Types<sp/>----------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[Serializable]</highlight></codeline>
+<codeline lineno="20" refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop" kindref="compound">LootDrop</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25" refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1a438ee5cf329b57641c343066d90791f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>GameObject<sp/><ref refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1a438ee5cf329b57641c343066d90791f3" kindref="member">item</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1a81b230dc1b49a74222fad1a60c5d4fa3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1a81b230dc1b49a74222fad1a60c5d4fa3" kindref="member">dropChance</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1aaf9b2550978ba8945abd846696c14362" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1aaf9b2550978ba8945abd846696c14362" kindref="member">maxDrops</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-------------------<sp/>Public<sp/>Fields<sp/>-------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1a9f94e91fe2b696b2a0352a89444fa922" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1a9f94e91fe2b696b2a0352a89444fa922" kindref="member">tracksPlayer</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1afa3c4cbe95c95ff9cd8bdc9e4cec4a5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1afa3c4cbe95c95ff9cd8bdc9e4cec4a5f" kindref="member">maxHealth</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1a803745769a1671fc8dfc4fb99dfe4f1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1a803745769a1671fc8dfc4fb99dfe4f1f" kindref="member">scoreReward</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1ab5c0981193c6066813423a05842fafe5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;LootDrop&gt;<sp/><ref refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1ab5c0981193c6066813423a05842fafe5" kindref="member">drops</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Scripts/Spawnables/EnemyScripts/Enemy.cs"/>
+  </compounddef>
+</doxygen>

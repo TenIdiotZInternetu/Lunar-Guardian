@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__global_display_settings_8cs_source" xml:lang="en-US">
+<title>GlobalDisplaySettings.cs</title>
+<indexterm><primary>Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__global_display_settings_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__global_display_settings_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__global_display_settings_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__global_display_settings_8cs_source_1l00004"/>00004 
+<anchor xml:id="__global_display_settings_8cs_source_1l00005"/>00005 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_path_creation">PathCreation</link>
+<anchor xml:id="__global_display_settings_8cs_source_1l00006"/>00006 {
+<anchor xml:id="__global_display_settings_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;<emphasis role="comment">//[CreateAssetMenu()]</emphasis>
+<anchor xml:id="__global_display_settings_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>GlobalDisplaySettings&#32;:&#32;ScriptableObject
+<anchor xml:id="__global_display_settings_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__global_display_settings_8cs_source_1l00010"/>00010 
+<anchor xml:id="__global_display_settings_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;HandleType&#32;{&#32;Sphere,&#32;Circle,&#32;Square&#32;};
+<anchor xml:id="__global_display_settings_8cs_source_1l00012"/>00012 
+<anchor xml:id="__global_display_settings_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Appearance&quot;</emphasis>)]
+<anchor xml:id="__global_display_settings_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;anchorSize&#32;=&#32;10;
+<anchor xml:id="__global_display_settings_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;controlSize&#32;=&#32;7f;
+<anchor xml:id="__global_display_settings_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__global_display_settings_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Tooltip(<emphasis role="stringliteral">&quot;Should&#32;the&#32;path&#32;still&#32;be&#32;drawn&#32;when&#32;behind&#32;objects&#32;in&#32;the&#32;scene?&quot;</emphasis>)]
+<anchor xml:id="__global_display_settings_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;visibleBehindObjects&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__global_display_settings_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Tooltip(<emphasis role="stringliteral">&quot;Should&#32;the&#32;path&#32;be&#32;drawn&#32;even&#32;when&#32;the&#32;path&#32;object&#32;is&#32;not&#32;selected?&quot;</emphasis>)]
+<anchor xml:id="__global_display_settings_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;visibleWhenNotSelected&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__global_display_settings_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Tooltip(<emphasis role="stringliteral">&quot;If&#32;true,&#32;control&#32;points&#32;will&#32;be&#32;hidden&#32;when&#32;the&#32;control&#32;point&#32;mode&#32;is&#32;set&#32;to&#32;automatic.&#32;Otherwise&#32;they&#32;will&#32;inactive,&#32;but&#32;still&#32;visible.&quot;</emphasis>)]
+<anchor xml:id="__global_display_settings_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;hideAutoControls&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__global_display_settings_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;HandleType&#32;anchorShape;
+<anchor xml:id="__global_display_settings_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;HandleType&#32;controlShape;
+<anchor xml:id="__global_display_settings_8cs_source_1l00025"/>00025 
+<anchor xml:id="__global_display_settings_8cs_source_1l00026"/>00026 
+<anchor xml:id="__global_display_settings_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Anchor&#32;Colours&quot;</emphasis>)]
+<anchor xml:id="__global_display_settings_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;anchor&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Color(0.95f,&#32;0.25f,&#32;0.25f,&#32;0.85f);
+<anchor xml:id="__global_display_settings_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;anchorHighlighted&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Color(1,&#32;0.57f,&#32;0.4f);
+<anchor xml:id="__global_display_settings_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;anchorSelected&#32;=&#32;Color.white;
+<anchor xml:id="__global_display_settings_8cs_source_1l00031"/>00031 
+<anchor xml:id="__global_display_settings_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Control&#32;Colours&quot;</emphasis>)]
+<anchor xml:id="__global_display_settings_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;control&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Color(0.35f,&#32;0.6f,&#32;1,&#32;0.85f);
+<anchor xml:id="__global_display_settings_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;controlHighlighted&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Color(0.8f,&#32;0.67f,&#32;0.97f);
+<anchor xml:id="__global_display_settings_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;controlSelected&#32;=&#32;Color.white;
+<anchor xml:id="__global_display_settings_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;handleDisabled&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Color(1,&#32;1,&#32;1,&#32;0.2f);
+<anchor xml:id="__global_display_settings_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;controlLine&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Color(0,&#32;0,&#32;0,&#32;0.35f);
+<anchor xml:id="__global_display_settings_8cs_source_1l00038"/>00038 
+<anchor xml:id="__global_display_settings_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Bezier&#32;Path&#32;Colours&quot;</emphasis>)]
+<anchor xml:id="__global_display_settings_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;bezierPath&#32;=&#32;Color.green;
+<anchor xml:id="__global_display_settings_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;highlightedPath&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Color(1,&#32;0.6f,&#32;0);
+<anchor xml:id="__global_display_settings_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;bounds&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Color(1,&#32;1,&#32;1,&#32;.4f);
+<anchor xml:id="__global_display_settings_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;segmentBounds&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Color(1,&#32;1,&#32;1,&#32;.4f);
+<anchor xml:id="__global_display_settings_8cs_source_1l00044"/>00044 
+<anchor xml:id="__global_display_settings_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Vertex&#32;Path&#32;Colours&quot;</emphasis>)]
+<anchor xml:id="__global_display_settings_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;vertexPath&#32;=&#32;Color.white;
+<anchor xml:id="__global_display_settings_8cs_source_1l00047"/>00047 
+<anchor xml:id="__global_display_settings_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Header(<emphasis role="stringliteral">&quot;Normals&quot;</emphasis>)]
+<anchor xml:id="__global_display_settings_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Color&#32;normals&#32;=&#32;Color.yellow;
+<anchor xml:id="__global_display_settings_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Range(0,1)]
+<anchor xml:id="__global_display_settings_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;normalsLength&#32;=&#32;.1f;
+<anchor xml:id="__global_display_settings_8cs_source_1l00052"/>00052 
+<anchor xml:id="__global_display_settings_8cs_source_1l00053"/>00053 <emphasis role="preprocessor">#if&#32;UNITY_EDITOR</emphasis>
+<anchor xml:id="__global_display_settings_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;GlobalDisplaySettings&#32;Load()&#32;{
+<anchor xml:id="__global_display_settings_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>[]&#32;guids&#32;=&#32;UnityEditor.AssetDatabase.FindAssets(<emphasis role="stringliteral">&quot;t:GlobalDisplaySettings&quot;</emphasis>);
+<anchor xml:id="__global_display_settings_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(guids.Length&#32;==&#32;0)
+<anchor xml:id="__global_display_settings_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__global_display_settings_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogWarning(<emphasis role="stringliteral">&quot;Could&#32;not&#32;find&#32;DisplaySettings&#32;asset.&#32;Will&#32;use&#32;default&#32;settings&#32;instead.&quot;</emphasis>);
+<anchor xml:id="__global_display_settings_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ScriptableObject.CreateInstance&lt;GlobalDisplaySettings&gt;();
+<anchor xml:id="__global_display_settings_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__global_display_settings_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__global_display_settings_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__global_display_settings_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;path&#32;=&#32;UnityEditor.AssetDatabase.GUIDToAssetPath(guids[0]);
+<anchor xml:id="__global_display_settings_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;UnityEditor.AssetDatabase.LoadAssetAtPath&lt;GlobalDisplaySettings&gt;(path);
+<anchor xml:id="__global_display_settings_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__global_display_settings_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__global_display_settings_8cs_source_1l00067"/>00067 <emphasis role="preprocessor">#endif</emphasis>
+<anchor xml:id="__global_display_settings_8cs_source_1l00068"/>00068 
+<anchor xml:id="__global_display_settings_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__global_display_settings_8cs_source_1l00070"/>00070 }
+</programlisting></section>

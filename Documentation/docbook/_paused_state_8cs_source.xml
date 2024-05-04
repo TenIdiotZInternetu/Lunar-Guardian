@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__paused_state_8cs_source" xml:lang="en-US">
+<title>PausedState.cs</title>
+<indexterm><primary>Scripts/GameManager/States/PausedState.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__paused_state_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System;
+<anchor xml:id="__paused_state_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_player_scripts">PlayerScripts</link>;
+<anchor xml:id="__paused_state_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_spawnables">Spawnables</link>;
+<anchor xml:id="__paused_state_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_u_i_1_1_menus">UI.Menus</link>;
+<anchor xml:id="__paused_state_8cs_source_1l00005"/>00005 
+<anchor xml:id="__paused_state_8cs_source_1l00006"/>00006 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_game_manager">GameManager</link>
+<anchor xml:id="__paused_state_8cs_source_1l00007"/>00007 {
+<anchor xml:id="__paused_state_8cs_source_1l00011"/><link linkend="_class_game_manager_1_1_paused_state">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_game_manager_1_1_paused_state">PausedState</link>&#32;:&#32;<link linkend="_class_game_manager_1_1_game_state">GameState</link>
+<anchor xml:id="__paused_state_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__paused_state_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*------------------&#32;Public&#32;Fields&#32;------------------*/</emphasis>
+<anchor xml:id="__paused_state_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__paused_state_8cs_source_1l00018"/><link linkend="_class_game_manager_1_1_paused_state_1a13b2ec7901bb67df6b6d8e1e931e9b04">00018</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_game_manager_1_1_playing_state">PlayingState</link>&#32;<link linkend="_class_game_manager_1_1_paused_state_1a13b2ec7901bb67df6b6d8e1e931e9b04">playingState</link>;
+<anchor xml:id="__paused_state_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__paused_state_8cs_source_1l00023"/><link linkend="_class_game_manager_1_1_paused_state_1a8669cdf1b0df4e9df579b33bb6ad3a4d">00023</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;PauseMenu&#32;<link linkend="_class_game_manager_1_1_paused_state_1a8669cdf1b0df4e9df579b33bb6ad3a4d">pauseMenu</link>;
+<anchor xml:id="__paused_state_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__paused_state_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*------------------&#32;Public&#32;Methods&#32;-----------------*/</emphasis>
+<anchor xml:id="__paused_state_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__paused_state_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;ChangeToThisState()
+<anchor xml:id="__paused_state_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__paused_state_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_manager_1_1_paused_state_1a8669cdf1b0df4e9df579b33bb6ad3a4d">pauseMenu</link>.OpenMenu();
+<anchor xml:id="__paused_state_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Controls.CancelRelease&#32;+=&#32;EnableUnpausing;
+<anchor xml:id="__paused_state_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__paused_state_8cs_source_1l00032"/>00032 
+<anchor xml:id="__paused_state_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;LeaveThisState()
+<anchor xml:id="__paused_state_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__paused_state_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Prevent&#32;unpausing&#32;immediately&#32;after&#32;pausing</emphasis>
+<anchor xml:id="__paused_state_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Controls.Cancel&#32;-=&#32;Unpause;
+<anchor xml:id="__paused_state_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__paused_state_8cs_source_1l00038"/>00038 
+<anchor xml:id="__paused_state_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*-----------------&#32;Private&#32;Methods&#32;-----------------*/</emphasis>
+<anchor xml:id="__paused_state_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__paused_state_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Closes&#32;the&#32;menu&#32;and&#32;returns&#32;to&#32;the&#32;playing&#32;state</emphasis>
+<anchor xml:id="__paused_state_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Unpause()
+<anchor xml:id="__paused_state_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__paused_state_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_game_manager_1_1_paused_state_1a8669cdf1b0df4e9df579b33bb6ad3a4d">pauseMenu</link>.CloseMenu();
+<anchor xml:id="__paused_state_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__paused_state_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_game_manager_1_1_paused_state_1a13b2ec7901bb67df6b6d8e1e931e9b04">playingState</link>&#32;==&#32;<emphasis role="keyword">null</emphasis>)
+<anchor xml:id="__paused_state_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__paused_state_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;NullReferenceException(<emphasis role="stringliteral">&quot;playingState&#32;not&#32;specified&quot;</emphasis>);
+<anchor xml:id="__paused_state_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__paused_state_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__paused_state_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_namespace_game_manager">GameManager</link>.Instance.ChangeState(<link linkend="_class_game_manager_1_1_paused_state_1a13b2ec7901bb67df6b6d8e1e931e9b04">playingState</link>);
+<anchor xml:id="__paused_state_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__paused_state_8cs_source_1l00053"/>00053 
+<anchor xml:id="__paused_state_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Prevents&#32;unpausing&#32;immediately&#32;after&#32;pausing</emphasis>
+<anchor xml:id="__paused_state_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;EnableUnpausing()
+<anchor xml:id="__paused_state_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__paused_state_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Controls.CancelRelease&#32;-=&#32;EnableUnpausing;
+<anchor xml:id="__paused_state_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Controls.Cancel&#32;+=&#32;Unpause;
+<anchor xml:id="__paused_state_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__paused_state_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__paused_state_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Unsubscribe&#32;from&#32;the&#32;event&#32;when&#32;the&#32;object&#32;is&#32;destroyed</emphasis>
+<anchor xml:id="__paused_state_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDestroy()
+<anchor xml:id="__paused_state_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__paused_state_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Controls.CancelRelease&#32;-=&#32;EnableUnpausing;
+<anchor xml:id="__paused_state_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Controls.Cancel&#32;-=&#32;Unpause;
+<anchor xml:id="__paused_state_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__paused_state_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__paused_state_8cs_source_1l00068"/>00068 }
+</programlisting></section>

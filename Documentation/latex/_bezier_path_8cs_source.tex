@@ -1,0 +1,620 @@
+\doxysection{Bezier\+Path.\+cs}
+\hypertarget{_bezier_path_8cs_source}{}\label{_bezier_path_8cs_source}\index{Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs@{Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_path_creation_1_1_utility}{PathCreation.Utility}};}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00006}\mbox{\hyperlink{namespace_path_creation}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_path_creation}{PathCreation}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00017}00017\ \ \ \ \ [System.Serializable]}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00018}\mbox{\hyperlink{class_path_creation_1_1_bezier_path}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_path_creation_1_1_bezier_path}{BezierPath}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{event}\ System.Action\ OnModified;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ ControlMode\ \{\ Aligned,\ Mirrored,\ Free,\ Automatic\ \};}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00022}00022\ \textcolor{preprocessor}{\ \#region\ Fields}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00024}00024\ \ [SerializeField,\ HideInInspector]}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00025}00025\ \ List<Vector3>\ points;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00026}00026\ \ [SerializeField,\ HideInInspector]}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00027}00027\ \ \textcolor{keywordtype}{bool}\ isClosed;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00028}00028\ \ [SerializeField,\ HideInInspector]}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00029}00029\ \ PathSpace\ space;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00030}00030\ \ [SerializeField,\ HideInInspector]}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00031}00031\ \ ControlMode\ controlMode;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00032}00032\ \ [SerializeField,\ HideInInspector]}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00033}00033\ \ \textcolor{keywordtype}{float}\ autoControlLength\ =\ .3f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00034}00034\ \ [SerializeField,\ HideInInspector]}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00035}00035\ \ \textcolor{keywordtype}{bool}\ boundsUpToDate;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00036}00036\ \ [SerializeField,\ HideInInspector]}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00037}00037\ \ Bounds\ bounds;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00039}00039\ \ \textcolor{comment}{//\ Normals\ settings}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00040}00040\ \ [SerializeField,\ HideInInspector]}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00041}00041\ \ List<float>\ perAnchorNormalsAngle;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00042}00042\ \ [SerializeField,\ HideInInspector]}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00043}00043\ \ \textcolor{keywordtype}{float}\ globalNormalsAngle;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00044}00044\ \ [SerializeField,\ HideInInspector]}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00045}00045\ \ \textcolor{keywordtype}{bool}\ flipNormals;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00047}00047\ \textcolor{preprocessor}{\ \#endregion}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00049}00049\ \textcolor{preprocessor}{\ \#region\ Constructors}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00054}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_abc1cd71906862025c18067de4ac55fcd}{00054}}\ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_abc1cd71906862025c18067de4ac55fcd}{BezierPath}}\ (Vector3\ centre,\ \textcolor{keywordtype}{bool}\ isClosed\ =\ \textcolor{keyword}{false},\ PathSpace\ space\ =\ PathSpace.xyz)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00056}00056\ \ Vector3\ dir\ =\ (space\ ==\ PathSpace.xz)\ ?\ Vector3.forward\ :\ Vector3.up;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00057}00057\ \ \textcolor{keywordtype}{float}\ width\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00058}00058\ \ \textcolor{keywordtype}{float}\ controlHeight\ =\ .5f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00059}00059\ \ \textcolor{keywordtype}{float}\ controlWidth\ =\ 1f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00060}00060\ \ points\ =\ \textcolor{keyword}{new}\ List<Vector3>\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00061}00061\ \ centre\ +\ Vector3.left\ *\ width,}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00062}00062\ \ centre\ +\ Vector3.left\ *\ controlWidth\ +\ dir\ *\ controlHeight,}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00063}00063\ \ centre\ +\ Vector3.right\ *\ controlWidth\ -\/\ dir\ *\ controlHeight,}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00064}00064\ \ centre\ +\ Vector3.right\ *\ width}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00065}00065\ \ \};}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00067}00067\ \ perAnchorNormalsAngle\ =\ \textcolor{keyword}{new}\ List<float>\ ()\ \{\ 0,\ 0\ \};}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00069}00069\ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a0cacc3cec2744929171dc4d0563ea19e}{Space}}\ =\ space;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00070}00070\ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a26f01b589d00384406eb54173d4d7aca}{IsClosed}}\ =\ isClosed;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00077}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a86aae663e474da906ba3da4eff2b35f9}{00077}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a86aae663e474da906ba3da4eff2b35f9}{BezierPath}}\ (IEnumerable<Vector3>\ points,\ \textcolor{keywordtype}{bool}\ isClosed\ =\ \textcolor{keyword}{false},\ PathSpace\ space\ =\ PathSpace.xyz)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3[]\ pointsArray\ =\ points.ToArray\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pointsArray.Length\ <\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogError\ (\textcolor{stringliteral}{"{}Path\ requires\ at\ least\ 2\ anchor\ points."{}});}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ controlMode\ =\ ControlMode.Automatic;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.points\ =\ \textcolor{keyword}{new}\ List<Vector3>\ \{\ pointsArray[0],\ Vector3.zero,\ Vector3.zero,\ pointsArray[1]\ \};}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ perAnchorNormalsAngle\ =\ \textcolor{keyword}{new}\ List<float>\ (\textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[]\ \{\ 0,\ 0\ \});}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 2;\ i\ <\ pointsArray.Length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ab12baf2f95b49820320320618b733948}{AddSegmentToEnd}}\ (pointsArray[i]);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ perAnchorNormalsAngle.Add\ (0);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ this.Space\ =\ space;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ this.IsClosed\ =\ isClosed;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00101}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a7850bd613d1984e910404cb7887f6d07}{00101}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a7850bd613d1984e910404cb7887f6d07}{BezierPath}}\ (IEnumerable<Vector2>\ transforms,\ \textcolor{keywordtype}{bool}\ isClosed\ =\ \textcolor{keyword}{false},\ PathSpace\ space\ =\ PathSpace.xy):}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ this\ (transforms.Select\ (p\ =>\ new\ Vector3\ (p.x,\ p.y)),\ isClosed,\ space)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00108}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a2dca585e9b7ab2d6de263f9ee94d0075}{00108}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a2dca585e9b7ab2d6de263f9ee94d0075}{BezierPath}}\ (IEnumerable<Transform>\ transforms,\ \textcolor{keywordtype}{bool}\ isClosed\ =\ \textcolor{keyword}{false},\ PathSpace\ space\ =\ PathSpace.xy):}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ this\ (transforms.Select\ (t\ =>\ t.position),\ isClosed,\ space)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00115}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a72ed8d4817462c4937e638d5f136dd07}{00115}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a72ed8d4817462c4937e638d5f136dd07}{BezierPath}}\ (IEnumerable<Vector2>\ points,\ PathSpace\ space\ =\ PathSpace.xyz,\ \textcolor{keywordtype}{bool}\ isClosed\ =\ \textcolor{keyword}{false}):}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ this\ (points.Select\ (p\ =>\ new\ Vector3\ (p.x,\ p.y)),\ isClosed,\ space)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00118}00118\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00120}00120\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Public\ methods\ and\ accessors}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00123}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad43c2ada379c61ab862f177c8505ace8}{00123}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \textcolor{keyword}{this}\ [\textcolor{keywordtype}{int}\ i]\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a4738362b3efc98a1c60a825b306a0892}{GetPoint}}\ (i);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00130}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a4738362b3efc98a1c60a825b306a0892}{00130}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a4738362b3efc98a1c60a825b306a0892}{GetPoint}}\ (\textcolor{keywordtype}{int}\ i)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ points[i];}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00135}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a0d06f4dbe40cd7406bb66226b1b2a248}{00135}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a0d06f4dbe40cd7406bb66226b1b2a248}{SetPoint}}\ (\textcolor{keywordtype}{int}\ i,\ Vector3\ localPosition,\ \textcolor{keywordtype}{bool}\ suppressPathModifiedEvent\ =\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ points[i]\ =\ localPosition;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!suppressPathModifiedEvent)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00143}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a76122faf62db75c06e32a6aca7ffd666}{00143}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a76122faf62db75c06e32a6aca7ffd666}{NumPoints}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ points.Count;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00150}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a7faf89e9e535007f3f491d54c26efe60}{00150}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a7faf89e9e535007f3f491d54c26efe60}{NumAnchorPoints}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a26f01b589d00384406eb54173d4d7aca}{IsClosed}})\ ?\ points.Count\ /\ 3\ :\ (points.Count\ +\ 2)\ /\ 3;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00157}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_aba6ba2ef023e1b5fcc541ce2ec07da30}{00157}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_aba6ba2ef023e1b5fcc541ce2ec07da30}{NumSegments}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ points.Count\ /\ 3;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00165}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a0cacc3cec2744929171dc4d0563ea19e}{00165}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ PathSpace\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a0cacc3cec2744929171dc4d0563ea19e}{Space}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ space;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ !=\ space)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PathSpace\ previousSpace\ =\ space;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ space\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ac584b000da2691b488b51416e1fb4a66}{UpdateToNewPathSpace}}\ (previousSpace);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00179}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a26f01b589d00384406eb54173d4d7aca}{00179}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a26f01b589d00384406eb54173d4d7aca}{IsClosed}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isClosed;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isClosed\ !=\ value)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isClosed\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a95b2dd724116a5cdfd043b44fe396a5c}{UpdateClosedState}}\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00197}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a16552136821334ce771512319d7be9f4}{00197}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ControlMode\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a16552136821334ce771512319d7be9f4}{ControlPointMode}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ controlMode;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ !=\ value)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ controlMode\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ ==\ ControlMode.Automatic)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a6707c57f434f60dc9f14e80907d01ee5}{AutoSetAllControlPoints}}\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00213}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad77316d5b3c1726244503f8b2540fe2d}{00213}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad77316d5b3c1726244503f8b2540fe2d}{AutoControlLength}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ autoControlLength;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ =\ Mathf.Max\ (value,\ .01f);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (autoControlLength\ !=\ value)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ autoControlLength\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a6707c57f434f60dc9f14e80907d01ee5}{AutoSetAllControlPoints}}\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00228}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_ab12baf2f95b49820320320618b733948}{00228}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ab12baf2f95b49820320320618b733948}{AddSegmentToEnd}}\ (Vector3\ anchorPos)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ lastAnchorIndex\ =\ points.Count\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ position\ for\ new\ control\ to\ be\ mirror\ of\ its\ counterpart}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ secondControlForOldLastAnchorOffset\ =\ (points[lastAnchorIndex]\ -\/\ points[lastAnchorIndex\ -\/\ 1]);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ !=\ ControlMode.Mirrored\ \&\&\ controlMode\ !=\ ControlMode.Automatic)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ position\ for\ new\ control\ to\ be\ aligned\ with\ its\ counterpart,\ but\ with\ a\ length\ of\ half\ the\ distance\ from\ prev\ to\ new\ anchor}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dstPrevToNewAnchor\ =\ (points[lastAnchorIndex]\ -\/\ anchorPos).magnitude;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ secondControlForOldLastAnchorOffset\ =\ (points[lastAnchorIndex]\ -\/\ points[lastAnchorIndex\ -\/\ 1]).normalized\ *\ dstPrevToNewAnchor\ *\ .5f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ secondControlForOldLastAnchor\ =\ points[lastAnchorIndex]\ +\ secondControlForOldLastAnchorOffset;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ controlForNewAnchor\ =\ (anchorPos\ +\ secondControlForOldLastAnchor)\ *\ .5f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00243}00243\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ points.Add\ (secondControlForOldLastAnchor);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ points.Add\ (controlForNewAnchor);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ points.Add\ (anchorPos);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ perAnchorNormalsAngle.Add\ (perAnchorNormalsAngle[perAnchorNormalsAngle.Count\ -\/\ 1]);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ ==\ ControlMode.Automatic)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad8df689d28cf8306e3ef28089427cb33}{AutoSetAllAffectedControlPoints}}\ (points.Count\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00252}00252\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00257}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_ab9657215c02544661b55b75f2e9e0867}{00257}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ab9657215c02544661b55b75f2e9e0867}{AddSegmentToStart}}\ (Vector3\ anchorPos)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ position\ for\ new\ control\ to\ be\ mirror\ of\ its\ counterpart}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ secondControlForOldFirstAnchorOffset\ =\ (points[0]\ -\/\ points[1]);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ !=\ ControlMode.Mirrored\ \&\&\ controlMode\ !=\ ControlMode.Automatic)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ position\ for\ new\ control\ to\ be\ aligned\ with\ its\ counterpart,\ but\ with\ a\ length\ of\ half\ the\ distance\ from\ prev\ to\ new\ anchor}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dstPrevToNewAnchor\ =\ (points[0]\ -\/\ anchorPos).magnitude;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ secondControlForOldFirstAnchorOffset\ =\ secondControlForOldFirstAnchorOffset.normalized\ *\ dstPrevToNewAnchor\ *\ .5f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ secondControlForOldFirstAnchor\ =\ points[0]\ +\ secondControlForOldFirstAnchorOffset;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ controlForNewAnchor\ =\ (anchorPos\ +\ secondControlForOldFirstAnchor)\ *\ .5f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ points.Insert\ (0,\ anchorPos);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ points.Insert\ (1,\ controlForNewAnchor);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ points.Insert\ (2,\ secondControlForOldFirstAnchor);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ perAnchorNormalsAngle.Insert\ (0,\ perAnchorNormalsAngle[0]);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00276}00276\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ ==\ ControlMode.Automatic)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad8df689d28cf8306e3ef28089427cb33}{AutoSetAllAffectedControlPoints}}\ (0);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00281}00281\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00284}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a33b79a7b74d774133da2f4abc0440bf3}{00284}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a33b79a7b74d774133da2f4abc0440bf3}{SplitSegment}}\ (Vector3\ anchorPos,\ \textcolor{keywordtype}{int}\ segmentIndex,\ \textcolor{keywordtype}{float}\ splitTime)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ splitTime\ =\ Mathf.Clamp01\ (splitTime);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ ==\ ControlMode.Automatic)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points.InsertRange\ (segmentIndex\ *\ 3\ +\ 2,\ \textcolor{keyword}{new}\ Vector3[]\ \{\ Vector3.zero,\ anchorPos,\ Vector3.zero\ \});}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad8df689d28cf8306e3ef28089427cb33}{AutoSetAllAffectedControlPoints}}\ (segmentIndex\ *\ 3\ +\ 3);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Split\ the\ curve\ to\ find\ where\ control\ points\ can\ be\ inserted\ to\ least\ affect\ shape\ of\ curve}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Curve\ will\ probably\ be\ deformed\ slightly\ since\ splitTime\ is\ only\ an\ estimate\ (for\ performance\ reasons,\ and\ so\ doesn't\ correspond\ exactly\ with\ anchorPos)}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3[][]\ splitSegment\ =\ CubicBezierUtility.SplitCurve\ (\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a6185499e7da708f8fb6e99f698436d36}{GetPointsInSegment}}\ (segmentIndex),\ splitTime);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points.InsertRange\ (segmentIndex\ *\ 3\ +\ 2,\ \textcolor{keyword}{new}\ Vector3[]\ \{\ splitSegment[0][2],\ splitSegment[1][0],\ splitSegment[1][1]\ \});}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ newAnchorIndex\ =\ segmentIndex\ *\ 3\ +\ 3;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad80661af25a34919eeba7403348fd75f}{MovePoint}}\ (newAnchorIndex\ -\/\ 2,\ splitSegment[0][1],\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad80661af25a34919eeba7403348fd75f}{MovePoint}}\ (newAnchorIndex\ +\ 2,\ splitSegment[1][2],\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad80661af25a34919eeba7403348fd75f}{MovePoint}}\ (newAnchorIndex,\ anchorPos,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ ==\ ControlMode.Mirrored)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ avgDst\ =\ ((splitSegment[0][2]\ -\/\ anchorPos).magnitude\ +\ (splitSegment[1][1]\ -\/\ anchorPos).magnitude)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad80661af25a34919eeba7403348fd75f}{MovePoint}}\ (newAnchorIndex\ +\ 1,\ anchorPos\ +\ (splitSegment[1][1]\ -\/\ anchorPos).normalized\ *\ avgDst,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00305}00305\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Insert\ angle\ for\ new\ anchor\ (value\ should\ be\ set\ inbetween\ neighbour\ anchor\ angles)}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ newAnchorAngleIndex\ =\ (segmentIndex\ +\ 1)\ \%\ perAnchorNormalsAngle.Count;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numAngles\ =\ perAnchorNormalsAngle.Count;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ anglePrev\ =\ perAnchorNormalsAngle[segmentIndex];}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ angleNext\ =\ perAnchorNormalsAngle[newAnchorAngleIndex];}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ splitAngle\ =\ Mathf.LerpAngle\ (anglePrev,\ angleNext,\ splitTime);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ perAnchorNormalsAngle.Insert\ (newAnchorAngleIndex,\ splitAngle);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00313}00313\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00315}00315\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00318}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_ab53e85db248fb10680799c89cef3ad89}{00318}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ab53e85db248fb10680799c89cef3ad89}{DeleteSegment}}\ (\textcolor{keywordtype}{int}\ anchorIndex)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Don't\ delete\ segment\ if\ its\ the\ last\ one\ remaining\ (or\ if\ only\ two\ segments\ in\ a\ closed\ path)}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_path_creation_1_1_bezier_path_aba6ba2ef023e1b5fcc541ce2ec07da30}{NumSegments}}\ >\ 2\ ||\ !isClosed\ \&\&\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_aba6ba2ef023e1b5fcc541ce2ec07da30}{NumSegments}}\ >\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (anchorIndex\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[points.Count\ -\/\ 1]\ =\ points[2];}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points.RemoveRange\ (0,\ 3);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (anchorIndex\ ==\ points.Count\ -\/\ 1\ \&\&\ !isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points.RemoveRange\ (anchorIndex\ -\/\ 2,\ 3);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points.RemoveRange\ (anchorIndex\ -\/\ 1,\ 3);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00331}00331\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ perAnchorNormalsAngle.RemoveAt\ (anchorIndex\ /\ 3);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00333}00333\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ ==\ ControlMode.Automatic)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a6707c57f434f60dc9f14e80907d01ee5}{AutoSetAllControlPoints}}\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00337}00337\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00340}00340\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00341}00341\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00343}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a6185499e7da708f8fb6e99f698436d36}{00343}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3[]\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a6185499e7da708f8fb6e99f698436d36}{GetPointsInSegment}}\ (\textcolor{keywordtype}{int}\ segmentIndex)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ segmentIndex\ =\ Mathf.Clamp\ (segmentIndex,\ 0,\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_aba6ba2ef023e1b5fcc541ce2ec07da30}{NumSegments}}\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Vector3[]\ \{\ \textcolor{keyword}{this}\ [segmentIndex\ *\ 3],\ \textcolor{keyword}{this}\ [segmentIndex\ *\ 3\ +\ 1],\ \textcolor{keyword}{this}\ [segmentIndex\ *\ 3\ +\ 2],\ \textcolor{keyword}{this}\ [\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (segmentIndex\ *\ 3\ +\ 3)]\ \};}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00346}00346\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00347}00347\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00349}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad80661af25a34919eeba7403348fd75f}{00349}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad80661af25a34919eeba7403348fd75f}{MovePoint}}\ (\textcolor{keywordtype}{int}\ i,\ Vector3\ pointPos,\ \textcolor{keywordtype}{bool}\ suppressPathModifiedEvent\ =\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00350}00350\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00351}00351\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (space\ ==\ PathSpace.xy)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pointPos.z\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (space\ ==\ PathSpace.xz)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pointPos.y\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00355}00355\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00356}00356\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ deltaMove\ =\ pointPos\ -\/\ points[i];}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00357}00357\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isAnchorPoint\ =\ i\ \%\ 3\ ==\ 0;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00358}00358\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00359}00359\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Don't\ process\ control\ point\ if\ control\ mode\ is\ set\ to\ automatic}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00360}00360\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isAnchorPoint\ ||\ controlMode\ !=\ ControlMode.Automatic)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00361}00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[i]\ =\ pointPos;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00362}00362\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00363}00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ ==\ ControlMode.Automatic)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00364}00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad8df689d28cf8306e3ef28089427cb33}{AutoSetAllAffectedControlPoints}}\ (i);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00365}00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00366}00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Move\ control\ points\ with\ anchor\ point}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00367}00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isAnchorPoint)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00368}00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ +\ 1\ <\ points.Count\ ||\ isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00369}00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (i\ +\ 1)]\ +=\ deltaMove;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00370}00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00371}00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ -\/\ 1\ >=\ 0\ ||\ isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00372}00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (i\ -\/\ 1)]\ +=\ deltaMove;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00375}00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ not\ in\ free\ control\ mode,\ then\ move\ attached\ control\ point\ to\ be\ aligned/mirrored\ (depending\ on\ mode)}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00376}00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (controlMode\ !=\ ControlMode.Free)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ nextPointIsAnchor\ =\ (i\ +\ 1)\ \%\ 3\ ==\ 0;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00378}00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ attachedControlIndex\ =\ (nextPointIsAnchor)\ ?\ i\ +\ 2\ :\ i\ -\/\ 2;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ anchorIndex\ =\ (nextPointIsAnchor)\ ?\ i\ +\ 1\ :\ i\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00380}00380\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00381}00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (attachedControlIndex\ >=\ 0\ \&\&\ attachedControlIndex\ <\ points.Count\ ||\ isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00382}00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ distanceFromAnchor\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00383}00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ in\ aligned\ mode,\ then\ attached\ control's\ current\ distance\ from\ anchor\ point\ should\ be\ maintained}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00384}00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ ==\ ControlMode.Aligned)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00385}00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distanceFromAnchor\ =\ (points[\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (anchorIndex)]\ -\/\ points[\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (attachedControlIndex)]).magnitude;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00386}00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00387}00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ in\ mirrored\ mode,\ then\ both\ control\ points\ should\ have\ the\ same\ distance\ from\ the\ anchor\ point}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00388}00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (controlMode\ ==\ ControlMode.Mirrored)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00389}00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distanceFromAnchor\ =\ (points[\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (anchorIndex)]\ -\/\ points[i]).magnitude;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00390}00390\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00392}00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ dir\ =\ (points[\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (anchorIndex)]\ -\/\ pointPos).normalized;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00393}00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (attachedControlIndex)]\ =\ points[\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (anchorIndex)]\ +\ dir\ *\ distanceFromAnchor;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00394}00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00395}00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00396}00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00397}00397\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!suppressPathModifiedEvent)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00401}00401\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00402}00402\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00403}00403\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00405}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a5a1537c7d09255d14329cfe10d09ed41}{00405}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Bounds\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a5a1537c7d09255d14329cfe10d09ed41}{CalculateBoundsWithTransform}}\ (Transform\ transform)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00406}00406\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Loop\ through\ all\ segments\ and\ keep\ track\ of\ the\ minmax\ points\ of\ all\ their\ bounding\ boxes}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00407}00407\ \ \ \ \ \ \ \ \ \ \ \ \ MinMax3D\ minMax\ =\ \textcolor{keyword}{new}\ MinMax3D\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00408}00408\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00409}00409\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_aba6ba2ef023e1b5fcc541ce2ec07da30}{NumSegments}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00410}00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3[]\ p\ =\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a6185499e7da708f8fb6e99f698436d36}{GetPointsInSegment}}\ (i);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00411}00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ p.Length;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00412}00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p[j]\ =\ MathUtility.TransformPoint\ (p[j],\ transform,\ space);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00413}00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00414}00414\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00415}00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minMax.AddValue\ (p[0]);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00416}00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minMax.AddValue\ (p[3]);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00417}00417\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00418}00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<float>\ extremePointTimes\ =\ CubicBezierUtility.ExtremePointTimes\ (p[0],\ p[1],\ p[2],\ p[3]);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00419}00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\textcolor{keywordtype}{float}\ t\ \textcolor{keywordflow}{in}\ extremePointTimes)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00420}00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minMax.AddValue\ (CubicBezierUtility.EvaluateCurve\ (p,\ t));}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00421}00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00422}00422\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00423}00423\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00424}00424\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Bounds\ ((minMax.Min\ +\ minMax.Max)\ /\ 2,\ minMax.Max\ -\/\ minMax.Min);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00425}00425\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00426}00426\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00428}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a4ef9d3ec8744096f518dc1a650fc26c1}{00428}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a4ef9d3ec8744096f518dc1a650fc26c1}{FlipNormals}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00429}00429\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00430}00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ flipNormals;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00431}00431\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00432}00432\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00433}00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (flipNormals\ !=\ value)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00434}00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flipNormals\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00435}00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00436}00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00437}00437\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00438}00438\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00439}00439\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00441}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_abe9a53426b4002473d61f85798101296}{00441}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_abe9a53426b4002473d61f85798101296}{GlobalNormalsAngle}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00442}00442\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00443}00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ globalNormalsAngle;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00444}00444\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00445}00445\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00446}00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (value\ !=\ globalNormalsAngle)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00447}00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ globalNormalsAngle\ =\ value;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00448}00448\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00449}00449\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00450}00450\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00451}00451\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00452}00452\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00454}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a094e07c9b053cf728b73b31fd00369b7}{00454}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a094e07c9b053cf728b73b31fd00369b7}{GetAnchorNormalAngle}}\ (\textcolor{keywordtype}{int}\ anchorIndex)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00455}00455\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ perAnchorNormalsAngle[anchorIndex]\ \%\ 360;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00456}00456\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00457}00457\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00459}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a65a9570a5f501aacc4571e247d3507c2}{00459}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a65a9570a5f501aacc4571e247d3507c2}{SetAnchorNormalAngle}}\ (\textcolor{keywordtype}{int}\ anchorIndex,\ \textcolor{keywordtype}{float}\ angle)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00460}00460\ \ \ \ \ \ \ \ \ \ \ \ \ angle\ =\ (angle\ +\ 360)\ \%\ 360;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00461}00461\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (perAnchorNormalsAngle[anchorIndex]\ !=\ angle)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00462}00462\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ perAnchorNormalsAngle[anchorIndex]\ =\ angle;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00463}00463\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00464}00464\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00465}00465\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00466}00466\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00468}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a612579356063be5d372a0db66a490299}{00468}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a612579356063be5d372a0db66a490299}{ResetNormalAngles}}\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00469}00469\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ perAnchorNormalsAngle.Count;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00470}00470\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ perAnchorNormalsAngle[i]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00471}00471\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00472}00472\ \ \ \ \ \ \ \ \ \ \ \ \ globalNormalsAngle\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00473}00473\ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00474}00474\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00475}00475\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00477}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a7a1adffc40fe07f5e2db82a63b6fb33a}{00477}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Bounds\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a7a1adffc40fe07f5e2db82a63b6fb33a}{PathBounds}}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00478}00478\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00479}00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!boundsUpToDate)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00480}00480\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a1db9cbd6086ef5b725ef6dca456b0dc5}{UpdateBounds}}\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00481}00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00482}00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ bounds;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00483}00483\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00484}00484\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00485}00485\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00486}00486\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00487}00487\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00488}00488\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Internal\ methods\ and\ accessors}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00489}00489\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00491}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a1db9cbd6086ef5b725ef6dca456b0dc5}{00491}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a1db9cbd6086ef5b725ef6dca456b0dc5}{UpdateBounds}}\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00492}00492\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (boundsUpToDate)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00493}00493\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00494}00494\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00495}00495\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00496}00496\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Loop\ through\ all\ segments\ and\ keep\ track\ of\ the\ minmax\ points\ of\ all\ their\ bounding\ boxes}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00497}00497\ \ \ \ \ \ \ \ \ \ \ \ \ MinMax3D\ minMax\ =\ \textcolor{keyword}{new}\ MinMax3D\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00498}00498\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00499}00499\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_aba6ba2ef023e1b5fcc541ce2ec07da30}{NumSegments}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00500}00500\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3[]\ p\ =\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a6185499e7da708f8fb6e99f698436d36}{GetPointsInSegment}}\ (i);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00501}00501\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minMax.AddValue\ (p[0]);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00502}00502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minMax.AddValue\ (p[3]);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00503}00503\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00504}00504\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<float>\ extremePointTimes\ =\ CubicBezierUtility.ExtremePointTimes\ (p[0],\ p[1],\ p[2],\ p[3]);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00505}00505\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\textcolor{keywordtype}{float}\ t\ \textcolor{keywordflow}{in}\ extremePointTimes)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00506}00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minMax.AddValue\ (CubicBezierUtility.EvaluateCurve\ (p,\ t));}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00507}00507\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00508}00508\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00509}00509\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00510}00510\ \ \ \ \ \ \ \ \ \ \ \ \ boundsUpToDate\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00511}00511\ \ \ \ \ \ \ \ \ \ \ \ \ bounds\ =\ \textcolor{keyword}{new}\ Bounds\ ((minMax.Min\ +\ minMax.Max)\ /\ 2,\ minMax.Max\ -\/\ minMax.Min);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00512}00512\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00513}00513\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00515}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad8df689d28cf8306e3ef28089427cb33}{00515}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ad8df689d28cf8306e3ef28089427cb33}{AutoSetAllAffectedControlPoints}}\ (\textcolor{keywordtype}{int}\ updatedAnchorIndex)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00516}00516\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ updatedAnchorIndex\ -\/\ 3;\ i\ <=\ updatedAnchorIndex\ +\ 3;\ i\ +=\ 3)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00517}00517\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >=\ 0\ \&\&\ i\ <\ points.Count\ ||\ isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00518}00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a2325a3bc6729de2222ef961de6e13b68}{AutoSetAnchorControlPoints}}\ (\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (i));}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00519}00519\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00520}00520\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00521}00521\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00522}00522\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a8c68c9c40742ff4a0d07c23366083f27}{AutoSetStartAndEndControls}}\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00523}00523\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00524}00524\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00526}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a6707c57f434f60dc9f14e80907d01ee5}{00526}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a6707c57f434f60dc9f14e80907d01ee5}{AutoSetAllControlPoints}}\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00527}00527\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a7faf89e9e535007f3f491d54c26efe60}{NumAnchorPoints}}\ >\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00528}00528\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ points.Count;\ i\ +=\ 3)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00529}00529\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a2325a3bc6729de2222ef961de6e13b68}{AutoSetAnchorControlPoints}}\ (i);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00530}00530\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00531}00531\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00532}00532\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00533}00533\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a8c68c9c40742ff4a0d07c23366083f27}{AutoSetStartAndEndControls}}\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00534}00534\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00535}00535\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00537}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a2325a3bc6729de2222ef961de6e13b68}{00537}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a2325a3bc6729de2222ef961de6e13b68}{AutoSetAnchorControlPoints}}\ (\textcolor{keywordtype}{int}\ anchorIndex)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00538}00538\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ a\ vector\ that\ is\ perpendicular\ to\ the\ vector\ bisecting\ the\ angle\ between\ this\ anchor\ and\ its\ two\ immediate\ neighbours}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00539}00539\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ control\ points\ will\ be\ placed\ along\ that\ vector}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00540}00540\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ anchorPos\ =\ points[anchorIndex];}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00541}00541\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ dir\ =\ Vector3.zero;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00542}00542\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}[]\ neighbourDistances\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[2];}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00543}00543\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00544}00544\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (anchorIndex\ -\/\ 3\ >=\ 0\ ||\ isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00545}00545\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ offset\ =\ points[\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (anchorIndex\ -\/\ 3)]\ -\/\ anchorPos;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00546}00546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dir\ +=\ offset.normalized;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00547}00547\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ neighbourDistances[0]\ =\ offset.magnitude;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00548}00548\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00549}00549\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (anchorIndex\ +\ 3\ >=\ 0\ ||\ isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00550}00550\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ offset\ =\ points[\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (anchorIndex\ +\ 3)]\ -\/\ anchorPos;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00551}00551\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dir\ -\/=\ offset.normalized;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00552}00552\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ neighbourDistances[1]\ =\ -\/offset.magnitude;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00553}00553\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00554}00554\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00555}00555\ \ \ \ \ \ \ \ \ \ \ \ \ dir.Normalize\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00556}00556\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00557}00557\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ the\ control\ points\ along\ the\ calculated\ direction,\ with\ a\ distance\ proportional\ to\ the\ distance\ to\ the\ neighbouring\ control\ point}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00558}00558\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 2;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00559}00559\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ controlIndex\ =\ anchorIndex\ +\ i\ *\ 2\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00560}00560\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlIndex\ >=\ 0\ \&\&\ controlIndex\ <\ points.Count\ ||\ isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00561}00561\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (controlIndex)]\ =\ anchorPos\ +\ dir\ *\ neighbourDistances[i]\ *\ autoControlLength;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00562}00562\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00563}00563\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00564}00564\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00565}00565\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00567}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a8c68c9c40742ff4a0d07c23366083f27}{00567}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a8c68c9c40742ff4a0d07c23366083f27}{AutoSetStartAndEndControls}}\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00568}00568\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00569}00569\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ case\ with\ only\ 2\ anchor\ points\ separately,\ as\ will\ otherwise\ result\ in\ straight\ line\ ()}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00570}00570\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a7faf89e9e535007f3f491d54c26efe60}{NumAnchorPoints}}\ ==\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00571}00571\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ dirAnchorAToB\ =\ (points[3]\ -\/\ points[0]).normalized;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00572}00572\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dstBetweenAnchors\ =\ (points[0]\ -\/\ points[3]).magnitude;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00573}00573\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ perp\ =\ Vector3.Cross\ (dirAnchorAToB,\ (space\ ==\ PathSpace.xy)\ ?\ Vector3.forward\ :\ Vector3.up);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00574}00574\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[1]\ =\ points[0]\ +\ perp\ *\ dstBetweenAnchors\ /\ 2f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00575}00575\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[5]\ =\ points[0]\ -\/\ perp\ *\ dstBetweenAnchors\ /\ 2f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00576}00576\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[2]\ =\ points[3]\ +\ perp\ *\ dstBetweenAnchors\ /\ 2f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00577}00577\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[4]\ =\ points[3]\ -\/\ perp\ *\ dstBetweenAnchors\ /\ 2f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00578}00578\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00579}00579\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00580}00580\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a2325a3bc6729de2222ef961de6e13b68}{AutoSetAnchorControlPoints}}\ (0);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00581}00581\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a2325a3bc6729de2222ef961de6e13b68}{AutoSetAnchorControlPoints}}\ (points.Count\ -\/\ 3);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00582}00582\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00583}00583\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00584}00584\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Handle\ case\ with\ 2\ anchor\ points\ separately,\ as\ otherwise\ minor\ adjustments\ cause\ path\ to\ constantly\ flip}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00585}00585\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a7faf89e9e535007f3f491d54c26efe60}{NumAnchorPoints}}\ ==\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00586}00586\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[1]\ =\ points[0]\ +\ (points[3]\ -\/\ points[0])\ *\ .25f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00587}00587\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[2]\ =\ points[3]\ +\ (points[0]\ -\/\ points[3])\ *\ .25f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00588}00588\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00589}00589\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[1]\ =\ (points[0]\ +\ points[2])\ *\ .5f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00590}00590\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[points.Count\ -\/\ 2]\ =\ (points[points.Count\ -\/\ 1]\ +\ points[points.Count\ -\/\ 3])\ *\ .5f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00591}00591\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00592}00592\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00593}00593\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00594}00594\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00597}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_ac584b000da2691b488b51416e1fb4a66}{00597}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_ac584b000da2691b488b51416e1fb4a66}{UpdateToNewPathSpace}}\ (PathSpace\ previousSpace)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00598}00598\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ changing\ from\ 3d\ to\ 2d\ space,\ first\ find\ the\ bounds\ of\ the\ 3d\ path.}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00599}00599\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ axis\ with\ the\ smallest\ bounds\ will\ be\ discarded.}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00600}00600\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (previousSpace\ ==\ PathSpace.xyz)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00601}00601\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ boundsSize\ =\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a7a1adffc40fe07f5e2db82a63b6fb33a}{PathBounds}}.size;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00602}00602\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ minBoundsSize\ =\ Mathf.Min\ (boundsSize.x,\ boundsSize.y,\ boundsSize.z);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00603}00603\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00604}00604\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a76122faf62db75c06e32a6aca7ffd666}{NumPoints}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00605}00605\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (space\ ==\ PathSpace.xy)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00606}00606\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ (minBoundsSize\ ==\ boundsSize.x)\ ?\ points[i].z\ :\ points[i].x;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00607}00607\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ (minBoundsSize\ ==\ boundsSize.y)\ ?\ points[i].z\ :\ points[i].y;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00608}00608\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[i]\ =\ \textcolor{keyword}{new}\ Vector3\ (x,\ y,\ 0);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00609}00609\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (space\ ==\ PathSpace.xz)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00610}00610\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ (minBoundsSize\ ==\ boundsSize.x)\ ?\ points[i].y\ :\ points[i].x;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00611}00611\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ z\ =\ (minBoundsSize\ ==\ boundsSize.z)\ ?\ points[i].y\ :\ points[i].z;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00612}00612\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[i]\ =\ \textcolor{keyword}{new}\ Vector3\ (x,\ 0,\ z);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00613}00613\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00614}00614\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00615}00615\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00616}00616\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Nothing\ needs\ to\ change\ when\ going\ to\ 3d\ space}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00617}00617\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (space\ !=\ PathSpace.xyz)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00618}00618\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a76122faf62db75c06e32a6aca7ffd666}{NumPoints}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00619}00619\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ from\ xz\ to\ xy}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00620}00620\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (space\ ==\ PathSpace.xy)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00621}00621\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[i]\ =\ \textcolor{keyword}{new}\ Vector3\ (points[i].x,\ points[i].z,\ 0);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00622}00622\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00623}00623\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ from\ xy\ to\ xz}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00624}00624\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (space\ ==\ PathSpace.xz)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00625}00625\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points[i]\ =\ \textcolor{keyword}{new}\ Vector3\ (points[i].x,\ 0,\ points[i].y);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00626}00626\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00627}00627\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00628}00628\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00629}00629\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00630}00630\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00631}00631\ \ \ \ \ \ \ \ \ \ \ \ \ NotifyPathModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00632}00632\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00633}00633\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00635}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a95b2dd724116a5cdfd043b44fe396a5c}{00635}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a95b2dd724116a5cdfd043b44fe396a5c}{UpdateClosedState}}\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00636}00636\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isClosed)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00637}00637\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ positions\ for\ new\ controls\ to\ mirror\ their\ counterparts}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00638}00638\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ lastAnchorSecondControl\ =\ points[points.Count\ -\/\ 1]\ *\ 2\ -\/\ points[points.Count\ -\/\ 2];}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00639}00639\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ firstAnchorSecondControl\ =\ points[0]\ *\ 2\ -\/\ points[1];}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00640}00640\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ !=\ ControlMode.Mirrored\ \&\&\ controlMode\ !=\ ControlMode.Automatic)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00641}00641\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ positions\ for\ new\ controls\ to\ be\ aligned\ with\ their\ counterparts,\ but\ with\ a\ length\ of\ half\ the\ distance\ between\ start/end\ anchor}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00642}00642\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dstBetweenStartAndEndAnchors\ =\ (points[points.Count\ -\/\ 1]\ -\/\ points[0]).magnitude;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00643}00643\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastAnchorSecondControl\ =\ points[points.Count\ -\/\ 1]\ +\ (points[points.Count\ -\/\ 1]\ -\/\ points[points.Count\ -\/\ 2]).normalized\ *\ dstBetweenStartAndEndAnchors\ *\ .5f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00644}00644\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ firstAnchorSecondControl\ =\ points[0]\ +\ (points[0]\ -\/\ points[1]).normalized\ *\ dstBetweenStartAndEndAnchors\ *\ .5f;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00645}00645\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00646}00646\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points.Add\ (lastAnchorSecondControl);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00647}00647\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points.Add\ (firstAnchorSecondControl);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00648}00648\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00649}00649\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ points.RemoveRange\ (points.Count\ -\/\ 2,\ 2);}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00650}00650\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00651}00651\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00652}00652\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00653}00653\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controlMode\ ==\ ControlMode.Automatic)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00654}00654\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a8c68c9c40742ff4a0d07c23366083f27}{AutoSetStartAndEndControls}}\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00655}00655\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00656}00656\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00657}00657\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (OnModified\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00658}00658\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00659}00659\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00660}00660\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00661}00661\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00663}\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{00663}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_path_creation_1_1_bezier_path_a79ffaa88e458c92f2684c5bced692357}{LoopIndex}}\ (\textcolor{keywordtype}{int}\ i)\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00664}00664\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (i\ +\ points.Count)\ \%\ points.Count;}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00665}00665\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00666}00666\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00667}00667\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Called\ when\ the\ path\ is\ modified}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00668}00668\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ NotifyPathModified\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00669}00669\ \ \ \ \ \ \ \ \ \ \ \ \ boundsUpToDate\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00670}00670\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (OnModified\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00671}00671\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnModified\ ();}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00672}00672\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00673}00673\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00674}00674\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00675}00675\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00676}00676\ }
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00677}00677\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bezier_path_8cs_source_l00678}00678\ \}}
+
+\end{DoxyCode}

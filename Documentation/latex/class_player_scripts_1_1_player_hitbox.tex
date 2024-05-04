@@ -1,0 +1,72 @@
+\doxysection{Player\+Hitbox Class Reference}
+\hypertarget{class_player_scripts_1_1_player_hitbox}{}\label{class_player_scripts_1_1_player_hitbox}\index{PlayerHitbox@{PlayerHitbox}}
+
+
+Takes responsibility and responses to being hit by enemy objects.  
+
+
+
+
+Inherits Mono\+Behaviour.
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_scripts_1_1_player_hitbox_ae77a2b3d16e04654d819c8db25cc6055}{Attempt\+Hit}} (Game\+Object damage\+Source)
+\begin{DoxyCompactList}\small\item\em Deals damage to player if they\textquotesingle{}re not invincible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_scripts_1_1_player_hitbox_a542f630d26b87b7485284fa8e1156389}{Change\+Bomb\+State}} (bool state)
+\begin{DoxyCompactList}\small\item\em Changes bomb state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_player_hitbox_ad8698c75e7c1602cb0b8b51275dc73f7}\label{class_player_scripts_1_1_player_hitbox_ad8698c75e7c1602cb0b8b51275dc73f7} 
+float {\bfseries invincibility\+Time}
+\begin{DoxyCompactList}\small\item\em Time window in which the player cannot take damage after taking a hit. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_player_hitbox_abd9abcb1ce3bcdd0d9c99534620685bc}\label{class_player_scripts_1_1_player_hitbox_abd9abcb1ce3bcdd0d9c99534620685bc} 
+\mbox{\hyperlink{class_tools_1_1_game_object_event}{Game\+Object\+Event}} {\bfseries on\+Takes\+Hit\+Event}
+\begin{DoxyCompactList}\small\item\em Invoked when the player takes a hit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_player_hitbox_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_player_hitbox_8cs_source}{Player\+Hitbox.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_scripts_1_1_player_hitbox_ae77a2b3d16e04654d819c8db25cc6055}\label{class_player_scripts_1_1_player_hitbox_ae77a2b3d16e04654d819c8db25cc6055} 
+\index{PlayerHitbox@{PlayerHitbox}!AttemptHit@{AttemptHit}}
+\index{AttemptHit@{AttemptHit}!PlayerHitbox@{PlayerHitbox}}
+\doxysubsubsection{\texorpdfstring{AttemptHit()}{AttemptHit()}}
+{\footnotesize\ttfamily void Attempt\+Hit (\begin{DoxyParamCaption}\item[{Game\+Object}]{damage\+Source }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage\+Source} & Object causing the damage \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_hitbox_8cs_source_l00064}{64}} of file \mbox{\hyperlink{_player_hitbox_8cs_source}{Player\+Hitbox.\+cs}}.
+
+\Hypertarget{class_player_scripts_1_1_player_hitbox_a542f630d26b87b7485284fa8e1156389}\label{class_player_scripts_1_1_player_hitbox_a542f630d26b87b7485284fa8e1156389} 
+\index{PlayerHitbox@{PlayerHitbox}!ChangeBombState@{ChangeBombState}}
+\index{ChangeBombState@{ChangeBombState}!PlayerHitbox@{PlayerHitbox}}
+\doxysubsubsection{\texorpdfstring{ChangeBombState()}{ChangeBombState()}}
+{\footnotesize\ttfamily void Change\+Bomb\+State (\begin{DoxyParamCaption}\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Whether the bomb effects still last \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_hitbox_8cs_source_l00074}{74}} of file \mbox{\hyperlink{_player_hitbox_8cs_source}{Player\+Hitbox.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Player\+Scripts/Player\+Hitbox.\+cs\end{DoxyCompactItemize}

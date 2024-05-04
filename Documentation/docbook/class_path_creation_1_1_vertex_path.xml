@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_1_1_vertex_path" xml:lang="en-US">
+<title>VertexPath Class Reference</title>
+<indexterm><primary>VertexPath</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_path_creation_1_1_vertex_path_1a68993b6cc3ef582ffc8df88009d98fbc">VertexPath</link> (<link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link> bezierPath, Transform transform, float maxAngleError=0.3f, float minVertexDst=0)</para>
+
+<para>Splits bezier path into array of vertices along the path. </para>
+</listitem>
+            <listitem><para><link linkend="_class_path_creation_1_1_vertex_path_1aa26ae65380456e3ad114515ba2dccb4b">VertexPath</link> (<link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link> bezierPath, Transform transform, float vertexSpacing)</para>
+
+<para>Splits bezier path into array of vertices along the path. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1a5437a41d4b84126c2b6987f83dcd3da9"/>Vector3 <emphasis role="strong">GetPointAtDistance</emphasis> (float dst, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</para>
+
+<para>Gets point on path based on distance travelled. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1a18dd6b53cb280969264c9316c8dc60e7"/>Vector3 <emphasis role="strong">GetDirectionAtDistance</emphasis> (float dst, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</para>
+
+<para>Gets forward direction on path based on distance travelled. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1a4c1400968e85e9398e9372cd6e52db46"/>Vector3 <emphasis role="strong">GetNormalAtDistance</emphasis> (float dst, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</para>
+
+<para>Gets normal vector on path based on distance travelled. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1ab2a060e662072e4e85f6bb299efcdff6"/>Quaternion <emphasis role="strong">GetRotationAtDistance</emphasis> (float dst, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</para>
+
+<para>Gets a rotation that will orient an object in the direction of the path at this point, with local up point along the path&apos;s normal. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1ab9703bbe05d6c4884919fee5842978ca"/>Vector3 <emphasis role="strong">GetPointAtTime</emphasis> (float t, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</para>
+
+<para>Gets point on path based on &apos;time&apos; (where 0 is start, and 1 is end of path). </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1aa738e0737a6060de2254d26669df14eb"/>Vector3 <emphasis role="strong">GetDirection</emphasis> (float t, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</para>
+
+<para>Gets forward direction on path based on &apos;time&apos; (where 0 is start, and 1 is end of path). </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1a2e4032694b7fbec56c46d99ba06d2738"/>Vector3 <emphasis role="strong">GetNormal</emphasis> (float t, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</para>
+
+<para>Gets normal vector on path based on &apos;time&apos; (where 0 is start, and 1 is end of path). </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1a65c5ec446381a6cd300aa3e16712ca4d"/>Quaternion <emphasis role="strong">GetRotation</emphasis> (float t, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</para>
+
+<para>Gets a rotation that will orient an object in the direction of the path at this point, with local up point along the path&apos;s normal. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1ae0a294d13ca50315c743d9a6e74b31b6"/>Vector3 <emphasis role="strong">GetClosestPointOnPath</emphasis> (Vector3 worldPoint)</para>
+
+<para>Finds the closest point on the path from any point in the world. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1add1d94ca38d101e394c85e3c030ed5c7"/>float <emphasis role="strong">GetClosestTimeOnPath</emphasis> (Vector3 worldPoint)</para>
+
+<para>Finds the &apos;time&apos; (0=start of path, 1=end of path) along the path that is closest to the given point. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1a8053ea41c3b34896a2caf2a38a16479a"/>float <emphasis role="strong">GetClosestDistanceAlongPath</emphasis> (Vector3 worldPoint)</para>
+
+<para>Finds the distance along the path that is closest to the given point. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1aab5f889fde82379662ac21a0e5ff2c1e"/>readonly float[] <emphasis role="strong">times</emphasis></para>
+
+<para>Percentage along the path at each vertex (0 being start of path, and 1 being the end) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1a50750f3b8c87b4381ad0386692c1e3e5"/>readonly float <emphasis role="strong">length</emphasis></para>
+
+<para>Total distance between the vertices of the polyline. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1a4181ef3ca1db9c0393401411bdeaabc6"/>readonly float[] <emphasis role="strong">cumulativeLengthAtEachVertex</emphasis></para>
+
+<para>Total distance from the first vertex up to each vertex in the polyline. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1aed82650136385bdafde91640006b4f10"/>readonly Bounds <emphasis role="strong">bounds</emphasis></para>
+
+<para>Bounding box of the path. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1a6767b928b6cb5a8eb12dd70826ac6090"/>readonly Vector3 <emphasis role="strong">up</emphasis></para>
+
+<para>Equal to (0,0,-1) for 2D paths, and (0,1,0) for XZ paths. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25"/><emphasis role="strong">VertexPath</emphasis> (<link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link> bezierPath, VertexPathUtility.PathSplitData pathSplitData, Transform transform)</para>
+
+<para>Internal contructor. </para>
+</listitem>
+            <listitem><para>TimeOnPathData <link linkend="_class_path_creation_1_1_vertex_path_1abbff33b1b67be54cbab3775963ec493e">CalculatePercentOnPathData</link> (float t, EndOfPathInstruction endOfPathInstruction)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_vertex_path_1a7f1e4c16d9822b5348cad52c738981c0"/>TimeOnPathData <emphasis role="strong">CalculateClosestPointOnPathData</emphasis> (Vector3 worldPoint)</para>
+
+<para>Calculate time data for closest point on the path from given world point. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A vertex path is a collection of points (vertices) that lie along a bezier path. This allows one to do things like move at a constant speed along the path, which is not possible with a bezier path directly due to how they&apos;re constructed mathematically. This class also provides methods for getting the position along the path at a certain distance or time (where time = 0 is the start of the path, and time = 1 is the end of the path). Other info about the path (tangents, normals, rotation) can also be retrieved in this manner. </para>
+<para>
+Definition at line <link linkend="__vertex_path_8cs_source_1l00015">15</link> of file <link linkend="__vertex_path_8cs_source">VertexPath.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_vertex_path_1a68993b6cc3ef582ffc8df88009d98fbc"/><section>
+    <title>VertexPath()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>VertexPath</primary><secondary>VertexPath</secondary></indexterm>
+<indexterm><primary>VertexPath</primary><secondary>VertexPath</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_vertex_path">VertexPath</link> (<link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link> bezierPath, Transform transform, float maxAngleError = <computeroutput>0::3f</computeroutput>
+, float minVertexDst = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para>param name=&quot;maxAngleError&quot;&gt;How much can the angle of the path change before a vertex is added. This allows fewer vertices to be generated in straighter sections.</para>
+
+<para>param name=&quot;minVertexDst&quot;&gt;Vertices won&apos;t be added closer together than this distance, regardless of angle error.</para>
+<para>
+Definition at line <link linkend="__vertex_path_8cs_source_1l00048">48</link> of file <link linkend="__vertex_path_8cs_source">VertexPath.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_vertex_path_1aa26ae65380456e3ad114515ba2dccb4b"/><section>
+    <title>VertexPath()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>VertexPath</primary><secondary>VertexPath</secondary></indexterm>
+<indexterm><primary>VertexPath</primary><secondary>VertexPath</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_vertex_path">VertexPath</link> (<link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link> bezierPath, Transform transform, float vertexSpacing)</computeroutput></para>
+<para>param name=&quot;maxAngleError&quot;&gt;How much can the angle of the path change before a vertex is added. This allows fewer vertices to be generated in straighter sections.</para>
+
+<para>param name=&quot;minVertexDst&quot;&gt;Vertices won&apos;t be added closer together than this distance, regardless of angle error.</para>
+
+<para>param name=&quot;accuracy&quot;&gt;Higher value means the change in angle is checked more frequently.</para>
+<para>
+Definition at line <link linkend="__vertex_path_8cs_source_1l00055">55</link> of file <link linkend="__vertex_path_8cs_source">VertexPath.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_vertex_path_1abbff33b1b67be54cbab3775963ec493e"/><section>
+    <title>CalculatePercentOnPathData()</title>
+<indexterm><primary>CalculatePercentOnPathData</primary><secondary>VertexPath</secondary></indexterm>
+<indexterm><primary>VertexPath</primary><secondary>CalculatePercentOnPathData</secondary></indexterm>
+<para><computeroutput>TimeOnPathData CalculatePercentOnPathData (float t, EndOfPathInstruction endOfPathInstruction)<computeroutput>[private]</computeroutput></computeroutput></para>
+<para>For a given value &apos;t&apos; between 0 and 1, calculate the indices of the two vertices before and after t. Also calculate how far t is between those two vertices as a percentage between 0 and 1. </para>
+<para>
+Definition at line <link linkend="__vertex_path_8cs_source_1l00253">253</link> of file <link linkend="__vertex_path_8cs_source">VertexPath.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs</section>
+</section>

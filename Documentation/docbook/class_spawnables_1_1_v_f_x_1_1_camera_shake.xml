@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_v_f_x_1_1_camera_shake" xml:lang="en-US">
+<title>Spawnables.VFX.CameraShake Class Reference</title>
+<indexterm><primary>Spawnables.VFX.CameraShake</primary></indexterm>
+Inheritance diagram for Spawnables.VFX.CameraShake:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_v_f_x_1_1_camera_shake__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Spawnables.VFX.CameraShake:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_v_f_x_1_1_camera_shake__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_spawnables_1_1_v_f_x_1_1_camera_shake_1a779481f206856c1e4834a6d25bf0e293">ShakeCamera</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Camera <link linkend="_class_spawnables_1_1_v_f_x_1_1_camera_shake_1ac2613556bb7faf64c1443051e2199eb7">camera</link></para>
+</listitem>
+            <listitem><para>AnimationCurve <link linkend="_class_spawnables_1_1_v_f_x_1_1_camera_shake_1ad95e35123a0e975ec19024e9eef0b772">shakeCurve</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_spawnables_1_1_v_f_x_1_1_camera_shake_1a0b51f6124ec24f665f6e40e437f1d3a3">intensity</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_spawnables_1_1_v_f_x_1_1_camera_shake_1a3cc132e0ca713a5f82aa993d763209f0">refreshRate</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__camera_shake_8cs_source_1l00006">6</link> of file <link linkend="__camera_shake_8cs_source">CameraShake.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_v_f_x_1_1_camera_shake_1a779481f206856c1e4834a6d25bf0e293"/><section>
+    <title>ShakeCamera()</title>
+<indexterm><primary>ShakeCamera</primary><secondary>Spawnables.VFX.CameraShake</secondary></indexterm>
+<indexterm><primary>Spawnables.VFX.CameraShake</primary><secondary>ShakeCamera</secondary></indexterm>
+<para><computeroutput>void Spawnables.VFX.CameraShake.ShakeCamera ( )</computeroutput></para><para>
+Definition at line <link linkend="__camera_shake_8cs_source_1l00025">25</link> of file <link linkend="__camera_shake_8cs_source">CameraShake.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_v_f_x_1_1_camera_shake_1ac2613556bb7faf64c1443051e2199eb7"/><section>
+    <title>camera</title>
+<indexterm><primary>camera</primary><secondary>Spawnables.VFX.CameraShake</secondary></indexterm>
+<indexterm><primary>Spawnables.VFX.CameraShake</primary><secondary>camera</secondary></indexterm>
+<para><computeroutput>Camera Spawnables.VFX.CameraShake.camera</computeroutput></para><para>
+Definition at line <link linkend="__camera_shake_8cs_source_1l00008">8</link> of file <link linkend="__camera_shake_8cs_source">CameraShake.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_v_f_x_1_1_camera_shake_1a0b51f6124ec24f665f6e40e437f1d3a3"/><section>
+    <title>intensity</title>
+<indexterm><primary>intensity</primary><secondary>Spawnables.VFX.CameraShake</secondary></indexterm>
+<indexterm><primary>Spawnables.VFX.CameraShake</primary><secondary>intensity</secondary></indexterm>
+<para><computeroutput>float Spawnables.VFX.CameraShake.intensity</computeroutput></para><para>
+Definition at line <link linkend="__camera_shake_8cs_source_1l00010">10</link> of file <link linkend="__camera_shake_8cs_source">CameraShake.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_v_f_x_1_1_camera_shake_1a3cc132e0ca713a5f82aa993d763209f0"/><section>
+    <title>refreshRate</title>
+<indexterm><primary>refreshRate</primary><secondary>Spawnables.VFX.CameraShake</secondary></indexterm>
+<indexterm><primary>Spawnables.VFX.CameraShake</primary><secondary>refreshRate</secondary></indexterm>
+<para><computeroutput>float Spawnables.VFX.CameraShake.refreshRate</computeroutput></para><para>
+Definition at line <link linkend="__camera_shake_8cs_source_1l00011">11</link> of file <link linkend="__camera_shake_8cs_source">CameraShake.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_v_f_x_1_1_camera_shake_1ad95e35123a0e975ec19024e9eef0b772"/><section>
+    <title>shakeCurve</title>
+<indexterm><primary>shakeCurve</primary><secondary>Spawnables.VFX.CameraShake</secondary></indexterm>
+<indexterm><primary>Spawnables.VFX.CameraShake</primary><secondary>shakeCurve</secondary></indexterm>
+<para><computeroutput>AnimationCurve Spawnables.VFX.CameraShake.shakeCurve</computeroutput></para><para>
+Definition at line <link linkend="__camera_shake_8cs_source_1l00009">9</link> of file <link linkend="__camera_shake_8cs_source">CameraShake.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/VFX/CameraShake.cs</section>
+</section>

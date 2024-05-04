@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_15d4082597dd64286d84c179f48a6b50" kind="dir">
+    <compoundname>Tools/PathCreator/Examples/Scripts/Editor</compoundname>
+    <innerfile refid="_path_scene_tool_editor_8cs">PathSceneToolEditor.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Examples/Scripts/Editor/"/>
+  </compounddef>
+</doxygen>

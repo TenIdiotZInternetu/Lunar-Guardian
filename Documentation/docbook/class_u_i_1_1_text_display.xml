@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_u_i_1_1_text_display" xml:lang="en-US">
+<title>TextDisplay Class Reference</title>
+<indexterm><primary>TextDisplay</primary></indexterm>
+<para>
+
+<para>Tracks a PlayerStatus resource and displays it as formatted text. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_text_display_1a5a081c4d3cc97ef24f7039396d49da52"/><link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">PlayerStatus.ResourceType</link> <emphasis role="strong">trackedResource</emphasis></para>
+
+<para>Resource to track and display. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_text_display_1a578255b360c9bb86a17fab48cb065b6f"/>string <emphasis role="strong">format</emphasis> = &quot;{0}&quot;</para>
+
+<para>Format of the final string. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_text_display_1ae9a50054b4ccbe11fda7b55f5b53caf6"/>float <emphasis role="strong">defaultValue</emphasis> = 0</para>
+
+<para>Initial value of the resource. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_text_display_1aab5e819719646d067216464e3bc3c866"/>bool <emphasis role="strong">hideWhenDefault</emphasis> = false</para>
+
+<para>Whether to hide the text when the value is the default. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_text_display_1a3091f3616f264e5b18a6b808442ea8cf"/>bool <emphasis role="strong">addSeparators</emphasis> = false</para>
+
+<para>Whether to add separators between groups of digits. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_text_display_1a883acae029fb2d80ac05fb397d13af6d"/>int <emphasis role="strong">separatorInterval</emphasis> = 3</para>
+
+<para>Number of digits between separators. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_text_display_1ae6765bd280185095bb23d3370f0faa79"/>int <emphasis role="strong">zeroPadding</emphasis> = 0</para>
+
+<para>Amount of zeros to pad the value wit. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_u_i_1_1_text_display_1a19a1f5b6e7bf5a627bccfc1d457881d7"/>const float <emphasis role="strong">PREVIEW_VALUE</emphasis> = 1.23f</para>
+
+<para>Value to be used for previewing in the editor. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__text_display_8cs_source_1l00015">15</link> of file <link linkend="__text_display_8cs_source">TextDisplay.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/UI/TextDisplay.cs</section>
+</section>

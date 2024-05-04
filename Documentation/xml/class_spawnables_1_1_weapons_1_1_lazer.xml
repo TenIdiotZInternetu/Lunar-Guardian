@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_weapons_1_1_lazer" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Weapons::Lazer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <basecompoundref refid="interface_spawnables_1_1_weapons_1_1_i_shootable" prot="public" virt="non-virtual">IShootable</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1a69e2ea14cd21d3d310e16d9931eae97c" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float MAX_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>MAX_LENGTH</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.MAX_LENGTH</qualifiedname>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="16" column="29" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1a42724bbc510ee7278f312d8b144fab9f" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string HITBOX_LAYER_NAME</definition>
+        <argsstring></argsstring>
+        <name>HITBOX_LAYER_NAME</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.HITBOX_LAYER_NAME</qualifiedname>
+        <initializer>= &quot;PlayerHitbox&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="17" column="30" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1aca09286cd8b3d4183f0d74bad38fff6e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cooldown</definition>
+        <argsstring></argsstring>
+        <name>cooldown</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.cooldown</qualifiedname>
+        <briefdescription>
+<para>Duration od the Cooldown phase in seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="24" column="22" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_spawnables_1_1_weapons_1_1_lazer_1a26a2e3c2d07dea6a2fd1d38eac284ee6" compoundref="_lazer_8cs" startline="81" endline="88">Lazer.OnShoot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1a37c4954b4cdd996e6103aecf92c46b01" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float telegraphDuration</definition>
+        <argsstring></argsstring>
+        <name>telegraphDuration</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.telegraphDuration</qualifiedname>
+        <briefdescription>
+<para>Duration of the Telegraph phase in seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="29" column="22" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1adba37386a0608ae910fb8a39d466242e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float releaseDuration</definition>
+        <argsstring></argsstring>
+        <name>releaseDuration</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.releaseDuration</qualifiedname>
+        <briefdescription>
+<para>Duration of the Release phase in seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="34" column="22" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1ae3d3f20000c1c2a415675e0509944701" prot="public" static="no" mutable="no">
+        <type>Material</type>
+        <definition>Material telegraphMaterial</definition>
+        <argsstring></argsstring>
+        <name>telegraphMaterial</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.telegraphMaterial</qualifiedname>
+        <briefdescription>
+<para>Material of the LineRenderer during the Telegraph phase. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="39" column="25" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1a337f1138e3750743beef8fcadbc3204f" prot="public" static="no" mutable="no">
+        <type>Material</type>
+        <definition>Material releaseMaterial</definition>
+        <argsstring></argsstring>
+        <name>releaseMaterial</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.releaseMaterial</qualifiedname>
+        <briefdescription>
+<para>Mateiral of the LineRenderer during the Release phase. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="44" column="25" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1afa70b6a0bd5a37ceefcbd8995e1115ee" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float telegraphWidth</definition>
+        <argsstring></argsstring>
+        <name>telegraphWidth</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.telegraphWidth</qualifiedname>
+        <briefdescription>
+<para>Width of the LineRenderer during the Telegraph phase. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="49" column="22" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1a7cc7db7d095fdd382aa63650b7f3885c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float releaseWidth</definition>
+        <argsstring></argsstring>
+        <name>releaseWidth</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.releaseWidth</qualifiedname>
+        <briefdescription>
+<para>Width of the LineRenderer during the Release phase. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="54" column="22" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1a1fa73e578a807d73164eb44952fddcce" prot="private" static="no" mutable="no">
+        <type>LineRenderer</type>
+        <definition>LineRenderer _lineRenderer</definition>
+        <argsstring></argsstring>
+        <name>_lineRenderer</name>
+        <qualifiedname>Spawnables.Weapons.Lazer._lineRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="58" column="30" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1a3784a6d8dc8fd9d8448c354a18a3111f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _playerHitboxLayer</definition>
+        <argsstring></argsstring>
+        <name>_playerHitboxLayer</name>
+        <qualifiedname>Spawnables.Weapons.Lazer._playerHitboxLayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="59" column="21" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1ac2d8f49ff629d4c103dd3acda82f45f1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _emitting</definition>
+        <argsstring></argsstring>
+        <name>_emitting</name>
+        <qualifiedname>Spawnables.Weapons.Lazer._emitting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="61" column="22" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_lazer_1ac5e64f223dabc62c7e2b61419c69023f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float _timeOfLastShot</definition>
+        <argsstring></argsstring>
+        <name>_timeOfLastShot</name>
+        <qualifiedname>Spawnables.Weapons.Lazer._timeOfLastShot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="62" column="23" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_lazer_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="66" column="14" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="66" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_lazer_1a40889b1ad560e7cd421500d044825783" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator Telegraph</definition>
+        <argsstring>()</argsstring>
+        <name>Telegraph</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.Telegraph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="93" column="29" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="93" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_lazer_1a95ae3f8db82d75a6353f2ae9d80cd0f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator Release</definition>
+        <argsstring>()</argsstring>
+        <name>Release</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.Release</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="109" column="29" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="109" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_lazer_1a272363f0e6cee9ba4b007cc436ae3dbd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdatePosition</definition>
+        <argsstring>()</argsstring>
+        <name>UpdatePosition</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.UpdatePosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="127" column="22" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="127" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_lazer_1a1ab6e689fcaf722bbe31983d5359dc43" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CheckDamages</definition>
+        <argsstring>()</argsstring>
+        <name>CheckDamages</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.CheckDamages</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="137" column="22" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="137" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_lazer_1a077af69786ff199527a15c3a925eb6b8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeAppearance</definition>
+        <argsstring>(Material material, float width)</argsstring>
+        <name>ChangeAppearance</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.ChangeAppearance</qualifiedname>
+        <param>
+          <type>Material</type>
+          <declname>material</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="152" column="22" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="152" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_lazer_1ac51c75fd06c6783b6553902c86ac9d71" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnDrawGizmos</definition>
+        <argsstring>()</argsstring>
+        <name>OnDrawGizmos</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.OnDrawGizmos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="159" column="22" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="159" bodyend="163"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_lazer_1a26a2e3c2d07dea6a2fd1d38eac284ee6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnShoot</definition>
+        <argsstring>()</argsstring>
+        <name>OnShoot</name>
+        <qualifiedname>Spawnables.Weapons.Lazer.OnShoot</qualifiedname>
+        <reimplements refid="interface_spawnables_1_1_weapons_1_1_i_shootable_1a26a2e3c2d07dea6a2fd1d38eac284ee6">OnShoot</reimplements>
+        <briefdescription>
+<para>Called when the weapon is activated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="81" column="21" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="81" bodyend="88"/>
+        <references refid="class_spawnables_1_1_weapons_1_1_lazer_1aca09286cd8b3d4183f0d74bad38fff6e" compoundref="_lazer_8cs" startline="24">Lazer.cooldown</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A lazer beam damaging the player or entities by shooting raycasts, visualized by a LineRenderer. The lazer has 3 phases: Cooldown, Telegraph and Release. The beam deals damage only during the Release phase. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IShootable</label>
+        <link refid="interface_spawnables_1_1_weapons_1_1_i_shootable"/>
+      </node>
+      <node id="1">
+        <label>Lazer</label>
+        <link refid="class_spawnables_1_1_weapons_1_1_lazer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IShootable</label>
+        <link refid="interface_spawnables_1_1_weapons_1_1_i_shootable"/>
+      </node>
+      <node id="1">
+        <label>Lazer</label>
+        <link refid="class_spawnables_1_1_weapons_1_1_lazer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="12" column="11" bodyfile="Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="13" bodyend="164"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1ac2d8f49ff629d4c103dd3acda82f45f1" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>_emitting</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a1fa73e578a807d73164eb44952fddcce" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>_lineRenderer</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a3784a6d8dc8fd9d8448c354a18a3111f" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>_playerHitboxLayer</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1ac5e64f223dabc62c7e2b61419c69023f" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>_timeOfLastShot</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a077af69786ff199527a15c3a925eb6b8" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>ChangeAppearance</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a1ab6e689fcaf722bbe31983d5359dc43" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>CheckDamages</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1aca09286cd8b3d4183f0d74bad38fff6e" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>cooldown</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a42724bbc510ee7278f312d8b144fab9f" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>HITBOX_LAYER_NAME</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a69e2ea14cd21d3d310e16d9931eae97c" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>MAX_LENGTH</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1ac51c75fd06c6783b6553902c86ac9d71" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>OnDrawGizmos</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a26a2e3c2d07dea6a2fd1d38eac284ee6" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>OnShoot</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a95ae3f8db82d75a6353f2ae9d80cd0f0" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>Release</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1adba37386a0608ae910fb8a39d466242e" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>releaseDuration</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a337f1138e3750743beef8fcadbc3204f" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>releaseMaterial</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a7cc7db7d095fdd382aa63650b7f3885c" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>releaseWidth</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>Start</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a40889b1ad560e7cd421500d044825783" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>Telegraph</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a37c4954b4cdd996e6103aecf92c46b01" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>telegraphDuration</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1ae3d3f20000c1c2a415675e0509944701" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>telegraphMaterial</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1afa70b6a0bd5a37ceefcbd8995e1115ee" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>telegraphWidth</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a272363f0e6cee9ba4b007cc436ae3dbd" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Lazer</scope><name>UpdatePosition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__sinusoid_m_p_8cs_source" xml:lang="en-US">
+<title>SinusoidMP.cs</title>
+<indexterm><primary>Scripts/MovementPatterns/SinusoidMP.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__sinusoid_m_p_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>MyBox;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_spawnables">Spawnables</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00004"/>00004 
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00005"/>00005 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_movement_patterns">MovementPatterns</link>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00006"/>00006 {
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00010"/><link linkend="_class_movement_patterns_1_1_sinusoid_m_p">00010</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_movement_patterns_1_1_sinusoid_m_p">SinusoidMP</link>&#32;:&#32;<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Inspector&#32;Variables&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00017"/><link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a0f4b7f8bb73293dc7c2eeba244b07628">00017</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a0f4b7f8bb73293dc7c2eeba244b07628">staysInLine</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00022"/><link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8">00022</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8">speed</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00027"/><link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a31bef58f966d97b1ace9bd3a58ffd9a6">00027</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a31bef58f966d97b1ace9bd3a58ffd9a6">amplitude</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00032"/><link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1acdfc8898c9e67fbcec81f3b04ae61bd9">00032</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1acdfc8898c9e67fbcec81f3b04ae61bd9">frequency</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00037"/><link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a275dd6dafe5d4455e599ffd15feb06f8">00037</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a275dd6dafe5d4455e599ffd15feb06f8">phase</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Separator]
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00043"/><link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a97712bccaedef08f6d8c525bdda2f7ef">00043</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a97712bccaedef08f6d8c525bdda2f7ef">acceleration</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00048"/><link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1ab1f333cb00c0c43b1ccdc49b2e6132aa">00048</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1ab1f333cb00c0c43b1ccdc49b2e6132aa">amplitudeChange</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00053"/><link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a07562c5f8a18a0608dc6234f2b7e64de">00053</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a07562c5f8a18a0608dc6234f2b7e64de">frequencyChange</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00058"/><link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1abc2ccff0697104d506d36bc08b2c4ab9">00058</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1abc2ccff0697104d506d36bc08b2c4ab9">phaseShift</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Separator]
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00064"/><link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a5ec5b5c6929e155f22c198c68a53bbfc">00064</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a5ec5b5c6929e155f22c198c68a53bbfc">axisRotation</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;----------------------&#32;Private&#32;Fields&#32;----------------------&#32;*/</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;The&#32;direction&#32;of&#32;the&#32;axis&#32;of&#32;oscillation&#32;represented&#32;as&#32;a&#32;unit&#32;vector</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;_axisDirection;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Normal&#32;vector&#32;to&#32;the&#32;axis&#32;of&#32;oscillation</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;_axisNormal;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;The&#32;position&#32;of&#32;the&#32;entity&#32;at&#32;the&#32;start&#32;of&#32;the&#32;movement.&#32;</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;_origin;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;----------------------&#32;Public&#32;Methods&#32;----------------------&#32;*/</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00078"/>00078 
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Initialize(<link linkend="_class_spawnables_1_1_entity">Entity</link>&#32;entity)
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;OnValidate();
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_origin&#32;=&#32;entity.transform.position;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">override</emphasis>&#32;Vector3&#32;GetNextPosition(<link linkend="_class_spawnables_1_1_entity">Entity</link>&#32;entity)
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;time&#32;=&#32;entity.<link linkend="_class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba">MPLifeTime</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Actual&#32;calculation&#32;is&#32;done&#32;in&#32;a&#32;separate&#32;method&#32;so&#32;it&#32;can&#32;be&#32;simulated&#32;and&#32;drawn&#32;with&#32;Gizmos</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GetNextPosition(time);
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;----------------------&#32;Private&#32;Methods&#32;----------------------&#32;*/</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00095"/>00095 
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;GetNextPosition(<emphasis role="keywordtype">float</emphasis>&#32;time)
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;currentSpeed&#32;=&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8">speed</link>&#32;+&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a97712bccaedef08f6d8c525bdda2f7ef">acceleration</link>&#32;*&#32;time;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;currentAmplitude&#32;=&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a31bef58f966d97b1ace9bd3a58ffd9a6">amplitude</link>&#32;+&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1ab1f333cb00c0c43b1ccdc49b2e6132aa">amplitudeChange</link>&#32;*&#32;time;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;currentFrequency&#32;=&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1acdfc8898c9e67fbcec81f3b04ae61bd9">frequency</link>&#32;+&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a07562c5f8a18a0608dc6234f2b7e64de">frequencyChange</link>&#32;*&#32;time;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;currentPhase&#32;=&#32;(<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a275dd6dafe5d4455e599ffd15feb06f8">phase</link>&#32;+&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1abc2ccff0697104d506d36bc08b2c4ab9">phaseShift</link>&#32;*&#32;Time.time)&#32;%&#32;360;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;distance&#32;=&#32;currentSpeed&#32;*&#32;time;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;axisPosition&#32;=&#32;!<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a0f4b7f8bb73293dc7c2eeba244b07628">staysInLine</link>&#32;?
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GetAxisPosition(distance)&#32;:
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_origin;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00109"/>00109 
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;sinusoidPosition&#32;=&#32;GetSinusoidPosition(distance,&#32;currentAmplitude,&#32;currentFrequency,&#32;currentPhase);
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;axisPosition&#32;+&#32;sinusoidPosition;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Returns&#32;the&#32;position&#32;of&#32;the&#32;axis&#32;at&#32;the&#32;given&#32;distance&#32;from&#32;the&#32;origin</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;GetAxisPosition(<emphasis role="keywordtype">float</emphasis>&#32;distance)
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;_origin&#32;+&#32;_axisDirection&#32;*&#32;distance;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Sine&#32;function,&#32;where&#32;the&#32;result&#32;is&#32;represented&#32;as&#32;a&#32;vector&#32;pointing&#32;perpendicular&#32;to&#32;the&#32;axis&#32;of&#32;oscillation</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;Vector3&#32;GetSinusoidPosition(<emphasis role="keywordtype">float</emphasis>&#32;t,&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a31bef58f966d97b1ace9bd3a58ffd9a6">amplitude</link>,&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1acdfc8898c9e67fbcec81f3b04ae61bd9">frequency</link>,&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a275dd6dafe5d4455e599ffd15feb06f8">phase</link>)
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a275dd6dafe5d4455e599ffd15feb06f8">phase</link>&#32;*=&#32;Mathf.Deg2Rad;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;sineValue&#32;=&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a31bef58f966d97b1ace9bd3a58ffd9a6">amplitude</link>&#32;*&#32;Mathf.Sin(<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1acdfc8898c9e67fbcec81f3b04ae61bd9">frequency</link>&#32;*&#32;t&#32;+&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a275dd6dafe5d4455e599ffd15feb06f8">phase</link>);
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;_axisNormal&#32;*&#32;sineValue;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;----------------------&#32;Editor-only&#32;Callbacks&#32;----------------------&#32;*/</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Updates&#32;axes&#32;from&#32;the&#32;inspector&#32;values</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnValidate()
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_origin&#32;=&#32;transform.position;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_axisDirection&#32;=&#32;Quaternion.Euler(0,&#32;0,&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a5ec5b5c6929e155f22c198c68a53bbfc">axisRotation</link>)&#32;*&#32;Vector3.up;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_axisDirection&#32;=&#32;_axisDirection.normalized;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_axisNormal&#32;=&#32;Quaternion.Euler(0,&#32;0,&#32;-90)&#32;*&#32;_axisDirection;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_axisNormal&#32;=&#32;-_axisNormal.normalized;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Draws&#32;the&#32;trajectory&#32;and&#32;the&#32;axes&#32;of&#32;the&#32;movement</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDrawGizmosSelected()
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;precalculatedSeconds&#32;=&#32;5;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;timeStep&#32;=&#32;0.01f;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GizmoDrawAxes(precalculatedSeconds);
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GizmoDrawTrajectory(precalculatedSeconds,&#32;timeStep);
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00149"/>00149 
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Draws&#32;the&#32;axis&#32;of&#32;oscillation&#32;and&#32;its&#32;normal&#32;vector</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;GizmoDrawAxes(<emphasis role="keywordtype">float</emphasis>&#32;timeFrame)
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Gizmos.color&#32;=&#32;Color.blue;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;position&#32;=&#32;transform.position;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;line&#32;=&#32;_axisDirection&#32;*&#32;timeFrame&#32;*&#32;<link linkend="_class_movement_patterns_1_1_sinusoid_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8">speed</link>;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Gizmos.DrawLine(position,&#32;position&#32;+&#32;line);
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Gizmos.DrawLine(position,&#32;position&#32;+&#32;_axisNormal&#32;*&#32;3);
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Draws&#32;the&#32;sine&#32;wave&#32;path&#32;of&#32;the&#32;entity</emphasis>
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;GizmoDrawTrajectory(<emphasis role="keywordtype">float</emphasis>&#32;timeFrame,&#32;<emphasis role="keywordtype">float</emphasis>&#32;timeStep)
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Gizmos.color&#32;=&#32;Color.green;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;newPosition&#32;=&#32;transform.position;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;lastPosition&#32;=&#32;newPosition;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">float</emphasis>&#32;t&#32;=&#32;0;&#32;t&#32;&lt;&#32;timeFrame;&#32;t&#32;+=&#32;timeStep)
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;newPosition&#32;=&#32;GetNextPosition(t);
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Gizmos.DrawLine(lastPosition,&#32;newPosition);
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lastPosition&#32;=&#32;newPosition;
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00176"/>00176 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__sinusoid_m_p_8cs_source_1l00177"/>00177 }
+</programlisting></section>

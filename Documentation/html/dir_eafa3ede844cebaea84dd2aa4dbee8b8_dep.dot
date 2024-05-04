@@ -1,0 +1,22 @@
+digraph "Kodiky/Unity/Lunar Guardian/Assets/Scripts"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_e1370fc888e0fa364d251316f73f4765 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Assets", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_e1370fc888e0fa364d251316f73f4765.html",tooltip=""]
+  subgraph clusterdir_eafa3ede844cebaea84dd2aa4dbee8b8 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_eafa3ede844cebaea84dd2aa4dbee8b8.html",tooltip=""]
+    dir_eafa3ede844cebaea84dd2aa4dbee8b8 [shape=plaintext, label="Scripts"];
+  dir_f94be6ace42b96f1fcb9560ac4042a6f [label="GameStates", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_f94be6ace42b96f1fcb9560ac4042a6f.html",tooltip=""];
+  dir_5978307bc3818379698b6668695d0f19 [label="MovementPatterns", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_5978307bc3818379698b6668695d0f19.html",tooltip=""];
+  dir_45d9d605a41c40c2efaba5c902a368e9 [label="PlayerScripts", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_45d9d605a41c40c2efaba5c902a368e9.html",tooltip=""];
+  dir_55c683271e8c58654a7fb91ef07b8f4b [label="Serialization", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_55c683271e8c58654a7fb91ef07b8f4b.html",tooltip=""];
+  dir_112ce5a565d33a11be33b429bfe568c9 [label="Spawnables", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_112ce5a565d33a11be33b429bfe568c9.html",tooltip=""];
+  dir_4bb8b27f1672cf112477f9d12e95bf72 [label="UI", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_4bb8b27f1672cf112477f9d12e95bf72.html",tooltip=""];
+  dir_c59314bdb02f19eacd9df648360605e0 [label="VFX", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_c59314bdb02f19eacd9df648360605e0.html",tooltip=""];
+  }
+  }
+}

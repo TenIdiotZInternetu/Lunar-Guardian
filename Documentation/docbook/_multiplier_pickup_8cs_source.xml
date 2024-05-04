@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__multiplier_pickup_8cs_source" xml:lang="en-US">
+<title>MultiplierPickup.cs</title>
+<indexterm><primary>Scripts/Spawnables/Pickups/MultiplierPickup.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__multiplier_pickup_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System;
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_player_scripts">PlayerScripts</link>;
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00004"/>00004 
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00005"/><link linkend="_namespace_spawnables_1_1_pickups">00005</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_spawnables_1_1_pickups">Spawnables.Pickups</link>
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00006"/>00006 {
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00011"/><link linkend="_class_spawnables_1_1_pickups_1_1_multiplier_pickup">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_spawnables_1_1_pickups_1_1_multiplier_pickup">MultiplierPickup</link>&#32;:&#32;<link linkend="_class_spawnables_1_1_pickups_1_1_pickup">Pickup</link>
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Unity&#32;Callbacks&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;The&#32;multiplier&#32;resets&#32;when&#32;the&#32;pickup&#32;leaves&#32;the&#32;playfield</emphasis>
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">protected</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnTriggerExit2D(Collider2D&#32;other)
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!other.gameObject.CompareTag(<emphasis role="stringliteral">&quot;PlayfieldBorder&quot;</emphasis>))&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_status">PlayerStatus</link>.<link linkend="_class_player_scripts_1_1_player_status_1aeac2eae8e304f20bc75eb574b2df8964">Instance</link>.<link linkend="_class_player_scripts_1_1_player_status_1a012607dd27a930aa340ffa15fd32cb28">ResetScoreMultiplier</link>();
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__multiplier_pickup_8cs_source_1l00022"/>00022 }
+</programlisting></section>

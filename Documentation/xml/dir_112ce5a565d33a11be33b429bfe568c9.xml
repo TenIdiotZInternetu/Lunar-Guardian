@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_112ce5a565d33a11be33b429bfe568c9" kind="dir">
+    <compoundname>Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables</compoundname>
+    <innerdir refid="dir_03cd47860790084c5622249ea72fde39">Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts</innerdir>
+    <innerdir refid="dir_c179b515d0f8b52c3b1d7181df983408">Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups</innerdir>
+    <innerdir refid="dir_3e39e38e0e56cd445bd74acfc92353ea">Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons</innerdir>
+    <innerfile refid="_despawn_collider_8cs">DespawnCollider.cs</innerfile>
+    <innerfile refid="_entity_8cs">Entity.cs</innerfile>
+    <innerfile refid="_object_pool_8cs">ObjectPool.cs</innerfile>
+    <innerfile refid="_object_pool_manager_8cs">ObjectPoolManager.cs</innerfile>
+    <innerfile refid="_spin_8cs">Spin.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,429 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_movement_patterns_1_1_sinusoid_m_p" kind="class" language="C#" prot="public">
+    <compoundname>MovementPatterns::SinusoidMP</compoundname>
+    <basecompoundref refid="class_movement_patterns_1_1_movement_pattern" prot="public" virt="non-virtual">MovementPattern</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1a0f4b7f8bb73293dc7c2eeba244b07628" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool staysInLine</definition>
+        <argsstring></argsstring>
+        <name>staysInLine</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.staysInLine</qualifiedname>
+        <briefdescription>
+<para>if true, produces oscillating movement along a straight line, perpendicular to the given axis of oscillation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="17" column="23" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.speed</qualifiedname>
+        <briefdescription>
+<para>Rate of change of the sine function&apos;s argument. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="22" column="24" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1a31bef58f966d97b1ace9bd3a58ffd9a6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float amplitude</definition>
+        <argsstring></argsstring>
+        <name>amplitude</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.amplitude</qualifiedname>
+        <briefdescription>
+<para>Amplitude of the sine wave. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="27" column="24" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1acdfc8898c9e67fbcec81f3b04ae61bd9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float frequency</definition>
+        <argsstring></argsstring>
+        <name>frequency</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.frequency</qualifiedname>
+        <briefdescription>
+<para>Frequency of the sine wave. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="32" column="24" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1a275dd6dafe5d4455e599ffd15feb06f8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float phase</definition>
+        <argsstring></argsstring>
+        <name>phase</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.phase</qualifiedname>
+        <briefdescription>
+<para>Phase of the sine wave. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="37" column="24" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1a97712bccaedef08f6d8c525bdda2f7ef" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float acceleration</definition>
+        <argsstring></argsstring>
+        <name>acceleration</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.acceleration</qualifiedname>
+        <briefdescription>
+<para>Rate of change of speed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="43" column="24" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1ab1f333cb00c0c43b1ccdc49b2e6132aa" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float amplitudeChange</definition>
+        <argsstring></argsstring>
+        <name>amplitudeChange</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.amplitudeChange</qualifiedname>
+        <briefdescription>
+<para>Rate of change of amplitude. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="48" column="24" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1a07562c5f8a18a0608dc6234f2b7e64de" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float frequencyChange</definition>
+        <argsstring></argsstring>
+        <name>frequencyChange</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.frequencyChange</qualifiedname>
+        <briefdescription>
+<para>Rate of change of frequency. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="53" column="24" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1abc2ccff0697104d506d36bc08b2c4ab9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float phaseShift</definition>
+        <argsstring></argsstring>
+        <name>phaseShift</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.phaseShift</qualifiedname>
+        <briefdescription>
+<para>Rate of change of phase. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="58" column="24" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1a5ec5b5c6929e155f22c198c68a53bbfc" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float axisRotation</definition>
+        <argsstring></argsstring>
+        <name>axisRotation</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.axisRotation</qualifiedname>
+        <briefdescription>
+<para>Rotation of the axis of oscillation in degrees, where 0 is up. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="64" column="24" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1a3dec702741f2abf1503c0a2383109221" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 _axisDirection</definition>
+        <argsstring></argsstring>
+        <name>_axisDirection</name>
+        <qualifiedname>MovementPatterns.SinusoidMP._axisDirection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="69" column="25" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1aceb15f63bb9e98a7e27b4fb6898712a0" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 _axisNormal</definition>
+        <argsstring></argsstring>
+        <name>_axisNormal</name>
+        <qualifiedname>MovementPatterns.SinusoidMP._axisNormal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="72" column="25" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_sinusoid_m_p_1ab47cb477d14dbb2c1610c2dc9463c800" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 _origin</definition>
+        <argsstring></argsstring>
+        <name>_origin</name>
+        <qualifiedname>MovementPatterns.SinusoidMP._origin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="75" column="25" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="75" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_movement_patterns_1_1_sinusoid_m_p_1a8d67528573c728e2d30355bc60a141a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Initialize</definition>
+        <argsstring>(Entity entity)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.Initialize</qualifiedname>
+        <param>
+          <type><ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="79" column="30" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="79" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_movement_patterns_1_1_sinusoid_m_p_1aa27a497603473cb642e835d809c60a64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override Vector3</type>
+        <definition>override Vector3 GetNextPosition</definition>
+        <argsstring>(Entity entity)</argsstring>
+        <name>GetNextPosition</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.GetNextPosition</qualifiedname>
+        <param>
+          <type><ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="86" column="33" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="86" bodyend="92"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_movement_patterns_1_1_sinusoid_m_p_1a8a85270a76f63460c2162ca4dd65fb72" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetNextPosition</definition>
+        <argsstring>(float time)</argsstring>
+        <name>GetNextPosition</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.GetNextPosition</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="97" column="25" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="97" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_movement_patterns_1_1_sinusoid_m_p_1a38be0fd25d205b3afcf21aa20fba50b0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetAxisPosition</definition>
+        <argsstring>(float distance)</argsstring>
+        <name>GetAxisPosition</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.GetAxisPosition</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>distance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="116" column="25" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_movement_patterns_1_1_sinusoid_m_p_1a040a8d75f31dd5252616b3d9860da19d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetSinusoidPosition</definition>
+        <argsstring>(float t, float amplitude, float frequency, float phase)</argsstring>
+        <name>GetSinusoidPosition</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.GetSinusoidPosition</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>amplitude</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>frequency</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>phase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="122" column="25" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="122" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_movement_patterns_1_1_sinusoid_m_p_1a755e7a04dbc0bc114ebd52997a9a2a42" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnValidate</definition>
+        <argsstring>()</argsstring>
+        <name>OnValidate</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.OnValidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="131" column="14" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="131" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_movement_patterns_1_1_sinusoid_m_p_1ae7e5103e242d1fbf4a03afe96d3947ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnDrawGizmosSelected</definition>
+        <argsstring>()</argsstring>
+        <name>OnDrawGizmosSelected</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.OnDrawGizmosSelected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="141" column="22" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="141" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_movement_patterns_1_1_sinusoid_m_p_1a59e87ce9003c4f28138aa8989c9c3b14" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GizmoDrawAxes</definition>
+        <argsstring>(float timeFrame)</argsstring>
+        <name>GizmoDrawAxes</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.GizmoDrawAxes</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>timeFrame</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="151" column="22" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="151" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_movement_patterns_1_1_sinusoid_m_p_1ab4e9ce897aa24f4f503c0178c0e21ba3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GizmoDrawTrajectory</definition>
+        <argsstring>(float timeFrame, float timeStep)</argsstring>
+        <name>GizmoDrawTrajectory</name>
+        <qualifiedname>MovementPatterns.SinusoidMP.GizmoDrawTrajectory</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>timeFrame</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>timeStep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="162" column="22" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="162" bodyend="175"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Produces and follows a sine wave shaped path. The sine wave can be rotated by specifying the axis of oscillation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+      </node>
+      <node id="1">
+        <label>SinusoidMP</label>
+        <link refid="class_movement_patterns_1_1_sinusoid_m_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+      </node>
+      <node id="1">
+        <label>SinusoidMP</label>
+        <link refid="class_movement_patterns_1_1_sinusoid_m_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/MovementPatterns/SinusoidMP.cs" line="10" column="11" bodyfile="Scripts/MovementPatterns/SinusoidMP.cs" bodystart="11" bodyend="176"/>
+    <listofallmembers>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a3dec702741f2abf1503c0a2383109221" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>_axisDirection</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1aceb15f63bb9e98a7e27b4fb6898712a0" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>_axisNormal</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1ab47cb477d14dbb2c1610c2dc9463c800" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>_origin</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a97712bccaedef08f6d8c525bdda2f7ef" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>acceleration</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a31bef58f966d97b1ace9bd3a58ffd9a6" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>amplitude</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1ab1f333cb00c0c43b1ccdc49b2e6132aa" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>amplitudeChange</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a5ec5b5c6929e155f22c198c68a53bbfc" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>axisRotation</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1acdfc8898c9e67fbcec81f3b04ae61bd9" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>frequency</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a07562c5f8a18a0608dc6234f2b7e64de" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>frequencyChange</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a38be0fd25d205b3afcf21aa20fba50b0" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>GetAxisPosition</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1aa27a497603473cb642e835d809c60a64" prot="public" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>GetNextPosition</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a8a85270a76f63460c2162ca4dd65fb72" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>GetNextPosition</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a040a8d75f31dd5252616b3d9860da19d" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>GetSinusoidPosition</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a59e87ce9003c4f28138aa8989c9c3b14" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>GizmoDrawAxes</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1ab4e9ce897aa24f4f503c0178c0e21ba3" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>GizmoDrawTrajectory</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a8d67528573c728e2d30355bc60a141a0" prot="public" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>Initialize</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1ae7e5103e242d1fbf4a03afe96d3947ef" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>OnDrawGizmosSelected</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a755e7a04dbc0bc114ebd52997a9a2a42" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>OnValidate</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a275dd6dafe5d4455e599ffd15feb06f8" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>phase</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1abc2ccff0697104d506d36bc08b2c4ab9" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>phaseShift</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>speed</name></member>
+      <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a0f4b7f8bb73293dc7c2eeba244b07628" prot="private" virt="non-virtual"><scope>MovementPatterns::SinusoidMP</scope><name>staysInLine</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

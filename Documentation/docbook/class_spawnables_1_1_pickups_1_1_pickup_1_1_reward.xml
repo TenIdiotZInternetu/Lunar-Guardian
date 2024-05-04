@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_pickups_1_1_pickup_1_1_reward" xml:lang="en-US">
+<title>Pickup.Reward Class Reference</title>
+<indexterm><primary>Pickup.Reward</primary></indexterm>
+<para>
+
+<para>Resources gained by touching the pickup. </para>
+ 
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_pickups_1_1_pickup_1_1_reward_1ae56758fa49797d336c15327dd426e39c"/><link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">PlayerStatus.ResourceType</link> <emphasis role="strong">type</emphasis></para>
+
+<para>Type of resource to be gained. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_pickups_1_1_pickup_1_1_reward_1a14236de313193a14b4dbdf442bcf2bb9"/>int <emphasis role="strong">amount</emphasis></para>
+
+<para>Amount of resource gained. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pickup_8cs_source_1l00019">19</link> of file <link linkend="__pickup_8cs_source">Pickup.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/Spawnables/Pickups/Pickup.cs</section>
+</section>

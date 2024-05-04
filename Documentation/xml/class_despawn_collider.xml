@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_despawn_collider" kind="class" language="C#" prot="public">
+    <compoundname>DespawnCollider</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_despawn_collider_1ada23a8a3af1ed1d7d6644a54d8be2afa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DespawnCollider.OnTriggerExit2D</definition>
+        <argsstring>(Collider2D other)</argsstring>
+        <name>OnTriggerExit2D</name>
+        <qualifiedname>DespawnCollider.OnTriggerExit2D</qualifiedname>
+        <param>
+          <type>Collider2D</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/DespawnCollider.cs" line="6" column="18" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/DespawnCollider.cs" bodystart="6" bodyend="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DespawnCollider</label>
+        <link refid="class_despawn_collider"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DespawnCollider</label>
+        <link refid="class_despawn_collider"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/DespawnCollider.cs" line="3" column="7" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/DespawnCollider.cs" bodystart="4" bodyend="11"/>
+    <listofallmembers>
+      <member refid="class_despawn_collider_1ada23a8a3af1ed1d7d6644a54d8be2afa" prot="private" virt="non-virtual"><scope>DespawnCollider</scope><name>OnTriggerExit2D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

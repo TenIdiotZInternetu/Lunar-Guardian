@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_player_scripts_1_1_player" kind="class" language="C#" prot="public">
+    <compoundname>PlayerScripts::Player</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_1a7fdf773501c77d7fe9587f9cafffee5f" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_player_scripts_1_1_player" kindref="compound">Player</ref></type>
+        <definition>Player Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <qualifiedname>PlayerScripts.Player.Instance</qualifiedname>
+        <briefdescription>
+<para>Singleton instance of the player. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="20" column="30" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_1a631e83154e218047a2889c328a40d351" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float movementSpeed</definition>
+        <argsstring></argsstring>
+        <name>movementSpeed</name>
+        <qualifiedname>PlayerScripts.Player.movementSpeed</qualifiedname>
+        <briefdescription>
+<para>Distance travelled in one second of held movement key. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="27" column="22" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_1a207b8b7bc7cd8c7389acca3a3c9779fd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float focusSpeedModifier</definition>
+        <argsstring></argsstring>
+        <name>focusSpeedModifier</name>
+        <qualifiedname>PlayerScripts.Player.focusSpeedModifier</qualifiedname>
+        <briefdescription>
+<para>Ratio at which the movement speed is decreased when focused. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="32" column="22" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_1a4dcef5cc05e1394c1e520d61393c92f3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_player_scripts_1_1_bomb_controller" kindref="compound">BombController</ref></type>
+        <definition>BombController bombBehaviour</definition>
+        <argsstring></argsstring>
+        <name>bombBehaviour</name>
+        <qualifiedname>PlayerScripts.Player.bombBehaviour</qualifiedname>
+        <briefdescription>
+<para>Appropriate BombController activated upon deploying a bomb by the player. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="37" column="31" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_1aaca2015f54b311502fd2cb2cab74dd61" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject currentWeaponSet</definition>
+        <argsstring></argsstring>
+        <name>currentWeaponSet</name>
+        <qualifiedname>PlayerScripts.Player.currentWeaponSet</qualifiedname>
+        <briefdescription>
+<para>A set of weapons used by the player at current power level when shooting. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="42" column="27" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_player_scripts_1_1_player_1a619889203db83ef8efe43d453d9e554c" compoundref="_player_8cs" startline="106" endline="111">Player.ChangeWeapon</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_1aff94192c9014da40699a48789c696f3d" prot="public" static="no" mutable="no">
+        <type>List&lt; GameObject &gt;</type>
+        <definition>List&lt;GameObject&gt; weaponSets</definition>
+        <argsstring></argsstring>
+        <name>weaponSets</name>
+        <qualifiedname>PlayerScripts.Player.weaponSets</qualifiedname>
+        <briefdescription>
+<para>List of weapons used at appropriate power levels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="47" column="21" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_player_scripts_1_1_player_1a619889203db83ef8efe43d453d9e554c" compoundref="_player_8cs" startline="106" endline="111">Player.ChangeWeapon</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_1afc1cd538feae725d6560a393bb88ed65" prot="private" static="no" mutable="no">
+        <type>Rigidbody2D</type>
+        <definition>Rigidbody2D _rigidbody</definition>
+        <argsstring></argsstring>
+        <name>_rigidbody</name>
+        <qualifiedname>PlayerScripts.Player._rigidbody</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="51" column="29" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_1ad3aaed1e36cfe099bf789d491113f552" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _hasControl</definition>
+        <argsstring></argsstring>
+        <name>_hasControl</name>
+        <qualifiedname>PlayerScripts.Player._hasControl</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="52" column="22" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_1accdb151307488e9126fb911052580679" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _hasBombs</definition>
+        <argsstring></argsstring>
+        <name>_hasBombs</name>
+        <qualifiedname>PlayerScripts.Player._hasBombs</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="53" column="22" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_1aed097ec52fe2fea255f496f3fa9f85ce" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _inBombState</definition>
+        <argsstring></argsstring>
+        <name>_inBombState</name>
+        <qualifiedname>PlayerScripts.Player._inBombState</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="56" column="22" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_scripts_1_1_player_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>PlayerScripts.Player.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="61" column="14" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="61" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_1a64cb65bfc7daed53934ffc6d155ff1ed" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FixedUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>FixedUpdate</name>
+        <qualifiedname>PlayerScripts.Player.FixedUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="72" column="14" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="72" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_1a26fd661d0874992b7c900bcd912b765a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeployBomb</definition>
+        <argsstring>()</argsstring>
+        <name>DeployBomb</name>
+        <qualifiedname>PlayerScripts.Player.DeployBomb</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="126" column="22" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="126" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_1a76f4d8b940dd6d837e2c16ed44c93327" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CheckBombs</definition>
+        <argsstring>(float bombs)</argsstring>
+        <name>CheckBombs</name>
+        <qualifiedname>PlayerScripts.Player.CheckBombs</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>bombs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="134" column="22" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_1ac54ce402cec4f1d67a1cef4db841d26d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>PlayerScripts.Player.OnDestroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="140" column="22" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="140" bodyend="145"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_scripts_1_1_player_1a542f630d26b87b7485284fa8e1156389" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeBombState</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>ChangeBombState</name>
+        <qualifiedname>PlayerScripts.Player.ChangeBombState</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Changes bomb state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the bomb effects still last </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="88" column="21" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_1ae734336ad894a9f83096e0eb022ce694" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeWeapon</definition>
+        <argsstring>(float powerLevel)</argsstring>
+        <name>ChangeWeapon</name>
+        <qualifiedname>PlayerScripts.Player.ChangeWeapon</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>powerLevel</declname>
+        </param>
+        <briefdescription>
+<para>Changes currently used set of weapons. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>powerLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Player&apos;s power level </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="97" column="21" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="97" bodyend="100"/>
+        <references refid="class_player_scripts_1_1_player_1ae734336ad894a9f83096e0eb022ce694" compoundref="_player_8cs" startline="97" endline="100">Player.ChangeWeapon</references>
+        <referencedby refid="class_player_scripts_1_1_player_1ae734336ad894a9f83096e0eb022ce694" compoundref="_player_8cs" startline="97" endline="100">Player.ChangeWeapon</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_1a619889203db83ef8efe43d453d9e554c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeWeapon</definition>
+        <argsstring>(int powerLevel)</argsstring>
+        <name>ChangeWeapon</name>
+        <qualifiedname>PlayerScripts.Player.ChangeWeapon</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>powerLevel</declname>
+        </param>
+        <briefdescription>
+<para>Changes currently used set of weapons. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>powerLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Player&apos;s power level </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="106" column="21" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="106" bodyend="111"/>
+        <references refid="class_player_scripts_1_1_player_1aaca2015f54b311502fd2cb2cab74dd61" compoundref="_player_8cs" startline="42">Player.currentWeaponSet</references>
+        <references refid="class_player_scripts_1_1_player_1aff94192c9014da40699a48789c696f3d" compoundref="_player_8cs" startline="47">Player.weaponSets</references>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_1addcd78ec1b749bf71dd27fd1965f2efc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeControl</definition>
+        <argsstring>(GameState state)</argsstring>
+        <name>ChangeControl</name>
+        <qualifiedname>PlayerScripts.Player.ChangeControl</qualifiedname>
+        <param>
+          <type><ref refid="class_game_manager_1_1_game_state" kindref="compound">GameState</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Changes whether the player has control over the character. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current GameState of the game </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Player.cs" line="117" column="21" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="117" bodyend="120"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Controls player&apos;s movement and responses to his actions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Player</label>
+        <link refid="class_player_scripts_1_1_player"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>bombBehaviour</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BombController</label>
+        <link refid="class_player_scripts_1_1_bomb_controller"/>
+      </node>
+      <node id="2">
+        <label>Player</label>
+        <link refid="class_player_scripts_1_1_player"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>bombBehaviour</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/PlayerScripts/Player.cs" line="13" column="11" bodyfile="Scripts/PlayerScripts/Player.cs" bodystart="14" bodyend="146"/>
+    <listofallmembers>
+      <member refid="class_player_scripts_1_1_player_1accdb151307488e9126fb911052580679" prot="private" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>_hasBombs</name></member>
+      <member refid="class_player_scripts_1_1_player_1ad3aaed1e36cfe099bf789d491113f552" prot="private" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>_hasControl</name></member>
+      <member refid="class_player_scripts_1_1_player_1aed097ec52fe2fea255f496f3fa9f85ce" prot="private" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>_inBombState</name></member>
+      <member refid="class_player_scripts_1_1_player_1afc1cd538feae725d6560a393bb88ed65" prot="private" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>_rigidbody</name></member>
+      <member refid="class_player_scripts_1_1_player_1a4dcef5cc05e1394c1e520d61393c92f3" prot="public" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>bombBehaviour</name></member>
+      <member refid="class_player_scripts_1_1_player_1a542f630d26b87b7485284fa8e1156389" prot="public" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>ChangeBombState</name></member>
+      <member refid="class_player_scripts_1_1_player_1addcd78ec1b749bf71dd27fd1965f2efc" prot="public" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>ChangeControl</name></member>
+      <member refid="class_player_scripts_1_1_player_1ae734336ad894a9f83096e0eb022ce694" prot="public" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>ChangeWeapon</name></member>
+      <member refid="class_player_scripts_1_1_player_1a619889203db83ef8efe43d453d9e554c" prot="public" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>ChangeWeapon</name></member>
+      <member refid="class_player_scripts_1_1_player_1a76f4d8b940dd6d837e2c16ed44c93327" prot="private" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>CheckBombs</name></member>
+      <member refid="class_player_scripts_1_1_player_1aaca2015f54b311502fd2cb2cab74dd61" prot="public" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>currentWeaponSet</name></member>
+      <member refid="class_player_scripts_1_1_player_1a26fd661d0874992b7c900bcd912b765a" prot="private" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>DeployBomb</name></member>
+      <member refid="class_player_scripts_1_1_player_1a64cb65bfc7daed53934ffc6d155ff1ed" prot="private" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>FixedUpdate</name></member>
+      <member refid="class_player_scripts_1_1_player_1a207b8b7bc7cd8c7389acca3a3c9779fd" prot="public" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>focusSpeedModifier</name></member>
+      <member refid="class_player_scripts_1_1_player_1a7fdf773501c77d7fe9587f9cafffee5f" prot="public" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>Instance</name></member>
+      <member refid="class_player_scripts_1_1_player_1a631e83154e218047a2889c328a40d351" prot="public" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>movementSpeed</name></member>
+      <member refid="class_player_scripts_1_1_player_1ac54ce402cec4f1d67a1cef4db841d26d" prot="private" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>OnDestroy</name></member>
+      <member refid="class_player_scripts_1_1_player_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>Start</name></member>
+      <member refid="class_player_scripts_1_1_player_1aff94192c9014da40699a48789c696f3d" prot="public" virt="non-virtual"><scope>PlayerScripts::Player</scope><name>weaponSets</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

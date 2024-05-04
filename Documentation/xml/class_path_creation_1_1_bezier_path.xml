@@ -1,0 +1,1062 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_bezier_path" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::BezierPath</compoundname>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_path_creation_1_1_bezier_path_1aee3ea37f4f505980157cf93a84687bcb" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ControlMode</name>
+        <qualifiedname>PathCreation.BezierPath.ControlMode</qualifiedname>
+        <enumvalue id="class_path_creation_1_1_bezier_path_1aee3ea37f4f505980157cf93a84687bcba1d5b772bea21e5e949413e09eedf17de" prot="public">
+          <name>Aligned</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_path_creation_1_1_bezier_path_1aee3ea37f4f505980157cf93a84687bcba3db6ae5ba47a2ce45b4788135adc8dcf" prot="public">
+          <name>Mirrored</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_path_creation_1_1_bezier_path_1aee3ea37f4f505980157cf93a84687bcbab24ce0cd392a5b0b8dedc66c25213594" prot="public">
+          <name>Free</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_path_creation_1_1_bezier_path_1aee3ea37f4f505980157cf93a84687bcba086247a9b57fde6eefee2a0c4752242d" prot="public">
+          <name>Automatic</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="20" column="15" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="event">
+      <memberdef kind="event" id="class_path_creation_1_1_bezier_path_1a5d92b7266e3055c0fac0f8cbcfc2f2f5" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>System.Action</type>
+        <definition>System.Action OnModified</definition>
+        <argsstring></argsstring>
+        <name>OnModified</name>
+        <qualifiedname>PathCreation.BezierPath.OnModified</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="19" column="35" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_bezier_path_1a833b5dd4931cdff043f8e31372c8332d" prot="private" static="no" mutable="no">
+        <type>List&lt; Vector3 &gt;</type>
+        <definition>List&lt;Vector3&gt; points</definition>
+        <argsstring></argsstring>
+        <name>points</name>
+        <qualifiedname>PathCreation.BezierPath.points</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="25" column="7" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_bezier_path_1aed0c66a17f9cb95686ef7d9a850ea3b0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool isClosed</definition>
+        <argsstring></argsstring>
+        <name>isClosed</name>
+        <qualifiedname>PathCreation.BezierPath.isClosed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="27" column="7" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_bezier_path_1a17de5f69b233fef45dc594369edcfe45" prot="private" static="no" mutable="no">
+        <type>PathSpace</type>
+        <definition>PathSpace space</definition>
+        <argsstring></argsstring>
+        <name>space</name>
+        <qualifiedname>PathCreation.BezierPath.space</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="29" column="12" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_bezier_path_1a1bb74e933234f64b247d02b8221ec47c" prot="private" static="no" mutable="no">
+        <type>ControlMode</type>
+        <definition>ControlMode controlMode</definition>
+        <argsstring></argsstring>
+        <name>controlMode</name>
+        <qualifiedname>PathCreation.BezierPath.controlMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="31" column="14" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_bezier_path_1a774d13663f4c7fee53aca97e46900e77" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float autoControlLength</definition>
+        <argsstring></argsstring>
+        <name>autoControlLength</name>
+        <qualifiedname>PathCreation.BezierPath.autoControlLength</qualifiedname>
+        <initializer>= .3f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="33" column="8" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_bezier_path_1a2a1f199823444510686be2f69f46fb7d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool boundsUpToDate</definition>
+        <argsstring></argsstring>
+        <name>boundsUpToDate</name>
+        <qualifiedname>PathCreation.BezierPath.boundsUpToDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="35" column="7" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_bezier_path_1a024318f4225ee6bedb20b7f865205d34" prot="private" static="no" mutable="no">
+        <type>Bounds</type>
+        <definition>Bounds bounds</definition>
+        <argsstring></argsstring>
+        <name>bounds</name>
+        <qualifiedname>PathCreation.BezierPath.bounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="37" column="9" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_bezier_path_1a7e64637d78730c876b4bb17c92a4f154" prot="private" static="no" mutable="no">
+        <type>List&lt; float &gt;</type>
+        <definition>List&lt;float&gt; perAnchorNormalsAngle</definition>
+        <argsstring></argsstring>
+        <name>perAnchorNormalsAngle</name>
+        <qualifiedname>PathCreation.BezierPath.perAnchorNormalsAngle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="41" column="7" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_bezier_path_1ac373cf341db2c8f563bab41d9f1c08d1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float globalNormalsAngle</definition>
+        <argsstring></argsstring>
+        <name>globalNormalsAngle</name>
+        <qualifiedname>PathCreation.BezierPath.globalNormalsAngle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="43" column="8" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_bezier_path_1aae10eb6baea4701401059b19472713e8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool flipNormals</definition>
+        <argsstring></argsstring>
+        <name>flipNormals</name>
+        <qualifiedname>PathCreation.BezierPath.flipNormals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="45" column="7" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_path_creation_1_1_bezier_path_1ad43c2ada379c61ab862f177c8505ace8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>Vector3</type>
+        <definition>Vector3 this[int i]</definition>
+        <argsstring></argsstring>
+        <name>this[int i]</name>
+        <qualifiedname>PathCreation.BezierPath.this[int i]</qualifiedname>
+        <briefdescription>
+<para>Get world space position of point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="123" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="123" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_bezier_path_1a76122faf62db75c06e32a6aca7ffd666" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int NumPoints</definition>
+        <argsstring></argsstring>
+        <name>NumPoints</name>
+        <qualifiedname>PathCreation.BezierPath.NumPoints</qualifiedname>
+        <briefdescription>
+<para>Total number of points in the path (anchors and controls) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="143" column="20" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="143" bodyend="147"/>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1ac584b000da2691b488b51416e1fb4a66" compoundref="_bezier_path_8cs" startline="597" endline="632">BezierPath.UpdateToNewPathSpace</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_bezier_path_1a7faf89e9e535007f3f491d54c26efe60" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int NumAnchorPoints</definition>
+        <argsstring></argsstring>
+        <name>NumAnchorPoints</name>
+        <qualifiedname>PathCreation.BezierPath.NumAnchorPoints</qualifiedname>
+        <briefdescription>
+<para>Number of anchor points making up the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="150" column="20" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="150" bodyend="154"/>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a6707c57f434f60dc9f14e80907d01ee5" compoundref="_bezier_path_8cs" startline="526" endline="534">BezierPath.AutoSetAllControlPoints</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a8c68c9c40742ff4a0d07c23366083f27" compoundref="_bezier_path_8cs" startline="567" endline="593">BezierPath.AutoSetStartAndEndControls</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_bezier_path_1aba6ba2ef023e1b5fcc541ce2ec07da30" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int NumSegments</definition>
+        <argsstring></argsstring>
+        <name>NumSegments</name>
+        <qualifiedname>PathCreation.BezierPath.NumSegments</qualifiedname>
+        <briefdescription>
+<para>Number of bezier curves making up this path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="157" column="20" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="157" bodyend="161"/>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a5a1537c7d09255d14329cfe10d09ed41" compoundref="_bezier_path_8cs" startline="405" endline="425">BezierPath.CalculateBoundsWithTransform</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1ab53e85db248fb10680799c89cef3ad89" compoundref="_bezier_path_8cs" startline="318" endline="340">BezierPath.DeleteSegment</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a6185499e7da708f8fb6e99f698436d36" compoundref="_bezier_path_8cs" startline="343" endline="346">BezierPath.GetPointsInSegment</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a1db9cbd6086ef5b725ef6dca456b0dc5" compoundref="_bezier_path_8cs" startline="491" endline="512">BezierPath.UpdateBounds</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_bezier_path_1a0cacc3cec2744929171dc4d0563ea19e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>PathSpace</type>
+        <definition>PathSpace Space</definition>
+        <argsstring></argsstring>
+        <name>Space</name>
+        <qualifiedname>PathCreation.BezierPath.Space</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Path can exist in 3D (xyz), 2D (xy), or Top-Down (xz) space In xy or xz space, points will be clamped to that plane (so in a 2D path, for example, points will always be at 0 on z axis) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="165" column="26" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="165" bodyend="176"/>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1abc1cd71906862025c18067de4ac55fcd" compoundref="_bezier_path_8cs" startline="54" endline="71">BezierPath.BezierPath</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25" compoundref="_vertex_path_8cs" startline="59" endline="150">VertexPath.VertexPath</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_bezier_path_1a26f01b589d00384406eb54173d4d7aca" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool IsClosed</definition>
+        <argsstring></argsstring>
+        <name>IsClosed</name>
+        <qualifiedname>PathCreation.BezierPath.IsClosed</qualifiedname>
+        <briefdescription>
+<para>If closed, path will loop back from end point to start point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="179" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="179" bodyend="189"/>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1abc1cd71906862025c18067de4ac55fcd" compoundref="_bezier_path_8cs" startline="54" endline="71">BezierPath.BezierPath</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25" compoundref="_vertex_path_8cs" startline="59" endline="150">VertexPath.VertexPath</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_bezier_path_1a16552136821334ce771512319d7be9f4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ControlMode</type>
+        <definition>ControlMode ControlPointMode</definition>
+        <argsstring></argsstring>
+        <name>ControlPointMode</name>
+        <qualifiedname>PathCreation.BezierPath.ControlPointMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The control mode determines the behaviour of control points. Possible modes are: Aligned = controls stay in straight line around their anchor Mirrored = controls stay in straight, equidistant line around their anchor Free = no constraints (use this if sharp corners are needed) Automatic = controls placed automatically to try make the path smooth </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="197" column="28" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="197" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_bezier_path_1ad77316d5b3c1726244503f8b2540fe2d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>float</type>
+        <definition>float AutoControlLength</definition>
+        <argsstring></argsstring>
+        <name>AutoControlLength</name>
+        <qualifiedname>PathCreation.BezierPath.AutoControlLength</qualifiedname>
+        <briefdescription>
+<para>When using automatic control point placement, this value scales how far apart controls are placed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="213" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="213" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_bezier_path_1a4ef9d3ec8744096f518dc1a650fc26c1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool FlipNormals</definition>
+        <argsstring></argsstring>
+        <name>FlipNormals</name>
+        <qualifiedname>PathCreation.BezierPath.FlipNormals</qualifiedname>
+        <briefdescription>
+<para>Flip the normal vectors 180 degrees. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="428" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="428" bodyend="438"/>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25" compoundref="_vertex_path_8cs" startline="59" endline="150">VertexPath.VertexPath</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_bezier_path_1abe9a53426b4002473d61f85798101296" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>float</type>
+        <definition>float GlobalNormalsAngle</definition>
+        <argsstring></argsstring>
+        <name>GlobalNormalsAngle</name>
+        <qualifiedname>PathCreation.BezierPath.GlobalNormalsAngle</qualifiedname>
+        <briefdescription>
+<para>Global angle that all normal vectors are rotated by (only relevant for paths in 3D space) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="441" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="441" bodyend="451"/>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25" compoundref="_vertex_path_8cs" startline="59" endline="150">VertexPath.VertexPath</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_bezier_path_1a7a1adffc40fe07f5e2db82a63b6fb33a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>Bounds</type>
+        <definition>Bounds PathBounds</definition>
+        <argsstring></argsstring>
+        <name>PathBounds</name>
+        <qualifiedname>PathCreation.BezierPath.PathBounds</qualifiedname>
+        <briefdescription>
+<para>Bounding box containing the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="477" column="23" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="477" bodyend="484"/>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1ac584b000da2691b488b51416e1fb4a66" compoundref="_bezier_path_8cs" startline="597" endline="632">BezierPath.UpdateToNewPathSpace</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1abc1cd71906862025c18067de4ac55fcd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BezierPath</definition>
+        <argsstring>(Vector3 centre, bool isClosed=false, PathSpace space=PathSpace.xyz)</argsstring>
+        <name>BezierPath</name>
+        <qualifiedname>PathCreation.BezierPath.BezierPath</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>centre</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isClosed</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+          <defval>PathSpace.xyz</defval>
+        </param>
+        <briefdescription>
+<para>Creates a two-anchor path centred around the given centre point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>param name=&quot;isClosed&quot;&gt; Should the end point connect back to the start point? </para>
+<para>param name=&quot;space&quot;&gt; Determines if the path is in 3d space, or clamped to the xy/xz plane </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="54" column="9" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="54" bodyend="71"/>
+        <references refid="class_path_creation_1_1_bezier_path_1a26f01b589d00384406eb54173d4d7aca" compoundref="_bezier_path_8cs" startline="179" endline="189">BezierPath.IsClosed</references>
+        <references refid="class_path_creation_1_1_bezier_path_1a0cacc3cec2744929171dc4d0563ea19e" compoundref="_bezier_path_8cs" startline="165" endline="176">BezierPath.Space</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a86aae663e474da906ba3da4eff2b35f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BezierPath</definition>
+        <argsstring>(IEnumerable&lt; Vector3 &gt; points, bool isClosed=false, PathSpace space=PathSpace.xyz)</argsstring>
+        <name>BezierPath</name>
+        <qualifiedname>PathCreation.BezierPath.BezierPath</qualifiedname>
+        <param>
+          <type>IEnumerable&lt; Vector3 &gt;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isClosed</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+          <defval>PathSpace.xyz</defval>
+        </param>
+        <briefdescription>
+<para>Creates a path from the supplied 3D points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>param name=&quot;points&quot;&gt; List or array of points to create the path from. </para>
+<para>param name=&quot;isClosed&quot;&gt; Should the end point connect back to the start point? </para>
+<para>param name=&quot;space&quot;&gt; Determines if the path is in 3d space, or clamped to the xy/xz plane </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="77" column="16" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="77" bodyend="95"/>
+        <references refid="class_path_creation_1_1_bezier_path_1ab12baf2f95b49820320320618b733948" compoundref="_bezier_path_8cs" startline="228" endline="254">BezierPath.AddSegmentToEnd</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a7850bd613d1984e910404cb7887f6d07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BezierPath</definition>
+        <argsstring>(IEnumerable&lt; Vector2 &gt; transforms, bool isClosed=false, PathSpace space=PathSpace.xy)</argsstring>
+        <name>BezierPath</name>
+        <qualifiedname>PathCreation.BezierPath.BezierPath</qualifiedname>
+        <param>
+          <type>IEnumerable&lt; Vector2 &gt;</type>
+          <declname>transforms</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isClosed</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+          <defval>PathSpace.xy</defval>
+        </param>
+        <briefdescription>
+<para>Creates a path from the positions of the supplied 2D points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>param name=&quot;transforms&quot;&gt; List or array of transforms to create the path from. </para>
+<para>param name=&quot;isClosed&quot;&gt; Should the end point connect back to the start point? </para>
+<para>param name=&quot;space&quot;&gt; Determines if the path is in 3d space, or clamped to the xy/xz plane </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="101" column="16" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="101" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a2dca585e9b7ab2d6de263f9ee94d0075" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BezierPath</definition>
+        <argsstring>(IEnumerable&lt; Transform &gt; transforms, bool isClosed=false, PathSpace space=PathSpace.xy)</argsstring>
+        <name>BezierPath</name>
+        <qualifiedname>PathCreation.BezierPath.BezierPath</qualifiedname>
+        <param>
+          <type>IEnumerable&lt; Transform &gt;</type>
+          <declname>transforms</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isClosed</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+          <defval>PathSpace.xy</defval>
+        </param>
+        <briefdescription>
+<para>Creates a path from the positions of the supplied transforms. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>param name=&quot;transforms&quot;&gt; List or array of transforms to create the path from. </para>
+<para>param name=&quot;isClosed&quot;&gt; Should the end point connect back to the start point? </para>
+<para>param name=&quot;space&quot;&gt; Determines if the path is in 3d space, or clamped to the xy/xz plane </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="108" column="16" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="108" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a72ed8d4817462c4937e638d5f136dd07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BezierPath</definition>
+        <argsstring>(IEnumerable&lt; Vector2 &gt; points, PathSpace space=PathSpace.xyz, bool isClosed=false)</argsstring>
+        <name>BezierPath</name>
+        <qualifiedname>PathCreation.BezierPath.BezierPath</qualifiedname>
+        <param>
+          <type>IEnumerable&lt; Vector2 &gt;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+          <defval>PathSpace.xyz</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isClosed</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Creates a path from the supplied 2D points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>param name=&quot;points&quot;&gt; List or array of 2d points to create the path from. </para>
+<para>param name=&quot;isClosed&quot;&gt; Should the end point connect back to the start point? </para>
+<para>param name=&quot;pathSpace&quot;&gt; Determines if the path is in 3d space, or clamped to the xy/xz plane </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="115" column="16" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="115" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a4738362b3efc98a1c60a825b306a0892" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetPoint</definition>
+        <argsstring>(int i)</argsstring>
+        <name>GetPoint</name>
+        <qualifiedname>PathCreation.BezierPath.GetPoint</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Get world space position of point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="130" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="130" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a0d06f4dbe40cd7406bb66226b1b2a248" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetPoint</definition>
+        <argsstring>(int i, Vector3 localPosition, bool suppressPathModifiedEvent=false)</argsstring>
+        <name>SetPoint</name>
+        <qualifiedname>PathCreation.BezierPath.SetPoint</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>localPosition</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>suppressPathModifiedEvent</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Get world space position of point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="135" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="135" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1ab12baf2f95b49820320320618b733948" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddSegmentToEnd</definition>
+        <argsstring>(Vector3 anchorPos)</argsstring>
+        <name>AddSegmentToEnd</name>
+        <qualifiedname>PathCreation.BezierPath.AddSegmentToEnd</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>anchorPos</declname>
+        </param>
+        <briefdescription>
+<para>Add new anchor point to end of the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="228" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="228" bodyend="254"/>
+        <references refid="class_path_creation_1_1_bezier_path_1ad8df689d28cf8306e3ef28089427cb33" compoundref="_bezier_path_8cs" startline="515" endline="523">BezierPath.AutoSetAllAffectedControlPoints</references>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a86aae663e474da906ba3da4eff2b35f9" compoundref="_bezier_path_8cs" startline="77" endline="95">BezierPath.BezierPath</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1ab9657215c02544661b55b75f2e9e0867" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddSegmentToStart</definition>
+        <argsstring>(Vector3 anchorPos)</argsstring>
+        <name>AddSegmentToStart</name>
+        <qualifiedname>PathCreation.BezierPath.AddSegmentToStart</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>anchorPos</declname>
+        </param>
+        <briefdescription>
+<para>Add new anchor point to start of the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="257" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="257" bodyend="281"/>
+        <references refid="class_path_creation_1_1_bezier_path_1ad8df689d28cf8306e3ef28089427cb33" compoundref="_bezier_path_8cs" startline="515" endline="523">BezierPath.AutoSetAllAffectedControlPoints</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a33b79a7b74d774133da2f4abc0440bf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SplitSegment</definition>
+        <argsstring>(Vector3 anchorPos, int segmentIndex, float splitTime)</argsstring>
+        <name>SplitSegment</name>
+        <qualifiedname>PathCreation.BezierPath.SplitSegment</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>anchorPos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>segmentIndex</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>splitTime</declname>
+        </param>
+        <briefdescription>
+<para>Insert new anchor point at given position. Automatically place control points around it so as to keep shape of curve the same. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="284" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="284" bodyend="315"/>
+        <references refid="class_path_creation_1_1_bezier_path_1ad8df689d28cf8306e3ef28089427cb33" compoundref="_bezier_path_8cs" startline="515" endline="523">BezierPath.AutoSetAllAffectedControlPoints</references>
+        <references refid="class_path_creation_1_1_bezier_path_1a6185499e7da708f8fb6e99f698436d36" compoundref="_bezier_path_8cs" startline="343" endline="346">BezierPath.GetPointsInSegment</references>
+        <references refid="class_path_creation_1_1_bezier_path_1ad80661af25a34919eeba7403348fd75f" compoundref="_bezier_path_8cs" startline="349" endline="402">BezierPath.MovePoint</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1ab53e85db248fb10680799c89cef3ad89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeleteSegment</definition>
+        <argsstring>(int anchorIndex)</argsstring>
+        <name>DeleteSegment</name>
+        <qualifiedname>PathCreation.BezierPath.DeleteSegment</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>anchorIndex</declname>
+        </param>
+        <briefdescription>
+<para>Delete the anchor point at given index, as well as its associated control points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="318" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="318" bodyend="340"/>
+        <references refid="class_path_creation_1_1_bezier_path_1a6707c57f434f60dc9f14e80907d01ee5" compoundref="_bezier_path_8cs" startline="526" endline="534">BezierPath.AutoSetAllControlPoints</references>
+        <references refid="class_path_creation_1_1_bezier_path_1aba6ba2ef023e1b5fcc541ce2ec07da30" compoundref="_bezier_path_8cs" startline="157" endline="161">BezierPath.NumSegments</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a6185499e7da708f8fb6e99f698436d36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3[]</type>
+        <definition>Vector3[] GetPointsInSegment</definition>
+        <argsstring>(int segmentIndex)</argsstring>
+        <name>GetPointsInSegment</name>
+        <qualifiedname>PathCreation.BezierPath.GetPointsInSegment</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>segmentIndex</declname>
+        </param>
+        <briefdescription>
+<para>Returns an array of the 4 points making up the segment (anchor1, control1, control2, anchor2) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="343" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="343" bodyend="346"/>
+        <references refid="class_path_creation_1_1_bezier_path_1a79ffaa88e458c92f2684c5bced692357" compoundref="_bezier_path_8cs" startline="663" endline="665">BezierPath.LoopIndex</references>
+        <references refid="class_path_creation_1_1_bezier_path_1aba6ba2ef023e1b5fcc541ce2ec07da30" compoundref="_bezier_path_8cs" startline="157" endline="161">BezierPath.NumSegments</references>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a5a1537c7d09255d14329cfe10d09ed41" compoundref="_bezier_path_8cs" startline="405" endline="425">BezierPath.CalculateBoundsWithTransform</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a33b79a7b74d774133da2f4abc0440bf3" compoundref="_bezier_path_8cs" startline="284" endline="315">BezierPath.SplitSegment</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a1db9cbd6086ef5b725ef6dca456b0dc5" compoundref="_bezier_path_8cs" startline="491" endline="512">BezierPath.UpdateBounds</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1ad80661af25a34919eeba7403348fd75f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MovePoint</definition>
+        <argsstring>(int i, Vector3 pointPos, bool suppressPathModifiedEvent=false)</argsstring>
+        <name>MovePoint</name>
+        <qualifiedname>PathCreation.BezierPath.MovePoint</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>pointPos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>suppressPathModifiedEvent</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Move an existing point to a new position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="349" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="349" bodyend="402"/>
+        <references refid="class_path_creation_1_1_bezier_path_1ad8df689d28cf8306e3ef28089427cb33" compoundref="_bezier_path_8cs" startline="515" endline="523">BezierPath.AutoSetAllAffectedControlPoints</references>
+        <references refid="class_path_creation_1_1_bezier_path_1a79ffaa88e458c92f2684c5bced692357" compoundref="_bezier_path_8cs" startline="663" endline="665">BezierPath.LoopIndex</references>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a33b79a7b74d774133da2f4abc0440bf3" compoundref="_bezier_path_8cs" startline="284" endline="315">BezierPath.SplitSegment</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a5a1537c7d09255d14329cfe10d09ed41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Bounds</type>
+        <definition>Bounds CalculateBoundsWithTransform</definition>
+        <argsstring>(Transform transform)</argsstring>
+        <name>CalculateBoundsWithTransform</name>
+        <qualifiedname>PathCreation.BezierPath.CalculateBoundsWithTransform</qualifiedname>
+        <param>
+          <type>Transform</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+<para>Update the bounding box of the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="405" column="23" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="405" bodyend="425"/>
+        <references refid="class_path_creation_1_1_bezier_path_1a6185499e7da708f8fb6e99f698436d36" compoundref="_bezier_path_8cs" startline="343" endline="346">BezierPath.GetPointsInSegment</references>
+        <references refid="class_path_creation_1_1_bezier_path_1aba6ba2ef023e1b5fcc541ce2ec07da30" compoundref="_bezier_path_8cs" startline="157" endline="161">BezierPath.NumSegments</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a094e07c9b053cf728b73b31fd00369b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float GetAnchorNormalAngle</definition>
+        <argsstring>(int anchorIndex)</argsstring>
+        <name>GetAnchorNormalAngle</name>
+        <qualifiedname>PathCreation.BezierPath.GetAnchorNormalAngle</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>anchorIndex</declname>
+        </param>
+        <briefdescription>
+<para>Get the desired angle of the normal vector at a particular anchor (only relevant for paths in 3D space) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="454" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="454" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a65a9570a5f501aacc4571e247d3507c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetAnchorNormalAngle</definition>
+        <argsstring>(int anchorIndex, float angle)</argsstring>
+        <name>SetAnchorNormalAngle</name>
+        <qualifiedname>PathCreation.BezierPath.SetAnchorNormalAngle</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>anchorIndex</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+<para>Set the desired angle of the normal vector at a particular anchor (only relevant for paths in 3D space) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="459" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="459" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a612579356063be5d372a0db66a490299" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ResetNormalAngles</definition>
+        <argsstring>()</argsstring>
+        <name>ResetNormalAngles</name>
+        <qualifiedname>PathCreation.BezierPath.ResetNormalAngles</qualifiedname>
+        <briefdescription>
+<para>Reset global and anchor normal angles to 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="468" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="468" bodyend="474"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a2cd0098a89dd04e1757fdbdd1f6ea32b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NotifyPathModified</definition>
+        <argsstring>()</argsstring>
+        <name>NotifyPathModified</name>
+        <qualifiedname>PathCreation.BezierPath.NotifyPathModified</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="668" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="668" bodyend="673"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a1db9cbd6086ef5b725ef6dca456b0dc5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateBounds</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateBounds</name>
+        <qualifiedname>PathCreation.BezierPath.UpdateBounds</qualifiedname>
+        <briefdescription>
+<para>Update the bounding box of the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="491" column="14" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="491" bodyend="512"/>
+        <references refid="class_path_creation_1_1_bezier_path_1a6185499e7da708f8fb6e99f698436d36" compoundref="_bezier_path_8cs" startline="343" endline="346">BezierPath.GetPointsInSegment</references>
+        <references refid="class_path_creation_1_1_bezier_path_1aba6ba2ef023e1b5fcc541ce2ec07da30" compoundref="_bezier_path_8cs" startline="157" endline="161">BezierPath.NumSegments</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1ad8df689d28cf8306e3ef28089427cb33" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AutoSetAllAffectedControlPoints</definition>
+        <argsstring>(int updatedAnchorIndex)</argsstring>
+        <name>AutoSetAllAffectedControlPoints</name>
+        <qualifiedname>PathCreation.BezierPath.AutoSetAllAffectedControlPoints</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>updatedAnchorIndex</declname>
+        </param>
+        <briefdescription>
+<para>Determines good positions (for a smooth path) for the control points affected by a moved/inserted anchor point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="515" column="14" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="515" bodyend="523"/>
+        <references refid="class_path_creation_1_1_bezier_path_1a2325a3bc6729de2222ef961de6e13b68" compoundref="_bezier_path_8cs" startline="537" endline="564">BezierPath.AutoSetAnchorControlPoints</references>
+        <references refid="class_path_creation_1_1_bezier_path_1a8c68c9c40742ff4a0d07c23366083f27" compoundref="_bezier_path_8cs" startline="567" endline="593">BezierPath.AutoSetStartAndEndControls</references>
+        <references refid="class_path_creation_1_1_bezier_path_1a79ffaa88e458c92f2684c5bced692357" compoundref="_bezier_path_8cs" startline="663" endline="665">BezierPath.LoopIndex</references>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1ab12baf2f95b49820320320618b733948" compoundref="_bezier_path_8cs" startline="228" endline="254">BezierPath.AddSegmentToEnd</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1ab9657215c02544661b55b75f2e9e0867" compoundref="_bezier_path_8cs" startline="257" endline="281">BezierPath.AddSegmentToStart</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1ad80661af25a34919eeba7403348fd75f" compoundref="_bezier_path_8cs" startline="349" endline="402">BezierPath.MovePoint</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a33b79a7b74d774133da2f4abc0440bf3" compoundref="_bezier_path_8cs" startline="284" endline="315">BezierPath.SplitSegment</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a6707c57f434f60dc9f14e80907d01ee5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AutoSetAllControlPoints</definition>
+        <argsstring>()</argsstring>
+        <name>AutoSetAllControlPoints</name>
+        <qualifiedname>PathCreation.BezierPath.AutoSetAllControlPoints</qualifiedname>
+        <briefdescription>
+<para>Determines good positions (for a smooth path) for all control points. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="526" column="14" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="526" bodyend="534"/>
+        <references refid="class_path_creation_1_1_bezier_path_1a2325a3bc6729de2222ef961de6e13b68" compoundref="_bezier_path_8cs" startline="537" endline="564">BezierPath.AutoSetAnchorControlPoints</references>
+        <references refid="class_path_creation_1_1_bezier_path_1a8c68c9c40742ff4a0d07c23366083f27" compoundref="_bezier_path_8cs" startline="567" endline="593">BezierPath.AutoSetStartAndEndControls</references>
+        <references refid="class_path_creation_1_1_bezier_path_1a7faf89e9e535007f3f491d54c26efe60" compoundref="_bezier_path_8cs" startline="150" endline="154">BezierPath.NumAnchorPoints</references>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1ab53e85db248fb10680799c89cef3ad89" compoundref="_bezier_path_8cs" startline="318" endline="340">BezierPath.DeleteSegment</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a2325a3bc6729de2222ef961de6e13b68" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AutoSetAnchorControlPoints</definition>
+        <argsstring>(int anchorIndex)</argsstring>
+        <name>AutoSetAnchorControlPoints</name>
+        <qualifiedname>PathCreation.BezierPath.AutoSetAnchorControlPoints</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>anchorIndex</declname>
+        </param>
+        <briefdescription>
+<para>Calculates good positions (to result in smooth path) for the controls around specified anchor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="537" column="14" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="537" bodyend="564"/>
+        <references refid="class_path_creation_1_1_bezier_path_1a79ffaa88e458c92f2684c5bced692357" compoundref="_bezier_path_8cs" startline="663" endline="665">BezierPath.LoopIndex</references>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1ad8df689d28cf8306e3ef28089427cb33" compoundref="_bezier_path_8cs" startline="515" endline="523">BezierPath.AutoSetAllAffectedControlPoints</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a6707c57f434f60dc9f14e80907d01ee5" compoundref="_bezier_path_8cs" startline="526" endline="534">BezierPath.AutoSetAllControlPoints</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a8c68c9c40742ff4a0d07c23366083f27" compoundref="_bezier_path_8cs" startline="567" endline="593">BezierPath.AutoSetStartAndEndControls</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a8c68c9c40742ff4a0d07c23366083f27" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AutoSetStartAndEndControls</definition>
+        <argsstring>()</argsstring>
+        <name>AutoSetStartAndEndControls</name>
+        <qualifiedname>PathCreation.BezierPath.AutoSetStartAndEndControls</qualifiedname>
+        <briefdescription>
+<para>Determines good positions (for a smooth path) for the control points at the start and end of a path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="567" column="14" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="567" bodyend="593"/>
+        <references refid="class_path_creation_1_1_bezier_path_1a2325a3bc6729de2222ef961de6e13b68" compoundref="_bezier_path_8cs" startline="537" endline="564">BezierPath.AutoSetAnchorControlPoints</references>
+        <references refid="class_path_creation_1_1_bezier_path_1a7faf89e9e535007f3f491d54c26efe60" compoundref="_bezier_path_8cs" startline="150" endline="154">BezierPath.NumAnchorPoints</references>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1ad8df689d28cf8306e3ef28089427cb33" compoundref="_bezier_path_8cs" startline="515" endline="523">BezierPath.AutoSetAllAffectedControlPoints</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a6707c57f434f60dc9f14e80907d01ee5" compoundref="_bezier_path_8cs" startline="526" endline="534">BezierPath.AutoSetAllControlPoints</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a95b2dd724116a5cdfd043b44fe396a5c" compoundref="_bezier_path_8cs" startline="635" endline="660">BezierPath.UpdateClosedState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1ac584b000da2691b488b51416e1fb4a66" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateToNewPathSpace</definition>
+        <argsstring>(PathSpace previousSpace)</argsstring>
+        <name>UpdateToNewPathSpace</name>
+        <qualifiedname>PathCreation.BezierPath.UpdateToNewPathSpace</qualifiedname>
+        <param>
+          <type>PathSpace</type>
+          <declname>previousSpace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update point positions for new path space (for example, if changing from xy to xz path, y and z axes will be swapped so the path keeps its shape in the new space) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="597" column="14" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="597" bodyend="632"/>
+        <references refid="class_path_creation_1_1_bezier_path_1a76122faf62db75c06e32a6aca7ffd666" compoundref="_bezier_path_8cs" startline="143" endline="147">BezierPath.NumPoints</references>
+        <references refid="class_path_creation_1_1_bezier_path_1a7a1adffc40fe07f5e2db82a63b6fb33a" compoundref="_bezier_path_8cs" startline="477" endline="484">BezierPath.PathBounds</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a95b2dd724116a5cdfd043b44fe396a5c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateClosedState</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateClosedState</name>
+        <qualifiedname>PathCreation.BezierPath.UpdateClosedState</qualifiedname>
+        <briefdescription>
+<para>Add/remove the extra 2 controls required for a closed path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="635" column="14" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="635" bodyend="660"/>
+        <references refid="class_path_creation_1_1_bezier_path_1a8c68c9c40742ff4a0d07c23366083f27" compoundref="_bezier_path_8cs" startline="567" endline="593">BezierPath.AutoSetStartAndEndControls</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_bezier_path_1a79ffaa88e458c92f2684c5bced692357" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int LoopIndex</definition>
+        <argsstring>(int i)</argsstring>
+        <name>LoopIndex</name>
+        <qualifiedname>PathCreation.BezierPath.LoopIndex</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Loop index around to start/end of points array if out of bounds (useful when working with closed paths) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="663" column="13" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="663" bodyend="665"/>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1ad8df689d28cf8306e3ef28089427cb33" compoundref="_bezier_path_8cs" startline="515" endline="523">BezierPath.AutoSetAllAffectedControlPoints</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a2325a3bc6729de2222ef961de6e13b68" compoundref="_bezier_path_8cs" startline="537" endline="564">BezierPath.AutoSetAnchorControlPoints</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1a6185499e7da708f8fb6e99f698436d36" compoundref="_bezier_path_8cs" startline="343" endline="346">BezierPath.GetPointsInSegment</referencedby>
+        <referencedby refid="class_path_creation_1_1_bezier_path_1ad80661af25a34919eeba7403348fd75f" compoundref="_bezier_path_8cs" startline="349" endline="402">BezierPath.MovePoint</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A bezier path is a path made by stitching together any number of (cubic) bezier curves. A single cubic bezier curve is defined by 4 points: anchor1, control1, control2, anchor2 The curve moves between the 2 anchors, and the shape of the curve is affected by the positions of the 2 control points When two curves are stitched together, they share an anchor point (end anchor of curve 1 = start anchor of curve 2). So while one curve alone consists of 4 points, two curves are defined by 7 unique points. Apart from storing the points, this class also provides methods for working with the path. For example, adding, inserting, and deleting points. </para>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" line="18" column="11" bodyfile="Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs" bodystart="18" bodyend="677"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_bezier_path_1ab12baf2f95b49820320320618b733948" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>AddSegmentToEnd</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1ab9657215c02544661b55b75f2e9e0867" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>AddSegmentToStart</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a774d13663f4c7fee53aca97e46900e77" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>autoControlLength</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1ad77316d5b3c1726244503f8b2540fe2d" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>AutoControlLength</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1ad8df689d28cf8306e3ef28089427cb33" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>AutoSetAllAffectedControlPoints</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a6707c57f434f60dc9f14e80907d01ee5" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>AutoSetAllControlPoints</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a2325a3bc6729de2222ef961de6e13b68" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>AutoSetAnchorControlPoints</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a8c68c9c40742ff4a0d07c23366083f27" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>AutoSetStartAndEndControls</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1abc1cd71906862025c18067de4ac55fcd" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>BezierPath</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a86aae663e474da906ba3da4eff2b35f9" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>BezierPath</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a7850bd613d1984e910404cb7887f6d07" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>BezierPath</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a2dca585e9b7ab2d6de263f9ee94d0075" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>BezierPath</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a72ed8d4817462c4937e638d5f136dd07" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>BezierPath</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a024318f4225ee6bedb20b7f865205d34" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>bounds</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a2a1f199823444510686be2f69f46fb7d" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>boundsUpToDate</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a5a1537c7d09255d14329cfe10d09ed41" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>CalculateBoundsWithTransform</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1aee3ea37f4f505980157cf93a84687bcb" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>ControlMode</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a1bb74e933234f64b247d02b8221ec47c" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>controlMode</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a16552136821334ce771512319d7be9f4" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>ControlPointMode</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1ab53e85db248fb10680799c89cef3ad89" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>DeleteSegment</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1aae10eb6baea4701401059b19472713e8" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>flipNormals</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a4ef9d3ec8744096f518dc1a650fc26c1" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>FlipNormals</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a094e07c9b053cf728b73b31fd00369b7" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>GetAnchorNormalAngle</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a4738362b3efc98a1c60a825b306a0892" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>GetPoint</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a6185499e7da708f8fb6e99f698436d36" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>GetPointsInSegment</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1abe9a53426b4002473d61f85798101296" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>GlobalNormalsAngle</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1ac373cf341db2c8f563bab41d9f1c08d1" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>globalNormalsAngle</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1aed0c66a17f9cb95686ef7d9a850ea3b0" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>isClosed</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a26f01b589d00384406eb54173d4d7aca" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>IsClosed</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a79ffaa88e458c92f2684c5bced692357" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>LoopIndex</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1ad80661af25a34919eeba7403348fd75f" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>MovePoint</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a2cd0098a89dd04e1757fdbdd1f6ea32b" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>NotifyPathModified</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a7faf89e9e535007f3f491d54c26efe60" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>NumAnchorPoints</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a76122faf62db75c06e32a6aca7ffd666" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>NumPoints</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1aba6ba2ef023e1b5fcc541ce2ec07da30" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>NumSegments</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a5d92b7266e3055c0fac0f8cbcfc2f2f5" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>OnModified</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a7a1adffc40fe07f5e2db82a63b6fb33a" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>PathBounds</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a7e64637d78730c876b4bb17c92a4f154" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>perAnchorNormalsAngle</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a833b5dd4931cdff043f8e31372c8332d" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>points</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a612579356063be5d372a0db66a490299" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>ResetNormalAngles</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a65a9570a5f501aacc4571e247d3507c2" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>SetAnchorNormalAngle</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a0d06f4dbe40cd7406bb66226b1b2a248" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>SetPoint</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a17de5f69b233fef45dc594369edcfe45" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>space</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a0cacc3cec2744929171dc4d0563ea19e" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>Space</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a33b79a7b74d774133da2f4abc0440bf3" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>SplitSegment</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1ad43c2ada379c61ab862f177c8505ace8" prot="public" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>this[int i]</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a1db9cbd6086ef5b725ef6dca456b0dc5" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>UpdateBounds</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1a95b2dd724116a5cdfd043b44fe396a5c" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>UpdateClosedState</name></member>
+      <member refid="class_path_creation_1_1_bezier_path_1ac584b000da2691b488b51416e1fb4a66" prot="private" virt="non-virtual"><scope>PathCreation::BezierPath</scope><name>UpdateToNewPathSpace</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

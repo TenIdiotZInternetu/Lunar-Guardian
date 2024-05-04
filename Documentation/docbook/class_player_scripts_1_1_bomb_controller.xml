@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_player_scripts_1_1_bomb_controller" xml:lang="en-US">
+<title>BombController Class Reference</title>
+<indexterm><primary>BombController</primary></indexterm>
+<para>
+
+<para>Defines effects of deploying a bomb by player. The bomb deals gradual damage to all enemies and destroys projectiles for specified amount of time. The damage is dealt only during frames called damage ticks. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_bomb_controller_1a6ffe3551433e872831d7751d22cc161e"/>IEnumerator <emphasis role="strong">DeployBomb</emphasis> ()</para>
+
+<para>Coroutine that deals damage and destroys projectiles on each damage tick. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_bomb_controller_1a8f009855b884a4c8e1a1338ca159ae3a"/>float <emphasis role="strong">initialDamage</emphasis></para>
+
+<para>Damage dealt by the bomb at the beginning of its effect. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_bomb_controller_1aa2d1fa06b56bbaf068cc697526223c62"/>AnimationCurve <emphasis role="strong">damageCurve</emphasis></para>
+
+<para>Damage multiplier of the bomb in the specified time. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_bomb_controller_1a8a032a6ba98f3847d521c82627d0b3fa"/>float <emphasis role="strong">damageTickInterval</emphasis></para>
+
+<para>Time between damage ticks. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_bomb_controller_1a3dad052ab5c9e0bb950da5e6dad2ae1f"/>UnityEvent <emphasis role="strong">onBombDeployed</emphasis></para>
+
+<para>Event invoked when the bomb is deployed by player. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_bomb_controller_1a48237faed031e6039bebb05e668c2e35"/>UnityEvent <emphasis role="strong">onBombEffectEnd</emphasis></para>
+
+<para>Event invoked when the bomb stops dealing any more damage. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_bomb_controller_1a60d6f37c71fa8b172e436e6d558890ff"/>static Action&lt; int &gt; <emphasis role="strong">OnBombDamageTick</emphasis></para>
+
+<para>Event invoked every time the bomb deals damage. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__bomb_controller_8cs_source_1l00012">12</link> of file <link linkend="__bomb_controller_8cs_source">BombController.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/PlayerScripts/BombController.cs</section>
+</section>

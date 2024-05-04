@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_34d6a86f2b2c79d5b63a1dfc7633a830" kind="dir">
+    <compoundname>Tools/PathCreator/Core</compoundname>
+    <innerdir refid="dir_f1f8121e0f64f4b7f95350ee2bfa0ff3">Tools/PathCreator/Core/Editor</innerdir>
+    <innerdir refid="dir_4c47242f6f669c7fb880c212d6aace33">Tools/PathCreator/Core/Runtime</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/"/>
+  </compounddef>
+</doxygen>

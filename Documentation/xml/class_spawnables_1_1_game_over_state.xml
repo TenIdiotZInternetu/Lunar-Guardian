@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_game_over_state" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::GameOverState</compoundname>
+    <basecompoundref refid="class_game_states_1_1_game_state" prot="public" virt="non-virtual">GameStates.GameState</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_game_over_state_1a264441e9f90016700dc2e207e677df76" prot="public" static="no" mutable="no">
+        <type><ref refid="class_u_i_1_1_menus_1_1_game_over_screen" kindref="compound">GameOverScreen</ref></type>
+        <definition>GameOverScreen Spawnables.GameOverState.gameOverScreen</definition>
+        <argsstring></argsstring>
+        <name>gameOverScreen</name>
+        <qualifiedname>Spawnables.GameOverState.gameOverScreen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" line="11" column="31" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_game_over_state_1a17c1a87cdbbb11f3f21535844267bf16" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.GameOverState.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Spawnables.GameOverState.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" line="13" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_game_over_state_1a9bb26284faa83c622170099747778666" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.GameOverState.GameOverEvent</definition>
+        <argsstring>()</argsstring>
+        <name>GameOverEvent</name>
+        <qualifiedname>Spawnables.GameOverState.GameOverEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" line="28" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_game_over_state_1ab00e83a333cb8eff50d838fad05fce89" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.GameOverState.OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>Spawnables.GameOverState.OnDestroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" line="33" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" bodystart="33" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spawnables_1_1_game_over_state_1ada7062efcd96faa6206f40c537a9c305" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Spawnables.GameOverState.ChangeToThisState</definition>
+        <argsstring>()</argsstring>
+        <name>ChangeToThisState</name>
+        <qualifiedname>Spawnables.GameOverState.ChangeToThisState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" line="18" column="30" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_game_over_state_1ae9bd9392ca246a64edff56212dbdd94d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Spawnables.GameOverState.LeaveThisState</definition>
+        <argsstring>()</argsstring>
+        <name>LeaveThisState</name>
+        <qualifiedname>Spawnables.GameOverState.LeaveThisState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" line="23" column="30" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" bodystart="23" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>GameState</label>
+        <link refid="class_game_states_1_1_game_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.GameOverState</label>
+        <link refid="class_spawnables_1_1_game_over_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>GameState</label>
+        <link refid="class_game_states_1_1_game_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ISerializationCallbackReceiver</label>
+      </node>
+      <node id="5">
+        <label>MenuScreen</label>
+        <link refid="class_u_i_1_1_menus_1_1_menu_screen"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.GameOverState</label>
+        <link refid="class_spawnables_1_1_game_over_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>gameOverScreen</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Tymski.SceneReference</label>
+        <link refid="class_tymski_1_1_scene_reference"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>UI.Menus.GameOverScreen</label>
+        <link refid="class_u_i_1_1_menus_1_1_game_over_screen"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>mainMenuScene</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" line="9" column="11" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/GameOverState.cs" bodystart="10" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_game_over_state_1ada7062efcd96faa6206f40c537a9c305" prot="public" virt="non-virtual"><scope>Spawnables::GameOverState</scope><name>ChangeToThisState</name></member>
+      <member refid="class_spawnables_1_1_game_over_state_1a9bb26284faa83c622170099747778666" prot="private" virt="non-virtual"><scope>Spawnables::GameOverState</scope><name>GameOverEvent</name></member>
+      <member refid="class_spawnables_1_1_game_over_state_1a264441e9f90016700dc2e207e677df76" prot="public" virt="non-virtual"><scope>Spawnables::GameOverState</scope><name>gameOverScreen</name></member>
+      <member refid="class_spawnables_1_1_game_over_state_1ae9bd9392ca246a64edff56212dbdd94d" prot="public" virt="non-virtual"><scope>Spawnables::GameOverState</scope><name>LeaveThisState</name></member>
+      <member refid="class_spawnables_1_1_game_over_state_1ab00e83a333cb8eff50d838fad05fce89" prot="private" virt="non-virtual"><scope>Spawnables::GameOverState</scope><name>OnDestroy</name></member>
+      <member refid="class_spawnables_1_1_game_over_state_1a17c1a87cdbbb11f3f21535844267bf16" prot="private" virt="non-virtual"><scope>Spawnables::GameOverState</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

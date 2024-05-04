@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_fc900bbfcab4d947a293cfe17f6c20b4" kind="dir">
+    <compoundname>Scripts/GameManager/States</compoundname>
+    <innerfile refid="_game_over_state_8cs">GameOverState.cs</innerfile>
+    <innerfile refid="_paused_state_8cs">PausedState.cs</innerfile>
+    <innerfile refid="_playing_state_8cs">PlayingState.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/GameManager/States/"/>
+  </compounddef>
+</doxygen>

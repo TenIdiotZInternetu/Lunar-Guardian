@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_editor_1_1_screen_space_poly_line" kind="class" language="C#" prot="public">
+    <compoundname>PathCreationEditor::ScreenSpacePolyLine</compoundname>
+    <innerclass refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info" prot="public">PathCreationEditor::ScreenSpacePolyLine::MouseInfo</innerclass>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1a281a4ff86417853451bb63d8650901aa" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int accuracyMultiplier</definition>
+        <argsstring></argsstring>
+        <name>accuracyMultiplier</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.accuracyMultiplier</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="11" column="19" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1af37fbb5c1c749de08d944e7eebacb715" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float intermediaryThreshold</definition>
+        <argsstring></argsstring>
+        <name>intermediaryThreshold</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.intermediaryThreshold</qualifiedname>
+        <initializer>= .2f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="13" column="21" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1a6be06f4be0625082291a1e6ae098684a" prot="public" static="no" mutable="no">
+        <type>readonly List&lt; Vector3 &gt;</type>
+        <definition>readonly List&lt;Vector3&gt; verticesWorld</definition>
+        <argsstring></argsstring>
+        <name>verticesWorld</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.verticesWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="15" column="30" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1aceac1094a74fd91a82dadc4039beada0" prot="private" static="no" mutable="no">
+        <type>readonly List&lt; int &gt;</type>
+        <definition>readonly List&lt;int&gt; vertexToPathSegmentMap</definition>
+        <argsstring></argsstring>
+        <name>vertexToPathSegmentMap</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.vertexToPathSegmentMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="17" column="23" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1a978fe4f456b342ea83bb737f30845e98" prot="private" static="no" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] segmentStartIndices</definition>
+        <argsstring></argsstring>
+        <name>segmentStartIndices</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.segmentStartIndices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="19" column="22" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1a92ad419594172d597c180828b6165c3e" prot="private" static="no" mutable="no">
+        <type>readonly float</type>
+        <definition>readonly float pathLengthWorld</definition>
+        <argsstring></argsstring>
+        <name>pathLengthWorld</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.pathLengthWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="21" column="24" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1ae3101e53243f629327bf1b461e628a57" prot="private" static="no" mutable="no">
+        <type>readonly float[]</type>
+        <definition>readonly float [] cumululativeLengthWorld</definition>
+        <argsstring></argsstring>
+        <name>cumululativeLengthWorld</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.cumululativeLengthWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="22" column="24" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1a9151cce621339bd25de685b5b275265f" prot="private" static="no" mutable="no">
+        <type>Vector2[]</type>
+        <definition>Vector2 [] points</definition>
+        <argsstring></argsstring>
+        <name>points</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.points</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="24" column="17" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1a3c9ec5d0d9899156ad1a5fda1d631de7" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 prevCamPos</definition>
+        <argsstring></argsstring>
+        <name>prevCamPos</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.prevCamPos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="26" column="17" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1a2265abca2eec0d5a01cf66298c541761" prot="private" static="no" mutable="no">
+        <type>Quaternion</type>
+        <definition>Quaternion prevCamRot</definition>
+        <argsstring></argsstring>
+        <name>prevCamRot</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.prevCamRot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="27" column="20" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1ae817a188275c54d3fd4edc4f1a677a2b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool premCamIsOrtho</definition>
+        <argsstring></argsstring>
+        <name>premCamIsOrtho</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.premCamIsOrtho</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="28" column="14" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1a4d6d60d99ee34aa2b7c659814cd6c48e" prot="private" static="no" mutable="no">
+        <type>readonly Transform</type>
+        <definition>readonly Transform transform</definition>
+        <argsstring></argsstring>
+        <name>transform</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.transform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="30" column="28" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1af08cfc7fa253bcd76dc9ecff3c644989" prot="private" static="no" mutable="no">
+        <type>readonly Vector3</type>
+        <definition>readonly Vector3 transformPosition</definition>
+        <argsstring></argsstring>
+        <name>transformPosition</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.transformPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="31" column="26" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1adb401d3ad651a5694efcf66c14806514" prot="private" static="no" mutable="no">
+        <type>readonly Quaternion</type>
+        <definition>readonly Quaternion transformRotation</definition>
+        <argsstring></argsstring>
+        <name>transformRotation</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.transformRotation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="32" column="29" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_editor_1_1_screen_space_poly_line_1a8904bb33d3474e43b7d6baa840a95e2d" prot="private" static="no" mutable="no">
+        <type>readonly Vector3</type>
+        <definition>readonly Vector3 transformScale</definition>
+        <argsstring></argsstring>
+        <name>transformScale</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.transformScale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="33" column="26" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_path_creation_editor_1_1_screen_space_poly_line_1a2074422e59443b9ee1d13b578be1df0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ScreenSpacePolyLine</definition>
+        <argsstring>(BezierPath bezierPath, Transform transform, float maxAngleError, float minVertexDst, float accuracy=1)</argsstring>
+        <name>ScreenSpacePolyLine</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.ScreenSpacePolyLine</qualifiedname>
+        <param>
+          <type><ref refid="class_path_creation_1_1_bezier_path" kindref="compound">BezierPath</ref></type>
+          <declname>bezierPath</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>transform</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxAngleError</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>minVertexDst</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>accuracy</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="35" column="16" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="35" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_editor_1_1_screen_space_poly_line_1a36a5741707da3ca4434ebf5865c09056" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>MouseInfo</type>
+        <definition>MouseInfo CalculateMouseInfo</definition>
+        <argsstring>()</argsstring>
+        <name>CalculateMouseInfo</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.CalculateMouseInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="149" column="26" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="149" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_editor_1_1_screen_space_poly_line_1a041b91562712cd3b07803a5475659dcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TransformIsOutOfDate</definition>
+        <argsstring>()</argsstring>
+        <name>TransformIsOutOfDate</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.TransformIsOutOfDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="189" column="21" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="189" bodyend="191"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_path_creation_editor_1_1_screen_space_poly_line_1a156f75dba0fac2c778cf4b3fc8b33ec2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ComputeScreenSpace</definition>
+        <argsstring>()</argsstring>
+        <name>ComputeScreenSpace</name>
+        <qualifiedname>PathCreationEditor.ScreenSpacePolyLine.ComputeScreenSpace</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="133" column="14" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="133" bodyend="147"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" line="9" column="11" bodyfile="Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs" bodystart="10" bodyend="214"/>
+    <listofallmembers>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a281a4ff86417853451bb63d8650901aa" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>accuracyMultiplier</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a36a5741707da3ca4434ebf5865c09056" prot="public" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>CalculateMouseInfo</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a156f75dba0fac2c778cf4b3fc8b33ec2" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>ComputeScreenSpace</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1ae3101e53243f629327bf1b461e628a57" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>cumululativeLengthWorld</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1af37fbb5c1c749de08d944e7eebacb715" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>intermediaryThreshold</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a92ad419594172d597c180828b6165c3e" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>pathLengthWorld</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a9151cce621339bd25de685b5b275265f" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>points</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1ae817a188275c54d3fd4edc4f1a677a2b" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>premCamIsOrtho</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a3c9ec5d0d9899156ad1a5fda1d631de7" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>prevCamPos</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a2265abca2eec0d5a01cf66298c541761" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>prevCamRot</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a2074422e59443b9ee1d13b578be1df0b" prot="public" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>ScreenSpacePolyLine</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a978fe4f456b342ea83bb737f30845e98" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>segmentStartIndices</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a4d6d60d99ee34aa2b7c659814cd6c48e" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>transform</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a041b91562712cd3b07803a5475659dcf" prot="public" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>TransformIsOutOfDate</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1af08cfc7fa253bcd76dc9ecff3c644989" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>transformPosition</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1adb401d3ad651a5694efcf66c14806514" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>transformRotation</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a8904bb33d3474e43b7d6baa840a95e2d" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>transformScale</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1aceac1094a74fd91a82dadc4039beada0" prot="private" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>vertexToPathSegmentMap</name></member>
+      <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a6be06f4be0625082291a1e6ae098684a" prot="public" virt="non-virtual"><scope>PathCreationEditor::ScreenSpacePolyLine</scope><name>verticesWorld</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_serialization_1_1_save_system" kind="class" language="C#" prot="public">
+    <compoundname>Serialization::SaveSystem</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_serialization_1_1_save_system_1a89a4017eb9c766eafdd94545dc1851fe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SaveData&lt; T &gt;</definition>
+        <argsstring>(T data, string pathSuffix)</argsstring>
+        <name>SaveData&lt; T &gt;</name>
+        <qualifiedname>Serialization.SaveSystem.SaveData&lt; T &gt;</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>pathSuffix</declname>
+        </param>
+        <briefdescription>
+<para>Save data to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object of which data are save </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pathSuffix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Relative path to resulting save file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the saved object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Serialization/SaveSystem.cs" line="20" column="23" bodyfile="Scripts/Serialization/SaveSystem.cs" bodystart="20" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_serialization_1_1_save_system_1a0ba4368861434c24d254509ea4899da7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>static T LoadData&lt; T &gt;</definition>
+        <argsstring>(string pathSuffix)</argsstring>
+        <name>LoadData&lt; T &gt;</name>
+        <qualifiedname>Serialization.SaveSystem.LoadData&lt; T &gt;</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>pathSuffix</declname>
+        </param>
+        <briefdescription>
+<para>Loads data from a save file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pathSuffix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Relative path to save file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of object to load </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Object of specified type with values retrieved from the save file </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>FileNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specified file path doesn&apos;t exist </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidDataException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File format on the specified type doesn&apos;t match the type T </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Serialization/SaveSystem.cs" line="40" column="23" bodyfile="Scripts/Serialization/SaveSystem.cs" bodystart="40" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>System for saving and loading object data on local machine. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Serialization/SaveSystem.cs" line="10" column="19" bodyfile="Scripts/Serialization/SaveSystem.cs" bodystart="11" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_serialization_1_1_save_system_1a0ba4368861434c24d254509ea4899da7" prot="public" virt="non-virtual"><scope>Serialization::SaveSystem</scope><name>LoadData&lt; T &gt;</name></member>
+      <member refid="class_serialization_1_1_save_system_1a89a4017eb9c766eafdd94545dc1851fe" prot="public" virt="non-virtual"><scope>Serialization::SaveSystem</scope><name>SaveData&lt; T &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

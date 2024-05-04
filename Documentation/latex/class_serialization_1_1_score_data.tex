@@ -1,0 +1,93 @@
+\doxysection{Score\+Data Class Reference}
+\hypertarget{class_serialization_1_1_score_data}{}\label{class_serialization_1_1_score_data}\index{ScoreData@{ScoreData}}
+
+
+Serializable data of highest achieved scores.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_serialization_1_1_score_data_a886e39b99d6ac17e2906dc536227ecbe}{Add\+Score}} (int score, string name)
+\begin{DoxyCompactList}\small\item\em Checks if the score is high enough to be saved and adds it to the array of scores in the correct position. If yes the score at the lowest position will be lost! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_serialization_1_1_score_data_a02238a4e4ab88f5e93908f6dd4c098da}{Add\+Score\+And\+Save}} (int score, string name)
+\begin{DoxyCompactList}\small\item\em Checks if the score is high enough to be saved and adds it to the array of scores in the correct position. If yes the score at the lowest position will be lost! Then the data are saved to the scores save file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_serialization_1_1_score_data}{Score\+Data}} \mbox{\hyperlink{class_serialization_1_1_score_data_a74cf69194846ff3656b5e1377c39cbda}{Load\+Scores}} ()
+\begin{DoxyCompactList}\small\item\em Loads data from the scores save file. Create a new save file if it doesn\textquotesingle{}t exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_serialization_1_1_score_data_adc99decbd8f765a5af197c2c88211e4e}\label{class_serialization_1_1_score_data_adc99decbd8f765a5af197c2c88211e4e} 
+string\mbox{[}$\,$\mbox{]} {\bfseries names} = new string\mbox{[}MAX\+\_\+\+SAVED\+\_\+\+SCORES\mbox{]}
+\begin{DoxyCompactList}\small\item\em Setters of the scores sorted by score achieved. \end{DoxyCompactList}\item 
+\Hypertarget{class_serialization_1_1_score_data_ade11c9990d17f7c70b0869f760e0d5cf}\label{class_serialization_1_1_score_data_ade11c9990d17f7c70b0869f760e0d5cf} 
+int\mbox{[}$\,$\mbox{]} {\bfseries sorted\+Scores} = new int\mbox{[}MAX\+\_\+\+SAVED\+\_\+\+SCORES\mbox{]}
+\begin{DoxyCompactList}\small\item\em Highest achieved scores sorted from highest to lowest. \end{DoxyCompactList}\item 
+\Hypertarget{class_serialization_1_1_score_data_a69d2493e8a51b7aba3af2e2fe74d8d37}\label{class_serialization_1_1_score_data_a69d2493e8a51b7aba3af2e2fe74d8d37} 
+int {\bfseries saved\+Scores\+Count} = 0
+\begin{DoxyCompactList}\small\item\em Number of saved scores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_score_data_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_score_data_8cs_source}{Score\+Data.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_serialization_1_1_score_data_a74cf69194846ff3656b5e1377c39cbda}\label{class_serialization_1_1_score_data_a74cf69194846ff3656b5e1377c39cbda} 
+\index{ScoreData@{ScoreData}!LoadScores@{LoadScores}}
+\index{LoadScores@{LoadScores}!ScoreData@{ScoreData}}
+\doxysubsubsection{\texorpdfstring{LoadScores()}{LoadScores()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_serialization_1_1_score_data}{Score\+Data}} Load\+Scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+Object with values retrieved from the scores save file 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_score_data_8cs_source_l00047}{47}} of file \mbox{\hyperlink{_score_data_8cs_source}{Score\+Data.\+cs}}.
+
+\Hypertarget{class_serialization_1_1_score_data_a886e39b99d6ac17e2906dc536227ecbe}\label{class_serialization_1_1_score_data_a886e39b99d6ac17e2906dc536227ecbe} 
+\index{ScoreData@{ScoreData}!AddScore@{AddScore}}
+\index{AddScore@{AddScore}!ScoreData@{ScoreData}}
+\doxysubsubsection{\texorpdfstring{AddScore()}{AddScore()}}
+{\footnotesize\ttfamily void Add\+Score (\begin{DoxyParamCaption}\item[{int}]{score,  }\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Score achieved \\
+\hline
+{\em name} & Setter of the score \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_score_data_8cs_source_l00068}{68}} of file \mbox{\hyperlink{_score_data_8cs_source}{Score\+Data.\+cs}}.
+
+\Hypertarget{class_serialization_1_1_score_data_a02238a4e4ab88f5e93908f6dd4c098da}\label{class_serialization_1_1_score_data_a02238a4e4ab88f5e93908f6dd4c098da} 
+\index{ScoreData@{ScoreData}!AddScoreAndSave@{AddScoreAndSave}}
+\index{AddScoreAndSave@{AddScoreAndSave}!ScoreData@{ScoreData}}
+\doxysubsubsection{\texorpdfstring{AddScoreAndSave()}{AddScoreAndSave()}}
+{\footnotesize\ttfamily void Add\+Score\+And\+Save (\begin{DoxyParamCaption}\item[{int}]{score,  }\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em score} & Achieved score \\
+\hline
+{\em name} & Setter of the score \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_score_data_8cs_source_l00098}{98}} of file \mbox{\hyperlink{_score_data_8cs_source}{Score\+Data.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Serialization/Score\+Data.\+cs\end{DoxyCompactItemize}

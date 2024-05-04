@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_min_max3_d" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::MinMax3D</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_path_creation_1_1_min_max3_d_1ad6b98bcbe635244abd3fa9884a3e2a26" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Vector3</type>
+        <definition>Vector3 Min</definition>
+        <argsstring></argsstring>
+        <name>Min</name>
+        <qualifiedname>PathCreation.MinMax3D.Min</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/MinMax3D.cs" line="6" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/MinMax3D.cs" bodystart="6" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_min_max3_d_1a3cf3bcc33a1e962953d0707771f80f8e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Vector3</type>
+        <definition>Vector3 Max</definition>
+        <argsstring></argsstring>
+        <name>Max</name>
+        <qualifiedname>PathCreation.MinMax3D.Max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/MinMax3D.cs" line="7" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/MinMax3D.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_path_creation_1_1_min_max3_d_1acfc34869b1089a96bd613168196914ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MinMax3D</definition>
+        <argsstring>()</argsstring>
+        <name>MinMax3D</name>
+        <qualifiedname>PathCreation.MinMax3D.MinMax3D</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/MinMax3D.cs" line="9" column="16" bodyfile="Tools/PathCreator/Core/Runtime/Objects/MinMax3D.cs" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_min_max3_d_1a6abfb3a0477ddc726829d4695d6da383" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddValue</definition>
+        <argsstring>(Vector3 v)</argsstring>
+        <name>AddValue</name>
+        <qualifiedname>PathCreation.MinMax3D.AddValue</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/MinMax3D.cs" line="15" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/MinMax3D.cs" bodystart="15" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Runtime/Objects/MinMax3D.cs" line="4" column="11" bodyfile="Tools/PathCreator/Core/Runtime/Objects/MinMax3D.cs" bodystart="4" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_min_max3_d_1a6abfb3a0477ddc726829d4695d6da383" prot="public" virt="non-virtual"><scope>PathCreation::MinMax3D</scope><name>AddValue</name></member>
+      <member refid="class_path_creation_1_1_min_max3_d_1a3cf3bcc33a1e962953d0707771f80f8e" prot="public" virt="non-virtual"><scope>PathCreation::MinMax3D</scope><name>Max</name></member>
+      <member refid="class_path_creation_1_1_min_max3_d_1ad6b98bcbe635244abd3fa9884a3e2a26" prot="public" virt="non-virtual"><scope>PathCreation::MinMax3D</scope><name>Min</name></member>
+      <member refid="class_path_creation_1_1_min_max3_d_1acfc34869b1089a96bd613168196914ba" prot="public" virt="non-virtual"><scope>PathCreation::MinMax3D</scope><name>MinMax3D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

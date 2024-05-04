@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_spawnables_1_1_projectiles" kind="namespace" language="C#">
+    <compoundname>Spawnables::Projectiles</compoundname>
+    <innerclass refid="class_spawnables_1_1_projectiles_1_1_bullet_spawner" prot="public">Spawnables::Projectiles::BulletSpawner</innerclass>
+    <innerclass refid="class_spawnables_1_1_projectiles_1_1_enemy" prot="public">Spawnables::Projectiles::Enemy</innerclass>
+    <innerclass refid="class_spawnables_1_1_projectiles_1_1_enemy_spawner" prot="public">Spawnables::Projectiles::EnemySpawner</innerclass>
+    <innerclass refid="interface_spawnables_1_1_projectiles_1_1_i_shootable" prot="public">Spawnables::Projectiles::IShootable</innerclass>
+    <innerclass refid="class_spawnables_1_1_projectiles_1_1_lazer" prot="public">Spawnables::Projectiles::Lazer</innerclass>
+    <innerclass refid="class_spawnables_1_1_projectiles_1_1_projectile" prot="public">Spawnables::Projectiles::Projectile</innerclass>
+    <innerclass refid="class_spawnables_1_1_projectiles_1_1_weapon" prot="public">Spawnables::Projectiles::Weapon</innerclass>
+    <innernamespace refid="namespace_spawnables_1_1_projectiles_1_1_weapon_types">Spawnables::Projectiles::WeaponTypes</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/Enemy.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

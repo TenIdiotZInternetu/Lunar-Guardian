@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_player_scripts_1_1_player_hitbox" kind="class" language="C#" prot="public">
+    <compoundname>PlayerScripts::PlayerHitbox</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_hitbox_1ad8698c75e7c1602cb0b8b51275dc73f7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float invincibilityTime</definition>
+        <argsstring></argsstring>
+        <name>invincibilityTime</name>
+        <qualifiedname>PlayerScripts.PlayerHitbox.invincibilityTime</qualifiedname>
+        <briefdescription>
+<para>Time window in which the player cannot take damage after taking a hit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerHitbox.cs" line="20" column="22" bodyfile="Scripts/PlayerScripts/PlayerHitbox.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_hitbox_1abd9abcb1ce3bcdd0d9c99534620685bc" prot="public" static="no" mutable="no">
+        <type><ref refid="class_tools_1_1_game_object_event" kindref="compound">GameObjectEvent</ref></type>
+        <definition>GameObjectEvent onTakesHitEvent</definition>
+        <argsstring></argsstring>
+        <name>onTakesHitEvent</name>
+        <qualifiedname>PlayerScripts.PlayerHitbox.onTakesHitEvent</qualifiedname>
+        <briefdescription>
+<para>Invoked when the player takes a hit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerHitbox.cs" line="25" column="32" bodyfile="Scripts/PlayerScripts/PlayerHitbox.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_hitbox_1aed097ec52fe2fea255f496f3fa9f85ce" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _inBombState</definition>
+        <argsstring></argsstring>
+        <name>_inBombState</name>
+        <qualifiedname>PlayerScripts.PlayerHitbox._inBombState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerHitbox.cs" line="29" column="22" bodyfile="Scripts/PlayerScripts/PlayerHitbox.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_hitbox_1a4fc467c28662a043a60b5d1ab977af3c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float _timeOfLastHit</definition>
+        <argsstring></argsstring>
+        <name>_timeOfLastHit</name>
+        <qualifiedname>PlayerScripts.PlayerHitbox._timeOfLastHit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerHitbox.cs" line="30" column="23" bodyfile="Scripts/PlayerScripts/PlayerHitbox.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_scripts_1_1_player_hitbox_1ad8977c264b58f2c0e3e69af81c83644d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnTriggerEnter2D</definition>
+        <argsstring>(Collider2D other)</argsstring>
+        <name>OnTriggerEnter2D</name>
+        <qualifiedname>PlayerScripts.PlayerHitbox.OnTriggerEnter2D</qualifiedname>
+        <param>
+          <type>Collider2D</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerHitbox.cs" line="35" column="14" bodyfile="Scripts/PlayerScripts/PlayerHitbox.cs" bodystart="35" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_hitbox_1a8e6d5d319127392d79486f2183ddfbe2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsInvincible</definition>
+        <argsstring>()</argsstring>
+        <name>IsInvincible</name>
+        <qualifiedname>PlayerScripts.PlayerHitbox.IsInvincible</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerHitbox.cs" line="83" column="22" bodyfile="Scripts/PlayerScripts/PlayerHitbox.cs" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_hitbox_1a9b7b513f2f2e5e92834a0f459b496737" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TakeDamage</definition>
+        <argsstring>(GameObject damageSource)</argsstring>
+        <name>TakeDamage</name>
+        <qualifiedname>PlayerScripts.PlayerHitbox.TakeDamage</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>damageSource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerHitbox.cs" line="90" column="22" bodyfile="Scripts/PlayerScripts/PlayerHitbox.cs" bodystart="90" bodyend="97"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_scripts_1_1_player_hitbox_1ae77a2b3d16e04654d819c8db25cc6055" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AttemptHit</definition>
+        <argsstring>(GameObject damageSource)</argsstring>
+        <name>AttemptHit</name>
+        <qualifiedname>PlayerScripts.PlayerHitbox.AttemptHit</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>damageSource</declname>
+        </param>
+        <briefdescription>
+<para>Deals damage to player if they&apos;re not invincible. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>damageSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object causing the damage </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerHitbox.cs" line="64" column="21" bodyfile="Scripts/PlayerScripts/PlayerHitbox.cs" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_hitbox_1a542f630d26b87b7485284fa8e1156389" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeBombState</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>ChangeBombState</name>
+        <qualifiedname>PlayerScripts.PlayerHitbox.ChangeBombState</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Changes bomb state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the bomb effects still last </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerHitbox.cs" line="74" column="21" bodyfile="Scripts/PlayerScripts/PlayerHitbox.cs" bodystart="74" bodyend="77"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Takes responsibility and responses to being hit by enemy objects. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>PlayerHitbox</label>
+        <link refid="class_player_scripts_1_1_player_hitbox"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>onTakesHitEvent</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GameObjectEvent</label>
+        <link refid="class_tools_1_1_game_object_event"/>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/PlayerScripts/PlayerHitbox.cs" line="13" column="11" bodyfile="Scripts/PlayerScripts/PlayerHitbox.cs" bodystart="14" bodyend="99"/>
+    <listofallmembers>
+      <member refid="class_player_scripts_1_1_player_hitbox_1aed097ec52fe2fea255f496f3fa9f85ce" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerHitbox</scope><name>_inBombState</name></member>
+      <member refid="class_player_scripts_1_1_player_hitbox_1a4fc467c28662a043a60b5d1ab977af3c" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerHitbox</scope><name>_timeOfLastHit</name></member>
+      <member refid="class_player_scripts_1_1_player_hitbox_1ae77a2b3d16e04654d819c8db25cc6055" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerHitbox</scope><name>AttemptHit</name></member>
+      <member refid="class_player_scripts_1_1_player_hitbox_1a542f630d26b87b7485284fa8e1156389" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerHitbox</scope><name>ChangeBombState</name></member>
+      <member refid="class_player_scripts_1_1_player_hitbox_1ad8698c75e7c1602cb0b8b51275dc73f7" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerHitbox</scope><name>invincibilityTime</name></member>
+      <member refid="class_player_scripts_1_1_player_hitbox_1a8e6d5d319127392d79486f2183ddfbe2" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerHitbox</scope><name>IsInvincible</name></member>
+      <member refid="class_player_scripts_1_1_player_hitbox_1abd9abcb1ce3bcdd0d9c99534620685bc" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerHitbox</scope><name>onTakesHitEvent</name></member>
+      <member refid="class_player_scripts_1_1_player_hitbox_1ad8977c264b58f2c0e3e69af81c83644d" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerHitbox</scope><name>OnTriggerEnter2D</name></member>
+      <member refid="class_player_scripts_1_1_player_hitbox_1a9b7b513f2f2e5e92834a0f459b496737" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerHitbox</scope><name>TakeDamage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

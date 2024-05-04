@@ -1,0 +1,125 @@
+\doxysection{Vertex\+Path Class Reference}
+\hypertarget{class_path_creation_1_1_vertex_path}{}\label{class_path_creation_1_1_vertex_path}\index{VertexPath@{VertexPath}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a68993b6cc3ef582ffc8df88009d98fbc}{Vertex\+Path}} (\mbox{\hyperlink{class_path_creation_1_1_bezier_path}{Bezier\+Path}} bezier\+Path, Transform transform, float max\+Angle\+Error=0.\+3f, float min\+Vertex\+Dst=0)
+\begin{DoxyCompactList}\small\item\em Splits bezier path into array of vertices along the path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_path_creation_1_1_vertex_path_aa26ae65380456e3ad114515ba2dccb4b}{Vertex\+Path}} (\mbox{\hyperlink{class_path_creation_1_1_bezier_path}{Bezier\+Path}} bezier\+Path, Transform transform, float vertex\+Spacing)
+\begin{DoxyCompactList}\small\item\em Splits bezier path into array of vertices along the path. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_a5437a41d4b84126c2b6987f83dcd3da9}\label{class_path_creation_1_1_vertex_path_a5437a41d4b84126c2b6987f83dcd3da9} 
+Vector3 {\bfseries Get\+Point\+At\+Distance} (float dst, End\+Of\+Path\+Instruction end\+Of\+Path\+Instruction=End\+Of\+Path\+Instruction.\+Loop)
+\begin{DoxyCompactList}\small\item\em Gets point on path based on distance travelled. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_a18dd6b53cb280969264c9316c8dc60e7}\label{class_path_creation_1_1_vertex_path_a18dd6b53cb280969264c9316c8dc60e7} 
+Vector3 {\bfseries Get\+Direction\+At\+Distance} (float dst, End\+Of\+Path\+Instruction end\+Of\+Path\+Instruction=End\+Of\+Path\+Instruction.\+Loop)
+\begin{DoxyCompactList}\small\item\em Gets forward direction on path based on distance travelled. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_a4c1400968e85e9398e9372cd6e52db46}\label{class_path_creation_1_1_vertex_path_a4c1400968e85e9398e9372cd6e52db46} 
+Vector3 {\bfseries Get\+Normal\+At\+Distance} (float dst, End\+Of\+Path\+Instruction end\+Of\+Path\+Instruction=End\+Of\+Path\+Instruction.\+Loop)
+\begin{DoxyCompactList}\small\item\em Gets normal vector on path based on distance travelled. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_ab2a060e662072e4e85f6bb299efcdff6}\label{class_path_creation_1_1_vertex_path_ab2a060e662072e4e85f6bb299efcdff6} 
+Quaternion {\bfseries Get\+Rotation\+At\+Distance} (float dst, End\+Of\+Path\+Instruction end\+Of\+Path\+Instruction=End\+Of\+Path\+Instruction.\+Loop)
+\begin{DoxyCompactList}\small\item\em Gets a rotation that will orient an object in the direction of the path at this point, with local up point along the path\textquotesingle{}s normal. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_ab9703bbe05d6c4884919fee5842978ca}\label{class_path_creation_1_1_vertex_path_ab9703bbe05d6c4884919fee5842978ca} 
+Vector3 {\bfseries Get\+Point\+At\+Time} (float t, End\+Of\+Path\+Instruction end\+Of\+Path\+Instruction=End\+Of\+Path\+Instruction.\+Loop)
+\begin{DoxyCompactList}\small\item\em Gets point on path based on \textquotesingle{}time\textquotesingle{} (where 0 is start, and 1 is end of path). \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_aa738e0737a6060de2254d26669df14eb}\label{class_path_creation_1_1_vertex_path_aa738e0737a6060de2254d26669df14eb} 
+Vector3 {\bfseries Get\+Direction} (float t, End\+Of\+Path\+Instruction end\+Of\+Path\+Instruction=End\+Of\+Path\+Instruction.\+Loop)
+\begin{DoxyCompactList}\small\item\em Gets forward direction on path based on \textquotesingle{}time\textquotesingle{} (where 0 is start, and 1 is end of path). \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_a2e4032694b7fbec56c46d99ba06d2738}\label{class_path_creation_1_1_vertex_path_a2e4032694b7fbec56c46d99ba06d2738} 
+Vector3 {\bfseries Get\+Normal} (float t, End\+Of\+Path\+Instruction end\+Of\+Path\+Instruction=End\+Of\+Path\+Instruction.\+Loop)
+\begin{DoxyCompactList}\small\item\em Gets normal vector on path based on \textquotesingle{}time\textquotesingle{} (where 0 is start, and 1 is end of path). \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_a65c5ec446381a6cd300aa3e16712ca4d}\label{class_path_creation_1_1_vertex_path_a65c5ec446381a6cd300aa3e16712ca4d} 
+Quaternion {\bfseries Get\+Rotation} (float t, End\+Of\+Path\+Instruction end\+Of\+Path\+Instruction=End\+Of\+Path\+Instruction.\+Loop)
+\begin{DoxyCompactList}\small\item\em Gets a rotation that will orient an object in the direction of the path at this point, with local up point along the path\textquotesingle{}s normal. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_ae0a294d13ca50315c743d9a6e74b31b6}\label{class_path_creation_1_1_vertex_path_ae0a294d13ca50315c743d9a6e74b31b6} 
+Vector3 {\bfseries Get\+Closest\+Point\+On\+Path} (Vector3 world\+Point)
+\begin{DoxyCompactList}\small\item\em Finds the closest point on the path from any point in the world. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_add1d94ca38d101e394c85e3c030ed5c7}\label{class_path_creation_1_1_vertex_path_add1d94ca38d101e394c85e3c030ed5c7} 
+float {\bfseries Get\+Closest\+Time\+On\+Path} (Vector3 world\+Point)
+\begin{DoxyCompactList}\small\item\em Finds the \textquotesingle{}time\textquotesingle{} (0=start of path, 1=end of path) along the path that is closest to the given point. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_a8053ea41c3b34896a2caf2a38a16479a}\label{class_path_creation_1_1_vertex_path_a8053ea41c3b34896a2caf2a38a16479a} 
+float {\bfseries Get\+Closest\+Distance\+Along\+Path} (Vector3 world\+Point)
+\begin{DoxyCompactList}\small\item\em Finds the distance along the path that is closest to the given point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_aab5f889fde82379662ac21a0e5ff2c1e}\label{class_path_creation_1_1_vertex_path_aab5f889fde82379662ac21a0e5ff2c1e} 
+readonly float\mbox{[}$\,$\mbox{]} {\bfseries times}
+\begin{DoxyCompactList}\small\item\em Percentage along the path at each vertex (0 being start of path, and 1 being the end) \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_a50750f3b8c87b4381ad0386692c1e3e5}\label{class_path_creation_1_1_vertex_path_a50750f3b8c87b4381ad0386692c1e3e5} 
+readonly float {\bfseries length}
+\begin{DoxyCompactList}\small\item\em Total distance between the vertices of the polyline. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_a4181ef3ca1db9c0393401411bdeaabc6}\label{class_path_creation_1_1_vertex_path_a4181ef3ca1db9c0393401411bdeaabc6} 
+readonly float\mbox{[}$\,$\mbox{]} {\bfseries cumulative\+Length\+At\+Each\+Vertex}
+\begin{DoxyCompactList}\small\item\em Total distance from the first vertex up to each vertex in the polyline. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_aed82650136385bdafde91640006b4f10}\label{class_path_creation_1_1_vertex_path_aed82650136385bdafde91640006b4f10} 
+readonly Bounds {\bfseries bounds}
+\begin{DoxyCompactList}\small\item\em Bounding box of the path. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_a6767b928b6cb5a8eb12dd70826ac6090}\label{class_path_creation_1_1_vertex_path_a6767b928b6cb5a8eb12dd70826ac6090} 
+readonly Vector3 {\bfseries up}
+\begin{DoxyCompactList}\small\item\em Equal to (0,0,-\/1) for 2D paths, and (0,1,0) for XZ paths. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_a60f1cb3d737307551a166f9733072c25}\label{class_path_creation_1_1_vertex_path_a60f1cb3d737307551a166f9733072c25} 
+{\bfseries Vertex\+Path} (\mbox{\hyperlink{class_path_creation_1_1_bezier_path}{Bezier\+Path}} bezier\+Path, Vertex\+Path\+Utility.\+Path\+Split\+Data path\+Split\+Data, Transform transform)
+\begin{DoxyCompactList}\small\item\em Internal contructor. \end{DoxyCompactList}\item 
+Time\+On\+Path\+Data \mbox{\hyperlink{class_path_creation_1_1_vertex_path_abbff33b1b67be54cbab3775963ec493e}{Calculate\+Percent\+On\+Path\+Data}} (float t, End\+Of\+Path\+Instruction end\+Of\+Path\+Instruction)
+\item 
+\Hypertarget{class_path_creation_1_1_vertex_path_a7f1e4c16d9822b5348cad52c738981c0}\label{class_path_creation_1_1_vertex_path_a7f1e4c16d9822b5348cad52c738981c0} 
+Time\+On\+Path\+Data {\bfseries Calculate\+Closest\+Point\+On\+Path\+Data} (Vector3 world\+Point)
+\begin{DoxyCompactList}\small\item\em Calculate time data for closest point on the path from given world point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A vertex path is a collection of points (vertices) that lie along a bezier path. This allows one to do things like move at a constant speed along the path, which is not possible with a bezier path directly due to how they\textquotesingle{}re constructed mathematically. This class also provides methods for getting the position along the path at a certain distance or time (where time = 0 is the start of the path, and time = 1 is the end of the path). Other info about the path (tangents, normals, rotation) can also be retrieved in this manner. 
+
+Definition at line \mbox{\hyperlink{_vertex_path_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_vertex_path_8cs_source}{Vertex\+Path.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_path_creation_1_1_vertex_path_a68993b6cc3ef582ffc8df88009d98fbc}\label{class_path_creation_1_1_vertex_path_a68993b6cc3ef582ffc8df88009d98fbc} 
+\index{VertexPath@{VertexPath}!VertexPath@{VertexPath}}
+\index{VertexPath@{VertexPath}!VertexPath@{VertexPath}}
+\doxysubsubsection{\texorpdfstring{VertexPath()}{VertexPath()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_creation_1_1_vertex_path}{Vertex\+Path}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_path_creation_1_1_bezier_path}{Bezier\+Path}}}]{bezier\+Path,  }\item[{Transform}]{transform,  }\item[{float}]{max\+Angle\+Error = {\ttfamily 0\+:\+:3f},  }\item[{float}]{min\+Vertex\+Dst = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+param name="{}max\+Angle\+Error"{}\texorpdfstring{$>$}{>}How much can the angle of the path change before a vertex is added. This allows fewer vertices to be generated in straighter sections.
+
+param name="{}min\+Vertex\+Dst"{}\texorpdfstring{$>$}{>}Vertices won\textquotesingle{}t be added closer together than this distance, regardless of angle error.
+
+Definition at line \mbox{\hyperlink{_vertex_path_8cs_source_l00048}{48}} of file \mbox{\hyperlink{_vertex_path_8cs_source}{Vertex\+Path.\+cs}}.
+
+\Hypertarget{class_path_creation_1_1_vertex_path_aa26ae65380456e3ad114515ba2dccb4b}\label{class_path_creation_1_1_vertex_path_aa26ae65380456e3ad114515ba2dccb4b} 
+\index{VertexPath@{VertexPath}!VertexPath@{VertexPath}}
+\index{VertexPath@{VertexPath}!VertexPath@{VertexPath}}
+\doxysubsubsection{\texorpdfstring{VertexPath()}{VertexPath()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_path_creation_1_1_vertex_path}{Vertex\+Path}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_path_creation_1_1_bezier_path}{Bezier\+Path}}}]{bezier\+Path,  }\item[{Transform}]{transform,  }\item[{float}]{vertex\+Spacing }\end{DoxyParamCaption})}
+
+param name="{}max\+Angle\+Error"{}\texorpdfstring{$>$}{>}How much can the angle of the path change before a vertex is added. This allows fewer vertices to be generated in straighter sections.
+
+param name="{}min\+Vertex\+Dst"{}\texorpdfstring{$>$}{>}Vertices won\textquotesingle{}t be added closer together than this distance, regardless of angle error.
+
+param name="{}accuracy"{}\texorpdfstring{$>$}{>}Higher value means the change in angle is checked more frequently.
+
+Definition at line \mbox{\hyperlink{_vertex_path_8cs_source_l00055}{55}} of file \mbox{\hyperlink{_vertex_path_8cs_source}{Vertex\+Path.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_path_creation_1_1_vertex_path_abbff33b1b67be54cbab3775963ec493e}\label{class_path_creation_1_1_vertex_path_abbff33b1b67be54cbab3775963ec493e} 
+\index{VertexPath@{VertexPath}!CalculatePercentOnPathData@{CalculatePercentOnPathData}}
+\index{CalculatePercentOnPathData@{CalculatePercentOnPathData}!VertexPath@{VertexPath}}
+\doxysubsubsection{\texorpdfstring{CalculatePercentOnPathData()}{CalculatePercentOnPathData()}}
+{\footnotesize\ttfamily Time\+On\+Path\+Data Calculate\+Percent\+On\+Path\+Data (\begin{DoxyParamCaption}\item[{float}]{t,  }\item[{End\+Of\+Path\+Instruction}]{end\+Of\+Path\+Instruction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+For a given value \textquotesingle{}t\textquotesingle{} between 0 and 1, calculate the indices of the two vertices before and after t. Also calculate how far t is between those two vertices as a percentage between 0 and 1. 
+
+Definition at line \mbox{\hyperlink{_vertex_path_8cs_source_l00253}{253}} of file \mbox{\hyperlink{_vertex_path_8cs_source}{Vertex\+Path.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Tools/\+Path\+Creator/\+Core/\+Runtime/\+Objects/Vertex\+Path.\+cs\end{DoxyCompactItemize}

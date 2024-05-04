@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_1_1_bezier_path" xml:lang="en-US">
+<title>BezierPath Class Reference</title>
+<indexterm><primary>BezierPath</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_path_creation_1_1_bezier_path_1abc1cd71906862025c18067de4ac55fcd">BezierPath</link> (Vector3 centre, bool isClosed=false, PathSpace space=PathSpace.xyz)</para>
+
+<para>Creates a two-anchor path centred around the given centre point. </para>
+</listitem>
+            <listitem><para><link linkend="_class_path_creation_1_1_bezier_path_1a86aae663e474da906ba3da4eff2b35f9">BezierPath</link> (IEnumerable&lt; Vector3 &gt; points, bool isClosed=false, PathSpace space=PathSpace.xyz)</para>
+
+<para>Creates a path from the supplied 3D points. </para>
+</listitem>
+            <listitem><para><link linkend="_class_path_creation_1_1_bezier_path_1a7850bd613d1984e910404cb7887f6d07">BezierPath</link> (IEnumerable&lt; Vector2 &gt; transforms, bool isClosed=false, PathSpace space=PathSpace.xy)</para>
+
+<para>Creates a path from the positions of the supplied 2D points. </para>
+</listitem>
+            <listitem><para><link linkend="_class_path_creation_1_1_bezier_path_1a2dca585e9b7ab2d6de263f9ee94d0075">BezierPath</link> (IEnumerable&lt; Transform &gt; transforms, bool isClosed=false, PathSpace space=PathSpace.xy)</para>
+
+<para>Creates a path from the positions of the supplied transforms. </para>
+</listitem>
+            <listitem><para><link linkend="_class_path_creation_1_1_bezier_path_1a72ed8d4817462c4937e638d5f136dd07">BezierPath</link> (IEnumerable&lt; Vector2 &gt; points, PathSpace space=PathSpace.xyz, bool isClosed=false)</para>
+
+<para>Creates a path from the supplied 2D points. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a4738362b3efc98a1c60a825b306a0892"/>Vector3 <emphasis role="strong">GetPoint</emphasis> (int i)</para>
+
+<para>Get world space position of point. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a0d06f4dbe40cd7406bb66226b1b2a248"/>void <emphasis role="strong">SetPoint</emphasis> (int i, Vector3 localPosition, bool suppressPathModifiedEvent=false)</para>
+
+<para>Get world space position of point. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1ab12baf2f95b49820320320618b733948"/>void <emphasis role="strong">AddSegmentToEnd</emphasis> (Vector3 anchorPos)</para>
+
+<para>Add new anchor point to end of the path. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1ab9657215c02544661b55b75f2e9e0867"/>void <emphasis role="strong">AddSegmentToStart</emphasis> (Vector3 anchorPos)</para>
+
+<para>Add new anchor point to start of the path. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a33b79a7b74d774133da2f4abc0440bf3"/>void <emphasis role="strong">SplitSegment</emphasis> (Vector3 anchorPos, int segmentIndex, float splitTime)</para>
+
+<para>Insert new anchor point at given position. Automatically place control points around it so as to keep shape of curve the same. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1ab53e85db248fb10680799c89cef3ad89"/>void <emphasis role="strong">DeleteSegment</emphasis> (int anchorIndex)</para>
+
+<para>Delete the anchor point at given index, as well as its associated control points. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a6185499e7da708f8fb6e99f698436d36"/>Vector3[] <emphasis role="strong">GetPointsInSegment</emphasis> (int segmentIndex)</para>
+
+<para>Returns an array of the 4 points making up the segment (anchor1, control1, control2, anchor2) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1ad80661af25a34919eeba7403348fd75f"/>void <emphasis role="strong">MovePoint</emphasis> (int i, Vector3 pointPos, bool suppressPathModifiedEvent=false)</para>
+
+<para>Move an existing point to a new position. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a5a1537c7d09255d14329cfe10d09ed41"/>Bounds <emphasis role="strong">CalculateBoundsWithTransform</emphasis> (Transform transform)</para>
+
+<para>Update the bounding box of the path. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a094e07c9b053cf728b73b31fd00369b7"/>float <emphasis role="strong">GetAnchorNormalAngle</emphasis> (int anchorIndex)</para>
+
+<para>Get the desired angle of the normal vector at a particular anchor (only relevant for paths in 3D space) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a65a9570a5f501aacc4571e247d3507c2"/>void <emphasis role="strong">SetAnchorNormalAngle</emphasis> (int anchorIndex, float angle)</para>
+
+<para>Set the desired angle of the normal vector at a particular anchor (only relevant for paths in 3D space) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a612579356063be5d372a0db66a490299"/>void <emphasis role="strong">ResetNormalAngles</emphasis> ()</para>
+
+<para>Reset global and anchor normal angles to 0. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1ad43c2ada379c61ab862f177c8505ace8"/>Vector3 <emphasis role="strong">this[int i]</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Get world space position of point. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a76122faf62db75c06e32a6aca7ffd666"/>int <emphasis role="strong">NumPoints</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Total number of points in the path (anchors and controls) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a7faf89e9e535007f3f491d54c26efe60"/>int <emphasis role="strong">NumAnchorPoints</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Number of anchor points making up the path. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1aba6ba2ef023e1b5fcc541ce2ec07da30"/>int <emphasis role="strong">NumSegments</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Number of bezier curves making up this path. </para>
+</listitem>
+            <listitem><para>PathSpace <link linkend="_class_path_creation_1_1_bezier_path_1a0cacc3cec2744929171dc4d0563ea19e">Space</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a26f01b589d00384406eb54173d4d7aca"/>bool <emphasis role="strong">IsClosed</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>If closed, path will loop back from end point to start point. </para>
+</listitem>
+            <listitem><para>ControlMode <link linkend="_class_path_creation_1_1_bezier_path_1a16552136821334ce771512319d7be9f4">ControlPointMode</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1ad77316d5b3c1726244503f8b2540fe2d"/>float <emphasis role="strong">AutoControlLength</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>When using automatic control point placement, this value scales how far apart controls are placed. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a4ef9d3ec8744096f518dc1a650fc26c1"/>bool <emphasis role="strong">FlipNormals</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Flip the normal vectors 180 degrees. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1abe9a53426b4002473d61f85798101296"/>float <emphasis role="strong">GlobalNormalsAngle</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+
+<para>Global angle that all normal vectors are rotated by (only relevant for paths in 3D space) </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a7a1adffc40fe07f5e2db82a63b6fb33a"/>Bounds <emphasis role="strong">PathBounds</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Bounding box containing the path. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a1db9cbd6086ef5b725ef6dca456b0dc5"/>void <emphasis role="strong">UpdateBounds</emphasis> ()</para>
+
+<para>Update the bounding box of the path. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1ad8df689d28cf8306e3ef28089427cb33"/>void <emphasis role="strong">AutoSetAllAffectedControlPoints</emphasis> (int updatedAnchorIndex)</para>
+
+<para>Determines good positions (for a smooth path) for the control points affected by a moved/inserted anchor point. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a6707c57f434f60dc9f14e80907d01ee5"/>void <emphasis role="strong">AutoSetAllControlPoints</emphasis> ()</para>
+
+<para>Determines good positions (for a smooth path) for all control points. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a2325a3bc6729de2222ef961de6e13b68"/>void <emphasis role="strong">AutoSetAnchorControlPoints</emphasis> (int anchorIndex)</para>
+
+<para>Calculates good positions (to result in smooth path) for the controls around specified anchor. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a8c68c9c40742ff4a0d07c23366083f27"/>void <emphasis role="strong">AutoSetStartAndEndControls</emphasis> ()</para>
+
+<para>Determines good positions (for a smooth path) for the control points at the start and end of a path. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_path_creation_1_1_bezier_path_1ac584b000da2691b488b51416e1fb4a66">UpdateToNewPathSpace</link> (PathSpace previousSpace)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a95b2dd724116a5cdfd043b44fe396a5c"/>void <emphasis role="strong">UpdateClosedState</emphasis> ()</para>
+
+<para>Add/remove the extra 2 controls required for a closed path. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_bezier_path_1a79ffaa88e458c92f2684c5bced692357"/>int <emphasis role="strong">LoopIndex</emphasis> (int i)</para>
+
+<para>Loop index around to start/end of points array if out of bounds (useful when working with closed paths) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A bezier path is a path made by stitching together any number of (cubic) bezier curves. A single cubic bezier curve is defined by 4 points: anchor1, control1, control2, anchor2 The curve moves between the 2 anchors, and the shape of the curve is affected by the positions of the 2 control points When two curves are stitched together, they share an anchor point (end anchor of curve 1 = start anchor of curve 2). So while one curve alone consists of 4 points, two curves are defined by 7 unique points. Apart from storing the points, this class also provides methods for working with the path. For example, adding, inserting, and deleting points. </para>
+<para>
+Definition at line <link linkend="__bezier_path_8cs_source_1l00018">18</link> of file <link linkend="__bezier_path_8cs_source">BezierPath.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_bezier_path_1abc1cd71906862025c18067de4ac55fcd"/><section>
+    <title>BezierPath()<computeroutput>[1/5]</computeroutput></title>
+<indexterm><primary>BezierPath</primary><secondary>BezierPath</secondary></indexterm>
+<indexterm><primary>BezierPath</primary><secondary>BezierPath</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link> (Vector3 centre, bool isClosed = <computeroutput>false</computeroutput>
+, PathSpace space = <computeroutput>PathSpace::xyz</computeroutput>
+)</computeroutput></para>
+<para>param name=&quot;isClosed&quot;&gt; Should the end point connect back to the start point? </para>
+
+<para>param name=&quot;space&quot;&gt; Determines if the path is in 3d space, or clamped to the xy/xz plane </para>
+<para>
+Definition at line <link linkend="__bezier_path_8cs_source_1l00054">54</link> of file <link linkend="__bezier_path_8cs_source">BezierPath.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_bezier_path_1a86aae663e474da906ba3da4eff2b35f9"/><section>
+    <title>BezierPath()<computeroutput>[2/5]</computeroutput></title>
+<indexterm><primary>BezierPath</primary><secondary>BezierPath</secondary></indexterm>
+<indexterm><primary>BezierPath</primary><secondary>BezierPath</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link> (IEnumerable&lt; Vector3 &gt; points, bool isClosed = <computeroutput>false</computeroutput>
+, PathSpace space = <computeroutput>PathSpace::xyz</computeroutput>
+)</computeroutput></para>
+<para>param name=&quot;points&quot;&gt; List or array of points to create the path from. </para>
+
+<para>param name=&quot;isClosed&quot;&gt; Should the end point connect back to the start point? </para>
+
+<para>param name=&quot;space&quot;&gt; Determines if the path is in 3d space, or clamped to the xy/xz plane </para>
+<para>
+Definition at line <link linkend="__bezier_path_8cs_source_1l00077">77</link> of file <link linkend="__bezier_path_8cs_source">BezierPath.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_bezier_path_1a7850bd613d1984e910404cb7887f6d07"/><section>
+    <title>BezierPath()<computeroutput>[3/5]</computeroutput></title>
+<indexterm><primary>BezierPath</primary><secondary>BezierPath</secondary></indexterm>
+<indexterm><primary>BezierPath</primary><secondary>BezierPath</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link> (IEnumerable&lt; Vector2 &gt; transforms, bool isClosed = <computeroutput>false</computeroutput>
+, PathSpace space = <computeroutput>PathSpace::xy</computeroutput>
+)</computeroutput></para>
+<para>param name=&quot;transforms&quot;&gt; List or array of transforms to create the path from. </para>
+
+<para>param name=&quot;isClosed&quot;&gt; Should the end point connect back to the start point? </para>
+
+<para>param name=&quot;space&quot;&gt; Determines if the path is in 3d space, or clamped to the xy/xz plane </para>
+<para>
+Definition at line <link linkend="__bezier_path_8cs_source_1l00101">101</link> of file <link linkend="__bezier_path_8cs_source">BezierPath.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_bezier_path_1a2dca585e9b7ab2d6de263f9ee94d0075"/><section>
+    <title>BezierPath()<computeroutput>[4/5]</computeroutput></title>
+<indexterm><primary>BezierPath</primary><secondary>BezierPath</secondary></indexterm>
+<indexterm><primary>BezierPath</primary><secondary>BezierPath</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link> (IEnumerable&lt; Transform &gt; transforms, bool isClosed = <computeroutput>false</computeroutput>
+, PathSpace space = <computeroutput>PathSpace::xy</computeroutput>
+)</computeroutput></para>
+<para>param name=&quot;transforms&quot;&gt; List or array of transforms to create the path from. </para>
+
+<para>param name=&quot;isClosed&quot;&gt; Should the end point connect back to the start point? </para>
+
+<para>param name=&quot;space&quot;&gt; Determines if the path is in 3d space, or clamped to the xy/xz plane </para>
+<para>
+Definition at line <link linkend="__bezier_path_8cs_source_1l00108">108</link> of file <link linkend="__bezier_path_8cs_source">BezierPath.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_bezier_path_1a72ed8d4817462c4937e638d5f136dd07"/><section>
+    <title>BezierPath()<computeroutput>[5/5]</computeroutput></title>
+<indexterm><primary>BezierPath</primary><secondary>BezierPath</secondary></indexterm>
+<indexterm><primary>BezierPath</primary><secondary>BezierPath</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link> (IEnumerable&lt; Vector2 &gt; points, PathSpace space = <computeroutput>PathSpace::xyz</computeroutput>
+, bool isClosed = <computeroutput>false</computeroutput>
+)</computeroutput></para>
+<para>param name=&quot;points&quot;&gt; List or array of 2d points to create the path from. </para>
+
+<para>param name=&quot;isClosed&quot;&gt; Should the end point connect back to the start point? </para>
+
+<para>param name=&quot;pathSpace&quot;&gt; Determines if the path is in 3d space, or clamped to the xy/xz plane </para>
+<para>
+Definition at line <link linkend="__bezier_path_8cs_source_1l00115">115</link> of file <link linkend="__bezier_path_8cs_source">BezierPath.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_bezier_path_1ac584b000da2691b488b51416e1fb4a66"/><section>
+    <title>UpdateToNewPathSpace()</title>
+<indexterm><primary>UpdateToNewPathSpace</primary><secondary>BezierPath</secondary></indexterm>
+<indexterm><primary>BezierPath</primary><secondary>UpdateToNewPathSpace</secondary></indexterm>
+<para><computeroutput>void UpdateToNewPathSpace (PathSpace previousSpace)<computeroutput>[private]</computeroutput></computeroutput></para>
+<para>Update point positions for new path space (for example, if changing from xy to xz path, y and z axes will be swapped so the path keeps its shape in the new space) </para>
+<para>
+Definition at line <link linkend="__bezier_path_8cs_source_1l00597">597</link> of file <link linkend="__bezier_path_8cs_source">BezierPath.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_bezier_path_1a0cacc3cec2744929171dc4d0563ea19e"/><section>
+    <title>Space</title>
+<indexterm><primary>Space</primary><secondary>BezierPath</secondary></indexterm>
+<indexterm><primary>BezierPath</primary><secondary>Space</secondary></indexterm>
+<para><computeroutput>PathSpace Space<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para>
+<para>Path can exist in 3D (xyz), 2D (xy), or Top-Down (xz) space In xy or xz space, points will be clamped to that plane (so in a 2D path, for example, points will always be at 0 on z axis) </para>
+<para>
+Definition at line <link linkend="__bezier_path_8cs_source_1l00165">165</link> of file <link linkend="__bezier_path_8cs_source">BezierPath.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_bezier_path_1a16552136821334ce771512319d7be9f4"/><section>
+    <title>ControlPointMode</title>
+<indexterm><primary>ControlPointMode</primary><secondary>BezierPath</secondary></indexterm>
+<indexterm><primary>BezierPath</primary><secondary>ControlPointMode</secondary></indexterm>
+<para><computeroutput>ControlMode ControlPointMode<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para>
+<para>The control mode determines the behaviour of control points. Possible modes are: Aligned = controls stay in straight line around their anchor Mirrored = controls stay in straight, equidistant line around their anchor Free = no constraints (use this if sharp corners are needed) Automatic = controls placed automatically to try make the path smooth </para>
+<para>
+Definition at line <link linkend="__bezier_path_8cs_source_1l00197">197</link> of file <link linkend="__bezier_path_8cs_source">BezierPath.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Tools/PathCreator/Core/Runtime/Objects/BezierPath.cs</section>
+</section>

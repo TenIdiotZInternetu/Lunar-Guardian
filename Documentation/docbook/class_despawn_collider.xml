@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_despawn_collider" xml:lang="en-US">
+<title>DespawnCollider Class Reference</title>
+<indexterm><primary>DespawnCollider</primary></indexterm>
+Inheritance diagram for DespawnCollider:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_despawn_collider__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for DespawnCollider:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_despawn_collider__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__despawn_collider_8cs_source_1l00003">3</link> of file <link linkend="__despawn_collider_8cs_source">DespawnCollider.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/DespawnCollider.cs</section>
+</section>

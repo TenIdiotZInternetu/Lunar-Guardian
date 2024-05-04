@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::Utility::VertexPathUtility::PathSplitData</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a373e03148d94bc6d3657f6171cf97889" prot="public" static="no" mutable="no">
+        <type>List&lt; Vector3 &gt;</type>
+        <definition>List&lt;Vector3&gt; vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <qualifiedname>PathCreation.Utility.VertexPathUtility.PathSplitData.vertices</qualifiedname>
+        <initializer>= new List&lt;Vector3&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs" line="132" column="16" bodyfile="Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a8b46f249aa11995868ab39da49523136" prot="public" static="no" mutable="no">
+        <type>List&lt; Vector3 &gt;</type>
+        <definition>List&lt;Vector3&gt; tangents</definition>
+        <argsstring></argsstring>
+        <name>tangents</name>
+        <qualifiedname>PathCreation.Utility.VertexPathUtility.PathSplitData.tangents</qualifiedname>
+        <initializer>= new List&lt;Vector3&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs" line="133" column="16" bodyfile="Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a5070e9a8d28fd554cc1c4c6c90aed7d0" prot="public" static="no" mutable="no">
+        <type>List&lt; float &gt;</type>
+        <definition>List&lt;float&gt; cumulativeLength</definition>
+        <argsstring></argsstring>
+        <name>cumulativeLength</name>
+        <qualifiedname>PathCreation.Utility.VertexPathUtility.PathSplitData.cumulativeLength</qualifiedname>
+        <initializer>= new List&lt;float&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs" line="134" column="16" bodyfile="Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a8e05746ffb431549c768a8f9c6e2cc9f" prot="public" static="no" mutable="no">
+        <type>List&lt; int &gt;</type>
+        <definition>List&lt;int&gt; anchorVertexMap</definition>
+        <argsstring></argsstring>
+        <name>anchorVertexMap</name>
+        <qualifiedname>PathCreation.Utility.VertexPathUtility.PathSplitData.anchorVertexMap</qualifiedname>
+        <initializer>= new List&lt;int&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs" line="135" column="16" bodyfile="Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1ab2646cebe47af4d3f4218770c8fd6b92" prot="public" static="no" mutable="no">
+        <type>MinMax3D</type>
+        <definition>MinMax3D minMax</definition>
+        <argsstring></argsstring>
+        <name>minMax</name>
+        <qualifiedname>PathCreation.Utility.VertexPathUtility.PathSplitData.minMax</qualifiedname>
+        <initializer>= new MinMax3D()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs" line="136" column="20" bodyfile="Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs" bodystart="136" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs" line="131" column="10" bodyfile="Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs" bodystart="131" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a8e05746ffb431549c768a8f9c6e2cc9f" prot="public" virt="non-virtual"><scope>PathCreation::Utility::VertexPathUtility::PathSplitData</scope><name>anchorVertexMap</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a5070e9a8d28fd554cc1c4c6c90aed7d0" prot="public" virt="non-virtual"><scope>PathCreation::Utility::VertexPathUtility::PathSplitData</scope><name>cumulativeLength</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1ab2646cebe47af4d3f4218770c8fd6b92" prot="public" virt="non-virtual"><scope>PathCreation::Utility::VertexPathUtility::PathSplitData</scope><name>minMax</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a8b46f249aa11995868ab39da49523136" prot="public" virt="non-virtual"><scope>PathCreation::Utility::VertexPathUtility::PathSplitData</scope><name>tangents</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a373e03148d94bc6d3657f6171cf97889" prot="public" virt="non-virtual"><scope>PathCreation::Utility::VertexPathUtility::PathSplitData</scope><name>vertices</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_player_scripts_1_1_player" xml:lang="en-US">
+<title>Player Class Reference</title>
+<indexterm><primary>Player</primary></indexterm>
+<para>
+
+<para>Controls player&apos;s movement and responses to his actions. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_player_scripts_1_1_player_1a542f630d26b87b7485284fa8e1156389">ChangeBombState</link> (bool state)</para>
+
+<para>Changes bomb state. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_scripts_1_1_player_1ae734336ad894a9f83096e0eb022ce694">ChangeWeapon</link> (float powerLevel)</para>
+
+<para>Changes currently used set of weapons. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_scripts_1_1_player_1a619889203db83ef8efe43d453d9e554c">ChangeWeapon</link> (int powerLevel)</para>
+
+<para>Changes currently used set of weapons. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_scripts_1_1_player_1addcd78ec1b749bf71dd27fd1965f2efc">ChangeControl</link> (<link linkend="_class_game_manager_1_1_game_state">GameState</link> state)</para>
+
+<para>Changes whether the player has control over the character. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_1a631e83154e218047a2889c328a40d351"/>float <emphasis role="strong">movementSpeed</emphasis></para>
+
+<para>Distance travelled in one second of held movement key. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_1a207b8b7bc7cd8c7389acca3a3c9779fd"/>float <emphasis role="strong">focusSpeedModifier</emphasis></para>
+
+<para>Ratio at which the movement speed is decreased when focused. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_1a4dcef5cc05e1394c1e520d61393c92f3"/><link linkend="_class_player_scripts_1_1_bomb_controller">BombController</link> <emphasis role="strong">bombBehaviour</emphasis></para>
+
+<para>Appropriate BombController activated upon deploying a bomb by the player. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_1aaca2015f54b311502fd2cb2cab74dd61"/>GameObject <emphasis role="strong">currentWeaponSet</emphasis></para>
+
+<para>A set of weapons used by the player at current power level when shooting. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_1aff94192c9014da40699a48789c696f3d"/>List&lt; GameObject &gt; <emphasis role="strong">weaponSets</emphasis></para>
+
+<para>List of weapons used at appropriate power levels. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_1a7fdf773501c77d7fe9587f9cafffee5f"/>static <link linkend="_class_player_scripts_1_1_player">Player</link> <emphasis role="strong">Instance</emphasis></para>
+
+<para>Singleton instance of the player. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__player_8cs_source_1l00013">13</link> of file <link linkend="__player_8cs_source">Player.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_player_scripts_1_1_player_1a542f630d26b87b7485284fa8e1156389"/><section>
+    <title>ChangeBombState()</title>
+<indexterm><primary>ChangeBombState</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>ChangeBombState</secondary></indexterm>
+<para><computeroutput>void ChangeBombState (bool state)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry>
+<para>Whether the bomb effects still last </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_8cs_source_1l00088">88</link> of file <link linkend="__player_8cs_source">Player.cs</link>.</para>
+</section>
+<anchor xml:id="_class_player_scripts_1_1_player_1ae734336ad894a9f83096e0eb022ce694"/><section>
+    <title>ChangeWeapon()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>ChangeWeapon</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>ChangeWeapon</secondary></indexterm>
+<para><computeroutput>void ChangeWeapon (float powerLevel)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>powerLevel</entry><entry>
+<para>Player&apos;s power level </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_8cs_source_1l00097">97</link> of file <link linkend="__player_8cs_source">Player.cs</link>.</para>
+</section>
+<anchor xml:id="_class_player_scripts_1_1_player_1a619889203db83ef8efe43d453d9e554c"/><section>
+    <title>ChangeWeapon()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>ChangeWeapon</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>ChangeWeapon</secondary></indexterm>
+<para><computeroutput>void ChangeWeapon (int powerLevel)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>powerLevel</entry><entry>
+<para>Player&apos;s power level </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_8cs_source_1l00106">106</link> of file <link linkend="__player_8cs_source">Player.cs</link>.</para>
+</section>
+<anchor xml:id="_class_player_scripts_1_1_player_1addcd78ec1b749bf71dd27fd1965f2efc"/><section>
+    <title>ChangeControl()</title>
+<indexterm><primary>ChangeControl</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>ChangeControl</secondary></indexterm>
+<para><computeroutput>void ChangeControl (<link linkend="_class_game_manager_1_1_game_state">GameState</link> state)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry>
+<para>Current GameState of the game </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_8cs_source_1l00117">117</link> of file <link linkend="__player_8cs_source">Player.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/PlayerScripts/Player.cs</section>
+</section>

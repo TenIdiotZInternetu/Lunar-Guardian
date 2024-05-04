@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Lunar Guardian</title>
+    </info>
+<chapter>
+    <title>Namespace Documentation</title>
+<xi:include href="namespace_default_namespace.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_game_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_movement_patterns.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_path_creation.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_path_creation_1_1_examples.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_path_creation_1_1_utility.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_path_creation_editor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_player_scripts.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_serialization.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_spawnables.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_spawnables_1_1_enemy_scripts.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_spawnables_1_1_pickups.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_spawnables_1_1_weapons.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_tools.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_tymski.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_u_i.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_u_i_1_1_menus.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespace_v_f_x.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="class_path_creation_1_1_bezier_path.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_player_scripts_1_1_bomb_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_weapons_1_1_bullet_spawner.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_v_f_x_1_1_camera_shake.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_movement_patterns_1_1_chasing_m_p.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tools_1_1_component_utils.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_player_scripts_1_1_controls.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_path_creation_1_1_utility_1_1_cubic_bezier_utility.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_v_f_x_1_1_damage_flash.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_despawn_collider.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_enemy_scripts_1_1_enemy.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_entity.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_v_f_x_1_1_fade_canvas.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_movement_patterns_1_1_follow_path.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_game_manager_1_1_game_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tools_1_1_game_object_event.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_game_manager_1_1_game_over_state.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_game_manager_1_1_game_state.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tools_1_1_game_state_event.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="interface_spawnables_1_1_weapons_1_1_i_shootable.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_weapons_1_1_lazer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_movement_patterns_1_1_linear_m_p.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_u_i_1_1_menu_screen.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_movement_patterns_1_1_movement_pattern.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_pickups_1_1_multiplier_pickup.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_object_pool.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_object_pool_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_movement_patterns_1_1_orbiting_m_p.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_v_f_x_1_1_pan_camera.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_path_creation_1_1_path_creator_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_path_creation_editor_1_1_path_editor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_game_manager_1_1_paused_state.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_pickups_1_1_pickup.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_player_scripts_1_1_player.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_player_scripts_1_1_player_hitbox.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_player_scripts_1_1_player_status.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_game_manager_1_1_playing_state.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_weapons_1_1_projectile.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_pickups_1_1_pickup_1_1_reward.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_serialization_1_1_save_system.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_tymski_1_1_scene_reference.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_serialization_1_1_score_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_movement_patterns_1_1_sinusoid_m_p.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_spin.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_u_i_1_1_text_display.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_u_i_1_1_u_i_bar.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_path_creation_1_1_vertex_path.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_spawnables_1_1_weapons_1_1_weapon.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="_credits_so_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_game_manager_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_game_state_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_game_over_state_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_paused_state_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_playing_state_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_chasing_m_p_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_follow_path_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_linear_m_p_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_movement_pattern_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_orbiting_m_p_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_sinusoid_m_p_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_bomb_controller_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_controls_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_hitbox_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_player_status_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_save_system_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_score_data_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_despawn_collider_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_enemy_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_enemy_controller_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_enemy_spawner_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_entity_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_object_pool_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_object_pool_manager_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_multiplier_pickup_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_pickup_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_spin_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_projectile_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_bullet_spawner_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_i_shootable_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_lazer_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_weapon_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_gatling_gun_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_scatter_gun_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_credits_screen_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_game_over_screen_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_leaderboard_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_main_menu_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_pause_menu_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_menu_screen_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_text_display_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_u_i_bar_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_camera_shake_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_damage_flash_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_fade_canvas_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_pan_camera_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_component_utils_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_custom_events_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_mouse_utility_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_path_handle_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_screen_space_poly_line_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_path_editor_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_bezier_path_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_end_of_path_instruction_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_global_display_settings_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_max3_d_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_path_creator_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_path_creator_data_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_path_space_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_vertex_path_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_cubic_bezier_utility_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_math_utility_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_vertex_path_utility_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_path_scene_tool_editor_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_generate_path_example_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_path_follower_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_path_placer_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_path_scene_tool_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_path_spawner_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_road_mesh_creator_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_scene_reference_8cs_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

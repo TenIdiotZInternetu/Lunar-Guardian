@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_serialization_1_1_score_data" kind="class" language="C#" prot="public">
+    <compoundname>Serialization::ScoreData</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_serialization_1_1_score_data_1a2e87500927fd5dde63e9c4f1e56c0e3f" prot="public" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string SAVE_PATH</definition>
+        <argsstring></argsstring>
+        <name>SAVE_PATH</name>
+        <qualifiedname>Serialization.ScoreData.SAVE_PATH</qualifiedname>
+        <initializer>= &quot;scores.dat&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Serialization/ScoreData.cs" line="18" column="29" bodyfile="Scripts/Serialization/ScoreData.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_serialization_1_1_score_data_1ad3d60c50774804857f8fc28ac8899ab6" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int MAX_SAVED_SCORES</definition>
+        <argsstring></argsstring>
+        <name>MAX_SAVED_SCORES</name>
+        <qualifiedname>Serialization.ScoreData.MAX_SAVED_SCORES</qualifiedname>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Serialization/ScoreData.cs" line="19" column="27" bodyfile="Scripts/Serialization/ScoreData.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_serialization_1_1_score_data_1ae4eb778f3811a9e3df55e11e8a5a77cf" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int AUTHORS_PB</definition>
+        <argsstring></argsstring>
+        <name>AUTHORS_PB</name>
+        <qualifiedname>Serialization.ScoreData.AUTHORS_PB</qualifiedname>
+        <initializer>= 37000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Serialization/ScoreData.cs" line="21" column="27" bodyfile="Scripts/Serialization/ScoreData.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_serialization_1_1_score_data_1a19eb506d49ab398bbc48b7bc8f4e1c28" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string AUTHOR</definition>
+        <argsstring></argsstring>
+        <name>AUTHOR</name>
+        <qualifiedname>Serialization.ScoreData.AUTHOR</qualifiedname>
+        <initializer>= &quot;TIZI&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Serialization/ScoreData.cs" line="22" column="30" bodyfile="Scripts/Serialization/ScoreData.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_serialization_1_1_score_data_1adc99decbd8f765a5af197c2c88211e4e" prot="public" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] names</definition>
+        <argsstring></argsstring>
+        <name>names</name>
+        <qualifiedname>Serialization.ScoreData.names</qualifiedname>
+        <initializer>= new string[MAX_SAVED_SCORES]</initializer>
+        <briefdescription>
+<para>Setters of the scores sorted by score achieved. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Serialization/ScoreData.cs" line="29" column="23" bodyfile="Scripts/Serialization/ScoreData.cs" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_serialization_1_1_score_data_1a886e39b99d6ac17e2906dc536227ecbe" compoundref="_score_data_8cs" startline="68" endline="90">ScoreData.AddScore</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf" prot="public" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] sortedScores</definition>
+        <argsstring></argsstring>
+        <name>sortedScores</name>
+        <qualifiedname>Serialization.ScoreData.sortedScores</qualifiedname>
+        <initializer>= new int[MAX_SAVED_SCORES]</initializer>
+        <briefdescription>
+<para>Highest achieved scores sorted from highest to lowest. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Serialization/ScoreData.cs" line="34" column="20" bodyfile="Scripts/Serialization/ScoreData.cs" bodystart="34" bodyend="-1"/>
+        <referencedby refid="class_serialization_1_1_score_data_1a886e39b99d6ac17e2906dc536227ecbe" compoundref="_score_data_8cs" startline="68" endline="90">ScoreData.AddScore</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_serialization_1_1_score_data_1a69d2493e8a51b7aba3af2e2fe74d8d37" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int savedScoresCount</definition>
+        <argsstring></argsstring>
+        <name>savedScoresCount</name>
+        <qualifiedname>Serialization.ScoreData.savedScoresCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of saved scores. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Serialization/ScoreData.cs" line="39" column="20" bodyfile="Scripts/Serialization/ScoreData.cs" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_serialization_1_1_score_data_1a886e39b99d6ac17e2906dc536227ecbe" compoundref="_score_data_8cs" startline="68" endline="90">ScoreData.AddScore</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_serialization_1_1_score_data_1a74cf69194846ff3656b5e1377c39cbda" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_serialization_1_1_score_data" kindref="compound">ScoreData</ref></type>
+        <definition>static ScoreData LoadScores</definition>
+        <argsstring>()</argsstring>
+        <name>LoadScores</name>
+        <qualifiedname>Serialization.ScoreData.LoadScores</qualifiedname>
+        <briefdescription>
+<para>Loads data from the scores save file. Create a new save file if it doesn&apos;t exist. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Object with values retrieved from the scores save file </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Serialization/ScoreData.cs" line="47" column="33" bodyfile="Scripts/Serialization/ScoreData.cs" bodystart="47" bodyend="60"/>
+        <referencedby refid="class_game_manager_1_1_game_manager_1adef25384ad2ee4c9637f3661c1541298" compoundref="_game_manager_8cs" startline="76" endline="82">GameManager.SaveAndQuit</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_serialization_1_1_score_data_1a886e39b99d6ac17e2906dc536227ecbe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddScore</definition>
+        <argsstring>(int score, string name)</argsstring>
+        <name>AddScore</name>
+        <qualifiedname>Serialization.ScoreData.AddScore</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>score</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the score is high enough to be saved and adds it to the array of scores in the correct position. If yes the score at the lowest position will be lost! </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Score achieved </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Setter of the score </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Serialization/ScoreData.cs" line="68" column="21" bodyfile="Scripts/Serialization/ScoreData.cs" bodystart="68" bodyend="90"/>
+        <references refid="class_serialization_1_1_score_data_1adc99decbd8f765a5af197c2c88211e4e" compoundref="_score_data_8cs" startline="29">ScoreData.names</references>
+        <references refid="class_serialization_1_1_score_data_1a69d2493e8a51b7aba3af2e2fe74d8d37" compoundref="_score_data_8cs" startline="39">ScoreData.savedScoresCount</references>
+        <references refid="class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf" compoundref="_score_data_8cs" startline="34">ScoreData.sortedScores</references>
+        <referencedby refid="class_serialization_1_1_score_data_1a02238a4e4ab88f5e93908f6dd4c098da" compoundref="_score_data_8cs" startline="98" endline="102">ScoreData.AddScoreAndSave</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_serialization_1_1_score_data_1a02238a4e4ab88f5e93908f6dd4c098da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddScoreAndSave</definition>
+        <argsstring>(int score, string name)</argsstring>
+        <name>AddScoreAndSave</name>
+        <qualifiedname>Serialization.ScoreData.AddScoreAndSave</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>score</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the score is high enough to be saved and adds it to the array of scores in the correct position. If yes the score at the lowest position will be lost! Then the data are saved to the scores save file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Achieved score </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Setter of the score </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Serialization/ScoreData.cs" line="98" column="21" bodyfile="Scripts/Serialization/ScoreData.cs" bodystart="98" bodyend="102"/>
+        <references refid="class_serialization_1_1_score_data_1a886e39b99d6ac17e2906dc536227ecbe" compoundref="_score_data_8cs" startline="68" endline="90">ScoreData.AddScore</references>
+        <referencedby refid="class_game_manager_1_1_game_manager_1adef25384ad2ee4c9637f3661c1541298" compoundref="_game_manager_8cs" startline="76" endline="82">GameManager.SaveAndQuit</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Serializable data of highest achieved scores. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Serialization/ScoreData.cs" line="14" column="11" bodyfile="Scripts/Serialization/ScoreData.cs" bodystart="15" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_serialization_1_1_score_data_1a886e39b99d6ac17e2906dc536227ecbe" prot="public" virt="non-virtual"><scope>Serialization::ScoreData</scope><name>AddScore</name></member>
+      <member refid="class_serialization_1_1_score_data_1a02238a4e4ab88f5e93908f6dd4c098da" prot="public" virt="non-virtual"><scope>Serialization::ScoreData</scope><name>AddScoreAndSave</name></member>
+      <member refid="class_serialization_1_1_score_data_1a19eb506d49ab398bbc48b7bc8f4e1c28" prot="private" virt="non-virtual"><scope>Serialization::ScoreData</scope><name>AUTHOR</name></member>
+      <member refid="class_serialization_1_1_score_data_1ae4eb778f3811a9e3df55e11e8a5a77cf" prot="private" virt="non-virtual"><scope>Serialization::ScoreData</scope><name>AUTHORS_PB</name></member>
+      <member refid="class_serialization_1_1_score_data_1a74cf69194846ff3656b5e1377c39cbda" prot="public" virt="non-virtual"><scope>Serialization::ScoreData</scope><name>LoadScores</name></member>
+      <member refid="class_serialization_1_1_score_data_1ad3d60c50774804857f8fc28ac8899ab6" prot="private" virt="non-virtual"><scope>Serialization::ScoreData</scope><name>MAX_SAVED_SCORES</name></member>
+      <member refid="class_serialization_1_1_score_data_1adc99decbd8f765a5af197c2c88211e4e" prot="public" virt="non-virtual"><scope>Serialization::ScoreData</scope><name>names</name></member>
+      <member refid="class_serialization_1_1_score_data_1a2e87500927fd5dde63e9c4f1e56c0e3f" prot="public" virt="non-virtual"><scope>Serialization::ScoreData</scope><name>SAVE_PATH</name></member>
+      <member refid="class_serialization_1_1_score_data_1a69d2493e8a51b7aba3af2e2fe74d8d37" prot="public" virt="non-virtual"><scope>Serialization::ScoreData</scope><name>savedScoresCount</name></member>
+      <member refid="class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf" prot="public" virt="non-virtual"><scope>Serialization::ScoreData</scope><name>sortedScores</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

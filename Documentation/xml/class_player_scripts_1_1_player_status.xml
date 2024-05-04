@@ -1,0 +1,857 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_player_scripts_1_1_player_status" kind="class" language="C#" prot="public">
+    <compoundname>PlayerScripts::PlayerStatus</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>ResourceType</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.ResourceType</qualifiedname>
+        <enumvalue id="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1a605669cab962bf944d99ce89cf9e58d9" prot="public">
+          <name>Health</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1a902c057942916a5d6c492f421c9ea522" prot="public">
+          <name>Bombs</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1add4fe0cc913f704600b97d1f5dd285de" prot="public">
+          <name>Power</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1a5dd135d1bcfa7f63c3b7f25425c2a4a1" prot="public">
+          <name>Score</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1a31f6f99f6ac92561e21b26bde759bbc7" prot="public">
+          <name>ScoreMultiplier</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Type of resource maintained by the PlayerStatus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="18" column="15" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="19" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1ab754ea7b4863cb06573e60f4fd700193" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string CHANGE_METHOD_PREFIX</definition>
+        <argsstring></argsstring>
+        <name>CHANGE_METHOD_PREFIX</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.CHANGE_METHOD_PREFIX</qualifiedname>
+        <initializer>= &quot;Change&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="30" column="30" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1a36a69d17d9347c8c18760747002841c4" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string EVENT_NAME_SUFFIX</definition>
+        <argsstring></argsstring>
+        <name>EVENT_NAME_SUFFIX</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.EVENT_NAME_SUFFIX</qualifiedname>
+        <initializer>= &quot;ChangedEvent&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="31" column="30" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1a25db5557f707345a9150265155379142" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int _bombsHeld</definition>
+        <argsstring></argsstring>
+        <name>_bombsHeld</name>
+        <qualifiedname>PlayerScripts.PlayerStatus._bombsHeld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="101" column="28" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="101" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1a8ebf38d6fb5cc85c37188f3a86e8da06" prot="private" static="no" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] POWER_LEVELS</definition>
+        <argsstring></argsstring>
+        <name>POWER_LEVELS</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.POWER_LEVELS</qualifiedname>
+        <initializer>= 
+        {
+            25, 50, 75, 100, 150, 200
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="35" column="30" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1a1702c43c74797e04cc9e18a4a4db49bb" prot="private" static="no" mutable="no">
+        <type>readonly float[]</type>
+        <definition>readonly float [] MULTIPLIER_LEVELS</definition>
+        <argsstring></argsstring>
+        <name>MULTIPLIER_LEVELS</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.MULTIPLIER_LEVELS</qualifiedname>
+        <initializer>= 
+        {
+            1, 1.15f, 1.3f, 1.45f, 1.6f, 1.75f, 2, 2.2f, 2.4f, 2.6f, 2.8f, 3, 3.5f, 4, 4.5f, 5
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="41" column="32" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1afa3c4cbe95c95ff9cd8bdc9e4cec4a5f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int maxHealth</definition>
+        <argsstring></argsstring>
+        <name>maxHealth</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.maxHealth</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="56" column="22" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1af14fb5dd5d34fc2b4a6dadaf929b237b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int startingHealth</definition>
+        <argsstring></argsstring>
+        <name>startingHealth</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.startingHealth</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="57" column="22" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1aecf538b86d5a9fa29b1178eec01f6d45" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int maxBombsHeld</definition>
+        <argsstring></argsstring>
+        <name>maxBombsHeld</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.maxBombsHeld</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="58" column="22" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1af6446dd97083751623de14b02e5ede2a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int startingBombsHeld</definition>
+        <argsstring></argsstring>
+        <name>startingBombsHeld</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.startingBombsHeld</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="59" column="22" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1a4d42493fdc9abff551c51daea14b5fd5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int maxPower</definition>
+        <argsstring></argsstring>
+        <name>maxPower</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.maxPower</qualifiedname>
+        <initializer>= 200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="60" column="22" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1a4d3715eb1b2638dae292e1c00ceb5028" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int startingPower</definition>
+        <argsstring></argsstring>
+        <name>startingPower</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.startingPower</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="61" column="22" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1adf08962e6157777feae044d2ad6c1ca5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int maxMultiplierScoreBonus</definition>
+        <argsstring></argsstring>
+        <name>maxMultiplierScoreBonus</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.maxMultiplierScoreBonus</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+<para>Score gained for catching Multiplier pickups while at max multiplier. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="67" column="22" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_player_scripts_1_1_player_status_1a48bde3035abda30d99b282527cdd1bf0" compoundref="_player_status_8cs" startline="249" endline="260">PlayerStatus.ChangeScoreMultiplier</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1a7336b6cd8782708a2ffaa32505111436" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int healthUpRequirementIncrement</definition>
+        <argsstring></argsstring>
+        <name>healthUpRequirementIncrement</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.healthUpRequirementIncrement</qualifiedname>
+        <initializer>= 1000000</initializer>
+        <briefdescription>
+<para>Amount of score required to gain extra health. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="72" column="22" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="72" bodyend="-1"/>
+        <referencedby refid="class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45" compoundref="_player_status_8cs" startline="232" endline="243">PlayerStatus.ChangeScore</referencedby>
+        <referencedby refid="class_player_scripts_1_1_player_status_1a372de693ad40b3f42839c8ec6ac845f4" compoundref="_player_status_8cs" startline="151" endline="170">PlayerStatus.Reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1a003c51d423b7d53fcc827089df709e5e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int healthOverflowBonus</definition>
+        <argsstring></argsstring>
+        <name>healthOverflowBonus</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.healthOverflowBonus</qualifiedname>
+        <initializer>= 20000</initializer>
+        <briefdescription>
+<para>Score gained for gaining health while already at max health. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="77" column="22" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_player_scripts_1_1_player_status_1af41d014aba881a7ec30a9cddaf9e0b3a" compoundref="_player_status_8cs" startline="179" endline="192">PlayerStatus.ChangeHealth</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1aa8105616da493b6edfaec0538048a2f3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _health</definition>
+        <argsstring></argsstring>
+        <name>_health</name>
+        <qualifiedname>PlayerScripts.PlayerStatus._health</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="100" column="21" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1addd9b23022e82028a4a03b56e70ebf54" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _power</definition>
+        <argsstring></argsstring>
+        <name>_power</name>
+        <qualifiedname>PlayerScripts.PlayerStatus._power</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="102" column="21" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1a80852ddc07995f011e3f05f9f1cb5b48" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float _scoreMultiplier</definition>
+        <argsstring></argsstring>
+        <name>_scoreMultiplier</name>
+        <qualifiedname>PlayerScripts.PlayerStatus._scoreMultiplier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="104" column="23" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1afbd12ef65f605adbf215c2e9c88a9aa8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _scoreMultiplierLevel</definition>
+        <argsstring></argsstring>
+        <name>_scoreMultiplierLevel</name>
+        <qualifiedname>PlayerScripts.PlayerStatus._scoreMultiplierLevel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="105" column="21" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_player_status_1a32ebb11e1515da4b02ee8b35e38148be" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _healthUpRequirement</definition>
+        <argsstring></argsstring>
+        <name>_healthUpRequirement</name>
+        <qualifiedname>PlayerScripts.PlayerStatus._healthUpRequirement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="106" column="21" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="106" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_player_scripts_1_1_player_status_1aeac2eae8e304f20bc75eb574b2df8964" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_player_scripts_1_1_player_status" kindref="compound">PlayerStatus</ref></type>
+        <definition>PlayerStatus Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.Instance</qualifiedname>
+        <briefdescription>
+<para>Singleton instance of the PlayerStatus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="51" column="36" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="51" bodyend="51"/>
+        <referencedby refid="class_player_scripts_1_1_player_status_1a3fd9672e4dfe8040bd6f7011ef2e0f86" compoundref="_player_status_8cs" startline="138" endline="144">PlayerStatus.ChangeResource</referencedby>
+        <referencedby refid="class_game_manager_1_1_game_manager_1adef25384ad2ee4c9637f3661c1541298" compoundref="_game_manager_8cs" startline="76" endline="82">GameManager.SaveAndQuit</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_player_scripts_1_1_player_status_1af8accc54acdf1feb2376dd92f1c4f559" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Score</definition>
+        <argsstring></argsstring>
+        <name>Score</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.Score</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="108" column="20" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="108" bodyend="108"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="event">
+      <memberdef kind="event" id="class_player_scripts_1_1_player_status_1a8a2906566d8ab4cab6f2a7ae1d54ff11" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type><ref refid="class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02" kindref="member">ChangedValueListener</ref></type>
+        <definition>ChangedValueListener HealthChangedEvent</definition>
+        <argsstring></argsstring>
+        <name>HealthChangedEvent</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.HealthChangedEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="86" column="50" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_player_status_1ae2d7538b3b005e9d1425f11c5f3d59a7" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type><ref refid="class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02" kindref="member">ChangedValueListener</ref></type>
+        <definition>ChangedValueListener BombsChangedEvent</definition>
+        <argsstring></argsstring>
+        <name>BombsChangedEvent</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.BombsChangedEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="87" column="50" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_player_status_1a8a4081034fc051d5e0c62f5d422c1d36" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type><ref refid="class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02" kindref="member">ChangedValueListener</ref></type>
+        <definition>ChangedValueListener PowerChangedEvent</definition>
+        <argsstring></argsstring>
+        <name>PowerChangedEvent</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.PowerChangedEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="88" column="50" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_player_status_1aa1c18d81d4b7d79831611343d6df3981" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type><ref refid="class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02" kindref="member">ChangedValueListener</ref></type>
+        <definition>ChangedValueListener PowerLevelChangedEvent</definition>
+        <argsstring></argsstring>
+        <name>PowerLevelChangedEvent</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.PowerLevelChangedEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="89" column="50" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_player_status_1a789a871ed8c2f42930494b3d05f02887" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type><ref refid="class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02" kindref="member">ChangedValueListener</ref></type>
+        <definition>ChangedValueListener ScoreChangedEvent</definition>
+        <argsstring></argsstring>
+        <name>ScoreChangedEvent</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.ScoreChangedEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="90" column="50" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_player_status_1a6debed4c397d5619e51a77b1a093253a" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type><ref refid="class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02" kindref="member">ChangedValueListener</ref></type>
+        <definition>ChangedValueListener ScoreMultiplierChangedEvent</definition>
+        <argsstring></argsstring>
+        <name>ScoreMultiplierChangedEvent</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.ScoreMultiplierChangedEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="91" column="50" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_player_status_1a18f932a93b76c23809add1bf070899bf" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action GameOverEvent</definition>
+        <argsstring></argsstring>
+        <name>GameOverEvent</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.GameOverEvent</qualifiedname>
+        <briefdescription>
+<para>Invoked when the player&apos;s health reaches less than 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="96" column="36" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="96" bodyend="-1"/>
+        <referencedby refid="class_player_scripts_1_1_player_status_1af41d014aba881a7ec30a9cddaf9e0b3a" compoundref="_player_status_8cs" startline="179" endline="192">PlayerStatus.ChangeHealth</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void ChangedValueListener</definition>
+        <argsstring>(float value)</argsstring>
+        <name>ChangedValueListener</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.ChangedValueListener</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Method signature for events that are invoked upon a resource change. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="84" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_status_1a372de693ad40b3f42839c8ec6ac845f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.Reset</qualifiedname>
+        <briefdescription>
+<para>Sets all resources to their starting values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="151" column="21" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="151" bodyend="170"/>
+        <references refid="class_player_scripts_1_1_player_status_1a7336b6cd8782708a2ffaa32505111436" compoundref="_player_status_8cs" startline="72">PlayerStatus.healthUpRequirementIncrement</references>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_status_1af41d014aba881a7ec30a9cddaf9e0b3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeHealth</definition>
+        <argsstring>(int amount)</argsstring>
+        <name>ChangeHealth</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.ChangeHealth</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Increases health. If health is already at max, increases score instead. When health reaches 0, invokes GameOverEvent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of health to be changed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="179" column="21" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="179" bodyend="192"/>
+        <references refid="class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45" compoundref="_player_status_8cs" startline="232" endline="243">PlayerStatus.ChangeScore</references>
+        <references refid="class_player_scripts_1_1_player_status_1a18f932a93b76c23809add1bf070899bf" compoundref="_player_status_8cs" startline="96">PlayerStatus.GameOverEvent</references>
+        <references refid="class_player_scripts_1_1_player_status_1a003c51d423b7d53fcc827089df709e5e" compoundref="_player_status_8cs" startline="77">PlayerStatus.healthOverflowBonus</references>
+        <referencedby refid="class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45" compoundref="_player_status_8cs" startline="232" endline="243">PlayerStatus.ChangeScore</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_status_1a93b8c4270f1e17b9624d0dd78b593e98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeBombs</definition>
+        <argsstring>(int amount)</argsstring>
+        <name>ChangeBombs</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.ChangeBombs</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Increases bombs held by a given amount. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="198" column="21" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="198" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_status_1abd2e8bf17dab02c7807a61f445c930bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangePower</definition>
+        <argsstring>(int amount)</argsstring>
+        <name>ChangePower</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.ChangePower</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Increases power and changes power level if POWER_LEVELS requirement is met. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of health to be changed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="209" column="21" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="209" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeScore</definition>
+        <argsstring>(int amount)</argsstring>
+        <name>ChangeScore</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.ChangeScore</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Increases score, rewards extra health if requirement are met. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="232" column="21" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="232" bodyend="243"/>
+        <references refid="class_player_scripts_1_1_player_status_1af41d014aba881a7ec30a9cddaf9e0b3a" compoundref="_player_status_8cs" startline="179" endline="192">PlayerStatus.ChangeHealth</references>
+        <references refid="class_player_scripts_1_1_player_status_1a7336b6cd8782708a2ffaa32505111436" compoundref="_player_status_8cs" startline="72">PlayerStatus.healthUpRequirementIncrement</references>
+        <referencedby refid="class_player_scripts_1_1_player_status_1af41d014aba881a7ec30a9cddaf9e0b3a" compoundref="_player_status_8cs" startline="179" endline="192">PlayerStatus.ChangeHealth</referencedby>
+        <referencedby refid="class_player_scripts_1_1_player_status_1a48bde3035abda30d99b282527cdd1bf0" compoundref="_player_status_8cs" startline="249" endline="260">PlayerStatus.ChangeScoreMultiplier</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_status_1a48bde3035abda30d99b282527cdd1bf0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeScoreMultiplier</definition>
+        <argsstring>(int amount)</argsstring>
+        <name>ChangeScoreMultiplier</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.ChangeScoreMultiplier</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Changes score multiplier, awards bonus score if max multiplier is reached. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="249" column="21" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="249" bodyend="260"/>
+        <references refid="class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45" compoundref="_player_status_8cs" startline="232" endline="243">PlayerStatus.ChangeScore</references>
+        <references refid="class_player_scripts_1_1_player_status_1adf08962e6157777feae044d2ad6c1ca5" compoundref="_player_status_8cs" startline="67">PlayerStatus.maxMultiplierScoreBonus</references>
+        <referencedby refid="class_player_scripts_1_1_player_status_1a012607dd27a930aa340ffa15fd32cb28" compoundref="_player_status_8cs" startline="265" endline="269">PlayerStatus.ResetScoreMultiplier</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_status_1a012607dd27a930aa340ffa15fd32cb28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ResetScoreMultiplier</definition>
+        <argsstring>()</argsstring>
+        <name>ResetScoreMultiplier</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.ResetScoreMultiplier</qualifiedname>
+        <briefdescription>
+<para>Sets Score Multiplier back to 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="265" column="21" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="265" bodyend="269"/>
+        <references refid="class_player_scripts_1_1_player_status_1a48bde3035abda30d99b282527cdd1bf0" compoundref="_player_status_8cs" startline="249" endline="260">PlayerStatus.ChangeScoreMultiplier</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_scripts_1_1_player_status_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="112" column="22" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="112" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_status_1ac54ce402cec4f1d67a1cef4db841d26d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.OnDestroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="274" column="22" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="274" bodyend="283"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_player_scripts_1_1_player_status_1ab468d4779fc1a9b54ce99dc71555c3fa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Subscribe</definition>
+        <argsstring>(ResourceType resourceType, ChangedValueListener listener)</argsstring>
+        <name>Subscribe</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.Subscribe</qualifiedname>
+        <param>
+          <type><ref refid="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1" kindref="member">ResourceType</ref></type>
+          <declname>resourceType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02" kindref="member">ChangedValueListener</ref></type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+<para>Subscribes a listener to an appropriate resource change event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>resourceType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of resource the listener subscribes to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>listener</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Method that responses to triggering of the appropriate event </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="125" column="28" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="125" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_scripts_1_1_player_status_1a3fd9672e4dfe8040bd6f7011ef2e0f86" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ChangeResource</definition>
+        <argsstring>(ResourceType resourceType, int amount)</argsstring>
+        <name>ChangeResource</name>
+        <qualifiedname>PlayerScripts.PlayerStatus.ChangeResource</qualifiedname>
+        <param>
+          <type><ref refid="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1" kindref="member">ResourceType</ref></type>
+          <declname>resourceType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Change a resource by a given amount. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>resourceType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resource to change </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="138" column="28" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="138" bodyend="144"/>
+        <references refid="class_player_scripts_1_1_player_status_1aeac2eae8e304f20bc75eb574b2df8964" compoundref="_player_status_8cs" startline="51" endline="51">PlayerStatus.Instance</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Records state of player&apos;s resources and provides methods to change them. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/PlayerScripts/PlayerStatus.cs" line="11" column="11" bodyfile="Scripts/PlayerScripts/PlayerStatus.cs" bodystart="12" bodyend="284"/>
+    <listofallmembers>
+      <member refid="class_player_scripts_1_1_player_status_1a25db5557f707345a9150265155379142" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>_bombsHeld</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1aa8105616da493b6edfaec0538048a2f3" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>_health</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a32ebb11e1515da4b02ee8b35e38148be" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>_healthUpRequirement</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1addd9b23022e82028a4a03b56e70ebf54" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>_power</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a80852ddc07995f011e3f05f9f1cb5b48" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>_scoreMultiplier</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1afbd12ef65f605adbf215c2e9c88a9aa8" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>_scoreMultiplierLevel</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1ae2d7538b3b005e9d1425f11c5f3d59a7" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>BombsChangedEvent</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1ab754ea7b4863cb06573e60f4fd700193" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>CHANGE_METHOD_PREFIX</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a93b8c4270f1e17b9624d0dd78b593e98" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>ChangeBombs</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>ChangedValueListener</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1af41d014aba881a7ec30a9cddaf9e0b3a" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>ChangeHealth</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1abd2e8bf17dab02c7807a61f445c930bf" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>ChangePower</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a3fd9672e4dfe8040bd6f7011ef2e0f86" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>ChangeResource</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>ChangeScore</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a48bde3035abda30d99b282527cdd1bf0" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>ChangeScoreMultiplier</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a36a69d17d9347c8c18760747002841c4" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>EVENT_NAME_SUFFIX</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a18f932a93b76c23809add1bf070899bf" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>GameOverEvent</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a8a2906566d8ab4cab6f2a7ae1d54ff11" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>HealthChangedEvent</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a003c51d423b7d53fcc827089df709e5e" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>healthOverflowBonus</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a7336b6cd8782708a2ffaa32505111436" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>healthUpRequirementIncrement</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1aeac2eae8e304f20bc75eb574b2df8964" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>Instance</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1aecf538b86d5a9fa29b1178eec01f6d45" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>maxBombsHeld</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1afa3c4cbe95c95ff9cd8bdc9e4cec4a5f" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>maxHealth</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1adf08962e6157777feae044d2ad6c1ca5" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>maxMultiplierScoreBonus</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a4d42493fdc9abff551c51daea14b5fd5" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>maxPower</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a1702c43c74797e04cc9e18a4a4db49bb" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>MULTIPLIER_LEVELS</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1ac54ce402cec4f1d67a1cef4db841d26d" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>OnDestroy</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a8ebf38d6fb5cc85c37188f3a86e8da06" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>POWER_LEVELS</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a8a4081034fc051d5e0c62f5d422c1d36" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>PowerChangedEvent</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1aa1c18d81d4b7d79831611343d6df3981" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>PowerLevelChangedEvent</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a372de693ad40b3f42839c8ec6ac845f4" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>Reset</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a012607dd27a930aa340ffa15fd32cb28" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>ResetScoreMultiplier</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>ResourceType</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1af8accc54acdf1feb2376dd92f1c4f559" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>Score</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a789a871ed8c2f42930494b3d05f02887" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>ScoreChangedEvent</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a6debed4c397d5619e51a77b1a093253a" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>ScoreMultiplierChangedEvent</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>Start</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1af6446dd97083751623de14b02e5ede2a" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>startingBombsHeld</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1af14fb5dd5d34fc2b4a6dadaf929b237b" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>startingHealth</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1a4d3715eb1b2638dae292e1c00ceb5028" prot="private" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>startingPower</name></member>
+      <member refid="class_player_scripts_1_1_player_status_1ab468d4779fc1a9b54ce99dc71555c3fa" prot="public" virt="non-virtual"><scope>PlayerScripts::PlayerStatus</scope><name>Subscribe</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

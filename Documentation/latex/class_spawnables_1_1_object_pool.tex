@@ -1,0 +1,104 @@
+\doxysection{Object\+Pool Class Reference}
+\hypertarget{class_spawnables_1_1_object_pool}{}\label{class_spawnables_1_1_object_pool}\index{ObjectPool@{ObjectPool}}
+
+
+A set of pre-\/instantiated entities of a specified prefab that can be spawned and despawned by the Object\+Pool\+Manager.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_spawnables_1_1_object_pool_ac2c04dade23785d51b1a68580267240a}\label{class_spawnables_1_1_object_pool_ac2c04dade23785d51b1a68580267240a} 
+void {\bfseries Populate} ()
+\begin{DoxyCompactList}\small\item\em Instantiates objects and adds them to the pool, to fill it up to the initial\+Pool\+Size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_spawnables_1_1_object_pool_a87ee3f6fb08420df8c16ddf8be6d1947}{Enqueue}} (Game\+Object obj)
+\begin{DoxyCompactList}\small\item\em Adds an object to the queue of available objects in the pool. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_spawnables_1_1_object_pool_aca4cb1e6e94d35131eed7de40bcb6e35}{Extract}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves an object from the queue. If the queue is empty, instantiates a new object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_spawnables_1_1_object_pool_adc919ac837a858107c31d077706160d1}{Set\+Parent\+Transform}} (Transform parent\+Transform)
+\begin{DoxyCompactList}\small\item\em Sets a parent transform under which new objects in the pool are instantiated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_spawnables_1_1_object_pool_ad6d3141bf24aaf85fa7573865a1934f6}\label{class_spawnables_1_1_object_pool_ad6d3141bf24aaf85fa7573865a1934f6} 
+Game\+Object {\bfseries prefab}
+\begin{DoxyCompactList}\small\item\em Object prefab stored in the pool. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_object_pool_aa809b812a7a8947b5266b444461aac39}\label{class_spawnables_1_1_object_pool_aa809b812a7a8947b5266b444461aac39} 
+int {\bfseries initial\+Pool\+Size}
+\begin{DoxyCompactList}\small\item\em Amount of objects to instantiate when the pool is created. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_object_pool_afcb017f7ec1034308d7328698bef57f0}\label{class_spawnables_1_1_object_pool_afcb017f7ec1034308d7328698bef57f0} 
+int {\bfseries max\+Pool\+Size}
+\begin{DoxyCompactList}\small\item\em Maximum amount of objects that can be stored in the pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_spawnables_1_1_object_pool_a67259580f3bed3976cf28dea92a19d30}\label{class_spawnables_1_1_object_pool_a67259580f3bed3976cf28dea92a19d30} 
+string {\bfseries Key}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A key to the Dictionary of all the Object\+Pools required to extract an entity from the pool ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_object_pool_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_object_pool_8cs_source}{Object\+Pool.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_spawnables_1_1_object_pool_adc919ac837a858107c31d077706160d1}\label{class_spawnables_1_1_object_pool_adc919ac837a858107c31d077706160d1} 
+\index{ObjectPool@{ObjectPool}!SetParentTransform@{SetParentTransform}}
+\index{SetParentTransform@{SetParentTransform}!ObjectPool@{ObjectPool}}
+\doxysubsubsection{\texorpdfstring{SetParentTransform()}{SetParentTransform()}}
+{\footnotesize\ttfamily static void Set\+Parent\+Transform (\begin{DoxyParamCaption}\item[{Transform}]{parent\+Transform }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+Transform} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_object_pool_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_object_pool_8cs_source}{Object\+Pool.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_object_pool_a87ee3f6fb08420df8c16ddf8be6d1947}\label{class_spawnables_1_1_object_pool_a87ee3f6fb08420df8c16ddf8be6d1947} 
+\index{ObjectPool@{ObjectPool}!Enqueue@{Enqueue}}
+\index{Enqueue@{Enqueue}!ObjectPool@{ObjectPool}}
+\doxysubsubsection{\texorpdfstring{Enqueue()}{Enqueue()}}
+{\footnotesize\ttfamily void Enqueue (\begin{DoxyParamCaption}\item[{Game\+Object}]{obj }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Added object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_object_pool_8cs_source_l00083}{83}} of file \mbox{\hyperlink{_object_pool_8cs_source}{Object\+Pool.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_object_pool_aca4cb1e6e94d35131eed7de40bcb6e35}\label{class_spawnables_1_1_object_pool_aca4cb1e6e94d35131eed7de40bcb6e35} 
+\index{ObjectPool@{ObjectPool}!Extract@{Extract}}
+\index{Extract@{Extract}!ObjectPool@{ObjectPool}}
+\doxysubsubsection{\texorpdfstring{Extract()}{Extract()}}
+{\footnotesize\ttfamily Game\+Object Extract (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Object retrieved from the pool 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Operation\+Canceled\+Exception} & The maximum amount of objects in the pool has been exceeded \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_object_pool_8cs_source_l00094}{94}} of file \mbox{\hyperlink{_object_pool_8cs_source}{Object\+Pool.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Spawnables/Object\+Pool.\+cs\end{DoxyCompactItemize}

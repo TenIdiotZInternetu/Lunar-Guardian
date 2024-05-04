@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_pickups_1_1_pickup" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Pickups::Pickup</compoundname>
+    <basecompoundref refid="class_spawnables_1_1_entity" prot="public" virt="non-virtual">Entity</basecompoundref>
+    <derivedcompoundref refid="class_spawnables_1_1_pickups_1_1_multiplier_pickup" prot="public" virt="non-virtual">MultiplierPickup</derivedcompoundref>
+    <innerclass refid="class_spawnables_1_1_pickups_1_1_pickup_1_1_reward" prot="public">Spawnables::Pickups::Pickup::Reward</innerclass>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_pickups_1_1_pickup_1a4d51bab2cdefd54711c114daae220327" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_spawnables_1_1_pickups_1_1_pickup_1_1_reward" kindref="compound">Reward</ref> &gt;</type>
+        <definition>List&lt;Reward&gt; rewards</definition>
+        <argsstring></argsstring>
+        <name>rewards</name>
+        <qualifiedname>Spawnables.Pickups.Pickup.rewards</qualifiedname>
+        <briefdescription>
+<para>List of resources gained by touching the pickup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Pickups/Pickup.cs" line="35" column="22" bodyfile="Scripts/Spawnables/Pickups/Pickup.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_pickups_1_1_pickup_1ad8977c264b58f2c0e3e69af81c83644d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnTriggerEnter2D</definition>
+        <argsstring>(Collider2D other)</argsstring>
+        <name>OnTriggerEnter2D</name>
+        <qualifiedname>Spawnables.Pickups.Pickup.OnTriggerEnter2D</qualifiedname>
+        <param>
+          <type>Collider2D</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Pickups/Pickup.cs" line="40" column="14" bodyfile="Scripts/Spawnables/Pickups/Pickup.cs" bodystart="40" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_pickups_1_1_pickup_1a2963c672627836dfbd14de95495aa8f5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GiveRewards</definition>
+        <argsstring>()</argsstring>
+        <name>GiveRewards</name>
+        <qualifiedname>Spawnables.Pickups.Pickup.GiveRewards</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Pickups/Pickup.cs" line="50" column="22" bodyfile="Scripts/Spawnables/Pickups/Pickup.cs" bodystart="50" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Entity increasing player&apos;s resources when picked up. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="class_spawnables_1_1_entity"/>
+      </node>
+      <node id="1">
+        <label>Pickup</label>
+        <link refid="class_spawnables_1_1_pickups_1_1_pickup"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MultiplierPickup</label>
+        <link refid="class_spawnables_1_1_pickups_1_1_multiplier_pickup"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="class_spawnables_1_1_entity"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>movementPattern</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+      </node>
+      <node id="1">
+        <label>Pickup</label>
+        <link refid="class_spawnables_1_1_pickups_1_1_pickup"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/Spawnables/Pickups/Pickup.cs" line="11" column="11" bodyfile="Scripts/Spawnables/Pickups/Pickup.cs" bodystart="12" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_entity_1ad967bb43366194baa6f4a96dcc795a31" prot="private" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>_isMoving</name></member>
+      <member refid="class_spawnables_1_1_entity_1a0d7cb683a6801bdbc9f42d6a3252e684" prot="private" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>_timeEnabled</name></member>
+      <member refid="class_spawnables_1_1_entity_1a1e54b149b6984c5899c0f2f8b0cffe7e" prot="private" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>_timeMPChanged</name></member>
+      <member refid="class_spawnables_1_1_pickups_1_1_pickup_1a2963c672627836dfbd14de95495aa8f5" prot="private" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>GiveRewards</name></member>
+      <member refid="class_spawnables_1_1_entity_1a8f2052c5dc85bf163c873f99c285216a" prot="public" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>LifeTime</name></member>
+      <member refid="class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2" prot="public" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>movementPattern</name></member>
+      <member refid="class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba" prot="public" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>MPLifeTime</name></member>
+      <member refid="class_spawnables_1_1_entity_1a84e23ba394eacd818d2e005cc466c4d1" prot="protected" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>OnEnable</name></member>
+      <member refid="class_spawnables_1_1_pickups_1_1_pickup_1ad8977c264b58f2c0e3e69af81c83644d" prot="private" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>OnTriggerEnter2D</name></member>
+      <member refid="class_spawnables_1_1_pickups_1_1_pickup_1a4d51bab2cdefd54711c114daae220327" prot="public" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>rewards</name></member>
+      <member refid="class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef" prot="public" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>SetMovementPattern</name></member>
+      <member refid="class_spawnables_1_1_entity_1a2d356d7b3c35033282092fae9a836766" prot="public" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>SpawnKey</name></member>
+      <member refid="class_spawnables_1_1_entity_1aa71998873389201c17d7773339f63ebe" prot="public" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>StartMoving</name></member>
+      <member refid="class_spawnables_1_1_entity_1a147504656ad9822da09c2c6461aad435" prot="public" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>StopMoving</name></member>
+      <member refid="class_spawnables_1_1_entity_1aec0783b5a136e042adcc47bae4fe5291" prot="protected" virt="non-virtual"><scope>Spawnables::Pickups::Pickup</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_spawnables_1_1_v_f_x" kind="namespace" language="C#">
+    <compoundname>Spawnables::VFX</compoundname>
+    <innerclass refid="class_spawnables_1_1_v_f_x_1_1_camera_shake" prot="public">Spawnables::VFX::CameraShake</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/VFX/CameraShake.cs" line="4" column="1"/>
+  </compounddef>
+</doxygen>

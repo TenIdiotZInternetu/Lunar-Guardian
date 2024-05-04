@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_u_i_1_1_menus_1_1_game_over_screen" kind="class" language="C#" prot="public">
+    <compoundname>UI::Menus::GameOverScreen</compoundname>
+    <basecompoundref refid="class_u_i_1_1_menu_screen" prot="public" virt="non-virtual">MenuScreen</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_u_i_1_1_menus_1_1_game_over_screen_1aa6a3316bd7b321507aa6695fd4255262" prot="public" static="no" mutable="no">
+        <type><ref refid="class_tymski_1_1_scene_reference" kindref="compound">SceneReference</ref></type>
+        <definition>SceneReference mainMenuScene</definition>
+        <argsstring></argsstring>
+        <name>mainMenuScene</name>
+        <qualifiedname>UI.Menus.GameOverScreen.mainMenuScene</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/Menus/GameOverScreen.cs" line="14" column="31" bodyfile="Scripts/UI/Menus/GameOverScreen.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_u_i_1_1_menus_1_1_game_over_screen_1aa6eab0382778448fccbc664b87ed2eed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Continue</definition>
+        <argsstring>()</argsstring>
+        <name>Continue</name>
+        <qualifiedname>UI.Menus.GameOverScreen.Continue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/Menus/GameOverScreen.cs" line="16" column="21" bodyfile="Scripts/UI/Menus/GameOverScreen.cs" bodystart="16" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GameOverScreen</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MenuScreen</label>
+        <link refid="class_u_i_1_1_menu_screen"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GameOverScreen</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>mainMenuScene</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MenuScreen</label>
+        <link refid="class_u_i_1_1_menu_screen"/>
+      </node>
+      <node id="3">
+        <label>SceneReference</label>
+        <link refid="class_tymski_1_1_scene_reference"/>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/UI/Menus/GameOverScreen.cs" line="12" column="11" bodyfile="Scripts/UI/Menus/GameOverScreen.cs" bodystart="13" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_u_i_1_1_menu_screen_1afb6705559457245e290f4253d7e5f909" prot="private" virt="non-virtual"><scope>UI::Menus::GameOverScreen</scope><name>CloseCoroutine</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1aff7779f56c25e6d968cec59627708181" prot="public" virt="non-virtual"><scope>UI::Menus::GameOverScreen</scope><name>CloseMenu</name></member>
+      <member refid="class_u_i_1_1_menus_1_1_game_over_screen_1aa6eab0382778448fccbc664b87ed2eed" prot="public" virt="non-virtual"><scope>UI::Menus::GameOverScreen</scope><name>Continue</name></member>
+      <member refid="class_u_i_1_1_menus_1_1_game_over_screen_1aa6a3316bd7b321507aa6695fd4255262" prot="public" virt="non-virtual"><scope>UI::Menus::GameOverScreen</scope><name>mainMenuScene</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1abde5dcaf50e31d0608c1835c31d45ce5" prot="public" virt="non-virtual"><scope>UI::Menus::GameOverScreen</scope><name>menuLeftEvent</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1a3f204271959196687c31ad5b0f8c19d2" prot="public" virt="non-virtual"><scope>UI::Menus::GameOverScreen</scope><name>menuOpenedEvent</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1a515a4e1ef9fb8f7b823ca9ef62b206f0" prot="public" virt="non-virtual"><scope>UI::Menus::GameOverScreen</scope><name>onCloseDelay</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1af174fffa9aacfd03387706ff553bd993" prot="public" virt="non-virtual"><scope>UI::Menus::GameOverScreen</scope><name>OpenMenu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_unity_editor_1_1_i_m_g_u_i_1_1_controls" kind="namespace" language="C#">
+    <compoundname>UnityEditor::IMGUI::Controls</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Editor/PathEditor.cs" line="5" column="33"/>
+  </compounddef>
+</doxygen>

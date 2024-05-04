@@ -1,0 +1,81 @@
+\doxysection{Save\+System Class Reference}
+\hypertarget{class_serialization_1_1_save_system}{}\label{class_serialization_1_1_save_system}\index{SaveSystem@{SaveSystem}}
+
+
+System for saving and loading object data on local machine.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_serialization_1_1_save_system_a89a4017eb9c766eafdd94545dc1851fe}{Save\+Data$<$ T $>$}} (T data, string path\+Suffix)
+\begin{DoxyCompactList}\small\item\em Save data to a file. \end{DoxyCompactList}\item 
+static T \mbox{\hyperlink{class_serialization_1_1_save_system_a0ba4368861434c24d254509ea4899da7}{Load\+Data$<$ T $>$}} (string path\+Suffix)
+\begin{DoxyCompactList}\small\item\em Loads data from a save file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_save_system_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_save_system_8cs_source}{Save\+System.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_serialization_1_1_save_system_a89a4017eb9c766eafdd94545dc1851fe}\label{class_serialization_1_1_save_system_a89a4017eb9c766eafdd94545dc1851fe} 
+\index{SaveSystem@{SaveSystem}!SaveData$<$ T $>$@{SaveData$<$ T $>$}}
+\index{SaveData$<$ T $>$@{SaveData$<$ T $>$}!SaveSystem@{SaveSystem}}
+\doxysubsubsection{\texorpdfstring{SaveData$<$ T $>$()}{SaveData< T >()}}
+{\footnotesize\ttfamily static void Save\+Data$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{data,  }\item[{string}]{path\+Suffix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Object of which data are save \\
+\hline
+{\em path\+Suffix} & Relative path to resulting save file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the saved object \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line \mbox{\hyperlink{_save_system_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_save_system_8cs_source}{Save\+System.\+cs}}.
+
+\Hypertarget{class_serialization_1_1_save_system_a0ba4368861434c24d254509ea4899da7}\label{class_serialization_1_1_save_system_a0ba4368861434c24d254509ea4899da7} 
+\index{SaveSystem@{SaveSystem}!LoadData$<$ T $>$@{LoadData$<$ T $>$}}
+\index{LoadData$<$ T $>$@{LoadData$<$ T $>$}!SaveSystem@{SaveSystem}}
+\doxysubsubsection{\texorpdfstring{LoadData$<$ T $>$()}{LoadData< T >()}}
+{\footnotesize\ttfamily static T Load\+Data$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{path\+Suffix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\+Suffix} & Relative path to save file \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of object to load \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Object of specified type with values retrieved from the save file 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Exception} & Specified file path doesn\textquotesingle{}t exist \\
+\hline
+{\em Invalid\+Data\+Exception} & File format on the specified type doesn\textquotesingle{}t match the type T \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_save_system_8cs_source_l00040}{40}} of file \mbox{\hyperlink{_save_system_8cs_source}{Save\+System.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Serialization/Save\+System.\+cs\end{DoxyCompactItemize}

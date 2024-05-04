@@ -1,0 +1,72 @@
+\doxysection{Entity Class Reference}
+\hypertarget{class_spawnables_1_1_entity}{}\label{class_spawnables_1_1_entity}\index{Entity@{Entity}}
+
+
+An object that can be spawned from the Object\+Pool and moved by the Movement\+Pattern class.  
+
+
+Inheritance diagram for Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_spawnables_1_1_entity}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_spawnables_1_1_entity_a145fca95d4ded24a179596d960ea54ef}{Set\+Movement\+Pattern}} (\mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern}{Movement\+Pattern}} new\+Movement\+Pattern)
+\begin{DoxyCompactList}\small\item\em Changes the Movement\+Pattern of the entity. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_entity_aa71998873389201c17d7773339f63ebe}\label{class_spawnables_1_1_entity_aa71998873389201c17d7773339f63ebe} 
+void {\bfseries Start\+Moving} ()
+\begin{DoxyCompactList}\small\item\em Tells the entity to start using its Movement\+Pattern. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_entity_a147504656ad9822da09c2c6461aad435}\label{class_spawnables_1_1_entity_a147504656ad9822da09c2c6461aad435} 
+void {\bfseries Stop\+Moving} ()
+\begin{DoxyCompactList}\small\item\em Tells the entity to stop using its Movement\+Pattern. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_spawnables_1_1_entity_ae6c36b72f5f81ee019373bd0411a4fc2}\label{class_spawnables_1_1_entity_ae6c36b72f5f81ee019373bd0411a4fc2} 
+\mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern}{Movement\+Pattern}} {\bfseries movement\+Pattern}
+\begin{DoxyCompactList}\small\item\em Movement pattern that determines the position of the entity in the next frame. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_entity_a2d356d7b3c35033282092fae9a836766}\label{class_spawnables_1_1_entity_a2d356d7b3c35033282092fae9a836766} 
+string {\bfseries Spawn\+Key}
+\begin{DoxyCompactList}\small\item\em A key to identify the entity among the Object\+Pools. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_spawnables_1_1_entity_a8f2052c5dc85bf163c873f99c285216a}\label{class_spawnables_1_1_entity_a8f2052c5dc85bf163c873f99c285216a} 
+float {\bfseries Life\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Time passed since the entity was enabled. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_entity_a3f4ec4fa85ad2f8f95ea03016cf311ba}\label{class_spawnables_1_1_entity_a3f4ec4fa85ad2f8f95ea03016cf311ba} 
+float {\bfseries MPLife\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Time passed since the Movement\+Pattern was last set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_entity_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_entity_8cs_source}{Entity.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_spawnables_1_1_entity_a145fca95d4ded24a179596d960ea54ef}\label{class_spawnables_1_1_entity_a145fca95d4ded24a179596d960ea54ef} 
+\index{Entity@{Entity}!SetMovementPattern@{SetMovementPattern}}
+\index{SetMovementPattern@{SetMovementPattern}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{SetMovementPattern()}{SetMovementPattern()}}
+{\footnotesize\ttfamily void Set\+Movement\+Pattern (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern}{Movement\+Pattern}}}]{new\+Movement\+Pattern }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Movement\+Pattern} & The new movement pattern \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_entity_8cs_source_l00070}{70}} of file \mbox{\hyperlink{_entity_8cs_source}{Entity.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Spawnables/Entity.\+cs\end{DoxyCompactItemize}

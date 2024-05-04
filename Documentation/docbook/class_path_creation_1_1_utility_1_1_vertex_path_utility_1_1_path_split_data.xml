@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data" xml:lang="en-US">
+<title>PathCreation.Utility.VertexPathUtility.PathSplitData Class Reference</title>
+<indexterm><primary>PathCreation.Utility.VertexPathUtility.PathSplitData</primary></indexterm>
+Collaboration diagram for PathCreation.Utility.VertexPathUtility.PathSplitData:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>List&lt; Vector3 &gt; <link linkend="_class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a190984884984f5764cd9bbb6667391ca">vertices</link> = new List&lt;Vector3&gt;()</para>
+</listitem>
+            <listitem><para>List&lt; Vector3 &gt; <link linkend="_class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a17d9c346c51766270c602aefb8b6a081">tangents</link> = new List&lt;Vector3&gt;()</para>
+</listitem>
+            <listitem><para>List&lt; float &gt; <link linkend="_class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a5cf9c73ec6d8cbee80bce5f657ad52e7">cumulativeLength</link> = new List&lt;float&gt;()</para>
+</listitem>
+            <listitem><para>List&lt; int &gt; <link linkend="_class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a82eabc9a78512be449a119630bdc86fe">anchorVertexMap</link> = new List&lt;int&gt;()</para>
+</listitem>
+            <listitem><para><link linkend="_class_path_creation_1_1_min_max3_d">MinMax3D</link> <link linkend="_class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a2fcde8bc4c9ba8ddcd3368895763201c">minMax</link> = new <link linkend="_class_path_creation_1_1_min_max3_d">MinMax3D</link>()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__vertex_path_utility_8cs_source_1l00131">131</link> of file <link linkend="__vertex_path_utility_8cs_source">VertexPathUtility.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a82eabc9a78512be449a119630bdc86fe"/><section>
+    <title>anchorVertexMap</title>
+<indexterm><primary>anchorVertexMap</primary><secondary>PathCreation.Utility.VertexPathUtility.PathSplitData</secondary></indexterm>
+<indexterm><primary>PathCreation.Utility.VertexPathUtility.PathSplitData</primary><secondary>anchorVertexMap</secondary></indexterm>
+<para><computeroutput>List&lt;int&gt; PathCreation.Utility.VertexPathUtility.PathSplitData.anchorVertexMap = new List&lt;int&gt;()</computeroutput></para><para>
+Definition at line <link linkend="__vertex_path_utility_8cs_source_1l00135">135</link> of file <link linkend="__vertex_path_utility_8cs_source">VertexPathUtility.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a5cf9c73ec6d8cbee80bce5f657ad52e7"/><section>
+    <title>cumulativeLength</title>
+<indexterm><primary>cumulativeLength</primary><secondary>PathCreation.Utility.VertexPathUtility.PathSplitData</secondary></indexterm>
+<indexterm><primary>PathCreation.Utility.VertexPathUtility.PathSplitData</primary><secondary>cumulativeLength</secondary></indexterm>
+<para><computeroutput>List&lt;float&gt; PathCreation.Utility.VertexPathUtility.PathSplitData.cumulativeLength = new List&lt;float&gt;()</computeroutput></para><para>
+Definition at line <link linkend="__vertex_path_utility_8cs_source_1l00134">134</link> of file <link linkend="__vertex_path_utility_8cs_source">VertexPathUtility.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a2fcde8bc4c9ba8ddcd3368895763201c"/><section>
+    <title>minMax</title>
+<indexterm><primary>minMax</primary><secondary>PathCreation.Utility.VertexPathUtility.PathSplitData</secondary></indexterm>
+<indexterm><primary>PathCreation.Utility.VertexPathUtility.PathSplitData</primary><secondary>minMax</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_min_max3_d">MinMax3D</link> PathCreation.Utility.VertexPathUtility.PathSplitData.minMax = new <link linkend="_class_path_creation_1_1_min_max3_d">MinMax3D</link>()</computeroutput></para><para>
+Definition at line <link linkend="__vertex_path_utility_8cs_source_1l00136">136</link> of file <link linkend="__vertex_path_utility_8cs_source">VertexPathUtility.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a17d9c346c51766270c602aefb8b6a081"/><section>
+    <title>tangents</title>
+<indexterm><primary>tangents</primary><secondary>PathCreation.Utility.VertexPathUtility.PathSplitData</secondary></indexterm>
+<indexterm><primary>PathCreation.Utility.VertexPathUtility.PathSplitData</primary><secondary>tangents</secondary></indexterm>
+<para><computeroutput>List&lt;Vector3&gt; PathCreation.Utility.VertexPathUtility.PathSplitData.tangents = new List&lt;Vector3&gt;()</computeroutput></para><para>
+Definition at line <link linkend="__vertex_path_utility_8cs_source_1l00133">133</link> of file <link linkend="__vertex_path_utility_8cs_source">VertexPathUtility.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a190984884984f5764cd9bbb6667391ca"/><section>
+    <title>vertices</title>
+<indexterm><primary>vertices</primary><secondary>PathCreation.Utility.VertexPathUtility.PathSplitData</secondary></indexterm>
+<indexterm><primary>PathCreation.Utility.VertexPathUtility.PathSplitData</primary><secondary>vertices</secondary></indexterm>
+<para><computeroutput>List&lt;Vector3&gt; PathCreation.Utility.VertexPathUtility.PathSplitData.vertices = new List&lt;Vector3&gt;()</computeroutput></para><para>
+Definition at line <link linkend="__vertex_path_utility_8cs_source_1l00132">132</link> of file <link linkend="__vertex_path_utility_8cs_source">VertexPathUtility.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Core/Runtime/Utility/VertexPathUtility.cs</section>
+</section>

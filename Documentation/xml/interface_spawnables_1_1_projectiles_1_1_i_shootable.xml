@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="interface_spawnables_1_1_projectiles_1_1_i_shootable" kind="interface" language="C#" prot="public">
+    <compoundname>Spawnables::Projectiles::IShootable</compoundname>
+    <derivedcompoundref refid="class_spawnables_1_1_projectiles_1_1_bullet_spawner" prot="public" virt="non-virtual">Spawnables.Projectiles.BulletSpawner</derivedcompoundref>
+    <derivedcompoundref refid="class_spawnables_1_1_projectiles_1_1_lazer" prot="public" virt="non-virtual">Spawnables.Projectiles.Lazer</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_spawnables_1_1_projectiles_1_1_i_shootable_1a423c156efd6ff3cbd303b405a80d306f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.IShootable.OnShoot</definition>
+        <argsstring>()</argsstring>
+        <name>OnShoot</name>
+        <qualifiedname>Spawnables.Projectiles.IShootable.OnShoot</qualifiedname>
+        <reimplementedby refid="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1a35867312097a05720ab9dcd9eac42e1c">OnShoot</reimplementedby>
+        <reimplementedby refid="class_spawnables_1_1_projectiles_1_1_lazer_1a0ef18114ac207dc6872de820e0fc2288">OnShoot</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/IShootable.cs" line="7" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Spawnables.Projectiles.IShootable</label>
+        <link refid="interface_spawnables_1_1_projectiles_1_1_i_shootable"/>
+      </node>
+      <node id="2">
+        <label>Spawnables.Projectiles.BulletSpawner</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_bullet_spawner"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Spawnables.Projectiles.Lazer</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_lazer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/IShootable.cs" line="5" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/IShootable.cs" bodystart="6" bodyend="8"/>
+    <listofallmembers>
+      <member refid="interface_spawnables_1_1_projectiles_1_1_i_shootable_1a423c156efd6ff3cbd303b405a80d306f" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::IShootable</scope><name>OnShoot</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

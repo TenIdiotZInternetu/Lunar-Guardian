@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_1_1_examples_1_1_path_follower" xml:lang="en-US">
+<title>PathCreation.Examples.PathFollower Class Reference</title>
+<indexterm><primary>PathCreation.Examples.PathFollower</primary></indexterm>
+Inheritance diagram for PathCreation.Examples.PathFollower:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_examples_1_1_path_follower__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for PathCreation.Examples.PathFollower:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_examples_1_1_path_follower__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_path_creation_1_1_path_creator">PathCreator</link> <link linkend="_class_path_creation_1_1_examples_1_1_path_follower_1a9b518e08c898e03ba19affee9be808db">pathCreator</link></para>
+</listitem>
+            <listitem><para>EndOfPathInstruction <link linkend="_class_path_creation_1_1_examples_1_1_path_follower_1a8d8caaf16d40cac7783840460a553cc3">endOfPathInstruction</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_path_creation_1_1_examples_1_1_path_follower_1a45b4f8c68e7ccd3417dca95a13fb1979">speed</link> = 5</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__path_follower_8cs_source_1l00007">7</link> of file <link linkend="__path_follower_8cs_source">PathFollower.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_follower_1a8d8caaf16d40cac7783840460a553cc3"/><section>
+    <title>endOfPathInstruction</title>
+<indexterm><primary>endOfPathInstruction</primary><secondary>PathCreation.Examples.PathFollower</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathFollower</primary><secondary>endOfPathInstruction</secondary></indexterm>
+<para><computeroutput>EndOfPathInstruction PathCreation.Examples.PathFollower.endOfPathInstruction</computeroutput></para><para>
+Definition at line <link linkend="__path_follower_8cs_source_1l00010">10</link> of file <link linkend="__path_follower_8cs_source">PathFollower.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_follower_1a9b518e08c898e03ba19affee9be808db"/><section>
+    <title>pathCreator</title>
+<indexterm><primary>pathCreator</primary><secondary>PathCreation.Examples.PathFollower</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathFollower</primary><secondary>pathCreator</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_path_creator">PathCreator</link> PathCreation.Examples.PathFollower.pathCreator</computeroutput></para><para>
+Definition at line <link linkend="__path_follower_8cs_source_1l00009">9</link> of file <link linkend="__path_follower_8cs_source">PathFollower.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_follower_1a45b4f8c68e7ccd3417dca95a13fb1979"/><section>
+    <title>speed</title>
+<indexterm><primary>speed</primary><secondary>PathCreation.Examples.PathFollower</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathFollower</primary><secondary>speed</secondary></indexterm>
+<para><computeroutput>float PathCreation.Examples.PathFollower.speed = 5</computeroutput></para><para>
+Definition at line <link linkend="__path_follower_8cs_source_1l00011">11</link> of file <link linkend="__path_follower_8cs_source">PathFollower.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Examples/Scripts/PathFollower.cs</section>
+</section>

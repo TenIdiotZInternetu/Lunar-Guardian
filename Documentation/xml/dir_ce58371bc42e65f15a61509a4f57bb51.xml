@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_ce58371bc42e65f15a61509a4f57bb51" kind="dir">
+    <compoundname>Scripts/MovementPatterns</compoundname>
+    <innerfile refid="_chasing_m_p_8cs">ChasingMP.cs</innerfile>
+    <innerfile refid="_follow_path_8cs">FollowPath.cs</innerfile>
+    <innerfile refid="_linear_m_p_8cs">LinearMP.cs</innerfile>
+    <innerfile refid="_movement_pattern_8cs">MovementPattern.cs</innerfile>
+    <innerfile refid="_orbiting_m_p_8cs">OrbitingMP.cs</innerfile>
+    <innerfile refid="_sinusoid_m_p_8cs">SinusoidMP.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/MovementPatterns/"/>
+  </compounddef>
+</doxygen>

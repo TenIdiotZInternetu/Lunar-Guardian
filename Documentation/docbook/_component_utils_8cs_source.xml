@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__component_utils_8cs_source" xml:lang="en-US">
+<title>ComponentUtils.cs</title>
+<indexterm><primary>Tools/ComponentUtils.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__component_utils_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Reflection;
+<anchor xml:id="__component_utils_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__component_utils_8cs_source_1l00003"/>00003 
+<anchor xml:id="__component_utils_8cs_source_1l00004"/><link linkend="_namespace_tools">00004</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_tools">Tools</link>
+<anchor xml:id="__component_utils_8cs_source_1l00005"/>00005 {
+<anchor xml:id="__component_utils_8cs_source_1l00009"/><link linkend="_class_tools_1_1_component_utils">00009</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_tools_1_1_component_utils">ComponentUtils</link>
+<anchor xml:id="__component_utils_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__component_utils_8cs_source_1l00018"/><link linkend="_class_tools_1_1_component_utils_1a451c1bbf3b1f4d5d8933382cf2dfebb6">00018</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;T&#32;<link linkend="_class_tools_1_1_component_utils_1a451c1bbf3b1f4d5d8933382cf2dfebb6">ReplaceComponent&lt;T&gt;</link>(T&#32;original,&#32;T&#32;replacement)&#32;where&#32;T&#32;:&#32;Component
+<anchor xml:id="__component_utils_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__component_utils_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;FieldInfo[]&#32;fields&#32;=&#32;typeof(T).GetFields();
+<anchor xml:id="__component_utils_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__component_utils_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(FieldInfo&#32;field&#32;<emphasis role="keywordflow">in</emphasis>&#32;fields)
+<anchor xml:id="__component_utils_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__component_utils_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;field.SetValue(original,&#32;field.GetValue(replacement));
+<anchor xml:id="__component_utils_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__component_utils_8cs_source_1l00026"/>00026 
+<anchor xml:id="__component_utils_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;original;
+<anchor xml:id="__component_utils_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__component_utils_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__component_utils_8cs_source_1l00030"/>00030 }
+</programlisting></section>

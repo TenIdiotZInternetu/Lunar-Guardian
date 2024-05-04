@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__path_space_8cs_source" xml:lang="en-US">
+<title>PathSpace.cs</title>
+<indexterm><primary>Tools/PathCreator/Core/Runtime/Objects/PathSpace.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__path_space_8cs_source_1l00001"/>00001 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_path_creation">PathCreation</link>&#32;{
+<anchor xml:id="__path_space_8cs_source_1l00002"/>00002 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;PathSpace&#32;{xyz,&#32;xy,&#32;xz};
+<anchor xml:id="__path_space_8cs_source_1l00003"/>00003 }
+</programlisting></section>

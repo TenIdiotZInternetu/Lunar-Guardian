@@ -1,0 +1,194 @@
+\doxysection{Player\+Status Class Reference}
+\hypertarget{class_player_scripts_1_1_player_status}{}\label{class_player_scripts_1_1_player_status}\index{PlayerStatus@{PlayerStatus}}
+
+
+Records state of player\textquotesingle{}s resources and provides methods to change them.  
+
+
+
+
+Inherits Mono\+Behaviour.
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_player_status_a8571efa4409be32e28abf3ea74a0dbb1}\label{class_player_scripts_1_1_player_status_a8571efa4409be32e28abf3ea74a0dbb1} 
+enum \mbox{\hyperlink{class_player_scripts_1_1_player_status_a8571efa4409be32e28abf3ea74a0dbb1}{Resource\+Type}} 
+\begin{DoxyCompactList}\small\item\em Type of resource maintained by the Player\+Status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02}\label{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02} 
+delegate void {\bfseries Changed\+Value\+Listener} (float value)
+\begin{DoxyCompactList}\small\item\em Method signature for events that are invoked upon a resource change. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_player_status_a372de693ad40b3f42839c8ec6ac845f4}\label{class_player_scripts_1_1_player_status_a372de693ad40b3f42839c8ec6ac845f4} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em Sets all resources to their starting values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_scripts_1_1_player_status_af41d014aba881a7ec30a9cddaf9e0b3a}{Change\+Health}} (int amount)
+\begin{DoxyCompactList}\small\item\em Increases health. If health is already at max, increases score instead. When health reaches 0, invokes Game\+Over\+Event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_scripts_1_1_player_status_a93b8c4270f1e17b9624d0dd78b593e98}{Change\+Bombs}} (int amount)
+\begin{DoxyCompactList}\small\item\em Increases bombs held by a given amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_scripts_1_1_player_status_abd2e8bf17dab02c7807a61f445c930bf}{Change\+Power}} (int amount)
+\begin{DoxyCompactList}\small\item\em Increases power and changes power level if POWER\+\_\+\+LEVELS requirement is met. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab2e34c964f801ca064cdcd5aaf430c45}{Change\+Score}} (int amount)
+\begin{DoxyCompactList}\small\item\em Increases score, rewards extra health if requirement are met. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_scripts_1_1_player_status_a48bde3035abda30d99b282527cdd1bf0}{Change\+Score\+Multiplier}} (int amount)
+\begin{DoxyCompactList}\small\item\em Changes score multiplier, awards bonus score if max multiplier is reached. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_player_status_a012607dd27a930aa340ffa15fd32cb28}\label{class_player_scripts_1_1_player_status_a012607dd27a930aa340ffa15fd32cb28} 
+void {\bfseries Reset\+Score\+Multiplier} ()
+\begin{DoxyCompactList}\small\item\em Sets Score Multiplier back to 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab468d4779fc1a9b54ce99dc71555c3fa}{Subscribe}} (\mbox{\hyperlink{class_player_scripts_1_1_player_status_a8571efa4409be32e28abf3ea74a0dbb1}{Resource\+Type}} resource\+Type, \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02}{Changed\+Value\+Listener}} listener)
+\begin{DoxyCompactList}\small\item\em Subscribes a listener to an appropriate resource change event. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_player_scripts_1_1_player_status_a3fd9672e4dfe8040bd6f7011ef2e0f86}{Change\+Resource}} (\mbox{\hyperlink{class_player_scripts_1_1_player_status_a8571efa4409be32e28abf3ea74a0dbb1}{Resource\+Type}} resource\+Type, int amount)
+\begin{DoxyCompactList}\small\item\em Change a resource by a given amount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_player_status_aeac2eae8e304f20bc75eb574b2df8964}\label{class_player_scripts_1_1_player_status_aeac2eae8e304f20bc75eb574b2df8964} 
+static \mbox{\hyperlink{class_player_scripts_1_1_player_status}{Player\+Status}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Singleton instance of the Player\+Status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_player_status_a18f932a93b76c23809add1bf070899bf}\label{class_player_scripts_1_1_player_status_a18f932a93b76c23809add1bf070899bf} 
+static Action {\bfseries Game\+Over\+Event}
+\begin{DoxyCompactList}\small\item\em Invoked when the player\textquotesingle{}s health reaches less than 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_player_status_adf08962e6157777feae044d2ad6c1ca5}\label{class_player_scripts_1_1_player_status_adf08962e6157777feae044d2ad6c1ca5} 
+int {\bfseries max\+Multiplier\+Score\+Bonus} = 100
+\begin{DoxyCompactList}\small\item\em Score gained for catching Multiplier pickups while at max multiplier. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_player_status_a7336b6cd8782708a2ffaa32505111436}\label{class_player_scripts_1_1_player_status_a7336b6cd8782708a2ffaa32505111436} 
+int {\bfseries health\+Up\+Requirement\+Increment} = 1000000
+\begin{DoxyCompactList}\small\item\em Amount of score required to gain extra health. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_player_status_a003c51d423b7d53fcc827089df709e5e}\label{class_player_scripts_1_1_player_status_a003c51d423b7d53fcc827089df709e5e} 
+int {\bfseries health\+Overflow\+Bonus} = 20000
+\begin{DoxyCompactList}\small\item\em Score gained for gaining health while already at max health. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_player_status_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_player_status_8cs_source}{Player\+Status.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_scripts_1_1_player_status_ab468d4779fc1a9b54ce99dc71555c3fa}\label{class_player_scripts_1_1_player_status_ab468d4779fc1a9b54ce99dc71555c3fa} 
+\index{PlayerStatus@{PlayerStatus}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!PlayerStatus@{PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{Subscribe()}{Subscribe()}}
+{\footnotesize\ttfamily static void Subscribe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_scripts_1_1_player_status_a8571efa4409be32e28abf3ea74a0dbb1}{Resource\+Type}}}]{resource\+Type,  }\item[{\mbox{\hyperlink{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02}{Changed\+Value\+Listener}}}]{listener }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource\+Type} & Type of resource the listener subscribes to \\
+\hline
+{\em listener} & Method that responses to triggering of the appropriate event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_status_8cs_source_l00125}{125}} of file \mbox{\hyperlink{_player_status_8cs_source}{Player\+Status.\+cs}}.
+
+\Hypertarget{class_player_scripts_1_1_player_status_a3fd9672e4dfe8040bd6f7011ef2e0f86}\label{class_player_scripts_1_1_player_status_a3fd9672e4dfe8040bd6f7011ef2e0f86} 
+\index{PlayerStatus@{PlayerStatus}!ChangeResource@{ChangeResource}}
+\index{ChangeResource@{ChangeResource}!PlayerStatus@{PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{ChangeResource()}{ChangeResource()}}
+{\footnotesize\ttfamily static void Change\+Resource (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_scripts_1_1_player_status_a8571efa4409be32e28abf3ea74a0dbb1}{Resource\+Type}}}]{resource\+Type,  }\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource\+Type} & Resource to change \\
+\hline
+{\em amount} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_status_8cs_source_l00138}{138}} of file \mbox{\hyperlink{_player_status_8cs_source}{Player\+Status.\+cs}}.
+
+\Hypertarget{class_player_scripts_1_1_player_status_af41d014aba881a7ec30a9cddaf9e0b3a}\label{class_player_scripts_1_1_player_status_af41d014aba881a7ec30a9cddaf9e0b3a} 
+\index{PlayerStatus@{PlayerStatus}!ChangeHealth@{ChangeHealth}}
+\index{ChangeHealth@{ChangeHealth}!PlayerStatus@{PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{ChangeHealth()}{ChangeHealth()}}
+{\footnotesize\ttfamily void Change\+Health (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Amount of health to be changed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_status_8cs_source_l00179}{179}} of file \mbox{\hyperlink{_player_status_8cs_source}{Player\+Status.\+cs}}.
+
+\Hypertarget{class_player_scripts_1_1_player_status_a93b8c4270f1e17b9624d0dd78b593e98}\label{class_player_scripts_1_1_player_status_a93b8c4270f1e17b9624d0dd78b593e98} 
+\index{PlayerStatus@{PlayerStatus}!ChangeBombs@{ChangeBombs}}
+\index{ChangeBombs@{ChangeBombs}!PlayerStatus@{PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{ChangeBombs()}{ChangeBombs()}}
+{\footnotesize\ttfamily void Change\+Bombs (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_status_8cs_source_l00198}{198}} of file \mbox{\hyperlink{_player_status_8cs_source}{Player\+Status.\+cs}}.
+
+\Hypertarget{class_player_scripts_1_1_player_status_abd2e8bf17dab02c7807a61f445c930bf}\label{class_player_scripts_1_1_player_status_abd2e8bf17dab02c7807a61f445c930bf} 
+\index{PlayerStatus@{PlayerStatus}!ChangePower@{ChangePower}}
+\index{ChangePower@{ChangePower}!PlayerStatus@{PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{ChangePower()}{ChangePower()}}
+{\footnotesize\ttfamily void Change\+Power (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Amount of health to be changed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_status_8cs_source_l00209}{209}} of file \mbox{\hyperlink{_player_status_8cs_source}{Player\+Status.\+cs}}.
+
+\Hypertarget{class_player_scripts_1_1_player_status_ab2e34c964f801ca064cdcd5aaf430c45}\label{class_player_scripts_1_1_player_status_ab2e34c964f801ca064cdcd5aaf430c45} 
+\index{PlayerStatus@{PlayerStatus}!ChangeScore@{ChangeScore}}
+\index{ChangeScore@{ChangeScore}!PlayerStatus@{PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{ChangeScore()}{ChangeScore()}}
+{\footnotesize\ttfamily void Change\+Score (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_status_8cs_source_l00232}{232}} of file \mbox{\hyperlink{_player_status_8cs_source}{Player\+Status.\+cs}}.
+
+\Hypertarget{class_player_scripts_1_1_player_status_a48bde3035abda30d99b282527cdd1bf0}\label{class_player_scripts_1_1_player_status_a48bde3035abda30d99b282527cdd1bf0} 
+\index{PlayerStatus@{PlayerStatus}!ChangeScoreMultiplier@{ChangeScoreMultiplier}}
+\index{ChangeScoreMultiplier@{ChangeScoreMultiplier}!PlayerStatus@{PlayerStatus}}
+\doxysubsubsection{\texorpdfstring{ChangeScoreMultiplier()}{ChangeScoreMultiplier()}}
+{\footnotesize\ttfamily void Change\+Score\+Multiplier (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_player_status_8cs_source_l00249}{249}} of file \mbox{\hyperlink{_player_status_8cs_source}{Player\+Status.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Player\+Scripts/Player\+Status.\+cs\end{DoxyCompactItemize}

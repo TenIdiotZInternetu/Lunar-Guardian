@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_weapons_1_1_lazer" xml:lang="en-US">
+<title>Lazer Class Reference</title>
+<indexterm><primary>Lazer</primary></indexterm>
+<para>
+
+<para>A lazer beam damaging the player or entities by shooting raycasts, visualized by a LineRenderer. The lazer has 3 phases: Cooldown, Telegraph and Release. The beam deals damage only during the Release phase. </para>
+ 
+</para>
+<para>Inheritance diagram for Lazer:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_weapons_1_1_lazer.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_weapons_1_1_lazer_1a26a2e3c2d07dea6a2fd1d38eac284ee6"/>void <emphasis role="strong">OnShoot</emphasis> ()</para>
+
+<para>Called when the weapon is activated. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_weapons_1_1_lazer_1aca09286cd8b3d4183f0d74bad38fff6e"/>float <emphasis role="strong">cooldown</emphasis></para>
+
+<para>Duration od the Cooldown phase in seconds. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_weapons_1_1_lazer_1a37c4954b4cdd996e6103aecf92c46b01"/>float <emphasis role="strong">telegraphDuration</emphasis></para>
+
+<para>Duration of the Telegraph phase in seconds. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_weapons_1_1_lazer_1adba37386a0608ae910fb8a39d466242e"/>float <emphasis role="strong">releaseDuration</emphasis></para>
+
+<para>Duration of the Release phase in seconds. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_weapons_1_1_lazer_1ae3d3f20000c1c2a415675e0509944701"/>Material <emphasis role="strong">telegraphMaterial</emphasis></para>
+
+<para>Material of the LineRenderer during the Telegraph phase. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_weapons_1_1_lazer_1a337f1138e3750743beef8fcadbc3204f"/>Material <emphasis role="strong">releaseMaterial</emphasis></para>
+
+<para>Mateiral of the LineRenderer during the Release phase. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_weapons_1_1_lazer_1afa70b6a0bd5a37ceefcbd8995e1115ee"/>float <emphasis role="strong">telegraphWidth</emphasis></para>
+
+<para>Width of the LineRenderer during the Telegraph phase. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_weapons_1_1_lazer_1a7cc7db7d095fdd382aa63650b7f3885c"/>float <emphasis role="strong">releaseWidth</emphasis></para>
+
+<para>Width of the LineRenderer during the Release phase. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__lazer_8cs_source_1l00012">12</link> of file <link linkend="__lazer_8cs_source">Lazer.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/Spawnables/Weapons/Shootables/Lazer.cs</section>
+</section>

@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_projectiles_1_1_weapon" xml:lang="en-US">
+<title>Spawnables.Projectiles.Weapon Class Reference</title>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary></indexterm>
+Inheritance diagram for Spawnables.Projectiles.Weapon:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_projectiles_1_1_weapon__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Spawnables.Projectiles.Weapon:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_projectiles_1_1_weapon__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon_1acf54945fc4090d93243aa11fc9d4b580">cooldown</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon_1a8932601de8c9532f23a655d8ef5d703d">chargeTime</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon_1aa408fa0ee15bcd0ca127959f9a076ca4">bulletsInCharge</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon_1a2d2742c41b48396b2fb921cc19845651">isPlayers</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon_1a3626f55fe1a3285ca6e225253a1affcd">DetectShootables</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon_1a381b56e44b1e2d16546efa9470410941">TryShooting</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon_1adbc309f01c4819954baf0944844dddae">Recharge</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon_1aa874678199e51f9c31adb40eb4d5ce65">_timeOfLastShot</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon_1a944b4dd9708c072eb9527351c9501e85">_bulletsShot</link> = 0</para>
+</listitem>
+            <listitem><para>List&lt; <link linkend="_interface_spawnables_1_1_projectiles_1_1_i_shootable">IShootable</link> &gt; <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon_1a0cf56eb6f75687c192f8a5a3578d4836">GunHeads</link> = new()</para>
+</listitem>
+            <listitem><para>Action <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon_1a208a81719298181321bbef16ec73448f">OnShootEvent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon_1ab842db32ed2b9b4e4cd73784ac15249b">HasAggro</link> = false<computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__weapon_8cs_source_1l00008">8</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_weapon_1a3626f55fe1a3285ca6e225253a1affcd"/><section>
+    <title>DetectShootables()</title>
+<indexterm><primary>DetectShootables</primary><secondary>Spawnables.Projectiles.Weapon</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary><secondary>DetectShootables</secondary></indexterm>
+<para><computeroutput>virtual void Spawnables.Projectiles.Weapon.DetectShootables ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__weapon_8cs_source_1l00038">38</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_weapon_1adbc309f01c4819954baf0944844dddae"/><section>
+    <title>Recharge()</title>
+<indexterm><primary>Recharge</primary><secondary>Spawnables.Projectiles.Weapon</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary><secondary>Recharge</secondary></indexterm>
+<para><computeroutput>void Spawnables.Projectiles.Weapon.Recharge ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__weapon_8cs_source_1l00064">64</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_weapon_1a381b56e44b1e2d16546efa9470410941"/><section>
+    <title>TryShooting()</title>
+<indexterm><primary>TryShooting</primary><secondary>Spawnables.Projectiles.Weapon</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary><secondary>TryShooting</secondary></indexterm>
+<para><computeroutput>virtual void Spawnables.Projectiles.Weapon.TryShooting ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__weapon_8cs_source_1l00049">49</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_weapon_1a944b4dd9708c072eb9527351c9501e85"/><section>
+    <title>_bulletsShot</title>
+<indexterm><primary>_bulletsShot</primary><secondary>Spawnables.Projectiles.Weapon</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary><secondary>_bulletsShot</secondary></indexterm>
+<para><computeroutput>int Spawnables.Projectiles.Weapon._bulletsShot = 0<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__weapon_8cs_source_1l00020">20</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_weapon_1aa874678199e51f9c31adb40eb4d5ce65"/><section>
+    <title>_timeOfLastShot</title>
+<indexterm><primary>_timeOfLastShot</primary><secondary>Spawnables.Projectiles.Weapon</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary><secondary>_timeOfLastShot</secondary></indexterm>
+<para><computeroutput>float Spawnables.Projectiles.Weapon._timeOfLastShot<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__weapon_8cs_source_1l00019">19</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_weapon_1aa408fa0ee15bcd0ca127959f9a076ca4"/><section>
+    <title>bulletsInCharge</title>
+<indexterm><primary>bulletsInCharge</primary><secondary>Spawnables.Projectiles.Weapon</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary><secondary>bulletsInCharge</secondary></indexterm>
+<para><computeroutput>int Spawnables.Projectiles.Weapon.bulletsInCharge</computeroutput></para><para>
+Definition at line <link linkend="__weapon_8cs_source_1l00015">15</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_weapon_1a8932601de8c9532f23a655d8ef5d703d"/><section>
+    <title>chargeTime</title>
+<indexterm><primary>chargeTime</primary><secondary>Spawnables.Projectiles.Weapon</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary><secondary>chargeTime</secondary></indexterm>
+<para><computeroutput>float Spawnables.Projectiles.Weapon.chargeTime</computeroutput></para><para>
+Definition at line <link linkend="__weapon_8cs_source_1l00014">14</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_weapon_1acf54945fc4090d93243aa11fc9d4b580"/><section>
+    <title>cooldown</title>
+<indexterm><primary>cooldown</primary><secondary>Spawnables.Projectiles.Weapon</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary><secondary>cooldown</secondary></indexterm>
+<para><computeroutput>float Spawnables.Projectiles.Weapon.cooldown</computeroutput></para><para>
+Definition at line <link linkend="__weapon_8cs_source_1l00012">12</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_weapon_1a0cf56eb6f75687c192f8a5a3578d4836"/><section>
+    <title>GunHeads</title>
+<indexterm><primary>GunHeads</primary><secondary>Spawnables.Projectiles.Weapon</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary><secondary>GunHeads</secondary></indexterm>
+<para><computeroutput>List&lt;<link linkend="_interface_spawnables_1_1_projectiles_1_1_i_shootable">IShootable</link>&gt; Spawnables.Projectiles.Weapon.GunHeads = new()<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__weapon_8cs_source_1l00022">22</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_weapon_1a2d2742c41b48396b2fb921cc19845651"/><section>
+    <title>isPlayers</title>
+<indexterm><primary>isPlayers</primary><secondary>Spawnables.Projectiles.Weapon</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary><secondary>isPlayers</secondary></indexterm>
+<para><computeroutput>bool Spawnables.Projectiles.Weapon.isPlayers</computeroutput></para><para>
+Definition at line <link linkend="__weapon_8cs_source_1l00017">17</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_weapon_1a208a81719298181321bbef16ec73448f"/><section>
+    <title>OnShootEvent</title>
+<indexterm><primary>OnShootEvent</primary><secondary>Spawnables.Projectiles.Weapon</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary><secondary>OnShootEvent</secondary></indexterm>
+<para><computeroutput>Action Spawnables.Projectiles.Weapon.OnShootEvent<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__weapon_8cs_source_1l00023">23</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_projectiles_1_1_weapon_1ab842db32ed2b9b4e4cd73784ac15249b"/><section>
+    <title>HasAggro</title>
+<indexterm><primary>HasAggro</primary><secondary>Spawnables.Projectiles.Weapon</secondary></indexterm>
+<indexterm><primary>Spawnables.Projectiles.Weapon</primary><secondary>HasAggro</secondary></indexterm>
+<para><computeroutput>bool Spawnables.Projectiles.Weapon.HasAggro = false<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__weapon_8cs_source_1l00010">10</link> of file <link linkend="__weapon_8cs_source">Weapon.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Weapon.cs</section>
+</section>

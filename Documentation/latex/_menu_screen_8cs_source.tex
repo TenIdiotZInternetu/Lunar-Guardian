@@ -1,0 +1,48 @@
+\doxysection{Menu\+Screen.\+cs}
+\hypertarget{_menu_screen_8cs_source}{}\label{_menu_screen_8cs_source}\index{Scripts/UI/MenuScreen.cs@{Scripts/UI/MenuScreen.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine.Events;}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_u_i}{UI}}}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00010}\mbox{\hyperlink{class_u_i_1_1_menu_screen}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_i_1_1_menu_screen}{MenuScreen}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00017}\mbox{\hyperlink{class_u_i_1_1_menu_screen_a515a4e1ef9fb8f7b823ca9ef62b206f0}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_u_i_1_1_menu_screen_a515a4e1ef9fb8f7b823ca9ef62b206f0}{onCloseDelay}}\ =\ 0.3f;}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Events\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00024}\mbox{\hyperlink{class_u_i_1_1_menu_screen_abde5dcaf50e31d0608c1835c31d45ce5}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ UnityEvent\ \mbox{\hyperlink{class_u_i_1_1_menu_screen_abde5dcaf50e31d0608c1835c31d45ce5}{menuLeftEvent}};}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00029}\mbox{\hyperlink{class_u_i_1_1_menu_screen_a3f204271959196687c31ad5b0f8c19d2}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ UnityEvent\ \mbox{\hyperlink{class_u_i_1_1_menu_screen_a3f204271959196687c31ad5b0f8c19d2}{menuOpenedEvent}};}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00036}\mbox{\hyperlink{class_u_i_1_1_menu_screen_af174fffa9aacfd03387706ff553bd993}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_1_1_menu_screen_af174fffa9aacfd03387706ff553bd993}{OpenMenu}}()}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_1_1_menu_screen_a3f204271959196687c31ad5b0f8c19d2}{menuOpenedEvent}}?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00045}\mbox{\hyperlink{class_u_i_1_1_menu_screen_aff7779f56c25e6d968cec59627708181}{00045}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_i_1_1_menu_screen_aff7779f56c25e6d968cec59627708181}{CloseMenu}}()}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ StartCoroutine(CloseCoroutine());}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Split\ from\ CloseMenu()\ to\ allow\ for\ a\ delay}}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ IEnumerator\ CloseCoroutine()}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_u_i_1_1_menu_screen_abde5dcaf50e31d0608c1835c31d45ce5}{menuLeftEvent}}?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ WaitForSeconds(\mbox{\hyperlink{class_u_i_1_1_menu_screen_a515a4e1ef9fb8f7b823ca9ef62b206f0}{onCloseDelay}});}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_menu_screen_8cs_source_l00060}00060\ \}}
+
+\end{DoxyCode}

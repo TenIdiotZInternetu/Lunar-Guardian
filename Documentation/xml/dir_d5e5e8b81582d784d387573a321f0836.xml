@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_d5e5e8b81582d784d387573a321f0836" kind="dir">
+    <compoundname>Scripts/Serialization</compoundname>
+    <innerfile refid="_save_system_8cs">SaveSystem.cs</innerfile>
+    <innerfile refid="_score_data_8cs">ScoreData.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Serialization/"/>
+  </compounddef>
+</doxygen>

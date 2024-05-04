@@ -1,0 +1,74 @@
+\doxysection{Controls Class Reference}
+\hypertarget{class_player_scripts_1_1_controls}{}\label{class_player_scripts_1_1_controls}\index{Controls@{Controls}}
+
+
+Listens to the Unity\textquotesingle{}s Input Manager and triggers events based on the input.  
+
+
+
+
+Inherits Mono\+Behaviour.
+
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_controls_a698aa7a1bcf8c024ca5b44b35a2a49db}\label{class_player_scripts_1_1_controls_a698aa7a1bcf8c024ca5b44b35a2a49db} 
+static float {\bfseries Move\+Horizontal}
+\begin{DoxyCompactList}\small\item\em Value of the Input Manager\textquotesingle{}s virtual horizontal axis (A/D) \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_aaef34645c77748c8b64dd8ac3ede4b16}\label{class_player_scripts_1_1_controls_aaef34645c77748c8b64dd8ac3ede4b16} 
+static float {\bfseries Move\+Vertical}
+\begin{DoxyCompactList}\small\item\em Value of the Input Manager\textquotesingle{}s virtual vertical axis (W/S) \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_ac711d62a538e7d73ed78e76dc4146c2b}\label{class_player_scripts_1_1_controls_ac711d62a538e7d73ed78e76dc4146c2b} 
+static bool {\bfseries Is\+Focused}
+\begin{DoxyCompactList}\small\item\em True if the focus button is held down. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_scripts_1_1_controls_ac34dfff63d43fcc26bcb5a575de25dd4}\label{class_player_scripts_1_1_controls_ac34dfff63d43fcc26bcb5a575de25dd4} 
+static Action {\bfseries Action1}
+\begin{DoxyCompactList}\small\item\em Invoked when the primary action button is pressed (K/Z) \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_a6c415bf89d7a793fffe97f670ad448d9}\label{class_player_scripts_1_1_controls_a6c415bf89d7a793fffe97f670ad448d9} 
+static Action {\bfseries Action1\+Release}
+\begin{DoxyCompactList}\small\item\em Invoked when the primary action button is released (K/Z) \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_aeade3269d21ec1b08e689191790886d9}\label{class_player_scripts_1_1_controls_aeade3269d21ec1b08e689191790886d9} 
+static Action {\bfseries Action2}
+\begin{DoxyCompactList}\small\item\em Invoked when the secondary action button is pressed (L/X) \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_a9bcbd3ded58670f66a8410c8f63c1b31}\label{class_player_scripts_1_1_controls_a9bcbd3ded58670f66a8410c8f63c1b31} 
+static Action {\bfseries Action2\+Release}
+\begin{DoxyCompactList}\small\item\em Invoked when the secondary action button is pressed (L/X) \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_a45f7d5809a598560cf6e169188f018f1}\label{class_player_scripts_1_1_controls_a45f7d5809a598560cf6e169188f018f1} 
+static Action {\bfseries Submit}
+\begin{DoxyCompactList}\small\item\em Invoked when the submit button is pressed (Enter) \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_a4e385af209adbcafa65342406807f1cf}\label{class_player_scripts_1_1_controls_a4e385af209adbcafa65342406807f1cf} 
+static Action {\bfseries Submit\+Release}
+\begin{DoxyCompactList}\small\item\em Invoked when the submit button is released (Enter) \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_a27a4fdf4f091f1fe86a5fcf8de52b2e4}\label{class_player_scripts_1_1_controls_a27a4fdf4f091f1fe86a5fcf8de52b2e4} 
+static Action {\bfseries Cancel}
+\begin{DoxyCompactList}\small\item\em Invoked when the cancel button is pressed (Esc) \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_a9d0db37622e49d09bfd17e0c5b7fa577}\label{class_player_scripts_1_1_controls_a9d0db37622e49d09bfd17e0c5b7fa577} 
+static Action {\bfseries Cancel\+Release}
+\begin{DoxyCompactList}\small\item\em Invoked when the cancel button is released (Esc) \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_a8d0b222d6d06818a5151fd23df2da016}\label{class_player_scripts_1_1_controls_a8d0b222d6d06818a5151fd23df2da016} 
+static Event\+Handler$<$ float $>$ {\bfseries Moves\+Up}
+\begin{DoxyCompactList}\small\item\em Invoked when the vertical axis is moved upwards, with its value as a parameter. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_a8ba5a5665ee6f8854162f487826f4c51}\label{class_player_scripts_1_1_controls_a8ba5a5665ee6f8854162f487826f4c51} 
+static Event\+Handler$<$ float $>$ {\bfseries Moves\+Down}
+\begin{DoxyCompactList}\small\item\em Invoked when the vertical axis is moved downwards, with its value as a parameter. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_ae06b60159d0a60d5d71a73194814716b}\label{class_player_scripts_1_1_controls_ae06b60159d0a60d5d71a73194814716b} 
+static Event\+Handler$<$ float $>$ {\bfseries Moves\+Left}
+\begin{DoxyCompactList}\small\item\em Invoked when the horizontal axis is moved left, with its value as a parameter. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_scripts_1_1_controls_a9f726fb1cb518889a257f9689e1671c8}\label{class_player_scripts_1_1_controls_a9f726fb1cb518889a257f9689e1671c8} 
+static Event\+Handler$<$ float $>$ {\bfseries Moves\+Right}
+\begin{DoxyCompactList}\small\item\em Invoked when the horizontal axis is moved right, with its value as a parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_controls_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_controls_8cs_source}{Controls.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Player\+Scripts/Controls.\+cs\end{DoxyCompactItemize}

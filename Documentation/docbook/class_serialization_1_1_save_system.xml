@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_serialization_1_1_save_system" xml:lang="en-US">
+<title>SaveSystem Class Reference</title>
+<indexterm><primary>SaveSystem</primary></indexterm>
+<para>
+
+<para>System for saving and loading object data on local machine. </para>
+ 
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_serialization_1_1_save_system_1a89a4017eb9c766eafdd94545dc1851fe">SaveData&lt; T &gt;</link> (T data, string pathSuffix)</para>
+
+<para>Save data to a file. </para>
+</listitem>
+            <listitem><para>static T <link linkend="_class_serialization_1_1_save_system_1a0ba4368861434c24d254509ea4899da7">LoadData&lt; T &gt;</link> (string pathSuffix)</para>
+
+<para>Loads data from a save file. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__save_system_8cs_source_1l00010">10</link> of file <link linkend="__save_system_8cs_source">SaveSystem.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_serialization_1_1_save_system_1a89a4017eb9c766eafdd94545dc1851fe"/><section>
+    <title>SaveData&lt; T &gt;()</title>
+<indexterm><primary>SaveData&lt; T &gt;</primary><secondary>SaveSystem</secondary></indexterm>
+<indexterm><primary>SaveSystem</primary><secondary>SaveData&lt; T &gt;</secondary></indexterm>
+<para><computeroutput>static void SaveData&lt; T &gt; (T data, string pathSuffix)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>data</entry><entry>
+<para>Object of which data are save </para>
+</entry>
+                            </row>
+                            <row>
+<entry>pathSuffix</entry><entry>
+<para>Relative path to resulting save file </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>Type of the saved object </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__save_system_8cs_source_1l00020">20</link> of file <link linkend="__save_system_8cs_source">SaveSystem.cs</link>.</para>
+</section>
+<anchor xml:id="_class_serialization_1_1_save_system_1a0ba4368861434c24d254509ea4899da7"/><section>
+    <title>LoadData&lt; T &gt;()</title>
+<indexterm><primary>LoadData&lt; T &gt;</primary><secondary>SaveSystem</secondary></indexterm>
+<indexterm><primary>SaveSystem</primary><secondary>LoadData&lt; T &gt;</secondary></indexterm>
+<para><computeroutput>static T LoadData&lt; T &gt; (string pathSuffix)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>pathSuffix</entry><entry>
+<para>Relative path to save file </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Template Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>T</entry><entry>
+<para>Type of object to load </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Object of specified type with values retrieved from the save file </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>FileNotFoundException</entry><entry>
+<para>Specified file path doesn&apos;t exist </para>
+</entry>
+                            </row>
+                            <row>
+<entry>InvalidDataException</entry><entry>
+<para>File format on the specified type doesn&apos;t match the type T </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__save_system_8cs_source_1l00040">40</link> of file <link linkend="__save_system_8cs_source">SaveSystem.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/Serialization/SaveSystem.cs</section>
+</section>

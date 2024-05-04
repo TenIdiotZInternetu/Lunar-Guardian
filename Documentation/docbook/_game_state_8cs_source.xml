@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__game_state_8cs_source" xml:lang="en-US">
+<title>GameState.cs</title>
+<indexterm><primary>Scripts/GameManager/GameState.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__game_state_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__game_state_8cs_source_1l00002"/>00002 
+<anchor xml:id="__game_state_8cs_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_game_manager">GameManager</link>
+<anchor xml:id="__game_state_8cs_source_1l00004"/>00004 {
+<anchor xml:id="__game_state_8cs_source_1l00008"/><link linkend="_class_game_manager_1_1_game_state">00008</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">abstract</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_game_manager_1_1_game_state">GameState</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__game_state_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_state_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*------------------&#32;Public&#32;Methods&#32;---------------*/</emphasis>
+<anchor xml:id="__game_state_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_state_8cs_source_1l00015"/><link linkend="_class_game_manager_1_1_game_state_1ad02ad005cb741028d1049d7731cb4c27">00015</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">abstract</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_game_manager_1_1_game_state_1ad02ad005cb741028d1049d7731cb4c27">ChangeToThisState</link>();
+<anchor xml:id="__game_state_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_state_8cs_source_1l00020"/><link linkend="_class_game_manager_1_1_game_state_1a4e3e4431ac6f41ff62706d0e3d2f6878">00020</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">abstract</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_game_manager_1_1_game_state_1a4e3e4431ac6f41ff62706d0e3d2f6878">LeaveThisState</link>();
+<anchor xml:id="__game_state_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_state_8cs_source_1l00022"/>00022 }
+</programlisting></section>

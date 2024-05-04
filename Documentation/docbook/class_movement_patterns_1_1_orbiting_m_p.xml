@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_movement_patterns_1_1_orbiting_m_p" xml:lang="en-US">
+<title>OrbitingMP Class Reference</title>
+<indexterm><primary>OrbitingMP</primary></indexterm>
+<para>
+
+<para>Forms a circular orbit around targeted object. </para>
+ 
+</para>
+<para>Inheritance diagram for OrbitingMP:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_patterns_1_1_orbiting_m_p.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_movement_patterns_1_1_orbiting_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3"/>GameObject <emphasis role="strong">target</emphasis></para>
+
+<para>Targeted object to orbit around. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_movement_patterns_1_1_orbiting_m_p_1a5050a760c11da521cd4aee6336f6529f"/>float <emphasis role="strong">radius</emphasis></para>
+
+<para>Radius of the orbit. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_movement_patterns_1_1_orbiting_m_p_1a275dd6dafe5d4455e599ffd15feb06f8"/>float <emphasis role="strong">phase</emphasis></para>
+
+<para>Initial position of the entity on the orbit in degrees. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_movement_patterns_1_1_orbiting_m_p_1ad1de9af57e9b1558e00f6c1bfb55842e"/>float <emphasis role="strong">angularSpeed</emphasis></para>
+
+<para>Angular speed in degrees per second. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_movement_patterns_1_1_orbiting_m_p_1a97712bccaedef08f6d8c525bdda2f7ef"/>float <emphasis role="strong">acceleration</emphasis></para>
+
+<para>Rate of change of angular speed. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Member Functions inherited from <link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_movement_patterns_1_1_movement_pattern_1a04f0e6cf979d3b51e259545b3d33933d">Initialize</link> (<link linkend="_class_spawnables_1_1_entity">Entity</link> entity)</para>
+
+<para>Sets parameters of the movement pattern based on the entity&apos;s state. </para>
+</listitem>
+            <listitem><para>Vector3 <link linkend="_class_movement_patterns_1_1_movement_pattern_1a784a22d17e4193114212035e8eb6ac0f">GetNextPosition</link> (<link linkend="_class_spawnables_1_1_entity">Entity</link> entity)</para>
+
+<para>Calculates the position of the entity in the next frame. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__orbiting_m_p_8cs_source_1l00012">12</link> of file <link linkend="__orbiting_m_p_8cs_source">OrbitingMP.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/MovementPatterns/OrbitingMP.cs</section>
+</section>

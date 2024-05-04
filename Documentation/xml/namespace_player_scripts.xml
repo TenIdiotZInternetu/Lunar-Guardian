@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_player_scripts" kind="namespace" language="C#">
+    <compoundname>PlayerScripts</compoundname>
+    <innerclass refid="class_player_scripts_1_1_bomb_controller" prot="public">PlayerScripts::BombController</innerclass>
+    <innerclass refid="class_player_scripts_1_1_controls" prot="public">PlayerScripts::Controls</innerclass>
+    <innerclass refid="class_player_scripts_1_1_player" prot="public">PlayerScripts::Player</innerclass>
+    <innerclass refid="class_player_scripts_1_1_player_hitbox" prot="public">PlayerScripts::PlayerHitbox</innerclass>
+    <innerclass refid="class_player_scripts_1_1_player_status" prot="public">PlayerScripts::PlayerStatus</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/PlayerScripts/BombController.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

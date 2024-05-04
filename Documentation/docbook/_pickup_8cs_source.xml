@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__pickup_8cs_source" xml:lang="en-US">
+<title>Pickup.cs</title>
+<indexterm><primary>Scripts/Spawnables/Pickups/Pickup.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__pickup_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System;
+<anchor xml:id="__pickup_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__pickup_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_player_scripts">PlayerScripts</link>;
+<anchor xml:id="__pickup_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__pickup_8cs_source_1l00005"/>00005 
+<anchor xml:id="__pickup_8cs_source_1l00006"/>00006 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_spawnables_1_1_pickups">Spawnables.Pickups</link>
+<anchor xml:id="__pickup_8cs_source_1l00007"/>00007 {
+<anchor xml:id="__pickup_8cs_source_1l00011"/><link linkend="_class_spawnables_1_1_pickups_1_1_pickup">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_spawnables_1_1_pickups_1_1_pickup">Pickup</link>&#32;:&#32;<link linkend="_class_spawnables_1_1_entity">Entity</link>
+<anchor xml:id="__pickup_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__pickup_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;----------------------&#32;Types&#32;----------------------&#32;*/</emphasis>
+<anchor xml:id="__pickup_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pickup_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Serializable]
+<anchor xml:id="__pickup_8cs_source_1l00019"/><link linkend="_class_spawnables_1_1_pickups_1_1_pickup_1_1_reward">00019</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_spawnables_1_1_pickups_1_1_pickup_1_1_reward">Reward</link>
+<anchor xml:id="__pickup_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__pickup_8cs_source_1l00024"/><link linkend="_class_spawnables_1_1_pickups_1_1_pickup_1_1_reward_1ae56758fa49797d336c15327dd426e39c">00024</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">PlayerStatus.ResourceType</link>&#32;<link linkend="_class_spawnables_1_1_pickups_1_1_pickup_1_1_reward_1ae56758fa49797d336c15327dd426e39c">type</link>;
+<anchor xml:id="__pickup_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pickup_8cs_source_1l00029"/><link linkend="_class_spawnables_1_1_pickups_1_1_pickup_1_1_reward_1a14236de313193a14b4dbdf442bcf2bb9">00029</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_spawnables_1_1_pickups_1_1_pickup_1_1_reward_1a14236de313193a14b4dbdf442bcf2bb9">amount</link>;
+<anchor xml:id="__pickup_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__pickup_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pickup_8cs_source_1l00035"/><link linkend="_class_spawnables_1_1_pickups_1_1_pickup_1a4d51bab2cdefd54711c114daae220327">00035</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">public</emphasis>&#32;List&lt;Reward&gt;&#32;<link linkend="_class_spawnables_1_1_pickups_1_1_pickup_1a4d51bab2cdefd54711c114daae220327">rewards</link>;
+<anchor xml:id="__pickup_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pickup_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Unity&#32;Callbacks&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__pickup_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pickup_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Rewards&#32;the&#32;player&#32;and&#32;despawns&#32;when&#32;touched</emphasis>
+<anchor xml:id="__pickup_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnTriggerEnter2D(Collider2D&#32;other)
+<anchor xml:id="__pickup_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__pickup_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!other.gameObject.CompareTag(<emphasis role="stringliteral">&quot;Player&quot;</emphasis>))&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__pickup_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GiveRewards();
+<anchor xml:id="__pickup_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_spawnables_1_1_object_pool_manager">ObjectPoolManager</link>.<link linkend="_class_spawnables_1_1_object_pool_manager_1a6bbeac8b46389ccaa0b7d2d24f805c6f">Despawn</link>(gameObject);
+<anchor xml:id="__pickup_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__pickup_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pickup_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;-------------------&#32;Private&#32;Methods&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__pickup_8cs_source_1l00048"/>00048 
+<anchor xml:id="__pickup_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Gives&#32;the&#32;player&#32;the&#32;rewards</emphasis>
+<anchor xml:id="__pickup_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;GiveRewards()
+<anchor xml:id="__pickup_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__pickup_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;(Reward&#32;reward&#32;<emphasis role="keywordflow">in</emphasis>&#32;<link linkend="_class_spawnables_1_1_pickups_1_1_pickup_1a4d51bab2cdefd54711c114daae220327">rewards</link>)
+<anchor xml:id="__pickup_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__pickup_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_status">PlayerStatus</link>.<link linkend="_class_player_scripts_1_1_player_status_1a3fd9672e4dfe8040bd6f7011ef2e0f86">ChangeResource</link>(reward.type,&#32;reward.amount);
+<anchor xml:id="__pickup_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__pickup_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__pickup_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__pickup_8cs_source_1l00058"/>00058 }
+</programlisting></section>

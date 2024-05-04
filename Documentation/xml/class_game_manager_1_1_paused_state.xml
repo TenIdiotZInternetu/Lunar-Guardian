@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_game_manager_1_1_paused_state" kind="class" language="C#" prot="public">
+    <compoundname>GameManager::PausedState</compoundname>
+    <basecompoundref refid="class_game_manager_1_1_game_state" prot="public" virt="non-virtual">GameState</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_game_manager_1_1_paused_state_1a13b2ec7901bb67df6b6d8e1e931e9b04" prot="public" static="no" mutable="no">
+        <type><ref refid="class_game_manager_1_1_playing_state" kindref="compound">PlayingState</ref></type>
+        <definition>PlayingState playingState</definition>
+        <argsstring></argsstring>
+        <name>playingState</name>
+        <qualifiedname>GameManager.PausedState.playingState</qualifiedname>
+        <briefdescription>
+<para>PlayingState to return to when unpausing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PausedState.cs" line="18" column="29" bodyfile="Scripts/GameManager/States/PausedState.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_manager_1_1_paused_state_1a8669cdf1b0df4e9df579b33bb6ad3a4d" prot="public" static="no" mutable="no">
+        <type>PauseMenu</type>
+        <definition>PauseMenu pauseMenu</definition>
+        <argsstring></argsstring>
+        <name>pauseMenu</name>
+        <qualifiedname>GameManager.PausedState.pauseMenu</qualifiedname>
+        <briefdescription>
+<para>Menu to open when pausing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PausedState.cs" line="23" column="26" bodyfile="Scripts/GameManager/States/PausedState.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_manager_1_1_paused_state_1ad487b78af2c27a8e7d0dc0016f586461" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ChangeToThisState</definition>
+        <argsstring>()</argsstring>
+        <name>ChangeToThisState</name>
+        <qualifiedname>GameManager.PausedState.ChangeToThisState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PausedState.cs" line="27" column="30" bodyfile="Scripts/GameManager/States/PausedState.cs" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_manager_1_1_paused_state_1a3bb8109ac0a5a4e32bfc9608b74355c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void LeaveThisState</definition>
+        <argsstring>()</argsstring>
+        <name>LeaveThisState</name>
+        <qualifiedname>GameManager.PausedState.LeaveThisState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PausedState.cs" line="33" column="30" bodyfile="Scripts/GameManager/States/PausedState.cs" bodystart="33" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_game_manager_1_1_paused_state_1a616539ad7fc8ee95accbbbce64332f5d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Unpause</definition>
+        <argsstring>()</argsstring>
+        <name>Unpause</name>
+        <qualifiedname>GameManager.PausedState.Unpause</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PausedState.cs" line="42" column="22" bodyfile="Scripts/GameManager/States/PausedState.cs" bodystart="42" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_manager_1_1_paused_state_1aba75b9ccbfe0eaf2c607bc719977a290" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnableUnpausing</definition>
+        <argsstring>()</argsstring>
+        <name>EnableUnpausing</name>
+        <qualifiedname>GameManager.PausedState.EnableUnpausing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PausedState.cs" line="55" column="22" bodyfile="Scripts/GameManager/States/PausedState.cs" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_manager_1_1_paused_state_1ac54ce402cec4f1d67a1cef4db841d26d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>GameManager.PausedState.OnDestroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/States/PausedState.cs" line="62" column="22" bodyfile="Scripts/GameManager/States/PausedState.cs" bodystart="62" bodyend="66"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>State reached pressing the pause button. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>GameState</label>
+        <link refid="class_game_manager_1_1_game_state"/>
+      </node>
+      <node id="1">
+        <label>PausedState</label>
+        <link refid="class_game_manager_1_1_paused_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>PausedState</label>
+        <link refid="class_game_manager_1_1_paused_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>playingState</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PlayingState</label>
+        <link refid="class_game_manager_1_1_playing_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>pausedState</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GameState</label>
+        <link refid="class_game_manager_1_1_game_state"/>
+      </node>
+      <node id="1">
+        <label>PausedState</label>
+        <link refid="class_game_manager_1_1_paused_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>playingState</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/GameManager/States/PausedState.cs" line="11" column="11" bodyfile="Scripts/GameManager/States/PausedState.cs" bodystart="12" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_game_manager_1_1_paused_state_1ad487b78af2c27a8e7d0dc0016f586461" prot="public" virt="non-virtual"><scope>GameManager::PausedState</scope><name>ChangeToThisState</name></member>
+      <member refid="class_game_manager_1_1_paused_state_1aba75b9ccbfe0eaf2c607bc719977a290" prot="private" virt="non-virtual"><scope>GameManager::PausedState</scope><name>EnableUnpausing</name></member>
+      <member refid="class_game_manager_1_1_paused_state_1a3bb8109ac0a5a4e32bfc9608b74355c6" prot="public" virt="non-virtual"><scope>GameManager::PausedState</scope><name>LeaveThisState</name></member>
+      <member refid="class_game_manager_1_1_paused_state_1ac54ce402cec4f1d67a1cef4db841d26d" prot="private" virt="non-virtual"><scope>GameManager::PausedState</scope><name>OnDestroy</name></member>
+      <member refid="class_game_manager_1_1_paused_state_1a8669cdf1b0df4e9df579b33bb6ad3a4d" prot="public" virt="non-virtual"><scope>GameManager::PausedState</scope><name>pauseMenu</name></member>
+      <member refid="class_game_manager_1_1_paused_state_1a13b2ec7901bb67df6b6d8e1e931e9b04" prot="public" virt="non-virtual"><scope>GameManager::PausedState</scope><name>playingState</name></member>
+      <member refid="class_game_manager_1_1_paused_state_1a616539ad7fc8ee95accbbbce64332f5d" prot="private" virt="non-virtual"><scope>GameManager::PausedState</scope><name>Unpause</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

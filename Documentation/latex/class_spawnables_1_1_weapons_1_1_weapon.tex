@@ -1,0 +1,75 @@
+\doxysection{Weapon Class Reference}
+\hypertarget{class_spawnables_1_1_weapons_1_1_weapon}{}\label{class_spawnables_1_1_weapons_1_1_weapon}\index{Weapon@{Weapon}}
+
+
+An object responsible for timing and spawning projectiles or other IShootables.  
+
+
+
+
+Inherits Mono\+Behaviour.
+
+
+
+Inherited by Gatling\+Gun, and Scatter\+Gun.
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_aca09286cd8b3d4183f0d74bad38fff6e}\label{class_spawnables_1_1_weapons_1_1_weapon_aca09286cd8b3d4183f0d74bad38fff6e} 
+float {\bfseries cooldown}
+\begin{DoxyCompactList}\small\item\em Time between shots in seconds. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_a0ff8684eee1b7cab71eb4174308da351}\label{class_spawnables_1_1_weapons_1_1_weapon_a0ff8684eee1b7cab71eb4174308da351} 
+float {\bfseries charge\+Time}
+\begin{DoxyCompactList}\small\item\em Time between releasing larger set of shots. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_aa62426176f9a020ea8a1ffadae9bd867}\label{class_spawnables_1_1_weapons_1_1_weapon_aa62426176f9a020ea8a1ffadae9bd867} 
+int {\bfseries bullets\+In\+Charge}
+\begin{DoxyCompactList}\small\item\em Amount of shots released in quick succession. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_a4c24b7560ca066f59fde4e71006d99be}\label{class_spawnables_1_1_weapons_1_1_weapon_a4c24b7560ca066f59fde4e71006d99be} 
+bool {\bfseries is\+Players}
+\begin{DoxyCompactList}\small\item\em Whether the weapon is attached to a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_af30926fa5f4a553c1c8a0458592e36d6}\label{class_spawnables_1_1_weapons_1_1_weapon_af30926fa5f4a553c1c8a0458592e36d6} 
+virtual void {\bfseries Detect\+Shootables} ()
+\begin{DoxyCompactList}\small\item\em Finds all IShootable sources attached to this weapon by searching through its children. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_aa46775bbe2f0494c869a67a87706150a}\label{class_spawnables_1_1_weapons_1_1_weapon_aa46775bbe2f0494c869a67a87706150a} 
+virtual void {\bfseries Try\+Shooting} ()
+\begin{DoxyCompactList}\small\item\em Checks if the weapon can shoot and shoots if it can. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_ad3f78b20245f3a3752a62c5d86744a12}\label{class_spawnables_1_1_weapons_1_1_weapon_ad3f78b20245f3a3752a62c5d86744a12} 
+void {\bfseries Recharge} ()
+\begin{DoxyCompactList}\small\item\em Wait for the charge time to pass before shooting again. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_a6366b231cce6a1743eb276e3fea8433d}\label{class_spawnables_1_1_weapons_1_1_weapon_a6366b231cce6a1743eb276e3fea8433d} 
+float {\bfseries Time\+Of\+Last\+Shot}
+\begin{DoxyCompactList}\small\item\em Time of the last shot in seconds. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_a59ec704c0741585dd94d6e28dfec7377}\label{class_spawnables_1_1_weapons_1_1_weapon_a59ec704c0741585dd94d6e28dfec7377} 
+int {\bfseries Bullets\+Shot} = 0
+\begin{DoxyCompactList}\small\item\em Amount of bullets shot in the current charge. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_aa7a7920a2aa85808fc9e53b334085354}\label{class_spawnables_1_1_weapons_1_1_weapon_aa7a7920a2aa85808fc9e53b334085354} 
+List$<$ \mbox{\hyperlink{interface_spawnables_1_1_weapons_1_1_i_shootable}{IShootable}} $>$ {\bfseries Gun\+Heads} = new()
+\begin{DoxyCompactList}\small\item\em List of IShootable sources attached to this weapon. \end{DoxyCompactList}\item 
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_acb96303b42d4312bd51ee259fab29d8b}\label{class_spawnables_1_1_weapons_1_1_weapon_acb96303b42d4312bd51ee259fab29d8b} 
+Action {\bfseries On\+Shoot\+Event}
+\begin{DoxyCompactList}\small\item\em Event invoked when the weapon shoots. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_af1da350ceed0ef0b3c36c7309f821b31}\label{class_spawnables_1_1_weapons_1_1_weapon_af1da350ceed0ef0b3c36c7309f821b31} 
+bool {\bfseries Has\+Aggro} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the weapon should shooting in the current frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_weapon_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_weapon_8cs_source}{Weapon.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Spawnables/\+Weapons/Weapon.\+cs\end{DoxyCompactItemize}

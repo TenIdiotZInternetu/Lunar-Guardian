@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_object_pool" xml:lang="en-US">
+<title>ObjectPool Class Reference</title>
+<indexterm><primary>ObjectPool</primary></indexterm>
+<para>
+
+<para>A set of pre-instantiated entities of a specified prefab that can be spawned and despawned by the ObjectPoolManager. </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_object_pool_1ac2c04dade23785d51b1a68580267240a"/>void <emphasis role="strong">Populate</emphasis> ()</para>
+
+<para>Instantiates objects and adds them to the pool, to fill it up to the initialPoolSize. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_spawnables_1_1_object_pool_1a87ee3f6fb08420df8c16ddf8be6d1947">Enqueue</link> (GameObject obj)</para>
+
+<para>Adds an object to the queue of available objects in the pool. </para>
+</listitem>
+            <listitem><para>GameObject <link linkend="_class_spawnables_1_1_object_pool_1aca4cb1e6e94d35131eed7de40bcb6e35">Extract</link> ()</para>
+
+<para>Retrieves an object from the queue. If the queue is empty, instantiates a new object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_spawnables_1_1_object_pool_1adc919ac837a858107c31d077706160d1">SetParentTransform</link> (Transform parentTransform)</para>
+
+<para>Sets a parent transform under which new objects in the pool are instantiated. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_object_pool_1ad6d3141bf24aaf85fa7573865a1934f6"/>GameObject <emphasis role="strong">prefab</emphasis></para>
+
+<para>Object prefab stored in the pool. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_object_pool_1aa809b812a7a8947b5266b444461aac39"/>int <emphasis role="strong">initialPoolSize</emphasis></para>
+
+<para>Amount of objects to instantiate when the pool is created. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_object_pool_1afcb017f7ec1034308d7328698bef57f0"/>int <emphasis role="strong">maxPoolSize</emphasis></para>
+
+<para>Maximum amount of objects that can be stored in the pool. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_object_pool_1a67259580f3bed3976cf28dea92a19d30"/>string <emphasis role="strong">Key</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>A key to the Dictionary of all the ObjectPools required to extract an entity from the pool <?linebreak?> </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00013">13</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_object_pool_1adc919ac837a858107c31d077706160d1"/><section>
+    <title>SetParentTransform()</title>
+<indexterm><primary>SetParentTransform</primary><secondary>ObjectPool</secondary></indexterm>
+<indexterm><primary>ObjectPool</primary><secondary>SetParentTransform</secondary></indexterm>
+<para><computeroutput>static void SetParentTransform (Transform parentTransform)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>parentTransform</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00056">56</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_object_pool_1a87ee3f6fb08420df8c16ddf8be6d1947"/><section>
+    <title>Enqueue()</title>
+<indexterm><primary>Enqueue</primary><secondary>ObjectPool</secondary></indexterm>
+<indexterm><primary>ObjectPool</primary><secondary>Enqueue</secondary></indexterm>
+<para><computeroutput>void Enqueue (GameObject obj)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>obj</entry><entry>
+<para>Added object </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00083">83</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_object_pool_1aca4cb1e6e94d35131eed7de40bcb6e35"/><section>
+    <title>Extract()</title>
+<indexterm><primary>Extract</primary><secondary>ObjectPool</secondary></indexterm>
+<indexterm><primary>ObjectPool</primary><secondary>Extract</secondary></indexterm>
+<para><computeroutput>GameObject Extract ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>Object retrieved from the pool </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Exceptions</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>OperationCanceledException</entry><entry>
+<para>The maximum amount of objects in the pool has been exceeded </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00094">94</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/Spawnables/ObjectPool.cs</section>
+</section>

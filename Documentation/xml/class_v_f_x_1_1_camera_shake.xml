@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_v_f_x_1_1_camera_shake" kind="class" language="C#" prot="public">
+    <compoundname>VFX::CameraShake</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_v_f_x_1_1_camera_shake_1a2008f4ab70b5e4104c2ca43932536ddf" prot="public" static="no" mutable="no">
+        <type>Camera</type>
+        <definition>Camera camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <qualifiedname>VFX.CameraShake.camera</qualifiedname>
+        <briefdescription>
+<para>Camera to shake. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/CameraShake.cs" line="16" column="23" bodyfile="Scripts/VFX/CameraShake.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_camera_shake_1a2dc31d4e55d1ff0903621376b55fd950" prot="public" static="no" mutable="no">
+        <type>AnimationCurve</type>
+        <definition>AnimationCurve shakeCurve</definition>
+        <argsstring></argsstring>
+        <name>shakeCurve</name>
+        <qualifiedname>VFX.CameraShake.shakeCurve</qualifiedname>
+        <briefdescription>
+<para>Intensity multiplier of the shake over time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/CameraShake.cs" line="21" column="31" bodyfile="Scripts/VFX/CameraShake.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_camera_shake_1a2dfe87f3417747242e8f043dd4f3fb59" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float intensity</definition>
+        <argsstring></argsstring>
+        <name>intensity</name>
+        <qualifiedname>VFX.CameraShake.intensity</qualifiedname>
+        <briefdescription>
+<para>Distance the camera will be displaced from its original position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/CameraShake.cs" line="26" column="22" bodyfile="Scripts/VFX/CameraShake.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_camera_shake_1a8d2dee94459105e68841839ad2b49520" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float refreshRate</definition>
+        <argsstring></argsstring>
+        <name>refreshRate</name>
+        <qualifiedname>VFX.CameraShake.refreshRate</qualifiedname>
+        <briefdescription>
+<para>Amount of displacements per second. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/CameraShake.cs" line="31" column="22" bodyfile="Scripts/VFX/CameraShake.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_v_f_x_1_1_camera_shake_1ad25bbb4029e4055f8a7784a7cdd28958" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 _originalPosition</definition>
+        <argsstring></argsstring>
+        <name>_originalPosition</name>
+        <qualifiedname>VFX.CameraShake._originalPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/CameraShake.cs" line="35" column="25" bodyfile="Scripts/VFX/CameraShake.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_camera_shake_1a7089227daa357e9036869561153a7ad3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float _displacementTime</definition>
+        <argsstring></argsstring>
+        <name>_displacementTime</name>
+        <qualifiedname>VFX.CameraShake._displacementTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/CameraShake.cs" line="36" column="23" bodyfile="Scripts/VFX/CameraShake.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_camera_shake_1a41d1b2b97dcfb91a4292411d4ca63848" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float _timeOfImpact</definition>
+        <argsstring></argsstring>
+        <name>_timeOfImpact</name>
+        <qualifiedname>VFX.CameraShake._timeOfImpact</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/CameraShake.cs" line="38" column="23" bodyfile="Scripts/VFX/CameraShake.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_camera_shake_1af19b79522e1b9a1489be0a8e05bca5b9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float _timeOfLastShake</definition>
+        <argsstring></argsstring>
+        <name>_timeOfLastShake</name>
+        <qualifiedname>VFX.CameraShake._timeOfLastShake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/CameraShake.cs" line="39" column="23" bodyfile="Scripts/VFX/CameraShake.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_v_f_x_1_1_camera_shake_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>VFX.CameraShake.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/CameraShake.cs" line="43" column="14" bodyfile="Scripts/VFX/CameraShake.cs" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_v_f_x_1_1_camera_shake_1a44bc530da4b5e7f287e624a708c224f1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator DisplaceCamera</definition>
+        <argsstring>()</argsstring>
+        <name>DisplaceCamera</name>
+        <qualifiedname>VFX.CameraShake.DisplaceCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/CameraShake.cs" line="64" column="29" bodyfile="Scripts/VFX/CameraShake.cs" bodystart="64" bodyend="87"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_v_f_x_1_1_camera_shake_1a5ef9d62171f0aadec56201559383772f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShakeCamera</definition>
+        <argsstring>()</argsstring>
+        <name>ShakeCamera</name>
+        <qualifiedname>VFX.CameraShake.ShakeCamera</qualifiedname>
+        <briefdescription>
+<para>Starts shaking the camera violently. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/CameraShake.cs" line="53" column="21" bodyfile="Scripts/VFX/CameraShake.cs" bodystart="53" bodyend="59"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Shakes the camera violently, by displacing it rapidly over time. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/VFX/CameraShake.cs" line="9" column="11" bodyfile="Scripts/VFX/CameraShake.cs" bodystart="10" bodyend="88"/>
+    <listofallmembers>
+      <member refid="class_v_f_x_1_1_camera_shake_1a7089227daa357e9036869561153a7ad3" prot="private" virt="non-virtual"><scope>VFX::CameraShake</scope><name>_displacementTime</name></member>
+      <member refid="class_v_f_x_1_1_camera_shake_1ad25bbb4029e4055f8a7784a7cdd28958" prot="private" virt="non-virtual"><scope>VFX::CameraShake</scope><name>_originalPosition</name></member>
+      <member refid="class_v_f_x_1_1_camera_shake_1a41d1b2b97dcfb91a4292411d4ca63848" prot="private" virt="non-virtual"><scope>VFX::CameraShake</scope><name>_timeOfImpact</name></member>
+      <member refid="class_v_f_x_1_1_camera_shake_1af19b79522e1b9a1489be0a8e05bca5b9" prot="private" virt="non-virtual"><scope>VFX::CameraShake</scope><name>_timeOfLastShake</name></member>
+      <member refid="class_v_f_x_1_1_camera_shake_1a2008f4ab70b5e4104c2ca43932536ddf" prot="public" virt="non-virtual"><scope>VFX::CameraShake</scope><name>camera</name></member>
+      <member refid="class_v_f_x_1_1_camera_shake_1a44bc530da4b5e7f287e624a708c224f1" prot="private" virt="non-virtual"><scope>VFX::CameraShake</scope><name>DisplaceCamera</name></member>
+      <member refid="class_v_f_x_1_1_camera_shake_1a2dfe87f3417747242e8f043dd4f3fb59" prot="public" virt="non-virtual"><scope>VFX::CameraShake</scope><name>intensity</name></member>
+      <member refid="class_v_f_x_1_1_camera_shake_1a8d2dee94459105e68841839ad2b49520" prot="public" virt="non-virtual"><scope>VFX::CameraShake</scope><name>refreshRate</name></member>
+      <member refid="class_v_f_x_1_1_camera_shake_1a5ef9d62171f0aadec56201559383772f" prot="public" virt="non-virtual"><scope>VFX::CameraShake</scope><name>ShakeCamera</name></member>
+      <member refid="class_v_f_x_1_1_camera_shake_1a2dc31d4e55d1ff0903621376b55fd950" prot="public" virt="non-virtual"><scope>VFX::CameraShake</scope><name>shakeCurve</name></member>
+      <member refid="class_v_f_x_1_1_camera_shake_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" virt="non-virtual"><scope>VFX::CameraShake</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,167 @@
+\doxysection{Math\+Utility.\+cs}
+\hypertarget{_math_utility_8cs_source}{}\label{_math_utility_8cs_source}\index{Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs@{Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_path_creation_1_1_utility}{PathCreation.Utility}}\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00005}00005\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }MathUtility\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ PosRotScale\ LockTransformToSpace\ (Transform\ t,\ PathSpace\ space)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ var\ original\ =\ \textcolor{keyword}{new}\ PosRotScale\ (t);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (space\ ==\ PathSpace.xy)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t.eulerAngles\ =\ \textcolor{keyword}{new}\ Vector3\ (0,\ 0,\ t.eulerAngles.z);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t.position\ =\ \textcolor{keyword}{new}\ Vector3\ (t.position.x,\ t.position.y,\ 0);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (space\ ==\ PathSpace.xz)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t.eulerAngles\ =\ \textcolor{keyword}{new}\ Vector3\ (0,\ t.eulerAngles.y,\ 0);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t.position\ =\ \textcolor{keyword}{new}\ Vector3\ (t.position.x,\ 0,\ t.position.z);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//float\ maxScale\ =\ Mathf.Max\ (t.localScale.x\ *\ t.parent.localScale.x,\ t.localScale.y\ *\ t.parent.localScale.y,\ t.localScale.z\ *\ t.parent.localScale.z);}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ maxScale\ =\ Mathf.Max\ (t.lossyScale.x,\ t.lossyScale.y,\ t.lossyScale.z);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ t.localScale\ =\ Vector3.one\ *\ maxScale;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ original;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ TransformPoint\ (Vector3\ p,\ Transform\ t,\ PathSpace\ space)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ var\ original\ =\ LockTransformToSpace\ (t,\ space);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ transformedPoint\ =\ t.TransformPoint\ (p);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ original.SetTransform\ (t);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ transformedPoint;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ InverseTransformPoint\ (Vector3\ p,\ Transform\ t,\ PathSpace\ space)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ var\ original\ =\ LockTransformToSpace\ (t,\ space);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ transformedPoint\ =\ t.InverseTransformPoint\ (p);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ original.SetTransform\ (t);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ transformedPoint;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ TransformVector\ (Vector3\ p,\ Transform\ t,\ PathSpace\ space)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ var\ original\ =\ LockTransformToSpace\ (t,\ space);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ transformedPoint\ =\ t.TransformVector\ (p);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ original.SetTransform\ (t);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ transformedPoint;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ InverseTransformVector\ (Vector3\ p,\ Transform\ t,\ PathSpace\ space)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ var\ original\ =\ LockTransformToSpace\ (t,\ space);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ transformedPoint\ =\ t.InverseTransformVector\ (p);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ original.SetTransform\ (t);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ transformedPoint;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ TransformDirection\ (Vector3\ p,\ Transform\ t,\ PathSpace\ space)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ var\ original\ =\ LockTransformToSpace\ (t,\ space);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ transformedPoint\ =\ t.TransformDirection\ (p);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ original.SetTransform\ (t);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ transformedPoint;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ InverseTransformDirection\ (Vector3\ p,\ Transform\ t,\ PathSpace\ space)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ var\ original\ =\ LockTransformToSpace\ (t,\ space);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ transformedPoint\ =\ t.InverseTransformDirection\ (p);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ original.SetTransform\ (t);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ transformedPoint;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ LineSegmentsIntersect\ (Vector2\ a1,\ Vector2\ a2,\ Vector2\ b1,\ Vector2\ b2)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ d\ =\ (b2.x\ -\/\ b1.x)\ *\ (a1.y\ -\/\ a2.y)\ -\/\ (a1.x\ -\/\ a2.x)\ *\ (b2.y\ -\/\ b1.y);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (d\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ ((b1.y\ -\/\ b2.y)\ *\ (a1.x\ -\/\ b1.x)\ +\ (b2.x\ -\/\ b1.x)\ *\ (a1.y\ -\/\ b1.y))\ /\ d;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ u\ =\ ((a1.y\ -\/\ a2.y)\ *\ (a1.x\ -\/\ b1.x)\ +\ (a2.x\ -\/\ a1.x)\ *\ (a1.y\ -\/\ b1.y))\ /\ d;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ t\ >=\ 0\ \&\&\ t\ <=\ 1\ \&\&\ u\ >=\ 0\ \&\&\ u\ <=\ 1;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ LinesIntersect\ (Vector2\ a1,\ Vector2\ a2,\ Vector2\ a3,\ Vector2\ a4)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (a1.x\ -\/\ a2.x)\ *\ (a3.y\ -\/\ a4.y)\ -\/\ (a1.y\ -\/\ a2.y)\ *\ (a3.x\ -\/\ a4.x)\ !=\ 0;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector2\ PointOfLineLineIntersection\ (Vector2\ a1,\ Vector2\ a2,\ Vector2\ a3,\ Vector2\ a4)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ d\ =\ (a1.x\ -\/\ a2.x)\ *\ (a3.y\ -\/\ a4.y)\ -\/\ (a1.y\ -\/\ a2.y)\ *\ (a3.x\ -\/\ a4.x);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (d\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogError\ (\textcolor{stringliteral}{"{}Lines\ are\ parallel,\ please\ check\ that\ this\ is\ not\ the\ case\ before\ calling\ line\ intersection\ method"{}});}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Vector2.zero;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ n\ =\ (a1.x\ -\/\ a3.x)\ *\ (a3.y\ -\/\ a4.y)\ -\/\ (a1.y\ -\/\ a3.y)\ *\ (a3.x\ -\/\ a4.x);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ n\ /\ d;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a1\ +\ (a2\ -\/\ a1)\ *\ t;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector2\ ClosestPointOnLineSegment\ (Vector2\ p,\ Vector2\ a,\ Vector2\ b)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ Vector2\ aB\ =\ b\ -\/\ a;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ Vector2\ aP\ =\ p\ -\/\ a;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sqrLenAB\ =\ aB.sqrMagnitude;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sqrLenAB\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ Mathf.Clamp01\ (Vector2.Dot\ (aP,\ aB)\ /\ sqrLenAB);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a\ +\ aB\ *\ t;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Vector3\ ClosestPointOnLineSegment\ (Vector3\ p,\ Vector3\ a,\ Vector3\ b)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ aB\ =\ b\ -\/\ a;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ aP\ =\ p\ -\/\ a;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sqrLenAB\ =\ aB.sqrMagnitude;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sqrLenAB\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ Mathf.Clamp01\ (Vector3.Dot\ (aP,\ aB)\ /\ sqrLenAB);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a\ +\ aB\ *\ t;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ SideOfLine\ (Vector2\ a,\ Vector2\ b,\ Vector2\ c)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{int})\ Mathf.Sign\ ((c.x\ -\/\ a.x)\ *\ (-\/b.y\ +\ a.y)\ +\ (c.y\ -\/\ a.y)\ *\ (b.x\ -\/\ a.x));}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ MinAngle\ (Vector3\ a,\ Vector3\ b,\ Vector3\ c)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Vector3.Angle\ ((a\ -\/\ b),\ (c\ -\/\ b));}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ PointInTriangle\ (Vector2\ a,\ Vector2\ b,\ Vector2\ c,\ Vector2\ p)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ area\ =\ 0.5f\ *\ (-\/b.y\ *\ c.x\ +\ a.y\ *\ (-\/b.x\ +\ c.x)\ +\ a.x\ *\ (b.y\ -\/\ c.y)\ +\ b.x\ *\ c.y);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ s\ =\ 1\ /\ (2\ *\ area)\ *\ (a.y\ *\ c.x\ -\/\ a.x\ *\ c.y\ +\ (c.y\ -\/\ a.y)\ *\ p.x\ +\ (a.x\ -\/\ c.x)\ *\ p.y);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ 1\ /\ (2\ *\ area)\ *\ (a.x\ *\ b.y\ -\/\ a.y\ *\ b.x\ +\ (a.y\ -\/\ b.y)\ *\ p.x\ +\ (b.x\ -\/\ a.x)\ *\ p.y);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ s\ >=\ 0\ \&\&\ t\ >=\ 0\ \&\&\ (s\ +\ t)\ <=\ 1;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ PointsAreClockwise\ (Vector2[]\ points)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ signedArea\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ points.Length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nextIndex\ =\ (i\ +\ 1)\ \%\ points.Length;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ signedArea\ +=\ (points[nextIndex].x\ -\/\ points[i].x)\ *\ (points[nextIndex].y\ +\ points[i].y);}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ signedArea\ >=\ 0;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }PosRotScale\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ Vector3\ position;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ Quaternion\ rotation;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ Vector3\ scale;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ PosRotScale\ (Transform\ t)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.position\ =\ t.position;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.rotation\ =\ t.rotation;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.scale\ =\ t.localScale;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetTransform\ (Transform\ t)\ \{}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t.position\ =\ position;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t.rotation\ =\ rotation;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t.localScale\ =\ scale;}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00161}00161\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_math_utility_8cs_source_l00162}00162\ \}}
+
+\end{DoxyCode}

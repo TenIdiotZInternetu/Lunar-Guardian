@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_default_namespace_1_1_credits_so_1_1_credit" xml:lang="en-US">
+<title>DefaultNamespace.CreditsSo.Credit Class Reference</title>
+<indexterm><primary>DefaultNamespace.CreditsSo.Credit</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_default_namespace_1_1_credits_so_1_1_credit_1adce9d110d6cd1ef904a962ff2ffbe319">name</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_default_namespace_1_1_credits_so_1_1_credit_1acf44e384622721d0ba37fc1aed963362">role</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__credits_so_8cs_source_1l00012">12</link> of file <link linkend="__credits_so_8cs_source">CreditsSo.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_default_namespace_1_1_credits_so_1_1_credit_1adce9d110d6cd1ef904a962ff2ffbe319"/><section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>DefaultNamespace.CreditsSo.Credit</secondary></indexterm>
+<indexterm><primary>DefaultNamespace.CreditsSo.Credit</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>string DefaultNamespace.CreditsSo.Credit.name</computeroutput></para><para>
+Definition at line <link linkend="__credits_so_8cs_source_1l00014">14</link> of file <link linkend="__credits_so_8cs_source">CreditsSo.cs</link>.</para>
+</section>
+<anchor xml:id="_class_default_namespace_1_1_credits_so_1_1_credit_1acf44e384622721d0ba37fc1aed963362"/><section>
+    <title>role</title>
+<indexterm><primary>role</primary><secondary>DefaultNamespace.CreditsSo.Credit</secondary></indexterm>
+<indexterm><primary>DefaultNamespace.CreditsSo.Credit</primary><secondary>role</secondary></indexterm>
+<para><computeroutput>string DefaultNamespace.CreditsSo.Credit.role</computeroutput></para><para>
+Definition at line <link linkend="__credits_so_8cs_source_1l00015">15</link> of file <link linkend="__credits_so_8cs_source">CreditsSo.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/CreditsSo.cs</section>
+</section>

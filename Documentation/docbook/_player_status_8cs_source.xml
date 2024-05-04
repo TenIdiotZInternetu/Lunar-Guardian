@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__player_status_8cs_source" xml:lang="en-US">
+<title>PlayerStatus.cs</title>
+<indexterm><primary>Scripts/PlayerScripts/PlayerStatus.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__player_status_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System;
+<anchor xml:id="__player_status_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>System.Reflection;
+<anchor xml:id="__player_status_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>MyBox;
+<anchor xml:id="__player_status_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__player_status_8cs_source_1l00005"/>00005 
+<anchor xml:id="__player_status_8cs_source_1l00006"/>00006 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_player_scripts">PlayerScripts</link>
+<anchor xml:id="__player_status_8cs_source_1l00007"/>00007 {
+<anchor xml:id="__player_status_8cs_source_1l00011"/><link linkend="_class_player_scripts_1_1_player_status">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_player_scripts_1_1_player_status">PlayerStatus</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__player_status_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*---------------------&#32;Types&#32;---------------------*/</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00018"/><link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">00018</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">ResourceType</link>
+<anchor xml:id="__player_status_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Health,
+<anchor xml:id="__player_status_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Bombs,
+<anchor xml:id="__player_status_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Power,
+<anchor xml:id="__player_status_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Score,
+<anchor xml:id="__player_status_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ScoreMultiplier
+<anchor xml:id="__player_status_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*-------------------&#32;Constants&#32;-------------------*/</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Substrings&#32;to&#32;attach&#32;when&#32;Subscribing&#32;to&#32;resource&#32;agnostic&#32;Subscribe&#32;and&#32;ChangeResource&#32;methods</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;CHANGE_METHOD_PREFIX&#32;=&#32;<emphasis role="stringliteral">&quot;Change&quot;</emphasis>;
+<anchor xml:id="__player_status_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;EVENT_NAME_SUFFIX&#32;=&#32;<emphasis role="stringliteral">&quot;ChangedEvent&quot;</emphasis>;
+<anchor xml:id="__player_status_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Amount&#32;of&#32;power&#32;needed&#32;to&#32;increase&#32;power&#32;level</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Increasing&#32;power&#32;level&#32;unlocks&#32;more&#32;powerful&#32;weapons</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>[]&#32;POWER_LEVELS&#32;=&#32;
+<anchor xml:id="__player_status_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;25,&#32;50,&#32;75,&#32;100,&#32;150,&#32;200
+<anchor xml:id="__player_status_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__player_status_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Score&#32;multiplier&#32;at&#32;each&#32;level</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">float</emphasis>[]&#32;MULTIPLIER_LEVELS&#32;=&#32;
+<anchor xml:id="__player_status_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1,&#32;1.15f,&#32;1.3f,&#32;1.45f,&#32;1.6f,&#32;1.75f,&#32;2,&#32;2.2f,&#32;2.4f,&#32;2.6f,&#32;2.8f,&#32;3,&#32;3.5f,&#32;4,&#32;4.5f,&#32;5
+<anchor xml:id="__player_status_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="__player_status_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*-----------------&#32;Static&#32;Fields&#32;-----------------*/</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00051"/><link linkend="_class_player_scripts_1_1_player_status_1aeac2eae8e304f20bc75eb574b2df8964">00051</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status">PlayerStatus</link>&#32;<link linkend="_class_player_scripts_1_1_player_status_1aeac2eae8e304f20bc75eb574b2df8964">Instance</link>&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">set</emphasis>;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------&#32;Inspector&#32;variables&#32;---------------*/</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00054"/>00054 
+<anchor xml:id="__player_status_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;maxHealth&#32;=&#32;5;
+<anchor xml:id="__player_status_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;startingHealth&#32;=&#32;3;
+<anchor xml:id="__player_status_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;maxBombsHeld&#32;=&#32;5;
+<anchor xml:id="__player_status_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;startingBombsHeld&#32;=&#32;2;
+<anchor xml:id="__player_status_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;maxPower&#32;=&#32;200;
+<anchor xml:id="__player_status_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;startingPower&#32;=&#32;0;
+<anchor xml:id="__player_status_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[Separator]
+<anchor xml:id="__player_status_8cs_source_1l00067"/><link linkend="_class_player_scripts_1_1_player_status_1adf08962e6157777feae044d2ad6c1ca5">00067</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1adf08962e6157777feae044d2ad6c1ca5">maxMultiplierScoreBonus</link>&#32;=&#32;100;
+<anchor xml:id="__player_status_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00072"/><link linkend="_class_player_scripts_1_1_player_status_1a7336b6cd8782708a2ffaa32505111436">00072</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1a7336b6cd8782708a2ffaa32505111436">healthUpRequirementIncrement</link>&#32;=&#32;1000000;
+<anchor xml:id="__player_status_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00077"/><link linkend="_class_player_scripts_1_1_player_status_1a003c51d423b7d53fcc827089df709e5e">00077</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;[SerializeField]&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1a003c51d423b7d53fcc827089df709e5e">healthOverflowBonus</link>&#32;=&#32;20000;
+<anchor xml:id="__player_status_8cs_source_1l00078"/>00078 
+<anchor xml:id="__player_status_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*----------------------&#32;Events&#32;---------------------*/</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00084"/><link linkend="_class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02">00084</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;delegate&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02">ChangedValueListener</link>(<emphasis role="keywordtype">float</emphasis>&#32;value);
+<anchor xml:id="__player_status_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">event</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02">ChangedValueListener</link>&#32;HealthChangedEvent;
+<anchor xml:id="__player_status_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">event</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02">ChangedValueListener</link>&#32;BombsChangedEvent;
+<anchor xml:id="__player_status_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">event</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02">ChangedValueListener</link>&#32;PowerChangedEvent;
+<anchor xml:id="__player_status_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">event</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02">ChangedValueListener</link>&#32;PowerLevelChangedEvent;
+<anchor xml:id="__player_status_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">event</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02">ChangedValueListener</link>&#32;ScoreChangedEvent;
+<anchor xml:id="__player_status_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">event</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02">ChangedValueListener</link>&#32;ScoreMultiplierChangedEvent;
+<anchor xml:id="__player_status_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00096"/><link linkend="_class_player_scripts_1_1_player_status_1a18f932a93b76c23809add1bf070899bf">00096</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">event</emphasis>&#32;Action&#32;<link linkend="_class_player_scripts_1_1_player_status_1a18f932a93b76c23809add1bf070899bf">GameOverEvent</link>;
+<anchor xml:id="__player_status_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*------------------&#32;Private&#32;Fields&#32;-----------------*/</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00099"/>00099 
+<anchor xml:id="__player_status_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_health;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Current&#32;health&#32;of&#32;the&#32;player</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_bombsHeld;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Current&#32;amount&#32;of&#32;bombs&#32;held&#32;by&#32;the&#32;player</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_power;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Current&#32;power&#32;of&#32;the&#32;player</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;_scoreMultiplier;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Current&#32;score&#32;multiplier&#32;of&#32;the&#32;player</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_scoreMultiplierLevel;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Amount&#32;of&#32;Multiplier&#32;pickups&#32;caught&#32;in&#32;a&#32;row</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;_healthUpRequirement;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Next&#32;extra&#32;health&#32;gained&#32;at&#32;this&#32;score</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00107"/>00107 
+<anchor xml:id="__player_status_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;Score&#32;{&#32;<emphasis role="keyword">get</emphasis>;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">set</emphasis>;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00109"/>00109 
+<anchor xml:id="__player_status_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;----------------&#32;Unity&#32;Callbacks&#32;----------------&#32;*/</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Start()
+<anchor xml:id="__player_status_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_status_1aeac2eae8e304f20bc75eb574b2df8964">Instance</link>&#32;=&#32;<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="__player_status_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_status_1a372de693ad40b3f42839c8ec6ac845f4">Reset</link>();
+<anchor xml:id="__player_status_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;------------------&#32;Static&#32;Methods&#32;-----------------&#32;*/</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00125"/><link linkend="_class_player_scripts_1_1_player_status_1ab468d4779fc1a9b54ce99dc71555c3fa">00125</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1ab468d4779fc1a9b54ce99dc71555c3fa">Subscribe</link>(<link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">ResourceType</link>&#32;resourceType,&#32;<link linkend="_class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02">ChangedValueListener</link>&#32;listener)
+<anchor xml:id="__player_status_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Type&#32;playerStatusType&#32;=&#32;typeof(<link linkend="_class_player_scripts_1_1_player_status">PlayerStatus</link>);
+<anchor xml:id="__player_status_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;eventName&#32;=&#32;resourceType&#32;+&#32;EVENT_NAME_SUFFIX;
+<anchor xml:id="__player_status_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;EventInfo&#32;statusEvent&#32;=&#32;playerStatusType.GetEvent(eventName);
+<anchor xml:id="__player_status_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;statusEvent.AddEventHandler(<emphasis role="keyword">null</emphasis>,&#32;listener);
+<anchor xml:id="__player_status_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00138"/><link linkend="_class_player_scripts_1_1_player_status_1a3fd9672e4dfe8040bd6f7011ef2e0f86">00138</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1a3fd9672e4dfe8040bd6f7011ef2e0f86">ChangeResource</link>(<link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">ResourceType</link>&#32;resourceType,&#32;<emphasis role="keywordtype">int</emphasis>&#32;amount)
+<anchor xml:id="__player_status_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Type&#32;playerStatusType&#32;=&#32;typeof(<link linkend="_class_player_scripts_1_1_player_status">PlayerStatus</link>);
+<anchor xml:id="__player_status_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;methodName&#32;=&#32;CHANGE_METHOD_PREFIX&#32;+&#32;resourceType;
+<anchor xml:id="__player_status_8cs_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MethodInfo&#32;statusMethod&#32;=&#32;playerStatusType.GetMethod(methodName);
+<anchor xml:id="__player_status_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;statusMethod.Invoke(<link linkend="_class_player_scripts_1_1_player_status_1aeac2eae8e304f20bc75eb574b2df8964">Instance</link>,&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">object</emphasis>[]&#32;{amount});
+<anchor xml:id="__player_status_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;------------------&#32;Public&#32;Methods&#32;-------------------&#32;*/</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00147"/>00147 
+<anchor xml:id="__player_status_8cs_source_1l00151"/><link linkend="_class_player_scripts_1_1_player_status_1a372de693ad40b3f42839c8ec6ac845f4">00151</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1a372de693ad40b3f42839c8ec6ac845f4">Reset</link>()
+<anchor xml:id="__player_status_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_health&#32;=&#32;startingHealth;
+<anchor xml:id="__player_status_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HealthChangedEvent?.Invoke(_health);
+<anchor xml:id="__player_status_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_bombsHeld&#32;=&#32;startingBombsHeld;
+<anchor xml:id="__player_status_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BombsChangedEvent?.Invoke(_bombsHeld);
+<anchor xml:id="__player_status_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_power&#32;=&#32;startingPower;
+<anchor xml:id="__player_status_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PowerChangedEvent?.Invoke(_power);
+<anchor xml:id="__player_status_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Score&#32;=&#32;0;
+<anchor xml:id="__player_status_8cs_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ScoreChangedEvent?.Invoke(Score);
+<anchor xml:id="__player_status_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_scoreMultiplier&#32;=&#32;1;
+<anchor xml:id="__player_status_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ScoreMultiplierChangedEvent?.Invoke(_scoreMultiplier);
+<anchor xml:id="__player_status_8cs_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_scoreMultiplierLevel&#32;=&#32;0;
+<anchor xml:id="__player_status_8cs_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_healthUpRequirement&#32;=&#32;<link linkend="_class_player_scripts_1_1_player_status_1a7336b6cd8782708a2ffaa32505111436">healthUpRequirementIncrement</link>;
+<anchor xml:id="__player_status_8cs_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00171"/>00171 
+<anchor xml:id="__player_status_8cs_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;------------------&#32;Public&#32;Methods&#32;------------------&#32;*/</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00179"/><link linkend="_class_player_scripts_1_1_player_status_1af41d014aba881a7ec30a9cddaf9e0b3a">00179</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1af41d014aba881a7ec30a9cddaf9e0b3a">ChangeHealth</link>(<emphasis role="keywordtype">int</emphasis>&#32;amount)
+<anchor xml:id="__player_status_8cs_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_health&#32;+=&#32;amount;
+<anchor xml:id="__player_status_8cs_source_1l00182"/>00182 
+<anchor xml:id="__player_status_8cs_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_health&#32;&gt;&#32;maxHealth)
+<anchor xml:id="__player_status_8cs_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45">ChangeScore</link>(<link linkend="_class_player_scripts_1_1_player_status_1a003c51d423b7d53fcc827089df709e5e">healthOverflowBonus</link>);
+<anchor xml:id="__player_status_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_health&#32;=&#32;maxHealth;
+<anchor xml:id="__player_status_8cs_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_health&#32;&lt;&#32;0)&#32;<link linkend="_class_player_scripts_1_1_player_status_1a18f932a93b76c23809add1bf070899bf">GameOverEvent</link>?.Invoke();
+<anchor xml:id="__player_status_8cs_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HealthChangedEvent?.Invoke(_health);
+<anchor xml:id="__player_status_8cs_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00198"/><link linkend="_class_player_scripts_1_1_player_status_1a93b8c4270f1e17b9624d0dd78b593e98">00198</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1a93b8c4270f1e17b9624d0dd78b593e98">ChangeBombs</link>(<emphasis role="keywordtype">int</emphasis>&#32;amount)
+<anchor xml:id="__player_status_8cs_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_bombsHeld&#32;+=&#32;amount;
+<anchor xml:id="__player_status_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Math.Clamp(_bombsHeld,&#32;0,&#32;maxBombsHeld);
+<anchor xml:id="__player_status_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BombsChangedEvent?.Invoke(_bombsHeld);
+<anchor xml:id="__player_status_8cs_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00209"/><link linkend="_class_player_scripts_1_1_player_status_1abd2e8bf17dab02c7807a61f445c930bf">00209</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1abd2e8bf17dab02c7807a61f445c930bf">ChangePower</link>(<emphasis role="keywordtype">int</emphasis>&#32;amount)
+<anchor xml:id="__player_status_8cs_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_power&#32;+=&#32;amount;
+<anchor xml:id="__player_status_8cs_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Math.Clamp(_power,&#32;0,&#32;maxPower);
+<anchor xml:id="__player_status_8cs_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PowerChangedEvent?.Invoke(_power);
+<anchor xml:id="__player_status_8cs_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;POWER_LEVELS.Length;&#32;i++)
+<anchor xml:id="__player_status_8cs_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;level&#32;=&#32;POWER_LEVELS.Length&#32;-&#32;i;
+<anchor xml:id="__player_status_8cs_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_power&#32;&gt;=&#32;POWER_LEVELS[level&#32;-&#32;1])
+<anchor xml:id="__player_status_8cs_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.Log(<emphasis role="stringliteral">&quot;level:&#32;&quot;</emphasis>&#32;+&#32;level);
+<anchor xml:id="__player_status_8cs_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PowerLevelChangedEvent?.Invoke(level);
+<anchor xml:id="__player_status_8cs_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__player_status_8cs_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00232"/><link linkend="_class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45">00232</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45">ChangeScore</link>(<emphasis role="keywordtype">int</emphasis>&#32;amount)
+<anchor xml:id="__player_status_8cs_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Score&#32;+=&#32;(int)Math.Ceiling(amount&#32;*&#32;_scoreMultiplier);
+<anchor xml:id="__player_status_8cs_source_1l00235"/>00235 
+<anchor xml:id="__player_status_8cs_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Score&#32;&gt;=&#32;_healthUpRequirement)
+<anchor xml:id="__player_status_8cs_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_healthUpRequirement&#32;+=&#32;<link linkend="_class_player_scripts_1_1_player_status_1a7336b6cd8782708a2ffaa32505111436">healthUpRequirementIncrement</link>;
+<anchor xml:id="__player_status_8cs_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_status_1af41d014aba881a7ec30a9cddaf9e0b3a">ChangeHealth</link>(1);
+<anchor xml:id="__player_status_8cs_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ScoreChangedEvent?.Invoke(Score);
+<anchor xml:id="__player_status_8cs_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00249"/><link linkend="_class_player_scripts_1_1_player_status_1a48bde3035abda30d99b282527cdd1bf0">00249</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1a48bde3035abda30d99b282527cdd1bf0">ChangeScoreMultiplier</link>(<emphasis role="keywordtype">int</emphasis>&#32;amount)
+<anchor xml:id="__player_status_8cs_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(_scoreMultiplierLevel&#32;&gt;=&#32;MULTIPLIER_LEVELS.Length&#32;-&#32;1)
+<anchor xml:id="__player_status_8cs_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45">ChangeScore</link>(<link linkend="_class_player_scripts_1_1_player_status_1adf08962e6157777feae044d2ad6c1ca5">maxMultiplierScoreBonus</link>);
+<anchor xml:id="__player_status_8cs_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__player_status_8cs_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_scoreMultiplierLevel&#32;+=&#32;amount;
+<anchor xml:id="__player_status_8cs_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_scoreMultiplier&#32;=&#32;MULTIPLIER_LEVELS[_scoreMultiplierLevel];
+<anchor xml:id="__player_status_8cs_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ScoreMultiplierChangedEvent?.Invoke(_scoreMultiplier);
+<anchor xml:id="__player_status_8cs_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00265"/><link linkend="_class_player_scripts_1_1_player_status_1a012607dd27a930aa340ffa15fd32cb28">00265</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_player_scripts_1_1_player_status_1a012607dd27a930aa340ffa15fd32cb28">ResetScoreMultiplier</link>()
+<anchor xml:id="__player_status_8cs_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_scoreMultiplierLevel&#32;=&#32;0;
+<anchor xml:id="__player_status_8cs_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_status_1a48bde3035abda30d99b282527cdd1bf0">ChangeScoreMultiplier</link>(0);
+<anchor xml:id="__player_status_8cs_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00270"/>00270 
+<anchor xml:id="__player_status_8cs_source_1l00271"/>00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;------------------&#32;Private&#32;Methods&#32;------------------&#32;*/</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__player_status_8cs_source_1l00273"/>00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Unsubscribes&#32;all&#32;event&#32;listeners&#32;when&#32;this&#32;object&#32;is&#32;destroyed</emphasis>
+<anchor xml:id="__player_status_8cs_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;OnDestroy()
+<anchor xml:id="__player_status_8cs_source_1l00275"/>00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__player_status_8cs_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HealthChangedEvent&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__player_status_8cs_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BombsChangedEvent&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__player_status_8cs_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PowerChangedEvent&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__player_status_8cs_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PowerLevelChangedEvent&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__player_status_8cs_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ScoreChangedEvent&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__player_status_8cs_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ScoreMultiplierChangedEvent&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__player_status_8cs_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_player_scripts_1_1_player_status_1a18f932a93b76c23809add1bf070899bf">GameOverEvent</link>&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__player_status_8cs_source_1l00283"/>00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00284"/>00284 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__player_status_8cs_source_1l00285"/>00285 }
+</programlisting></section>

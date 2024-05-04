@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_game_manager" xml:lang="en-US">
+<title>GameManager Namespace Reference</title>
+<indexterm><primary>GameManager</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_game_manager_1_1_game_manager">GameManager</link></para>
+
+<para>A state machine that controls the flow of the gameplay. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_game_manager_1_1_game_over_state">GameOverState</link></para>
+
+<para>State reached upon losing all health. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_game_manager_1_1_game_state">GameState</link></para>
+
+<para>A state governed by the <link linkend="_namespace_game_manager">GameManager</link>. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_game_manager_1_1_paused_state">PausedState</link></para>
+
+<para>State reached pressing the pause button. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_game_manager_1_1_playing_state">PlayingState</link></para>
+
+<para>Default state of the level, when gameplay occurs. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

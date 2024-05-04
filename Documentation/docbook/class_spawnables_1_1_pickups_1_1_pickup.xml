@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_pickups_1_1_pickup" xml:lang="en-US">
+<title>Pickup Class Reference</title>
+<indexterm><primary>Pickup</primary></indexterm>
+<para>
+
+<para>Entity increasing player&apos;s resources when picked up. </para>
+ 
+</para>
+<para>Inheritance diagram for Pickup:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_pickups_1_1_pickup.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_pickups_1_1_pickup_1_1_reward">Reward</link></para>
+
+<para>Resources gained by touching the pickup. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_pickups_1_1_pickup_1a4d51bab2cdefd54711c114daae220327"/>List&lt; <link linkend="_class_spawnables_1_1_pickups_1_1_pickup_1_1_reward">Reward</link> &gt; <emphasis role="strong">rewards</emphasis></para>
+
+<para>List of resources gained by touching the pickup. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_class_spawnables_1_1_entity">Entity</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link> <emphasis role="strong">movementPattern</emphasis></para>
+
+<para>Movement pattern that determines the position of the entity in the next frame. </para>
+</listitem>
+            <listitem><para>string <emphasis role="strong">SpawnKey</emphasis></para>
+
+<para>A key to identify the entity among the ObjectPools. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Member Functions inherited from <link linkend="_class_spawnables_1_1_entity">Entity</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef">SetMovementPattern</link> (<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link> newMovementPattern)</para>
+
+<para>Changes the MovementPattern of the entity. </para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">StartMoving</emphasis> ()</para>
+
+<para>Tells the entity to start using its MovementPattern. </para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">StopMoving</emphasis> ()</para>
+
+<para>Tells the entity to stop using its MovementPattern. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_class_spawnables_1_1_entity">Entity</link>        <itemizedlist>
+            <listitem><para>float <emphasis role="strong">LifeTime</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Time passed since the entity was enabled. </para>
+</listitem>
+            <listitem><para>float <emphasis role="strong">MPLifeTime</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Time passed since the MovementPattern was last set. </para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pickup_8cs_source_1l00011">11</link> of file <link linkend="__pickup_8cs_source">Pickup.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/Spawnables/Pickups/Pickup.cs</section>
+</section>

@@ -1,0 +1,60 @@
+\doxysection{Bomb\+Controller.\+cs}
+\hypertarget{_bomb_controller_8cs_source}{}\label{_bomb_controller_8cs_source}\index{Scripts/PlayerScripts/BombController.cs@{Scripts/PlayerScripts/BombController.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine.Events;}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00006}\mbox{\hyperlink{namespace_player_scripts}{00006}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_player_scripts}{PlayerScripts}}}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00012}\mbox{\hyperlink{class_player_scripts_1_1_bomb_controller}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_scripts_1_1_bomb_controller}{BombController}}\ :\ \ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00019}\mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a8f009855b884a4c8e1a1338ca159ae3a}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a8f009855b884a4c8e1a1338ca159ae3a}{initialDamage}};}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00024}\mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_aa2d1fa06b56bbaf068cc697526223c62}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ AnimationCurve\ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_aa2d1fa06b56bbaf068cc697526223c62}{damageCurve}};}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00029}\mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a8a032a6ba98f3847d521c82627d0b3fa}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a8a032a6ba98f3847d521c82627d0b3fa}{damageTickInterval}};}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Events\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00036}\mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a60d6f37c71fa8b172e436e6d558890ff}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ Action<int>\ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a60d6f37c71fa8b172e436e6d558890ff}{OnBombDamageTick}};}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00041}\mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a3dad052ab5c9e0bb950da5e6dad2ae1f}{00041}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ UnityEvent\ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a3dad052ab5c9e0bb950da5e6dad2ae1f}{onBombDeployed}};}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00046}\mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a48237faed031e6039bebb05e668c2e35}{00046}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ UnityEvent\ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a48237faed031e6039bebb05e668c2e35}{onBombEffectEnd}};}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Time\ when\ the\ bomb\ was\ deployed\ in\ seconds}}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \_timeOfDeployment;}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00059}\mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a6ffe3551433e872831d7751d22cc161e}{00059}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ IEnumerator\ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a6ffe3551433e872831d7751d22cc161e}{DeployBomb}}()}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a3dad052ab5c9e0bb950da5e6dad2ae1f}{onBombDeployed}}?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \_timeOfDeployment\ =\ Time.time;}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ timeElapsed\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (timeElapsed\ <\ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_aa2d1fa06b56bbaf068cc697526223c62}{damageCurve}}.keys[\string^1].time)}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeElapsed\ =\ Time.time\ -\/\ \_timeOfDeployment;}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ damage\ =\ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a8f009855b884a4c8e1a1338ca159ae3a}{initialDamage}}\ *\ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_aa2d1fa06b56bbaf068cc697526223c62}{damageCurve}}.Evaluate(timeElapsed);}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ finalDamage\ =\ (int)Math.Ceiling(damage);}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a60d6f37c71fa8b172e436e6d558890ff}{OnBombDamageTick}}?.Invoke(finalDamage);}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ WaitForSeconds(\mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a8a032a6ba98f3847d521c82627d0b3fa}{damageTickInterval}});}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a48237faed031e6039bebb05e668c2e35}{onBombEffectEnd}}?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_bomb_controller_8cs_source_l00079}00079\ \}}
+
+\end{DoxyCode}

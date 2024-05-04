@@ -1,0 +1,69 @@
+\doxysection{Chasing\+MP.\+cs}
+\hypertarget{_chasing_m_p_8cs_source}{}\label{_chasing_m_p_8cs_source}\index{Scripts/MovementPatterns/ChasingMP.cs@{Scripts/MovementPatterns/ChasingMP.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_spawnables}{Spawnables}};}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00004}\mbox{\hyperlink{namespace_movement_patterns}{00004}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_movement_patterns}{MovementPatterns}}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00009}\mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p}{ChasingMP}}\ :\ \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern}{MovementPattern}}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Inspector\ Variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00016}\mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_aebcdb6865e8e48a878d71eba77d1f5b3}{00016}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ GameObject\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_aebcdb6865e8e48a878d71eba77d1f5b3}{target}};}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00021}\mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_aa1e558f5ba6fb97ca16dcc4e4af6b111}{00021}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_aa1e558f5ba6fb97ca16dcc4e4af6b111}{lockOnTime}};}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00026}\mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_affd81e3b392c1ddde52ebf03f358c907}{00026}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_affd81e3b392c1ddde52ebf03f358c907}{chaseTime}};}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00031}\mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_a2fe30ccd8492359ecb32bef8f8985272}{00031}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_a2fe30ccd8492359ecb32bef8f8985272}{attractionRate}};}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00036}\mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_a7f7e4724cf57d59513b39c5ecc81adc8}{00036}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_a7f7e4724cf57d59513b39c5ecc81adc8}{speed}};}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00041}\mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_a97712bccaedef08f6d8c525bdda2f7ef}{00041}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_a97712bccaedef08f6d8c525bdda2f7ef}{acceleration}};}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Initialize(\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}}\ entity)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ Vector3\ GetNextPosition(\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}}\ entity)}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Defining\ current\ state\ of\ the\ entity}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ Transform\ entityTransform\ =\ entity.transform;}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ currentPosition\ =\ entityTransform.position;}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ Quaternion\ currentRotation\ =\ entityTransform.rotation;}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ currentSpeed\ =\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_a7f7e4724cf57d59513b39c5ecc81adc8}{speed}}\ +\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_a97712bccaedef08f6d8c525bdda2f7ef}{acceleration}}\ *\ entity.\mbox{\hyperlink{class_spawnables_1_1_entity_a3f4ec4fa85ad2f8f95ea03016cf311ba}{MPLifeTime}};}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ the\ entity\ is\ not\ locked\ on\ the\ target,\ it\ continues\ in\ a\ straight\ line}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entity.\mbox{\hyperlink{class_spawnables_1_1_entity_a3f4ec4fa85ad2f8f95ea03016cf311ba}{MPLifeTime}}\ <\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_aa1e558f5ba6fb97ca16dcc4e4af6b111}{lockOnTime}}\ ||\ entity.\mbox{\hyperlink{class_spawnables_1_1_entity_a3f4ec4fa85ad2f8f95ea03016cf311ba}{MPLifeTime}}\ >\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_aa1e558f5ba6fb97ca16dcc4e4af6b111}{lockOnTime}}\ +\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_affd81e3b392c1ddde52ebf03f358c907}{chaseTime}})}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentPosition\ +\ currentRotation\ *\ Vector3.up\ *\ (currentSpeed\ *\ Time.deltaTime);}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Defining\ desired\ state}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ targetPosition\ =\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_aebcdb6865e8e48a878d71eba77d1f5b3}{target}}.transform.position;}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ Quaternion\ targetRotation\ =\ Quaternion.LookRotation(Vector3.forward,\ targetPosition\ -\/\ currentPosition);}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Difference\ between\ current\ and\ desired\ state}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ rotationDifference\ =\ Quaternion.Angle(currentRotation,\ targetRotation);}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ distanceFromTarget\ =\ Mathf.Max(Vector3.Distance(currentPosition,\ targetPosition),\ 1.2f);}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculating\ rotation\ of\ the\ entity\ towards\ the\ target}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ distanceFactor\ =\ 1\ +\ 1\ /\ Mathf.Log(distanceFromTarget,\ 5);}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ slerpRate\ =\ \mbox{\hyperlink{class_movement_patterns_1_1_chasing_m_p_a2fe30ccd8492359ecb32bef8f8985272}{attractionRate}}\ *\ Time.deltaTime\ *\ rotationDifference\ *\ distanceFactor;}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ Quaternion\ finalRotation\ =\ Quaternion.RotateTowards(currentRotation,\ targetRotation,\ slerpRate);}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculating\ final\ position\ of\ the\ entity}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ momentum\ =\ finalRotation\ *\ Vector3.up\ *\ (currentSpeed\ *\ Time.deltaTime);}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ entityTransform.rotation\ =\ finalRotation;}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ finalPosition\ =\ currentPosition\ +\ momentum;}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ finalPosition;}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_chasing_m_p_8cs_source_l00084}00084\ \}}
+
+\end{DoxyCode}

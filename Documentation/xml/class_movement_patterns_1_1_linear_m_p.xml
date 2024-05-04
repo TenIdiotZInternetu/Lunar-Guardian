@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_movement_patterns_1_1_linear_m_p" kind="class" language="C#" prot="public">
+    <compoundname>MovementPatterns::LinearMP</compoundname>
+    <basecompoundref refid="class_movement_patterns_1_1_movement_pattern" prot="public" virt="non-virtual">MovementPattern</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_movement_patterns_1_1_linear_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <qualifiedname>MovementPatterns.LinearMP.speed</qualifiedname>
+        <briefdescription>
+<para>Distance travelled in one second. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/LinearMP.cs" line="19" column="24" bodyfile="Scripts/MovementPatterns/LinearMP.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_linear_m_p_1a97712bccaedef08f6d8c525bdda2f7ef" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float acceleration</definition>
+        <argsstring></argsstring>
+        <name>acceleration</name>
+        <qualifiedname>MovementPatterns.LinearMP.acceleration</qualifiedname>
+        <briefdescription>
+<para>Rate of change of speed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/LinearMP.cs" line="24" column="24" bodyfile="Scripts/MovementPatterns/LinearMP.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_linear_m_p_1add450a0a83c646aa48b83eeafbf0b902" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool followsRotation</definition>
+        <argsstring></argsstring>
+        <name>followsRotation</name>
+        <qualifiedname>MovementPatterns.LinearMP.followsRotation</qualifiedname>
+        <briefdescription>
+<para>If true, the slope of the line is determined by the entity&apos;s rotation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/LinearMP.cs" line="29" column="23" bodyfile="Scripts/MovementPatterns/LinearMP.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_linear_m_p_1aeedcd9bc1fcd3a20ade597dbe82176a7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float directionInDegrees</definition>
+        <argsstring></argsstring>
+        <name>directionInDegrees</name>
+        <qualifiedname>MovementPatterns.LinearMP.directionInDegrees</qualifiedname>
+        <briefdescription>
+<para>If followsRotation is false, this is the angle of the slope in degrees, where 0 is up. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/LinearMP.cs" line="35" column="23" bodyfile="Scripts/MovementPatterns/LinearMP.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_linear_m_p_1abbe6150ad86922a9c62f3bc71f8cfb67" prot="private" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 _direction</definition>
+        <argsstring></argsstring>
+        <name>_direction</name>
+        <qualifiedname>MovementPatterns.LinearMP._direction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/LinearMP.cs" line="40" column="25" bodyfile="Scripts/MovementPatterns/LinearMP.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_movement_patterns_1_1_linear_m_p_1a8d67528573c728e2d30355bc60a141a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Initialize</definition>
+        <argsstring>(Entity entity)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>MovementPatterns.LinearMP.Initialize</qualifiedname>
+        <param>
+          <type><ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/LinearMP.cs" line="44" column="30" bodyfile="Scripts/MovementPatterns/LinearMP.cs" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_movement_patterns_1_1_linear_m_p_1aa27a497603473cb642e835d809c60a64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override Vector3</type>
+        <definition>override Vector3 GetNextPosition</definition>
+        <argsstring>(Entity entity)</argsstring>
+        <name>GetNextPosition</name>
+        <qualifiedname>MovementPatterns.LinearMP.GetNextPosition</qualifiedname>
+        <param>
+          <type><ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/LinearMP.cs" line="49" column="33" bodyfile="Scripts/MovementPatterns/LinearMP.cs" bodystart="49" bodyend="65"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_movement_patterns_1_1_linear_m_p_1a755e7a04dbc0bc114ebd52997a9a2a42" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnValidate</definition>
+        <argsstring>()</argsstring>
+        <name>OnValidate</name>
+        <qualifiedname>MovementPatterns.LinearMP.OnValidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/LinearMP.cs" line="70" column="14" bodyfile="Scripts/MovementPatterns/LinearMP.cs" bodystart="70" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_movement_patterns_1_1_linear_m_p_1ae7e5103e242d1fbf4a03afe96d3947ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnDrawGizmosSelected</definition>
+        <argsstring>()</argsstring>
+        <name>OnDrawGizmosSelected</name>
+        <qualifiedname>MovementPatterns.LinearMP.OnDrawGizmosSelected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/LinearMP.cs" line="77" column="14" bodyfile="Scripts/MovementPatterns/LinearMP.cs" bodystart="77" bodyend="82"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Moves along a straight line. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>LinearMP</label>
+        <link refid="class_movement_patterns_1_1_linear_m_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>LinearMP</label>
+        <link refid="class_movement_patterns_1_1_linear_m_p"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/MovementPatterns/LinearMP.cs" line="12" column="11" bodyfile="Scripts/MovementPatterns/LinearMP.cs" bodystart="13" bodyend="83"/>
+    <listofallmembers>
+      <member refid="class_movement_patterns_1_1_linear_m_p_1abbe6150ad86922a9c62f3bc71f8cfb67" prot="private" virt="non-virtual"><scope>MovementPatterns::LinearMP</scope><name>_direction</name></member>
+      <member refid="class_movement_patterns_1_1_linear_m_p_1a97712bccaedef08f6d8c525bdda2f7ef" prot="private" virt="non-virtual"><scope>MovementPatterns::LinearMP</scope><name>acceleration</name></member>
+      <member refid="class_movement_patterns_1_1_linear_m_p_1aeedcd9bc1fcd3a20ade597dbe82176a7" prot="private" virt="non-virtual"><scope>MovementPatterns::LinearMP</scope><name>directionInDegrees</name></member>
+      <member refid="class_movement_patterns_1_1_linear_m_p_1add450a0a83c646aa48b83eeafbf0b902" prot="private" virt="non-virtual"><scope>MovementPatterns::LinearMP</scope><name>followsRotation</name></member>
+      <member refid="class_movement_patterns_1_1_linear_m_p_1aa27a497603473cb642e835d809c60a64" prot="public" virt="non-virtual"><scope>MovementPatterns::LinearMP</scope><name>GetNextPosition</name></member>
+      <member refid="class_movement_patterns_1_1_linear_m_p_1a8d67528573c728e2d30355bc60a141a0" prot="public" virt="non-virtual"><scope>MovementPatterns::LinearMP</scope><name>Initialize</name></member>
+      <member refid="class_movement_patterns_1_1_linear_m_p_1ae7e5103e242d1fbf4a03afe96d3947ef" prot="private" virt="non-virtual"><scope>MovementPatterns::LinearMP</scope><name>OnDrawGizmosSelected</name></member>
+      <member refid="class_movement_patterns_1_1_linear_m_p_1a755e7a04dbc0bc114ebd52997a9a2a42" prot="private" virt="non-virtual"><scope>MovementPatterns::LinearMP</scope><name>OnValidate</name></member>
+      <member refid="class_movement_patterns_1_1_linear_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8" prot="private" virt="non-virtual"><scope>MovementPatterns::LinearMP</scope><name>speed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

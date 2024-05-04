@@ -1,0 +1,767 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_vertex_path" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::VertexPath</compoundname>
+    <innerclass refid="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data" prot="public">PathCreation::VertexPath::TimeOnPathData</innerclass>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1abcf22b33c96ba27b92a08bd596e04fc7" prot="public" static="no" mutable="no">
+        <type>readonly PathSpace</type>
+        <definition>readonly PathSpace space</definition>
+        <argsstring></argsstring>
+        <name>space</name>
+        <qualifiedname>PathCreation.VertexPath.space</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="18" column="35" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1a7377613f86d9a6fdcbc9c55bbc9fec90" prot="public" static="no" mutable="no">
+        <type>readonly bool</type>
+        <definition>readonly bool isClosedLoop</definition>
+        <argsstring></argsstring>
+        <name>isClosedLoop</name>
+        <qualifiedname>PathCreation.VertexPath.isClosedLoop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="19" column="30" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1aa1c7710bd692f8aa24cabc32199e5ae1" prot="public" static="no" mutable="no">
+        <type>readonly Vector3[]</type>
+        <definition>readonly Vector3 [] localPoints</definition>
+        <argsstring></argsstring>
+        <name>localPoints</name>
+        <qualifiedname>PathCreation.VertexPath.localPoints</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="20" column="33" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1a4d9a3d39f8918bdbf2859276e26c5984" prot="public" static="no" mutable="no">
+        <type>readonly Vector3[]</type>
+        <definition>readonly Vector3 [] localTangents</definition>
+        <argsstring></argsstring>
+        <name>localTangents</name>
+        <qualifiedname>PathCreation.VertexPath.localTangents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="21" column="33" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1ae41f348ff2690137935ba2ac2653eddf" prot="public" static="no" mutable="no">
+        <type>readonly Vector3[]</type>
+        <definition>readonly Vector3 [] localNormals</definition>
+        <argsstring></argsstring>
+        <name>localNormals</name>
+        <qualifiedname>PathCreation.VertexPath.localNormals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="22" column="33" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1aab5f889fde82379662ac21a0e5ff2c1e" prot="public" static="no" mutable="no">
+        <type>readonly float[]</type>
+        <definition>readonly float [] times</definition>
+        <argsstring></argsstring>
+        <name>times</name>
+        <qualifiedname>PathCreation.VertexPath.times</qualifiedname>
+        <briefdescription>
+<para>Percentage along the path at each vertex (0 being start of path, and 1 being the end) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="25" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1abbff33b1b67be54cbab3775963ec493e" compoundref="_vertex_path_8cs" startline="253" endline="295">VertexPath.CalculatePercentOnPathData</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1add1d94ca38d101e394c85e3c030ed5c7" compoundref="_vertex_path_8cs" startline="236" endline="239">VertexPath.GetClosestTimeOnPath</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25" compoundref="_vertex_path_8cs" startline="59" endline="150">VertexPath.VertexPath</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1a50750f3b8c87b4381ad0386692c1e3e5" prot="public" static="no" mutable="no">
+        <type>readonly float</type>
+        <definition>readonly float length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <qualifiedname>PathCreation.VertexPath.length</qualifiedname>
+        <briefdescription>
+<para>Total distance between the vertices of the polyline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="27" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a18dd6b53cb280969264c9316c8dc60e7" compoundref="_vertex_path_8cs" startline="184" endline="187">VertexPath.GetDirectionAtDistance</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a4c1400968e85e9398e9372cd6e52db46" compoundref="_vertex_path_8cs" startline="190" endline="193">VertexPath.GetNormalAtDistance</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a5437a41d4b84126c2b6987f83dcd3da9" compoundref="_vertex_path_8cs" startline="178" endline="181">VertexPath.GetPointAtDistance</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1ab2a060e662072e4e85f6bb299efcdff6" compoundref="_vertex_path_8cs" startline="196" endline="199">VertexPath.GetRotationAtDistance</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25" compoundref="_vertex_path_8cs" startline="59" endline="150">VertexPath.VertexPath</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1a4181ef3ca1db9c0393401411bdeaabc6" prot="public" static="no" mutable="no">
+        <type>readonly float[]</type>
+        <definition>readonly float [] cumulativeLengthAtEachVertex</definition>
+        <argsstring></argsstring>
+        <name>cumulativeLengthAtEachVertex</name>
+        <qualifiedname>PathCreation.VertexPath.cumulativeLengthAtEachVertex</qualifiedname>
+        <briefdescription>
+<para>Total distance from the first vertex up to each vertex in the polyline. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="29" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a8053ea41c3b34896a2caf2a38a16479a" compoundref="_vertex_path_8cs" startline="242" endline="245">VertexPath.GetClosestDistanceAlongPath</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25" compoundref="_vertex_path_8cs" startline="59" endline="150">VertexPath.VertexPath</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1aed82650136385bdafde91640006b4f10" prot="public" static="no" mutable="no">
+        <type>readonly Bounds</type>
+        <definition>readonly Bounds bounds</definition>
+        <argsstring></argsstring>
+        <name>bounds</name>
+        <qualifiedname>PathCreation.VertexPath.bounds</qualifiedname>
+        <briefdescription>
+<para>Bounding box of the path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="31" column="32" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25" compoundref="_vertex_path_8cs" startline="59" endline="150">VertexPath.VertexPath</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1a6767b928b6cb5a8eb12dd70826ac6090" prot="public" static="no" mutable="no">
+        <type>readonly Vector3</type>
+        <definition>readonly Vector3 up</definition>
+        <argsstring></argsstring>
+        <name>up</name>
+        <qualifiedname>PathCreation.VertexPath.up</qualifiedname>
+        <briefdescription>
+<para>Equal to (0,0,-1) for 2D paths, and (0,1,0) for XZ paths. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="33" column="33" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25" compoundref="_vertex_path_8cs" startline="59" endline="150">VertexPath.VertexPath</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1ae07211373500741ea0d9e9f6d8375b2e" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int accuracy</definition>
+        <argsstring></argsstring>
+        <name>accuracy</name>
+        <qualifiedname>PathCreation.VertexPath.accuracy</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="36" column="19" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1ab37e262c65b1134d41ada16a88f72317" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float minVertexSpacing</definition>
+        <argsstring></argsstring>
+        <name>minVertexSpacing</name>
+        <qualifiedname>PathCreation.VertexPath.minVertexSpacing</qualifiedname>
+        <initializer>= .01f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="37" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_vertex_path_1a3f876c0d44b53e6012881c448fcfd757" prot="private" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform transform</definition>
+        <argsstring></argsstring>
+        <name>transform</name>
+        <qualifiedname>PathCreation.VertexPath.transform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="39" column="19" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_path_creation_1_1_vertex_path_1a76122faf62db75c06e32a6aca7ffd666" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int NumPoints</definition>
+        <argsstring></argsstring>
+        <name>NumPoints</name>
+        <qualifiedname>PathCreation.VertexPath.NumPoints</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="159" column="20" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="159" bodyend="163"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1a68993b6cc3ef582ffc8df88009d98fbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>VertexPath</definition>
+        <argsstring>(BezierPath bezierPath, Transform transform, float maxAngleError=0.3f, float minVertexDst=0)</argsstring>
+        <name>VertexPath</name>
+        <qualifiedname>PathCreation.VertexPath.VertexPath</qualifiedname>
+        <param>
+          <type><ref refid="class_path_creation_1_1_bezier_path" kindref="compound">BezierPath</ref></type>
+          <declname>bezierPath</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>transform</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxAngleError</declname>
+          <defval>0.3f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>minVertexDst</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Splits bezier path into array of vertices along the path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>param name=&quot;maxAngleError&quot;&gt;How much can the angle of the path change before a vertex is added. This allows fewer vertices to be generated in straighter sections.</para>
+<para>param name=&quot;minVertexDst&quot;&gt;Vertices won&apos;t be added closer together than this distance, regardless of angle error.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="48" column="16" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="48" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1aa26ae65380456e3ad114515ba2dccb4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>VertexPath</definition>
+        <argsstring>(BezierPath bezierPath, Transform transform, float vertexSpacing)</argsstring>
+        <name>VertexPath</name>
+        <qualifiedname>PathCreation.VertexPath.VertexPath</qualifiedname>
+        <param>
+          <type><ref refid="class_path_creation_1_1_bezier_path" kindref="compound">BezierPath</ref></type>
+          <declname>bezierPath</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>transform</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>vertexSpacing</declname>
+        </param>
+        <briefdescription>
+<para>Splits bezier path into array of vertices along the path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>param name=&quot;maxAngleError&quot;&gt;How much can the angle of the path change before a vertex is added. This allows fewer vertices to be generated in straighter sections.</para>
+<para>param name=&quot;minVertexDst&quot;&gt;Vertices won&apos;t be added closer together than this distance, regardless of angle error.</para>
+<para>param name=&quot;accuracy&quot;&gt;Higher value means the change in angle is checked more frequently.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="55" column="16" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="55" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1a1c4134e496e170fe60265d3716883aa7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateTransform</definition>
+        <argsstring>(Transform transform)</argsstring>
+        <name>UpdateTransform</name>
+        <qualifiedname>PathCreation.VertexPath.UpdateTransform</qualifiedname>
+        <param>
+          <type>Transform</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="156" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1a47ced66a3095a38b9687acf700752aa6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetTangent</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetTangent</name>
+        <qualifiedname>PathCreation.VertexPath.GetTangent</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="165" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="165" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1a69a37b0f43a4785ca6e325d859a3e23b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetNormal</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetNormal</name>
+        <qualifiedname>PathCreation.VertexPath.GetNormal</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="169" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1ac10693c4893962dc444193eba614e6e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetPoint</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetPoint</name>
+        <qualifiedname>PathCreation.VertexPath.GetPoint</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="173" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="173" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1a5437a41d4b84126c2b6987f83dcd3da9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetPointAtDistance</definition>
+        <argsstring>(float dst, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</argsstring>
+        <name>GetPointAtDistance</name>
+        <qualifiedname>PathCreation.VertexPath.GetPointAtDistance</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>EndOfPathInstruction</type>
+          <declname>endOfPathInstruction</declname>
+          <defval>EndOfPathInstruction.Loop</defval>
+        </param>
+        <briefdescription>
+<para>Gets point on path based on distance travelled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="178" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="178" bodyend="181"/>
+        <references refid="class_path_creation_1_1_vertex_path_1ab9703bbe05d6c4884919fee5842978ca" compoundref="_vertex_path_8cs" startline="202" endline="205">VertexPath.GetPointAtTime</references>
+        <references refid="class_path_creation_1_1_vertex_path_1a50750f3b8c87b4381ad0386692c1e3e5" compoundref="_vertex_path_8cs" startline="27">VertexPath.length</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1a18dd6b53cb280969264c9316c8dc60e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetDirectionAtDistance</definition>
+        <argsstring>(float dst, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</argsstring>
+        <name>GetDirectionAtDistance</name>
+        <qualifiedname>PathCreation.VertexPath.GetDirectionAtDistance</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>EndOfPathInstruction</type>
+          <declname>endOfPathInstruction</declname>
+          <defval>EndOfPathInstruction.Loop</defval>
+        </param>
+        <briefdescription>
+<para>Gets forward direction on path based on distance travelled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="184" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="184" bodyend="187"/>
+        <references refid="class_path_creation_1_1_vertex_path_1aa738e0737a6060de2254d26669df14eb" compoundref="_vertex_path_8cs" startline="208" endline="212">VertexPath.GetDirection</references>
+        <references refid="class_path_creation_1_1_vertex_path_1a50750f3b8c87b4381ad0386692c1e3e5" compoundref="_vertex_path_8cs" startline="27">VertexPath.length</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1a4c1400968e85e9398e9372cd6e52db46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetNormalAtDistance</definition>
+        <argsstring>(float dst, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</argsstring>
+        <name>GetNormalAtDistance</name>
+        <qualifiedname>PathCreation.VertexPath.GetNormalAtDistance</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>EndOfPathInstruction</type>
+          <declname>endOfPathInstruction</declname>
+          <defval>EndOfPathInstruction.Loop</defval>
+        </param>
+        <briefdescription>
+<para>Gets normal vector on path based on distance travelled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="190" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="190" bodyend="193"/>
+        <references refid="class_path_creation_1_1_vertex_path_1a50750f3b8c87b4381ad0386692c1e3e5" compoundref="_vertex_path_8cs" startline="27">VertexPath.length</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1ab2a060e662072e4e85f6bb299efcdff6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Quaternion</type>
+        <definition>Quaternion GetRotationAtDistance</definition>
+        <argsstring>(float dst, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</argsstring>
+        <name>GetRotationAtDistance</name>
+        <qualifiedname>PathCreation.VertexPath.GetRotationAtDistance</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>EndOfPathInstruction</type>
+          <declname>endOfPathInstruction</declname>
+          <defval>EndOfPathInstruction.Loop</defval>
+        </param>
+        <briefdescription>
+<para>Gets a rotation that will orient an object in the direction of the path at this point, with local up point along the path&apos;s normal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="196" column="27" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="196" bodyend="199"/>
+        <references refid="class_path_creation_1_1_vertex_path_1a65c5ec446381a6cd300aa3e16712ca4d" compoundref="_vertex_path_8cs" startline="222" endline="227">VertexPath.GetRotation</references>
+        <references refid="class_path_creation_1_1_vertex_path_1a50750f3b8c87b4381ad0386692c1e3e5" compoundref="_vertex_path_8cs" startline="27">VertexPath.length</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1ab9703bbe05d6c4884919fee5842978ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetPointAtTime</definition>
+        <argsstring>(float t, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</argsstring>
+        <name>GetPointAtTime</name>
+        <qualifiedname>PathCreation.VertexPath.GetPointAtTime</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>EndOfPathInstruction</type>
+          <declname>endOfPathInstruction</declname>
+          <defval>EndOfPathInstruction.Loop</defval>
+        </param>
+        <briefdescription>
+<para>Gets point on path based on &apos;time&apos; (where 0 is start, and 1 is end of path). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="202" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="202" bodyend="205"/>
+        <references refid="class_path_creation_1_1_vertex_path_1abbff33b1b67be54cbab3775963ec493e" compoundref="_vertex_path_8cs" startline="253" endline="295">VertexPath.CalculatePercentOnPathData</references>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a5437a41d4b84126c2b6987f83dcd3da9" compoundref="_vertex_path_8cs" startline="178" endline="181">VertexPath.GetPointAtDistance</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1aa738e0737a6060de2254d26669df14eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetDirection</definition>
+        <argsstring>(float t, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</argsstring>
+        <name>GetDirection</name>
+        <qualifiedname>PathCreation.VertexPath.GetDirection</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>EndOfPathInstruction</type>
+          <declname>endOfPathInstruction</declname>
+          <defval>EndOfPathInstruction.Loop</defval>
+        </param>
+        <briefdescription>
+<para>Gets forward direction on path based on &apos;time&apos; (where 0 is start, and 1 is end of path). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="208" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="208" bodyend="212"/>
+        <references refid="class_path_creation_1_1_vertex_path_1abbff33b1b67be54cbab3775963ec493e" compoundref="_vertex_path_8cs" startline="253" endline="295">VertexPath.CalculatePercentOnPathData</references>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a18dd6b53cb280969264c9316c8dc60e7" compoundref="_vertex_path_8cs" startline="184" endline="187">VertexPath.GetDirectionAtDistance</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1a2e4032694b7fbec56c46d99ba06d2738" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetNormal</definition>
+        <argsstring>(float t, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</argsstring>
+        <name>GetNormal</name>
+        <qualifiedname>PathCreation.VertexPath.GetNormal</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>EndOfPathInstruction</type>
+          <declname>endOfPathInstruction</declname>
+          <defval>EndOfPathInstruction.Loop</defval>
+        </param>
+        <briefdescription>
+<para>Gets normal vector on path based on &apos;time&apos; (where 0 is start, and 1 is end of path). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="215" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="215" bodyend="219"/>
+        <references refid="class_path_creation_1_1_vertex_path_1abbff33b1b67be54cbab3775963ec493e" compoundref="_vertex_path_8cs" startline="253" endline="295">VertexPath.CalculatePercentOnPathData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1a65c5ec446381a6cd300aa3e16712ca4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Quaternion</type>
+        <definition>Quaternion GetRotation</definition>
+        <argsstring>(float t, EndOfPathInstruction endOfPathInstruction=EndOfPathInstruction.Loop)</argsstring>
+        <name>GetRotation</name>
+        <qualifiedname>PathCreation.VertexPath.GetRotation</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>EndOfPathInstruction</type>
+          <declname>endOfPathInstruction</declname>
+          <defval>EndOfPathInstruction.Loop</defval>
+        </param>
+        <briefdescription>
+<para>Gets a rotation that will orient an object in the direction of the path at this point, with local up point along the path&apos;s normal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="222" column="27" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="222" bodyend="227"/>
+        <references refid="class_path_creation_1_1_vertex_path_1abbff33b1b67be54cbab3775963ec493e" compoundref="_vertex_path_8cs" startline="253" endline="295">VertexPath.CalculatePercentOnPathData</references>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1ab2a060e662072e4e85f6bb299efcdff6" compoundref="_vertex_path_8cs" startline="196" endline="199">VertexPath.GetRotationAtDistance</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1ae0a294d13ca50315c743d9a6e74b31b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>Vector3 GetClosestPointOnPath</definition>
+        <argsstring>(Vector3 worldPoint)</argsstring>
+        <name>GetClosestPointOnPath</name>
+        <qualifiedname>PathCreation.VertexPath.GetClosestPointOnPath</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>worldPoint</declname>
+        </param>
+        <briefdescription>
+<para>Finds the closest point on the path from any point in the world. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="230" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="230" bodyend="233"/>
+        <references refid="class_path_creation_1_1_vertex_path_1a7f1e4c16d9822b5348cad52c738981c0" compoundref="_vertex_path_8cs" startline="298" endline="327">VertexPath.CalculateClosestPointOnPathData</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1add1d94ca38d101e394c85e3c030ed5c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float GetClosestTimeOnPath</definition>
+        <argsstring>(Vector3 worldPoint)</argsstring>
+        <name>GetClosestTimeOnPath</name>
+        <qualifiedname>PathCreation.VertexPath.GetClosestTimeOnPath</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>worldPoint</declname>
+        </param>
+        <briefdescription>
+<para>Finds the &apos;time&apos; (0=start of path, 1=end of path) along the path that is closest to the given point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="236" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="236" bodyend="239"/>
+        <references refid="class_path_creation_1_1_vertex_path_1a7f1e4c16d9822b5348cad52c738981c0" compoundref="_vertex_path_8cs" startline="298" endline="327">VertexPath.CalculateClosestPointOnPathData</references>
+        <references refid="class_path_creation_1_1_vertex_path_1aab5f889fde82379662ac21a0e5ff2c1e" compoundref="_vertex_path_8cs" startline="25">VertexPath.times</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1a8053ea41c3b34896a2caf2a38a16479a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float GetClosestDistanceAlongPath</definition>
+        <argsstring>(Vector3 worldPoint)</argsstring>
+        <name>GetClosestDistanceAlongPath</name>
+        <qualifiedname>PathCreation.VertexPath.GetClosestDistanceAlongPath</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>worldPoint</declname>
+        </param>
+        <briefdescription>
+<para>Finds the distance along the path that is closest to the given point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="242" column="22" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="242" bodyend="245"/>
+        <references refid="class_path_creation_1_1_vertex_path_1a7f1e4c16d9822b5348cad52c738981c0" compoundref="_vertex_path_8cs" startline="298" endline="327">VertexPath.CalculateClosestPointOnPathData</references>
+        <references refid="class_path_creation_1_1_vertex_path_1a4181ef3ca1db9c0393401411bdeaabc6" compoundref="_vertex_path_8cs" startline="29">VertexPath.cumulativeLengthAtEachVertex</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>VertexPath</definition>
+        <argsstring>(BezierPath bezierPath, VertexPathUtility.PathSplitData pathSplitData, Transform transform)</argsstring>
+        <name>VertexPath</name>
+        <qualifiedname>PathCreation.VertexPath.VertexPath</qualifiedname>
+        <param>
+          <type><ref refid="class_path_creation_1_1_bezier_path" kindref="compound">BezierPath</ref></type>
+          <declname>bezierPath</declname>
+        </param>
+        <param>
+          <type>VertexPathUtility.PathSplitData</type>
+          <declname>pathSplitData</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+<para>Internal contructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="59" column="9" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="59" bodyend="150"/>
+        <references refid="class_path_creation_1_1_vertex_path_1aed82650136385bdafde91640006b4f10" compoundref="_vertex_path_8cs" startline="31">VertexPath.bounds</references>
+        <references refid="class_path_creation_1_1_vertex_path_1a4181ef3ca1db9c0393401411bdeaabc6" compoundref="_vertex_path_8cs" startline="29">VertexPath.cumulativeLengthAtEachVertex</references>
+        <references refid="class_path_creation_1_1_bezier_path_1a4ef9d3ec8744096f518dc1a650fc26c1" compoundref="_bezier_path_8cs" startline="428" endline="438">BezierPath.FlipNormals</references>
+        <references refid="class_path_creation_1_1_bezier_path_1abe9a53426b4002473d61f85798101296" compoundref="_bezier_path_8cs" startline="441" endline="451">BezierPath.GlobalNormalsAngle</references>
+        <references refid="class_path_creation_1_1_bezier_path_1a26f01b589d00384406eb54173d4d7aca" compoundref="_bezier_path_8cs" startline="179" endline="189">BezierPath.IsClosed</references>
+        <references refid="class_path_creation_1_1_vertex_path_1a50750f3b8c87b4381ad0386692c1e3e5" compoundref="_vertex_path_8cs" startline="27">VertexPath.length</references>
+        <references refid="class_path_creation_1_1_bezier_path_1a0cacc3cec2744929171dc4d0563ea19e" compoundref="_bezier_path_8cs" startline="165" endline="176">BezierPath.Space</references>
+        <references refid="class_path_creation_1_1_vertex_path_1aab5f889fde82379662ac21a0e5ff2c1e" compoundref="_vertex_path_8cs" startline="25">VertexPath.times</references>
+        <references refid="class_path_creation_1_1_vertex_path_1a6767b928b6cb5a8eb12dd70826ac6090" compoundref="_vertex_path_8cs" startline="33">VertexPath.up</references>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1abbff33b1b67be54cbab3775963ec493e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TimeOnPathData</type>
+        <definition>TimeOnPathData CalculatePercentOnPathData</definition>
+        <argsstring>(float t, EndOfPathInstruction endOfPathInstruction)</argsstring>
+        <name>CalculatePercentOnPathData</name>
+        <qualifiedname>PathCreation.VertexPath.CalculatePercentOnPathData</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>EndOfPathInstruction</type>
+          <declname>endOfPathInstruction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For a given value &apos;t&apos; between 0 and 1, calculate the indices of the two vertices before and after t. Also calculate how far t is between those two vertices as a percentage between 0 and 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="253" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="253" bodyend="295"/>
+        <references refid="class_path_creation_1_1_vertex_path_1aab5f889fde82379662ac21a0e5ff2c1e" compoundref="_vertex_path_8cs" startline="25">VertexPath.times</references>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1aa738e0737a6060de2254d26669df14eb" compoundref="_vertex_path_8cs" startline="208" endline="212">VertexPath.GetDirection</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a2e4032694b7fbec56c46d99ba06d2738" compoundref="_vertex_path_8cs" startline="215" endline="219">VertexPath.GetNormal</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1ab9703bbe05d6c4884919fee5842978ca" compoundref="_vertex_path_8cs" startline="202" endline="205">VertexPath.GetPointAtTime</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a65c5ec446381a6cd300aa3e16712ca4d" compoundref="_vertex_path_8cs" startline="222" endline="227">VertexPath.GetRotation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_vertex_path_1a7f1e4c16d9822b5348cad52c738981c0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TimeOnPathData</type>
+        <definition>TimeOnPathData CalculateClosestPointOnPathData</definition>
+        <argsstring>(Vector3 worldPoint)</argsstring>
+        <name>CalculateClosestPointOnPathData</name>
+        <qualifiedname>PathCreation.VertexPath.CalculateClosestPointOnPathData</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>worldPoint</declname>
+        </param>
+        <briefdescription>
+<para>Calculate time data for closest point on the path from given world point. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="298" column="24" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="298" bodyend="327"/>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1a8053ea41c3b34896a2caf2a38a16479a" compoundref="_vertex_path_8cs" startline="242" endline="245">VertexPath.GetClosestDistanceAlongPath</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1ae0a294d13ca50315c743d9a6e74b31b6" compoundref="_vertex_path_8cs" startline="230" endline="233">VertexPath.GetClosestPointOnPath</referencedby>
+        <referencedby refid="class_path_creation_1_1_vertex_path_1add1d94ca38d101e394c85e3c030ed5c7" compoundref="_vertex_path_8cs" startline="236" endline="239">VertexPath.GetClosestTimeOnPath</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A vertex path is a collection of points (vertices) that lie along a bezier path. This allows one to do things like move at a constant speed along the path, which is not possible with a bezier path directly due to how they&apos;re constructed mathematically. This class also provides methods for getting the position along the path at a certain distance or time (where time = 0 is the start of the path, and time = 1 is the end of the path). Other info about the path (tangents, normals, rotation) can also be retrieved in this manner. </para>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" line="15" column="11" bodyfile="Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs" bodystart="15" bodyend="343"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_vertex_path_1ae07211373500741ea0d9e9f6d8375b2e" prot="private" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>accuracy</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1aed82650136385bdafde91640006b4f10" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>bounds</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a7f1e4c16d9822b5348cad52c738981c0" prot="private" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>CalculateClosestPointOnPathData</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1abbff33b1b67be54cbab3775963ec493e" prot="private" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>CalculatePercentOnPathData</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a4181ef3ca1db9c0393401411bdeaabc6" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>cumulativeLengthAtEachVertex</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a8053ea41c3b34896a2caf2a38a16479a" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetClosestDistanceAlongPath</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1ae0a294d13ca50315c743d9a6e74b31b6" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetClosestPointOnPath</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1add1d94ca38d101e394c85e3c030ed5c7" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetClosestTimeOnPath</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1aa738e0737a6060de2254d26669df14eb" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetDirection</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a18dd6b53cb280969264c9316c8dc60e7" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetDirectionAtDistance</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a69a37b0f43a4785ca6e325d859a3e23b" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetNormal</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a2e4032694b7fbec56c46d99ba06d2738" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetNormal</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a4c1400968e85e9398e9372cd6e52db46" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetNormalAtDistance</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1ac10693c4893962dc444193eba614e6e2" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetPoint</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a5437a41d4b84126c2b6987f83dcd3da9" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetPointAtDistance</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1ab9703bbe05d6c4884919fee5842978ca" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetPointAtTime</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a65c5ec446381a6cd300aa3e16712ca4d" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetRotation</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1ab2a060e662072e4e85f6bb299efcdff6" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetRotationAtDistance</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a47ced66a3095a38b9687acf700752aa6" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>GetTangent</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a7377613f86d9a6fdcbc9c55bbc9fec90" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>isClosedLoop</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a50750f3b8c87b4381ad0386692c1e3e5" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>length</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1ae41f348ff2690137935ba2ac2653eddf" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>localNormals</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1aa1c7710bd692f8aa24cabc32199e5ae1" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>localPoints</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a4d9a3d39f8918bdbf2859276e26c5984" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>localTangents</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1ab37e262c65b1134d41ada16a88f72317" prot="private" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>minVertexSpacing</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a76122faf62db75c06e32a6aca7ffd666" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>NumPoints</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1abcf22b33c96ba27b92a08bd596e04fc7" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>space</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1aab5f889fde82379662ac21a0e5ff2c1e" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>times</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a3f876c0d44b53e6012881c448fcfd757" prot="private" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>transform</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a6767b928b6cb5a8eb12dd70826ac6090" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>up</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a1c4134e496e170fe60265d3716883aa7" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>UpdateTransform</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a68993b6cc3ef582ffc8df88009d98fbc" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>VertexPath</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1aa26ae65380456e3ad114515ba2dccb4b" prot="public" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>VertexPath</name></member>
+      <member refid="class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25" prot="private" virt="non-virtual"><scope>PathCreation::VertexPath</scope><name>VertexPath</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

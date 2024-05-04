@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_editor" xml:lang="en-US">
+<title>PathCreation.Examples.PathSceneToolEditor Class Reference</title>
+<indexterm><primary>PathCreation.Examples.PathSceneToolEditor</primary></indexterm>
+Inheritance diagram for PathCreation.Examples.PathSceneToolEditor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_examples_1_1_path_scene_tool_editor__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for PathCreation.Examples.PathSceneToolEditor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_examples_1_1_path_scene_tool_editor__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a632dc4127478be27f9815060f08068af">OnInspectorGUI</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1acbce28bf7d2038121e9d4feb0550313a">OnPathModified</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a2d2206af13703a34b56ef101685956c3">OnEnable</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a47c911b454822b1214078858391465c1">Subscribe</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool">PathSceneTool</link> <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a301666c2df5ad2531c57b5008b3675aa">pathTool</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__path_scene_tool_editor_8cs_source_1l00008">8</link> of file <link linkend="__path_scene_tool_editor_8cs_source">PathSceneToolEditor.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a2d2206af13703a34b56ef101685956c3"/><section>
+    <title>OnEnable()</title>
+<indexterm><primary>OnEnable</primary><secondary>PathCreation.Examples.PathSceneToolEditor</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSceneToolEditor</primary><secondary>OnEnable</secondary></indexterm>
+<para><computeroutput>virtual void PathCreation.Examples.PathSceneToolEditor.OnEnable ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__path_scene_tool_editor_8cs_source_1l00062">62</link> of file <link linkend="__path_scene_tool_editor_8cs_source">PathSceneToolEditor.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a632dc4127478be27f9815060f08068af"/><section>
+    <title>OnInspectorGUI()</title>
+<indexterm><primary>OnInspectorGUI</primary><secondary>PathCreation.Examples.PathSceneToolEditor</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSceneToolEditor</primary><secondary>OnInspectorGUI</secondary></indexterm>
+<para><computeroutput>override void PathCreation.Examples.PathSceneToolEditor.OnInspectorGUI ( )</computeroutput></para><para>
+Definition at line <link linkend="__path_scene_tool_editor_8cs_source_1l00013">13</link> of file <link linkend="__path_scene_tool_editor_8cs_source">PathSceneToolEditor.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1acbce28bf7d2038121e9d4feb0550313a"/><section>
+    <title>OnPathModified()</title>
+<indexterm><primary>OnPathModified</primary><secondary>PathCreation.Examples.PathSceneToolEditor</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSceneToolEditor</primary><secondary>OnPathModified</secondary></indexterm>
+<para><computeroutput>virtual void PathCreation.Examples.PathSceneToolEditor.OnPathModified ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__path_scene_tool_editor_8cs_source_1l00054">54</link> of file <link linkend="__path_scene_tool_editor_8cs_source">PathSceneToolEditor.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a47c911b454822b1214078858391465c1"/><section>
+    <title>Subscribe()</title>
+<indexterm><primary>Subscribe</primary><secondary>PathCreation.Examples.PathSceneToolEditor</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSceneToolEditor</primary><secondary>Subscribe</secondary></indexterm>
+<para><computeroutput>virtual void PathCreation.Examples.PathSceneToolEditor.Subscribe ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__path_scene_tool_editor_8cs_source_1l00081">81</link> of file <link linkend="__path_scene_tool_editor_8cs_source">PathSceneToolEditor.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a301666c2df5ad2531c57b5008b3675aa"/><section>
+    <title>pathTool</title>
+<indexterm><primary>pathTool</primary><secondary>PathCreation.Examples.PathSceneToolEditor</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSceneToolEditor</primary><secondary>pathTool</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool">PathSceneTool</link> PathCreation.Examples.PathSceneToolEditor.pathTool<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__path_scene_tool_editor_8cs_source_1l00010">10</link> of file <link linkend="__path_scene_tool_editor_8cs_source">PathSceneToolEditor.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Examples/Scripts/Editor/PathSceneToolEditor.cs</section>
+</section>

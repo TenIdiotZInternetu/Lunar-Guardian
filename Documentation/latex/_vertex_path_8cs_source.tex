@@ -1,0 +1,318 @@
+\doxysection{Vertex\+Path.\+cs}
+\hypertarget{_vertex_path_8cs_source}{}\label{_vertex_path_8cs_source}\index{Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs@{Tools/PathCreator/Core/Runtime/Objects/VertexPath.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_path_creation_1_1_utility}{PathCreation.Utility}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_path_creation}{PathCreation}}\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00015}\mbox{\hyperlink{class_path_creation_1_1_vertex_path}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_path_creation_1_1_vertex_path}{VertexPath}}\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00016}00016\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Fields}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ PathSpace\ space;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{bool}\ isClosedLoop;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ Vector3[]\ localPoints;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ Vector3[]\ localTangents;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ Vector3[]\ localNormals;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00025}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_aab5f889fde82379662ac21a0e5ff2c1e}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{float}[]\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_aab5f889fde82379662ac21a0e5ff2c1e}{times}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00027}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a50750f3b8c87b4381ad0386692c1e3e5}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a50750f3b8c87b4381ad0386692c1e3e5}{length}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00029}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a4181ef3ca1db9c0393401411bdeaabc6}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{float}[]\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a4181ef3ca1db9c0393401411bdeaabc6}{cumulativeLengthAtEachVertex}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00031}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_aed82650136385bdafde91640006b4f10}{00031}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ Bounds\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_aed82650136385bdafde91640006b4f10}{bounds}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00033}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a6767b928b6cb5a8eb12dd70826ac6090}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a6767b928b6cb5a8eb12dd70826ac6090}{up}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Default\ values\ and\ constants:\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ accuracy\ =\ 10;\ \textcolor{comment}{//\ A\ scalar\ for\ how\ many\ times\ bezier\ path\ is\ divided\ when\ determining\ vertex\ positions}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ minVertexSpacing\ =\ .01f;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ Transform\ transform;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00041}00041\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00043}00043\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Constructors}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00048}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a68993b6cc3ef582ffc8df88009d98fbc}{00048}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a68993b6cc3ef582ffc8df88009d98fbc}{VertexPath}}\ (\mbox{\hyperlink{class_path_creation_1_1_bezier_path}{BezierPath}}\ bezierPath,\ Transform\ transform,\ \textcolor{keywordtype}{float}\ maxAngleError\ =\ 0.3f,\ \textcolor{keywordtype}{float}\ minVertexDst\ =\ 0):}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ this\ (bezierPath,\ VertexPathUtility.SplitBezierPathByAngleError\ (bezierPath,\ maxAngleError,\ minVertexDst,\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path}{VertexPath}}.accuracy),\ transform)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00055}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_aa26ae65380456e3ad114515ba2dccb4b}{00055}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_aa26ae65380456e3ad114515ba2dccb4b}{VertexPath}}\ (\mbox{\hyperlink{class_path_creation_1_1_bezier_path}{BezierPath}}\ bezierPath,\ Transform\ transform,\ \textcolor{keywordtype}{float}\ vertexSpacing):}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ this\ (bezierPath,\ VertexPathUtility.SplitBezierPathEvenly\ (bezierPath,\ Mathf.Max\ (vertexSpacing,\ minVertexSpacing),\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path}{VertexPath}}.accuracy),\ transform)\ \{\ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00059}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a60f1cb3d737307551a166f9733072c25}{00059}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a60f1cb3d737307551a166f9733072c25}{VertexPath}}\ (\mbox{\hyperlink{class_path_creation_1_1_bezier_path}{BezierPath}}\ bezierPath,\ VertexPathUtility.PathSplitData\ pathSplitData,\ Transform\ transform)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ this.transform\ =\ transform;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ space\ =\ bezierPath.\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a0cacc3cec2744929171dc4d0563ea19e}{Space}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ isClosedLoop\ =\ bezierPath.\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a26f01b589d00384406eb54173d4d7aca}{IsClosed}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numVerts\ =\ pathSplitData.vertices.Count;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a50750f3b8c87b4381ad0386692c1e3e5}{length}}\ =\ pathSplitData.cumulativeLength[numVerts\ -\/\ 1];}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ localPoints\ =\ \textcolor{keyword}{new}\ Vector3[numVerts];}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ localNormals\ =\ \textcolor{keyword}{new}\ Vector3[numVerts];}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ localTangents\ =\ \textcolor{keyword}{new}\ Vector3[numVerts];}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a4181ef3ca1db9c0393401411bdeaabc6}{cumulativeLengthAtEachVertex}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[numVerts];}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_aab5f889fde82379662ac21a0e5ff2c1e}{times}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[numVerts];}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_aed82650136385bdafde91640006b4f10}{bounds}}\ =\ \textcolor{keyword}{new}\ Bounds\ ((pathSplitData.minMax.Min\ +\ pathSplitData.minMax.Max)\ /\ 2,\ pathSplitData.minMax.Max\ -\/\ pathSplitData.minMax.Min);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Figure\ out\ up\ direction\ for\ path}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a6767b928b6cb5a8eb12dd70826ac6090}{up}}\ =\ (bounds.size.z\ >\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_aed82650136385bdafde91640006b4f10}{bounds}}.size.y)\ ?\ Vector3.up\ :\ -\/Vector3.forward;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ lastRotationAxis\ =\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a6767b928b6cb5a8eb12dd70826ac6090}{up}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Loop\ through\ the\ data\ and\ assign\ to\ arrays.}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ localPoints.Length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ localPoints[i]\ =\ pathSplitData.vertices[i];}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ localTangents[i]\ =\ pathSplitData.tangents[i];}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a4181ef3ca1db9c0393401411bdeaabc6}{cumulativeLengthAtEachVertex}}[i]\ =\ pathSplitData.cumulativeLength[i];}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_aab5f889fde82379662ac21a0e5ff2c1e}{times}}[i]\ =\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a4181ef3ca1db9c0393401411bdeaabc6}{cumulativeLengthAtEachVertex}}[i]\ /\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a50750f3b8c87b4381ad0386692c1e3e5}{length}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ normals}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (space\ ==\ PathSpace.xyz)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ localNormals[0]\ =\ Vector3.Cross\ (lastRotationAxis,\ pathSplitData.tangents[0]).normalized;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ First\ reflection}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ offset\ =\ (localPoints[i]\ -\/\ localPoints[i\ -\/\ 1]);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sqrDst\ =\ offset.sqrMagnitude;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ r\ =\ lastRotationAxis\ -\/\ offset\ *\ 2\ /\ sqrDst\ *\ Vector3.Dot\ (offset,\ lastRotationAxis);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ t\ =\ localTangents[i\ -\/\ 1]\ -\/\ offset\ *\ 2\ /\ sqrDst\ *\ Vector3.Dot\ (offset,\ localTangents[i\ -\/\ 1]);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Second\ reflection}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ v2\ =\ localTangents[i]\ -\/\ t;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ c2\ =\ Vector3.Dot\ (v2,\ v2);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ finalRot\ =\ r\ -\/\ v2\ *\ 2\ /\ c2\ *\ Vector3.Dot\ (v2,\ r);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ n\ =\ Vector3.Cross\ (finalRot,\ localTangents[i]).normalized;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ localNormals[i]\ =\ n;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastRotationAxis\ =\ finalRot;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ localNormals[i]\ =\ Vector3.Cross\ (localTangents[i],\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a6767b928b6cb5a8eb12dd70826ac6090}{up}})\ *\ ((bezierPath.\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a4ef9d3ec8744096f518dc1a650fc26c1}{FlipNormals}})\ ?\ 1\ :\ -\/1);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Apply\ correction\ for\ 3d\ normals\ along\ a\ closed\ path}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (space\ ==\ PathSpace.xyz\ \&\&\ isClosedLoop)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ angle\ between\ first\ and\ last\ normal\ (if\ zero,\ they're\ already\ lined\ up,\ otherwise\ we\ need\ to\ correct)}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ normalsAngleErrorAcrossJoin\ =\ Vector3.SignedAngle\ (localNormals[localNormals.Length\ -\/\ 1],\ localNormals[0],\ localTangents[0]);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Gradually\ rotate\ the\ normals\ along\ the\ path\ to\ ensure\ start\ and\ end\ normals\ line\ up\ correctly}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Mathf.Abs\ (normalsAngleErrorAcrossJoin)\ >\ 0.1f)\ \textcolor{comment}{//\ don't\ bother\ correcting\ if\ very\ nearly\ correct}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ localNormals.Length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ (i\ /\ (localNormals.Length\ -\/\ 1f));}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ normalsAngleErrorAcrossJoin\ *\ t;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Quaternion\ rot\ =\ Quaternion.AngleAxis\ (angle,\ localTangents[i]);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ localNormals[i]\ =\ rot\ *\ localNormals[i]\ *\ ((bezierPath.\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a4ef9d3ec8744096f518dc1a650fc26c1}{FlipNormals}})\ ?\ -\/1\ :\ 1);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rotate\ normals\ to\ match\ up\ with\ user-\/defined\ anchor\ angles}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (space\ ==\ PathSpace.xyz)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ anchorIndex\ =\ 0;\ anchorIndex\ <\ pathSplitData.anchorVertexMap.Count\ -\/\ 1;\ anchorIndex++)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nextAnchorIndex\ =\ (isClosedLoop)\ ?\ (anchorIndex\ +\ 1)\ \%\ bezierPath.NumSegments\ :\ anchorIndex\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ startAngle\ =\ bezierPath.GetAnchorNormalAngle\ (anchorIndex)\ +\ bezierPath.\mbox{\hyperlink{class_path_creation_1_1_bezier_path_abe9a53426b4002473d61f85798101296}{GlobalNormalsAngle}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ endAngle\ =\ bezierPath.GetAnchorNormalAngle\ (nextAnchorIndex)\ +\ bezierPath.\mbox{\hyperlink{class_path_creation_1_1_bezier_path_abe9a53426b4002473d61f85798101296}{GlobalNormalsAngle}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ deltaAngle\ =\ Mathf.DeltaAngle\ (startAngle,\ endAngle);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ startVertIndex\ =\ pathSplitData.anchorVertexMap[anchorIndex];}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ endVertIndex\ =\ pathSplitData.anchorVertexMap[anchorIndex\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ num\ =\ endVertIndex\ -\/\ startVertIndex;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (anchorIndex\ ==\ pathSplitData.anchorVertexMap.Count\ -\/\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ num\ +=\ 1;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ num;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ vertIndex\ =\ startVertIndex\ +\ i;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ i\ /\ (num\ -\/\ 1f);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ startAngle\ +\ deltaAngle\ *\ t;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Quaternion\ rot\ =\ Quaternion.AngleAxis\ (angle,\ localTangents[vertIndex]);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ localNormals[vertIndex]\ =\ (rot\ *\ localNormals[vertIndex])\ *\ ((bezierPath.\mbox{\hyperlink{class_path_creation_1_1_bezier_path_a4ef9d3ec8744096f518dc1a650fc26c1}{FlipNormals}})\ ?\ -\/1\ :\ 1);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00152}00152\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00154}00154\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Public\ methods\ and\ accessors}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ UpdateTransform\ (Transform\ transform)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ this.transform\ =\ transform;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ NumPoints\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ localPoints.Length;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ GetTangent\ (\textcolor{keywordtype}{int}\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ MathUtility.TransformDirection\ (localTangents[index],\ transform,\ space);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ GetNormal\ (\textcolor{keywordtype}{int}\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ MathUtility.TransformDirection\ (localNormals[index],\ transform,\ space);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ GetPoint\ (\textcolor{keywordtype}{int}\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ MathUtility.TransformPoint\ (localPoints[index],\ transform,\ space);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00178}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a5437a41d4b84126c2b6987f83dcd3da9}{00178}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a5437a41d4b84126c2b6987f83dcd3da9}{GetPointAtDistance}}\ (\textcolor{keywordtype}{float}\ dst,\ EndOfPathInstruction\ endOfPathInstruction\ =\ EndOfPathInstruction.Loop)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ dst\ /\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a50750f3b8c87b4381ad0386692c1e3e5}{length}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_ab9703bbe05d6c4884919fee5842978ca}{GetPointAtTime}}\ (t,\ endOfPathInstruction);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00184}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a18dd6b53cb280969264c9316c8dc60e7}{00184}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a18dd6b53cb280969264c9316c8dc60e7}{GetDirectionAtDistance}}\ (\textcolor{keywordtype}{float}\ dst,\ EndOfPathInstruction\ endOfPathInstruction\ =\ EndOfPathInstruction.Loop)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ dst\ /\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a50750f3b8c87b4381ad0386692c1e3e5}{length}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_aa738e0737a6060de2254d26669df14eb}{GetDirection}}\ (t,\ endOfPathInstruction);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00190}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a4c1400968e85e9398e9372cd6e52db46}{00190}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a4c1400968e85e9398e9372cd6e52db46}{GetNormalAtDistance}}\ (\textcolor{keywordtype}{float}\ dst,\ EndOfPathInstruction\ endOfPathInstruction\ =\ EndOfPathInstruction.Loop)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ dst\ /\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a50750f3b8c87b4381ad0386692c1e3e5}{length}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetNormal\ (t,\ endOfPathInstruction);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00196}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_ab2a060e662072e4e85f6bb299efcdff6}{00196}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Quaternion\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_ab2a060e662072e4e85f6bb299efcdff6}{GetRotationAtDistance}}\ (\textcolor{keywordtype}{float}\ dst,\ EndOfPathInstruction\ endOfPathInstruction\ =\ EndOfPathInstruction.Loop)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ dst\ /\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a50750f3b8c87b4381ad0386692c1e3e5}{length}};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a65c5ec446381a6cd300aa3e16712ca4d}{GetRotation}}\ (t,\ endOfPathInstruction);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00202}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_ab9703bbe05d6c4884919fee5842978ca}{00202}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_ab9703bbe05d6c4884919fee5842978ca}{GetPointAtTime}}\ (\textcolor{keywordtype}{float}\ t,\ EndOfPathInstruction\ endOfPathInstruction\ =\ EndOfPathInstruction.Loop)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ var\ data\ =\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_abbff33b1b67be54cbab3775963ec493e}{CalculatePercentOnPathData}}\ (t,\ endOfPathInstruction);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Vector3.Lerp\ (GetPoint\ (data.previousIndex),\ GetPoint\ (data.nextIndex),\ data.percentBetweenIndices);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00208}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_aa738e0737a6060de2254d26669df14eb}{00208}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_aa738e0737a6060de2254d26669df14eb}{GetDirection}}\ (\textcolor{keywordtype}{float}\ t,\ EndOfPathInstruction\ endOfPathInstruction\ =\ EndOfPathInstruction.Loop)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ var\ data\ =\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_abbff33b1b67be54cbab3775963ec493e}{CalculatePercentOnPathData}}\ (t,\ endOfPathInstruction);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ dir\ =\ Vector3.Lerp\ (localTangents[data.previousIndex],\ localTangents[data.nextIndex],\ data.percentBetweenIndices);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ MathUtility.TransformDirection\ (dir,\ transform,\ space);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00213}00213\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00215}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a2e4032694b7fbec56c46d99ba06d2738}{00215}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a2e4032694b7fbec56c46d99ba06d2738}{GetNormal}}\ (\textcolor{keywordtype}{float}\ t,\ EndOfPathInstruction\ endOfPathInstruction\ =\ EndOfPathInstruction.Loop)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ var\ data\ =\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_abbff33b1b67be54cbab3775963ec493e}{CalculatePercentOnPathData}}\ (t,\ endOfPathInstruction);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ normal\ =\ Vector3.Lerp\ (localNormals[data.previousIndex],\ localNormals[data.nextIndex],\ data.percentBetweenIndices);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ MathUtility.TransformDirection\ (normal,\ transform,\ space);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00222}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a65c5ec446381a6cd300aa3e16712ca4d}{00222}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Quaternion\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a65c5ec446381a6cd300aa3e16712ca4d}{GetRotation}}\ (\textcolor{keywordtype}{float}\ t,\ EndOfPathInstruction\ endOfPathInstruction\ =\ EndOfPathInstruction.Loop)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ var\ data\ =\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_abbff33b1b67be54cbab3775963ec493e}{CalculatePercentOnPathData}}\ (t,\ endOfPathInstruction);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ direction\ =\ Vector3.Lerp\ (localTangents[data.previousIndex],\ localTangents[data.nextIndex],\ data.percentBetweenIndices);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ normal\ =\ Vector3.Lerp\ (localNormals[data.previousIndex],\ localNormals[data.nextIndex],\ data.percentBetweenIndices);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Quaternion.LookRotation\ (MathUtility.TransformDirection\ (direction,\ transform,\ space),\ MathUtility.TransformDirection\ (normal,\ transform,\ space));}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00230}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_ae0a294d13ca50315c743d9a6e74b31b6}{00230}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_ae0a294d13ca50315c743d9a6e74b31b6}{GetClosestPointOnPath}}\ (Vector3\ worldPoint)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ TimeOnPathData\ data\ =\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a7f1e4c16d9822b5348cad52c738981c0}{CalculateClosestPointOnPathData}}\ (worldPoint);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Vector3.Lerp\ (GetPoint\ (data.previousIndex),\ GetPoint\ (data.nextIndex),\ data.percentBetweenIndices);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00236}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_add1d94ca38d101e394c85e3c030ed5c7}{00236}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_add1d94ca38d101e394c85e3c030ed5c7}{GetClosestTimeOnPath}}\ (Vector3\ worldPoint)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ TimeOnPathData\ data\ =\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a7f1e4c16d9822b5348cad52c738981c0}{CalculateClosestPointOnPathData}}\ (worldPoint);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Mathf.Lerp\ (\mbox{\hyperlink{class_path_creation_1_1_vertex_path_aab5f889fde82379662ac21a0e5ff2c1e}{times}}[data.previousIndex],\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_aab5f889fde82379662ac21a0e5ff2c1e}{times}}[data.nextIndex],\ data.percentBetweenIndices);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00242}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a8053ea41c3b34896a2caf2a38a16479a}{00242}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a8053ea41c3b34896a2caf2a38a16479a}{GetClosestDistanceAlongPath}}\ (Vector3\ worldPoint)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ TimeOnPathData\ data\ =\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a7f1e4c16d9822b5348cad52c738981c0}{CalculateClosestPointOnPathData}}\ (worldPoint);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Mathf.Lerp\ (\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a4181ef3ca1db9c0393401411bdeaabc6}{cumulativeLengthAtEachVertex}}[data.previousIndex],\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a4181ef3ca1db9c0393401411bdeaabc6}{cumulativeLengthAtEachVertex}}[data.nextIndex],\ data.percentBetweenIndices);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00247}00247\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00249}00249\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Internal\ methods}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00250}00250\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00253}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_abbff33b1b67be54cbab3775963ec493e}{00253}}\ \ \ \ \ \ \ \ \ TimeOnPathData\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_abbff33b1b67be54cbab3775963ec493e}{CalculatePercentOnPathData}}\ (\textcolor{keywordtype}{float}\ t,\ EndOfPathInstruction\ endOfPathInstruction)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Constrain\ t\ based\ on\ the\ end\ of\ path\ instruction}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (endOfPathInstruction)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ EndOfPathInstruction.Loop:}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ t\ is\ negative,\ make\ it\ the\ equivalent\ value\ between\ 0\ and\ 1}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (t\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t\ +=\ Mathf.CeilToInt\ (Mathf.Abs\ (t));}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t\ \%=\ 1;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ EndOfPathInstruction.Reverse:}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t\ =\ Mathf.PingPong\ (t,\ 1);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ EndOfPathInstruction.Stop:}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t\ =\ Mathf.Clamp01\ (t);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00270}00270\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ prevIndex\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nextIndex\ =\ NumPoints\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ Mathf.RoundToInt\ (t\ *\ (NumPoints\ -\/\ 1));\ \textcolor{comment}{//\ starting\ guess}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Starts\ by\ looking\ at\ middle\ vertex\ and\ determines\ if\ t\ lies\ to\ the\ left\ or\ to\ the\ right\ of\ that\ vertex.}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Continues\ dividing\ in\ half\ until\ closest\ surrounding\ vertices\ have\ been\ found.}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ t\ lies\ to\ left}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (t\ <=\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_aab5f889fde82379662ac21a0e5ff2c1e}{times}}[i])\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextIndex\ =\ i;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ t\ lies\ to\ right}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ prevIndex\ =\ i;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i\ =\ (nextIndex\ +\ prevIndex)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nextIndex\ -\/\ prevIndex\ <=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ abPercent\ =\ Mathf.InverseLerp\ (\mbox{\hyperlink{class_path_creation_1_1_vertex_path_aab5f889fde82379662ac21a0e5ff2c1e}{times}}[prevIndex],\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_aab5f889fde82379662ac21a0e5ff2c1e}{times}}[nextIndex],\ t);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ TimeOnPathData\ (prevIndex,\ nextIndex,\ abPercent);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00295}00295\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00298}\mbox{\hyperlink{class_path_creation_1_1_vertex_path_a7f1e4c16d9822b5348cad52c738981c0}{00298}}\ \ \ \ \ \ \ \ \ TimeOnPathData\ \mbox{\hyperlink{class_path_creation_1_1_vertex_path_a7f1e4c16d9822b5348cad52c738981c0}{CalculateClosestPointOnPathData}}\ (Vector3\ worldPoint)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ minSqrDst\ =\ \textcolor{keywordtype}{float}.MaxValue;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ closestPoint\ =\ Vector3.zero;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ closestSegmentIndexA\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ closestSegmentIndexB\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ localPoints.Length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nextI\ =\ i\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nextI\ >=\ localPoints.Length)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isClosedLoop)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nextI\ \%=\ localPoints.Length;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00313}00313\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ closestPointOnSegment\ =\ MathUtility.ClosestPointOnLineSegment\ (worldPoint,\ GetPoint\ (i),\ GetPoint\ (nextI));}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sqrDst\ =\ (worldPoint\ -\/\ closestPointOnSegment).sqrMagnitude;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sqrDst\ <\ minSqrDst)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minSqrDst\ =\ sqrDst;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ closestPoint\ =\ closestPointOnSegment;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ closestSegmentIndexA\ =\ i;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ closestSegmentIndexB\ =\ nextI;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00322}00322\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ closestSegmentLength\ =\ (GetPoint\ (closestSegmentIndexA)\ -\/\ GetPoint\ (closestSegmentIndexB)).magnitude;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ (closestPoint\ -\/\ GetPoint\ (closestSegmentIndexA)).magnitude\ /\ closestSegmentLength;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ TimeOnPathData\ (closestSegmentIndexA,\ closestSegmentIndexB,\ t);}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00327}00327\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00328}00328\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00329}00329\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{struct\ }TimeOnPathData\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{int}\ previousIndex;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{int}\ nextIndex;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ readonly\ \textcolor{keywordtype}{float}\ percentBetweenIndices;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00333}00333\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ TimeOnPathData\ (\textcolor{keywordtype}{int}\ prev,\ \textcolor{keywordtype}{int}\ next,\ \textcolor{keywordtype}{float}\ percentBetweenIndices)\ \{}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.previousIndex\ =\ prev;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.nextIndex\ =\ next;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.percentBetweenIndices\ =\ percentBetweenIndices;}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00339}00339\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00340}00340\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00341}00341\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00342}00342\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00343}00343\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00344}00344\ }
+\DoxyCodeLine{\Hypertarget{_vertex_path_8cs_source_l00345}00345\ \}}
+
+\end{DoxyCode}

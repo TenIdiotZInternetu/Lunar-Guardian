@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner" xml:lang="en-US">
+<title>EnemySpawner Class Reference</title>
+<indexterm><primary>EnemySpawner</primary></indexterm>
+<para>
+
+<para>Repeatedly spawns specified enemies at a given interval. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_1ad6d3141bf24aaf85fa7573865a1934f6"/>GameObject <emphasis role="strong">prefab</emphasis></para>
+
+<para>A prefab of the enemy to spawn. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_1a97df6cb71ca1ed54f2f4fadb312c9bb3"/>float <emphasis role="strong">interval</emphasis> = 1f</para>
+
+<para>Time between spawns in seconds. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_1a07debaa5993cfc8e6ecde1f620c7135a"/>int <emphasis role="strong">maxCount</emphasis></para>
+
+<para>Total amount of enemies spawned during the spawner&apos;s lifetime. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__enemy_spawner_8cs_source_1l00008">8</link> of file <link linkend="__enemy_spawner_8cs_source">EnemySpawner.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/Spawnables/EnemyScripts/EnemySpawner.cs</section>
+</section>

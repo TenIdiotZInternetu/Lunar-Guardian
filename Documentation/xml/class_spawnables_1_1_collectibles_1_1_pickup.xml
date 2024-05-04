@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_collectibles_1_1_pickup" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Collectibles::Pickup</compoundname>
+    <basecompoundref refid="class_spawnables_1_1_entity" prot="public" virt="non-virtual">Spawnables.Entity</basecompoundref>
+    <derivedcompoundref refid="class_spawnables_1_1_collectibles_1_1_multiplier_pickup" prot="public" virt="non-virtual">Spawnables.Collectibles.MultiplierPickup</derivedcompoundref>
+    <innerclass refid="class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward" prot="public">Spawnables::Collectibles::Pickup::Reward</innerclass>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_collectibles_1_1_pickup_1a8fcc8cbafe8ad22cf01d65332b92e6bd" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward" kindref="compound">Reward</ref> &gt;</type>
+        <definition>List&lt;Reward&gt; Spawnables.Collectibles.Pickup.rewards</definition>
+        <argsstring></argsstring>
+        <name>rewards</name>
+        <qualifiedname>Spawnables.Collectibles.Pickup.rewards</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" line="17" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_collectibles_1_1_pickup_1ab24a9e144689aca2209f670e5fb0bb60" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Collectibles.Pickup.OnTriggerEnter2D</definition>
+        <argsstring>(Collider2D other)</argsstring>
+        <name>OnTriggerEnter2D</name>
+        <qualifiedname>Spawnables.Collectibles.Pickup.OnTriggerEnter2D</qualifiedname>
+        <param>
+          <type>Collider2D</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" line="19" column="14" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" bodystart="19" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_collectibles_1_1_pickup_1ad47b0e12f2c325aeab53da31c30e545b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Collectibles.Pickup.GiveRewards</definition>
+        <argsstring>()</argsstring>
+        <name>GiveRewards</name>
+        <qualifiedname>Spawnables.Collectibles.Pickup.GiveRewards</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" line="26" column="14" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" bodystart="26" bodyend="32"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="class_spawnables_1_1_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.Collectibles.Pickup</label>
+        <link refid="class_spawnables_1_1_collectibles_1_1_pickup"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Spawnables.Collectibles.MultiplierPickup</label>
+        <link refid="class_spawnables_1_1_collectibles_1_1_multiplier_pickup"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="class_spawnables_1_1_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>movementPattern</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="4">
+        <label>MovementPatterns.MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Spawnables.Collectibles.Pickup</label>
+        <link refid="class_spawnables_1_1_collectibles_1_1_pickup"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" line="8" column="11" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs" bodystart="9" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_entity_1a0e534e0a5dc3d5be68d63adf023d1a87" prot="public" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup</scope><name>ChangeMovementPattern</name></member>
+      <member refid="class_spawnables_1_1_collectibles_1_1_pickup_1ad47b0e12f2c325aeab53da31c30e545b" prot="private" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup</scope><name>GiveRewards</name></member>
+      <member refid="class_spawnables_1_1_entity_1a38bd7c6d5011258e88d49a831fff7cc8" prot="public" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup</scope><name>LifeTime</name></member>
+      <member refid="class_spawnables_1_1_entity_1ac77f3047be8fba42b0df52f38ed755dc" prot="public" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup</scope><name>movementPattern</name></member>
+      <member refid="class_spawnables_1_1_entity_1ad43fe32eadfb0c50037d0c68993e5852" prot="public" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup</scope><name>MPLifeTime</name></member>
+      <member refid="class_spawnables_1_1_entity_1a19b1b8096e1697f6e627e1ed81cba513" prot="protected" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup</scope><name>OnEnable</name></member>
+      <member refid="class_spawnables_1_1_collectibles_1_1_pickup_1ab24a9e144689aca2209f670e5fb0bb60" prot="private" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup</scope><name>OnTriggerEnter2D</name></member>
+      <member refid="class_spawnables_1_1_collectibles_1_1_pickup_1a8fcc8cbafe8ad22cf01d65332b92e6bd" prot="public" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup</scope><name>rewards</name></member>
+      <member refid="class_spawnables_1_1_entity_1a706c0dab9a89aa357b001e391a9a4e3f" prot="public" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup</scope><name>SpawnKey</name></member>
+      <member refid="class_spawnables_1_1_entity_1aa8e60f085b3ac758ec502d2f8a830781" prot="public" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup</scope><name>StartMoving</name></member>
+      <member refid="class_spawnables_1_1_entity_1a2a4297fee39fb117430d93d334670fcb" prot="public" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup</scope><name>StopMoving</name></member>
+      <member refid="class_spawnables_1_1_entity_1a47e9d6e9fce6ff417b777a1e87d892dc" prot="protected" virt="non-virtual"><scope>Spawnables::Collectibles::Pickup</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

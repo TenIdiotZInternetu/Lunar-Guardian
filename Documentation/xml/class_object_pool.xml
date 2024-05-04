@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_object_pool" kind="class" language="C#" prot="public">
+    <compoundname>ObjectPool</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_object_pool_1ae4082629f930fa65c38c07bc412ff102" prot="private" static="yes" mutable="no">
+        <type>Transform</type>
+        <definition>Transform ObjectPool.ParentTransform</definition>
+        <argsstring></argsstring>
+        <name>ParentTransform</name>
+        <qualifiedname>ObjectPool.ParentTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="11" column="30" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_object_pool_1a42516eea413de7b8afb7da411618a9da" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject ObjectPool.prefab</definition>
+        <argsstring></argsstring>
+        <name>prefab</name>
+        <qualifiedname>ObjectPool.prefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="13" column="23" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_object_pool_1a0ab880931d73baa36bf85bdae8e7f6cf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ObjectPool.initialPoolSize</definition>
+        <argsstring></argsstring>
+        <name>initialPoolSize</name>
+        <qualifiedname>ObjectPool.initialPoolSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="14" column="16" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_object_pool_1a2c93c70189083a88ac259caeae004377" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ObjectPool.maxPoolSize</definition>
+        <argsstring></argsstring>
+        <name>maxPoolSize</name>
+        <qualifiedname>ObjectPool.maxPoolSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="15" column="16" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_object_pool_1a0edca499564cd8ed5779e04f259904d6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string ObjectPool.Key</definition>
+        <argsstring></argsstring>
+        <name>Key</name>
+        <qualifiedname>ObjectPool.Key</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="17" column="19" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_object_pool_1a238997c72efec0a521e347b65eed5950" prot="private" static="no" mutable="no">
+        <type>Queue&lt; GameObject &gt;</type>
+        <definition>Queue&lt;GameObject&gt; ObjectPool.pool</definition>
+        <argsstring></argsstring>
+        <name>pool</name>
+        <qualifiedname>ObjectPool.pool</qualifiedname>
+        <initializer>= new()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="19" column="19" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_object_pool_1ab30f2d8580bd909c3653470096d635a6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ObjectPool.poolSize</definition>
+        <argsstring></argsstring>
+        <name>poolSize</name>
+        <qualifiedname>ObjectPool.poolSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="20" column="17" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_object_pool_1aefca7bd7c365523946998b27c700df72" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ObjectPool.availableInstances</definition>
+        <argsstring></argsstring>
+        <name>availableInstances</name>
+        <qualifiedname>ObjectPool.availableInstances</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="21" column="17" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_object_pool_1abf40b460e5e42f05c2ca724d8003ff4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ObjectPool.Populate</definition>
+        <argsstring>()</argsstring>
+        <name>Populate</name>
+        <qualifiedname>ObjectPool.Populate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="23" column="17" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="23" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_object_pool_1a820e0005eeba26ea498771fe10b8cd58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ObjectPool.Enqueue</definition>
+        <argsstring>(GameObject obj)</argsstring>
+        <name>Enqueue</name>
+        <qualifiedname>ObjectPool.Enqueue</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="36" column="17" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="36" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_object_pool_1ada018594a7f449b2635c2749c8df626d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>GameObject</type>
+        <definition>GameObject ObjectPool.Extract</definition>
+        <argsstring>()</argsstring>
+        <name>Extract</name>
+        <qualifiedname>ObjectPool.Extract</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="42" column="23" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="42" bodyend="62"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_object_pool_1a95d214c454db30d6beb22d39e932521a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ObjectPool.SetParentTransform</definition>
+        <argsstring>(Transform parentTransform)</argsstring>
+        <name>SetParentTransform</name>
+        <qualifiedname>ObjectPool.SetParentTransform</qualifiedname>
+        <param>
+          <type>Transform</type>
+          <declname>parentTransform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="64" column="24" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="64" bodyend="67"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" line="9" column="7" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs" bodystart="10" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_object_pool_1aefca7bd7c365523946998b27c700df72" prot="private" virt="non-virtual"><scope>ObjectPool</scope><name>availableInstances</name></member>
+      <member refid="class_object_pool_1a820e0005eeba26ea498771fe10b8cd58" prot="public" virt="non-virtual"><scope>ObjectPool</scope><name>Enqueue</name></member>
+      <member refid="class_object_pool_1ada018594a7f449b2635c2749c8df626d" prot="public" virt="non-virtual"><scope>ObjectPool</scope><name>Extract</name></member>
+      <member refid="class_object_pool_1a0ab880931d73baa36bf85bdae8e7f6cf" prot="public" virt="non-virtual"><scope>ObjectPool</scope><name>initialPoolSize</name></member>
+      <member refid="class_object_pool_1a0edca499564cd8ed5779e04f259904d6" prot="public" virt="non-virtual"><scope>ObjectPool</scope><name>Key</name></member>
+      <member refid="class_object_pool_1a2c93c70189083a88ac259caeae004377" prot="public" virt="non-virtual"><scope>ObjectPool</scope><name>maxPoolSize</name></member>
+      <member refid="class_object_pool_1ae4082629f930fa65c38c07bc412ff102" prot="private" virt="non-virtual"><scope>ObjectPool</scope><name>ParentTransform</name></member>
+      <member refid="class_object_pool_1a238997c72efec0a521e347b65eed5950" prot="private" virt="non-virtual"><scope>ObjectPool</scope><name>pool</name></member>
+      <member refid="class_object_pool_1ab30f2d8580bd909c3653470096d635a6" prot="private" virt="non-virtual"><scope>ObjectPool</scope><name>poolSize</name></member>
+      <member refid="class_object_pool_1abf40b460e5e42f05c2ca724d8003ff4c" prot="public" virt="non-virtual"><scope>ObjectPool</scope><name>Populate</name></member>
+      <member refid="class_object_pool_1a42516eea413de7b8afb7da411618a9da" prot="public" virt="non-virtual"><scope>ObjectPool</scope><name>prefab</name></member>
+      <member refid="class_object_pool_1a95d214c454db30d6beb22d39e932521a" prot="public" virt="non-virtual"><scope>ObjectPool</scope><name>SetParentTransform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

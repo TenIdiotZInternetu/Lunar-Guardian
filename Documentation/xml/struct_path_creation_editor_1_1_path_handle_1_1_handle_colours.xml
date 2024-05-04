@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours" kind="struct" language="C#" prot="public">
+    <compoundname>PathCreationEditor::PathHandle::HandleColours</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a981652c4498369f298672e8ee2bff8a5" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color defaultColour</definition>
+        <argsstring></argsstring>
+        <name>defaultColour</name>
+        <qualifiedname>PathCreationEditor.PathHandle.HandleColours.defaultColour</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/PathHandle.cs" line="184" column="26" bodyfile="Tools/PathCreator/Core/Editor/Helper/PathHandle.cs" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a19e958a64417f6e5d8518d1c6e9f38c9" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color highlightedColour</definition>
+        <argsstring></argsstring>
+        <name>highlightedColour</name>
+        <qualifiedname>PathCreationEditor.PathHandle.HandleColours.highlightedColour</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/PathHandle.cs" line="185" column="26" bodyfile="Tools/PathCreator/Core/Editor/Helper/PathHandle.cs" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1aa62eeb995510351427d39c50345117cc" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color selectedColour</definition>
+        <argsstring></argsstring>
+        <name>selectedColour</name>
+        <qualifiedname>PathCreationEditor.PathHandle.HandleColours.selectedColour</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/PathHandle.cs" line="186" column="26" bodyfile="Tools/PathCreator/Core/Editor/Helper/PathHandle.cs" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1ae704ad9ba114ff35d5b1b142bd1e45a2" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color disabledColour</definition>
+        <argsstring></argsstring>
+        <name>disabledColour</name>
+        <qualifiedname>PathCreationEditor.PathHandle.HandleColours.disabledColour</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/PathHandle.cs" line="187" column="26" bodyfile="Tools/PathCreator/Core/Editor/Helper/PathHandle.cs" bodystart="187" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1ab05e8a7c6d82d028c74f4d7cff3788e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HandleColours</definition>
+        <argsstring>(Color defaultColour, Color highlightedColour, Color selectedColour, Color disabledColour)</argsstring>
+        <name>HandleColours</name>
+        <qualifiedname>PathCreationEditor.PathHandle.HandleColours.HandleColours</qualifiedname>
+        <param>
+          <type>Color</type>
+          <declname>defaultColour</declname>
+        </param>
+        <param>
+          <type>Color</type>
+          <declname>highlightedColour</declname>
+        </param>
+        <param>
+          <type>Color</type>
+          <declname>selectedColour</declname>
+        </param>
+        <param>
+          <type>Color</type>
+          <declname>disabledColour</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/PathHandle.cs" line="189" column="20" bodyfile="Tools/PathCreator/Core/Editor/Helper/PathHandle.cs" bodystart="189" bodyend="195"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Editor/Helper/PathHandle.cs" line="182" column="15" bodyfile="Tools/PathCreator/Core/Editor/Helper/PathHandle.cs" bodystart="183" bodyend="196"/>
+    <listofallmembers>
+      <member refid="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a981652c4498369f298672e8ee2bff8a5" prot="public" virt="non-virtual"><scope>PathCreationEditor::PathHandle::HandleColours</scope><name>defaultColour</name></member>
+      <member refid="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1ae704ad9ba114ff35d5b1b142bd1e45a2" prot="public" virt="non-virtual"><scope>PathCreationEditor::PathHandle::HandleColours</scope><name>disabledColour</name></member>
+      <member refid="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1ab05e8a7c6d82d028c74f4d7cff3788e3" prot="public" virt="non-virtual"><scope>PathCreationEditor::PathHandle::HandleColours</scope><name>HandleColours</name></member>
+      <member refid="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a19e958a64417f6e5d8518d1c6e9f38c9" prot="public" virt="non-virtual"><scope>PathCreationEditor::PathHandle::HandleColours</scope><name>highlightedColour</name></member>
+      <member refid="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1aa62eeb995510351427d39c50345117cc" prot="public" virt="non-virtual"><scope>PathCreationEditor::PathHandle::HandleColours</scope><name>selectedColour</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

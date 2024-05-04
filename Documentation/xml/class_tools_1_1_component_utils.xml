@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_tools_1_1_component_utils" kind="class" language="C#" prot="public">
+    <compoundname>Tools::ComponentUtils</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_tools_1_1_component_utils_1a451c1bbf3b1f4d5d8933382cf2dfebb6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>static T ReplaceComponent&lt; T &gt;</definition>
+        <argsstring>(T original, T replacement)</argsstring>
+        <name>ReplaceComponent&lt; T &gt;</name>
+        <qualifiedname>Tools.ComponentUtils.ReplaceComponent&lt; T &gt;</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>original</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>replacement</declname>
+        </param>
+        <briefdescription>
+<para>Overwrites the values of all fields of a component with the values of another component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>original</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The overwritten component </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replacement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component with desired values </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the component </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The original component with overwritten values </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/ComponentUtils.cs" line="18" column="23" bodyfile="Tools/ComponentUtils.cs" bodystart="18" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A collection of utilities for working with Components. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/ComponentUtils.cs" line="9" column="19" bodyfile="Tools/ComponentUtils.cs" bodystart="10" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_tools_1_1_component_utils_1a451c1bbf3b1f4d5d8933382cf2dfebb6" prot="public" virt="non-virtual"><scope>Tools::ComponentUtils</scope><name>ReplaceComponent&lt; T &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

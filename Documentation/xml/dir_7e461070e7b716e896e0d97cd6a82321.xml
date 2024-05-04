@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_7e461070e7b716e896e0d97cd6a82321" kind="dir">
+    <compoundname>Tools</compoundname>
+    <innerdir refid="dir_ed2d530ddda526c610c7ef2cf02b77b6">Tools/PathCreator</innerdir>
+    <innerfile refid="_component_utils_8cs">ComponentUtils.cs</innerfile>
+    <innerfile refid="_custom_events_8cs">CustomEvents.cs</innerfile>
+    <innerfile refid="_scene_reference_8cs">SceneReference.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/"/>
+  </compounddef>
+</doxygen>

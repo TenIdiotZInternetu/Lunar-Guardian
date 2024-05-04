@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool" xml:lang="en-US">
+<title>PathCreation.Examples.PathSceneTool Class Reference</title>
+<indexterm><primary>PathCreation.Examples.PathSceneTool</primary></indexterm>
+Inheritance diagram for PathCreation.Examples.PathSceneTool:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_examples_1_1_path_scene_tool__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for PathCreation.Examples.PathSceneTool:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_examples_1_1_path_scene_tool__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1aa341e881e4581ab0612442b623375db2">TriggerUpdate</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_path_creation_1_1_path_creator">PathCreator</link> <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1acc49024bbd6fea74d56f071789022594">pathCreator</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1ab9d47ca76d42b8ca2ca2f5a4498d1da5">autoUpdate</link> = true</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1a1eefdc23d778713205de0eb65d3d5dc1">OnDestroy</link> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_1ac2a18ea9d847029bd8bf029313adfd3c"/>void <emphasis role="strong">PathUpdated</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_path_creation_1_1_vertex_path">VertexPath</link> <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1a532e008bb82cbd1c9d928f669253ddd8">path</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para>System.Action <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1ae513084a84a343f4998ccc8d7f878ee2">onDestroyed</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__path_scene_tool_8cs_source_1l00006">6</link> of file <link linkend="__path_scene_tool_8cs_source">PathSceneTool.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_1a1eefdc23d778713205de0eb65d3d5dc1"/><section>
+    <title>OnDestroy()</title>
+<indexterm><primary>OnDestroy</primary><secondary>PathCreation.Examples.PathSceneTool</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSceneTool</primary><secondary>OnDestroy</secondary></indexterm>
+<para><computeroutput>virtual void PathCreation.Examples.PathSceneTool.OnDestroy ( )<computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__path_scene_tool_8cs_source_1l00023">23</link> of file <link linkend="__path_scene_tool_8cs_source">PathSceneTool.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_1aa341e881e4581ab0612442b623375db2"/><section>
+    <title>TriggerUpdate()</title>
+<indexterm><primary>TriggerUpdate</primary><secondary>PathCreation.Examples.PathSceneTool</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSceneTool</primary><secondary>TriggerUpdate</secondary></indexterm>
+<para><computeroutput>void PathCreation.Examples.PathSceneTool.TriggerUpdate ( )</computeroutput></para><para>
+Definition at line <link linkend="__path_scene_tool_8cs_source_1l00018">18</link> of file <link linkend="__path_scene_tool_8cs_source">PathSceneTool.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_1ab9d47ca76d42b8ca2ca2f5a4498d1da5"/><section>
+    <title>autoUpdate</title>
+<indexterm><primary>autoUpdate</primary><secondary>PathCreation.Examples.PathSceneTool</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSceneTool</primary><secondary>autoUpdate</secondary></indexterm>
+<para><computeroutput>bool PathCreation.Examples.PathSceneTool.autoUpdate = true</computeroutput></para><para>
+Definition at line <link linkend="__path_scene_tool_8cs_source_1l00010">10</link> of file <link linkend="__path_scene_tool_8cs_source">PathSceneTool.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_1acc49024bbd6fea74d56f071789022594"/><section>
+    <title>pathCreator</title>
+<indexterm><primary>pathCreator</primary><secondary>PathCreation.Examples.PathSceneTool</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSceneTool</primary><secondary>pathCreator</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_path_creator">PathCreator</link> PathCreation.Examples.PathSceneTool.pathCreator</computeroutput></para><para>
+Definition at line <link linkend="__path_scene_tool_8cs_source_1l00009">9</link> of file <link linkend="__path_scene_tool_8cs_source">PathSceneTool.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_1a532e008bb82cbd1c9d928f669253ddd8"/><section>
+    <title>path</title>
+<indexterm><primary>path</primary><secondary>PathCreation.Examples.PathSceneTool</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSceneTool</primary><secondary>path</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_vertex_path">VertexPath</link> PathCreation.Examples.PathSceneTool.path<computeroutput>[get]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__path_scene_tool_8cs_source_1l00012">12</link> of file <link linkend="__path_scene_tool_8cs_source">PathSceneTool.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Event Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_scene_tool_1ae513084a84a343f4998ccc8d7f878ee2"/><section>
+    <title>onDestroyed</title>
+<indexterm><primary>onDestroyed</primary><secondary>PathCreation.Examples.PathSceneTool</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSceneTool</primary><secondary>onDestroyed</secondary></indexterm>
+<para><computeroutput>System.Action PathCreation.Examples.PathSceneTool.onDestroyed</computeroutput></para><para>
+Definition at line <link linkend="__path_scene_tool_8cs_source_1l00008">8</link> of file <link linkend="__path_scene_tool_8cs_source">PathSceneTool.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Examples/Scripts/PathSceneTool.cs</section>
+</section>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_3cddccd99fe7e20486718da927e45f1c" kind="dir">
+    <compoundname>Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Examples/Scripts</compoundname>
+    <innerdir refid="dir_4289810fb90bdb48cd0f8712e405dbb8">Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Examples/Scripts/Editor</innerdir>
+    <innerfile refid="_generate_path_example_8cs">GeneratePathExample.cs</innerfile>
+    <innerfile refid="_path_follower_8cs">PathFollower.cs</innerfile>
+    <innerfile refid="_path_placer_8cs">PathPlacer.cs</innerfile>
+    <innerfile refid="_path_scene_tool_8cs">PathSceneTool.cs</innerfile>
+    <innerfile refid="_path_spawner_8cs">PathSpawner.cs</innerfile>
+    <innerfile refid="_road_mesh_creator_8cs">RoadMeshCreator.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Examples/Scripts/"/>
+  </compounddef>
+</doxygen>

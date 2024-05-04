@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_v_f_x_1_1_pan_camera" kind="class" language="C#" prot="public">
+    <compoundname>VFX::PanCamera</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_v_f_x_1_1_pan_camera_1a2008f4ab70b5e4104c2ca43932536ddf" prot="public" static="no" mutable="no">
+        <type>Camera</type>
+        <definition>Camera camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <qualifiedname>VFX.PanCamera.camera</qualifiedname>
+        <briefdescription>
+<para>Camera to pan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/PanCamera.cs" line="17" column="23" bodyfile="Scripts/VFX/PanCamera.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_pan_camera_1a94137b92fe146aa56a9aea3e94aefd0a" prot="public" static="no" mutable="no">
+        <type>Vector3</type>
+        <definition>Vector3 targetPosition</definition>
+        <argsstring></argsstring>
+        <name>targetPosition</name>
+        <qualifiedname>VFX.PanCamera.targetPosition</qualifiedname>
+        <briefdescription>
+<para>Final position of the camera after the pan. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/PanCamera.cs" line="22" column="24" bodyfile="Scripts/VFX/PanCamera.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_pan_camera_1a515dbc8cdce3d6b2091228e7c6d2036f" prot="public" static="no" mutable="no">
+        <type>AnimationCurve</type>
+        <definition>AnimationCurve curve</definition>
+        <argsstring></argsstring>
+        <name>curve</name>
+        <qualifiedname>VFX.PanCamera.curve</qualifiedname>
+        <briefdescription>
+<para>Portion of the distance travelled by the camera towards the target position over time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/PanCamera.cs" line="27" column="31" bodyfile="Scripts/VFX/PanCamera.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_v_f_x_1_1_pan_camera_1a7cc5efcfaf1700331f7c5ed6b38fae16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PanToPosition</definition>
+        <argsstring>()</argsstring>
+        <name>PanToPosition</name>
+        <qualifiedname>VFX.PanCamera.PanToPosition</qualifiedname>
+        <briefdescription>
+<para>Starts smoothly moving the camera to the target position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/PanCamera.cs" line="34" column="21" bodyfile="Scripts/VFX/PanCamera.cs" bodystart="34" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_v_f_x_1_1_pan_camera_1ab81e7dfad7c872ec7af658ef87dbaf10" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator Pan</definition>
+        <argsstring>()</argsstring>
+        <name>Pan</name>
+        <qualifiedname>VFX.PanCamera.Pan</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/PanCamera.cs" line="43" column="29" bodyfile="Scripts/VFX/PanCamera.cs" bodystart="43" bodyend="55"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Smoothly pans the camera to a target position. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/VFX/PanCamera.cs" line="10" column="11" bodyfile="Scripts/VFX/PanCamera.cs" bodystart="11" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_v_f_x_1_1_pan_camera_1a2008f4ab70b5e4104c2ca43932536ddf" prot="public" virt="non-virtual"><scope>VFX::PanCamera</scope><name>camera</name></member>
+      <member refid="class_v_f_x_1_1_pan_camera_1a515dbc8cdce3d6b2091228e7c6d2036f" prot="public" virt="non-virtual"><scope>VFX::PanCamera</scope><name>curve</name></member>
+      <member refid="class_v_f_x_1_1_pan_camera_1ab81e7dfad7c872ec7af658ef87dbaf10" prot="private" virt="non-virtual"><scope>VFX::PanCamera</scope><name>Pan</name></member>
+      <member refid="class_v_f_x_1_1_pan_camera_1a7cc5efcfaf1700331f7c5ed6b38fae16" prot="public" virt="non-virtual"><scope>VFX::PanCamera</scope><name>PanToPosition</name></member>
+      <member refid="class_v_f_x_1_1_pan_camera_1a94137b92fe146aa56a9aea3e94aefd0a" prot="public" virt="non-virtual"><scope>VFX::PanCamera</scope><name>targetPosition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

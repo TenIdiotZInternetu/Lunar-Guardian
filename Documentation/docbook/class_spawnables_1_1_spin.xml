@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_spin" xml:lang="en-US">
+<title>Spin Class Reference</title>
+<indexterm><primary>Spin</primary></indexterm>
+<para>
+
+<para>Rotates the object each frame. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_spin_1aa7acf4963bf20f52909be8da9a763001"/>void <emphasis role="strong">ChangeDirection</emphasis> ()</para>
+
+<para>Changes the direction of rotation from clockwise to counterclockwise or vice versa. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_spawnables_1_1_spin_1a61f6c71bc4b9fbeea12a3554c9882857">ChangeSpeed</link> (float newSpeed)</para>
+
+<para>Sets the angular speed to a new value. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_spin_1ad1de9af57e9b1558e00f6c1bfb55842e"/>float <emphasis role="strong">angularSpeed</emphasis></para>
+
+<para>Amount of degrees to rotate per second. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__spin_8cs_source_1l00009">9</link> of file <link linkend="__spin_8cs_source">Spin.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_spin_1a61f6c71bc4b9fbeea12a3554c9882857"/><section>
+    <title>ChangeSpeed()</title>
+<indexterm><primary>ChangeSpeed</primary><secondary>Spin</secondary></indexterm>
+<indexterm><primary>Spin</primary><secondary>ChangeSpeed</secondary></indexterm>
+<para><computeroutput>void ChangeSpeed (float newSpeed)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>newSpeed</entry><entry>
+<para>New value of the angular speed </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__spin_8cs_source_1l00040">40</link> of file <link linkend="__spin_8cs_source">Spin.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/Spawnables/Spin.cs</section>
+</section>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_v_f_x_1_1_fade_canvas" xml:lang="en-US">
+<title>FadeCanvas Class Reference</title>
+<indexterm><primary>FadeCanvas</primary></indexterm>
+<para>
+
+<para>Changes the alpha of a canvas to either 0 or 1 over time. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_v_f_x_1_1_fade_canvas_1ae2c4f195150adc0cabf7f4fa4afe0c7a">FadeIn</link> (float fadeInTime)</para>
+
+<para>Changes the alpha of the canvas to 1 over time. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_v_f_x_1_1_fade_canvas_1ac1978d4dd30acb338999e1adad433d9c">FadeOut</link> (float fadeOutTime)</para>
+
+<para>Changes the alpha of the canvas to 0 over time. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_v_f_x_1_1_fade_canvas_1a120ff4ee3aab964959da68032a0fc061"/>float <emphasis role="strong">fadeInDelay</emphasis></para>
+
+<para>Time before the FadeIn starts. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_v_f_x_1_1_fade_canvas_1a50a0d1597750af40fa53cb13c01821f5"/>float <emphasis role="strong">fadeOutDelay</emphasis></para>
+
+<para>Time before the FadeOut starts. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__fade_canvas_8cs_source_1l00010">10</link> of file <link linkend="__fade_canvas_8cs_source">FadeCanvas.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_v_f_x_1_1_fade_canvas_1ae2c4f195150adc0cabf7f4fa4afe0c7a"/><section>
+    <title>FadeIn()</title>
+<indexterm><primary>FadeIn</primary><secondary>FadeCanvas</secondary></indexterm>
+<indexterm><primary>FadeCanvas</primary><secondary>FadeIn</secondary></indexterm>
+<para><computeroutput>void FadeIn (float fadeInTime)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fadeInTime</entry><entry>
+<para>Time it takes to fully fade in </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__fade_canvas_8cs_source_1l00041">41</link> of file <link linkend="__fade_canvas_8cs_source">FadeCanvas.cs</link>.</para>
+</section>
+<anchor xml:id="_class_v_f_x_1_1_fade_canvas_1ac1978d4dd30acb338999e1adad433d9c"/><section>
+    <title>FadeOut()</title>
+<indexterm><primary>FadeOut</primary><secondary>FadeCanvas</secondary></indexterm>
+<indexterm><primary>FadeCanvas</primary><secondary>FadeOut</secondary></indexterm>
+<para><computeroutput>void FadeOut (float fadeOutTime)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fadeOutTime</entry><entry>
+<para>Time it takes to fully fade out </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__fade_canvas_8cs_source_1l00050">50</link> of file <link linkend="__fade_canvas_8cs_source">FadeCanvas.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/VFX/FadeCanvas.cs</section>
+</section>

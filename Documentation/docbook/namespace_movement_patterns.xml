@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_movement_patterns" xml:lang="en-US">
+<title>MovementPatterns Namespace Reference</title>
+<indexterm><primary>MovementPatterns</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_movement_patterns_1_1_chasing_m_p">ChasingMP</link></para>
+
+<para>Entity chases a target for a set amount of time and then continues in a straight line. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_movement_patterns_1_1_follow_path">FollowPath</link></para>
+
+<para>Utilizes PathCreator tool created by Sebastian Lague. Traces a path and moves along it. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_movement_patterns_1_1_linear_m_p">LinearMP</link></para>
+
+<para>Moves along a straight line. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link></para>
+
+<para>Defines calculations for the position of an entity in the next frame based on its properties. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_movement_patterns_1_1_orbiting_m_p">OrbitingMP</link></para>
+
+<para>Forms a circular orbit around targeted object. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_movement_patterns_1_1_sinusoid_m_p">SinusoidMP</link></para>
+
+<para>Produces and follows a sine wave shaped path. The sine wave can be rotated by specifying the axis of oscillation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

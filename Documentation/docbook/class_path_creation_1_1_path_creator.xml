@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_1_1_path_creator" xml:lang="en-US">
+<title>PathCreation.PathCreator Class Reference</title>
+<indexterm><primary>PathCreation.PathCreator</primary></indexterm>
+Inheritance diagram for PathCreation.PathCreator:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_path_creator__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for PathCreation.PathCreator:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_path_creator__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_path_creation_1_1_path_creator_1aa347403c687e5919c2fc99a9a846aced">InitializeEditorData</link> (bool in2DMode)</para>
+
+<para>Used by the path editor to initialise some data. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_path_creation_1_1_path_creator_1aa9fa4f3cd20b93accf1493b8c66fa097">TriggerPathUpdate</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_path_creation_1_1_vertex_path">VertexPath</link> <link linkend="_class_path_creation_1_1_path_creator_1aeaf90ca7a50890078e76b3c04ca7f963">path</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link> <link linkend="_class_path_creation_1_1_path_creator_1acfa0352f2eb010859748e3ac36377671">bezierPath</link><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><link linkend="_class_path_creation_1_1_path_creator_data">PathCreatorData</link> <link linkend="_class_path_creation_1_1_path_creator_1a59443b6007a8bde2f1405767307d0d28">EditorData</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para>System.Action <link linkend="_class_path_creation_1_1_path_creator_1a46e7b251ac3dfc1e28d2355c55dd7984">pathUpdated</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__path_creator_8cs_source_1l00005">5</link> of file <link linkend="__path_creator_8cs_source">PathCreator.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_path_creator_1aa347403c687e5919c2fc99a9a846aced"/><section>
+    <title>InitializeEditorData()</title>
+<indexterm><primary>InitializeEditorData</primary><secondary>PathCreation.PathCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.PathCreator</primary><secondary>InitializeEditorData</secondary></indexterm>
+<para><computeroutput>void PathCreation.PathCreator.InitializeEditorData (bool in2DMode)</computeroutput></para><para>
+
+<para>Used by the path editor to initialise some data. </para>
+</para>
+<para>
+Definition at line <link linkend="__path_creator_8cs_source_1l00048">48</link> of file <link linkend="__path_creator_8cs_source">PathCreator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_path_creator_1aa9fa4f3cd20b93accf1493b8c66fa097"/><section>
+    <title>TriggerPathUpdate()</title>
+<indexterm><primary>TriggerPathUpdate</primary><secondary>PathCreation.PathCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.PathCreator</primary><secondary>TriggerPathUpdate</secondary></indexterm>
+<para><computeroutput>void PathCreation.PathCreator.TriggerPathUpdate ( )</computeroutput></para><para>
+Definition at line <link linkend="__path_creator_8cs_source_1l00066">66</link> of file <link linkend="__path_creator_8cs_source">PathCreator.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_path_creator_1acfa0352f2eb010859748e3ac36377671"/><section>
+    <title>bezierPath</title>
+<indexterm><primary>bezierPath</primary><secondary>PathCreation.PathCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.PathCreator</primary><secondary>bezierPath</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link> PathCreation.PathCreator.bezierPath<computeroutput>[get]</computeroutput>, <computeroutput>[set]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__path_creator_8cs_source_1l00030">30</link> of file <link linkend="__path_creator_8cs_source">PathCreator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_path_creator_1a59443b6007a8bde2f1405767307d0d28"/><section>
+    <title>EditorData</title>
+<indexterm><primary>EditorData</primary><secondary>PathCreation.PathCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.PathCreator</primary><secondary>EditorData</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_path_creator_data">PathCreatorData</link> PathCreation.PathCreator.EditorData<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__path_creator_8cs_source_1l00059">59</link> of file <link linkend="__path_creator_8cs_source">PathCreator.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_path_creator_1aeaf90ca7a50890078e76b3c04ca7f963"/><section>
+    <title>path</title>
+<indexterm><primary>path</primary><secondary>PathCreation.PathCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.PathCreator</primary><secondary>path</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_vertex_path">VertexPath</link> PathCreation.PathCreator.path<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__path_creator_8cs_source_1l00020">20</link> of file <link linkend="__path_creator_8cs_source">PathCreator.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Event Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_path_creator_1a46e7b251ac3dfc1e28d2355c55dd7984"/><section>
+    <title>pathUpdated</title>
+<indexterm><primary>pathUpdated</primary><secondary>PathCreation.PathCreator</secondary></indexterm>
+<indexterm><primary>PathCreation.PathCreator</primary><secondary>pathUpdated</secondary></indexterm>
+<para><computeroutput>System.Action PathCreation.PathCreator.pathUpdated</computeroutput></para>
+<para>This class stores data for the path editor, and provides accessors to get the current vertex and bezier path. Attach to a GameObject to create a new path editor. </para>
+<para>
+Definition at line <link linkend="__path_creator_8cs_source_1l00010">10</link> of file <link linkend="__path_creator_8cs_source">PathCreator.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs</section>
+</section>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_d104e616dfbc4130cf87aa40e156018e" kind="dir">
+    <compoundname>Tools/PathCreator/Core/Runtime/Utility</compoundname>
+    <innerfile refid="_cubic_bezier_utility_8cs">CubicBezierUtility.cs</innerfile>
+    <innerfile refid="_math_utility_8cs">MathUtility.cs</innerfile>
+    <innerfile refid="_vertex_path_utility_8cs">VertexPathUtility.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Runtime/Utility/"/>
+  </compounddef>
+</doxygen>

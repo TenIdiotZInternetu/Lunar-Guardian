@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_u_i" kind="namespace" language="C#">
+    <compoundname>UI</compoundname>
+    <innerclass refid="class_u_i_1_1_menu_screen" prot="public">UI::MenuScreen</innerclass>
+    <innerclass refid="class_u_i_1_1_text_display" prot="public">UI::TextDisplay</innerclass>
+    <innerclass refid="class_u_i_1_1_u_i_bar" prot="public">UI::UIBar</innerclass>
+    <innernamespace refid="namespace_u_i_1_1_menus">UI::Menus</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/UI/Menus/CreditsScreen.cs" line="6" column="1"/>
+  </compounddef>
+</doxygen>

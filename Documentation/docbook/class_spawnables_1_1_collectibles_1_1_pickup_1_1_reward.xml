@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward" xml:lang="en-US">
+<title>Spawnables.Collectibles.Pickup.Reward Class Reference</title>
+<indexterm><primary>Spawnables.Collectibles.Pickup.Reward</primary></indexterm>
+Collaboration diagram for Spawnables.Collectibles.Pickup.Reward:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>PlayerStatus.ResourceType <link linkend="_class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward_1ac3edde316e992ccd7c1eabfbfe6137a3">type</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward_1ad54bec290ec5af092e4b891e437aeb14">amount</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pickup_8cs_source_1l00011">11</link> of file <link linkend="__pickup_8cs_source">Pickup.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward_1ad54bec290ec5af092e4b891e437aeb14"/><section>
+    <title>amount</title>
+<indexterm><primary>amount</primary><secondary>Spawnables.Collectibles.Pickup.Reward</secondary></indexterm>
+<indexterm><primary>Spawnables.Collectibles.Pickup.Reward</primary><secondary>amount</secondary></indexterm>
+<para><computeroutput>int Spawnables.Collectibles.Pickup.Reward.amount</computeroutput></para><para>
+Definition at line <link linkend="__pickup_8cs_source_1l00014">14</link> of file <link linkend="__pickup_8cs_source">Pickup.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_collectibles_1_1_pickup_1_1_reward_1ac3edde316e992ccd7c1eabfbfe6137a3"/><section>
+    <title>type</title>
+<indexterm><primary>type</primary><secondary>Spawnables.Collectibles.Pickup.Reward</secondary></indexterm>
+<indexterm><primary>Spawnables.Collectibles.Pickup.Reward</primary><secondary>type</secondary></indexterm>
+<para><computeroutput>PlayerStatus.ResourceType Spawnables.Collectibles.Pickup.Reward.type</computeroutput></para><para>
+Definition at line <link linkend="__pickup_8cs_source_1l00013">13</link> of file <link linkend="__pickup_8cs_source">Pickup.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Pickups/Pickup.cs</section>
+</section>

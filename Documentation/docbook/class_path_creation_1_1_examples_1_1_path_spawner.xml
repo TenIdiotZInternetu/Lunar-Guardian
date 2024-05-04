@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_1_1_examples_1_1_path_spawner" xml:lang="en-US">
+<title>PathCreation.Examples.PathSpawner Class Reference</title>
+<indexterm><primary>PathCreation.Examples.PathSpawner</primary></indexterm>
+Inheritance diagram for PathCreation.Examples.PathSpawner:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_examples_1_1_path_spawner__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for PathCreation.Examples.PathSpawner:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_examples_1_1_path_spawner__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_path_creation_1_1_path_creator">PathCreator</link> <link linkend="_class_path_creation_1_1_examples_1_1_path_spawner_1a169a3f970b6c4327b387b4c48cfa68d2">pathPrefab</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_path_creation_1_1_examples_1_1_path_follower">PathFollower</link> <link linkend="_class_path_creation_1_1_examples_1_1_path_spawner_1a0b6ff2ed758108f1320678aeefb58f5c">followerPrefab</link></para>
+</listitem>
+            <listitem><para>Transform[] <link linkend="_class_path_creation_1_1_examples_1_1_path_spawner_1a5e2ad4444415b20a736a6e34d43cb9bd">spawnPoints</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__path_spawner_8cs_source_1l00008">8</link> of file <link linkend="__path_spawner_8cs_source">PathSpawner.cs</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_spawner_1a0b6ff2ed758108f1320678aeefb58f5c"/><section>
+    <title>followerPrefab</title>
+<indexterm><primary>followerPrefab</primary><secondary>PathCreation.Examples.PathSpawner</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSpawner</primary><secondary>followerPrefab</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_examples_1_1_path_follower">PathFollower</link> PathCreation.Examples.PathSpawner.followerPrefab</computeroutput></para><para>
+Definition at line <link linkend="__path_spawner_8cs_source_1l00011">11</link> of file <link linkend="__path_spawner_8cs_source">PathSpawner.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_spawner_1a169a3f970b6c4327b387b4c48cfa68d2"/><section>
+    <title>pathPrefab</title>
+<indexterm><primary>pathPrefab</primary><secondary>PathCreation.Examples.PathSpawner</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSpawner</primary><secondary>pathPrefab</secondary></indexterm>
+<para><computeroutput><link linkend="_class_path_creation_1_1_path_creator">PathCreator</link> PathCreation.Examples.PathSpawner.pathPrefab</computeroutput></para><para>
+Definition at line <link linkend="__path_spawner_8cs_source_1l00010">10</link> of file <link linkend="__path_spawner_8cs_source">PathSpawner.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_spawner_1a5e2ad4444415b20a736a6e34d43cb9bd"/><section>
+    <title>spawnPoints</title>
+<indexterm><primary>spawnPoints</primary><secondary>PathCreation.Examples.PathSpawner</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathSpawner</primary><secondary>spawnPoints</secondary></indexterm>
+<para><computeroutput>Transform [] PathCreation.Examples.PathSpawner.spawnPoints</computeroutput></para><para>
+Definition at line <link linkend="__path_spawner_8cs_source_1l00012">12</link> of file <link linkend="__path_spawner_8cs_source">PathSpawner.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Examples/Scripts/PathSpawner.cs</section>
+</section>

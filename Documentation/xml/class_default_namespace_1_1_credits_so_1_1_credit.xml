@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_default_namespace_1_1_credits_so_1_1_credit" kind="class" language="C#" prot="public">
+    <compoundname>DefaultNamespace::CreditsSo::Credit</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_default_namespace_1_1_credits_so_1_1_credit_1a8ccf841cb59e451791bcb2e1ac4f1edc" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>DefaultNamespace.CreditsSo.Credit.name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/CreditsSo.cs" line="14" column="27" bodyfile="Scripts/CreditsSo.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_default_namespace_1_1_credits_so_1_1_credit_1a81d6e458403060f8b587edfd3e9729d6" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string role</definition>
+        <argsstring></argsstring>
+        <name>role</name>
+        <qualifiedname>DefaultNamespace.CreditsSo.Credit.role</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/CreditsSo.cs" line="15" column="27" bodyfile="Scripts/CreditsSo.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/CreditsSo.cs" line="12" column="15" bodyfile="Scripts/CreditsSo.cs" bodystart="13" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_default_namespace_1_1_credits_so_1_1_credit_1a8ccf841cb59e451791bcb2e1ac4f1edc" prot="public" virt="non-virtual"><scope>DefaultNamespace::CreditsSo::Credit</scope><name>name</name></member>
+      <member refid="class_default_namespace_1_1_credits_so_1_1_credit_1a81d6e458403060f8b587edfd3e9729d6" prot="public" virt="non-virtual"><scope>DefaultNamespace::CreditsSo::Credit</scope><name>role</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

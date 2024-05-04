@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_d8fabea03d8baa91dace0c5ded09a54f" kind="dir">
+    <compoundname>Scripts/Spawnables/Weapons</compoundname>
+    <innerdir refid="dir_fbee5d047c9fbb5c0a95c0f826c086ce">Scripts/Spawnables/Weapons/Shootables</innerdir>
+    <innerdir refid="dir_610af70dea24e40b7f2df8fb82ab822d">Scripts/Spawnables/Weapons/WeaponTypes</innerdir>
+    <innerfile refid="_projectile_8cs">Projectile.cs</innerfile>
+    <innerfile refid="_weapon_8cs">Weapon.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Spawnables/Weapons/"/>
+  </compounddef>
+</doxygen>

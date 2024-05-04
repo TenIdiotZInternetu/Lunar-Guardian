@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_b9c7314433364eed58fed0db786fc190" kind="dir">
+    <compoundname>Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Core/Runtime/Objects</compoundname>
+    <innerfile refid="_bezier_path_8cs">BezierPath.cs</innerfile>
+    <innerfile refid="_end_of_path_instruction_8cs">EndOfPathInstruction.cs</innerfile>
+    <innerfile refid="_global_display_settings_8cs">GlobalDisplaySettings.cs</innerfile>
+    <innerfile refid="_min_max3_d_8cs">MinMax3D.cs</innerfile>
+    <innerfile refid="_path_creator_8cs">PathCreator.cs</innerfile>
+    <innerfile refid="_path_creator_data_8cs">PathCreatorData.cs</innerfile>
+    <innerfile refid="_path_space_8cs">PathSpace.cs</innerfile>
+    <innerfile refid="_vertex_path_8cs">VertexPath.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Core/Runtime/Objects/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_object_pool" xml:lang="en-US">
+<title>ObjectPool Class Reference</title>
+<indexterm><primary>ObjectPool</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_object_pool_1abf40b460e5e42f05c2ca724d8003ff4c">Populate</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_object_pool_1a820e0005eeba26ea498771fe10b8cd58">Enqueue</link> (GameObject obj)</para>
+</listitem>
+            <listitem><para>GameObject <link linkend="_class_object_pool_1ada018594a7f449b2635c2749c8df626d">Extract</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_object_pool_1a95d214c454db30d6beb22d39e932521a">SetParentTransform</link> (Transform parentTransform)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>GameObject <link linkend="_class_object_pool_1a42516eea413de7b8afb7da411618a9da">prefab</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_object_pool_1a0ab880931d73baa36bf85bdae8e7f6cf">initialPoolSize</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_object_pool_1a2c93c70189083a88ac259caeae004377">maxPoolSize</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_object_pool_1a0edca499564cd8ed5779e04f259904d6">Key</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00009">9</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_object_pool_1a820e0005eeba26ea498771fe10b8cd58"/><section>
+    <title>Enqueue()</title>
+<indexterm><primary>Enqueue</primary><secondary>ObjectPool</secondary></indexterm>
+<indexterm><primary>ObjectPool</primary><secondary>Enqueue</secondary></indexterm>
+<para><computeroutput>void ObjectPool.Enqueue (GameObject obj)</computeroutput></para><para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00036">36</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+<anchor xml:id="_class_object_pool_1ada018594a7f449b2635c2749c8df626d"/><section>
+    <title>Extract()</title>
+<indexterm><primary>Extract</primary><secondary>ObjectPool</secondary></indexterm>
+<indexterm><primary>ObjectPool</primary><secondary>Extract</secondary></indexterm>
+<para><computeroutput>GameObject ObjectPool.Extract ( )</computeroutput></para><para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00042">42</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+<anchor xml:id="_class_object_pool_1abf40b460e5e42f05c2ca724d8003ff4c"/><section>
+    <title>Populate()</title>
+<indexterm><primary>Populate</primary><secondary>ObjectPool</secondary></indexterm>
+<indexterm><primary>ObjectPool</primary><secondary>Populate</secondary></indexterm>
+<para><computeroutput>void ObjectPool.Populate ( )</computeroutput></para><para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00023">23</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+<anchor xml:id="_class_object_pool_1a95d214c454db30d6beb22d39e932521a"/><section>
+    <title>SetParentTransform()</title>
+<indexterm><primary>SetParentTransform</primary><secondary>ObjectPool</secondary></indexterm>
+<indexterm><primary>ObjectPool</primary><secondary>SetParentTransform</secondary></indexterm>
+<para><computeroutput>static void ObjectPool.SetParentTransform (Transform parentTransform)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00064">64</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_object_pool_1a0ab880931d73baa36bf85bdae8e7f6cf"/><section>
+    <title>initialPoolSize</title>
+<indexterm><primary>initialPoolSize</primary><secondary>ObjectPool</secondary></indexterm>
+<indexterm><primary>ObjectPool</primary><secondary>initialPoolSize</secondary></indexterm>
+<para><computeroutput>int ObjectPool.initialPoolSize</computeroutput></para><para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00014">14</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+<anchor xml:id="_class_object_pool_1a2c93c70189083a88ac259caeae004377"/><section>
+    <title>maxPoolSize</title>
+<indexterm><primary>maxPoolSize</primary><secondary>ObjectPool</secondary></indexterm>
+<indexterm><primary>ObjectPool</primary><secondary>maxPoolSize</secondary></indexterm>
+<para><computeroutput>int ObjectPool.maxPoolSize</computeroutput></para><para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00015">15</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+<anchor xml:id="_class_object_pool_1a42516eea413de7b8afb7da411618a9da"/><section>
+    <title>prefab</title>
+<indexterm><primary>prefab</primary><secondary>ObjectPool</secondary></indexterm>
+<indexterm><primary>ObjectPool</primary><secondary>prefab</secondary></indexterm>
+<para><computeroutput>GameObject ObjectPool.prefab</computeroutput></para><para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00013">13</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Property Documentation</title>
+<anchor xml:id="_class_object_pool_1a0edca499564cd8ed5779e04f259904d6"/><section>
+    <title>Key</title>
+<indexterm><primary>Key</primary><secondary>ObjectPool</secondary></indexterm>
+<indexterm><primary>ObjectPool</primary><secondary>Key</secondary></indexterm>
+<para><computeroutput>string ObjectPool.Key<computeroutput>[get]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__object_pool_8cs_source_1l00017">17</link> of file <link linkend="__object_pool_8cs_source">ObjectPool.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/ObjectPool.cs</section>
+</section>

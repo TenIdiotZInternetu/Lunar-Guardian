@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interface_spawnables_1_1_weapons_1_1_i_shootable" xml:lang="en-US">
+<title>IShootable Interface Reference</title>
+<indexterm><primary>IShootable</primary></indexterm>
+<para>
+
+<para>Contract for entities activated by a weapon, able to hurt either enemies or the player. </para>
+ 
+</para>
+<para>Inheritance diagram for IShootable:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="interface_spawnables_1_1_weapons_1_1_i_shootable.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_interface_spawnables_1_1_weapons_1_1_i_shootable_1a26a2e3c2d07dea6a2fd1d38eac284ee6"/>void <emphasis role="strong">OnShoot</emphasis> ()</para>
+
+<para>Called when the weapon is activated. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__i_shootable_8cs_source_1l00006">6</link> of file <link linkend="__i_shootable_8cs_source">IShootable.cs</link>.</para>
+<para>
+The documentation for this interface was generated from the following file:</para>
+Scripts/Spawnables/Weapons/Shootables/IShootable.cs</section>
+</section>

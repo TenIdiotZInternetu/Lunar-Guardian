@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_follow_path_8cs" kind="file" language="C#">
+    <compoundname>FollowPath.cs</compoundname>
+    <innerclass refid="class_movement_patterns_1_1_follow_path" prot="public">MovementPatterns::FollowPath</innerclass>
+    <innernamespace refid="namespace_movement_patterns">MovementPatterns</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_path_creation" kindref="compound">PathCreation</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_path_creation_1_1_examples" kindref="compound">PathCreation.Examples</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespace_spawnables" kindref="compound">Spawnables</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_movement_patterns" kindref="compound">MovementPatterns</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="class_movement_patterns_1_1_follow_path" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_movement_patterns_1_1_follow_path" kindref="compound">FollowPath</ref><sp/>:<sp/><ref refid="class_movement_patterns_1_1_movement_pattern" kindref="compound">MovementPattern</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-------------------<sp/>Inspector<sp/>Variables<sp/>-------------------<sp/>*/</highlight></codeline>
+<codeline lineno="17" refid="class_movement_patterns_1_1_follow_path_1ac38836c583abd23c619e142bf15897cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[SerializeField]<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>PathCreator<sp/><ref refid="class_movement_patterns_1_1_follow_path_1ac38836c583abd23c619e142bf15897cb" kindref="member">path</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="class_movement_patterns_1_1_follow_path_1a7f7e4724cf57d59513b39c5ecc81adc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[SerializeField]<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_movement_patterns_1_1_follow_path_1a7f7e4724cf57d59513b39c5ecc81adc8" kindref="member">speed</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="class_movement_patterns_1_1_follow_path_1a97712bccaedef08f6d8c525bdda2f7ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[SerializeField]<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_movement_patterns_1_1_follow_path_1a97712bccaedef08f6d8c525bdda2f7ef" kindref="member">acceleration</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>----------------------<sp/>Public<sp/>Methods<sp/>----------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Initialize(<ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref><sp/>entity)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>Vector3<sp/>GetNextPosition(<ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref><sp/>entity)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>distanceTravelled<sp/>=<sp/><ref refid="class_movement_patterns_1_1_follow_path_1a7f7e4724cf57d59513b39c5ecc81adc8" kindref="member">speed</ref><sp/>*<sp/>entity.<ref refid="class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba" kindref="member">MPLifeTime</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>currentSpeed<sp/>=<sp/><ref refid="class_movement_patterns_1_1_follow_path_1a7f7e4724cf57d59513b39c5ecc81adc8" kindref="member">speed</ref><sp/>+<sp/><ref refid="class_movement_patterns_1_1_follow_path_1a97712bccaedef08f6d8c525bdda2f7ef" kindref="member">acceleration</ref><sp/>*<sp/>entity.<ref refid="class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba" kindref="member">MPLifeTime</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_movement_patterns_1_1_follow_path_1ac38836c583abd23c619e142bf15897cb" kindref="member">path</ref>.path.GetPointAtDistance(distanceTravelled);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Scripts/MovementPatterns/FollowPath.cs"/>
+  </compounddef>
+</doxygen>

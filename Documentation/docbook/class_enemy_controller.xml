@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_enemy_controller" xml:lang="en-US">
+<title>EnemyController Class Reference</title>
+<indexterm><primary>EnemyController</primary></indexterm>
+Inheritance diagram for EnemyController:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_enemy_controller__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for EnemyController:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_enemy_controller__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_enemy_controller_1a141583151be3cc9a01658b0c3d39b566">TakeDamage</link> (int damage, GameObject damageSource)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_enemy_controller_1a40c4d059fce2a70bad2b87d1ff1e1173">SetVariables</link> (<link linkend="_class_spawnables_1_1_projectiles_1_1_enemy">Enemy</link> enemyVariables)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_enemy_controller_1ae7bdfbd336776df88b959a29eccd33f6">hasAggro</link> = false</para>
+</listitem>
+            <listitem><para><link linkend="_class_spawnables_1_1_projectiles_1_1_weapon">Weapon</link> <link linkend="_class_enemy_controller_1a88e9ae4fff417ea370ab9e5a464b7992">weapon</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para>Action <link linkend="_class_enemy_controller_1a3f474973d3ce84bb3a36f99bf9b351f7">ShootsEvent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__enemy_controller_8cs_source_1l00015">15</link> of file <link linkend="__enemy_controller_8cs_source">EnemyController.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_enemy_controller_1a40c4d059fce2a70bad2b87d1ff1e1173"/><section>
+    <title>SetVariables()</title>
+<indexterm><primary>SetVariables</primary><secondary>EnemyController</secondary></indexterm>
+<indexterm><primary>EnemyController</primary><secondary>SetVariables</secondary></indexterm>
+<para><computeroutput>void EnemyController.SetVariables (<link linkend="_class_spawnables_1_1_projectiles_1_1_enemy">Enemy</link> enemyVariables)</computeroutput></para><para>
+Definition at line <link linkend="__enemy_controller_8cs_source_1l00082">82</link> of file <link linkend="__enemy_controller_8cs_source">EnemyController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_enemy_controller_1a141583151be3cc9a01658b0c3d39b566"/><section>
+    <title>TakeDamage()</title>
+<indexterm><primary>TakeDamage</primary><secondary>EnemyController</secondary></indexterm>
+<indexterm><primary>EnemyController</primary><secondary>TakeDamage</secondary></indexterm>
+<para><computeroutput>void EnemyController.TakeDamage (int damage, GameObject damageSource)</computeroutput></para><para>
+Definition at line <link linkend="__enemy_controller_8cs_source_1l00073">73</link> of file <link linkend="__enemy_controller_8cs_source">EnemyController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_enemy_controller_1ae7bdfbd336776df88b959a29eccd33f6"/><section>
+    <title>hasAggro</title>
+<indexterm><primary>hasAggro</primary><secondary>EnemyController</secondary></indexterm>
+<indexterm><primary>EnemyController</primary><secondary>hasAggro</secondary></indexterm>
+<para><computeroutput>bool EnemyController.hasAggro = false</computeroutput></para><para>
+Definition at line <link linkend="__enemy_controller_8cs_source_1l00021">21</link> of file <link linkend="__enemy_controller_8cs_source">EnemyController.cs</link>.</para>
+</section>
+<anchor xml:id="_class_enemy_controller_1a88e9ae4fff417ea370ab9e5a464b7992"/><section>
+    <title>weapon</title>
+<indexterm><primary>weapon</primary><secondary>EnemyController</secondary></indexterm>
+<indexterm><primary>EnemyController</primary><secondary>weapon</secondary></indexterm>
+<para><computeroutput><link linkend="_class_spawnables_1_1_projectiles_1_1_weapon">Weapon</link> EnemyController.weapon</computeroutput></para><para>
+Definition at line <link linkend="__enemy_controller_8cs_source_1l00022">22</link> of file <link linkend="__enemy_controller_8cs_source">EnemyController.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Event Documentation</title>
+<anchor xml:id="_class_enemy_controller_1a3f474973d3ce84bb3a36f99bf9b351f7"/><section>
+    <title>ShootsEvent</title>
+<indexterm><primary>ShootsEvent</primary><secondary>EnemyController</secondary></indexterm>
+<indexterm><primary>EnemyController</primary><secondary>ShootsEvent</secondary></indexterm>
+<para><computeroutput>Action EnemyController.ShootsEvent</computeroutput></para><para>
+Definition at line <link linkend="__enemy_controller_8cs_source_1l00023">23</link> of file <link linkend="__enemy_controller_8cs_source">EnemyController.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs</section>
+</section>

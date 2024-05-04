@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__pan_camera_8cs_source" xml:lang="en-US">
+<title>PanCamera.cs</title>
+<indexterm><primary>Scripts/VFX/PanCamera.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__pan_camera_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__pan_camera_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__pan_camera_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__pan_camera_8cs_source_1l00004"/>00004 
+<anchor xml:id="__pan_camera_8cs_source_1l00005"/>00005 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_v_f_x">VFX</link>
+<anchor xml:id="__pan_camera_8cs_source_1l00006"/>00006 {
+<anchor xml:id="__pan_camera_8cs_source_1l00010"/><link linkend="_class_v_f_x_1_1_pan_camera">00010</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_v_f_x_1_1_pan_camera">PanCamera</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__pan_camera_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__pan_camera_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------------&#32;Public&#32;Fields&#32;--------------------*/</emphasis>
+<anchor xml:id="__pan_camera_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pan_camera_8cs_source_1l00017"/><link linkend="_class_v_f_x_1_1_pan_camera_1a2008f4ab70b5e4104c2ca43932536ddf">00017</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Camera&#32;<link linkend="_class_v_f_x_1_1_pan_camera_1a2008f4ab70b5e4104c2ca43932536ddf">camera</link>;
+<anchor xml:id="__pan_camera_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pan_camera_8cs_source_1l00022"/><link linkend="_class_v_f_x_1_1_pan_camera_1a94137b92fe146aa56a9aea3e94aefd0a">00022</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;Vector3&#32;<link linkend="_class_v_f_x_1_1_pan_camera_1a94137b92fe146aa56a9aea3e94aefd0a">targetPosition</link>;
+<anchor xml:id="__pan_camera_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pan_camera_8cs_source_1l00027"/><link linkend="_class_v_f_x_1_1_pan_camera_1a515dbc8cdce3d6b2091228e7c6d2036f">00027</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;AnimationCurve&#32;<link linkend="_class_v_f_x_1_1_pan_camera_1a515dbc8cdce3d6b2091228e7c6d2036f">curve</link>;
+<anchor xml:id="__pan_camera_8cs_source_1l00028"/>00028 
+<anchor xml:id="__pan_camera_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------------&#32;Unity&#32;Callbacks&#32;--------------------*/</emphasis>
+<anchor xml:id="__pan_camera_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pan_camera_8cs_source_1l00034"/><link linkend="_class_v_f_x_1_1_pan_camera_1a7cc5efcfaf1700331f7c5ed6b38fae16">00034</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_v_f_x_1_1_pan_camera_1a7cc5efcfaf1700331f7c5ed6b38fae16">PanToPosition</link>()
+<anchor xml:id="__pan_camera_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__pan_camera_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartCoroutine(Pan());
+<anchor xml:id="__pan_camera_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__pan_camera_8cs_source_1l00038"/>00038 
+<anchor xml:id="__pan_camera_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pan_camera_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------------&#32;Private&#32;Methods&#32;--------------------*/</emphasis>
+<anchor xml:id="__pan_camera_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pan_camera_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Coroutine&#32;that&#32;smoothly&#32;moves&#32;the&#32;camera&#32;to&#32;the&#32;target&#32;position</emphasis>
+<anchor xml:id="__pan_camera_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;IEnumerator&#32;Pan()
+<anchor xml:id="__pan_camera_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__pan_camera_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;timePassed&#32;=&#32;0;
+<anchor xml:id="__pan_camera_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;startPosition&#32;=&#32;<link linkend="_class_v_f_x_1_1_pan_camera_1a2008f4ab70b5e4104c2ca43932536ddf">camera</link>.transform.position;
+<anchor xml:id="__pan_camera_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__pan_camera_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(timePassed&#32;&lt;&#32;<link linkend="_class_v_f_x_1_1_pan_camera_1a515dbc8cdce3d6b2091228e7c6d2036f">curve</link>.keys[<link linkend="_class_v_f_x_1_1_pan_camera_1a515dbc8cdce3d6b2091228e7c6d2036f">curve</link>.length&#32;-&#32;1].time)
+<anchor xml:id="__pan_camera_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__pan_camera_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timePassed&#32;+=&#32;Time.deltaTime;
+<anchor xml:id="__pan_camera_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;t&#32;=&#32;<link linkend="_class_v_f_x_1_1_pan_camera_1a515dbc8cdce3d6b2091228e7c6d2036f">curve</link>.Evaluate(timePassed);
+<anchor xml:id="__pan_camera_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;camera.transform.position&#32;=&#32;Vector3.LerpUnclamped(startPosition,&#32;<link linkend="_class_v_f_x_1_1_pan_camera_1a94137b92fe146aa56a9aea3e94aefd0a">targetPosition</link>,&#32;t);
+<anchor xml:id="__pan_camera_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__pan_camera_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__pan_camera_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__pan_camera_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__pan_camera_8cs_source_1l00057"/>00057 }
+</programlisting></section>

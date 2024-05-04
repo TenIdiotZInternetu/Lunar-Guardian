@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_projectiles_1_1_bullet_spawner" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Projectiles::BulletSpawner</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <basecompoundref refid="interface_spawnables_1_1_projectiles_1_1_i_shootable" prot="public" virt="non-virtual">Spawnables.Projectiles.IShootable</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1a44548167e4a5ab9ba36a2218e14308b7" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float Spawnables.Projectiles.BulletSpawner.GIZMO_RADIUS</definition>
+        <argsstring></argsstring>
+        <name>GIZMO_RADIUS</name>
+        <qualifiedname>Spawnables.Projectiles.BulletSpawner.GIZMO_RADIUS</qualifiedname>
+        <initializer>= 0.05f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="9" column="29" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1a9b657db18f9ad4d186ff28b38b960972" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject Spawnables.Projectiles.BulletSpawner.projectile</definition>
+        <argsstring></argsstring>
+        <name>projectile</name>
+        <qualifiedname>Spawnables.Projectiles.BulletSpawner.projectile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="11" column="27" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1a6181707ecc0bec8ae55f2f5518ec7711" prot="private" static="no" mutable="no">
+        <type>Transform</type>
+        <definition>Transform Spawnables.Projectiles.BulletSpawner._thisTransform</definition>
+        <argsstring></argsstring>
+        <name>_thisTransform</name>
+        <qualifiedname>Spawnables.Projectiles.BulletSpawner._thisTransform</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="12" column="27" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1a77642837d1f9967512e8e5a7cb78a8dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.BulletSpawner.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Spawnables.Projectiles.BulletSpawner.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="14" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1a35867312097a05720ab9dcd9eac42e1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.BulletSpawner.OnShoot</definition>
+        <argsstring>()</argsstring>
+        <name>OnShoot</name>
+        <qualifiedname>Spawnables.Projectiles.BulletSpawner.OnShoot</qualifiedname>
+        <reimplements refid="interface_spawnables_1_1_projectiles_1_1_i_shootable_1a423c156efd6ff3cbd303b405a80d306f">OnShoot</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="19" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1abacaf68d2bd2f79a7a052ef1cc56c0da" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.BulletSpawner.OnDrawGizmos</definition>
+        <argsstring>()</argsstring>
+        <name>OnDrawGizmos</name>
+        <qualifiedname>Spawnables.Projectiles.BulletSpawner.OnDrawGizmos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="24" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="24" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IShootable</label>
+        <link refid="interface_spawnables_1_1_projectiles_1_1_i_shootable"/>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.Projectiles.BulletSpawner</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_bullet_spawner"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IShootable</label>
+        <link refid="interface_spawnables_1_1_projectiles_1_1_i_shootable"/>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.Projectiles.BulletSpawner</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_bullet_spawner"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" line="7" column="11" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/BulletSpawner.cs" bodystart="8" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1a6181707ecc0bec8ae55f2f5518ec7711" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::BulletSpawner</scope><name>_thisTransform</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1a77642837d1f9967512e8e5a7cb78a8dc" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::BulletSpawner</scope><name>Awake</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1a44548167e4a5ab9ba36a2218e14308b7" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::BulletSpawner</scope><name>GIZMO_RADIUS</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1abacaf68d2bd2f79a7a052ef1cc56c0da" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::BulletSpawner</scope><name>OnDrawGizmos</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1a35867312097a05720ab9dcd9eac42e1c" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::BulletSpawner</scope><name>OnShoot</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_bullet_spawner_1a9b657db18f9ad4d186ff28b38b960972" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::BulletSpawner</scope><name>projectile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

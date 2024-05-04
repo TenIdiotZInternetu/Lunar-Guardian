@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_f1f8121e0f64f4b7f95350ee2bfa0ff3" kind="dir">
+    <compoundname>Tools/PathCreator/Core/Editor</compoundname>
+    <innerdir refid="dir_dafa9ae5b4afb06f9f96a2a8c59faf62">Tools/PathCreator/Core/Editor/Helper</innerdir>
+    <innerfile refid="_path_editor_8cs">PathEditor.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Editor/"/>
+  </compounddef>
+</doxygen>

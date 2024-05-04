@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_entity" xml:lang="en-US">
+<title>Entity Class Reference</title>
+<indexterm><primary>Entity</primary></indexterm>
+<para>
+
+<para>An object that can be spawned from the ObjectPool and moved by the MovementPattern class. </para>
+ 
+</para>
+<para>Inheritance diagram for Entity:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_entity.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef">SetMovementPattern</link> (<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link> newMovementPattern)</para>
+
+<para>Changes the MovementPattern of the entity. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_entity_1aa71998873389201c17d7773339f63ebe"/>void <emphasis role="strong">StartMoving</emphasis> ()</para>
+
+<para>Tells the entity to start using its MovementPattern. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_entity_1a147504656ad9822da09c2c6461aad435"/>void <emphasis role="strong">StopMoving</emphasis> ()</para>
+
+<para>Tells the entity to stop using its MovementPattern. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2"/><link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link> <emphasis role="strong">movementPattern</emphasis></para>
+
+<para>Movement pattern that determines the position of the entity in the next frame. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_entity_1a2d356d7b3c35033282092fae9a836766"/>string <emphasis role="strong">SpawnKey</emphasis></para>
+
+<para>A key to identify the entity among the ObjectPools. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_entity_1a8f2052c5dc85bf163c873f99c285216a"/>float <emphasis role="strong">LifeTime</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Time passed since the entity was enabled. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba"/>float <emphasis role="strong">MPLifeTime</emphasis><computeroutput> [get]</computeroutput>
+</para>
+
+<para>Time passed since the MovementPattern was last set. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__entity_8cs_source_1l00012">12</link> of file <link linkend="__entity_8cs_source">Entity.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef"/><section>
+    <title>SetMovementPattern()</title>
+<indexterm><primary>SetMovementPattern</primary><secondary>Entity</secondary></indexterm>
+<indexterm><primary>Entity</primary><secondary>SetMovementPattern</secondary></indexterm>
+<para><computeroutput>void SetMovementPattern (<link linkend="_class_movement_patterns_1_1_movement_pattern">MovementPattern</link> newMovementPattern)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>newMovementPattern</entry><entry>
+<para>The new movement pattern </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__entity_8cs_source_1l00070">70</link> of file <link linkend="__entity_8cs_source">Entity.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/Spawnables/Entity.cs</section>
+</section>

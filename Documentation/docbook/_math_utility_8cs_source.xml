@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__math_utility_8cs_source" xml:lang="en-US">
+<title>MathUtility.cs</title>
+<indexterm><primary>Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__math_utility_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__math_utility_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__math_utility_8cs_source_1l00003"/>00003 
+<anchor xml:id="__math_utility_8cs_source_1l00004"/>00004 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_path_creation_1_1_utility">PathCreation.Utility</link>&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00005"/>00005 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>MathUtility&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00006"/>00006 
+<anchor xml:id="__math_utility_8cs_source_1l00007"/>00007 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;PosRotScale&#32;LockTransformToSpace&#32;(Transform&#32;t,&#32;PathSpace&#32;space)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00008"/>00008 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;original&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;PosRotScale&#32;(t);
+<anchor xml:id="__math_utility_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(space&#32;==&#32;PathSpace.xy)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t.eulerAngles&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Vector3&#32;(0,&#32;0,&#32;t.eulerAngles.z);
+<anchor xml:id="__math_utility_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t.position&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Vector3&#32;(t.position.x,&#32;t.position.y,&#32;0);
+<anchor xml:id="__math_utility_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(space&#32;==&#32;PathSpace.xz)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t.eulerAngles&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Vector3&#32;(0,&#32;t.eulerAngles.y,&#32;0);
+<anchor xml:id="__math_utility_8cs_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t.position&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Vector3&#32;(t.position.x,&#32;0,&#32;t.position.z);
+<anchor xml:id="__math_utility_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00016"/>00016 
+<anchor xml:id="__math_utility_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//float&#32;maxScale&#32;=&#32;Mathf.Max&#32;(t.localScale.x&#32;*&#32;t.parent.localScale.x,&#32;t.localScale.y&#32;*&#32;t.parent.localScale.y,&#32;t.localScale.z&#32;*&#32;t.parent.localScale.z);</emphasis>
+<anchor xml:id="__math_utility_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;maxScale&#32;=&#32;Mathf.Max&#32;(t.lossyScale.x,&#32;t.lossyScale.y,&#32;t.lossyScale.z);
+<anchor xml:id="__math_utility_8cs_source_1l00019"/>00019 
+<anchor xml:id="__math_utility_8cs_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t.localScale&#32;=&#32;Vector3.one&#32;*&#32;maxScale;
+<anchor xml:id="__math_utility_8cs_source_1l00021"/>00021 
+<anchor xml:id="__math_utility_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;original;
+<anchor xml:id="__math_utility_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00024"/>00024 
+<anchor xml:id="__math_utility_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Vector3&#32;TransformPoint&#32;(Vector3&#32;p,&#32;Transform&#32;t,&#32;PathSpace&#32;space)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;original&#32;=&#32;LockTransformToSpace&#32;(t,&#32;space);
+<anchor xml:id="__math_utility_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;transformedPoint&#32;=&#32;t.TransformPoint&#32;(p);
+<anchor xml:id="__math_utility_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;original.SetTransform&#32;(t);
+<anchor xml:id="__math_utility_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;transformedPoint;
+<anchor xml:id="__math_utility_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00031"/>00031 
+<anchor xml:id="__math_utility_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Vector3&#32;InverseTransformPoint&#32;(Vector3&#32;p,&#32;Transform&#32;t,&#32;PathSpace&#32;space)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;original&#32;=&#32;LockTransformToSpace&#32;(t,&#32;space);
+<anchor xml:id="__math_utility_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;transformedPoint&#32;=&#32;t.InverseTransformPoint&#32;(p);
+<anchor xml:id="__math_utility_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;original.SetTransform&#32;(t);
+<anchor xml:id="__math_utility_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;transformedPoint;
+<anchor xml:id="__math_utility_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00038"/>00038 
+<anchor xml:id="__math_utility_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Vector3&#32;TransformVector&#32;(Vector3&#32;p,&#32;Transform&#32;t,&#32;PathSpace&#32;space)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;original&#32;=&#32;LockTransformToSpace&#32;(t,&#32;space);
+<anchor xml:id="__math_utility_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;transformedPoint&#32;=&#32;t.TransformVector&#32;(p);
+<anchor xml:id="__math_utility_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;original.SetTransform&#32;(t);
+<anchor xml:id="__math_utility_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;transformedPoint;
+<anchor xml:id="__math_utility_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00045"/>00045 
+<anchor xml:id="__math_utility_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Vector3&#32;InverseTransformVector&#32;(Vector3&#32;p,&#32;Transform&#32;t,&#32;PathSpace&#32;space)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;original&#32;=&#32;LockTransformToSpace&#32;(t,&#32;space);
+<anchor xml:id="__math_utility_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;transformedPoint&#32;=&#32;t.InverseTransformVector&#32;(p);
+<anchor xml:id="__math_utility_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;original.SetTransform&#32;(t);
+<anchor xml:id="__math_utility_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;transformedPoint;
+<anchor xml:id="__math_utility_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00052"/>00052 
+<anchor xml:id="__math_utility_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Vector3&#32;TransformDirection&#32;(Vector3&#32;p,&#32;Transform&#32;t,&#32;PathSpace&#32;space)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;original&#32;=&#32;LockTransformToSpace&#32;(t,&#32;space);
+<anchor xml:id="__math_utility_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;transformedPoint&#32;=&#32;t.TransformDirection&#32;(p);
+<anchor xml:id="__math_utility_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;original.SetTransform&#32;(t);
+<anchor xml:id="__math_utility_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;transformedPoint;
+<anchor xml:id="__math_utility_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00059"/>00059 
+<anchor xml:id="__math_utility_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Vector3&#32;InverseTransformDirection&#32;(Vector3&#32;p,&#32;Transform&#32;t,&#32;PathSpace&#32;space)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;original&#32;=&#32;LockTransformToSpace&#32;(t,&#32;space);
+<anchor xml:id="__math_utility_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;transformedPoint&#32;=&#32;t.InverseTransformDirection&#32;(p);
+<anchor xml:id="__math_utility_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;original.SetTransform&#32;(t);
+<anchor xml:id="__math_utility_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;transformedPoint;
+<anchor xml:id="__math_utility_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00066"/>00066 
+<anchor xml:id="__math_utility_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;LineSegmentsIntersect&#32;(Vector2&#32;a1,&#32;Vector2&#32;a2,&#32;Vector2&#32;b1,&#32;Vector2&#32;b2)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;d&#32;=&#32;(b2.x&#32;-&#32;b1.x)&#32;*&#32;(a1.y&#32;-&#32;a2.y)&#32;-&#32;(a1.x&#32;-&#32;a2.x)&#32;*&#32;(b2.y&#32;-&#32;b1.y);
+<anchor xml:id="__math_utility_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(d&#32;==&#32;0)
+<anchor xml:id="__math_utility_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__math_utility_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;t&#32;=&#32;((b1.y&#32;-&#32;b2.y)&#32;*&#32;(a1.x&#32;-&#32;b1.x)&#32;+&#32;(b2.x&#32;-&#32;b1.x)&#32;*&#32;(a1.y&#32;-&#32;b1.y))&#32;/&#32;d;
+<anchor xml:id="__math_utility_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;u&#32;=&#32;((a1.y&#32;-&#32;a2.y)&#32;*&#32;(a1.x&#32;-&#32;b1.x)&#32;+&#32;(a2.x&#32;-&#32;a1.x)&#32;*&#32;(a1.y&#32;-&#32;b1.y))&#32;/&#32;d;
+<anchor xml:id="__math_utility_8cs_source_1l00073"/>00073 
+<anchor xml:id="__math_utility_8cs_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;t&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;t&#32;&lt;=&#32;1&#32;&amp;&amp;&#32;u&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;u&#32;&lt;=&#32;1;
+<anchor xml:id="__math_utility_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00076"/>00076 
+<anchor xml:id="__math_utility_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;LinesIntersect&#32;(Vector2&#32;a1,&#32;Vector2&#32;a2,&#32;Vector2&#32;a3,&#32;Vector2&#32;a4)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(a1.x&#32;-&#32;a2.x)&#32;*&#32;(a3.y&#32;-&#32;a4.y)&#32;-&#32;(a1.y&#32;-&#32;a2.y)&#32;*&#32;(a3.x&#32;-&#32;a4.x)&#32;!=&#32;0;
+<anchor xml:id="__math_utility_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00080"/>00080 
+<anchor xml:id="__math_utility_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Vector2&#32;PointOfLineLineIntersection&#32;(Vector2&#32;a1,&#32;Vector2&#32;a2,&#32;Vector2&#32;a3,&#32;Vector2&#32;a4)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;d&#32;=&#32;(a1.x&#32;-&#32;a2.x)&#32;*&#32;(a3.y&#32;-&#32;a4.y)&#32;-&#32;(a1.y&#32;-&#32;a2.y)&#32;*&#32;(a3.x&#32;-&#32;a4.x);
+<anchor xml:id="__math_utility_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(d&#32;==&#32;0)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug.LogError&#32;(<emphasis role="stringliteral">&quot;Lines&#32;are&#32;parallel,&#32;please&#32;check&#32;that&#32;this&#32;is&#32;not&#32;the&#32;case&#32;before&#32;calling&#32;line&#32;intersection&#32;method&quot;</emphasis>);
+<anchor xml:id="__math_utility_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;Vector2.zero;
+<anchor xml:id="__math_utility_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;n&#32;=&#32;(a1.x&#32;-&#32;a3.x)&#32;*&#32;(a3.y&#32;-&#32;a4.y)&#32;-&#32;(a1.y&#32;-&#32;a3.y)&#32;*&#32;(a3.x&#32;-&#32;a4.x);
+<anchor xml:id="__math_utility_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;t&#32;=&#32;n&#32;/&#32;d;
+<anchor xml:id="__math_utility_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;a1&#32;+&#32;(a2&#32;-&#32;a1)&#32;*&#32;t;
+<anchor xml:id="__math_utility_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00092"/>00092 
+<anchor xml:id="__math_utility_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Vector2&#32;ClosestPointOnLineSegment&#32;(Vector2&#32;p,&#32;Vector2&#32;a,&#32;Vector2&#32;b)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector2&#32;aB&#32;=&#32;b&#32;-&#32;a;
+<anchor xml:id="__math_utility_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector2&#32;aP&#32;=&#32;p&#32;-&#32;a;
+<anchor xml:id="__math_utility_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;sqrLenAB&#32;=&#32;aB.sqrMagnitude;
+<anchor xml:id="__math_utility_8cs_source_1l00097"/>00097 
+<anchor xml:id="__math_utility_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sqrLenAB&#32;==&#32;0)
+<anchor xml:id="__math_utility_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;a;
+<anchor xml:id="__math_utility_8cs_source_1l00100"/>00100 
+<anchor xml:id="__math_utility_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;t&#32;=&#32;Mathf.Clamp01&#32;(Vector2.Dot&#32;(aP,&#32;aB)&#32;/&#32;sqrLenAB);
+<anchor xml:id="__math_utility_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;a&#32;+&#32;aB&#32;*&#32;t;
+<anchor xml:id="__math_utility_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00104"/>00104 
+<anchor xml:id="__math_utility_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;Vector3&#32;ClosestPointOnLineSegment&#32;(Vector3&#32;p,&#32;Vector3&#32;a,&#32;Vector3&#32;b)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;aB&#32;=&#32;b&#32;-&#32;a;
+<anchor xml:id="__math_utility_8cs_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;aP&#32;=&#32;p&#32;-&#32;a;
+<anchor xml:id="__math_utility_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;sqrLenAB&#32;=&#32;aB.sqrMagnitude;
+<anchor xml:id="__math_utility_8cs_source_1l00109"/>00109 
+<anchor xml:id="__math_utility_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sqrLenAB&#32;==&#32;0)
+<anchor xml:id="__math_utility_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;a;
+<anchor xml:id="__math_utility_8cs_source_1l00112"/>00112 
+<anchor xml:id="__math_utility_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;t&#32;=&#32;Mathf.Clamp01&#32;(Vector3.Dot&#32;(aP,&#32;aB)&#32;/&#32;sqrLenAB);
+<anchor xml:id="__math_utility_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;a&#32;+&#32;aB&#32;*&#32;t;
+<anchor xml:id="__math_utility_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00116"/>00116 
+<anchor xml:id="__math_utility_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;SideOfLine&#32;(Vector2&#32;a,&#32;Vector2&#32;b,&#32;Vector2&#32;c)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>)&#32;Mathf.Sign&#32;((c.x&#32;-&#32;a.x)&#32;*&#32;(-b.y&#32;+&#32;a.y)&#32;+&#32;(c.y&#32;-&#32;a.y)&#32;*&#32;(b.x&#32;-&#32;a.x));
+<anchor xml:id="__math_utility_8cs_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00120"/>00120 
+<anchor xml:id="__math_utility_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;MinAngle&#32;(Vector3&#32;a,&#32;Vector3&#32;b,&#32;Vector3&#32;c)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;Vector3.Angle&#32;((a&#32;-&#32;b),&#32;(c&#32;-&#32;b));
+<anchor xml:id="__math_utility_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00125"/>00125 
+<anchor xml:id="__math_utility_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;PointInTriangle&#32;(Vector2&#32;a,&#32;Vector2&#32;b,&#32;Vector2&#32;c,&#32;Vector2&#32;p)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;area&#32;=&#32;0.5f&#32;*&#32;(-b.y&#32;*&#32;c.x&#32;+&#32;a.y&#32;*&#32;(-b.x&#32;+&#32;c.x)&#32;+&#32;a.x&#32;*&#32;(b.y&#32;-&#32;c.y)&#32;+&#32;b.x&#32;*&#32;c.y);
+<anchor xml:id="__math_utility_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;s&#32;=&#32;1&#32;/&#32;(2&#32;*&#32;area)&#32;*&#32;(a.y&#32;*&#32;c.x&#32;-&#32;a.x&#32;*&#32;c.y&#32;+&#32;(c.y&#32;-&#32;a.y)&#32;*&#32;p.x&#32;+&#32;(a.x&#32;-&#32;c.x)&#32;*&#32;p.y);
+<anchor xml:id="__math_utility_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;t&#32;=&#32;1&#32;/&#32;(2&#32;*&#32;area)&#32;*&#32;(a.x&#32;*&#32;b.y&#32;-&#32;a.y&#32;*&#32;b.x&#32;+&#32;(a.y&#32;-&#32;b.y)&#32;*&#32;p.x&#32;+&#32;(b.x&#32;-&#32;a.x)&#32;*&#32;p.y);
+<anchor xml:id="__math_utility_8cs_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;s&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;t&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;(s&#32;+&#32;t)&#32;&lt;=&#32;1;
+<anchor xml:id="__math_utility_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00132"/>00132 
+<anchor xml:id="__math_utility_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;PointsAreClockwise&#32;(Vector2[]&#32;points)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;signedArea&#32;=&#32;0;
+<anchor xml:id="__math_utility_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;points.Length;&#32;i++)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;nextIndex&#32;=&#32;(i&#32;+&#32;1)&#32;%&#32;points.Length;
+<anchor xml:id="__math_utility_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;signedArea&#32;+=&#32;(points[nextIndex].x&#32;-&#32;points[i].x)&#32;*&#32;(points[nextIndex].y&#32;+&#32;points[i].y);
+<anchor xml:id="__math_utility_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00139"/>00139 
+<anchor xml:id="__math_utility_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;signedArea&#32;&gt;=&#32;0;
+<anchor xml:id="__math_utility_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00142"/>00142 
+<anchor xml:id="__math_utility_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis>PosRotScale&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;readonly&#32;Vector3&#32;position;
+<anchor xml:id="__math_utility_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;readonly&#32;Quaternion&#32;rotation;
+<anchor xml:id="__math_utility_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;readonly&#32;Vector3&#32;scale;
+<anchor xml:id="__math_utility_8cs_source_1l00147"/>00147 
+<anchor xml:id="__math_utility_8cs_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;PosRotScale&#32;(Transform&#32;t)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.position&#32;=&#32;t.position;
+<anchor xml:id="__math_utility_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.rotation&#32;=&#32;t.rotation;
+<anchor xml:id="__math_utility_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.scale&#32;=&#32;t.localScale;
+<anchor xml:id="__math_utility_8cs_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00153"/>00153 
+<anchor xml:id="__math_utility_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;SetTransform&#32;(Transform&#32;t)&#32;{
+<anchor xml:id="__math_utility_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t.position&#32;=&#32;position;
+<anchor xml:id="__math_utility_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t.rotation&#32;=&#32;rotation;
+<anchor xml:id="__math_utility_8cs_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t.localScale&#32;=&#32;scale;
+<anchor xml:id="__math_utility_8cs_source_1l00158"/>00158 
+<anchor xml:id="__math_utility_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00161"/>00161 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__math_utility_8cs_source_1l00162"/>00162 }
+</programlisting></section>

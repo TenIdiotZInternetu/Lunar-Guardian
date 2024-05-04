@@ -1,0 +1,462 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::EnemyScripts::EnemyController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a5eff005e48044d53c3188350360d2bd3" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string PLAYER_PROJECTILE_TAG</definition>
+        <argsstring></argsstring>
+        <name>PLAYER_PROJECTILE_TAG</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.PLAYER_PROJECTILE_TAG</qualifiedname>
+        <initializer>= &quot;PlayerProjectile&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="19" column="30" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1aa0e481fb67cfe5b349f64bfb418c973f" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string BORDER_TAG</definition>
+        <argsstring></argsstring>
+        <name>BORDER_TAG</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.BORDER_TAG</qualifiedname>
+        <initializer>= &quot;PlayfieldBorder&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="20" column="30" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1afa3a387ebb345c845da69be48295064a" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float TRIGGER_DEBOUNCE_TIME</definition>
+        <argsstring></argsstring>
+        <name>TRIGGER_DEBOUNCE_TIME</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.TRIGGER_DEBOUNCE_TIME</qualifiedname>
+        <initializer>= 0.01f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="21" column="29" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1aac5e2fc840b06a6932b678c35c293c72" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hasAggro</definition>
+        <argsstring></argsstring>
+        <name>hasAggro</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.hasAggro</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the Enemy shoots or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="29" column="21" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a21791573ffa3822ec2a0e08bc710d716" prot="public" static="no" mutable="no">
+        <type><ref refid="class_spawnables_1_1_weapons_1_1_weapon" kindref="compound">Weapon</ref></type>
+        <definition>Weapon weapon</definition>
+        <argsstring></argsstring>
+        <name>weapon</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.weapon</qualifiedname>
+        <briefdescription>
+<para>Weapon used when the enemy shoots. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="34" column="23" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1abd9abcb1ce3bcdd0d9c99534620685bc" prot="public" static="no" mutable="no">
+        <type><ref refid="class_tools_1_1_game_object_event" kindref="compound">GameObjectEvent</ref></type>
+        <definition>GameObjectEvent onTakesHitEvent</definition>
+        <argsstring></argsstring>
+        <name>onTakesHitEvent</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.onTakesHitEvent</qualifiedname>
+        <briefdescription>
+<para>Event invoked with GameObject parameter when the enemy takes damage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="46" column="32" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a463be11d16a148ee899e4c3a2bbd4d38" prot="public" static="no" mutable="no">
+        <type>UnityEvent</type>
+        <definition>UnityEvent onDeathEvent</definition>
+        <argsstring></argsstring>
+        <name>onDeathEvent</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.onDeathEvent</qualifiedname>
+        <briefdescription>
+<para>Event invoked when the enemy dies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="51" column="27" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="event">
+      <memberdef kind="event" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a015d9dccd4fec1a8a970a3d43c9e242f" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action ShootsEvent</definition>
+        <argsstring></argsstring>
+        <name>ShootsEvent</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.ShootsEvent</qualifiedname>
+        <briefdescription>
+<para>Event invoked when the enemy shoots. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="39" column="29" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a4a4c7a5aac1adcbc508c8e19b2409d5f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_spawnables_1_1_enemy_scripts_1_1_enemy" kindref="compound">Enemy</ref></type>
+        <definition>Enemy _enemyVariables</definition>
+        <argsstring></argsstring>
+        <name>_enemyVariables</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController._enemyVariables</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="55" column="23" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a2ddf72ec82eef8a8697edfabf08fbb17" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _currentHealth</definition>
+        <argsstring></argsstring>
+        <name>_currentHealth</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController._currentHealth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="56" column="21" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1aff238b85fe8390180763f0ad759d7430" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float _timeOfLastTrigger</definition>
+        <argsstring></argsstring>
+        <name>_timeOfLastTrigger</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController._timeOfLastTrigger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="57" column="23" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a84e23ba394eacd818d2e005cc466c4d1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnEnable</definition>
+        <argsstring>()</argsstring>
+        <name>OnEnable</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.OnEnable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="61" column="14" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="61" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1aec0783b5a136e042adcc47bae4fe5291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="73" column="14" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1ad8977c264b58f2c0e3e69af81c83644d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnTriggerEnter2D</definition>
+        <argsstring>(Collider2D other)</argsstring>
+        <name>OnTriggerEnter2D</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.OnTriggerEnter2D</qualifiedname>
+        <param>
+          <type>Collider2D</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="79" column="14" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="79" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a44ebcf048524a4fc189c39533c950641" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnTriggerExit2D</definition>
+        <argsstring>(Collider2D other)</argsstring>
+        <name>OnTriggerExit2D</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.OnTriggerExit2D</qualifiedname>
+        <param>
+          <type>Collider2D</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="94" column="14" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="94" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a54d02db39a3471b3af72e0c0470ca633" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnProjectileCollision</definition>
+        <argsstring>(GameObject projectile)</argsstring>
+        <name>OnProjectileCollision</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.OnProjectileCollision</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>projectile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="122" column="22" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="122" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a83a587358a707256f19a929920071f87" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SwitchAggro</definition>
+        <argsstring>()</argsstring>
+        <name>SwitchAggro</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.SwitchAggro</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="130" column="22" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="130" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a3455b3e78b92c87e2d1c07ced1ea5c8f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RotateTowardsPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>RotateTowardsPlayer</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.RotateTowardsPlayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="138" column="22" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="138" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a8a2daf2544bc307b1ac11de356608feb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Die</definition>
+        <argsstring>()</argsstring>
+        <name>Die</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.Die</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="148" column="22" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="148" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a0966c39ecd421cf3a406d5f97386759f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DropLoot</definition>
+        <argsstring>()</argsstring>
+        <name>DropLoot</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.DropLoot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="159" column="22" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="159" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a3f40ff01a7823be92e52c43405a073cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnBombDamageTick</definition>
+        <argsstring>(int damage)</argsstring>
+        <name>OnBombDamageTick</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.OnBombDamageTick</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>damage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="177" column="22" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="177" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1ac54ce402cec4f1d67a1cef4db841d26d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.OnDestroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="183" column="22" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="183" bodyend="186"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a33bb145f07d3f169f678f4307220e661" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TakeDamage</definition>
+        <argsstring>(int damage, GameObject damageSource)</argsstring>
+        <name>TakeDamage</name>
+        <qualifiedname>Spawnables.EnemyScripts.EnemyController.TakeDamage</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>damage</declname>
+        </param>
+        <param>
+          <type>GameObject</type>
+          <declname>damageSource</declname>
+        </param>
+        <briefdescription>
+<para>Decreases the enemy&apos;s health by the given amount, and kills it if it reaches 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>damage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of damage dealt </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>damageSource</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object causing the damage </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="111" column="21" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="111" bodyend="118"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>EnemyController</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>weapon</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>onTakesHitEvent</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>_enemyVariables</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Entity</label>
+        <link refid="class_spawnables_1_1_entity"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>movementPattern</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+      </node>
+      <node id="4">
+        <label>Enemy</label>
+        <link refid="class_spawnables_1_1_enemy_scripts_1_1_enemy"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Weapon</label>
+        <link refid="class_spawnables_1_1_weapons_1_1_weapon"/>
+      </node>
+      <node id="3">
+        <label>GameObjectEvent</label>
+        <link refid="class_tools_1_1_game_object_event"/>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="15" column="11" bodyfile="Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="16" bodyend="187"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a2ddf72ec82eef8a8697edfabf08fbb17" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>_currentHealth</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a4a4c7a5aac1adcbc508c8e19b2409d5f" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>_enemyVariables</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1aff238b85fe8390180763f0ad759d7430" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>_timeOfLastTrigger</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1aa0e481fb67cfe5b349f64bfb418c973f" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>BORDER_TAG</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a8a2daf2544bc307b1ac11de356608feb" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>Die</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a0966c39ecd421cf3a406d5f97386759f" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>DropLoot</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1aac5e2fc840b06a6932b678c35c293c72" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>hasAggro</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a3f40ff01a7823be92e52c43405a073cb" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>OnBombDamageTick</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a463be11d16a148ee899e4c3a2bbd4d38" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>onDeathEvent</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1ac54ce402cec4f1d67a1cef4db841d26d" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>OnDestroy</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a84e23ba394eacd818d2e005cc466c4d1" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>OnEnable</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a54d02db39a3471b3af72e0c0470ca633" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>OnProjectileCollision</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1abd9abcb1ce3bcdd0d9c99534620685bc" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>onTakesHitEvent</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1ad8977c264b58f2c0e3e69af81c83644d" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>OnTriggerEnter2D</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a44ebcf048524a4fc189c39533c950641" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>OnTriggerExit2D</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a5eff005e48044d53c3188350360d2bd3" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>PLAYER_PROJECTILE_TAG</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a3455b3e78b92c87e2d1c07ced1ea5c8f" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>RotateTowardsPlayer</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a015d9dccd4fec1a8a970a3d43c9e242f" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>ShootsEvent</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a83a587358a707256f19a929920071f87" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>SwitchAggro</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a33bb145f07d3f169f678f4307220e661" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>TakeDamage</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1afa3a387ebb345c845da69be48295064a" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>TRIGGER_DEBOUNCE_TIME</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1aec0783b5a136e042adcc47bae4fe5291" prot="private" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>Update</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a21791573ffa3822ec2a0e08bc710d716" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::EnemyController</scope><name>weapon</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

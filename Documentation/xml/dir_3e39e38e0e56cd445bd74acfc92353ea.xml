@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_3e39e38e0e56cd445bd74acfc92353ea" kind="dir">
+    <compoundname>Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons</compoundname>
+    <innerdir refid="dir_3922f58dbc3d0edafcd23c2fcf208de8">Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables</innerdir>
+    <innerdir refid="dir_aab95880917f10061d5481f82c0bedc6">Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/WeaponTypes</innerdir>
+    <innerfile refid="_projectile_8cs">Projectile.cs</innerfile>
+    <innerfile refid="_weapon_8cs">Weapon.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/"/>
+  </compounddef>
+</doxygen>

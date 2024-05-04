@@ -1,0 +1,109 @@
+\doxysection{Spawnables.\+Weapons.\+Weapon\+Types.\+Scatter\+Gun Class Reference}
+\hypertarget{class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun}{}\label{class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun}\index{Spawnables.Weapons.WeaponTypes.ScatterGun@{Spawnables.Weapons.WeaponTypes.ScatterGun}}
+
+
+Inheritance diagram for Spawnables.\+Weapons.\+Weapon\+Types.\+Scatter\+Gun\+:
+% FIG 0
+
+
+Collaboration diagram for Spawnables.\+Weapons.\+Weapon\+Types.\+Scatter\+Gun\+:
+% FIG 1
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_projectile}{Projectile}} $>$ \mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_a328d19b3000db8616cbf018de1c09729}{projectile\+Roster}}
+\item 
+Animation\+Curve \mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_a6eb41b734637048b2609a7b33e15d041}{rotation\+At\+Spawn\+Distribution}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon}{Spawnables.\+Projectiles.\+Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_acf54945fc4090d93243aa11fc9d4b580}{cooldown}}
+\item 
+float \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a8932601de8c9532f23a655d8ef5d703d}{charge\+Time}}
+\item 
+int \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_aa408fa0ee15bcd0ca127959f9a076ca4}{bullets\+In\+Charge}}
+\item 
+bool \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a2d2742c41b48396b2fb921cc19845651}{is\+Players}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_a4eeb4f6041ab96e03613ed3768b1fe84}{Try\+Shooting}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon}{Spawnables.\+Projectiles.\+Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a3626f55fe1a3285ca6e225253a1affcd}{Detect\+Shootables}} ()
+\item 
+void \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_adbc309f01c4819954baf0944844dddae}{Recharge}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon}{Spawnables.\+Projectiles.\+Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_aa874678199e51f9c31adb40eb4d5ce65}{\+\_\+time\+Of\+Last\+Shot}}
+\item 
+int \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a944b4dd9708c072eb9527351c9501e85}{\+\_\+bullets\+Shot}} = 0
+\item 
+List$<$ \mbox{\hyperlink{interface_spawnables_1_1_projectiles_1_1_i_shootable}{IShootable}} $>$ \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a0cf56eb6f75687c192f8a5a3578d4836}{Gun\+Heads}} = new()
+\item 
+Action \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_a208a81719298181321bbef16ec73448f}{On\+Shoot\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon}{Spawnables.\+Projectiles.\+Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon_ab842db32ed2b9b4e4cd73784ac15249b}{Has\+Aggro}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_scatter_gun_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_scatter_gun_8cs_source}{Scatter\+Gun.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_a4eeb4f6041ab96e03613ed3768b1fe84}\label{class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_a4eeb4f6041ab96e03613ed3768b1fe84} 
+\index{Spawnables.Weapons.WeaponTypes.ScatterGun@{Spawnables.Weapons.WeaponTypes.ScatterGun}!TryShooting@{TryShooting}}
+\index{TryShooting@{TryShooting}!Spawnables.Weapons.WeaponTypes.ScatterGun@{Spawnables.Weapons.WeaponTypes.ScatterGun}}
+\doxysubsubsection{\texorpdfstring{TryShooting()}{TryShooting()}}
+{\footnotesize\ttfamily override void Spawnables.\+Weapons.\+Weapon\+Types.\+Scatter\+Gun.\+Try\+Shooting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_weapon}{Spawnables.\+Projectiles.\+Weapon}}.
+
+
+
+Definition at line \mbox{\hyperlink{_scatter_gun_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_scatter_gun_8cs_source}{Scatter\+Gun.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_a328d19b3000db8616cbf018de1c09729}\label{class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_a328d19b3000db8616cbf018de1c09729} 
+\index{Spawnables.Weapons.WeaponTypes.ScatterGun@{Spawnables.Weapons.WeaponTypes.ScatterGun}!projectileRoster@{projectileRoster}}
+\index{projectileRoster@{projectileRoster}!Spawnables.Weapons.WeaponTypes.ScatterGun@{Spawnables.Weapons.WeaponTypes.ScatterGun}}
+\doxysubsubsection{\texorpdfstring{projectileRoster}{projectileRoster}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_spawnables_1_1_projectiles_1_1_projectile}{Projectile}}$>$ Spawnables.\+Weapons.\+Weapon\+Types.\+Scatter\+Gun.\+projectile\+Roster}
+
+
+
+Definition at line \mbox{\hyperlink{_scatter_gun_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_scatter_gun_8cs_source}{Scatter\+Gun.\+cs}}.
+
+\Hypertarget{class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_a6eb41b734637048b2609a7b33e15d041}\label{class_spawnables_1_1_weapons_1_1_weapon_types_1_1_scatter_gun_a6eb41b734637048b2609a7b33e15d041} 
+\index{Spawnables.Weapons.WeaponTypes.ScatterGun@{Spawnables.Weapons.WeaponTypes.ScatterGun}!rotationAtSpawnDistribution@{rotationAtSpawnDistribution}}
+\index{rotationAtSpawnDistribution@{rotationAtSpawnDistribution}!Spawnables.Weapons.WeaponTypes.ScatterGun@{Spawnables.Weapons.WeaponTypes.ScatterGun}}
+\doxysubsubsection{\texorpdfstring{rotationAtSpawnDistribution}{rotationAtSpawnDistribution}}
+{\footnotesize\ttfamily Animation\+Curve Spawnables.\+Weapons.\+Weapon\+Types.\+Scatter\+Gun.\+rotation\+At\+Spawn\+Distribution}
+
+
+
+Definition at line \mbox{\hyperlink{_scatter_gun_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_scatter_gun_8cs_source}{Scatter\+Gun.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Kodiky/\+Unity/\+Lunar Guardian/\+Assets/\+Scripts/\+Spawnables/\+Weapons/\+Weapon\+Types/Scatter\+Gun.\+cs\end{DoxyCompactItemize}

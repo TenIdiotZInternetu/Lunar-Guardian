@@ -1,0 +1,116 @@
+\doxysection{Player.\+cs}
+\hypertarget{_player_8cs_source}{}\label{_player_8cs_source}\index{Scripts/PlayerScripts/Player.cs@{Scripts/PlayerScripts/Player.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_game_manager}{GameManager}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_spawnables}{Spawnables}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_spawnables_1_1_weapons}{Spawnables.Weapons}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_player_scripts}{PlayerScripts}}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00013}\mbox{\hyperlink{class_player_scripts_1_1_player}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_scripts_1_1_player}{Player}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Static\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00020}\mbox{\hyperlink{class_player_scripts_1_1_player_a7fdf773501c77d7fe9587f9cafffee5f}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player_scripts_1_1_player}{Player}}\ \mbox{\hyperlink{class_player_scripts_1_1_player_a7fdf773501c77d7fe9587f9cafffee5f}{Instance}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00027}\mbox{\hyperlink{class_player_scripts_1_1_player_a631e83154e218047a2889c328a40d351}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_player_scripts_1_1_player_a631e83154e218047a2889c328a40d351}{movementSpeed}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00032}\mbox{\hyperlink{class_player_scripts_1_1_player_a207b8b7bc7cd8c7389acca3a3c9779fd}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_player_scripts_1_1_player_a207b8b7bc7cd8c7389acca3a3c9779fd}{focusSpeedModifier}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00037}\mbox{\hyperlink{class_player_scripts_1_1_player_a4dcef5cc05e1394c1e520d61393c92f3}{00037}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_player_scripts_1_1_bomb_controller}{BombController}}\ \mbox{\hyperlink{class_player_scripts_1_1_player_a4dcef5cc05e1394c1e520d61393c92f3}{bombBehaviour}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00042}\mbox{\hyperlink{class_player_scripts_1_1_player_aaca2015f54b311502fd2cb2cab74dd61}{00042}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \mbox{\hyperlink{class_player_scripts_1_1_player_aaca2015f54b311502fd2cb2cab74dd61}{currentWeaponSet}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00047}\mbox{\hyperlink{class_player_scripts_1_1_player_aff94192c9014da40699a48789c696f3d}{00047}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<GameObject>\ \mbox{\hyperlink{class_player_scripts_1_1_player_aff94192c9014da40699a48789c696f3d}{weaponSets}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Rigidbody2D\ \_rigidbody;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rigidbody\ of\ the\ player}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_hasControl\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Whether\ the\ player\ has\ control\ over\ the\ character}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_hasBombs\ =\ \textcolor{keyword}{true};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Whether\ the\ player\ has\ bombs\ left}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Whether\ the\ player\ has\ deployed\ a\ bomb\ of\ which\ effects\ have\ not\ ended\ yet}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_inBombState\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Unity\ Callbacks\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sets\ appropriate\ responses\ to\ player's\ actions}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_a7fdf773501c77d7fe9587f9cafffee5f}{Instance}}\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \_rigidbody\ =\ GetComponent<Rigidbody2D>();}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ PlayerStatus.BombsChangedEvent\ +=\ CheckBombs;}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ PlayerStatus.PowerLevelChangedEvent\ +=\ \mbox{\hyperlink{class_player_scripts_1_1_player_ae734336ad894a9f83096e0eb022ce694}{ChangeWeapon}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Action2\ +=\ DeployBomb;}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Determines\ the\ velocity\ of\ the\ player}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ FixedUpdate()}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ movementVector\ =\ \textcolor{keyword}{new}\ Vector3(\mbox{\hyperlink{class_player_scripts_1_1_controls}{Controls}}.\mbox{\hyperlink{class_player_scripts_1_1_controls_a698aa7a1bcf8c024ca5b44b35a2a49db}{MoveHorizontal}},\ \mbox{\hyperlink{class_player_scripts_1_1_controls}{Controls}}.\mbox{\hyperlink{class_player_scripts_1_1_controls_aaef34645c77748c8b64dd8ac3ede4b16}{MoveVertical}},\ 0);}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ Vector2\ velocity\ =\ movementVector.normalized\ *\ (\mbox{\hyperlink{class_player_scripts_1_1_player_a631e83154e218047a2889c328a40d351}{movementSpeed}});}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_player_scripts_1_1_controls}{Controls}}.\mbox{\hyperlink{class_player_scripts_1_1_controls_ac711d62a538e7d73ed78e76dc4146c2b}{IsFocused}})\ velocity\ *=\ \mbox{\hyperlink{class_player_scripts_1_1_player_a207b8b7bc7cd8c7389acca3a3c9779fd}{focusSpeedModifier}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \_rigidbody.velocity\ =\ velocity;}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00088}\mbox{\hyperlink{class_player_scripts_1_1_player_a542f630d26b87b7485284fa8e1156389}{00088}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_a542f630d26b87b7485284fa8e1156389}{ChangeBombState}}(\textcolor{keywordtype}{bool}\ state)}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \_inBombState\ =\ state;}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00097}\mbox{\hyperlink{class_player_scripts_1_1_player_ae734336ad894a9f83096e0eb022ce694}{00097}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_ae734336ad894a9f83096e0eb022ce694}{ChangeWeapon}}(\textcolor{keywordtype}{float}\ powerLevel)}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_ae734336ad894a9f83096e0eb022ce694}{ChangeWeapon}}((\textcolor{keywordtype}{int})\ powerLevel);}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00106}\mbox{\hyperlink{class_player_scripts_1_1_player_a619889203db83ef8efe43d453d9e554c}{00106}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_a619889203db83ef8efe43d453d9e554c}{ChangeWeapon}}(\textcolor{keywordtype}{int}\ powerLevel)}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_aaca2015f54b311502fd2cb2cab74dd61}{currentWeaponSet}}.gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_aaca2015f54b311502fd2cb2cab74dd61}{currentWeaponSet}}\ =\ \mbox{\hyperlink{class_player_scripts_1_1_player_aff94192c9014da40699a48789c696f3d}{weaponSets}}[powerLevel];}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_aaca2015f54b311502fd2cb2cab74dd61}{currentWeaponSet}}.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00117}\mbox{\hyperlink{class_player_scripts_1_1_player_addcd78ec1b749bf71dd27fd1965f2efc}{00117}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_addcd78ec1b749bf71dd27fd1965f2efc}{ChangeControl}}(\mbox{\hyperlink{class_game_manager_1_1_game_state}{GameState}}\ state)}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \_hasControl\ =\ state\ is\ \mbox{\hyperlink{class_game_manager_1_1_playing_state}{PlayingState}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Deploys\ a\ bomb\ if\ the\ player\ has\ control\ over\ the\ character,\ has\ bombs\ left\ }}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ there\ is\ not\ a\ bomb\ deployed\ already}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ DeployBomb()}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\_hasControl\ ||\ !\_hasBombs\ ||\ \_inBombState)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ StartCoroutine(\mbox{\hyperlink{class_player_scripts_1_1_player_a4dcef5cc05e1394c1e520d61393c92f3}{bombBehaviour}}.\mbox{\hyperlink{class_player_scripts_1_1_bomb_controller_a6ffe3551433e872831d7751d22cc161e}{DeployBomb}}());}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_status}{PlayerStatus}}.\mbox{\hyperlink{class_player_scripts_1_1_player_status_aeac2eae8e304f20bc75eb574b2df8964}{Instance}}.\mbox{\hyperlink{class_player_scripts_1_1_player_status_a93b8c4270f1e17b9624d0dd78b593e98}{ChangeBombs}}(-\/1);}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Checks\ whether\ the\ player\ has\ bombs\ left}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CheckBombs(\textcolor{keywordtype}{float}\ bombs)}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \_hasBombs\ =\ bombs\ >\ 0;}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Unsuscribes\ from\ events}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ PlayerStatus.BombsChangedEvent\ -\/=\ CheckBombs;}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ PlayerStatus.PowerLevelChangedEvent\ -\/=\ \mbox{\hyperlink{class_player_scripts_1_1_player_ae734336ad894a9f83096e0eb022ce694}{ChangeWeapon}};}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Action2\ -\/=\ DeployBomb;}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00146}00146\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_8cs_source_l00147}00147\ \}}
+
+\end{DoxyCode}

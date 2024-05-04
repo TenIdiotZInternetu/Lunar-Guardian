@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_movement_patterns_1_1_follow_path" kind="class" language="C#" prot="public">
+    <compoundname>MovementPatterns::FollowPath</compoundname>
+    <basecompoundref refid="class_movement_patterns_1_1_movement_pattern" prot="public" virt="non-virtual">MovementPattern</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_movement_patterns_1_1_follow_path_1ac38836c583abd23c619e142bf15897cb" prot="private" static="no" mutable="no">
+        <type>PathCreator</type>
+        <definition>PathCreator path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <qualifiedname>MovementPatterns.FollowPath.path</qualifiedname>
+        <briefdescription>
+<para>Path to move along. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/FollowPath.cs" line="17" column="30" bodyfile="Scripts/MovementPatterns/FollowPath.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_follow_path_1a7f7e4724cf57d59513b39c5ecc81adc8" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <qualifiedname>MovementPatterns.FollowPath.speed</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Distance travelled in one second. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/FollowPath.cs" line="22" column="24" bodyfile="Scripts/MovementPatterns/FollowPath.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_movement_patterns_1_1_follow_path_1a97712bccaedef08f6d8c525bdda2f7ef" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float acceleration</definition>
+        <argsstring></argsstring>
+        <name>acceleration</name>
+        <qualifiedname>MovementPatterns.FollowPath.acceleration</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Rate of change of speed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/FollowPath.cs" line="27" column="24" bodyfile="Scripts/MovementPatterns/FollowPath.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_movement_patterns_1_1_follow_path_1a8d67528573c728e2d30355bc60a141a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Initialize</definition>
+        <argsstring>(Entity entity)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>MovementPatterns.FollowPath.Initialize</qualifiedname>
+        <param>
+          <type><ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/FollowPath.cs" line="32" column="30" bodyfile="Scripts/MovementPatterns/FollowPath.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_movement_patterns_1_1_follow_path_1aa27a497603473cb642e835d809c60a64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override Vector3</type>
+        <definition>override Vector3 GetNextPosition</definition>
+        <argsstring>(Entity entity)</argsstring>
+        <name>GetNextPosition</name>
+        <qualifiedname>MovementPatterns.FollowPath.GetNextPosition</qualifiedname>
+        <param>
+          <type><ref refid="class_spawnables_1_1_entity" kindref="compound">Entity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/MovementPatterns/FollowPath.cs" line="34" column="33" bodyfile="Scripts/MovementPatterns/FollowPath.cs" bodystart="34" bodyend="40"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Utilizes PathCreator tool created by Sebastian Lague. Traces a path and moves along it. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FollowPath</label>
+        <link refid="class_movement_patterns_1_1_follow_path"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>FollowPath</label>
+        <link refid="class_movement_patterns_1_1_follow_path"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/MovementPatterns/FollowPath.cs" line="11" column="11" bodyfile="Scripts/MovementPatterns/FollowPath.cs" bodystart="12" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_movement_patterns_1_1_follow_path_1a97712bccaedef08f6d8c525bdda2f7ef" prot="private" virt="non-virtual"><scope>MovementPatterns::FollowPath</scope><name>acceleration</name></member>
+      <member refid="class_movement_patterns_1_1_follow_path_1aa27a497603473cb642e835d809c60a64" prot="public" virt="non-virtual"><scope>MovementPatterns::FollowPath</scope><name>GetNextPosition</name></member>
+      <member refid="class_movement_patterns_1_1_follow_path_1a8d67528573c728e2d30355bc60a141a0" prot="public" virt="non-virtual"><scope>MovementPatterns::FollowPath</scope><name>Initialize</name></member>
+      <member refid="class_movement_patterns_1_1_follow_path_1ac38836c583abd23c619e142bf15897cb" prot="private" virt="non-virtual"><scope>MovementPatterns::FollowPath</scope><name>path</name></member>
+      <member refid="class_movement_patterns_1_1_follow_path_1a7f7e4724cf57d59513b39c5ecc81adc8" prot="private" virt="non-virtual"><scope>MovementPatterns::FollowPath</scope><name>speed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

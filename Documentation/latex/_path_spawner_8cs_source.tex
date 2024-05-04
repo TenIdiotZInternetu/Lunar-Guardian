@@ -1,0 +1,31 @@
+\doxysection{Path\+Spawner.\+cs}
+\hypertarget{_path_spawner_8cs_source}{}\label{_path_spawner_8cs_source}\index{Tools/PathCreator/Examples/Scripts/PathSpawner.cs@{Tools/PathCreator/Examples/Scripts/PathSpawner.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_path_creation}{PathCreation}};}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_path_creation_1_1_examples}{PathCreation.Examples}}\ \{}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }PathSpawner\ :\ MonoBehaviour\ \{}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ PathCreator\ pathPrefab;}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ PathFollower\ followerPrefab;}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Transform[]\ spawnPoints;}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Start\ ()\ \{}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (Transform\ t\ \textcolor{keywordflow}{in}\ spawnPoints)\ \{}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ path\ =\ Instantiate\ (pathPrefab,\ t.position,\ t.rotation);}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ follower\ =\ Instantiate\ (followerPrefab);}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ follower.pathCreator\ =\ path;}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ path.transform.parent\ =\ t;}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_path_spawner_8cs_source_l00025}00025\ \}}
+
+\end{DoxyCode}

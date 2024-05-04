@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_path_creator" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::PathCreator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="event">
+      <memberdef kind="event" id="class_path_creation_1_1_path_creator_1a65278f25a3bd92383b81a96be8a5a7a7" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>System.Action</type>
+        <definition>System.Action pathUpdated</definition>
+        <argsstring></argsstring>
+        <name>pathUpdated</name>
+        <qualifiedname>PathCreation.PathCreator.pathUpdated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This class stores data for the path editor, and provides accessors to get the current vertex and bezier path. Attach to a GameObject to create a new path editor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" line="10" column="35" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_1acd3d2f71aadd31acc65b0775ef52bd62" prot="private" static="no" mutable="no">
+        <type><ref refid="class_path_creation_1_1_path_creator_data" kindref="compound">PathCreatorData</ref></type>
+        <definition>PathCreatorData editorData</definition>
+        <argsstring></argsstring>
+        <name>editorData</name>
+        <qualifiedname>PathCreation.PathCreator.editorData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" line="13" column="25" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_1aedeffc7d23da25d52b9a50045189fe2b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <qualifiedname>PathCreation.PathCreator.initialized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" line="15" column="14" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_path_creator_1ab55aa37a3f4005ab563c64e2cef02e1b" prot="private" static="no" mutable="no">
+        <type>GlobalDisplaySettings</type>
+        <definition>GlobalDisplaySettings globalEditorDisplaySettings</definition>
+        <argsstring></argsstring>
+        <name>globalEditorDisplaySettings</name>
+        <qualifiedname>PathCreation.PathCreator.globalEditorDisplaySettings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" line="17" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_path_creation_1_1_path_creator_1a3eb739a083bdb5ade4c81c07af150bd7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_path_creation_1_1_vertex_path" kindref="compound">VertexPath</ref></type>
+        <definition>VertexPath path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <qualifiedname>PathCreation.PathCreator.path</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" line="20" column="27" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" bodystart="20" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_path_creator_1a0028a8eff418f01f8802838688fd6965" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_path_creation_1_1_bezier_path" kindref="compound">BezierPath</ref></type>
+        <definition>BezierPath bezierPath</definition>
+        <argsstring></argsstring>
+        <name>bezierPath</name>
+        <qualifiedname>PathCreation.PathCreator.bezierPath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" line="30" column="27" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" bodystart="30" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class_path_creation_1_1_path_creator_1a9172818d21fb0110a6dc2cd248598dd6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_path_creation_1_1_path_creator_data" kindref="compound">PathCreatorData</ref></type>
+        <definition>PathCreatorData EditorData</definition>
+        <argsstring></argsstring>
+        <name>EditorData</name>
+        <qualifiedname>PathCreation.PathCreator.EditorData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" line="59" column="32" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" bodystart="59" bodyend="64"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_path_creation_1_1_path_creator_1ae9e2b7d12ace7176fef49f4242a4292b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitializeEditorData</definition>
+        <argsstring>(bool in2DMode)</argsstring>
+        <name>InitializeEditorData</name>
+        <qualifiedname>PathCreation.PathCreator.InitializeEditorData</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>in2DMode</declname>
+        </param>
+        <briefdescription>
+<para>Used by the path editor to initialise some data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" line="48" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" bodystart="48" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_path_creator_1ad46faf1defd8aca8bf674444fe5b72bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TriggerPathUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>TriggerPathUpdate</name>
+        <qualifiedname>PathCreation.PathCreator.TriggerPathUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" line="66" column="21" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" bodystart="66" bodyend="70"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>BezierPath</label>
+        <link refid="class_path_creation_1_1_bezier_path"/>
+      </node>
+      <node id="2">
+        <label>PathCreatorData</label>
+        <link refid="class_path_creation_1_1_path_creator_data"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_bezierPath</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>_vertexPath</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>VertexPath</label>
+        <link refid="class_path_creation_1_1_vertex_path"/>
+      </node>
+      <node id="1">
+        <label>PathCreator</label>
+        <childnode refid="2" relation="usage">
+          <edgelabel>editorData</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" line="5" column="11" bodyfile="Tools/PathCreator/Core/Runtime/Objects/PathCreator.cs" bodystart="5" bodyend="111"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_path_creator_1a0028a8eff418f01f8802838688fd6965" prot="public" virt="non-virtual"><scope>PathCreation::PathCreator</scope><name>bezierPath</name></member>
+      <member refid="class_path_creation_1_1_path_creator_1acd3d2f71aadd31acc65b0775ef52bd62" prot="private" virt="non-virtual"><scope>PathCreation::PathCreator</scope><name>editorData</name></member>
+      <member refid="class_path_creation_1_1_path_creator_1a9172818d21fb0110a6dc2cd248598dd6" prot="public" virt="non-virtual"><scope>PathCreation::PathCreator</scope><name>EditorData</name></member>
+      <member refid="class_path_creation_1_1_path_creator_1ab55aa37a3f4005ab563c64e2cef02e1b" prot="private" virt="non-virtual"><scope>PathCreation::PathCreator</scope><name>globalEditorDisplaySettings</name></member>
+      <member refid="class_path_creation_1_1_path_creator_1aedeffc7d23da25d52b9a50045189fe2b" prot="private" virt="non-virtual"><scope>PathCreation::PathCreator</scope><name>initialized</name></member>
+      <member refid="class_path_creation_1_1_path_creator_1ae9e2b7d12ace7176fef49f4242a4292b" prot="public" virt="non-virtual"><scope>PathCreation::PathCreator</scope><name>InitializeEditorData</name></member>
+      <member refid="class_path_creation_1_1_path_creator_1a3eb739a083bdb5ade4c81c07af150bd7" prot="public" virt="non-virtual"><scope>PathCreation::PathCreator</scope><name>path</name></member>
+      <member refid="class_path_creation_1_1_path_creator_1a65278f25a3bd92383b81a96be8a5a7a7" prot="public" virt="non-virtual"><scope>PathCreation::PathCreator</scope><name>pathUpdated</name></member>
+      <member refid="class_path_creation_1_1_path_creator_1ad46faf1defd8aca8bf674444fe5b72bf" prot="public" virt="non-virtual"><scope>PathCreation::PathCreator</scope><name>TriggerPathUpdate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

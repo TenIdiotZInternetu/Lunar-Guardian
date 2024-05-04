@@ -1,0 +1,54 @@
+\doxysection{Chasing\+MP Class Reference}
+\hypertarget{class_movement_patterns_1_1_chasing_m_p}{}\label{class_movement_patterns_1_1_chasing_m_p}\index{ChasingMP@{ChasingMP}}
+
+
+Entity chases a target for a set amount of time and then continues in a straight line.  
+
+
+Inheritance diagram for Chasing\+MP\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_movement_patterns_1_1_chasing_m_p}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_movement_patterns_1_1_chasing_m_p_aebcdb6865e8e48a878d71eba77d1f5b3}\label{class_movement_patterns_1_1_chasing_m_p_aebcdb6865e8e48a878d71eba77d1f5b3} 
+Game\+Object {\bfseries target}
+\begin{DoxyCompactList}\small\item\em The target being chased. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_chasing_m_p_aa1e558f5ba6fb97ca16dcc4e4af6b111}\label{class_movement_patterns_1_1_chasing_m_p_aa1e558f5ba6fb97ca16dcc4e4af6b111} 
+float {\bfseries lock\+On\+Time}
+\begin{DoxyCompactList}\small\item\em Time before the entity starts chasing the target. Use to avoid unrealistic behavior upon spawning. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_chasing_m_p_affd81e3b392c1ddde52ebf03f358c907}\label{class_movement_patterns_1_1_chasing_m_p_affd81e3b392c1ddde52ebf03f358c907} 
+float {\bfseries chase\+Time}
+\begin{DoxyCompactList}\small\item\em Amount of time the entity chases the target before continuing in a straight line. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_chasing_m_p_a2fe30ccd8492359ecb32bef8f8985272}\label{class_movement_patterns_1_1_chasing_m_p_a2fe30ccd8492359ecb32bef8f8985272} 
+float {\bfseries attraction\+Rate}
+\begin{DoxyCompactList}\small\item\em Rate at which the entity rotates towards the target. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_chasing_m_p_a7f7e4724cf57d59513b39c5ecc81adc8}\label{class_movement_patterns_1_1_chasing_m_p_a7f7e4724cf57d59513b39c5ecc81adc8} 
+float {\bfseries speed}
+\begin{DoxyCompactList}\small\item\em Distance traveled after one second. \end{DoxyCompactList}\item 
+\Hypertarget{class_movement_patterns_1_1_chasing_m_p_a97712bccaedef08f6d8c525bdda2f7ef}\label{class_movement_patterns_1_1_chasing_m_p_a97712bccaedef08f6d8c525bdda2f7ef} 
+float {\bfseries acceleration}
+\begin{DoxyCompactList}\small\item\em Rate of change of speed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern}{Movement\+Pattern}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern_a04f0e6cf979d3b51e259545b3d33933d}{Initialize}} (\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Sets parameters of the movement pattern based on the entity\textquotesingle{}s state. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern_a784a22d17e4193114212035e8eb6ac0f}{Get\+Next\+Position}} (\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Calculates the position of the entity in the next frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_chasing_m_p_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_chasing_m_p_8cs_source}{Chasing\+MP.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Movement\+Patterns/Chasing\+MP.\+cs\end{DoxyCompactItemize}

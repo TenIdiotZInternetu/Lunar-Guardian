@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7599381367607256472
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5402303974314664392, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: SpawnKey
+      value: MultiplierPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402303974314664392, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: rewards.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402303974314664392, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: rewards.Array.data[0].type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949001, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_Name
+      value: Multiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949044, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949044, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2396226
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949044, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.80406094
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7872042
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.69619626
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9397678
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91654056
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.39994186
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949046, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -47.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237822895877949047, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5402303974314664392, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+--- !u!1 &938864751126864849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7237822895877949001, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+  m_PrefabInstance: {fileID: 7599381367607256472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8763593999217978070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938864751126864849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8272dab4c7f5481faac99c605fed0e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementPattern: {fileID: 938864751126864879}
+  SpawnKey: MultiplierPickup
+  rewards:
+  - type: 4
+    amount: 1
+--- !u!114 &938864751126864879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7237822895877949047, guid: f0e5ef04378a81f4f9423438749dc68e, type: 3}
+  m_PrefabInstance: {fileID: 7599381367607256472}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938864751126864849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa1bbd737dfcb749bdfb35827995610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

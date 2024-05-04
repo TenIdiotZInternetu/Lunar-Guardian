@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_v_f_x_1_1_pan_camera" xml:lang="en-US">
+<title>PanCamera Class Reference</title>
+<indexterm><primary>PanCamera</primary></indexterm>
+<para>
+
+<para>Smoothly pans the camera to a target position. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_v_f_x_1_1_pan_camera_1a7cc5efcfaf1700331f7c5ed6b38fae16"/>void <emphasis role="strong">PanToPosition</emphasis> ()</para>
+
+<para>Starts smoothly moving the camera to the target position. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_v_f_x_1_1_pan_camera_1a2008f4ab70b5e4104c2ca43932536ddf"/>Camera <emphasis role="strong">camera</emphasis></para>
+
+<para>Camera to pan. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_v_f_x_1_1_pan_camera_1a94137b92fe146aa56a9aea3e94aefd0a"/>Vector3 <emphasis role="strong">targetPosition</emphasis></para>
+
+<para>Final position of the camera after the pan. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_v_f_x_1_1_pan_camera_1a515dbc8cdce3d6b2091228e7c6d2036f"/>AnimationCurve <emphasis role="strong">curve</emphasis></para>
+
+<para>Portion of the distance travelled by the camera towards the target position over time. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__pan_camera_8cs_source_1l00010">10</link> of file <link linkend="__pan_camera_8cs_source">PanCamera.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/VFX/PanCamera.cs</section>
+</section>

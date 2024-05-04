@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_v_f_x_1_1_damage_flash" kind="class" language="C#" prot="public">
+    <compoundname>VFX::DamageFlash</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_v_f_x_1_1_damage_flash_1a4f5e707027d3ef8896bab07be25ab254" prot="private" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int Opacity</definition>
+        <argsstring></argsstring>
+        <name>Opacity</name>
+        <qualifiedname>VFX.DamageFlash.Opacity</qualifiedname>
+        <initializer>= Shader.PropertyToID(&quot;_Opacity&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/DamageFlash.cs" line="14" column="37" bodyfile="Scripts/VFX/DamageFlash.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_damage_flash_1a96184dbfaff9adfd50c1a98f2bdcf65a" prot="private" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int TintColor</definition>
+        <argsstring></argsstring>
+        <name>TintColor</name>
+        <qualifiedname>VFX.DamageFlash.TintColor</qualifiedname>
+        <initializer>= Shader.PropertyToID(&quot;_TintColor&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/DamageFlash.cs" line="15" column="37" bodyfile="Scripts/VFX/DamageFlash.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_v_f_x_1_1_damage_flash_1aa3216f4e1bac383ce51646746ab59263" prot="public" static="no" mutable="no">
+        <type>AnimationCurve</type>
+        <definition>AnimationCurve intensityCurve</definition>
+        <argsstring></argsstring>
+        <name>intensityCurve</name>
+        <qualifiedname>VFX.DamageFlash.intensityCurve</qualifiedname>
+        <briefdescription>
+<para>Intensity of the tint over time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/DamageFlash.cs" line="22" column="31" bodyfile="Scripts/VFX/DamageFlash.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_v_f_x_1_1_damage_flash_1a629942ec38859571a1852831d572ff92" prot="private" static="no" mutable="no">
+        <type>SpriteRenderer</type>
+        <definition>SpriteRenderer _spriteRenderer</definition>
+        <argsstring></argsstring>
+        <name>_spriteRenderer</name>
+        <qualifiedname>VFX.DamageFlash._spriteRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/DamageFlash.cs" line="26" column="32" bodyfile="Scripts/VFX/DamageFlash.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_damage_flash_1a66bfe25e0b8f343ca2c3404bd262bedd" prot="private" static="no" mutable="no">
+        <type>Material</type>
+        <definition>Material _material</definition>
+        <argsstring></argsstring>
+        <name>_material</name>
+        <qualifiedname>VFX.DamageFlash._material</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/DamageFlash.cs" line="27" column="26" bodyfile="Scripts/VFX/DamageFlash.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_damage_flash_1ab76dfeca50c6391651aee788cca51ecf" prot="private" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color _tintColor</definition>
+        <argsstring></argsstring>
+        <name>_tintColor</name>
+        <qualifiedname>VFX.DamageFlash._tintColor</qualifiedname>
+        <initializer>= Color.cyan</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/DamageFlash.cs" line="28" column="23" bodyfile="Scripts/VFX/DamageFlash.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_damage_flash_1adfd192832bec262648ae3352affb18ab" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float _timeOfHit</definition>
+        <argsstring></argsstring>
+        <name>_timeOfHit</name>
+        <qualifiedname>VFX.DamageFlash._timeOfHit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/DamageFlash.cs" line="29" column="23" bodyfile="Scripts/VFX/DamageFlash.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_v_f_x_1_1_damage_flash_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>VFX.DamageFlash.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/DamageFlash.cs" line="33" column="14" bodyfile="Scripts/VFX/DamageFlash.cs" bodystart="33" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_v_f_x_1_1_damage_flash_1a31c14e29b79e47402db81b0c955ecec6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator Flash</definition>
+        <argsstring>()</argsstring>
+        <name>Flash</name>
+        <qualifiedname>VFX.DamageFlash.Flash</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/DamageFlash.cs" line="70" column="29" bodyfile="Scripts/VFX/DamageFlash.cs" bodystart="70" bodyend="81"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_v_f_x_1_1_damage_flash_1a46cf6740b421df6c676c89416308ba7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StartFlashing</definition>
+        <argsstring>(GameObject projectile)</argsstring>
+        <name>StartFlashing</name>
+        <qualifiedname>VFX.DamageFlash.StartFlashing</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>projectile</declname>
+        </param>
+        <briefdescription>
+<para>Starts the flashing effect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>projectile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Not yet implemented) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/DamageFlash.cs" line="48" column="21" bodyfile="Scripts/VFX/DamageFlash.cs" bodystart="48" bodyend="56"/>
+        <references refid="class_v_f_x_1_1_damage_flash_1a8bbe835c1149e9ec938fe25b14f22d8b" compoundref="_damage_flash_8cs" startline="61" endline="65">DamageFlash.StopFlashing</references>
+      </memberdef>
+      <memberdef kind="function" id="class_v_f_x_1_1_damage_flash_1a8bbe835c1149e9ec938fe25b14f22d8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StopFlashing</definition>
+        <argsstring>()</argsstring>
+        <name>StopFlashing</name>
+        <qualifiedname>VFX.DamageFlash.StopFlashing</qualifiedname>
+        <briefdescription>
+<para>Stops the flashing effect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/DamageFlash.cs" line="61" column="21" bodyfile="Scripts/VFX/DamageFlash.cs" bodystart="61" bodyend="65"/>
+        <referencedby refid="class_v_f_x_1_1_damage_flash_1a46cf6740b421df6c676c89416308ba7a" compoundref="_damage_flash_8cs" startline="48" endline="56">DamageFlash.StartFlashing</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Changes opacity of the tint material repeatedly to create a flashing effect. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/VFX/DamageFlash.cs" line="10" column="11" bodyfile="Scripts/VFX/DamageFlash.cs" bodystart="11" bodyend="83"/>
+    <listofallmembers>
+      <member refid="class_v_f_x_1_1_damage_flash_1a66bfe25e0b8f343ca2c3404bd262bedd" prot="private" virt="non-virtual"><scope>VFX::DamageFlash</scope><name>_material</name></member>
+      <member refid="class_v_f_x_1_1_damage_flash_1a629942ec38859571a1852831d572ff92" prot="private" virt="non-virtual"><scope>VFX::DamageFlash</scope><name>_spriteRenderer</name></member>
+      <member refid="class_v_f_x_1_1_damage_flash_1adfd192832bec262648ae3352affb18ab" prot="private" virt="non-virtual"><scope>VFX::DamageFlash</scope><name>_timeOfHit</name></member>
+      <member refid="class_v_f_x_1_1_damage_flash_1ab76dfeca50c6391651aee788cca51ecf" prot="private" virt="non-virtual"><scope>VFX::DamageFlash</scope><name>_tintColor</name></member>
+      <member refid="class_v_f_x_1_1_damage_flash_1a31c14e29b79e47402db81b0c955ecec6" prot="private" virt="non-virtual"><scope>VFX::DamageFlash</scope><name>Flash</name></member>
+      <member refid="class_v_f_x_1_1_damage_flash_1aa3216f4e1bac383ce51646746ab59263" prot="public" virt="non-virtual"><scope>VFX::DamageFlash</scope><name>intensityCurve</name></member>
+      <member refid="class_v_f_x_1_1_damage_flash_1a4f5e707027d3ef8896bab07be25ab254" prot="private" virt="non-virtual"><scope>VFX::DamageFlash</scope><name>Opacity</name></member>
+      <member refid="class_v_f_x_1_1_damage_flash_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" virt="non-virtual"><scope>VFX::DamageFlash</scope><name>Start</name></member>
+      <member refid="class_v_f_x_1_1_damage_flash_1a46cf6740b421df6c676c89416308ba7a" prot="public" virt="non-virtual"><scope>VFX::DamageFlash</scope><name>StartFlashing</name></member>
+      <member refid="class_v_f_x_1_1_damage_flash_1a8bbe835c1149e9ec938fe25b14f22d8b" prot="public" virt="non-virtual"><scope>VFX::DamageFlash</scope><name>StopFlashing</name></member>
+      <member refid="class_v_f_x_1_1_damage_flash_1a96184dbfaff9adfd50c1a98f2bdcf65a" prot="private" virt="non-virtual"><scope>VFX::DamageFlash</scope><name>TintColor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

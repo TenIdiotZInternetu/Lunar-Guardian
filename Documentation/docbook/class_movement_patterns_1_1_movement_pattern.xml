@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_movement_patterns_1_1_movement_pattern" xml:lang="en-US">
+<title>MovementPattern Class Reference</title>
+<indexterm><primary>MovementPattern</primary></indexterm>
+<para>
+
+<para>Defines calculations for the position of an entity in the next frame based on its properties. </para>
+ 
+</para>
+<para>Inheritance diagram for MovementPattern:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_movement_patterns_1_1_movement_pattern.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_movement_patterns_1_1_movement_pattern_1a04f0e6cf979d3b51e259545b3d33933d">Initialize</link> (<link linkend="_class_spawnables_1_1_entity">Entity</link> entity)</para>
+
+<para>Sets parameters of the movement pattern based on the entity&apos;s state. </para>
+</listitem>
+            <listitem><para>Vector3 <link linkend="_class_movement_patterns_1_1_movement_pattern_1a784a22d17e4193114212035e8eb6ac0f">GetNextPosition</link> (<link linkend="_class_spawnables_1_1_entity">Entity</link> entity)</para>
+
+<para>Calculates the position of the entity in the next frame. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__movement_pattern_8cs_source_1l00011">11</link> of file <link linkend="__movement_pattern_8cs_source">MovementPattern.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_movement_patterns_1_1_movement_pattern_1a04f0e6cf979d3b51e259545b3d33933d"/><section>
+    <title>Initialize()</title>
+<indexterm><primary>Initialize</primary><secondary>MovementPattern</secondary></indexterm>
+<indexterm><primary>MovementPattern</primary><secondary>Initialize</secondary></indexterm>
+<para><computeroutput>void Initialize (<link linkend="_class_spawnables_1_1_entity">Entity</link> entity)<computeroutput>[abstract]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>entity</entry><entry>
+<para>Entity to adjust the parameters to </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_movement_patterns_1_1_movement_pattern_1a784a22d17e4193114212035e8eb6ac0f"/><section>
+    <title>GetNextPosition()</title>
+<indexterm><primary>GetNextPosition</primary><secondary>MovementPattern</secondary></indexterm>
+<indexterm><primary>MovementPattern</primary><secondary>GetNextPosition</secondary></indexterm>
+<para><computeroutput>Vector3 GetNextPosition (<link linkend="_class_spawnables_1_1_entity">Entity</link> entity)<computeroutput>[abstract]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>entity</entry><entry>
+<para>Entity of which position is calculated </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The calculated position </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/MovementPatterns/MovementPattern.cs</section>
+</section>

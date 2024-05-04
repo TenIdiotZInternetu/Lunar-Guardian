@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_6a5d9bd0d15b3d82d5ebd95a22231102" kind="dir">
+    <compoundname>Scripts/GameManager</compoundname>
+    <innerdir refid="dir_fc900bbfcab4d947a293cfe17f6c20b4">Scripts/GameManager/States</innerdir>
+    <innerfile refid="_game_manager_8cs">GameManager.cs</innerfile>
+    <innerfile refid="_game_state_8cs">GameState.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/GameManager/"/>
+  </compounddef>
+</doxygen>

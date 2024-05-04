@@ -1,0 +1,77 @@
+\doxysection{Damage\+Flash.\+cs}
+\hypertarget{_damage_flash_8cs_source}{}\label{_damage_flash_8cs_source}\index{Scripts/VFX/DamageFlash.cs@{Scripts/VFX/DamageFlash.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_v_f_x}{VFX}}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00009}00009\ \ \ \ \ [RequireComponent(typeof(SpriteRenderer))]}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00010}\mbox{\hyperlink{class_v_f_x_1_1_damage_flash}{00010}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_v_f_x_1_1_damage_flash}{DamageFlash}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Static\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ \textcolor{keywordtype}{int}\ Opacity\ =\ Shader.PropertyToID(\textcolor{stringliteral}{"{}\_Opacity"{}});}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ \textcolor{keywordtype}{int}\ TintColor\ =\ Shader.PropertyToID(\textcolor{stringliteral}{"{}\_TintColor"{}});}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00022}\mbox{\hyperlink{class_v_f_x_1_1_damage_flash_aa3216f4e1bac383ce51646746ab59263}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ AnimationCurve\ \mbox{\hyperlink{class_v_f_x_1_1_damage_flash_aa3216f4e1bac383ce51646746ab59263}{intensityCurve}};}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ SpriteRenderer\ \_spriteRenderer;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sprite\ renderer\ of\ the\ object}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Material\ \_material;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Material\ of\ the\ sprite\ renderer}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Color\ \_tintColor\ =\ Color.cyan;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Color\ of\ the\ tint}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \_timeOfHit;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Time\ when\ the\ flashing\ started}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00030}00030\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Unity\ Callbacks\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \_spriteRenderer\ =\ GetComponent<SpriteRenderer>();}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \_material\ =\ \textcolor{keyword}{new}\ Material(\_spriteRenderer.material);}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \_spriteRenderer.material\ =\ \_material;}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \_material.SetFloat(Opacity,\ 0);}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00041}00041\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00048}\mbox{\hyperlink{class_v_f_x_1_1_damage_flash_a46cf6740b421df6c676c89416308ba7a}{00048}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_f_x_1_1_damage_flash_a46cf6740b421df6c676c89416308ba7a}{StartFlashing}}(GameObject\ projectile)}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_v_f_x_1_1_damage_flash_a8bbe835c1149e9ec938fe25b14f22d8b}{StopFlashing}}();}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \_timeOfHit\ =\ Time.time;}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \_material.SetColor(TintColor,\ \_tintColor);}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ StartCoroutine(Flash());}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00061}\mbox{\hyperlink{class_v_f_x_1_1_damage_flash_a8bbe835c1149e9ec938fe25b14f22d8b}{00061}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_f_x_1_1_damage_flash_a8bbe835c1149e9ec938fe25b14f22d8b}{StopFlashing}}()}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ StopCoroutine(Flash());}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \_material.SetFloat(Opacity,\ 0);}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Coroutine\ that\ sets\ the\ opacity\ of\ the\ tint\ according\ to\ the\ intensity\ curve}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ IEnumerator\ Flash()}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ timeElapsed\ =\ Time.time\ -\/\ \_timeOfHit;}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (timeElapsed\ <\ \mbox{\hyperlink{class_v_f_x_1_1_damage_flash_aa3216f4e1bac383ce51646746ab59263}{intensityCurve}}.keys[\string^1].time)}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timeElapsed\ =\ Time.time\ -\/\ \_timeOfHit;}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ intensity\ =\ \mbox{\hyperlink{class_v_f_x_1_1_damage_flash_aa3216f4e1bac383ce51646746ab59263}{intensityCurve}}.Evaluate(timeElapsed);}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_material.SetFloat(Opacity,\ intensity);}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_damage_flash_8cs_source_l00084}00084\ \}}
+
+\end{DoxyCode}

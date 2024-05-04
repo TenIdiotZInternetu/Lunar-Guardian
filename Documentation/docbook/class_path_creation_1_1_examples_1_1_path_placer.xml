@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_1_1_examples_1_1_path_placer" xml:lang="en-US">
+<title>PathCreation.Examples.PathPlacer Class Reference</title>
+<indexterm><primary>PathCreation.Examples.PathPlacer</primary></indexterm>
+Inheritance diagram for PathCreation.Examples.PathPlacer:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_examples_1_1_path_placer__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for PathCreation.Examples.PathPlacer:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_examples_1_1_path_placer__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>GameObject <link linkend="_class_path_creation_1_1_examples_1_1_path_placer_1a31d4d086132053e0e08a08c962038282">prefab</link></para>
+</listitem>
+            <listitem><para>GameObject <link linkend="_class_path_creation_1_1_examples_1_1_path_placer_1a99254c3cd068ccefaec86cd18b38cc40">holder</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_path_creation_1_1_examples_1_1_path_placer_1a69f3bf86fa3e44e4c7d8d3837d2eda26">spacing</link> = 3</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool">PathCreation.Examples.PathSceneTool</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_path_creation_1_1_path_creator">PathCreator</link> <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1acc49024bbd6fea74d56f071789022594">pathCreator</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1ab9d47ca76d42b8ca2ca2f5a4498d1da5">autoUpdate</link> = true</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_path_creation_1_1_examples_1_1_path_placer_1ab5e08a7bb4b85dce62e42e75dc6d8d12">PathUpdated</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Protected Member Functions inherited from <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool">PathCreation.Examples.PathSceneTool</link>        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1a1eefdc23d778713205de0eb65d3d5dc1">OnDestroy</link> ()</para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">PathUpdated</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Public Member Functions inherited from <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool">PathCreation.Examples.PathSceneTool</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1aa341e881e4581ab0612442b623375db2">TriggerUpdate</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Properties inherited from <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool">PathCreation.Examples.PathSceneTool</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_path_creation_1_1_vertex_path">VertexPath</link> <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1a532e008bb82cbd1c9d928f669253ddd8">path</link><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+Events inherited from <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool">PathCreation.Examples.PathSceneTool</link>        <itemizedlist>
+            <listitem><para>System.Action <link linkend="_class_path_creation_1_1_examples_1_1_path_scene_tool_1ae513084a84a343f4998ccc8d7f878ee2">onDestroyed</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__path_placer_8cs_source_1l00007">7</link> of file <link linkend="__path_placer_8cs_source">PathPlacer.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_placer_1ab5e08a7bb4b85dce62e42e75dc6d8d12"/><section>
+    <title>PathUpdated()</title>
+<indexterm><primary>PathUpdated</primary><secondary>PathCreation.Examples.PathPlacer</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathPlacer</primary><secondary>PathUpdated</secondary></indexterm>
+<para><computeroutput>override void PathCreation.Examples.PathPlacer.PathUpdated ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__path_placer_8cs_source_1l00040">40</link> of file <link linkend="__path_placer_8cs_source">PathPlacer.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_placer_1a99254c3cd068ccefaec86cd18b38cc40"/><section>
+    <title>holder</title>
+<indexterm><primary>holder</primary><secondary>PathCreation.Examples.PathPlacer</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathPlacer</primary><secondary>holder</secondary></indexterm>
+<para><computeroutput>GameObject PathCreation.Examples.PathPlacer.holder</computeroutput></para><para>
+Definition at line <link linkend="__path_placer_8cs_source_1l00010">10</link> of file <link linkend="__path_placer_8cs_source">PathPlacer.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_placer_1a31d4d086132053e0e08a08c962038282"/><section>
+    <title>prefab</title>
+<indexterm><primary>prefab</primary><secondary>PathCreation.Examples.PathPlacer</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathPlacer</primary><secondary>prefab</secondary></indexterm>
+<para><computeroutput>GameObject PathCreation.Examples.PathPlacer.prefab</computeroutput></para><para>
+Definition at line <link linkend="__path_placer_8cs_source_1l00009">9</link> of file <link linkend="__path_placer_8cs_source">PathPlacer.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_examples_1_1_path_placer_1a69f3bf86fa3e44e4c7d8d3837d2eda26"/><section>
+    <title>spacing</title>
+<indexterm><primary>spacing</primary><secondary>PathCreation.Examples.PathPlacer</secondary></indexterm>
+<indexterm><primary>PathCreation.Examples.PathPlacer</primary><secondary>spacing</secondary></indexterm>
+<para><computeroutput>float PathCreation.Examples.PathPlacer.spacing = 3</computeroutput></para><para>
+Definition at line <link linkend="__path_placer_8cs_source_1l00011">11</link> of file <link linkend="__path_placer_8cs_source">PathPlacer.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Examples/Scripts/PathPlacer.cs</section>
+</section>

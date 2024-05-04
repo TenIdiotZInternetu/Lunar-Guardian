@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_u_i_1_1_menus_1_1_leaderboard" xml:lang="en-US">
+<title>UI.Menus.Leaderboard Class Reference</title>
+<indexterm><primary>UI.Menus.Leaderboard</primary></indexterm>
+Inheritance diagram for UI.Menus.Leaderboard:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_u_i_1_1_menus_1_1_leaderboard__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for UI.Menus.Leaderboard:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_u_i_1_1_menus_1_1_leaderboard__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_u_i_1_1_menus_1_1_leaderboard_1ae0694fec1f07b854e34e24a1d4b1dc87">GoToMainMenu</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_u_i_1_1_menus_1_1_menu_screen">UI.Menus.MenuScreen</link>        <itemizedlist>
+            <listitem><para>void <link linkend="_class_u_i_1_1_menus_1_1_menu_screen_1ac5ffcac8fe17399dafa228a2470f48f7">OpenMenu</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_u_i_1_1_menus_1_1_menu_screen_1a9af42083fb862f96404a9fd0336694d9">CloseMenu</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_u_i_1_1_menus_1_1_main_menu">MainMenu</link> <link linkend="_class_u_i_1_1_menus_1_1_leaderboard_1a6035a82976d0f331d0b069e81a7de0f6">mainMenu</link></para>
+</listitem>
+            <listitem><para>TMP_Text <link linkend="_class_u_i_1_1_menus_1_1_leaderboard_1a0ae3673c07e236e5d4a55c04709aec70">entryTemplate</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_u_i_1_1_menus_1_1_leaderboard_1abd6644066cb025637f5671320fe18d59">maxEntryCount</link> = 8</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_u_i_1_1_menus_1_1_leaderboard_1a1951dbffe3bb94bd53f83b4b6e3cf727">maxNameLength</link> = 8</para>
+</listitem>
+            <listitem><para>Vector2 <link linkend="_class_u_i_1_1_menus_1_1_leaderboard_1aedbcdfe4c28bdc2bd6b050829a6c559f">offset</link> = new Vector2(10, -32)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Attributes inherited from <link linkend="_class_u_i_1_1_menus_1_1_menu_screen">UI.Menus.MenuScreen</link>        <itemizedlist>
+            <listitem><para>float <link linkend="_class_u_i_1_1_menus_1_1_menu_screen_1a37f8520fe6fa0ff7966b4067d2c329a4">onCloseDelay</link> = 0.3f</para>
+</listitem>
+            <listitem><para>UnityEvent <link linkend="_class_u_i_1_1_menus_1_1_menu_screen_1af1eda76a903bf4f24a9e7e9ed62be8a7">onLeftMenu</link></para>
+</listitem>
+            <listitem><para>UnityEvent <link linkend="_class_u_i_1_1_menus_1_1_menu_screen_1a7ddcd57df93c35d4d24addeac1230ab3">onOpenedMenu</link></para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__leaderboard_8cs_source_1l00009">9</link> of file <link linkend="__leaderboard_8cs_source">Leaderboard.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_leaderboard_1ae0694fec1f07b854e34e24a1d4b1dc87"/><section>
+    <title>GoToMainMenu()</title>
+<indexterm><primary>GoToMainMenu</primary><secondary>UI.Menus.Leaderboard</secondary></indexterm>
+<indexterm><primary>UI.Menus.Leaderboard</primary><secondary>GoToMainMenu</secondary></indexterm>
+<para><computeroutput>void UI.Menus.Leaderboard.GoToMainMenu ( )</computeroutput></para><para>
+Definition at line <link linkend="__leaderboard_8cs_source_1l00028">28</link> of file <link linkend="__leaderboard_8cs_source">Leaderboard.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_leaderboard_1a0ae3673c07e236e5d4a55c04709aec70"/><section>
+    <title>entryTemplate</title>
+<indexterm><primary>entryTemplate</primary><secondary>UI.Menus.Leaderboard</secondary></indexterm>
+<indexterm><primary>UI.Menus.Leaderboard</primary><secondary>entryTemplate</secondary></indexterm>
+<para><computeroutput>TMP_Text UI.Menus.Leaderboard.entryTemplate</computeroutput></para><para>
+Definition at line <link linkend="__leaderboard_8cs_source_1l00012">12</link> of file <link linkend="__leaderboard_8cs_source">Leaderboard.cs</link>.</para>
+</section>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_leaderboard_1a6035a82976d0f331d0b069e81a7de0f6"/><section>
+    <title>mainMenu</title>
+<indexterm><primary>mainMenu</primary><secondary>UI.Menus.Leaderboard</secondary></indexterm>
+<indexterm><primary>UI.Menus.Leaderboard</primary><secondary>mainMenu</secondary></indexterm>
+<para><computeroutput><link linkend="_class_u_i_1_1_menus_1_1_main_menu">MainMenu</link> UI.Menus.Leaderboard.mainMenu</computeroutput></para><para>
+Definition at line <link linkend="__leaderboard_8cs_source_1l00011">11</link> of file <link linkend="__leaderboard_8cs_source">Leaderboard.cs</link>.</para>
+</section>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_leaderboard_1abd6644066cb025637f5671320fe18d59"/><section>
+    <title>maxEntryCount</title>
+<indexterm><primary>maxEntryCount</primary><secondary>UI.Menus.Leaderboard</secondary></indexterm>
+<indexterm><primary>UI.Menus.Leaderboard</primary><secondary>maxEntryCount</secondary></indexterm>
+<para><computeroutput>int UI.Menus.Leaderboard.maxEntryCount = 8</computeroutput></para><para>
+Definition at line <link linkend="__leaderboard_8cs_source_1l00014">14</link> of file <link linkend="__leaderboard_8cs_source">Leaderboard.cs</link>.</para>
+</section>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_leaderboard_1a1951dbffe3bb94bd53f83b4b6e3cf727"/><section>
+    <title>maxNameLength</title>
+<indexterm><primary>maxNameLength</primary><secondary>UI.Menus.Leaderboard</secondary></indexterm>
+<indexterm><primary>UI.Menus.Leaderboard</primary><secondary>maxNameLength</secondary></indexterm>
+<para><computeroutput>int UI.Menus.Leaderboard.maxNameLength = 8</computeroutput></para><para>
+Definition at line <link linkend="__leaderboard_8cs_source_1l00015">15</link> of file <link linkend="__leaderboard_8cs_source">Leaderboard.cs</link>.</para>
+</section>
+<anchor xml:id="_class_u_i_1_1_menus_1_1_leaderboard_1aedbcdfe4c28bdc2bd6b050829a6c559f"/><section>
+    <title>offset</title>
+<indexterm><primary>offset</primary><secondary>UI.Menus.Leaderboard</secondary></indexterm>
+<indexterm><primary>UI.Menus.Leaderboard</primary><secondary>offset</secondary></indexterm>
+<para><computeroutput>Vector2 UI.Menus.Leaderboard.offset = new Vector2(10, -32)</computeroutput></para><para>
+Definition at line <link linkend="__leaderboard_8cs_source_1l00017">17</link> of file <link linkend="__leaderboard_8cs_source">Leaderboard.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/UI/Menus/Leaderboard.cs</section>
+</section>

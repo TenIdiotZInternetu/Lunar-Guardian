@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__screen_space_poly_line_8cs_source" xml:lang="en-US">
+<title>ScreenSpacePolyLine.cs</title>
+<indexterm><primary>Tools/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__screen_space_poly_line_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Collections.Generic;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis>UnityEditor;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_path_creation">PathCreation</link>;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_path_creation_1_1_utility">PathCreation.Utility</link>;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00006"/>00006 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00007"/>00007 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_path_creation_editor">PathCreationEditor</link>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00008"/>00008 {
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis>ScreenSpacePolyLine
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00010"/>00010 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;accuracyMultiplier&#32;=&#32;10;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;dont&#32;allow&#32;vertices&#32;to&#32;be&#32;spaced&#32;too&#32;far&#32;apart,&#32;as&#32;screenspace-worldspace&#32;conversion&#32;can&#32;then&#32;be&#32;noticeably&#32;off</emphasis>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;intermediaryThreshold&#32;=&#32;.2f;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00014"/>00014 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;readonly&#32;List&lt;Vector3&gt;&#32;verticesWorld;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;For&#32;each&#32;point&#32;in&#32;the&#32;polyline,&#32;says&#32;which&#32;bezier&#32;segment&#32;it&#32;belongs&#32;to</emphasis>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;readonly&#32;List&lt;int&gt;&#32;vertexToPathSegmentMap;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Stores&#32;the&#32;index&#32;in&#32;the&#32;vertices&#32;list&#32;where&#32;the&#32;start&#32;point&#32;of&#32;each&#32;segment&#32;is</emphasis>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>[]&#32;segmentStartIndices;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00020"/>00020 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;readonly&#32;<emphasis role="keywordtype">float</emphasis>&#32;pathLengthWorld;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;readonly&#32;<emphasis role="keywordtype">float</emphasis>[]&#32;cumululativeLengthWorld;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00023"/>00023 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector2[]&#32;points;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00025"/>00025 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;prevCamPos;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Quaternion&#32;prevCamRot;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;premCamIsOrtho;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00029"/>00029 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;readonly&#32;Transform&#32;transform;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;readonly&#32;Vector3&#32;transformPosition;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;readonly&#32;Quaternion&#32;transformRotation;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;readonly&#32;Vector3&#32;transformScale;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00034"/>00034 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;ScreenSpacePolyLine(<link linkend="_class_path_creation_1_1_bezier_path">BezierPath</link>&#32;bezierPath,&#32;Transform&#32;transform,&#32;<emphasis role="keywordtype">float</emphasis>&#32;maxAngleError,&#32;<emphasis role="keywordtype">float</emphasis>&#32;minVertexDst,&#32;<emphasis role="keywordtype">float</emphasis>&#32;accuracy&#32;=&#32;1)
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.transform&#32;=&#32;transform;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;transformPosition&#32;=&#32;transform.position;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;transformRotation&#32;=&#32;transform.rotation;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;transformScale&#32;=&#32;transform.localScale;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00041"/>00041 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Split&#32;path&#32;in&#32;vertices&#32;based&#32;on&#32;angle&#32;error</emphasis>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;verticesWorld&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;Vector3&gt;();
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vertexToPathSegmentMap&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;List&lt;int&gt;();
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;segmentStartIndices&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>[bezierPath.<link linkend="_class_path_creation_1_1_bezier_path_1aba6ba2ef023e1b5fcc541ce2ec07da30">NumSegments</link>+1];
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00046"/>00046 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;verticesWorld.Add(bezierPath[0]);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vertexToPathSegmentMap.Add(0);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;prevPointOnPath&#32;=&#32;bezierPath[0];
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;dstSinceLastVertex&#32;=&#32;0;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;lastAddedPoint&#32;=&#32;prevPointOnPath;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;dstSinceLastIntermediary&#32;=&#32;0;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00053"/>00053 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;segmentIndex&#32;=&#32;0;&#32;segmentIndex&#32;&lt;&#32;bezierPath.<link linkend="_class_path_creation_1_1_bezier_path_1aba6ba2ef023e1b5fcc541ce2ec07da30">NumSegments</link>;&#32;segmentIndex++)
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3[]&#32;segmentPoints&#32;=&#32;bezierPath.<link linkend="_class_path_creation_1_1_bezier_path_1a6185499e7da708f8fb6e99f698436d36">GetPointsInSegment</link>(segmentIndex);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;verticesWorld.Add(segmentPoints[0]);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vertexToPathSegmentMap.Add(segmentIndex);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;segmentStartIndices[segmentIndex]&#32;=&#32;verticesWorld.Count-1;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00060"/>00060 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;prevPointOnPath&#32;=&#32;segmentPoints[0];
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lastAddedPoint&#32;=&#32;prevPointOnPath;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dstSinceLastVertex&#32;=&#32;0;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dstSinceLastIntermediary&#32;=&#32;0;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00065"/>00065 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;estimatedSegmentLength&#32;=&#32;<link linkend="_class_path_creation_1_1_utility_1_1_cubic_bezier_utility">CubicBezierUtility</link>.EstimateCurveLength(segmentPoints[0],&#32;segmentPoints[1],&#32;segmentPoints[2],&#32;segmentPoints[3]);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;divisions&#32;=&#32;Mathf.CeilToInt(estimatedSegmentLength&#32;*&#32;accuracy&#32;*&#32;accuracyMultiplier);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;increment&#32;=&#32;1f&#32;/&#32;divisions;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00069"/>00069 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">float</emphasis>&#32;t&#32;=&#32;increment;&#32;t&#32;&lt;=&#32;1;&#32;t&#32;+=&#32;increment)
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;pointOnPath&#32;=&#32;<link linkend="_class_path_creation_1_1_utility_1_1_cubic_bezier_utility">CubicBezierUtility</link>.<link linkend="_class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1aa10b9a048602039356790289036154cf">EvaluateCurve</link>(segmentPoints[0],&#32;segmentPoints[1],&#32;segmentPoints[2],&#32;segmentPoints[3],&#32;t);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;nextPointOnPath&#32;=&#32;<link linkend="_class_path_creation_1_1_utility_1_1_cubic_bezier_utility">CubicBezierUtility</link>.<link linkend="_class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1aa10b9a048602039356790289036154cf">EvaluateCurve</link>(segmentPoints[0],&#32;segmentPoints[1],&#32;segmentPoints[2],&#32;segmentPoints[3],&#32;t&#32;+&#32;increment);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00074"/>00074 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;angle&#32;at&#32;current&#32;point&#32;on&#32;path</emphasis>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;localAngle&#32;=&#32;180&#32;-&#32;MathUtility.MinAngle(prevPointOnPath,&#32;pointOnPath,&#32;nextPointOnPath);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;angle&#32;between&#32;the&#32;last&#32;added&#32;vertex,&#32;the&#32;current&#32;point&#32;on&#32;the&#32;path,&#32;and&#32;the&#32;next&#32;point&#32;on&#32;the&#32;path</emphasis>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;angleFromPrevVertex&#32;=&#32;180&#32;-&#32;MathUtility.MinAngle(lastAddedPoint,&#32;pointOnPath,&#32;nextPointOnPath);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;angleError&#32;=&#32;Mathf.Max(localAngle,&#32;angleFromPrevVertex);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00080"/>00080 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00081"/>00081 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(angleError&#32;&gt;&#32;maxAngleError&#32;&amp;&amp;&#32;dstSinceLastVertex&#32;&gt;=&#32;minVertexDst)
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dstSinceLastVertex&#32;=&#32;0;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dstSinceLastIntermediary&#32;=&#32;0;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;verticesWorld.Add(pointOnPath);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vertexToPathSegmentMap.Add(segmentIndex);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lastAddedPoint&#32;=&#32;pointOnPath;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(dstSinceLastIntermediary&#32;&gt;&#32;intermediaryThreshold)
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;verticesWorld.Add(pointOnPath);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vertexToPathSegmentMap.Add(segmentIndex);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dstSinceLastIntermediary&#32;=&#32;0;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dstSinceLastIntermediary&#32;+=&#32;(pointOnPath&#32;-&#32;prevPointOnPath).magnitude;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dstSinceLastVertex&#32;+=&#32;(pointOnPath&#32;-&#32;prevPointOnPath).magnitude;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;prevPointOnPath&#32;=&#32;pointOnPath;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00107"/>00107 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;segmentStartIndices[bezierPath.<link linkend="_class_path_creation_1_1_bezier_path_1aba6ba2ef023e1b5fcc541ce2ec07da30">NumSegments</link>]&#32;=&#32;verticesWorld.Count;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00109"/>00109 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;ensure&#32;final&#32;point&#32;gets&#32;added&#32;(unless&#32;path&#32;is&#32;closed&#32;loop)</emphasis>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!bezierPath.<link linkend="_class_path_creation_1_1_bezier_path_1a26f01b589d00384406eb54173d4d7aca">IsClosed</link>)
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;verticesWorld.Add(bezierPath[bezierPath.<link linkend="_class_path_creation_1_1_bezier_path_1a76122faf62db75c06e32a6aca7ffd666">NumPoints</link>&#32;-&#32;1]);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;verticesWorld.Add(bezierPath[0]);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00119"/>00119 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Calculate&#32;length</emphasis>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cumululativeLengthWorld&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>[verticesWorld.Count];
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;verticesWorld.Count;&#32;i++)
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;verticesWorld[i]&#32;=&#32;MathUtility.TransformPoint(verticesWorld[i],&#32;transform,&#32;bezierPath.<link linkend="_class_path_creation_1_1_bezier_path_1a0cacc3cec2744929171dc4d0563ea19e">Space</link>);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;&gt;&#32;0)&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pathLengthWorld&#32;+=&#32;(verticesWorld[i&#32;-&#32;1]&#32;-&#32;verticesWorld[i]).magnitude;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cumululativeLengthWorld[i]&#32;=&#32;pathLengthWorld;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00130"/>00130 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00132"/>00132 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;ComputeScreenSpace()
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Camera.current.transform.position&#32;!=&#32;prevCamPos&#32;||&#32;Camera.current.transform.rotation&#32;!=&#32;prevCamRot&#32;||&#32;Camera.current.orthographic&#32;!=&#32;premCamIsOrtho)
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;points&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Vector2[verticesWorld.Count];
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;verticesWorld.Count;&#32;i++)
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;points[i]&#32;=&#32;HandleUtility.WorldToGUIPoint(verticesWorld[i]);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00142"/>00142 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;prevCamPos&#32;=&#32;Camera.current.transform.position;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;prevCamRot&#32;=&#32;Camera.current.transform.rotation;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;premCamIsOrtho&#32;=&#32;Camera.current.orthographic;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00148"/>00148 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;MouseInfo&#32;CalculateMouseInfo()
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ComputeScreenSpace();
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00152"/>00152 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector2&#32;mousePos&#32;=&#32;Event.current.mousePosition;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;minDst&#32;=&#32;<emphasis role="keywordtype">float</emphasis>.MaxValue;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;closestPolyLineSegmentIndex&#32;=&#32;0;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;closestBezierSegmentIndex&#32;=&#32;0;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00157"/>00157 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;points.Length&#32;-&#32;1;&#32;i++)
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;dst&#32;=&#32;HandleUtility.DistancePointToLineSegment(mousePos,&#32;points[i],&#32;points[i&#32;+&#32;1]);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00161"/>00161 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(dst&#32;&lt;&#32;minDst)
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;minDst&#32;=&#32;dst;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;closestPolyLineSegmentIndex&#32;=&#32;i;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;closestBezierSegmentIndex&#32;=&#32;vertexToPathSegmentMap[i];
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00169"/>00169 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector2&#32;closestPointOnLine&#32;=&#32;MathUtility.ClosestPointOnLineSegment(mousePos,&#32;points[closestPolyLineSegmentIndex],&#32;points[closestPolyLineSegmentIndex&#32;+&#32;1]);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;dstToPointOnLine&#32;=&#32;(points[closestPolyLineSegmentIndex]&#32;-&#32;closestPointOnLine).magnitude;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;percentBetweenVertices&#32;=&#32;dstToPointOnLine&#32;/&#32;(points[closestPolyLineSegmentIndex]&#32;-&#32;points[closestPolyLineSegmentIndex&#32;+&#32;1]).magnitude;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Vector3&#32;closestPoint3D&#32;=&#32;Vector3.Lerp(verticesWorld[closestPolyLineSegmentIndex],&#32;verticesWorld[closestPolyLineSegmentIndex&#32;+&#32;1],&#32;percentBetweenVertices);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00174"/>00174 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;distanceAlongPathWorld&#32;=&#32;cumululativeLengthWorld[closestPolyLineSegmentIndex]&#32;+&#32;Vector3.Distance(verticesWorld[closestPolyLineSegmentIndex],&#32;closestPoint3D);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;timeAlongPath&#32;=&#32;distanceAlongPathWorld&#32;/&#32;pathLengthWorld;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00177"/>00177 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Calculate&#32;how&#32;far&#32;between&#32;the&#32;current&#32;bezier&#32;segment&#32;the&#32;closest&#32;point&#32;on&#32;the&#32;line&#32;is</emphasis>
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;bezierSegmentStartIndex&#32;=&#32;segmentStartIndices[closestBezierSegmentIndex];
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;bezierSegmentEndIndex&#32;=&#32;segmentStartIndices[closestBezierSegmentIndex+1];
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;bezierSegmentLength&#32;=&#32;cumululativeLengthWorld[bezierSegmentEndIndex]&#32;-&#32;cumululativeLengthWorld[bezierSegmentStartIndex];
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;distanceAlongBezierSegment&#32;=&#32;distanceAlongPathWorld&#32;-&#32;cumululativeLengthWorld[bezierSegmentStartIndex];
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;timeAlongBezierSegment&#32;=&#32;distanceAlongBezierSegment/bezierSegmentLength;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00185"/>00185 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;MouseInfo(minDst,&#32;closestPoint3D,&#32;distanceAlongPathWorld,&#32;timeAlongPath,&#32;timeAlongBezierSegment,&#32;closestBezierSegmentIndex);
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00188"/>00188 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;TransformIsOutOfDate()&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;transform.position&#32;!=&#32;transformPosition&#32;||&#32;transform.rotation&#32;!=&#32;transformRotation&#32;||&#32;transform.localScale&#32;!=&#32;transformScale;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00192"/>00192 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00193"/>00193 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>MouseInfo
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">float</emphasis>&#32;mouseDstToLine;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;readonly&#32;Vector3&#32;closestWorldPointToMouse;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">float</emphasis>&#32;distanceAlongPathWorld;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">float</emphasis>&#32;timeOnPath;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">float</emphasis>&#32;timeOnBezierSegment;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;readonly&#32;<emphasis role="keywordtype">int</emphasis>&#32;closestSegmentIndex;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00203"/>00203 
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;MouseInfo(<emphasis role="keywordtype">float</emphasis>&#32;mouseDstToLine,&#32;Vector3&#32;closestWorldPointToMouse,&#32;<emphasis role="keywordtype">float</emphasis>&#32;distanceAlongPathWorld,&#32;<emphasis role="keywordtype">float</emphasis>&#32;timeOnPath,&#32;<emphasis role="keywordtype">float</emphasis>&#32;timeOnBezierSegment,&#32;<emphasis role="keywordtype">int</emphasis>&#32;closestSegmentIndex)
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.mouseDstToLine&#32;=&#32;mouseDstToLine;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.closestWorldPointToMouse&#32;=&#32;closestWorldPointToMouse;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.distanceAlongPathWorld&#32;=&#32;distanceAlongPathWorld;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.timeOnPath&#32;=&#32;timeOnPath;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.timeOnBezierSegment&#32;=&#32;timeOnBezierSegment;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this.closestSegmentIndex&#32;=&#32;closestSegmentIndex;
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00214"/>00214 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__screen_space_poly_line_8cs_source_1l00215"/>00215 }
+</programlisting></section>

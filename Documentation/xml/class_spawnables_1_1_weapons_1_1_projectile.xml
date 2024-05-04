@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_weapons_1_1_projectile" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Weapons::Projectile</compoundname>
+    <basecompoundref refid="class_spawnables_1_1_entity" prot="public" virt="non-virtual">Entity</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_weapons_1_1_projectile_1a9b39867abc3f09243fcdc739bd9e6c90" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int damage</definition>
+        <argsstring></argsstring>
+        <name>damage</name>
+        <qualifiedname>Spawnables.Weapons.Projectile.damage</qualifiedname>
+        <briefdescription>
+<para>Damage dealt to enemies when owned by the player. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Projectile.cs" line="15" column="20" bodyfile="Scripts/Spawnables/Weapons/Projectile.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_projectile_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Spawnables.Weapons.Projectile.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Projectile.cs" line="19" column="14" bodyfile="Scripts/Spawnables/Weapons/Projectile.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_projectile_1a1042be8ac527a44de1bd86cff3a20a83" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Disperse</definition>
+        <argsstring>()</argsstring>
+        <name>Disperse</name>
+        <qualifiedname>Spawnables.Weapons.Projectile.Disperse</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Projectile.cs" line="27" column="22" bodyfile="Scripts/Spawnables/Weapons/Projectile.cs" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_weapons_1_1_projectile_1a3f40ff01a7823be92e52c43405a073cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnBombDamageTick</definition>
+        <argsstring>(int damage)</argsstring>
+        <name>OnBombDamageTick</name>
+        <qualifiedname>Spawnables.Weapons.Projectile.OnBombDamageTick</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>damage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/Weapons/Projectile.cs" line="33" column="22" bodyfile="Scripts/Spawnables/Weapons/Projectile.cs" bodystart="33" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>An entity whose purpose is to deal damage to enemies or the player. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="class_spawnables_1_1_entity"/>
+      </node>
+      <node id="1">
+        <label>Projectile</label>
+        <link refid="class_spawnables_1_1_weapons_1_1_projectile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="class_spawnables_1_1_entity"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>movementPattern</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MovementPattern</label>
+        <link refid="class_movement_patterns_1_1_movement_pattern"/>
+      </node>
+      <node id="1">
+        <label>Projectile</label>
+        <link refid="class_spawnables_1_1_weapons_1_1_projectile"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/Spawnables/Weapons/Projectile.cs" line="8" column="11" bodyfile="Scripts/Spawnables/Weapons/Projectile.cs" bodystart="9" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_entity_1ad967bb43366194baa6f4a96dcc795a31" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>_isMoving</name></member>
+      <member refid="class_spawnables_1_1_entity_1a0d7cb683a6801bdbc9f42d6a3252e684" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>_timeEnabled</name></member>
+      <member refid="class_spawnables_1_1_entity_1a1e54b149b6984c5899c0f2f8b0cffe7e" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>_timeMPChanged</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_projectile_1a9b39867abc3f09243fcdc739bd9e6c90" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>damage</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_projectile_1a1042be8ac527a44de1bd86cff3a20a83" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>Disperse</name></member>
+      <member refid="class_spawnables_1_1_entity_1a8f2052c5dc85bf163c873f99c285216a" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>LifeTime</name></member>
+      <member refid="class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>movementPattern</name></member>
+      <member refid="class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>MPLifeTime</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_projectile_1a3f40ff01a7823be92e52c43405a073cb" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>OnBombDamageTick</name></member>
+      <member refid="class_spawnables_1_1_entity_1a84e23ba394eacd818d2e005cc466c4d1" prot="protected" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>OnEnable</name></member>
+      <member refid="class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>SetMovementPattern</name></member>
+      <member refid="class_spawnables_1_1_entity_1a2d356d7b3c35033282092fae9a836766" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>SpawnKey</name></member>
+      <member refid="class_spawnables_1_1_weapons_1_1_projectile_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>Start</name></member>
+      <member refid="class_spawnables_1_1_entity_1aa71998873389201c17d7773339f63ebe" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>StartMoving</name></member>
+      <member refid="class_spawnables_1_1_entity_1a147504656ad9822da09c2c6461aad435" prot="public" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>StopMoving</name></member>
+      <member refid="class_spawnables_1_1_entity_1aec0783b5a136e042adcc47bae4fe5291" prot="protected" virt="non-virtual"><scope>Spawnables::Weapons::Projectile</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

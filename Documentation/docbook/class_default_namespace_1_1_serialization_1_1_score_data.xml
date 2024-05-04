@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_default_namespace_1_1_serialization_1_1_score_data" xml:lang="en-US">
+<title>DefaultNamespace.Serialization.ScoreData Class Reference</title>
+<indexterm><primary>DefaultNamespace.Serialization.ScoreData</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_default_namespace_1_1_serialization_1_1_score_data_1acaad3df7e0bd9fd9fd44350796d9bca3">AddScore</link> (int score, string name)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_default_namespace_1_1_serialization_1_1_score_data_1ae96f9195917d6ee672d3a2e2f087a0ea">AddScoreAndSave</link> (int score, string name)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_default_namespace_1_1_serialization_1_1_score_data">ScoreData</link> <link linkend="_class_default_namespace_1_1_serialization_1_1_score_data_1ad64291a18e8b57a46a4d1f5ac142c2aa">LoadScores</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string[] <link linkend="_class_default_namespace_1_1_serialization_1_1_score_data_1a6059eda160a9533d246164a90ad959d3">names</link> = new string[MAX_SAVED_SCORES]</para>
+</listitem>
+            <listitem><para>int[] <link linkend="_class_default_namespace_1_1_serialization_1_1_score_data_1a8563e791e691ed8e6fa3a8e0ed8ee849">sortedScores</link> = new int[MAX_SAVED_SCORES]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const string <link linkend="_class_default_namespace_1_1_serialization_1_1_score_data_1a242be1f030fa057d41934a65d6eacc67">SAVE_PATH</link> = &quot;scores.dat&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__score_data_8cs_source_1l00011">11</link> of file <link linkend="__score_data_8cs_source">ScoreData.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_default_namespace_1_1_serialization_1_1_score_data_1acaad3df7e0bd9fd9fd44350796d9bca3"/><section>
+    <title>AddScore()</title>
+<indexterm><primary>AddScore</primary><secondary>DefaultNamespace.Serialization.ScoreData</secondary></indexterm>
+<indexterm><primary>DefaultNamespace.Serialization.ScoreData</primary><secondary>AddScore</secondary></indexterm>
+<para><computeroutput>void DefaultNamespace.Serialization.ScoreData.AddScore (int score, string name)</computeroutput></para><para>
+Definition at line <link linkend="__score_data_8cs_source_1l00037">37</link> of file <link linkend="__score_data_8cs_source">ScoreData.cs</link>.</para>
+</section>
+<anchor xml:id="_class_default_namespace_1_1_serialization_1_1_score_data_1ae96f9195917d6ee672d3a2e2f087a0ea"/><section>
+    <title>AddScoreAndSave()</title>
+<indexterm><primary>AddScoreAndSave</primary><secondary>DefaultNamespace.Serialization.ScoreData</secondary></indexterm>
+<indexterm><primary>DefaultNamespace.Serialization.ScoreData</primary><secondary>AddScoreAndSave</secondary></indexterm>
+<para><computeroutput>void DefaultNamespace.Serialization.ScoreData.AddScoreAndSave (int score, string name)</computeroutput></para><para>
+Definition at line <link linkend="__score_data_8cs_source_1l00059">59</link> of file <link linkend="__score_data_8cs_source">ScoreData.cs</link>.</para>
+</section>
+<anchor xml:id="_class_default_namespace_1_1_serialization_1_1_score_data_1ad64291a18e8b57a46a4d1f5ac142c2aa"/><section>
+    <title>LoadScores()</title>
+<indexterm><primary>LoadScores</primary><secondary>DefaultNamespace.Serialization.ScoreData</secondary></indexterm>
+<indexterm><primary>DefaultNamespace.Serialization.ScoreData</primary><secondary>LoadScores</secondary></indexterm>
+<para><computeroutput>static <link linkend="_class_default_namespace_1_1_serialization_1_1_score_data">ScoreData</link> DefaultNamespace.Serialization.ScoreData.LoadScores ( )<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__score_data_8cs_source_1l00022">22</link> of file <link linkend="__score_data_8cs_source">ScoreData.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_default_namespace_1_1_serialization_1_1_score_data_1a6059eda160a9533d246164a90ad959d3"/><section>
+    <title>names</title>
+<indexterm><primary>names</primary><secondary>DefaultNamespace.Serialization.ScoreData</secondary></indexterm>
+<indexterm><primary>DefaultNamespace.Serialization.ScoreData</primary><secondary>names</secondary></indexterm>
+<para><computeroutput>string [] DefaultNamespace.Serialization.ScoreData.names = new string[MAX_SAVED_SCORES]</computeroutput></para><para>
+Definition at line <link linkend="__score_data_8cs_source_1l00019">19</link> of file <link linkend="__score_data_8cs_source">ScoreData.cs</link>.</para>
+</section>
+<anchor xml:id="_class_default_namespace_1_1_serialization_1_1_score_data_1a242be1f030fa057d41934a65d6eacc67"/><section>
+    <title>SAVE_PATH</title>
+<indexterm><primary>SAVE_PATH</primary><secondary>DefaultNamespace.Serialization.ScoreData</secondary></indexterm>
+<indexterm><primary>DefaultNamespace.Serialization.ScoreData</primary><secondary>SAVE_PATH</secondary></indexterm>
+<para><computeroutput>const string DefaultNamespace.Serialization.ScoreData.SAVE_PATH = &quot;scores.dat&quot;<computeroutput>[static]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__score_data_8cs_source_1l00013">13</link> of file <link linkend="__score_data_8cs_source">ScoreData.cs</link>.</para>
+</section>
+<anchor xml:id="_class_default_namespace_1_1_serialization_1_1_score_data_1a8563e791e691ed8e6fa3a8e0ed8ee849"/><section>
+    <title>sortedScores</title>
+<indexterm><primary>sortedScores</primary><secondary>DefaultNamespace.Serialization.ScoreData</secondary></indexterm>
+<indexterm><primary>DefaultNamespace.Serialization.ScoreData</primary><secondary>sortedScores</secondary></indexterm>
+<para><computeroutput>int [] DefaultNamespace.Serialization.ScoreData.sortedScores = new int[MAX_SAVED_SCORES]</computeroutput></para><para>
+Definition at line <link linkend="__score_data_8cs_source_1l00020">20</link> of file <link linkend="__score_data_8cs_source">ScoreData.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs</section>
+</section>

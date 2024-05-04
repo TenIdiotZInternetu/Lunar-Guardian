@@ -1,0 +1,12 @@
+digraph "ChangeScore"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="ChangeScore",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Increases score, rewards extra health if requirement are met."];
+  Node1 -> Node2 [id="edge3_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ChangeHealth",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_player_scripts_1_1_player_status.html#af41d014aba881a7ec30a9cddaf9e0b3a",tooltip="Increases health. If health is already at max, increases score instead. When health reaches 0,..."];
+  Node2 -> Node1 [id="edge4_Node000002_Node000001",color="steelblue1",style="solid",tooltip=" "];
+}

@@ -1,0 +1,1248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="class_path_creation_1_1_bezier_path" kind="class"><name>PathCreation::BezierPath</name>
+    <member refid="class_path_creation_1_1_bezier_path_1aee3ea37f4f505980157cf93a84687bcb" kind="enum"><name>ControlMode</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1aee3ea37f4f505980157cf93a84687bcba1d5b772bea21e5e949413e09eedf17de" kind="enumvalue"><name>Aligned</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1aee3ea37f4f505980157cf93a84687bcba3db6ae5ba47a2ce45b4788135adc8dcf" kind="enumvalue"><name>Mirrored</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1aee3ea37f4f505980157cf93a84687bcbab24ce0cd392a5b0b8dedc66c25213594" kind="enumvalue"><name>Free</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1aee3ea37f4f505980157cf93a84687bcba086247a9b57fde6eefee2a0c4752242d" kind="enumvalue"><name>Automatic</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a5d92b7266e3055c0fac0f8cbcfc2f2f5" kind="event"><name>OnModified</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a833b5dd4931cdff043f8e31372c8332d" kind="variable"><name>points</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1aed0c66a17f9cb95686ef7d9a850ea3b0" kind="variable"><name>isClosed</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a17de5f69b233fef45dc594369edcfe45" kind="variable"><name>space</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a1bb74e933234f64b247d02b8221ec47c" kind="variable"><name>controlMode</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a774d13663f4c7fee53aca97e46900e77" kind="variable"><name>autoControlLength</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a2a1f199823444510686be2f69f46fb7d" kind="variable"><name>boundsUpToDate</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a024318f4225ee6bedb20b7f865205d34" kind="variable"><name>bounds</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a7e64637d78730c876b4bb17c92a4f154" kind="variable"><name>perAnchorNormalsAngle</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1ac373cf341db2c8f563bab41d9f1c08d1" kind="variable"><name>globalNormalsAngle</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1aae10eb6baea4701401059b19472713e8" kind="variable"><name>flipNormals</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1ad43c2ada379c61ab862f177c8505ace8" kind="property"><name>this[int i]</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a76122faf62db75c06e32a6aca7ffd666" kind="property"><name>NumPoints</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a7faf89e9e535007f3f491d54c26efe60" kind="property"><name>NumAnchorPoints</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1aba6ba2ef023e1b5fcc541ce2ec07da30" kind="property"><name>NumSegments</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a0cacc3cec2744929171dc4d0563ea19e" kind="property"><name>Space</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a26f01b589d00384406eb54173d4d7aca" kind="property"><name>IsClosed</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a16552136821334ce771512319d7be9f4" kind="property"><name>ControlPointMode</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1ad77316d5b3c1726244503f8b2540fe2d" kind="property"><name>AutoControlLength</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a4ef9d3ec8744096f518dc1a650fc26c1" kind="property"><name>FlipNormals</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1abe9a53426b4002473d61f85798101296" kind="property"><name>GlobalNormalsAngle</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a7a1adffc40fe07f5e2db82a63b6fb33a" kind="property"><name>PathBounds</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1abc1cd71906862025c18067de4ac55fcd" kind="function"><name>BezierPath</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a86aae663e474da906ba3da4eff2b35f9" kind="function"><name>BezierPath</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a7850bd613d1984e910404cb7887f6d07" kind="function"><name>BezierPath</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a2dca585e9b7ab2d6de263f9ee94d0075" kind="function"><name>BezierPath</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a72ed8d4817462c4937e638d5f136dd07" kind="function"><name>BezierPath</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a4738362b3efc98a1c60a825b306a0892" kind="function"><name>GetPoint</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a0d06f4dbe40cd7406bb66226b1b2a248" kind="function"><name>SetPoint</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1ab12baf2f95b49820320320618b733948" kind="function"><name>AddSegmentToEnd</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1ab9657215c02544661b55b75f2e9e0867" kind="function"><name>AddSegmentToStart</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a33b79a7b74d774133da2f4abc0440bf3" kind="function"><name>SplitSegment</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1ab53e85db248fb10680799c89cef3ad89" kind="function"><name>DeleteSegment</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a6185499e7da708f8fb6e99f698436d36" kind="function"><name>GetPointsInSegment</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1ad80661af25a34919eeba7403348fd75f" kind="function"><name>MovePoint</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a5a1537c7d09255d14329cfe10d09ed41" kind="function"><name>CalculateBoundsWithTransform</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a094e07c9b053cf728b73b31fd00369b7" kind="function"><name>GetAnchorNormalAngle</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a65a9570a5f501aacc4571e247d3507c2" kind="function"><name>SetAnchorNormalAngle</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a612579356063be5d372a0db66a490299" kind="function"><name>ResetNormalAngles</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a2cd0098a89dd04e1757fdbdd1f6ea32b" kind="function"><name>NotifyPathModified</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a1db9cbd6086ef5b725ef6dca456b0dc5" kind="function"><name>UpdateBounds</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1ad8df689d28cf8306e3ef28089427cb33" kind="function"><name>AutoSetAllAffectedControlPoints</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a6707c57f434f60dc9f14e80907d01ee5" kind="function"><name>AutoSetAllControlPoints</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a2325a3bc6729de2222ef961de6e13b68" kind="function"><name>AutoSetAnchorControlPoints</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a8c68c9c40742ff4a0d07c23366083f27" kind="function"><name>AutoSetStartAndEndControls</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1ac584b000da2691b488b51416e1fb4a66" kind="function"><name>UpdateToNewPathSpace</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a95b2dd724116a5cdfd043b44fe396a5c" kind="function"><name>UpdateClosedState</name></member>
+    <member refid="class_path_creation_1_1_bezier_path_1a79ffaa88e458c92f2684c5bced692357" kind="function"><name>LoopIndex</name></member>
+  </compound>
+  <compound refid="class_player_scripts_1_1_bomb_controller" kind="class"><name>PlayerScripts::BombController</name>
+    <member refid="class_player_scripts_1_1_bomb_controller_1a8f009855b884a4c8e1a1338ca159ae3a" kind="variable"><name>initialDamage</name></member>
+    <member refid="class_player_scripts_1_1_bomb_controller_1aa2d1fa06b56bbaf068cc697526223c62" kind="variable"><name>damageCurve</name></member>
+    <member refid="class_player_scripts_1_1_bomb_controller_1a8a032a6ba98f3847d521c82627d0b3fa" kind="variable"><name>damageTickInterval</name></member>
+    <member refid="class_player_scripts_1_1_bomb_controller_1a3dad052ab5c9e0bb950da5e6dad2ae1f" kind="variable"><name>onBombDeployed</name></member>
+    <member refid="class_player_scripts_1_1_bomb_controller_1a48237faed031e6039bebb05e668c2e35" kind="variable"><name>onBombEffectEnd</name></member>
+    <member refid="class_player_scripts_1_1_bomb_controller_1a60d6f37c71fa8b172e436e6d558890ff" kind="event"><name>OnBombDamageTick</name></member>
+    <member refid="class_player_scripts_1_1_bomb_controller_1acbea999f9d88de528788e692edb7cc13" kind="variable"><name>_timeOfDeployment</name></member>
+    <member refid="class_player_scripts_1_1_bomb_controller_1a6ffe3551433e872831d7751d22cc161e" kind="function"><name>DeployBomb</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_weapons_1_1_bullet_spawner" kind="class"><name>Spawnables::Weapons::BulletSpawner</name>
+    <member refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1a2db3e95a5ad198dc7375a72e3974fa78" kind="variable"><name>GIZMO_RADIUS</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1ac75394cf2122bc1c1dc73f2f02d99f8d" kind="variable"><name>projectile</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1a44e52aa723ffbb2a09a735e5ba46fba9" kind="variable"><name>_thisTransform</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1ae4b513cddd594f1c359e4f0a3e79a8c6" kind="function"><name>Awake</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1a26a2e3c2d07dea6a2fd1d38eac284ee6" kind="function"><name>OnShoot</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_bullet_spawner_1ac51c75fd06c6783b6553902c86ac9d71" kind="function"><name>OnDrawGizmos</name></member>
+  </compound>
+  <compound refid="class_v_f_x_1_1_camera_shake" kind="class"><name>VFX::CameraShake</name>
+    <member refid="class_v_f_x_1_1_camera_shake_1a2008f4ab70b5e4104c2ca43932536ddf" kind="variable"><name>camera</name></member>
+    <member refid="class_v_f_x_1_1_camera_shake_1a2dc31d4e55d1ff0903621376b55fd950" kind="variable"><name>shakeCurve</name></member>
+    <member refid="class_v_f_x_1_1_camera_shake_1a2dfe87f3417747242e8f043dd4f3fb59" kind="variable"><name>intensity</name></member>
+    <member refid="class_v_f_x_1_1_camera_shake_1a8d2dee94459105e68841839ad2b49520" kind="variable"><name>refreshRate</name></member>
+    <member refid="class_v_f_x_1_1_camera_shake_1ad25bbb4029e4055f8a7784a7cdd28958" kind="variable"><name>_originalPosition</name></member>
+    <member refid="class_v_f_x_1_1_camera_shake_1a7089227daa357e9036869561153a7ad3" kind="variable"><name>_displacementTime</name></member>
+    <member refid="class_v_f_x_1_1_camera_shake_1a41d1b2b97dcfb91a4292411d4ca63848" kind="variable"><name>_timeOfImpact</name></member>
+    <member refid="class_v_f_x_1_1_camera_shake_1af19b79522e1b9a1489be0a8e05bca5b9" kind="variable"><name>_timeOfLastShake</name></member>
+    <member refid="class_v_f_x_1_1_camera_shake_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_v_f_x_1_1_camera_shake_1a44bc530da4b5e7f287e624a708c224f1" kind="function"><name>DisplaceCamera</name></member>
+    <member refid="class_v_f_x_1_1_camera_shake_1a5ef9d62171f0aadec56201559383772f" kind="function"><name>ShakeCamera</name></member>
+  </compound>
+  <compound refid="class_movement_patterns_1_1_chasing_m_p" kind="class"><name>MovementPatterns::ChasingMP</name>
+    <member refid="class_movement_patterns_1_1_chasing_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3" kind="variable"><name>target</name></member>
+    <member refid="class_movement_patterns_1_1_chasing_m_p_1aa1e558f5ba6fb97ca16dcc4e4af6b111" kind="variable"><name>lockOnTime</name></member>
+    <member refid="class_movement_patterns_1_1_chasing_m_p_1affd81e3b392c1ddde52ebf03f358c907" kind="variable"><name>chaseTime</name></member>
+    <member refid="class_movement_patterns_1_1_chasing_m_p_1a2fe30ccd8492359ecb32bef8f8985272" kind="variable"><name>attractionRate</name></member>
+    <member refid="class_movement_patterns_1_1_chasing_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8" kind="variable"><name>speed</name></member>
+    <member refid="class_movement_patterns_1_1_chasing_m_p_1a97712bccaedef08f6d8c525bdda2f7ef" kind="variable"><name>acceleration</name></member>
+    <member refid="class_movement_patterns_1_1_chasing_m_p_1a8d67528573c728e2d30355bc60a141a0" kind="function"><name>Initialize</name></member>
+    <member refid="class_movement_patterns_1_1_chasing_m_p_1aa27a497603473cb642e835d809c60a64" kind="function"><name>GetNextPosition</name></member>
+  </compound>
+  <compound refid="class_tools_1_1_component_utils" kind="class"><name>Tools::ComponentUtils</name>
+    <member refid="class_tools_1_1_component_utils_1a451c1bbf3b1f4d5d8933382cf2dfebb6" kind="function"><name>ReplaceComponent&lt; T &gt;</name></member>
+  </compound>
+  <compound refid="class_player_scripts_1_1_controls" kind="class"><name>PlayerScripts::Controls</name>
+    <member refid="class_player_scripts_1_1_controls_1a698aa7a1bcf8c024ca5b44b35a2a49db" kind="variable"><name>MoveHorizontal</name></member>
+    <member refid="class_player_scripts_1_1_controls_1aaef34645c77748c8b64dd8ac3ede4b16" kind="variable"><name>MoveVertical</name></member>
+    <member refid="class_player_scripts_1_1_controls_1ac711d62a538e7d73ed78e76dc4146c2b" kind="variable"><name>IsFocused</name></member>
+    <member refid="class_player_scripts_1_1_controls_1ac34dfff63d43fcc26bcb5a575de25dd4" kind="event"><name>Action1</name></member>
+    <member refid="class_player_scripts_1_1_controls_1a6c415bf89d7a793fffe97f670ad448d9" kind="event"><name>Action1Release</name></member>
+    <member refid="class_player_scripts_1_1_controls_1aeade3269d21ec1b08e689191790886d9" kind="event"><name>Action2</name></member>
+    <member refid="class_player_scripts_1_1_controls_1a9bcbd3ded58670f66a8410c8f63c1b31" kind="event"><name>Action2Release</name></member>
+    <member refid="class_player_scripts_1_1_controls_1a45f7d5809a598560cf6e169188f018f1" kind="event"><name>Submit</name></member>
+    <member refid="class_player_scripts_1_1_controls_1a4e385af209adbcafa65342406807f1cf" kind="event"><name>SubmitRelease</name></member>
+    <member refid="class_player_scripts_1_1_controls_1a27a4fdf4f091f1fe86a5fcf8de52b2e4" kind="event"><name>Cancel</name></member>
+    <member refid="class_player_scripts_1_1_controls_1a9d0db37622e49d09bfd17e0c5b7fa577" kind="event"><name>CancelRelease</name></member>
+    <member refid="class_player_scripts_1_1_controls_1a8d0b222d6d06818a5151fd23df2da016" kind="event"><name>MovesUp</name></member>
+    <member refid="class_player_scripts_1_1_controls_1a8ba5a5665ee6f8854162f487826f4c51" kind="event"><name>MovesDown</name></member>
+    <member refid="class_player_scripts_1_1_controls_1ae06b60159d0a60d5d71a73194814716b" kind="event"><name>MovesLeft</name></member>
+    <member refid="class_player_scripts_1_1_controls_1a9f726fb1cb518889a257f9689e1671c8" kind="event"><name>MovesRight</name></member>
+    <member refid="class_player_scripts_1_1_controls_1aec0783b5a136e042adcc47bae4fe5291" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_default_namespace_1_1_credits_so_1_1_credit" kind="class"><name>DefaultNamespace::CreditsSo::Credit</name>
+    <member refid="class_default_namespace_1_1_credits_so_1_1_credit_1a8ccf841cb59e451791bcb2e1ac4f1edc" kind="variable"><name>name</name></member>
+    <member refid="class_default_namespace_1_1_credits_so_1_1_credit_1a81d6e458403060f8b587edfd3e9729d6" kind="variable"><name>role</name></member>
+  </compound>
+  <compound refid="class_u_i_1_1_menus_1_1_credits_screen" kind="class"><name>UI::Menus::CreditsScreen</name>
+    <member refid="class_u_i_1_1_menus_1_1_credits_screen_1a75de41295773fd03b03ace513237d2ff" kind="variable"><name>credits</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_credits_screen_1ae7fb8c8e4e1342a0a4ae352e7865ef9b" kind="variable"><name>creditsTemplate</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_credits_screen_1a05a86d9e3d6f4daa58feabb0351c15a8" kind="variable"><name>offset</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_credits_screen_1a03428b16de81b440855689ed3829c960" kind="variable"><name>mainMenu</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_credits_screen_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_credits_screen_1aadad47aad19a250ac974b8707e0101af" kind="function"><name>GenerateCredits</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_credits_screen_1a99662a1aaa5e8270896fb0aeb834bf7e" kind="function"><name>GoToMainMenu</name></member>
+  </compound>
+  <compound refid="class_default_namespace_1_1_credits_so" kind="class"><name>DefaultNamespace::CreditsSo</name>
+    <member refid="class_default_namespace_1_1_credits_so_1afdf7873e59d6781e258b50e5d6c89430" kind="variable"><name>credits</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility" kind="class"><name>PathCreation::Utility::CubicBezierUtility</name>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1aa10b9a048602039356790289036154cf" kind="function"><name>EvaluateCurve</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a3924a60bf6600991d05938fa22a316a0" kind="function"><name>EvaluateCurve</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1ae7f1a0b7bd942f5b2aacd1a2a0348f49" kind="function"><name>EvaluateCurveDerivative</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a18597c3735c05f9e2b99294f97ad95da" kind="function"><name>EvaluateCurveDerivative</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a5d0e6187acba520d0cbe50d6e3b6ab0b" kind="function"><name>EvaluateCurveSecondDerivative</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a1e2c8ca7c07bb85c24390f5021501f08" kind="function"><name>EvaluateCurveSecondDerivative</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1aa19757e831a55fc0f70851b17e99d56d" kind="function"><name>Normal</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a16421b9a7ecebac1ddda7bacef1e4313" kind="function"><name>Normal</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a6321a63a289fb77cf196ba607050375d" kind="function"><name>CalculateSegmentBounds</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a7ce04896014036624bf0ecb82b849318" kind="function"><name>SplitCurve</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a1b2303522faefd60bbbfea9c6ce4d9c7" kind="function"><name>EstimateCurveLength</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1abb4a51d397c7d96a204bb4b98baaad82" kind="function"><name>ExtremePointTimes</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility_1a91b9e9f5835f45b65cb529e4976c732b" kind="function"><name>StationaryPointTimes</name></member>
+  </compound>
+  <compound refid="class_v_f_x_1_1_damage_flash" kind="class"><name>VFX::DamageFlash</name>
+    <member refid="class_v_f_x_1_1_damage_flash_1a4f5e707027d3ef8896bab07be25ab254" kind="variable"><name>Opacity</name></member>
+    <member refid="class_v_f_x_1_1_damage_flash_1a96184dbfaff9adfd50c1a98f2bdcf65a" kind="variable"><name>TintColor</name></member>
+    <member refid="class_v_f_x_1_1_damage_flash_1aa3216f4e1bac383ce51646746ab59263" kind="variable"><name>intensityCurve</name></member>
+    <member refid="class_v_f_x_1_1_damage_flash_1a629942ec38859571a1852831d572ff92" kind="variable"><name>_spriteRenderer</name></member>
+    <member refid="class_v_f_x_1_1_damage_flash_1a66bfe25e0b8f343ca2c3404bd262bedd" kind="variable"><name>_material</name></member>
+    <member refid="class_v_f_x_1_1_damage_flash_1ab76dfeca50c6391651aee788cca51ecf" kind="variable"><name>_tintColor</name></member>
+    <member refid="class_v_f_x_1_1_damage_flash_1adfd192832bec262648ae3352affb18ab" kind="variable"><name>_timeOfHit</name></member>
+    <member refid="class_v_f_x_1_1_damage_flash_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_v_f_x_1_1_damage_flash_1a31c14e29b79e47402db81b0c955ecec6" kind="function"><name>Flash</name></member>
+    <member refid="class_v_f_x_1_1_damage_flash_1a46cf6740b421df6c676c89416308ba7a" kind="function"><name>StartFlashing</name></member>
+    <member refid="class_v_f_x_1_1_damage_flash_1a8bbe835c1149e9ec938fe25b14f22d8b" kind="function"><name>StopFlashing</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_despawn_collider" kind="class"><name>Spawnables::DespawnCollider</name>
+    <member refid="class_spawnables_1_1_despawn_collider_1a44ebcf048524a4fc189c39533c950641" kind="function"><name>OnTriggerExit2D</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_enemy_scripts_1_1_enemy" kind="class"><name>Spawnables::EnemyScripts::Enemy</name>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1a9f94e91fe2b696b2a0352a89444fa922" kind="variable"><name>tracksPlayer</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1afa3c4cbe95c95ff9cd8bdc9e4cec4a5f" kind="variable"><name>maxHealth</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1a803745769a1671fc8dfc4fb99dfe4f1f" kind="variable"><name>scoreReward</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1ab5c0981193c6066813423a05842fafe5" kind="variable"><name>drops</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller" kind="class"><name>Spawnables::EnemyScripts::EnemyController</name>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a5eff005e48044d53c3188350360d2bd3" kind="variable"><name>PLAYER_PROJECTILE_TAG</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1aa0e481fb67cfe5b349f64bfb418c973f" kind="variable"><name>BORDER_TAG</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1afa3a387ebb345c845da69be48295064a" kind="variable"><name>TRIGGER_DEBOUNCE_TIME</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1aac5e2fc840b06a6932b678c35c293c72" kind="variable"><name>hasAggro</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a21791573ffa3822ec2a0e08bc710d716" kind="variable"><name>weapon</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1abd9abcb1ce3bcdd0d9c99534620685bc" kind="variable"><name>onTakesHitEvent</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a463be11d16a148ee899e4c3a2bbd4d38" kind="variable"><name>onDeathEvent</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a015d9dccd4fec1a8a970a3d43c9e242f" kind="event"><name>ShootsEvent</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a4a4c7a5aac1adcbc508c8e19b2409d5f" kind="variable"><name>_enemyVariables</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a2ddf72ec82eef8a8697edfabf08fbb17" kind="variable"><name>_currentHealth</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1aff238b85fe8390180763f0ad759d7430" kind="variable"><name>_timeOfLastTrigger</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a84e23ba394eacd818d2e005cc466c4d1" kind="function"><name>OnEnable</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1aec0783b5a136e042adcc47bae4fe5291" kind="function"><name>Update</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1ad8977c264b58f2c0e3e69af81c83644d" kind="function"><name>OnTriggerEnter2D</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a44ebcf048524a4fc189c39533c950641" kind="function"><name>OnTriggerExit2D</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a54d02db39a3471b3af72e0c0470ca633" kind="function"><name>OnProjectileCollision</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a83a587358a707256f19a929920071f87" kind="function"><name>SwitchAggro</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a3455b3e78b92c87e2d1c07ced1ea5c8f" kind="function"><name>RotateTowardsPlayer</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a8a2daf2544bc307b1ac11de356608feb" kind="function"><name>Die</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a0966c39ecd421cf3a406d5f97386759f" kind="function"><name>DropLoot</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a3f40ff01a7823be92e52c43405a073cb" kind="function"><name>OnBombDamageTick</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1ac54ce402cec4f1d67a1cef4db841d26d" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_controller_1a33bb145f07d3f169f678f4307220e661" kind="function"><name>TakeDamage</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner" kind="class"><name>Spawnables::EnemyScripts::EnemySpawner</name>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_1a2db3e95a5ad198dc7375a72e3974fa78" kind="variable"><name>GIZMO_RADIUS</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_1ad6d3141bf24aaf85fa7573865a1934f6" kind="variable"><name>prefab</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_1a97df6cb71ca1ed54f2f4fadb312c9bb3" kind="variable"><name>interval</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_1a07debaa5993cfc8e6ecde1f620c7135a" kind="variable"><name>maxCount</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_1a4eae4666d3feb71412d75e08ce1dc018" kind="variable"><name>_timeOfLastSpawn</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_1ada4bd40e4b8ef60c4e3b7b3e96f74dbb" kind="variable"><name>_spawnedCount</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_1aec0783b5a136e042adcc47bae4fe5291" kind="function"><name>Update</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_spawner_1ac51c75fd06c6783b6553902c86ac9d71" kind="function"><name>OnDrawGizmos</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_entity" kind="class"><name>Spawnables::Entity</name>
+    <member refid="class_spawnables_1_1_entity_1a8f2052c5dc85bf163c873f99c285216a" kind="property"><name>LifeTime</name></member>
+    <member refid="class_spawnables_1_1_entity_1a3f4ec4fa85ad2f8f95ea03016cf311ba" kind="property"><name>MPLifeTime</name></member>
+    <member refid="class_spawnables_1_1_entity_1ae6c36b72f5f81ee019373bd0411a4fc2" kind="variable"><name>movementPattern</name></member>
+    <member refid="class_spawnables_1_1_entity_1a2d356d7b3c35033282092fae9a836766" kind="variable"><name>SpawnKey</name></member>
+    <member refid="class_spawnables_1_1_entity_1ad967bb43366194baa6f4a96dcc795a31" kind="variable"><name>_isMoving</name></member>
+    <member refid="class_spawnables_1_1_entity_1a0d7cb683a6801bdbc9f42d6a3252e684" kind="variable"><name>_timeEnabled</name></member>
+    <member refid="class_spawnables_1_1_entity_1a1e54b149b6984c5899c0f2f8b0cffe7e" kind="variable"><name>_timeMPChanged</name></member>
+    <member refid="class_spawnables_1_1_entity_1a84e23ba394eacd818d2e005cc466c4d1" kind="function"><name>OnEnable</name></member>
+    <member refid="class_spawnables_1_1_entity_1aec0783b5a136e042adcc47bae4fe5291" kind="function"><name>Update</name></member>
+    <member refid="class_spawnables_1_1_entity_1a145fca95d4ded24a179596d960ea54ef" kind="function"><name>SetMovementPattern</name></member>
+    <member refid="class_spawnables_1_1_entity_1aa71998873389201c17d7773339f63ebe" kind="function"><name>StartMoving</name></member>
+    <member refid="class_spawnables_1_1_entity_1a147504656ad9822da09c2c6461aad435" kind="function"><name>StopMoving</name></member>
+  </compound>
+  <compound refid="class_v_f_x_1_1_fade_canvas" kind="class"><name>VFX::FadeCanvas</name>
+    <member refid="class_v_f_x_1_1_fade_canvas_1a120ff4ee3aab964959da68032a0fc061" kind="variable"><name>fadeInDelay</name></member>
+    <member refid="class_v_f_x_1_1_fade_canvas_1a50a0d1597750af40fa53cb13c01821f5" kind="variable"><name>fadeOutDelay</name></member>
+    <member refid="class_v_f_x_1_1_fade_canvas_1a977240aed516952aa8454946d6f89e64" kind="variable"><name>_canvas</name></member>
+    <member refid="class_v_f_x_1_1_fade_canvas_1ae4b513cddd594f1c359e4f0a3e79a8c6" kind="function"><name>Awake</name></member>
+    <member refid="class_v_f_x_1_1_fade_canvas_1a395346f5cee5676d94d44b3a6656e9be" kind="function"><name>LerpAlpha</name></member>
+    <member refid="class_v_f_x_1_1_fade_canvas_1ae2c4f195150adc0cabf7f4fa4afe0c7a" kind="function"><name>FadeIn</name></member>
+    <member refid="class_v_f_x_1_1_fade_canvas_1ac1978d4dd30acb338999e1adad433d9c" kind="function"><name>FadeOut</name></member>
+  </compound>
+  <compound refid="class_movement_patterns_1_1_follow_path" kind="class"><name>MovementPatterns::FollowPath</name>
+    <member refid="class_movement_patterns_1_1_follow_path_1ac38836c583abd23c619e142bf15897cb" kind="variable"><name>path</name></member>
+    <member refid="class_movement_patterns_1_1_follow_path_1a7f7e4724cf57d59513b39c5ecc81adc8" kind="variable"><name>speed</name></member>
+    <member refid="class_movement_patterns_1_1_follow_path_1a97712bccaedef08f6d8c525bdda2f7ef" kind="variable"><name>acceleration</name></member>
+    <member refid="class_movement_patterns_1_1_follow_path_1a8d67528573c728e2d30355bc60a141a0" kind="function"><name>Initialize</name></member>
+    <member refid="class_movement_patterns_1_1_follow_path_1aa27a497603473cb642e835d809c60a64" kind="function"><name>GetNextPosition</name></member>
+  </compound>
+  <compound refid="class_game_manager_1_1_game_manager" kind="class"><name>GameManager::GameManager</name>
+    <member refid="class_game_manager_1_1_game_manager_1a6276f9bdbe9295f7060832971cc39f18" kind="variable"><name>Instance</name></member>
+    <member refid="class_game_manager_1_1_game_manager_1a0a71679655b87f85bd97d18fd089d6d4" kind="variable"><name>initialState</name></member>
+    <member refid="class_game_manager_1_1_game_manager_1aa6a3316bd7b321507aa6695fd4255262" kind="variable"><name>mainMenuScene</name></member>
+    <member refid="class_game_manager_1_1_game_manager_1ac8b6e6aaaa700863dd2ca9d30c0681dd" kind="variable"><name>onStateChanged</name></member>
+    <member refid="class_game_manager_1_1_game_manager_1a86df9e89064d8d4470bf87fa82d273d9" kind="variable"><name>_currentState</name></member>
+    <member refid="class_game_manager_1_1_game_manager_1ae4b513cddd594f1c359e4f0a3e79a8c6" kind="function"><name>Awake</name></member>
+    <member refid="class_game_manager_1_1_game_manager_1a0e7b307d6a6d5a4a71cb7fea674c0387" kind="function"><name>ChangeState</name></member>
+    <member refid="class_game_manager_1_1_game_manager_1adef25384ad2ee4c9637f3661c1541298" kind="function"><name>SaveAndQuit</name></member>
+  </compound>
+  <compound refid="class_tools_1_1_game_object_event" kind="class"><name>Tools::GameObjectEvent</name>
+  </compound>
+  <compound refid="class_u_i_1_1_menus_1_1_game_over_screen" kind="class"><name>UI::Menus::GameOverScreen</name>
+    <member refid="class_u_i_1_1_menus_1_1_game_over_screen_1aa6a3316bd7b321507aa6695fd4255262" kind="variable"><name>mainMenuScene</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_game_over_screen_1aa6eab0382778448fccbc664b87ed2eed" kind="function"><name>Continue</name></member>
+  </compound>
+  <compound refid="class_game_manager_1_1_game_over_state" kind="class"><name>GameManager::GameOverState</name>
+    <member refid="class_game_manager_1_1_game_over_state_1aafb277b075c84c19c68bacaba5d8dc04" kind="variable"><name>gameOverScreen</name></member>
+    <member refid="class_game_manager_1_1_game_over_state_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_game_manager_1_1_game_over_state_1a02112637ce7d18b6bc2b64ea038035c0" kind="function"><name>OnGameOver</name></member>
+    <member refid="class_game_manager_1_1_game_over_state_1ac54ce402cec4f1d67a1cef4db841d26d" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_game_manager_1_1_game_over_state_1ad487b78af2c27a8e7d0dc0016f586461" kind="function"><name>ChangeToThisState</name></member>
+    <member refid="class_game_manager_1_1_game_over_state_1a3bb8109ac0a5a4e32bfc9608b74355c6" kind="function"><name>LeaveThisState</name></member>
+  </compound>
+  <compound refid="class_game_manager_1_1_game_state" kind="class"><name>GameManager::GameState</name>
+    <member refid="class_game_manager_1_1_game_state_1ad02ad005cb741028d1049d7731cb4c27" kind="function"><name>ChangeToThisState</name></member>
+    <member refid="class_game_manager_1_1_game_state_1a4e3e4431ac6f41ff62706d0e3d2f6878" kind="function"><name>LeaveThisState</name></member>
+  </compound>
+  <compound refid="class_tools_1_1_game_state_event" kind="class"><name>Tools::GameStateEvent</name>
+  </compound>
+  <compound refid="class_spawnables_1_1_weapons_1_1_gatling_gun" kind="class"><name>Spawnables::Weapons::GatlingGun</name>
+    <member refid="class_spawnables_1_1_weapons_1_1_gatling_gun_1acd282bd447ebbcf528587382131dab59" kind="variable"><name>_gunHeadIndex</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_gatling_gun_1a9ac261b7a59dd44fefe401891b24b85a" kind="variable"><name>_gunHeadIncrement</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_gatling_gun_1a3ac3e356aa471c036c3de7650cb6f85f" kind="function"><name>TryShooting</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_gatling_gun_1af6de811c91f9eff83eed726589342852" kind="function"><name>ShiftGunHeadIndex</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_examples_1_1_generate_path_example" kind="class"><name>PathCreation::Examples::GeneratePathExample</name>
+    <member refid="class_path_creation_1_1_examples_1_1_generate_path_example_1a1328e49e96817e657a1fef82447af656" kind="variable"><name>closedLoop</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_generate_path_example_1a909bc02546189b8ee5cc407ea0e5ef55" kind="variable"><name>waypoints</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_generate_path_example_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_global_display_settings" kind="class"><name>PathCreation::GlobalDisplaySettings</name>
+    <member refid="class_path_creation_1_1_global_display_settings_1a126a76c59a74d758b3d0cdc357315fac" kind="enum"><name>HandleType</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a126a76c59a74d758b3d0cdc357315facab7095f057db3fefa7325ad93a04e14fd" kind="enumvalue"><name>Sphere</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a126a76c59a74d758b3d0cdc357315faca30954d90085f6eaaf5817917fc5fecb3" kind="enumvalue"><name>Circle</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a126a76c59a74d758b3d0cdc357315facaceb46ca115d05c51aa5a16a8867c3304" kind="enumvalue"><name>Square</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1ae4f4a1e1a3745aca3b9148f4e7d116c6" kind="variable"><name>anchorSize</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1aa432b2bd40c3a712099c18f3114cd462" kind="variable"><name>controlSize</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1aa4e2fb37b8923a648bfb4347bb75f8f6" kind="variable"><name>visibleBehindObjects</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1ad81d70efe803c0653474b0db0f488c3c" kind="variable"><name>visibleWhenNotSelected</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1af29276ea146b120ddafe535280dd2d03" kind="variable"><name>hideAutoControls</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a30a6e91a3fbfcb8cecdb732b2b5fd0a8" kind="variable"><name>anchorShape</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a84deef0cb92f4fce6630dee6cac8e0c3" kind="variable"><name>controlShape</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1acc70eb29358bf90f1962884301c1f2fb" kind="variable"><name>anchor</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1adf4c2aabca23fa9cbf1c151c296f6ad9" kind="variable"><name>anchorHighlighted</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a71da7411a178a17e60a891eefeb7f663" kind="variable"><name>anchorSelected</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1af9eac170ce8aa811b495cf9212146b7b" kind="variable"><name>control</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1ab01b006451102777e4815e3dc3aefebf" kind="variable"><name>controlHighlighted</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a424e6c75e329ffedb288fd360ffd8f61" kind="variable"><name>controlSelected</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a65a96bc0055f6079235f0b61a946b0e5" kind="variable"><name>handleDisabled</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1ad1011e3eba773d266dcaf875688399cf" kind="variable"><name>controlLine</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a53f6533769edf49ff672d3cbafa34d13" kind="variable"><name>bezierPath</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a6d6fcda2a5165c699c6e958570977ab3" kind="variable"><name>highlightedPath</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1ad814e257985494b65b112a3b17264d80" kind="variable"><name>bounds</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a597ce946140cf4336d6d1dda53321e26" kind="variable"><name>segmentBounds</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1aa9650eba5097cefcc25e7dd394f8b5d6" kind="variable"><name>vertexPath</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a2054366d9e55eaa4d96c1d55655a8031" kind="variable"><name>normals</name></member>
+    <member refid="class_path_creation_1_1_global_display_settings_1a19cf020622780d02da092f32d3d34e2e" kind="variable"><name>normalsLength</name></member>
+  </compound>
+  <compound refid="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours" kind="struct"><name>PathCreationEditor::PathHandle::HandleColours</name>
+    <member refid="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a981652c4498369f298672e8ee2bff8a5" kind="variable"><name>defaultColour</name></member>
+    <member refid="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a19e958a64417f6e5d8518d1c6e9f38c9" kind="variable"><name>highlightedColour</name></member>
+    <member refid="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1aa62eeb995510351427d39c50345117cc" kind="variable"><name>selectedColour</name></member>
+    <member refid="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1ae704ad9ba114ff35d5b1b142bd1e45a2" kind="variable"><name>disabledColour</name></member>
+    <member refid="struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1ab05e8a7c6d82d028c74f4d7cff3788e3" kind="function"><name>HandleColours</name></member>
+  </compound>
+  <compound refid="interface_spawnables_1_1_weapons_1_1_i_shootable" kind="interface"><name>Spawnables::Weapons::IShootable</name>
+    <member refid="interface_spawnables_1_1_weapons_1_1_i_shootable_1a26a2e3c2d07dea6a2fd1d38eac284ee6" kind="function"><name>OnShoot</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_weapons_1_1_lazer" kind="class"><name>Spawnables::Weapons::Lazer</name>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a69e2ea14cd21d3d310e16d9931eae97c" kind="variable"><name>MAX_LENGTH</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a42724bbc510ee7278f312d8b144fab9f" kind="variable"><name>HITBOX_LAYER_NAME</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1aca09286cd8b3d4183f0d74bad38fff6e" kind="variable"><name>cooldown</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a37c4954b4cdd996e6103aecf92c46b01" kind="variable"><name>telegraphDuration</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1adba37386a0608ae910fb8a39d466242e" kind="variable"><name>releaseDuration</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1ae3d3f20000c1c2a415675e0509944701" kind="variable"><name>telegraphMaterial</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a337f1138e3750743beef8fcadbc3204f" kind="variable"><name>releaseMaterial</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1afa70b6a0bd5a37ceefcbd8995e1115ee" kind="variable"><name>telegraphWidth</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a7cc7db7d095fdd382aa63650b7f3885c" kind="variable"><name>releaseWidth</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a1fa73e578a807d73164eb44952fddcce" kind="variable"><name>_lineRenderer</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a3784a6d8dc8fd9d8448c354a18a3111f" kind="variable"><name>_playerHitboxLayer</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1ac2d8f49ff629d4c103dd3acda82f45f1" kind="variable"><name>_emitting</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1ac5e64f223dabc62c7e2b61419c69023f" kind="variable"><name>_timeOfLastShot</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a40889b1ad560e7cd421500d044825783" kind="function"><name>Telegraph</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a95ae3f8db82d75a6353f2ae9d80cd0f0" kind="function"><name>Release</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a272363f0e6cee9ba4b007cc436ae3dbd" kind="function"><name>UpdatePosition</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a1ab6e689fcaf722bbe31983d5359dc43" kind="function"><name>CheckDamages</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a077af69786ff199527a15c3a925eb6b8" kind="function"><name>ChangeAppearance</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1ac51c75fd06c6783b6553902c86ac9d71" kind="function"><name>OnDrawGizmos</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_lazer_1a26a2e3c2d07dea6a2fd1d38eac284ee6" kind="function"><name>OnShoot</name></member>
+  </compound>
+  <compound refid="class_u_i_1_1_menus_1_1_leaderboard" kind="class"><name>UI::Menus::Leaderboard</name>
+    <member refid="class_u_i_1_1_menus_1_1_leaderboard_1a03428b16de81b440855689ed3829c960" kind="variable"><name>mainMenu</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_leaderboard_1aac718f57e7a28889787041d11b441968" kind="variable"><name>entryTemplate</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_leaderboard_1ab4664851e64c7cd94df204ca14a4523b" kind="variable"><name>maxEntryCount</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_leaderboard_1a14374af4fb78edb720e36f89ae268633" kind="variable"><name>maxNameLength</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_leaderboard_1a05a86d9e3d6f4daa58feabb0351c15a8" kind="variable"><name>offset</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_leaderboard_1a9a359effd367a5c36849198ab7ef2042" kind="variable"><name>_scoreData</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_leaderboard_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_leaderboard_1ab7397d2792cde98d6f42ecf5bed8d86a" kind="function"><name>GenerateEntries</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_leaderboard_1a6f9cf5080845045597c382201fcebc87" kind="function"><name>FixNameLength</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_leaderboard_1a99662a1aaa5e8270896fb0aeb834bf7e" kind="function"><name>GoToMainMenu</name></member>
+  </compound>
+  <compound refid="class_movement_patterns_1_1_linear_m_p" kind="class"><name>MovementPatterns::LinearMP</name>
+    <member refid="class_movement_patterns_1_1_linear_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8" kind="variable"><name>speed</name></member>
+    <member refid="class_movement_patterns_1_1_linear_m_p_1a97712bccaedef08f6d8c525bdda2f7ef" kind="variable"><name>acceleration</name></member>
+    <member refid="class_movement_patterns_1_1_linear_m_p_1add450a0a83c646aa48b83eeafbf0b902" kind="variable"><name>followsRotation</name></member>
+    <member refid="class_movement_patterns_1_1_linear_m_p_1aeedcd9bc1fcd3a20ade597dbe82176a7" kind="variable"><name>directionInDegrees</name></member>
+    <member refid="class_movement_patterns_1_1_linear_m_p_1abbe6150ad86922a9c62f3bc71f8cfb67" kind="variable"><name>_direction</name></member>
+    <member refid="class_movement_patterns_1_1_linear_m_p_1a8d67528573c728e2d30355bc60a141a0" kind="function"><name>Initialize</name></member>
+    <member refid="class_movement_patterns_1_1_linear_m_p_1aa27a497603473cb642e835d809c60a64" kind="function"><name>GetNextPosition</name></member>
+    <member refid="class_movement_patterns_1_1_linear_m_p_1a755e7a04dbc0bc114ebd52997a9a2a42" kind="function"><name>OnValidate</name></member>
+    <member refid="class_movement_patterns_1_1_linear_m_p_1ae7e5103e242d1fbf4a03afe96d3947ef" kind="function"><name>OnDrawGizmosSelected</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop" kind="class"><name>Spawnables::EnemyScripts::Enemy::LootDrop</name>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1a438ee5cf329b57641c343066d90791f3" kind="variable"><name>item</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1a81b230dc1b49a74222fad1a60c5d4fa3" kind="variable"><name>dropChance</name></member>
+    <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1aaf9b2550978ba8945abd846696c14362" kind="variable"><name>maxDrops</name></member>
+  </compound>
+  <compound refid="class_u_i_1_1_menus_1_1_main_menu" kind="class"><name>UI::Menus::MainMenu</name>
+    <member refid="class_u_i_1_1_menus_1_1_main_menu_1acf6c2c2d807bdb892449ab9a97abc39e" kind="variable"><name>level1</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_main_menu_1a79d981ad15121c0b747565ddfd62ad25" kind="variable"><name>creditsScreen</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_main_menu_1aa93bd1805cbe19da61ac59a58adef7d2" kind="variable"><name>leaderboard</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_main_menu_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_main_menu_1a93ecb4242527b80e76b5e28209f67d2d" kind="function"><name>StartGame</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_main_menu_1aeee94a4594ce3c62cdc8f65f88b22435" kind="function"><name>GoToCredits</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_main_menu_1a5c141c86e016334b8d872cab586180d7" kind="function"><name>GoToLeaderboard</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_main_menu_1a0ff13d025cfc9da8a334629574ff33ff" kind="function"><name>QuitGame</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_utility_1_1_math_utility" kind="class"><name>PathCreation::Utility::MathUtility</name>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1acd983d2826d9157530709cac59622396" kind="function"><name>LockTransformToSpace</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a843ed68d322b2b78d7b40b61e6d7c6ec" kind="function"><name>TransformPoint</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1acd8a21c53fd7f9b1ec693bbb68e7d45c" kind="function"><name>InverseTransformPoint</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a5cf9426374b354c418692ca544b929eb" kind="function"><name>TransformVector</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a1e4a01edf97458af9a6819111e34ebfc" kind="function"><name>InverseTransformVector</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a19a10489c5b270fd7a40aacafe3163a1" kind="function"><name>TransformDirection</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a8b281af6a406ac1bc158ff91b933f142" kind="function"><name>InverseTransformDirection</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1ac2ae4167305e01fcde20e80668c6d226" kind="function"><name>LineSegmentsIntersect</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1adb188ba2f76949a52c1d001759797526" kind="function"><name>LinesIntersect</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1ae7e49266a7df6af7cb39feaec4d5d22e" kind="function"><name>PointOfLineLineIntersection</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a7118d0f65de371ce4526fbd5d47ab6f2" kind="function"><name>ClosestPointOnLineSegment</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1af449017bd617c5f5cc40917a48e473d0" kind="function"><name>ClosestPointOnLineSegment</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1afb3e9467d19fe5787709e6c100fb0a1c" kind="function"><name>SideOfLine</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1af81579bd5405cc07f1eb3822308050d2" kind="function"><name>MinAngle</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a1d10dc68d8d0bb8cdc7e17c0b5f2f487" kind="function"><name>PointInTriangle</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a674cd7147ecf937618e861e8d22d7fc6" kind="function"><name>PointsAreClockwise</name></member>
+  </compound>
+  <compound refid="class_u_i_1_1_menu_screen" kind="class"><name>UI::MenuScreen</name>
+    <member refid="class_u_i_1_1_menu_screen_1a515a4e1ef9fb8f7b823ca9ef62b206f0" kind="variable"><name>onCloseDelay</name></member>
+    <member refid="class_u_i_1_1_menu_screen_1abde5dcaf50e31d0608c1835c31d45ce5" kind="variable"><name>menuLeftEvent</name></member>
+    <member refid="class_u_i_1_1_menu_screen_1a3f204271959196687c31ad5b0f8c19d2" kind="variable"><name>menuOpenedEvent</name></member>
+    <member refid="class_u_i_1_1_menu_screen_1af174fffa9aacfd03387706ff553bd993" kind="function"><name>OpenMenu</name></member>
+    <member refid="class_u_i_1_1_menu_screen_1aff7779f56c25e6d968cec59627708181" kind="function"><name>CloseMenu</name></member>
+    <member refid="class_u_i_1_1_menu_screen_1afb6705559457245e290f4253d7e5f909" kind="function"><name>CloseCoroutine</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_min_max3_d" kind="class"><name>PathCreation::MinMax3D</name>
+    <member refid="class_path_creation_1_1_min_max3_d_1ad6b98bcbe635244abd3fa9884a3e2a26" kind="property"><name>Min</name></member>
+    <member refid="class_path_creation_1_1_min_max3_d_1a3cf3bcc33a1e962953d0707771f80f8e" kind="property"><name>Max</name></member>
+    <member refid="class_path_creation_1_1_min_max3_d_1acfc34869b1089a96bd613168196914ba" kind="function"><name>MinMax3D</name></member>
+    <member refid="class_path_creation_1_1_min_max3_d_1a6abfb3a0477ddc726829d4695d6da383" kind="function"><name>AddValue</name></member>
+  </compound>
+  <compound refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info" kind="struct"><name>PathCreationEditor::ScreenSpacePolyLine::MouseInfo</name>
+    <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a16f8092e69978d611a55bd3363193876" kind="variable"><name>mouseDstToLine</name></member>
+    <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a01ead506993ba33170ce45f849505f86" kind="variable"><name>closestWorldPointToMouse</name></member>
+    <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a5ef92f329351db516693d90dfb7135d3" kind="variable"><name>distanceAlongPathWorld</name></member>
+    <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a7b073fcecef0564ec06fcf13ad816b97" kind="variable"><name>timeOnPath</name></member>
+    <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a734fbc48f50ac483bf1a495f11b63e0b" kind="variable"><name>timeOnBezierSegment</name></member>
+    <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1adc6cd23a29d18903c17f14aa60efb3c7" kind="variable"><name>closestSegmentIndex</name></member>
+    <member refid="struct_path_creation_editor_1_1_screen_space_poly_line_1_1_mouse_info_1a69424f31a1f09a835bf90a9e15b2a676" kind="function"><name>MouseInfo</name></member>
+  </compound>
+  <compound refid="class_path_creation_editor_1_1_mouse_utility" kind="class"><name>PathCreationEditor::MouseUtility</name>
+    <member refid="class_path_creation_editor_1_1_mouse_utility_1a9fe8e9d18a5fc7b3ea49db9e6db8b751" kind="function"><name>GetMouseWorldPosition</name></member>
+  </compound>
+  <compound refid="class_movement_patterns_1_1_movement_pattern" kind="class"><name>MovementPatterns::MovementPattern</name>
+    <member refid="class_movement_patterns_1_1_movement_pattern_1a04f0e6cf979d3b51e259545b3d33933d" kind="function"><name>Initialize</name></member>
+    <member refid="class_movement_patterns_1_1_movement_pattern_1a784a22d17e4193114212035e8eb6ac0f" kind="function"><name>GetNextPosition</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_pickups_1_1_multiplier_pickup" kind="class"><name>Spawnables::Pickups::MultiplierPickup</name>
+    <member refid="class_spawnables_1_1_pickups_1_1_multiplier_pickup_1a44ebcf048524a4fc189c39533c950641" kind="function"><name>OnTriggerExit2D</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_object_pool" kind="class"><name>Spawnables::ObjectPool</name>
+    <member refid="class_spawnables_1_1_object_pool_1a417a6199257c1c1da999cf9d2eaf6b91" kind="variable"><name>_parentTransform</name></member>
+    <member refid="class_spawnables_1_1_object_pool_1a67259580f3bed3976cf28dea92a19d30" kind="property"><name>Key</name></member>
+    <member refid="class_spawnables_1_1_object_pool_1ad6d3141bf24aaf85fa7573865a1934f6" kind="variable"><name>prefab</name></member>
+    <member refid="class_spawnables_1_1_object_pool_1aa809b812a7a8947b5266b444461aac39" kind="variable"><name>initialPoolSize</name></member>
+    <member refid="class_spawnables_1_1_object_pool_1afcb017f7ec1034308d7328698bef57f0" kind="variable"><name>maxPoolSize</name></member>
+    <member refid="class_spawnables_1_1_object_pool_1ac4e87f7c78afc7f0cf63b6d43bf9ad7a" kind="variable"><name>_pool</name></member>
+    <member refid="class_spawnables_1_1_object_pool_1ada2825220e8612b53e039d50d994a51f" kind="variable"><name>_poolSize</name></member>
+    <member refid="class_spawnables_1_1_object_pool_1ab594e6fd1c13466eb3e81224ff93a030" kind="variable"><name>_availableInstances</name></member>
+    <member refid="class_spawnables_1_1_object_pool_1adc919ac837a858107c31d077706160d1" kind="function"><name>SetParentTransform</name></member>
+    <member refid="class_spawnables_1_1_object_pool_1ac2c04dade23785d51b1a68580267240a" kind="function"><name>Populate</name></member>
+    <member refid="class_spawnables_1_1_object_pool_1a87ee3f6fb08420df8c16ddf8be6d1947" kind="function"><name>Enqueue</name></member>
+    <member refid="class_spawnables_1_1_object_pool_1aca4cb1e6e94d35131eed7de40bcb6e35" kind="function"><name>Extract</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_object_pool_manager" kind="class"><name>Spawnables::ObjectPoolManager</name>
+    <member refid="class_spawnables_1_1_object_pool_manager_1a7d0ed446b05362b239bde80534497927" kind="variable"><name>Instance</name></member>
+    <member refid="class_spawnables_1_1_object_pool_manager_1a249debaf8812ae3804cafd236c84205d" kind="variable"><name>_poolTable</name></member>
+    <member refid="class_spawnables_1_1_object_pool_manager_1a21c67f4c5da485082f9ee48de4eedae0" kind="variable"><name>objectPools</name></member>
+    <member refid="class_spawnables_1_1_object_pool_manager_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_spawnables_1_1_object_pool_manager_1a1b48a33c40b4670ebae60da1682f7733" kind="function"><name>Spawn&lt; T &gt;</name></member>
+    <member refid="class_spawnables_1_1_object_pool_manager_1a6bbeac8b46389ccaa0b7d2d24f805c6f" kind="function"><name>Despawn</name></member>
+  </compound>
+  <compound refid="class_movement_patterns_1_1_orbiting_m_p" kind="class"><name>MovementPatterns::OrbitingMP</name>
+    <member refid="class_movement_patterns_1_1_orbiting_m_p_1aebcdb6865e8e48a878d71eba77d1f5b3" kind="variable"><name>target</name></member>
+    <member refid="class_movement_patterns_1_1_orbiting_m_p_1a5050a760c11da521cd4aee6336f6529f" kind="variable"><name>radius</name></member>
+    <member refid="class_movement_patterns_1_1_orbiting_m_p_1a275dd6dafe5d4455e599ffd15feb06f8" kind="variable"><name>phase</name></member>
+    <member refid="class_movement_patterns_1_1_orbiting_m_p_1ad1de9af57e9b1558e00f6c1bfb55842e" kind="variable"><name>angularSpeed</name></member>
+    <member refid="class_movement_patterns_1_1_orbiting_m_p_1a97712bccaedef08f6d8c525bdda2f7ef" kind="variable"><name>acceleration</name></member>
+    <member refid="class_movement_patterns_1_1_orbiting_m_p_1a8d67528573c728e2d30355bc60a141a0" kind="function"><name>Initialize</name></member>
+    <member refid="class_movement_patterns_1_1_orbiting_m_p_1aa27a497603473cb642e835d809c60a64" kind="function"><name>GetNextPosition</name></member>
+  </compound>
+  <compound refid="class_v_f_x_1_1_pan_camera" kind="class"><name>VFX::PanCamera</name>
+    <member refid="class_v_f_x_1_1_pan_camera_1a2008f4ab70b5e4104c2ca43932536ddf" kind="variable"><name>camera</name></member>
+    <member refid="class_v_f_x_1_1_pan_camera_1a94137b92fe146aa56a9aea3e94aefd0a" kind="variable"><name>targetPosition</name></member>
+    <member refid="class_v_f_x_1_1_pan_camera_1a515dbc8cdce3d6b2091228e7c6d2036f" kind="variable"><name>curve</name></member>
+    <member refid="class_v_f_x_1_1_pan_camera_1a7cc5efcfaf1700331f7c5ed6b38fae16" kind="function"><name>PanToPosition</name></member>
+    <member refid="class_v_f_x_1_1_pan_camera_1ab81e7dfad7c872ec7af658ef87dbaf10" kind="function"><name>Pan</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_path_creator" kind="class"><name>PathCreation::PathCreator</name>
+    <member refid="class_path_creation_1_1_path_creator_1a65278f25a3bd92383b81a96be8a5a7a7" kind="event"><name>pathUpdated</name></member>
+    <member refid="class_path_creation_1_1_path_creator_1acd3d2f71aadd31acc65b0775ef52bd62" kind="variable"><name>editorData</name></member>
+    <member refid="class_path_creation_1_1_path_creator_1aedeffc7d23da25d52b9a50045189fe2b" kind="variable"><name>initialized</name></member>
+    <member refid="class_path_creation_1_1_path_creator_1ab55aa37a3f4005ab563c64e2cef02e1b" kind="variable"><name>globalEditorDisplaySettings</name></member>
+    <member refid="class_path_creation_1_1_path_creator_1a3eb739a083bdb5ade4c81c07af150bd7" kind="property"><name>path</name></member>
+    <member refid="class_path_creation_1_1_path_creator_1a0028a8eff418f01f8802838688fd6965" kind="property"><name>bezierPath</name></member>
+    <member refid="class_path_creation_1_1_path_creator_1a9172818d21fb0110a6dc2cd248598dd6" kind="property"><name>EditorData</name></member>
+    <member refid="class_path_creation_1_1_path_creator_1ae9e2b7d12ace7176fef49f4242a4292b" kind="function"><name>InitializeEditorData</name></member>
+    <member refid="class_path_creation_1_1_path_creator_1ad46faf1defd8aca8bf674444fe5b72bf" kind="function"><name>TriggerPathUpdate</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_path_creator_data" kind="class"><name>PathCreation::PathCreatorData</name>
+    <member refid="class_path_creation_1_1_path_creator_data_1a1a264dd03e9b0ad444cb08f36323659d" kind="event"><name>bezierOrVertexPathModified</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a6c4c4da7e07092b2010b4319bb8b27cd" kind="event"><name>bezierCreated</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1af6a6e2cb1af85d8b5cb0d871f202b05e" kind="variable"><name>_bezierPath</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a71fc8ab28369b9ff04f0eb58b1c90b18" kind="variable"><name>_vertexPath</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a7916b03392b49fe88aa2d7c7adb41e18" kind="variable"><name>vertexPathUpToDate</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a5a162f11e22430b8095d3ca46d4327fe" kind="variable"><name>vertexPathMaxAngleError</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a3658d2e7c039e7e3e2d1a10ac9cc2b49" kind="variable"><name>vertexPathMinVertexSpacing</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1abdd625f7fdc98740d3f2b43cf2bf7962" kind="variable"><name>showTransformTool</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a7e7d0bdbde2130869ac4a69e97a4e4bf" kind="variable"><name>showPathBounds</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a57df9dfbf7bb6a30e241e42a56613b12" kind="variable"><name>showPerSegmentBounds</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a8e4788b0f113b1fde1b117713009198b" kind="variable"><name>displayAnchorPoints</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a58cc72da9a86544fdaa66741c9e2944b" kind="variable"><name>displayControlPoints</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a57235976566d5eea76d445dd9f49a9e0" kind="variable"><name>bezierHandleScale</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a1290669941f746d33cac7eacc5883167" kind="variable"><name>globalDisplaySettingsFoldout</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a827fe4ea0ba4e4ec7cba1a6e27cb38a1" kind="variable"><name>keepConstantHandleSize</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1abb8fd8c0312b2ed01f43a2c93bab30f3" kind="variable"><name>showNormalsInVertexMode</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1abb88c8d06915e9fb7f8a70c2b10e8b6b" kind="variable"><name>showBezierPathInVertexMode</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a0298fdb2f00cb033c9f78f8a3d6e40ed" kind="variable"><name>showDisplayOptions</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1abb521c3a40da349c7458e9f1df371e3a" kind="variable"><name>showPathOptions</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a7bb918475fd5b1c7a35ec9bcacddd688" kind="variable"><name>showVertexPathDisplayOptions</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a3732ca3597b619e2e7e1ff6ded2efcf1" kind="variable"><name>showVertexPathOptions</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a56290dd8fbfe02a80b275b8262a04f82" kind="variable"><name>showNormals</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a2eec400acaa70fa39ca205a2fb18e945" kind="variable"><name>showNormalsHelpInfo</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1ab81bd7203a4363b9a47a128224b8eb61" kind="variable"><name>tabIndex</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a0028a8eff418f01f8802838688fd6965" kind="property"><name>bezierPath</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1acbe5d40937b0bbc44bd8fca7b12c1727" kind="function"><name>Initialize</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1acc31b1632b72bb8c330153d714deb827" kind="function"><name>ResetBezierPath</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a17d278a1b0db08233d0acd74a8250dc4" kind="function"><name>GetVertexPath</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a40163931e9dde41f21b98f08197f2c05" kind="function"><name>PathTransformed</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a40126137d7eaea642495bf28d6b27256" kind="function"><name>VertexPathSettingsChanged</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a6cd85faff3df62df9ebad64feaf59dd1" kind="function"><name>PathModifiedByUndo</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1acfbe80c640850cdd9e20a697865db067" kind="function"><name>CreateBezier</name></member>
+    <member refid="class_path_creation_1_1_path_creator_data_1a72ae6399ed49c412e49ef73bb9371908" kind="function"><name>BezierPathEdited</name></member>
+  </compound>
+  <compound refid="class_path_creation_editor_1_1_path_editor" kind="class"><name>PathCreationEditor::PathEditor</name>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a3d87c5e7d71ee08a757f08ef4e73a1df" kind="variable"><name>segmentSelectDistanceThreshold</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a2a3c8882b7251c62ed4e64195c0c6493" kind="variable"><name>screenPolylineMaxAngleError</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1ac13d863638bee31a6e15ee39d05ba121" kind="variable"><name>screenPolylineMinVertexDst</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a8c730c95d39181d2763c19b8bb3ce941" kind="variable"><name>helpInfo</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1af2e6f49b6d8a029f4015ed3a3c839e86" kind="variable"><name>spaceNames</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a526882e7c3f5582059bfe6cfb778beda" kind="variable"><name>tabNames</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1ae4da9be0f904ee0a57313bed83075016" kind="variable"><name>constantSizeTooltip</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1ab0f44bb8f041f8d7e42e5947fece36e6" kind="variable"><name>inspectorSectionSpacing</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1ac99ede02aa542dc1cf5d8a285faba453" kind="variable"><name>constantHandleScale</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1adfceb0a1c1b273cc2be979ff618570a1" kind="variable"><name>normalsSpacing</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a9bbb7998d30f40ba35cfd55c236c42da" kind="variable"><name>bezierPathTab</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1ad36f85e579a80a55024d6986f4738dd4" kind="variable"><name>vertexPathTab</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a5bbe07422378ff85e8292f32aeee8d22" kind="variable"><name>boldFoldoutStyle</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a3e605c44171503bd35f8638975422429" kind="variable"><name>creator</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a835e2e5dcf7be3bb685b7c06ca4f99d2" kind="variable"><name>globalDisplaySettingsEditor</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a5d072de35bf1bca8ca732c630ea91fb1" kind="variable"><name>screenSpaceLine</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a919cf2665a110c103f707e37ddb49069" kind="variable"><name>pathMouseInfo</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a1bca65445ece5edb1bd522ce97e69d5b" kind="variable"><name>globalDisplaySettings</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1aa5b1286929d22f8be8dd5cb338ccd2db" kind="variable"><name>splineAnchorColours</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1aa75409ea474796187f6aff82d2355896" kind="variable"><name>splineControlColours</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a380dff79f8abce928070fd7e8301ff61" kind="variable"><name>capFunctions</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1abb63e12c471845fc33819aad6a48569f" kind="variable"><name>anchorAngleHandle</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1aa9f753c696e14cd0eb44cce8bd290c3c" kind="variable"><name>normalsVertexPath</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1afc94505f1ca7e501618ff7a04a66dc62" kind="variable"><name>selectedSegmentIndex</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a63917c7ce105c1da4241eb4980d8a7ec" kind="variable"><name>draggingHandleIndex</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a2c1e13caa96fdaf4d0d7f604c9389f0e" kind="variable"><name>mouseOverHandleIndex</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a00c573b81a127fb3f2c2cc6f69a3616d" kind="variable"><name>handleIndexToDisplayAsTransform</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a42f8f4ecbfe0e491f3130dfa7d4df949" kind="variable"><name>shiftLastFrame</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a6a5a28534be6d672d61d1a7b469d4d91" kind="variable"><name>hasUpdatedScreenSpaceLine</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a20d7cc8d864e984a49e654bfbbfd7bd9" kind="variable"><name>hasUpdatedNormalsVertexPath</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a481fca6afaf3d3d898498f20454cb4a9" kind="variable"><name>editingNormalsOld</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1afb1b6b8aa69260dccb86d54381eb99d2" kind="variable"><name>transformPos</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a209d580b737f4cc2cf4fdedbe4a5a2fb" kind="variable"><name>transformScale</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a9b6c74ed51e60bb5fd44adbb3a61832a" kind="variable"><name>transformRot</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a78edba887c2d9381c1d8ef04dceddaae" kind="variable"><name>handlesStartCol</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a0028a8eff418f01f8802838688fd6965" kind="property"><name>bezierPath</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1aeb161a1bdaa6935811b76daad2aec0b5" kind="property"><name>data</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a2ea6d3de5048f2a18030489d61b026eb" kind="property"><name>editingNormals</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a9292d21427a3a3c9c6727380f50ec25a" kind="function"><name>OnInspectorGUI</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a0737bb84f203a5ffb51b308053d9d70d" kind="function"><name>DrawBezierPathInspector</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a63e911ed49ad2da57479fd1c31a6c649" kind="function"><name>DrawVertexPathInspector</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a40170804d49efe7c5cd56f3441527f4d" kind="function"><name>DrawGlobalDisplaySettingsInspector</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a242c48d349c3787aa4c86be0a80b1ee8" kind="function"><name>OnSceneGUI</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a031d4c6f4fc96730a66ec7655b3d80de" kind="function"><name>DrawVertexPathSceneEditor</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a8e3b5116a6a1843afa2212fa87d624a0" kind="function"><name>ProcessBezierPathInput</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a4547fde1e60f78fbf469748aed014aac" kind="function"><name>DrawBezierPathSceneEditor</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a0681589cc6b8b919a73108c018c59d23" kind="function"><name>DrawHandle</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a3e9a1e1cd7a478a0d00f0efb51a8e4cf" kind="function"><name>OnDisable</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a84e23ba394eacd818d2e005cc466c4d1" kind="function"><name>OnEnable</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1aaefa1bbbd5cced5e14cb062270735f08" kind="function"><name>SetTransformState</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1afafc6f3c12527e9fac2315520e0e052e" kind="function"><name>OnUndoRedo</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a36962ee84061cc67225fcf013145524c" kind="function"><name>TabChanged</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a8b91fe797cca4ed88712eeaf79a13799" kind="function"><name>LoadDisplaySettings</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1aa707c08a3dc52a3394c9ea9495bf70c0" kind="function"><name>UpdateGlobalDisplaySettings</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1ad3017f5ad030037b662318e0721746e1" kind="function"><name>ResetState</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a11c04e6a933bd849dded1eb032e1f899" kind="function"><name>OnPathModifed</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1a4a6a94dcaacbcd7da29aeca84f777043" kind="function"><name>RepaintUnfocusedSceneViews</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1af51992e99f795bfd539f7a33cff85324" kind="function"><name>UpdatePathMouseInfo</name></member>
+    <member refid="class_path_creation_editor_1_1_path_editor_1aa92a88dea3c1dac29f94f1ced992fd59" kind="function"><name>GetHandleDiameter</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_examples_1_1_path_follower" kind="class"><name>PathCreation::Examples::PathFollower</name>
+    <member refid="class_path_creation_1_1_examples_1_1_path_follower_1a3e5fa7ee8f7d749982ca79cfb1a570f5" kind="variable"><name>pathCreator</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_follower_1a01f46aac8d88a2418a6494266c0a1f6c" kind="variable"><name>endOfPathInstruction</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_follower_1a7f7e4724cf57d59513b39c5ecc81adc8" kind="variable"><name>speed</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_follower_1aed8561007effc8b6a55c49c34f27e363" kind="variable"><name>distanceTravelled</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_follower_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_follower_1aec0783b5a136e042adcc47bae4fe5291" kind="function"><name>Update</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_follower_1aa637d7185bd9bbb75641dd22ffef743a" kind="function"><name>OnPathChanged</name></member>
+  </compound>
+  <compound refid="class_path_creation_editor_1_1_path_handle" kind="class"><name>PathCreationEditor::PathHandle</name>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a036c412034984dd7a13d0ab612f1ccf8" kind="enum"><name>HandleInputType</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a036c412034984dd7a13d0ab612f1ccf8a6adf97f83acf6453d4a6a4b1070f3754" kind="enumvalue"><name>None</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a036c412034984dd7a13d0ab612f1ccf8a4a9bbce96a0f33e07030ec2dfbbd0dfe" kind="enumvalue"><name>LMBPress</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a036c412034984dd7a13d0ab612f1ccf8a7960c18b0cad8c51e9c1cdb8ff473a48" kind="enumvalue"><name>LMBClick</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a036c412034984dd7a13d0ab612f1ccf8a58003a307e66b32cee589aed53ce0f94" kind="enumvalue"><name>LMBDrag</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a036c412034984dd7a13d0ab612f1ccf8a82dce3ad17bebd6fd32a1909ba4639bb" kind="enumvalue"><name>LMBRelease</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a47e40c47d1fca7ca90d1cb1ac2705630" kind="variable"><name>extraInputRadius</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a111953ef6e73038e338c1f4697688dcd" kind="variable"><name>handleDragMouseStart</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1ab8e3a623494ece814ac0894c5d2127ea" kind="variable"><name>handleDragMouseEnd</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1ac26cf8b5fac8733d39104f59340aa35d" kind="variable"><name>handleDragWorldStart</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1ab15fa100eed7b56389ec4eca5a5f7da7" kind="variable"><name>selectedHandleID</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a166ec2117a19f1f114e76165beb7d6c5" kind="variable"><name>mouseIsOverAHandle</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a2cddc5eb6be916a1670271bfb5df78a1" kind="variable"><name>dstMouseToDragPointStart</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a15c53d86fc69355c79557ba92071c749" kind="variable"><name>ids</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1aba629f46e651d36a7b43f856f2b3711f" kind="variable"><name>idHash</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a4f26004e8f3572f3317862fa22ec7e9a" kind="function"><name>PathHandle</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1abe3959edbdc34140156199ab4c659f15" kind="function"><name>AddIDs</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1a90251c6f0144c7e8dca54e1b3878e689" kind="function"><name>GetID</name></member>
+    <member refid="class_path_creation_editor_1_1_path_handle_1afbe8dedbade7802379f1ec0abaa28c80" kind="function"><name>DrawHandle</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_examples_1_1_path_placer" kind="class"><name>PathCreation::Examples::PathPlacer</name>
+    <member refid="class_path_creation_1_1_examples_1_1_path_placer_1ad6d3141bf24aaf85fa7573865a1934f6" kind="variable"><name>prefab</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_placer_1ad916a2ee554f92b628f0bc4c37912c22" kind="variable"><name>holder</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_placer_1aedc6398ddf4719ad026969c7a74ab8ba" kind="variable"><name>spacing</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_placer_1ab635b8d4c5142116dd4da765a2e90ced" kind="variable"><name>minSpacing</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_placer_1a724f5d055e6b787a27a1d448a6726073" kind="function"><name>Generate</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_placer_1a657566cf7c585b2c926b4065f855eaef" kind="function"><name>DestroyObjects</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_placer_1a33561722c7f3a8c711f902daafe6ee0c" kind="function"><name>PathUpdated</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_examples_1_1_path_scene_tool" kind="class"><name>PathCreation::Examples::PathSceneTool</name>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a672894ed718b5d8f0fffcf806e162321" kind="event"><name>onDestroyed</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a3e5fa7ee8f7d749982ca79cfb1a570f5" kind="variable"><name>pathCreator</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a85625f1795d00ceac2bf81b4f37dc762" kind="variable"><name>autoUpdate</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a3eb739a083bdb5ade4c81c07af150bd7" kind="property"><name>path</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a62f2d6c011abac5a7b991a8561c60b5a" kind="function"><name>TriggerUpdate</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a1be5f5b23715843a7bfc4f2ebd6c7894" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1ab9370c7857bec34a0aaf1b60a437fcd8" kind="function"><name>PathUpdated</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_examples_1_1_path_scene_tool_editor" kind="class"><name>PathCreation::Examples::PathSceneToolEditor</name>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a7e6a7ffd83b15ca7ea987071988927c8" kind="variable"><name>pathTool</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a4118a5eec5b8b641567e275a1bd47738" kind="variable"><name>isSubscribed</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a9292d21427a3a3c9c6727380f50ec25a" kind="function"><name>OnInspectorGUI</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a62f2d6c011abac5a7b991a8561c60b5a" kind="function"><name>TriggerUpdate</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1accab52007b8de1717bde9f6447a183f8" kind="function"><name>OnToolDestroyed</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a700bf0709531b5e90e1058ee49b03502" kind="function"><name>TryFindPathCreator</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1aa3f3663556e3d55db07338b51f46337c" kind="function"><name>OnPathModified</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a34316462014f78aba29c389590f6b104" kind="function"><name>OnEnable</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_editor_1a1f161c50caba3c831a4b2c088c9f9c11" kind="function"><name>Subscribe</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_examples_1_1_path_spawner" kind="class"><name>PathCreation::Examples::PathSpawner</name>
+    <member refid="class_path_creation_1_1_examples_1_1_path_spawner_1ac54490f38af7fa8763d6f32366cefc5c" kind="variable"><name>pathPrefab</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_spawner_1a2d0e6e5a57c71bf9770bef3b7a4b2c14" kind="variable"><name>followerPrefab</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_spawner_1ae1128b3b4d8e8055f95e12211191603b" kind="variable"><name>spawnPoints</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_path_spawner_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data" kind="class"><name>PathCreation::Utility::VertexPathUtility::PathSplitData</name>
+    <member refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a373e03148d94bc6d3657f6171cf97889" kind="variable"><name>vertices</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a8b46f249aa11995868ab39da49523136" kind="variable"><name>tangents</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a5070e9a8d28fd554cc1c4c6c90aed7d0" kind="variable"><name>cumulativeLength</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1a8e05746ffb431549c768a8f9c6e2cc9f" kind="variable"><name>anchorVertexMap</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1_1_path_split_data_1ab2646cebe47af4d3f4218770c8fd6b92" kind="variable"><name>minMax</name></member>
+  </compound>
+  <compound refid="class_game_manager_1_1_paused_state" kind="class"><name>GameManager::PausedState</name>
+    <member refid="class_game_manager_1_1_paused_state_1a13b2ec7901bb67df6b6d8e1e931e9b04" kind="variable"><name>playingState</name></member>
+    <member refid="class_game_manager_1_1_paused_state_1a8669cdf1b0df4e9df579b33bb6ad3a4d" kind="variable"><name>pauseMenu</name></member>
+    <member refid="class_game_manager_1_1_paused_state_1ad487b78af2c27a8e7d0dc0016f586461" kind="function"><name>ChangeToThisState</name></member>
+    <member refid="class_game_manager_1_1_paused_state_1a3bb8109ac0a5a4e32bfc9608b74355c6" kind="function"><name>LeaveThisState</name></member>
+    <member refid="class_game_manager_1_1_paused_state_1a616539ad7fc8ee95accbbbce64332f5d" kind="function"><name>Unpause</name></member>
+    <member refid="class_game_manager_1_1_paused_state_1aba75b9ccbfe0eaf2c607bc719977a290" kind="function"><name>EnableUnpausing</name></member>
+    <member refid="class_game_manager_1_1_paused_state_1ac54ce402cec4f1d67a1cef4db841d26d" kind="function"><name>OnDestroy</name></member>
+  </compound>
+  <compound refid="class_u_i_1_1_menus_1_1_pause_menu" kind="class"><name>UI::Menus::PauseMenu</name>
+    <member refid="class_u_i_1_1_menus_1_1_pause_menu_1aa6a3316bd7b321507aa6695fd4255262" kind="variable"><name>mainMenuScene</name></member>
+    <member refid="class_u_i_1_1_menus_1_1_pause_menu_1aee098bf293585e7cbdfce89f88f46167" kind="function"><name>ResumeGame</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_pickups_1_1_pickup" kind="class"><name>Spawnables::Pickups::Pickup</name>
+    <member refid="class_spawnables_1_1_pickups_1_1_pickup_1a4d51bab2cdefd54711c114daae220327" kind="variable"><name>rewards</name></member>
+    <member refid="class_spawnables_1_1_pickups_1_1_pickup_1ad8977c264b58f2c0e3e69af81c83644d" kind="function"><name>OnTriggerEnter2D</name></member>
+    <member refid="class_spawnables_1_1_pickups_1_1_pickup_1a2963c672627836dfbd14de95495aa8f5" kind="function"><name>GiveRewards</name></member>
+  </compound>
+  <compound refid="class_player_scripts_1_1_player" kind="class"><name>PlayerScripts::Player</name>
+    <member refid="class_player_scripts_1_1_player_1a7fdf773501c77d7fe9587f9cafffee5f" kind="variable"><name>Instance</name></member>
+    <member refid="class_player_scripts_1_1_player_1a631e83154e218047a2889c328a40d351" kind="variable"><name>movementSpeed</name></member>
+    <member refid="class_player_scripts_1_1_player_1a207b8b7bc7cd8c7389acca3a3c9779fd" kind="variable"><name>focusSpeedModifier</name></member>
+    <member refid="class_player_scripts_1_1_player_1a4dcef5cc05e1394c1e520d61393c92f3" kind="variable"><name>bombBehaviour</name></member>
+    <member refid="class_player_scripts_1_1_player_1aaca2015f54b311502fd2cb2cab74dd61" kind="variable"><name>currentWeaponSet</name></member>
+    <member refid="class_player_scripts_1_1_player_1aff94192c9014da40699a48789c696f3d" kind="variable"><name>weaponSets</name></member>
+    <member refid="class_player_scripts_1_1_player_1afc1cd538feae725d6560a393bb88ed65" kind="variable"><name>_rigidbody</name></member>
+    <member refid="class_player_scripts_1_1_player_1ad3aaed1e36cfe099bf789d491113f552" kind="variable"><name>_hasControl</name></member>
+    <member refid="class_player_scripts_1_1_player_1accdb151307488e9126fb911052580679" kind="variable"><name>_hasBombs</name></member>
+    <member refid="class_player_scripts_1_1_player_1aed097ec52fe2fea255f496f3fa9f85ce" kind="variable"><name>_inBombState</name></member>
+    <member refid="class_player_scripts_1_1_player_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_player_scripts_1_1_player_1a64cb65bfc7daed53934ffc6d155ff1ed" kind="function"><name>FixedUpdate</name></member>
+    <member refid="class_player_scripts_1_1_player_1a26fd661d0874992b7c900bcd912b765a" kind="function"><name>DeployBomb</name></member>
+    <member refid="class_player_scripts_1_1_player_1a76f4d8b940dd6d837e2c16ed44c93327" kind="function"><name>CheckBombs</name></member>
+    <member refid="class_player_scripts_1_1_player_1ac54ce402cec4f1d67a1cef4db841d26d" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_player_scripts_1_1_player_1a542f630d26b87b7485284fa8e1156389" kind="function"><name>ChangeBombState</name></member>
+    <member refid="class_player_scripts_1_1_player_1ae734336ad894a9f83096e0eb022ce694" kind="function"><name>ChangeWeapon</name></member>
+    <member refid="class_player_scripts_1_1_player_1a619889203db83ef8efe43d453d9e554c" kind="function"><name>ChangeWeapon</name></member>
+    <member refid="class_player_scripts_1_1_player_1addcd78ec1b749bf71dd27fd1965f2efc" kind="function"><name>ChangeControl</name></member>
+  </compound>
+  <compound refid="class_player_scripts_1_1_player_hitbox" kind="class"><name>PlayerScripts::PlayerHitbox</name>
+    <member refid="class_player_scripts_1_1_player_hitbox_1ad8698c75e7c1602cb0b8b51275dc73f7" kind="variable"><name>invincibilityTime</name></member>
+    <member refid="class_player_scripts_1_1_player_hitbox_1abd9abcb1ce3bcdd0d9c99534620685bc" kind="variable"><name>onTakesHitEvent</name></member>
+    <member refid="class_player_scripts_1_1_player_hitbox_1aed097ec52fe2fea255f496f3fa9f85ce" kind="variable"><name>_inBombState</name></member>
+    <member refid="class_player_scripts_1_1_player_hitbox_1a4fc467c28662a043a60b5d1ab977af3c" kind="variable"><name>_timeOfLastHit</name></member>
+    <member refid="class_player_scripts_1_1_player_hitbox_1ad8977c264b58f2c0e3e69af81c83644d" kind="function"><name>OnTriggerEnter2D</name></member>
+    <member refid="class_player_scripts_1_1_player_hitbox_1a8e6d5d319127392d79486f2183ddfbe2" kind="function"><name>IsInvincible</name></member>
+    <member refid="class_player_scripts_1_1_player_hitbox_1a9b7b513f2f2e5e92834a0f459b496737" kind="function"><name>TakeDamage</name></member>
+    <member refid="class_player_scripts_1_1_player_hitbox_1ae77a2b3d16e04654d819c8db25cc6055" kind="function"><name>AttemptHit</name></member>
+    <member refid="class_player_scripts_1_1_player_hitbox_1a542f630d26b87b7485284fa8e1156389" kind="function"><name>ChangeBombState</name></member>
+  </compound>
+  <compound refid="class_player_scripts_1_1_player_status" kind="class"><name>PlayerScripts::PlayerStatus</name>
+    <member refid="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1" kind="enum"><name>ResourceType</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1a605669cab962bf944d99ce89cf9e58d9" kind="enumvalue"><name>Health</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1a902c057942916a5d6c492f421c9ea522" kind="enumvalue"><name>Bombs</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1add4fe0cc913f704600b97d1f5dd285de" kind="enumvalue"><name>Power</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1a5dd135d1bcfa7f63c3b7f25425c2a4a1" kind="enumvalue"><name>Score</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1a31f6f99f6ac92561e21b26bde759bbc7" kind="enumvalue"><name>ScoreMultiplier</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1ab754ea7b4863cb06573e60f4fd700193" kind="variable"><name>CHANGE_METHOD_PREFIX</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a36a69d17d9347c8c18760747002841c4" kind="variable"><name>EVENT_NAME_SUFFIX</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a25db5557f707345a9150265155379142" kind="variable"><name>_bombsHeld</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a8ebf38d6fb5cc85c37188f3a86e8da06" kind="variable"><name>POWER_LEVELS</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a1702c43c74797e04cc9e18a4a4db49bb" kind="variable"><name>MULTIPLIER_LEVELS</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1afa3c4cbe95c95ff9cd8bdc9e4cec4a5f" kind="variable"><name>maxHealth</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1af14fb5dd5d34fc2b4a6dadaf929b237b" kind="variable"><name>startingHealth</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1aecf538b86d5a9fa29b1178eec01f6d45" kind="variable"><name>maxBombsHeld</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1af6446dd97083751623de14b02e5ede2a" kind="variable"><name>startingBombsHeld</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a4d42493fdc9abff551c51daea14b5fd5" kind="variable"><name>maxPower</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a4d3715eb1b2638dae292e1c00ceb5028" kind="variable"><name>startingPower</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1adf08962e6157777feae044d2ad6c1ca5" kind="variable"><name>maxMultiplierScoreBonus</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a7336b6cd8782708a2ffaa32505111436" kind="variable"><name>healthUpRequirementIncrement</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a003c51d423b7d53fcc827089df709e5e" kind="variable"><name>healthOverflowBonus</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1aa8105616da493b6edfaec0538048a2f3" kind="variable"><name>_health</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1addd9b23022e82028a4a03b56e70ebf54" kind="variable"><name>_power</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a80852ddc07995f011e3f05f9f1cb5b48" kind="variable"><name>_scoreMultiplier</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1afbd12ef65f605adbf215c2e9c88a9aa8" kind="variable"><name>_scoreMultiplierLevel</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a32ebb11e1515da4b02ee8b35e38148be" kind="variable"><name>_healthUpRequirement</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1aeac2eae8e304f20bc75eb574b2df8964" kind="property"><name>Instance</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1af8accc54acdf1feb2376dd92f1c4f559" kind="property"><name>Score</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a8a2906566d8ab4cab6f2a7ae1d54ff11" kind="event"><name>HealthChangedEvent</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1ae2d7538b3b005e9d1425f11c5f3d59a7" kind="event"><name>BombsChangedEvent</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a8a4081034fc051d5e0c62f5d422c1d36" kind="event"><name>PowerChangedEvent</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1aa1c18d81d4b7d79831611343d6df3981" kind="event"><name>PowerLevelChangedEvent</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a789a871ed8c2f42930494b3d05f02887" kind="event"><name>ScoreChangedEvent</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a6debed4c397d5619e51a77b1a093253a" kind="event"><name>ScoreMultiplierChangedEvent</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a18f932a93b76c23809add1bf070899bf" kind="event"><name>GameOverEvent</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02" kind="function"><name>ChangedValueListener</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a372de693ad40b3f42839c8ec6ac845f4" kind="function"><name>Reset</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1af41d014aba881a7ec30a9cddaf9e0b3a" kind="function"><name>ChangeHealth</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a93b8c4270f1e17b9624d0dd78b593e98" kind="function"><name>ChangeBombs</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1abd2e8bf17dab02c7807a61f445c930bf" kind="function"><name>ChangePower</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45" kind="function"><name>ChangeScore</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a48bde3035abda30d99b282527cdd1bf0" kind="function"><name>ChangeScoreMultiplier</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a012607dd27a930aa340ffa15fd32cb28" kind="function"><name>ResetScoreMultiplier</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1ac54ce402cec4f1d67a1cef4db841d26d" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1ab468d4779fc1a9b54ce99dc71555c3fa" kind="function"><name>Subscribe</name></member>
+    <member refid="class_player_scripts_1_1_player_status_1a3fd9672e4dfe8040bd6f7011ef2e0f86" kind="function"><name>ChangeResource</name></member>
+  </compound>
+  <compound refid="class_game_manager_1_1_playing_state" kind="class"><name>GameManager::PlayingState</name>
+    <member refid="class_game_manager_1_1_playing_state_1ac45036e3b51df182b64a37c7df4f7558" kind="variable"><name>pausedState</name></member>
+    <member refid="class_game_manager_1_1_playing_state_1ad487b78af2c27a8e7d0dc0016f586461" kind="function"><name>ChangeToThisState</name></member>
+    <member refid="class_game_manager_1_1_playing_state_1a3bb8109ac0a5a4e32bfc9608b74355c6" kind="function"><name>LeaveThisState</name></member>
+    <member refid="class_game_manager_1_1_playing_state_1a70babc5227ddd16ca31dccc6cec0bb22" kind="function"><name>Pause</name></member>
+    <member refid="class_game_manager_1_1_playing_state_1a3826da4e7db0244543a6917174c4ff01" kind="function"><name>EnablePausing</name></member>
+    <member refid="class_game_manager_1_1_playing_state_1ac54ce402cec4f1d67a1cef4db841d26d" kind="function"><name>OnDestroy</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale" kind="class"><name>PathCreation::Utility::MathUtility::PosRotScale</name>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1ac59cf32610107eb9b8f32cfa8081e0dc" kind="variable"><name>position</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1aa72d043f8d30c30ebd07970933dd5e66" kind="variable"><name>rotation</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1a7f602b069e65a0bbe1cf93fe0fd12781" kind="variable"><name>scale</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1aae35828f32bd592f57b7671bc69eb327" kind="function"><name>PosRotScale</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1af523cd70f6da990600293f3ee2947786" kind="function"><name>SetTransform</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_weapons_1_1_projectile" kind="class"><name>Spawnables::Weapons::Projectile</name>
+    <member refid="class_spawnables_1_1_weapons_1_1_projectile_1a9b39867abc3f09243fcdc739bd9e6c90" kind="variable"><name>damage</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_projectile_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_projectile_1a1042be8ac527a44de1bd86cff3a20a83" kind="function"><name>Disperse</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_projectile_1a3f40ff01a7823be92e52c43405a073cb" kind="function"><name>OnBombDamageTick</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_pickups_1_1_pickup_1_1_reward" kind="class"><name>Spawnables::Pickups::Pickup::Reward</name>
+    <member refid="class_spawnables_1_1_pickups_1_1_pickup_1_1_reward_1ae56758fa49797d336c15327dd426e39c" kind="variable"><name>type</name></member>
+    <member refid="class_spawnables_1_1_pickups_1_1_pickup_1_1_reward_1a14236de313193a14b4dbdf442bcf2bb9" kind="variable"><name>amount</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_examples_1_1_road_mesh_creator" kind="class"><name>PathCreation::Examples::RoadMeshCreator</name>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1aa3f0ee8c04a40f6f68d6044d212d12f7" kind="variable"><name>roadWidth</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a9bddad7a0f5d61aefe107acf47f09549" kind="variable"><name>thickness</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a8cf8b7cd8b99238dcd27fa53a693abf0" kind="variable"><name>flattenSurface</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a2bd3aa616d5073d2c31c5f07fdbaf1a5" kind="variable"><name>roadMaterial</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1acc36a22094e2d0f7ea884f0561f43182" kind="variable"><name>undersideMaterial</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1aaf71c124e11296b474d10d977ed12372" kind="variable"><name>textureTiling</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1ad64c2a0380b50417b48b90665cab8c27" kind="variable"><name>meshHolder</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a55b9cf66da3908331a67b34643b73cc4" kind="variable"><name>meshFilter</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1ace59c8e64ecb09d141278da03ac01795" kind="variable"><name>meshRenderer</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a7b3d47f25e4b65dc13c94392a3da8076" kind="variable"><name>mesh</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a33561722c7f3a8c711f902daafe6ee0c" kind="function"><name>PathUpdated</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a0b6dc66bda04d2c617addce0f57e4f8a" kind="function"><name>CreateRoadMesh</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1af2ebb8d799d9ef7a121734cd215d150b" kind="function"><name>AssignMeshComponents</name></member>
+    <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a68c39815f079aceed7cc109464fc99c8" kind="function"><name>AssignMaterials</name></member>
+  </compound>
+  <compound refid="class_serialization_1_1_save_system" kind="class"><name>Serialization::SaveSystem</name>
+    <member refid="class_serialization_1_1_save_system_1a89a4017eb9c766eafdd94545dc1851fe" kind="function"><name>SaveData&lt; T &gt;</name></member>
+    <member refid="class_serialization_1_1_save_system_1a0ba4368861434c24d254509ea4899da7" kind="function"><name>LoadData&lt; T &gt;</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_weapons_1_1_scatter_gun" kind="class"><name>Spawnables::Weapons::ScatterGun</name>
+    <member refid="class_spawnables_1_1_weapons_1_1_scatter_gun_1a45dca81410342b61a9ff49cc07d5529f" kind="variable"><name>projectileRoster</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_scatter_gun_1a3acb6edc6473ae8eebbb3f0991f28737" kind="variable"><name>rotationAtSpawnDistribution</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_scatter_gun_1a3ac3e356aa471c036c3de7650cb6f85f" kind="function"><name>TryShooting</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_scatter_gun_1ab52bfed485af3fe9d924f7e9f9e4caab" kind="function"><name>Scatter</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_scatter_gun_1a14e466b9728e05b861e0a9c377d0cbcf" kind="function"><name>RotateSpawners</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_scatter_gun_1a9c28e761345fe346d5324a31675a61e0" kind="function"><name>ChooseProjectile</name></member>
+  </compound>
+  <compound refid="class_tymski_1_1_scene_reference" kind="class"><name>Tymski::SceneReference</name>
+    <member refid="class_tymski_1_1_scene_reference_1a333251a8f40ea9ca30b7a16238a1fd92" kind="variable"><name>scenePath</name></member>
+    <member refid="class_tymski_1_1_scene_reference_1a769ec561c3faa4167f96022cc18223d5" kind="property"><name>ScenePath</name></member>
+    <member refid="class_tymski_1_1_scene_reference_1a6ccb028b5e2d827141c5ba711609f8fb" kind="function"><name>operator string</name></member>
+    <member refid="class_tymski_1_1_scene_reference_1a72c4055ca88e935619de54f1aeb8f5f2" kind="function"><name>OnBeforeSerialize</name></member>
+    <member refid="class_tymski_1_1_scene_reference_1af97f96776a06243e316547fce49d877a" kind="function"><name>OnAfterDeserialize</name></member>
+  </compound>
+  <compound refid="class_serialization_1_1_score_data" kind="class"><name>Serialization::ScoreData</name>
+    <member refid="class_serialization_1_1_score_data_1a2e87500927fd5dde63e9c4f1e56c0e3f" kind="variable"><name>SAVE_PATH</name></member>
+    <member refid="class_serialization_1_1_score_data_1ad3d60c50774804857f8fc28ac8899ab6" kind="variable"><name>MAX_SAVED_SCORES</name></member>
+    <member refid="class_serialization_1_1_score_data_1ae4eb778f3811a9e3df55e11e8a5a77cf" kind="variable"><name>AUTHORS_PB</name></member>
+    <member refid="class_serialization_1_1_score_data_1a19eb506d49ab398bbc48b7bc8f4e1c28" kind="variable"><name>AUTHOR</name></member>
+    <member refid="class_serialization_1_1_score_data_1adc99decbd8f765a5af197c2c88211e4e" kind="variable"><name>names</name></member>
+    <member refid="class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf" kind="variable"><name>sortedScores</name></member>
+    <member refid="class_serialization_1_1_score_data_1a69d2493e8a51b7aba3af2e2fe74d8d37" kind="variable"><name>savedScoresCount</name></member>
+    <member refid="class_serialization_1_1_score_data_1a74cf69194846ff3656b5e1377c39cbda" kind="function"><name>LoadScores</name></member>
+    <member refid="class_serialization_1_1_score_data_1a886e39b99d6ac17e2906dc536227ecbe" kind="function"><name>AddScore</name></member>
+    <member refid="class_serialization_1_1_score_data_1a02238a4e4ab88f5e93908f6dd4c098da" kind="function"><name>AddScoreAndSave</name></member>
+  </compound>
+  <compound refid="class_path_creation_editor_1_1_screen_space_poly_line" kind="class"><name>PathCreationEditor::ScreenSpacePolyLine</name>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a281a4ff86417853451bb63d8650901aa" kind="variable"><name>accuracyMultiplier</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1af37fbb5c1c749de08d944e7eebacb715" kind="variable"><name>intermediaryThreshold</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a6be06f4be0625082291a1e6ae098684a" kind="variable"><name>verticesWorld</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1aceac1094a74fd91a82dadc4039beada0" kind="variable"><name>vertexToPathSegmentMap</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a978fe4f456b342ea83bb737f30845e98" kind="variable"><name>segmentStartIndices</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a92ad419594172d597c180828b6165c3e" kind="variable"><name>pathLengthWorld</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1ae3101e53243f629327bf1b461e628a57" kind="variable"><name>cumululativeLengthWorld</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a9151cce621339bd25de685b5b275265f" kind="variable"><name>points</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a3c9ec5d0d9899156ad1a5fda1d631de7" kind="variable"><name>prevCamPos</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a2265abca2eec0d5a01cf66298c541761" kind="variable"><name>prevCamRot</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1ae817a188275c54d3fd4edc4f1a677a2b" kind="variable"><name>premCamIsOrtho</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a4d6d60d99ee34aa2b7c659814cd6c48e" kind="variable"><name>transform</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1af08cfc7fa253bcd76dc9ecff3c644989" kind="variable"><name>transformPosition</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1adb401d3ad651a5694efcf66c14806514" kind="variable"><name>transformRotation</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a8904bb33d3474e43b7d6baa840a95e2d" kind="variable"><name>transformScale</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a2074422e59443b9ee1d13b578be1df0b" kind="function"><name>ScreenSpacePolyLine</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a36a5741707da3ca4434ebf5865c09056" kind="function"><name>CalculateMouseInfo</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a041b91562712cd3b07803a5475659dcf" kind="function"><name>TransformIsOutOfDate</name></member>
+    <member refid="class_path_creation_editor_1_1_screen_space_poly_line_1a156f75dba0fac2c778cf4b3fc8b33ec2" kind="function"><name>ComputeScreenSpace</name></member>
+  </compound>
+  <compound refid="class_movement_patterns_1_1_sinusoid_m_p" kind="class"><name>MovementPatterns::SinusoidMP</name>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a0f4b7f8bb73293dc7c2eeba244b07628" kind="variable"><name>staysInLine</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a7f7e4724cf57d59513b39c5ecc81adc8" kind="variable"><name>speed</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a31bef58f966d97b1ace9bd3a58ffd9a6" kind="variable"><name>amplitude</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1acdfc8898c9e67fbcec81f3b04ae61bd9" kind="variable"><name>frequency</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a275dd6dafe5d4455e599ffd15feb06f8" kind="variable"><name>phase</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a97712bccaedef08f6d8c525bdda2f7ef" kind="variable"><name>acceleration</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1ab1f333cb00c0c43b1ccdc49b2e6132aa" kind="variable"><name>amplitudeChange</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a07562c5f8a18a0608dc6234f2b7e64de" kind="variable"><name>frequencyChange</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1abc2ccff0697104d506d36bc08b2c4ab9" kind="variable"><name>phaseShift</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a5ec5b5c6929e155f22c198c68a53bbfc" kind="variable"><name>axisRotation</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a3dec702741f2abf1503c0a2383109221" kind="variable"><name>_axisDirection</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1aceb15f63bb9e98a7e27b4fb6898712a0" kind="variable"><name>_axisNormal</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1ab47cb477d14dbb2c1610c2dc9463c800" kind="variable"><name>_origin</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a8d67528573c728e2d30355bc60a141a0" kind="function"><name>Initialize</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1aa27a497603473cb642e835d809c60a64" kind="function"><name>GetNextPosition</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a8a85270a76f63460c2162ca4dd65fb72" kind="function"><name>GetNextPosition</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a38be0fd25d205b3afcf21aa20fba50b0" kind="function"><name>GetAxisPosition</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a040a8d75f31dd5252616b3d9860da19d" kind="function"><name>GetSinusoidPosition</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a755e7a04dbc0bc114ebd52997a9a2a42" kind="function"><name>OnValidate</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1ae7e5103e242d1fbf4a03afe96d3947ef" kind="function"><name>OnDrawGizmosSelected</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1a59e87ce9003c4f28138aa8989c9c3b14" kind="function"><name>GizmoDrawAxes</name></member>
+    <member refid="class_movement_patterns_1_1_sinusoid_m_p_1ab4e9ce897aa24f4f503c0178c0e21ba3" kind="function"><name>GizmoDrawTrajectory</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_spin" kind="class"><name>Spawnables::Spin</name>
+    <member refid="class_spawnables_1_1_spin_1ad1de9af57e9b1558e00f6c1bfb55842e" kind="variable"><name>angularSpeed</name></member>
+    <member refid="class_spawnables_1_1_spin_1aec0783b5a136e042adcc47bae4fe5291" kind="function"><name>Update</name></member>
+    <member refid="class_spawnables_1_1_spin_1aa7acf4963bf20f52909be8da9a763001" kind="function"><name>ChangeDirection</name></member>
+    <member refid="class_spawnables_1_1_spin_1a61f6c71bc4b9fbeea12a3554c9882857" kind="function"><name>ChangeSpeed</name></member>
+  </compound>
+  <compound refid="class_u_i_1_1_text_display" kind="class"><name>UI::TextDisplay</name>
+    <member refid="class_u_i_1_1_text_display_1a19a1f5b6e7bf5a627bccfc1d457881d7" kind="variable"><name>PREVIEW_VALUE</name></member>
+    <member refid="class_u_i_1_1_text_display_1a5a081c4d3cc97ef24f7039396d49da52" kind="variable"><name>trackedResource</name></member>
+    <member refid="class_u_i_1_1_text_display_1a578255b360c9bb86a17fab48cb065b6f" kind="variable"><name>format</name></member>
+    <member refid="class_u_i_1_1_text_display_1ae9a50054b4ccbe11fda7b55f5b53caf6" kind="variable"><name>defaultValue</name></member>
+    <member refid="class_u_i_1_1_text_display_1aab5e819719646d067216464e3bc3c866" kind="variable"><name>hideWhenDefault</name></member>
+    <member refid="class_u_i_1_1_text_display_1a3091f3616f264e5b18a6b808442ea8cf" kind="variable"><name>addSeparators</name></member>
+    <member refid="class_u_i_1_1_text_display_1a883acae029fb2d80ac05fb397d13af6d" kind="variable"><name>separatorInterval</name></member>
+    <member refid="class_u_i_1_1_text_display_1ae6765bd280185095bb23d3370f0faa79" kind="variable"><name>zeroPadding</name></member>
+    <member refid="class_u_i_1_1_text_display_1a26f7696df8982770b7ef926807672a1a" kind="variable"><name>_tmpComponent</name></member>
+    <member refid="class_u_i_1_1_text_display_1a349f21766bdaae2a41606e4e728b3f56" kind="variable"><name>_stringBuilder</name></member>
+    <member refid="class_u_i_1_1_text_display_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_u_i_1_1_text_display_1a755e7a04dbc0bc114ebd52997a9a2a42" kind="function"><name>OnValidate</name></member>
+    <member refid="class_u_i_1_1_text_display_1a5cf1146c9b734fe28ca5d78b07838090" kind="function"><name>UpdateText</name></member>
+    <member refid="class_u_i_1_1_text_display_1a6084a58003891c70ea7f563a1a27741d" kind="function"><name>AddSeparators</name></member>
+  </compound>
+  <compound refid="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data" kind="struct"><name>PathCreation::VertexPath::TimeOnPathData</name>
+    <member refid="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data_1a4ab18404d0348108af4e3c276a9b3ded" kind="variable"><name>previousIndex</name></member>
+    <member refid="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data_1af363a2f70d4aec9a396df5bbfc43b17a" kind="variable"><name>nextIndex</name></member>
+    <member refid="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data_1aba7b9741b1b71aca18ad624064b6183c" kind="variable"><name>percentBetweenIndices</name></member>
+    <member refid="struct_path_creation_1_1_vertex_path_1_1_time_on_path_data_1a5cbacd4baf6e8bd2d95d70fde0b4771c" kind="function"><name>TimeOnPathData</name></member>
+  </compound>
+  <compound refid="class_u_i_1_1_u_i_bar" kind="class"><name>UI::UIBar</name>
+    <member refid="class_u_i_1_1_u_i_bar_1a4454f3007c5543b6151be6a1f8755d53" kind="variable"><name>resourceType</name></member>
+    <member refid="class_u_i_1_1_u_i_bar_1a57101b5c47d1f299ba114af2ae3b4510" kind="variable"><name>_slider</name></member>
+    <member refid="class_u_i_1_1_u_i_bar_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_u_i_1_1_u_i_bar_1a573276585d13fcf5637192cab8b129ba" kind="function"><name>ChangeValue</name></member>
+    <member refid="class_u_i_1_1_u_i_bar_1adb6c09387f72b5cf33c10e5351adf1e4" kind="function"><name>ChangeMaxValue</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_vertex_path" kind="class"><name>PathCreation::VertexPath</name>
+    <member refid="class_path_creation_1_1_vertex_path_1abcf22b33c96ba27b92a08bd596e04fc7" kind="variable"><name>space</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a7377613f86d9a6fdcbc9c55bbc9fec90" kind="variable"><name>isClosedLoop</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1aa1c7710bd692f8aa24cabc32199e5ae1" kind="variable"><name>localPoints</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a4d9a3d39f8918bdbf2859276e26c5984" kind="variable"><name>localTangents</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1ae41f348ff2690137935ba2ac2653eddf" kind="variable"><name>localNormals</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1aab5f889fde82379662ac21a0e5ff2c1e" kind="variable"><name>times</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a50750f3b8c87b4381ad0386692c1e3e5" kind="variable"><name>length</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a4181ef3ca1db9c0393401411bdeaabc6" kind="variable"><name>cumulativeLengthAtEachVertex</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1aed82650136385bdafde91640006b4f10" kind="variable"><name>bounds</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a6767b928b6cb5a8eb12dd70826ac6090" kind="variable"><name>up</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1ae07211373500741ea0d9e9f6d8375b2e" kind="variable"><name>accuracy</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1ab37e262c65b1134d41ada16a88f72317" kind="variable"><name>minVertexSpacing</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a3f876c0d44b53e6012881c448fcfd757" kind="variable"><name>transform</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a76122faf62db75c06e32a6aca7ffd666" kind="property"><name>NumPoints</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a68993b6cc3ef582ffc8df88009d98fbc" kind="function"><name>VertexPath</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1aa26ae65380456e3ad114515ba2dccb4b" kind="function"><name>VertexPath</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a1c4134e496e170fe60265d3716883aa7" kind="function"><name>UpdateTransform</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a47ced66a3095a38b9687acf700752aa6" kind="function"><name>GetTangent</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a69a37b0f43a4785ca6e325d859a3e23b" kind="function"><name>GetNormal</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1ac10693c4893962dc444193eba614e6e2" kind="function"><name>GetPoint</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a5437a41d4b84126c2b6987f83dcd3da9" kind="function"><name>GetPointAtDistance</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a18dd6b53cb280969264c9316c8dc60e7" kind="function"><name>GetDirectionAtDistance</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a4c1400968e85e9398e9372cd6e52db46" kind="function"><name>GetNormalAtDistance</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1ab2a060e662072e4e85f6bb299efcdff6" kind="function"><name>GetRotationAtDistance</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1ab9703bbe05d6c4884919fee5842978ca" kind="function"><name>GetPointAtTime</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1aa738e0737a6060de2254d26669df14eb" kind="function"><name>GetDirection</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a2e4032694b7fbec56c46d99ba06d2738" kind="function"><name>GetNormal</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a65c5ec446381a6cd300aa3e16712ca4d" kind="function"><name>GetRotation</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1ae0a294d13ca50315c743d9a6e74b31b6" kind="function"><name>GetClosestPointOnPath</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1add1d94ca38d101e394c85e3c030ed5c7" kind="function"><name>GetClosestTimeOnPath</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a8053ea41c3b34896a2caf2a38a16479a" kind="function"><name>GetClosestDistanceAlongPath</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a60f1cb3d737307551a166f9733072c25" kind="function"><name>VertexPath</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1abbff33b1b67be54cbab3775963ec493e" kind="function"><name>CalculatePercentOnPathData</name></member>
+    <member refid="class_path_creation_1_1_vertex_path_1a7f1e4c16d9822b5348cad52c738981c0" kind="function"><name>CalculateClosestPointOnPathData</name></member>
+  </compound>
+  <compound refid="class_path_creation_1_1_utility_1_1_vertex_path_utility" kind="class"><name>PathCreation::Utility::VertexPathUtility</name>
+    <member refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1aab396c132b872d3cd89551e7ab1c643f" kind="function"><name>SplitBezierPathByAngleError</name></member>
+    <member refid="class_path_creation_1_1_utility_1_1_vertex_path_utility_1ae84a253ad7eadc6f79b5e18c2dab526a" kind="function"><name>SplitBezierPathEvenly</name></member>
+  </compound>
+  <compound refid="class_spawnables_1_1_weapons_1_1_weapon" kind="class"><name>Spawnables::Weapons::Weapon</name>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1af1da350ceed0ef0b3c36c7309f821b31" kind="property"><name>HasAggro</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1aca09286cd8b3d4183f0d74bad38fff6e" kind="variable"><name>cooldown</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1a0ff8684eee1b7cab71eb4174308da351" kind="variable"><name>chargeTime</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1aa62426176f9a020ea8a1ffadae9bd867" kind="variable"><name>bulletsInCharge</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1a4c24b7560ca066f59fde4e71006d99be" kind="variable"><name>isPlayers</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1a6366b231cce6a1743eb276e3fea8433d" kind="variable"><name>TimeOfLastShot</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1a59ec704c0741585dd94d6e28dfec7377" kind="variable"><name>BulletsShot</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1aa7a7920a2aa85808fc9e53b334085354" kind="variable"><name>GunHeads</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1acb96303b42d4312bd51ee259fab29d8b" kind="variable"><name>OnShootEvent</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1a07aaf1227e4d645f15e0a964f54ef291" kind="function"><name>Start</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1aec0783b5a136e042adcc47bae4fe5291" kind="function"><name>Update</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1ac54ce402cec4f1d67a1cef4db841d26d" kind="function"><name>OnDestroy</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1af30926fa5f4a553c1c8a0458592e36d6" kind="function"><name>DetectShootables</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1aa46775bbe2f0494c869a67a87706150a" kind="function"><name>TryShooting</name></member>
+    <member refid="class_spawnables_1_1_weapons_1_1_weapon_1ad3f78b20245f3a3752a62c5d86744a12" kind="function"><name>Recharge</name></member>
+  </compound>
+  <compound refid="namespace_default_namespace" kind="namespace"><name>DefaultNamespace</name>
+  </compound>
+  <compound refid="namespace_game_manager" kind="namespace"><name>GameManager</name>
+  </compound>
+  <compound refid="namespace_movement_patterns" kind="namespace"><name>MovementPatterns</name>
+  </compound>
+  <compound refid="namespace_my_box" kind="namespace"><name>MyBox</name>
+  </compound>
+  <compound refid="namespace_object" kind="namespace"><name>Object</name>
+  </compound>
+  <compound refid="namespace_path_creation" kind="namespace"><name>PathCreation</name>
+    <member refid="namespace_path_creation_1a5f054830a30396d03566389b9da868f3" kind="enum"><name>EndOfPathInstruction</name></member>
+    <member refid="namespace_path_creation_1a5f054830a30396d03566389b9da868f3a89d7b10cb4238977d2b523dfd9ea7745" kind="enumvalue"><name>Loop</name></member>
+    <member refid="namespace_path_creation_1a5f054830a30396d03566389b9da868f3a67f115c1fddc4ce1aeb1c754001585bc" kind="enumvalue"><name>Reverse</name></member>
+    <member refid="namespace_path_creation_1a5f054830a30396d03566389b9da868f3a11a755d598c0c417f9a36758c3da7481" kind="enumvalue"><name>Stop</name></member>
+    <member refid="namespace_path_creation_1aabac7c0fb8cb143209e7270b52279501" kind="enum"><name>PathSpace</name></member>
+    <member refid="namespace_path_creation_1aabac7c0fb8cb143209e7270b52279501ad16fb36f0911f878998c136191af705e" kind="enumvalue"><name>xyz</name></member>
+    <member refid="namespace_path_creation_1aabac7c0fb8cb143209e7270b52279501a3e44107170a520582ade522fa73c1d15" kind="enumvalue"><name>xy</name></member>
+    <member refid="namespace_path_creation_1aabac7c0fb8cb143209e7270b52279501adbd69ee9ae289a85ea34dbef8435d7c1" kind="enumvalue"><name>xz</name></member>
+  </compound>
+  <compound refid="namespace_path_creation_1_1_examples" kind="namespace"><name>PathCreation::Examples</name>
+  </compound>
+  <compound refid="namespace_path_creation_1_1_utility" kind="namespace"><name>PathCreation::Utility</name>
+  </compound>
+  <compound refid="namespace_path_creation_editor" kind="namespace"><name>PathCreationEditor</name>
+  </compound>
+  <compound refid="namespace_player_scripts" kind="namespace"><name>PlayerScripts</name>
+  </compound>
+  <compound refid="namespace_quaternion" kind="namespace"><name>Quaternion</name>
+  </compound>
+  <compound refid="namespace_random" kind="namespace"><name>Random</name>
+  </compound>
+  <compound refid="namespace_serialization" kind="namespace"><name>Serialization</name>
+  </compound>
+  <compound refid="namespace_spawnables" kind="namespace"><name>Spawnables</name>
+  </compound>
+  <compound refid="namespace_spawnables_1_1_enemy_scripts" kind="namespace"><name>Spawnables::EnemyScripts</name>
+  </compound>
+  <compound refid="namespace_spawnables_1_1_pickups" kind="namespace"><name>Spawnables::Pickups</name>
+  </compound>
+  <compound refid="namespace_spawnables_1_1_weapons" kind="namespace"><name>Spawnables::Weapons</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_serialization" kind="namespace"><name>System::Runtime::Serialization</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_serialization_1_1_formatters_1_1_binary" kind="namespace"><name>System::Runtime::Serialization::Formatters::Binary</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_t_m_pro" kind="namespace"><name>TMPro</name>
+  </compound>
+  <compound refid="namespace_tools" kind="namespace"><name>Tools</name>
+  </compound>
+  <compound refid="namespace_tymski" kind="namespace"><name>Tymski</name>
+  </compound>
+  <compound refid="namespace_u_i" kind="namespace"><name>UI</name>
+  </compound>
+  <compound refid="namespace_u_i_1_1_menus" kind="namespace"><name>UI::Menus</name>
+  </compound>
+  <compound refid="namespace_unity_1_1_visual_scripting" kind="namespace"><name>Unity::VisualScripting</name>
+  </compound>
+  <compound refid="namespace_unity_editor" kind="namespace"><name>UnityEditor</name>
+  </compound>
+  <compound refid="namespace_unity_editor_1_1_i_m_g_u_i_1_1_controls" kind="namespace"><name>UnityEditor::IMGUI::Controls</name>
+  </compound>
+  <compound refid="namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_events" kind="namespace"><name>UnityEngine::Events</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_scene_management" kind="namespace"><name>UnityEngine::SceneManagement</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_scripting" kind="namespace"><name>UnityEngine::Scripting</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_social_platforms_1_1_impl" kind="namespace"><name>UnityEngine::SocialPlatforms::Impl</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_u_i" kind="namespace"><name>UnityEngine::UI</name>
+  </compound>
+  <compound refid="namespace_vector3" kind="namespace"><name>Vector3</name>
+  </compound>
+  <compound refid="namespace_v_f_x" kind="namespace"><name>VFX</name>
+  </compound>
+  <compound refid="_credits_so_8cs" kind="file"><name>CreditsSo.cs</name>
+  </compound>
+  <compound refid="_game_manager_8cs" kind="file"><name>GameManager.cs</name>
+  </compound>
+  <compound refid="_game_state_8cs" kind="file"><name>GameState.cs</name>
+  </compound>
+  <compound refid="_game_over_state_8cs" kind="file"><name>GameOverState.cs</name>
+  </compound>
+  <compound refid="_paused_state_8cs" kind="file"><name>PausedState.cs</name>
+  </compound>
+  <compound refid="_playing_state_8cs" kind="file"><name>PlayingState.cs</name>
+  </compound>
+  <compound refid="_chasing_m_p_8cs" kind="file"><name>ChasingMP.cs</name>
+  </compound>
+  <compound refid="_follow_path_8cs" kind="file"><name>FollowPath.cs</name>
+  </compound>
+  <compound refid="_linear_m_p_8cs" kind="file"><name>LinearMP.cs</name>
+  </compound>
+  <compound refid="_movement_pattern_8cs" kind="file"><name>MovementPattern.cs</name>
+  </compound>
+  <compound refid="_orbiting_m_p_8cs" kind="file"><name>OrbitingMP.cs</name>
+    <member refid="_orbiting_m_p_8cs_1a3115aee88de19f0e23050e8650bc3153" kind="typedef"><name>Quaternion</name></member>
+    <member refid="_orbiting_m_p_8cs_1af3326292fdd04d2b384b6d781d9594f6" kind="typedef"><name>Vector3</name></member>
+  </compound>
+  <compound refid="_sinusoid_m_p_8cs" kind="file"><name>SinusoidMP.cs</name>
+  </compound>
+  <compound refid="_bomb_controller_8cs" kind="file"><name>BombController.cs</name>
+  </compound>
+  <compound refid="_controls_8cs" kind="file"><name>Controls.cs</name>
+  </compound>
+  <compound refid="_player_8cs" kind="file"><name>Player.cs</name>
+  </compound>
+  <compound refid="_player_hitbox_8cs" kind="file"><name>PlayerHitbox.cs</name>
+  </compound>
+  <compound refid="_player_status_8cs" kind="file"><name>PlayerStatus.cs</name>
+  </compound>
+  <compound refid="_save_system_8cs" kind="file"><name>SaveSystem.cs</name>
+  </compound>
+  <compound refid="_score_data_8cs" kind="file"><name>ScoreData.cs</name>
+  </compound>
+  <compound refid="_despawn_collider_8cs" kind="file"><name>DespawnCollider.cs</name>
+  </compound>
+  <compound refid="_enemy_8cs" kind="file"><name>Enemy.cs</name>
+  </compound>
+  <compound refid="_enemy_controller_8cs" kind="file"><name>EnemyController.cs</name>
+  </compound>
+  <compound refid="_enemy_spawner_8cs" kind="file"><name>EnemySpawner.cs</name>
+  </compound>
+  <compound refid="_entity_8cs" kind="file"><name>Entity.cs</name>
+  </compound>
+  <compound refid="_object_pool_8cs" kind="file"><name>ObjectPool.cs</name>
+    <member refid="_object_pool_8cs_1aef19bab18b9814edeef255c43e4f6bbc" kind="typedef"><name>Object</name></member>
+  </compound>
+  <compound refid="_object_pool_manager_8cs" kind="file"><name>ObjectPoolManager.cs</name>
+  </compound>
+  <compound refid="_multiplier_pickup_8cs" kind="file"><name>MultiplierPickup.cs</name>
+  </compound>
+  <compound refid="_pickup_8cs" kind="file"><name>Pickup.cs</name>
+  </compound>
+  <compound refid="_spin_8cs" kind="file"><name>Spin.cs</name>
+  </compound>
+  <compound refid="_projectile_8cs" kind="file"><name>Projectile.cs</name>
+  </compound>
+  <compound refid="_bullet_spawner_8cs" kind="file"><name>BulletSpawner.cs</name>
+  </compound>
+  <compound refid="_i_shootable_8cs" kind="file"><name>IShootable.cs</name>
+  </compound>
+  <compound refid="_lazer_8cs" kind="file"><name>Lazer.cs</name>
+  </compound>
+  <compound refid="_weapon_8cs" kind="file"><name>Weapon.cs</name>
+  </compound>
+  <compound refid="_gatling_gun_8cs" kind="file"><name>GatlingGun.cs</name>
+  </compound>
+  <compound refid="_scatter_gun_8cs" kind="file"><name>ScatterGun.cs</name>
+    <member refid="_scatter_gun_8cs_1a832e8f52fca5a678819ec96269dcb532" kind="typedef"><name>Random</name></member>
+  </compound>
+  <compound refid="_credits_screen_8cs" kind="file"><name>CreditsScreen.cs</name>
+  </compound>
+  <compound refid="_game_over_screen_8cs" kind="file"><name>GameOverScreen.cs</name>
+  </compound>
+  <compound refid="_leaderboard_8cs" kind="file"><name>Leaderboard.cs</name>
+  </compound>
+  <compound refid="_main_menu_8cs" kind="file"><name>MainMenu.cs</name>
+  </compound>
+  <compound refid="_pause_menu_8cs" kind="file"><name>PauseMenu.cs</name>
+  </compound>
+  <compound refid="_menu_screen_8cs" kind="file"><name>MenuScreen.cs</name>
+  </compound>
+  <compound refid="_text_display_8cs" kind="file"><name>TextDisplay.cs</name>
+  </compound>
+  <compound refid="_u_i_bar_8cs" kind="file"><name>UIBar.cs</name>
+  </compound>
+  <compound refid="_camera_shake_8cs" kind="file"><name>CameraShake.cs</name>
+  </compound>
+  <compound refid="_damage_flash_8cs" kind="file"><name>DamageFlash.cs</name>
+  </compound>
+  <compound refid="_fade_canvas_8cs" kind="file"><name>FadeCanvas.cs</name>
+  </compound>
+  <compound refid="_pan_camera_8cs" kind="file"><name>PanCamera.cs</name>
+  </compound>
+  <compound refid="_component_utils_8cs" kind="file"><name>ComponentUtils.cs</name>
+  </compound>
+  <compound refid="_custom_events_8cs" kind="file"><name>CustomEvents.cs</name>
+  </compound>
+  <compound refid="_mouse_utility_8cs" kind="file"><name>MouseUtility.cs</name>
+  </compound>
+  <compound refid="_path_handle_8cs" kind="file"><name>PathHandle.cs</name>
+  </compound>
+  <compound refid="_screen_space_poly_line_8cs" kind="file"><name>ScreenSpacePolyLine.cs</name>
+  </compound>
+  <compound refid="_path_editor_8cs" kind="file"><name>PathEditor.cs</name>
+  </compound>
+  <compound refid="_bezier_path_8cs" kind="file"><name>BezierPath.cs</name>
+  </compound>
+  <compound refid="_end_of_path_instruction_8cs" kind="file"><name>EndOfPathInstruction.cs</name>
+  </compound>
+  <compound refid="_global_display_settings_8cs" kind="file"><name>GlobalDisplaySettings.cs</name>
+  </compound>
+  <compound refid="_min_max3_d_8cs" kind="file"><name>MinMax3D.cs</name>
+  </compound>
+  <compound refid="_path_creator_8cs" kind="file"><name>PathCreator.cs</name>
+  </compound>
+  <compound refid="_path_creator_data_8cs" kind="file"><name>PathCreatorData.cs</name>
+  </compound>
+  <compound refid="_path_space_8cs" kind="file"><name>PathSpace.cs</name>
+  </compound>
+  <compound refid="_vertex_path_8cs" kind="file"><name>VertexPath.cs</name>
+  </compound>
+  <compound refid="_cubic_bezier_utility_8cs" kind="file"><name>CubicBezierUtility.cs</name>
+  </compound>
+  <compound refid="_math_utility_8cs" kind="file"><name>MathUtility.cs</name>
+  </compound>
+  <compound refid="_vertex_path_utility_8cs" kind="file"><name>VertexPathUtility.cs</name>
+  </compound>
+  <compound refid="_path_scene_tool_editor_8cs" kind="file"><name>PathSceneToolEditor.cs</name>
+  </compound>
+  <compound refid="_generate_path_example_8cs" kind="file"><name>GeneratePathExample.cs</name>
+  </compound>
+  <compound refid="_path_follower_8cs" kind="file"><name>PathFollower.cs</name>
+  </compound>
+  <compound refid="_path_placer_8cs" kind="file"><name>PathPlacer.cs</name>
+  </compound>
+  <compound refid="_path_scene_tool_8cs" kind="file"><name>PathSceneTool.cs</name>
+  </compound>
+  <compound refid="_path_spawner_8cs" kind="file"><name>PathSpawner.cs</name>
+  </compound>
+  <compound refid="_road_mesh_creator_8cs" kind="file"><name>RoadMeshCreator.cs</name>
+  </compound>
+  <compound refid="_scene_reference_8cs" kind="file"><name>SceneReference.cs</name>
+    <member refid="_scene_reference_8cs_1aef19bab18b9814edeef255c43e4f6bbc" kind="typedef"><name>Object</name></member>
+  </compound>
+  <compound refid="dir_34d6a86f2b2c79d5b63a1dfc7633a830" kind="dir"><name>Tools/PathCreator/Core</name>
+  </compound>
+  <compound refid="dir_f1f8121e0f64f4b7f95350ee2bfa0ff3" kind="dir"><name>Tools/PathCreator/Core/Editor</name>
+  </compound>
+  <compound refid="dir_15d4082597dd64286d84c179f48a6b50" kind="dir"><name>Tools/PathCreator/Examples/Scripts/Editor</name>
+  </compound>
+  <compound refid="dir_0b370823c80b465727cf8360a94972e3" kind="dir"><name>Scripts/Spawnables/EnemyScripts</name>
+  </compound>
+  <compound refid="dir_6293356243e4d56311e85a84c969fb42" kind="dir"><name>Tools/PathCreator/Examples</name>
+  </compound>
+  <compound refid="dir_6a5d9bd0d15b3d82d5ebd95a22231102" kind="dir"><name>Scripts/GameManager</name>
+  </compound>
+  <compound refid="dir_dafa9ae5b4afb06f9f96a2a8c59faf62" kind="dir"><name>Tools/PathCreator/Core/Editor/Helper</name>
+  </compound>
+  <compound refid="dir_3a1ea4fc27265532435bc2bb2ed9200d" kind="dir"><name>Scripts/UI/Menus</name>
+  </compound>
+  <compound refid="dir_ce58371bc42e65f15a61509a4f57bb51" kind="dir"><name>Scripts/MovementPatterns</name>
+  </compound>
+  <compound refid="dir_858018ec9373af0181e2d59b26df9e67" kind="dir"><name>Tools/PathCreator/Core/Runtime/Objects</name>
+  </compound>
+  <compound refid="dir_ed2d530ddda526c610c7ef2cf02b77b6" kind="dir"><name>Tools/PathCreator</name>
+  </compound>
+  <compound refid="dir_d90b04812ee32755b145205ada42e864" kind="dir"><name>Scripts/Spawnables/Pickups</name>
+  </compound>
+  <compound refid="dir_bd79789affcc55005b088fc254a18d50" kind="dir"><name>Scripts/PlayerScripts</name>
+  </compound>
+  <compound refid="dir_4c47242f6f669c7fb880c212d6aace33" kind="dir"><name>Tools/PathCreator/Core/Runtime</name>
+  </compound>
+  <compound refid="dir_4edcbb236dfd51dd81727243a38df6a0" kind="dir"><name>Scripts</name>
+  </compound>
+  <compound refid="dir_11c5d1aca88b7cb7dadff7f8f2cbf150" kind="dir"><name>Tools/PathCreator/Examples/Scripts</name>
+  </compound>
+  <compound refid="dir_d5e5e8b81582d784d387573a321f0836" kind="dir"><name>Scripts/Serialization</name>
+  </compound>
+  <compound refid="dir_fbee5d047c9fbb5c0a95c0f826c086ce" kind="dir"><name>Scripts/Spawnables/Weapons/Shootables</name>
+  </compound>
+  <compound refid="dir_13140bceb48af6e09ee6fd903342f194" kind="dir"><name>Scripts/Spawnables</name>
+  </compound>
+  <compound refid="dir_fc900bbfcab4d947a293cfe17f6c20b4" kind="dir"><name>Scripts/GameManager/States</name>
+  </compound>
+  <compound refid="dir_7e461070e7b716e896e0d97cd6a82321" kind="dir"><name>Tools</name>
+  </compound>
+  <compound refid="dir_cf3cba7cb859b249fb665d794c791dc5" kind="dir"><name>Scripts/UI</name>
+  </compound>
+  <compound refid="dir_d104e616dfbc4130cf87aa40e156018e" kind="dir"><name>Tools/PathCreator/Core/Runtime/Utility</name>
+  </compound>
+  <compound refid="dir_fab3c42a677c4afce78526fdbbd9e116" kind="dir"><name>Scripts/VFX</name>
+  </compound>
+  <compound refid="dir_d8fabea03d8baa91dace0c5ded09a54f" kind="dir"><name>Scripts/Spawnables/Weapons</name>
+  </compound>
+  <compound refid="dir_610af70dea24e40b7f2df8fb82ab822d" kind="dir"><name>Scripts/Spawnables/Weapons/WeaponTypes</name>
+  </compound>
+</doxygenindex>

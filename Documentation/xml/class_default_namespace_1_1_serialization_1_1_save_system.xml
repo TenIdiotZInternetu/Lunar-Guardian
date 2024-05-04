@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_default_namespace_1_1_serialization_1_1_save_system" kind="class" language="C#" prot="public">
+    <compoundname>DefaultNamespace::Serialization::SaveSystem</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_default_namespace_1_1_serialization_1_1_save_system_1aa272aafd843fa26140282e9545b35a24" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void DefaultNamespace.Serialization.SaveSystem.SaveData&lt; T &gt;</definition>
+        <argsstring>(T data, string pathSuffix)</argsstring>
+        <name>SaveData&lt; T &gt;</name>
+        <qualifiedname>DefaultNamespace.Serialization.SaveSystem.SaveData&lt; T &gt;</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>pathSuffix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/SaveSystem.cs" line="9" column="23" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/SaveSystem.cs" bodystart="9" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_default_namespace_1_1_serialization_1_1_save_system_1aa4301f1c3f967e7e091af5c04ef69af9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>static T DefaultNamespace.Serialization.SaveSystem.LoadData&lt; T &gt;</definition>
+        <argsstring>(string pathSuffix)</argsstring>
+        <name>LoadData&lt; T &gt;</name>
+        <qualifiedname>DefaultNamespace.Serialization.SaveSystem.LoadData&lt; T &gt;</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>pathSuffix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/SaveSystem.cs" line="20" column="23" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/SaveSystem.cs" bodystart="20" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/SaveSystem.cs" line="7" column="19" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/SaveSystem.cs" bodystart="8" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_default_namespace_1_1_serialization_1_1_save_system_1aa4301f1c3f967e7e091af5c04ef69af9" prot="public" virt="non-virtual"><scope>DefaultNamespace::Serialization::SaveSystem</scope><name>LoadData&lt; T &gt;</name></member>
+      <member refid="class_default_namespace_1_1_serialization_1_1_save_system_1aa272aafd843fa26140282e9545b35a24" prot="public" virt="non-virtual"><scope>DefaultNamespace::Serialization::SaveSystem</scope><name>SaveData&lt; T &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

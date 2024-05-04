@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interface_spawnables_1_1_projectiles_1_1_i_shootable" xml:lang="en-US">
+<title>Spawnables.Projectiles.IShootable Interface Reference</title>
+<indexterm><primary>Spawnables.Projectiles.IShootable</primary></indexterm>
+Inheritance diagram for Spawnables.Projectiles.IShootable:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="interface_spawnables_1_1_projectiles_1_1_i_shootable__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_interface_spawnables_1_1_projectiles_1_1_i_shootable_1a423c156efd6ff3cbd303b405a80d306f"/>void <emphasis role="strong">OnShoot</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__i_shootable_8cs_source_1l00005">5</link> of file <link linkend="__i_shootable_8cs_source">IShootable.cs</link>.</para>
+<para>
+The documentation for this interface was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/IShootable.cs</section>
+</section>

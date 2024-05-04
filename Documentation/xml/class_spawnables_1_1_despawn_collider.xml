@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_despawn_collider" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::DespawnCollider</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_despawn_collider_1a44ebcf048524a4fc189c39533c950641" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnTriggerExit2D</definition>
+        <argsstring>(Collider2D other)</argsstring>
+        <name>OnTriggerExit2D</name>
+        <qualifiedname>Spawnables.DespawnCollider.OnTriggerExit2D</qualifiedname>
+        <param>
+          <type>Collider2D</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/DespawnCollider.cs" line="10" column="22" bodyfile="Scripts/Spawnables/DespawnCollider.cs" bodystart="10" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Border collider that despawns objects that leave its area. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Spawnables/DespawnCollider.cs" line="8" column="11" bodyfile="Scripts/Spawnables/DespawnCollider.cs" bodystart="9" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_despawn_collider_1a44ebcf048524a4fc189c39533c950641" prot="private" virt="non-virtual"><scope>Spawnables::DespawnCollider</scope><name>OnTriggerExit2D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

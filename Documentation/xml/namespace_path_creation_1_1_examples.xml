@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_path_creation_1_1_examples" kind="namespace" language="C#">
+    <compoundname>PathCreation::Examples</compoundname>
+    <innerclass refid="class_path_creation_1_1_examples_1_1_generate_path_example" prot="public">PathCreation::Examples::GeneratePathExample</innerclass>
+    <innerclass refid="class_path_creation_1_1_examples_1_1_path_follower" prot="public">PathCreation::Examples::PathFollower</innerclass>
+    <innerclass refid="class_path_creation_1_1_examples_1_1_path_placer" prot="public">PathCreation::Examples::PathPlacer</innerclass>
+    <innerclass refid="class_path_creation_1_1_examples_1_1_path_scene_tool" prot="public">PathCreation::Examples::PathSceneTool</innerclass>
+    <innerclass refid="class_path_creation_1_1_examples_1_1_path_scene_tool_editor" prot="public">PathCreation::Examples::PathSceneToolEditor</innerclass>
+    <innerclass refid="class_path_creation_1_1_examples_1_1_path_spawner" prot="public">PathCreation::Examples::PathSpawner</innerclass>
+    <innerclass refid="class_path_creation_1_1_examples_1_1_road_mesh_creator" prot="public">PathCreation::Examples::RoadMeshCreator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Examples/Scripts/Editor/PathSceneToolEditor.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

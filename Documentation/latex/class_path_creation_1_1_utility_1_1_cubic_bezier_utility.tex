@@ -1,0 +1,68 @@
+\doxysection{Cubic\+Bezier\+Utility Class Reference}
+\hypertarget{class_path_creation_1_1_utility_1_1_cubic_bezier_utility}{}\label{class_path_creation_1_1_utility_1_1_cubic_bezier_utility}\index{CubicBezierUtility@{CubicBezierUtility}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_aa10b9a048602039356790289036154cf}\label{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_aa10b9a048602039356790289036154cf} 
+static Vector3 {\bfseries Evaluate\+Curve} (Vector3\mbox{[}$\,$\mbox{]} points, float t)
+\begin{DoxyCompactList}\small\item\em Returns point at time \textquotesingle{}t\textquotesingle{} (between 0 and 1) along bezier curve defined by 4 points (anchor\+\_\+1, control\+\_\+1, control\+\_\+2, anchor\+\_\+2) \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a3924a60bf6600991d05938fa22a316a0}\label{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a3924a60bf6600991d05938fa22a316a0} 
+static Vector3 {\bfseries Evaluate\+Curve} (Vector3 a1, Vector3 c1, Vector3 c2, Vector3 a2, float t)
+\begin{DoxyCompactList}\small\item\em Returns point at time \textquotesingle{}t\textquotesingle{} (between 0 and 1) along bezier curve defined by 4 points (anchor\+\_\+1, control\+\_\+1, control\+\_\+2, anchor\+\_\+2) \end{DoxyCompactList}\item 
+static Vector3 \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_ae7f1a0b7bd942f5b2aacd1a2a0348f49}{Evaluate\+Curve\+Derivative}} (Vector3\mbox{[}$\,$\mbox{]} points, float t)
+\item 
+static Vector3 \mbox{\hyperlink{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a18597c3735c05f9e2b99294f97ad95da}{Evaluate\+Curve\+Derivative}} (Vector3 a1, Vector3 c1, Vector3 c2, Vector3 a2, float t)
+\item 
+\Hypertarget{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a5d0e6187acba520d0cbe50d6e3b6ab0b}\label{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a5d0e6187acba520d0cbe50d6e3b6ab0b} 
+static Vector3 {\bfseries Evaluate\+Curve\+Second\+Derivative} (Vector3\mbox{[}$\,$\mbox{]} points, float t)
+\begin{DoxyCompactList}\small\item\em Returns the second derivative of the curve at time \textquotesingle{}t\textquotesingle{}. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a1e2c8ca7c07bb85c24390f5021501f08}\label{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a1e2c8ca7c07bb85c24390f5021501f08} 
+static Vector3 {\bfseries Evaluate\+Curve\+Second\+Derivative} (Vector3 a1, Vector3 c1, Vector3 c2, Vector3 a2, float t)
+\begin{DoxyCompactList}\small\item\em Returns the second derivative of the curve at time \textquotesingle{}t\textquotesingle{}. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_aa19757e831a55fc0f70851b17e99d56d}\label{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_aa19757e831a55fc0f70851b17e99d56d} 
+static Vector3 {\bfseries Normal} (Vector3\mbox{[}$\,$\mbox{]} points, float t)
+\begin{DoxyCompactList}\small\item\em Calculates the normal vector (vector perpendicular to the curve) at specified time. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a16421b9a7ecebac1ddda7bacef1e4313}\label{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a16421b9a7ecebac1ddda7bacef1e4313} 
+static Vector3 {\bfseries Normal} (Vector3 a1, Vector3 c1, Vector3 c2, Vector3 a2, float t)
+\begin{DoxyCompactList}\small\item\em Calculates the normal vector (vector perpendicular to the curve) at specified time. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a7ce04896014036624bf0ecb82b849318}\label{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a7ce04896014036624bf0ecb82b849318} 
+static Vector3\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} {\bfseries Split\+Curve} (Vector3\mbox{[}$\,$\mbox{]} points, float t)
+\begin{DoxyCompactList}\small\item\em Splits curve into two curves at time t. Returns 2 arrays of 4 points. \end{DoxyCompactList}\item 
+\Hypertarget{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_abb4a51d397c7d96a204bb4b98baaad82}\label{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_abb4a51d397c7d96a204bb4b98baaad82} 
+static List$<$ float $>$ {\bfseries Extreme\+Point\+Times} (Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3)
+\begin{DoxyCompactList}\small\item\em Times of stationary points on curve (points where derivative is zero on any axis) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Collection of functions related to cubic bezier curves (a curve with a start and end \textquotesingle{}anchor\textquotesingle{} point, and two \textquotesingle{}control\textquotesingle{} points to define the shape of the curve between the anchors) 
+
+Definition at line \mbox{\hyperlink{_cubic_bezier_utility_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_cubic_bezier_utility_8cs_source}{Cubic\+Bezier\+Utility.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_ae7f1a0b7bd942f5b2aacd1a2a0348f49}\label{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_ae7f1a0b7bd942f5b2aacd1a2a0348f49} 
+\index{CubicBezierUtility@{CubicBezierUtility}!EvaluateCurveDerivative@{EvaluateCurveDerivative}}
+\index{EvaluateCurveDerivative@{EvaluateCurveDerivative}!CubicBezierUtility@{CubicBezierUtility}}
+\doxysubsubsection{\texorpdfstring{EvaluateCurveDerivative()}{EvaluateCurveDerivative()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static Vector3 Evaluate\+Curve\+Derivative (\begin{DoxyParamCaption}\item[{Vector3\mbox{[}$\,$\mbox{]}}]{points,  }\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns a vector tangent to the point at time \textquotesingle{}t\textquotesingle{} This is the vector tangent to the curve at that point 
+
+Definition at line \mbox{\hyperlink{_cubic_bezier_utility_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_cubic_bezier_utility_8cs_source}{Cubic\+Bezier\+Utility.\+cs}}.
+
+\Hypertarget{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a18597c3735c05f9e2b99294f97ad95da}\label{class_path_creation_1_1_utility_1_1_cubic_bezier_utility_a18597c3735c05f9e2b99294f97ad95da} 
+\index{CubicBezierUtility@{CubicBezierUtility}!EvaluateCurveDerivative@{EvaluateCurveDerivative}}
+\index{EvaluateCurveDerivative@{EvaluateCurveDerivative}!CubicBezierUtility@{CubicBezierUtility}}
+\doxysubsubsection{\texorpdfstring{EvaluateCurveDerivative()}{EvaluateCurveDerivative()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static Vector3 Evaluate\+Curve\+Derivative (\begin{DoxyParamCaption}\item[{Vector3}]{a1,  }\item[{Vector3}]{c1,  }\item[{Vector3}]{c2,  }\item[{Vector3}]{a2,  }\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calculates the derivative of the curve at time \textquotesingle{}t\textquotesingle{} This is the vector tangent to the curve at that point 
+
+Definition at line \mbox{\hyperlink{_cubic_bezier_utility_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_cubic_bezier_utility_8cs_source}{Cubic\+Bezier\+Utility.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Tools/\+Path\+Creator/\+Core/\+Runtime/\+Utility/Cubic\+Bezier\+Utility.\+cs\end{DoxyCompactItemize}

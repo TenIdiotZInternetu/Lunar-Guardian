@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_v_f_x_1_1_fade_canvas" kind="class" language="C#" prot="public">
+    <compoundname>VFX::FadeCanvas</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_v_f_x_1_1_fade_canvas_1a120ff4ee3aab964959da68032a0fc061" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fadeInDelay</definition>
+        <argsstring></argsstring>
+        <name>fadeInDelay</name>
+        <qualifiedname>VFX.FadeCanvas.fadeInDelay</qualifiedname>
+        <briefdescription>
+<para>Time before the FadeIn starts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/FadeCanvas.cs" line="17" column="22" bodyfile="Scripts/VFX/FadeCanvas.cs" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_v_f_x_1_1_fade_canvas_1ae2c4f195150adc0cabf7f4fa4afe0c7a" compoundref="_fade_canvas_8cs" startline="41" endline="44">FadeCanvas.FadeIn</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_v_f_x_1_1_fade_canvas_1a50a0d1597750af40fa53cb13c01821f5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float fadeOutDelay</definition>
+        <argsstring></argsstring>
+        <name>fadeOutDelay</name>
+        <qualifiedname>VFX.FadeCanvas.fadeOutDelay</qualifiedname>
+        <briefdescription>
+<para>Time before the FadeOut starts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/FadeCanvas.cs" line="22" column="22" bodyfile="Scripts/VFX/FadeCanvas.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_v_f_x_1_1_fade_canvas_1ac1978d4dd30acb338999e1adad433d9c" compoundref="_fade_canvas_8cs" startline="50" endline="54">FadeCanvas.FadeOut</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_v_f_x_1_1_fade_canvas_1a977240aed516952aa8454946d6f89e64" prot="private" static="no" mutable="no">
+        <type>CanvasGroup</type>
+        <definition>CanvasGroup _canvas</definition>
+        <argsstring></argsstring>
+        <name>_canvas</name>
+        <qualifiedname>VFX.FadeCanvas._canvas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/FadeCanvas.cs" line="26" column="29" bodyfile="Scripts/VFX/FadeCanvas.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_v_f_x_1_1_fade_canvas_1ae4b513cddd594f1c359e4f0a3e79a8c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>VFX.FadeCanvas.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/FadeCanvas.cs" line="30" column="14" bodyfile="Scripts/VFX/FadeCanvas.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_v_f_x_1_1_fade_canvas_1a395346f5cee5676d94d44b3a6656e9be" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator LerpAlpha</definition>
+        <argsstring>(float targetAlpha, float duration, float delay)</argsstring>
+        <name>LerpAlpha</name>
+        <qualifiedname>VFX.FadeCanvas.LerpAlpha</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>targetAlpha</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>duration</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/FadeCanvas.cs" line="59" column="29" bodyfile="Scripts/VFX/FadeCanvas.cs" bodystart="59" bodyend="72"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_v_f_x_1_1_fade_canvas_1ae2c4f195150adc0cabf7f4fa4afe0c7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FadeIn</definition>
+        <argsstring>(float fadeInTime)</argsstring>
+        <name>FadeIn</name>
+        <qualifiedname>VFX.FadeCanvas.FadeIn</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>fadeInTime</declname>
+        </param>
+        <briefdescription>
+<para>Changes the alpha of the canvas to 1 over time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fadeInTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time it takes to fully fade in </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/FadeCanvas.cs" line="41" column="21" bodyfile="Scripts/VFX/FadeCanvas.cs" bodystart="41" bodyend="44"/>
+        <references refid="class_v_f_x_1_1_fade_canvas_1a120ff4ee3aab964959da68032a0fc061" compoundref="_fade_canvas_8cs" startline="17">FadeCanvas.fadeInDelay</references>
+      </memberdef>
+      <memberdef kind="function" id="class_v_f_x_1_1_fade_canvas_1ac1978d4dd30acb338999e1adad433d9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FadeOut</definition>
+        <argsstring>(float fadeOutTime)</argsstring>
+        <name>FadeOut</name>
+        <qualifiedname>VFX.FadeCanvas.FadeOut</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>fadeOutTime</declname>
+        </param>
+        <briefdescription>
+<para>Changes the alpha of the canvas to 0 over time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fadeOutTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time it takes to fully fade out </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/VFX/FadeCanvas.cs" line="50" column="21" bodyfile="Scripts/VFX/FadeCanvas.cs" bodystart="50" bodyend="54"/>
+        <references refid="class_v_f_x_1_1_fade_canvas_1a50a0d1597750af40fa53cb13c01821f5" compoundref="_fade_canvas_8cs" startline="22">FadeCanvas.fadeOutDelay</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Changes the alpha of a canvas to either 0 or 1 over time. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/VFX/FadeCanvas.cs" line="10" column="11" bodyfile="Scripts/VFX/FadeCanvas.cs" bodystart="11" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_v_f_x_1_1_fade_canvas_1a977240aed516952aa8454946d6f89e64" prot="private" virt="non-virtual"><scope>VFX::FadeCanvas</scope><name>_canvas</name></member>
+      <member refid="class_v_f_x_1_1_fade_canvas_1ae4b513cddd594f1c359e4f0a3e79a8c6" prot="private" virt="non-virtual"><scope>VFX::FadeCanvas</scope><name>Awake</name></member>
+      <member refid="class_v_f_x_1_1_fade_canvas_1ae2c4f195150adc0cabf7f4fa4afe0c7a" prot="public" virt="non-virtual"><scope>VFX::FadeCanvas</scope><name>FadeIn</name></member>
+      <member refid="class_v_f_x_1_1_fade_canvas_1a120ff4ee3aab964959da68032a0fc061" prot="public" virt="non-virtual"><scope>VFX::FadeCanvas</scope><name>fadeInDelay</name></member>
+      <member refid="class_v_f_x_1_1_fade_canvas_1ac1978d4dd30acb338999e1adad433d9c" prot="public" virt="non-virtual"><scope>VFX::FadeCanvas</scope><name>FadeOut</name></member>
+      <member refid="class_v_f_x_1_1_fade_canvas_1a50a0d1597750af40fa53cb13c01821f5" prot="public" virt="non-virtual"><scope>VFX::FadeCanvas</scope><name>fadeOutDelay</name></member>
+      <member refid="class_v_f_x_1_1_fade_canvas_1a395346f5cee5676d94d44b3a6656e9be" prot="private" virt="non-virtual"><scope>VFX::FadeCanvas</scope><name>LerpAlpha</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

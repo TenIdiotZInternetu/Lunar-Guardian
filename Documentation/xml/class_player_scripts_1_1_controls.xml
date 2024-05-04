@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_player_scripts_1_1_controls" kind="class" language="C#" prot="public">
+    <compoundname>PlayerScripts::Controls</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_player_scripts_1_1_controls_1a698aa7a1bcf8c024ca5b44b35a2a49db" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float MoveHorizontal</definition>
+        <argsstring></argsstring>
+        <name>MoveHorizontal</name>
+        <qualifiedname>PlayerScripts.Controls.MoveHorizontal</qualifiedname>
+        <briefdescription>
+<para>Value of the Input Manager&apos;s virtual horizontal axis (A/D) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="16" column="29" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_controls_1aaef34645c77748c8b64dd8ac3ede4b16" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float MoveVertical</definition>
+        <argsstring></argsstring>
+        <name>MoveVertical</name>
+        <qualifiedname>PlayerScripts.Controls.MoveVertical</qualifiedname>
+        <briefdescription>
+<para>Value of the Input Manager&apos;s virtual vertical axis (W/S) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="21" column="29" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_scripts_1_1_controls_1ac711d62a538e7d73ed78e76dc4146c2b" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool IsFocused</definition>
+        <argsstring></argsstring>
+        <name>IsFocused</name>
+        <qualifiedname>PlayerScripts.Controls.IsFocused</qualifiedname>
+        <briefdescription>
+<para>True if the focus button is held down. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="26" column="28" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="event">
+      <memberdef kind="event" id="class_player_scripts_1_1_controls_1ac34dfff63d43fcc26bcb5a575de25dd4" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action Action1</definition>
+        <argsstring></argsstring>
+        <name>Action1</name>
+        <qualifiedname>PlayerScripts.Controls.Action1</qualifiedname>
+        <briefdescription>
+<para>Invoked when the primary action button is pressed (K/Z) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="33" column="36" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_controls_1a6c415bf89d7a793fffe97f670ad448d9" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action Action1Release</definition>
+        <argsstring></argsstring>
+        <name>Action1Release</name>
+        <qualifiedname>PlayerScripts.Controls.Action1Release</qualifiedname>
+        <briefdescription>
+<para>Invoked when the primary action button is released (K/Z) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="38" column="36" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_controls_1aeade3269d21ec1b08e689191790886d9" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action Action2</definition>
+        <argsstring></argsstring>
+        <name>Action2</name>
+        <qualifiedname>PlayerScripts.Controls.Action2</qualifiedname>
+        <briefdescription>
+<para>Invoked when the secondary action button is pressed (L/X) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="43" column="36" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_controls_1a9bcbd3ded58670f66a8410c8f63c1b31" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action Action2Release</definition>
+        <argsstring></argsstring>
+        <name>Action2Release</name>
+        <qualifiedname>PlayerScripts.Controls.Action2Release</qualifiedname>
+        <briefdescription>
+<para>Invoked when the secondary action button is pressed (L/X) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="48" column="36" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_controls_1a45f7d5809a598560cf6e169188f018f1" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action Submit</definition>
+        <argsstring></argsstring>
+        <name>Submit</name>
+        <qualifiedname>PlayerScripts.Controls.Submit</qualifiedname>
+        <briefdescription>
+<para>Invoked when the submit button is pressed (Enter) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="53" column="36" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_controls_1a4e385af209adbcafa65342406807f1cf" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action SubmitRelease</definition>
+        <argsstring></argsstring>
+        <name>SubmitRelease</name>
+        <qualifiedname>PlayerScripts.Controls.SubmitRelease</qualifiedname>
+        <briefdescription>
+<para>Invoked when the submit button is released (Enter) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="58" column="36" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_controls_1a27a4fdf4f091f1fe86a5fcf8de52b2e4" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action Cancel</definition>
+        <argsstring></argsstring>
+        <name>Cancel</name>
+        <qualifiedname>PlayerScripts.Controls.Cancel</qualifiedname>
+        <briefdescription>
+<para>Invoked when the cancel button is pressed (Esc) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="63" column="36" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_controls_1a9d0db37622e49d09bfd17e0c5b7fa577" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action CancelRelease</definition>
+        <argsstring></argsstring>
+        <name>CancelRelease</name>
+        <qualifiedname>PlayerScripts.Controls.CancelRelease</qualifiedname>
+        <briefdescription>
+<para>Invoked when the cancel button is released (Esc) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="68" column="36" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_controls_1a8d0b222d6d06818a5151fd23df2da016" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; float &gt;</type>
+        <definition>EventHandler&lt;float&gt; MovesUp</definition>
+        <argsstring></argsstring>
+        <name>MovesUp</name>
+        <qualifiedname>PlayerScripts.Controls.MovesUp</qualifiedname>
+        <briefdescription>
+<para>Invoked when the vertical axis is moved upwards, with its value as a parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="73" column="42" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_controls_1a8ba5a5665ee6f8854162f487826f4c51" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; float &gt;</type>
+        <definition>EventHandler&lt;float&gt; MovesDown</definition>
+        <argsstring></argsstring>
+        <name>MovesDown</name>
+        <qualifiedname>PlayerScripts.Controls.MovesDown</qualifiedname>
+        <briefdescription>
+<para>Invoked when the vertical axis is moved downwards, with its value as a parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="78" column="42" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_controls_1ae06b60159d0a60d5d71a73194814716b" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; float &gt;</type>
+        <definition>EventHandler&lt;float&gt; MovesLeft</definition>
+        <argsstring></argsstring>
+        <name>MovesLeft</name>
+        <qualifiedname>PlayerScripts.Controls.MovesLeft</qualifiedname>
+        <briefdescription>
+<para>Invoked when the horizontal axis is moved left, with its value as a parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="83" column="42" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_player_scripts_1_1_controls_1a9f726fb1cb518889a257f9689e1671c8" prot="public" static="yes" add="no" remove="no" raise="no">
+        <type>EventHandler&lt; float &gt;</type>
+        <definition>EventHandler&lt;float&gt; MovesRight</definition>
+        <argsstring></argsstring>
+        <name>MovesRight</name>
+        <qualifiedname>PlayerScripts.Controls.MovesRight</qualifiedname>
+        <briefdescription>
+<para>Invoked when the horizontal axis is moved right, with its value as a parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="88" column="42" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="88" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_scripts_1_1_controls_1aec0783b5a136e042adcc47bae4fe5291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>PlayerScripts.Controls.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/PlayerScripts/Controls.cs" line="92" column="14" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="92" bodyend="120"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Listens to the Unity&apos;s Input Manager and triggers events based on the input. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/PlayerScripts/Controls.cs" line="9" column="11" bodyfile="Scripts/PlayerScripts/Controls.cs" bodystart="10" bodyend="121"/>
+    <listofallmembers>
+      <member refid="class_player_scripts_1_1_controls_1ac34dfff63d43fcc26bcb5a575de25dd4" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>Action1</name></member>
+      <member refid="class_player_scripts_1_1_controls_1a6c415bf89d7a793fffe97f670ad448d9" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>Action1Release</name></member>
+      <member refid="class_player_scripts_1_1_controls_1aeade3269d21ec1b08e689191790886d9" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>Action2</name></member>
+      <member refid="class_player_scripts_1_1_controls_1a9bcbd3ded58670f66a8410c8f63c1b31" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>Action2Release</name></member>
+      <member refid="class_player_scripts_1_1_controls_1a27a4fdf4f091f1fe86a5fcf8de52b2e4" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>Cancel</name></member>
+      <member refid="class_player_scripts_1_1_controls_1a9d0db37622e49d09bfd17e0c5b7fa577" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>CancelRelease</name></member>
+      <member refid="class_player_scripts_1_1_controls_1ac711d62a538e7d73ed78e76dc4146c2b" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>IsFocused</name></member>
+      <member refid="class_player_scripts_1_1_controls_1a698aa7a1bcf8c024ca5b44b35a2a49db" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>MoveHorizontal</name></member>
+      <member refid="class_player_scripts_1_1_controls_1a8ba5a5665ee6f8854162f487826f4c51" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>MovesDown</name></member>
+      <member refid="class_player_scripts_1_1_controls_1ae06b60159d0a60d5d71a73194814716b" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>MovesLeft</name></member>
+      <member refid="class_player_scripts_1_1_controls_1a9f726fb1cb518889a257f9689e1671c8" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>MovesRight</name></member>
+      <member refid="class_player_scripts_1_1_controls_1a8d0b222d6d06818a5151fd23df2da016" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>MovesUp</name></member>
+      <member refid="class_player_scripts_1_1_controls_1aaef34645c77748c8b64dd8ac3ede4b16" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>MoveVertical</name></member>
+      <member refid="class_player_scripts_1_1_controls_1a45f7d5809a598560cf6e169188f018f1" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>Submit</name></member>
+      <member refid="class_player_scripts_1_1_controls_1a4e385af209adbcafa65342406807f1cf" prot="public" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>SubmitRelease</name></member>
+      <member refid="class_player_scripts_1_1_controls_1aec0783b5a136e042adcc47bae4fe5291" prot="private" virt="non-virtual"><scope>PlayerScripts::Controls</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

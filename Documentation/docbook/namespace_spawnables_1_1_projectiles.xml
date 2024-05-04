@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_spawnables_1_1_projectiles" xml:lang="en-US">
+<title>Spawnables.Projectiles Namespace Reference</title>
+<indexterm><primary>Spawnables.Projectiles</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_projectiles_1_1_bullet_spawner">BulletSpawner</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_projectiles_1_1_enemy">Enemy</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_projectiles_1_1_enemy_spawner">EnemySpawner</link></para>
+</listitem>
+            <listitem><para>interface <link linkend="_interface_spawnables_1_1_projectiles_1_1_i_shootable">IShootable</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_projectiles_1_1_lazer">Lazer</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_projectiles_1_1_projectile">Projectile</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_spawnables_1_1_projectiles_1_1_weapon">Weapon</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

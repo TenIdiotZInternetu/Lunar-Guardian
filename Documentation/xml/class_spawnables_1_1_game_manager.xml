@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_game_manager" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::GameManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_game_manager_1abd608174557d9eb5c119329878927ce4" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_spawnables_1_1_game_manager" kindref="compound">GameManager</ref></type>
+        <definition>GameManager Spawnables.GameManager.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <qualifiedname>Spawnables.GameManager.Instance</qualifiedname>
+        <briefdescription>
+<para>Singleton instance of the GameManager. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" line="22" column="35" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_spawnables_1_1_game_manager_1aa14f4da9423e8c4e35eae1b54da0b9f1" compoundref="_game_manager_8cs" startline="64" endline="71">Spawnables.GameManager.ChangeState</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_game_manager_1a80fe9c54bca19e026dba46bcf9ee6d43" prot="public" static="no" mutable="no">
+        <type><ref refid="class_game_states_1_1_game_state" kindref="compound">GameState</ref></type>
+        <definition>GameState Spawnables.GameManager.initialState</definition>
+        <argsstring></argsstring>
+        <name>initialState</name>
+        <qualifiedname>Spawnables.GameManager.initialState</qualifiedname>
+        <briefdescription>
+<para>State to set upon loading a scene. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" line="29" column="26" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_game_manager_1aac79c7b5597c5e61589da6f92b2531f2" prot="public" static="no" mutable="no">
+        <type><ref refid="class_tymski_1_1_scene_reference" kindref="compound">SceneReference</ref></type>
+        <definition>SceneReference Spawnables.GameManager.mainMenuScene</definition>
+        <argsstring></argsstring>
+        <name>mainMenuScene</name>
+        <qualifiedname>Spawnables.GameManager.mainMenuScene</qualifiedname>
+        <briefdescription>
+<para>A scene to return to upon quitting the gameplay. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" line="34" column="31" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" bodystart="34" bodyend="-1"/>
+        <referencedby refid="class_spawnables_1_1_game_manager_1a4fa557edb780cc051e9b7c2c68defb94" compoundref="_game_manager_8cs" startline="77" endline="83">Spawnables.GameManager.SaveAndQuit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_game_manager_1a836dc3d2c52222fad7d5538d60b6a705" prot="public" static="no" mutable="no">
+        <type><ref refid="class_tools_1_1_game_state_event" kindref="compound">GameStateEvent</ref></type>
+        <definition>GameStateEvent Spawnables.GameManager.onStateChanged</definition>
+        <argsstring></argsstring>
+        <name>onStateChanged</name>
+        <qualifiedname>Spawnables.GameManager.onStateChanged</qualifiedname>
+        <briefdescription>
+<para>Event with GameState parameter that is invoked when the state of the game changes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" line="41" column="31" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_spawnables_1_1_game_manager_1aa14f4da9423e8c4e35eae1b54da0b9f1" compoundref="_game_manager_8cs" startline="64" endline="71">Spawnables.GameManager.ChangeState</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_game_manager_1aa60e27a57e9baceaf093ffc012ba4b9f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_game_states_1_1_game_state" kindref="compound">GameState</ref></type>
+        <definition>GameState Spawnables.GameManager._currentState</definition>
+        <argsstring></argsstring>
+        <name>_currentState</name>
+        <qualifiedname>Spawnables.GameManager._currentState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" line="45" column="27" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spawnables_1_1_game_manager_1a0615686d1bec5225721995ea7b70bb66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.GameManager.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>Spawnables.GameManager.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" line="49" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" bodystart="49" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_game_manager_1aa14f4da9423e8c4e35eae1b54da0b9f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.GameManager.ChangeState</definition>
+        <argsstring>(GameState newState)</argsstring>
+        <name>ChangeState</name>
+        <qualifiedname>Spawnables.GameManager.ChangeState</qualifiedname>
+        <param>
+          <type><ref refid="class_game_states_1_1_game_state" kindref="compound">GameState</ref></type>
+          <declname>newState</declname>
+        </param>
+        <briefdescription>
+<para>Activates the given state and deactivates the current state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The newly activated state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" line="64" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" bodystart="64" bodyend="71"/>
+        <references refid="class_game_states_1_1_game_state_1a26e38c77aa2b029e411421e10ca81e8a">GameStates.GameState.ChangeToThisState</references>
+        <references refid="class_spawnables_1_1_game_manager_1abd608174557d9eb5c119329878927ce4" compoundref="_game_manager_8cs" startline="22">Spawnables.GameManager.Instance</references>
+        <references refid="class_game_states_1_1_game_state_1af986bfbbe19e8336fd98573abf1bc933">GameStates.GameState.LeaveThisState</references>
+        <references refid="class_spawnables_1_1_game_manager_1a836dc3d2c52222fad7d5538d60b6a705" compoundref="_game_manager_8cs" startline="41">Spawnables.GameManager.onStateChanged</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_game_manager_1a4fa557edb780cc051e9b7c2c68defb94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.GameManager.SaveAndQuit</definition>
+        <argsstring>(string playersName)</argsstring>
+        <name>SaveAndQuit</name>
+        <qualifiedname>Spawnables.GameManager.SaveAndQuit</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>playersName</declname>
+        </param>
+        <briefdescription>
+<para>Saves the obtained score and returns to the main menu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>playersName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the player to save to the leaderboards </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" line="77" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" bodystart="77" bodyend="83"/>
+        <references refid="class_spawnables_1_1_game_manager_1aac79c7b5597c5e61589da6f92b2531f2" compoundref="_game_manager_8cs" startline="34">Spawnables.GameManager.mainMenuScene</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A state machine that controls the flow of the gameplay. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.GameManager</label>
+        <link refid="class_spawnables_1_1_game_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>GameStates.GameState</label>
+        <link refid="class_game_states_1_1_game_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ISerializationCallbackReceiver</label>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.GameManager</label>
+        <link refid="class_spawnables_1_1_game_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>initialState</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>mainMenuScene</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>onStateChanged</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Spawnables.GameManager</label>
+        <link refid="class_spawnables_1_1_game_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>initialState</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>mainMenuScene</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>onStateChanged</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Tools.GameStateEvent</label>
+        <link refid="class_tools_1_1_game_state_event"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Tymski.SceneReference</label>
+        <link refid="class_tymski_1_1_scene_reference"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>UnityEvent&lt; GameState &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" line="15" column="11" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs" bodystart="16" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_game_manager_1aa60e27a57e9baceaf093ffc012ba4b9f" prot="private" virt="non-virtual"><scope>Spawnables::GameManager</scope><name>_currentState</name></member>
+      <member refid="class_spawnables_1_1_game_manager_1a0615686d1bec5225721995ea7b70bb66" prot="public" virt="non-virtual"><scope>Spawnables::GameManager</scope><name>Awake</name></member>
+      <member refid="class_spawnables_1_1_game_manager_1aa14f4da9423e8c4e35eae1b54da0b9f1" prot="public" virt="non-virtual"><scope>Spawnables::GameManager</scope><name>ChangeState</name></member>
+      <member refid="class_spawnables_1_1_game_manager_1a80fe9c54bca19e026dba46bcf9ee6d43" prot="public" virt="non-virtual"><scope>Spawnables::GameManager</scope><name>initialState</name></member>
+      <member refid="class_spawnables_1_1_game_manager_1abd608174557d9eb5c119329878927ce4" prot="public" virt="non-virtual"><scope>Spawnables::GameManager</scope><name>Instance</name></member>
+      <member refid="class_spawnables_1_1_game_manager_1aac79c7b5597c5e61589da6f92b2531f2" prot="public" virt="non-virtual"><scope>Spawnables::GameManager</scope><name>mainMenuScene</name></member>
+      <member refid="class_spawnables_1_1_game_manager_1a836dc3d2c52222fad7d5538d60b6a705" prot="public" virt="non-virtual"><scope>Spawnables::GameManager</scope><name>onStateChanged</name></member>
+      <member refid="class_spawnables_1_1_game_manager_1a4fa557edb780cc051e9b7c2c68defb94" prot="public" virt="non-virtual"><scope>Spawnables::GameManager</scope><name>SaveAndQuit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

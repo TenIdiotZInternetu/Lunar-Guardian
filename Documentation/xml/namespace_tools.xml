@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_tools" kind="namespace" language="C#">
+    <compoundname>Tools</compoundname>
+    <innerclass refid="class_tools_1_1_component_utils" prot="public">Tools::ComponentUtils</innerclass>
+    <innerclass refid="class_tools_1_1_game_object_event" prot="public">Tools::GameObjectEvent</innerclass>
+    <innerclass refid="class_tools_1_1_game_state_event" prot="public">Tools::GameStateEvent</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/ComponentUtils.cs" line="4" column="1"/>
+  </compounddef>
+</doxygen>

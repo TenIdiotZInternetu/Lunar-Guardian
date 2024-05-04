@@ -1,0 +1,17 @@
+digraph "Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_7fbb1baf6faa87cccabc0cd605e2052a {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="Tools", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_7fbb1baf6faa87cccabc0cd605e2052a.html",tooltip=""]
+  subgraph clusterdir_b9af52cbf3a3a3c83daef5fe9b4a6c10 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_b9af52cbf3a3a3c83daef5fe9b4a6c10.html",tooltip=""]
+    dir_b9af52cbf3a3a3c83daef5fe9b4a6c10 [shape=plaintext, label="PathCreator"];
+  dir_116e919da512516b212d3a4bd9089603 [label="Core", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_116e919da512516b212d3a4bd9089603.html",tooltip=""];
+  dir_dc550a9f793b78035d6a17da3f36a4e0 [label="Examples", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_dc550a9f793b78035d6a17da3f36a4e0.html",tooltip=""];
+  }
+  }
+}

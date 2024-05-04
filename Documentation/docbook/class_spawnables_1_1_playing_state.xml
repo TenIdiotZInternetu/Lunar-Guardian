@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_playing_state" xml:lang="en-US">
+<title>Spawnables.PlayingState Class Reference</title>
+<indexterm><primary>Spawnables.PlayingState</primary></indexterm>
+Inheritance diagram for Spawnables.PlayingState:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_playing_state__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Spawnables.PlayingState:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_playing_state__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_spawnables_1_1_playing_state_1a78b6fffdc41633cf61113855a7de97ed">ChangeToThisState</link> ()</para>
+</listitem>
+            <listitem><para>override void <link linkend="_class_spawnables_1_1_playing_state_1a29ae19b2261855f475b022d50077108e">LeaveThisState</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_game_states_1_1_game_state">GameStates.GameState</link>        <itemizedlist>
+            <listitem><para>void <emphasis role="strong">ChangeToThisState</emphasis> ()</para>
+
+<para>Takes actions needed to define this state. </para>
+</listitem>
+            <listitem><para>void <emphasis role="strong">LeaveThisState</emphasis> ()</para>
+
+<para>Undoes changes made by this state. </para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_spawnables_1_1_paused_state">PausedState</link> <link linkend="_class_spawnables_1_1_playing_state_1a9d547da2eaba043d221964b314275c3b">pausedState</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__playing_state_8cs_source_1l00008">8</link> of file <link linkend="__playing_state_8cs_source">PlayingState.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_playing_state_1a78b6fffdc41633cf61113855a7de97ed"/><section>
+    <title>ChangeToThisState()</title>
+<indexterm><primary>ChangeToThisState</primary><secondary>Spawnables.PlayingState</secondary></indexterm>
+<indexterm><primary>Spawnables.PlayingState</primary><secondary>ChangeToThisState</secondary></indexterm>
+<para><computeroutput>override void Spawnables.PlayingState.ChangeToThisState ( )</computeroutput></para><para>
+Definition at line <link linkend="__playing_state_8cs_source_1l00012">12</link> of file <link linkend="__playing_state_8cs_source">PlayingState.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_playing_state_1a29ae19b2261855f475b022d50077108e"/><section>
+    <title>LeaveThisState()</title>
+<indexterm><primary>LeaveThisState</primary><secondary>Spawnables.PlayingState</secondary></indexterm>
+<indexterm><primary>Spawnables.PlayingState</primary><secondary>LeaveThisState</secondary></indexterm>
+<para><computeroutput>override void Spawnables.PlayingState.LeaveThisState ( )</computeroutput></para><para>
+Definition at line <link linkend="__playing_state_8cs_source_1l00020">20</link> of file <link linkend="__playing_state_8cs_source">PlayingState.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_playing_state_1a9d547da2eaba043d221964b314275c3b"/><section>
+    <title>pausedState</title>
+<indexterm><primary>pausedState</primary><secondary>Spawnables.PlayingState</secondary></indexterm>
+<indexterm><primary>Spawnables.PlayingState</primary><secondary>pausedState</secondary></indexterm>
+<para><computeroutput><link linkend="_class_spawnables_1_1_paused_state">PausedState</link> Spawnables.PlayingState.pausedState</computeroutput></para><para>
+Definition at line <link linkend="__playing_state_8cs_source_1l00010">10</link> of file <link linkend="__playing_state_8cs_source">PlayingState.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/States/PlayingState.cs</section>
+</section>

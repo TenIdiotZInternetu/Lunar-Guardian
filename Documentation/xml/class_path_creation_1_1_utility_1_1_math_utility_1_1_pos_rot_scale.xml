@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale" kind="class" language="C#" prot="private">
+    <compoundname>PathCreation::Utility::MathUtility::PosRotScale</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1ac59cf32610107eb9b8f32cfa8081e0dc" prot="public" static="no" mutable="no">
+        <type>readonly Vector3</type>
+        <definition>readonly Vector3 position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.PosRotScale.position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="144" column="37" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1aa72d043f8d30c30ebd07970933dd5e66" prot="public" static="no" mutable="no">
+        <type>readonly Quaternion</type>
+        <definition>readonly Quaternion rotation</definition>
+        <argsstring></argsstring>
+        <name>rotation</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.PosRotScale.rotation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="145" column="40" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1a7f602b069e65a0bbe1cf93fe0fd12781" prot="public" static="no" mutable="no">
+        <type>readonly Vector3</type>
+        <definition>readonly Vector3 scale</definition>
+        <argsstring></argsstring>
+        <name>scale</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.PosRotScale.scale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="146" column="37" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="146" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1aae35828f32bd592f57b7671bc69eb327" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PosRotScale</definition>
+        <argsstring>(Transform t)</argsstring>
+        <name>PosRotScale</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.PosRotScale.PosRotScale</qualifiedname>
+        <param>
+          <type>Transform</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="148" column="20" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="148" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1af523cd70f6da990600293f3ee2947786" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetTransform</definition>
+        <argsstring>(Transform t)</argsstring>
+        <name>SetTransform</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.PosRotScale.SetTransform</qualifiedname>
+        <param>
+          <type>Transform</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="154" column="25" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="154" bodyend="159"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="143" column="9" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="143" bodyend="160"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1ac59cf32610107eb9b8f32cfa8081e0dc" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility::PosRotScale</scope><name>position</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1aae35828f32bd592f57b7671bc69eb327" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility::PosRotScale</scope><name>PosRotScale</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1aa72d043f8d30c30ebd07970933dd5e66" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility::PosRotScale</scope><name>rotation</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1a7f602b069e65a0bbe1cf93fe0fd12781" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility::PosRotScale</scope><name>scale</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale_1af523cd70f6da990600293f3ee2947786" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility::PosRotScale</scope><name>SetTransform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

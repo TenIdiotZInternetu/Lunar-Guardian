@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_u_i_1_1_menu_screen" kind="class" language="C#" prot="public">
+    <compoundname>UI::MenuScreen</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <derivedcompoundref refid="class_u_i_1_1_menus_1_1_credits_screen" prot="public" virt="non-virtual">CreditsScreen</derivedcompoundref>
+    <derivedcompoundref refid="class_u_i_1_1_menus_1_1_game_over_screen" prot="public" virt="non-virtual">GameOverScreen</derivedcompoundref>
+    <derivedcompoundref refid="class_u_i_1_1_menus_1_1_leaderboard" prot="public" virt="non-virtual">Leaderboard</derivedcompoundref>
+    <derivedcompoundref refid="class_u_i_1_1_menus_1_1_main_menu" prot="public" virt="non-virtual">MainMenu</derivedcompoundref>
+    <derivedcompoundref refid="class_u_i_1_1_menus_1_1_pause_menu" prot="public" virt="non-virtual">PauseMenu</derivedcompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_u_i_1_1_menu_screen_1a515a4e1ef9fb8f7b823ca9ef62b206f0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float onCloseDelay</definition>
+        <argsstring></argsstring>
+        <name>onCloseDelay</name>
+        <qualifiedname>UI.MenuScreen.onCloseDelay</qualifiedname>
+        <initializer>= 0.3f</initializer>
+        <briefdescription>
+<para>Amount of time to wait before deactivating the menu, to let <ref refid="namespace_v_f_x" kindref="compound">VFX</ref> finish playing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MenuScreen.cs" line="17" column="22" bodyfile="Scripts/UI/MenuScreen.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_i_1_1_menu_screen_1abde5dcaf50e31d0608c1835c31d45ce5" prot="public" static="no" mutable="no">
+        <type>UnityEvent</type>
+        <definition>UnityEvent menuLeftEvent</definition>
+        <argsstring></argsstring>
+        <name>menuLeftEvent</name>
+        <qualifiedname>UI.MenuScreen.menuLeftEvent</qualifiedname>
+        <briefdescription>
+<para>Event invoked when the menu is closed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MenuScreen.cs" line="24" column="27" bodyfile="Scripts/UI/MenuScreen.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_i_1_1_menu_screen_1a3f204271959196687c31ad5b0f8c19d2" prot="public" static="no" mutable="no">
+        <type>UnityEvent</type>
+        <definition>UnityEvent menuOpenedEvent</definition>
+        <argsstring></argsstring>
+        <name>menuOpenedEvent</name>
+        <qualifiedname>UI.MenuScreen.menuOpenedEvent</qualifiedname>
+        <briefdescription>
+<para>Event invoked when the menu is opened. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MenuScreen.cs" line="29" column="27" bodyfile="Scripts/UI/MenuScreen.cs" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_u_i_1_1_menu_screen_1af174fffa9aacfd03387706ff553bd993" compoundref="_menu_screen_8cs" startline="36" endline="40">MenuScreen.OpenMenu</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_u_i_1_1_menu_screen_1af174fffa9aacfd03387706ff553bd993" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpenMenu</definition>
+        <argsstring>()</argsstring>
+        <name>OpenMenu</name>
+        <qualifiedname>UI.MenuScreen.OpenMenu</qualifiedname>
+        <briefdescription>
+<para>Sets the menu to be active and informs listeners. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MenuScreen.cs" line="36" column="21" bodyfile="Scripts/UI/MenuScreen.cs" bodystart="36" bodyend="40"/>
+        <references refid="class_u_i_1_1_menu_screen_1a3f204271959196687c31ad5b0f8c19d2" compoundref="_menu_screen_8cs" startline="29">MenuScreen.menuOpenedEvent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_u_i_1_1_menu_screen_1aff7779f56c25e6d968cec59627708181" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CloseMenu</definition>
+        <argsstring>()</argsstring>
+        <name>CloseMenu</name>
+        <qualifiedname>UI.MenuScreen.CloseMenu</qualifiedname>
+        <briefdescription>
+<para>Informs listeners and wait for them to finish before deactivating the menu. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MenuScreen.cs" line="45" column="21" bodyfile="Scripts/UI/MenuScreen.cs" bodystart="45" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_u_i_1_1_menu_screen_1afb6705559457245e290f4253d7e5f909" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator CloseCoroutine</definition>
+        <argsstring>()</argsstring>
+        <name>CloseCoroutine</name>
+        <qualifiedname>UI.MenuScreen.CloseCoroutine</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MenuScreen.cs" line="53" column="29" bodyfile="Scripts/UI/MenuScreen.cs" bodystart="53" bodyend="58"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A menu screen&apos;s functionality. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/UI/MenuScreen.cs" line="10" column="11" bodyfile="Scripts/UI/MenuScreen.cs" bodystart="11" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_u_i_1_1_menu_screen_1afb6705559457245e290f4253d7e5f909" prot="private" virt="non-virtual"><scope>UI::MenuScreen</scope><name>CloseCoroutine</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1aff7779f56c25e6d968cec59627708181" prot="public" virt="non-virtual"><scope>UI::MenuScreen</scope><name>CloseMenu</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1abde5dcaf50e31d0608c1835c31d45ce5" prot="public" virt="non-virtual"><scope>UI::MenuScreen</scope><name>menuLeftEvent</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1a3f204271959196687c31ad5b0f8c19d2" prot="public" virt="non-virtual"><scope>UI::MenuScreen</scope><name>menuOpenedEvent</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1a515a4e1ef9fb8f7b823ca9ef62b206f0" prot="public" virt="non-virtual"><scope>UI::MenuScreen</scope><name>onCloseDelay</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1af174fffa9aacfd03387706ff553bd993" prot="public" virt="non-virtual"><scope>UI::MenuScreen</scope><name>OpenMenu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_game_manager_1_1_game_state" xml:lang="en-US">
+<title>GameState Class Reference</title>
+<indexterm><primary>GameState</primary></indexterm>
+<para>
+
+<para>A state governed by the <link linkend="_namespace_game_manager">GameManager</link>. </para>
+ 
+</para>
+<para>Inheritance diagram for GameState:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_game_manager_1_1_game_state.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_game_manager_1_1_game_state_1ad02ad005cb741028d1049d7731cb4c27"/>void <emphasis role="strong">ChangeToThisState</emphasis> ()</para>
+
+<para>Takes actions needed to define this state. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_game_manager_1_1_game_state_1a4e3e4431ac6f41ff62706d0e3d2f6878"/>void <emphasis role="strong">LeaveThisState</emphasis> ()</para>
+
+<para>Undoes changes made by this state. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__game_state_8cs_source_1l00008">8</link> of file <link linkend="__game_state_8cs_source">GameState.cs</link>.</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/GameManager/GameState.cs</section>
+</section>

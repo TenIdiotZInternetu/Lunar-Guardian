@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::EnemyScripts::Enemy::LootDrop</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1a438ee5cf329b57641c343066d90791f3" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject item</definition>
+        <argsstring></argsstring>
+        <name>item</name>
+        <qualifiedname>Spawnables.EnemyScripts.Enemy.LootDrop.item</qualifiedname>
+        <briefdescription>
+<para>Prefab of the item to be dropped. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/Enemy.cs" line="25" column="31" bodyfile="Scripts/Spawnables/EnemyScripts/Enemy.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1a81b230dc1b49a74222fad1a60c5d4fa3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dropChance</definition>
+        <argsstring></argsstring>
+        <name>dropChance</name>
+        <qualifiedname>Spawnables.EnemyScripts.Enemy.LootDrop.dropChance</qualifiedname>
+        <briefdescription>
+<para>Chance of the item being dropped on death. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/Enemy.cs" line="30" column="26" bodyfile="Scripts/Spawnables/EnemyScripts/Enemy.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1aaf9b2550978ba8945abd846696c14362" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int maxDrops</definition>
+        <argsstring></argsstring>
+        <name>maxDrops</name>
+        <qualifiedname>Spawnables.EnemyScripts.Enemy.LootDrop.maxDrops</qualifiedname>
+        <briefdescription>
+<para>Max amount of items of this type to be dropped. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Spawnables/EnemyScripts/Enemy.cs" line="35" column="24" bodyfile="Scripts/Spawnables/EnemyScripts/Enemy.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Described possible loot drops from the enemy. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Spawnables/EnemyScripts/Enemy.cs" line="20" column="15" bodyfile="Scripts/Spawnables/EnemyScripts/Enemy.cs" bodystart="21" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1a81b230dc1b49a74222fad1a60c5d4fa3" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy::LootDrop</scope><name>dropChance</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1a438ee5cf329b57641c343066d90791f3" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy::LootDrop</scope><name>item</name></member>
+      <member refid="class_spawnables_1_1_enemy_scripts_1_1_enemy_1_1_loot_drop_1aaf9b2550978ba8945abd846696c14362" prot="public" virt="non-virtual"><scope>Spawnables::EnemyScripts::Enemy::LootDrop</scope><name>maxDrops</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_u_i_1_1_menus_1_1_credits_screen" kind="class" language="C#" prot="public">
+    <compoundname>UI::Menus::CreditsScreen</compoundname>
+    <basecompoundref refid="class_u_i_1_1_menu_screen" prot="public" virt="non-virtual">MenuScreen</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_u_i_1_1_menus_1_1_credits_screen_1a75de41295773fd03b03ace513237d2ff" prot="public" static="no" mutable="no">
+        <type>CreditsSo</type>
+        <definition>CreditsSo credits</definition>
+        <argsstring></argsstring>
+        <name>credits</name>
+        <qualifiedname>UI.Menus.CreditsScreen.credits</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/Menus/CreditsScreen.cs" line="10" column="26" bodyfile="Scripts/UI/Menus/CreditsScreen.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_i_1_1_menus_1_1_credits_screen_1ae7fb8c8e4e1342a0a4ae352e7865ef9b" prot="public" static="no" mutable="no">
+        <type>TMP_Text</type>
+        <definition>TMP_Text creditsTemplate</definition>
+        <argsstring></argsstring>
+        <name>creditsTemplate</name>
+        <qualifiedname>UI.Menus.CreditsScreen.creditsTemplate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/Menus/CreditsScreen.cs" line="11" column="25" bodyfile="Scripts/UI/Menus/CreditsScreen.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_i_1_1_menus_1_1_credits_screen_1a05a86d9e3d6f4daa58feabb0351c15a8" prot="public" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <qualifiedname>UI.Menus.CreditsScreen.offset</qualifiedname>
+        <initializer>= new Vector2(0, -50)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/Menus/CreditsScreen.cs" line="13" column="24" bodyfile="Scripts/UI/Menus/CreditsScreen.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_i_1_1_menus_1_1_credits_screen_1a03428b16de81b440855689ed3829c960" prot="public" static="no" mutable="no">
+        <type>MainMenu</type>
+        <definition>MainMenu mainMenu</definition>
+        <argsstring></argsstring>
+        <name>mainMenu</name>
+        <qualifiedname>UI.Menus.CreditsScreen.mainMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/Menus/CreditsScreen.cs" line="15" column="25" bodyfile="Scripts/UI/Menus/CreditsScreen.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_u_i_1_1_menus_1_1_credits_screen_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>UI.Menus.CreditsScreen.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/Menus/CreditsScreen.cs" line="17" column="14" bodyfile="Scripts/UI/Menus/CreditsScreen.cs" bodystart="17" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_i_1_1_menus_1_1_credits_screen_1aadad47aad19a250ac974b8707e0101af" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerateCredits</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateCredits</name>
+        <qualifiedname>UI.Menus.CreditsScreen.GenerateCredits</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/Menus/CreditsScreen.cs" line="31" column="22" bodyfile="Scripts/UI/Menus/CreditsScreen.cs" bodystart="31" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_u_i_1_1_menus_1_1_credits_screen_1a99662a1aaa5e8270896fb0aeb834bf7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GoToMainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>GoToMainMenu</name>
+        <qualifiedname>UI.Menus.CreditsScreen.GoToMainMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/Menus/CreditsScreen.cs" line="25" column="21" bodyfile="Scripts/UI/Menus/CreditsScreen.cs" bodystart="25" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CreditsScreen</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MenuScreen</label>
+        <link refid="class_u_i_1_1_menu_screen"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CreditsScreen</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MenuScreen</label>
+        <link refid="class_u_i_1_1_menu_screen"/>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/UI/Menus/CreditsScreen.cs" line="8" column="11" bodyfile="Scripts/UI/Menus/CreditsScreen.cs" bodystart="9" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_u_i_1_1_menu_screen_1afb6705559457245e290f4253d7e5f909" prot="private" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>CloseCoroutine</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1aff7779f56c25e6d968cec59627708181" prot="public" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>CloseMenu</name></member>
+      <member refid="class_u_i_1_1_menus_1_1_credits_screen_1a75de41295773fd03b03ace513237d2ff" prot="public" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>credits</name></member>
+      <member refid="class_u_i_1_1_menus_1_1_credits_screen_1ae7fb8c8e4e1342a0a4ae352e7865ef9b" prot="public" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>creditsTemplate</name></member>
+      <member refid="class_u_i_1_1_menus_1_1_credits_screen_1aadad47aad19a250ac974b8707e0101af" prot="private" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>GenerateCredits</name></member>
+      <member refid="class_u_i_1_1_menus_1_1_credits_screen_1a99662a1aaa5e8270896fb0aeb834bf7e" prot="public" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>GoToMainMenu</name></member>
+      <member refid="class_u_i_1_1_menus_1_1_credits_screen_1a03428b16de81b440855689ed3829c960" prot="public" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>mainMenu</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1abde5dcaf50e31d0608c1835c31d45ce5" prot="public" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>menuLeftEvent</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1a3f204271959196687c31ad5b0f8c19d2" prot="public" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>menuOpenedEvent</name></member>
+      <member refid="class_u_i_1_1_menus_1_1_credits_screen_1a05a86d9e3d6f4daa58feabb0351c15a8" prot="public" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>offset</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1a515a4e1ef9fb8f7b823ca9ef62b206f0" prot="public" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>onCloseDelay</name></member>
+      <member refid="class_u_i_1_1_menu_screen_1af174fffa9aacfd03387706ff553bd993" prot="public" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>OpenMenu</name></member>
+      <member refid="class_u_i_1_1_menus_1_1_credits_screen_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" virt="non-virtual"><scope>UI::Menus::CreditsScreen</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

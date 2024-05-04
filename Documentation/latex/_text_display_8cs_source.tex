@@ -1,0 +1,106 @@
+\doxysection{Text\+Display.\+cs}
+\hypertarget{_text_display_8cs_source}{}\label{_text_display_8cs_source}\index{Scripts/UI/TextDisplay.cs@{Scripts/UI/TextDisplay.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }MyBox;}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_player_scripts}{PlayerScripts}};}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }UnityEngine.Scripting;}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00009}00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_u_i}{UI}}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00014}00014\ \ \ \ \ [RequireComponent(typeof(TMP\_Text))]}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00015}\mbox{\hyperlink{class_u_i_1_1_text_display}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_i_1_1_text_display}{TextDisplay}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00022}\mbox{\hyperlink{class_u_i_1_1_text_display_a19a1f5b6e7bf5a627bccfc1d457881d7}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_u_i_1_1_text_display_a19a1f5b6e7bf5a627bccfc1d457881d7}{PREVIEW\_VALUE}}\ =\ 1.23f;}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00029}\mbox{\hyperlink{class_u_i_1_1_text_display_a5a081c4d3cc97ef24f7039396d49da52}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a8571efa4409be32e28abf3ea74a0dbb1}{PlayerStatus.ResourceType}}\ \mbox{\hyperlink{class_u_i_1_1_text_display_a5a081c4d3cc97ef24f7039396d49da52}{trackedResource}};}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00034}\mbox{\hyperlink{class_u_i_1_1_text_display_a578255b360c9bb86a17fab48cb065b6f}{00034}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_u_i_1_1_text_display_a578255b360c9bb86a17fab48cb065b6f}{format}}\ =\ \textcolor{stringliteral}{"{}\{0\}"{}};}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00039}\mbox{\hyperlink{class_u_i_1_1_text_display_ae9a50054b4ccbe11fda7b55f5b53caf6}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_u_i_1_1_text_display_ae9a50054b4ccbe11fda7b55f5b53caf6}{defaultValue}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00044}\mbox{\hyperlink{class_u_i_1_1_text_display_aab5e819719646d067216464e3bc3c866}{00044}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_u_i_1_1_text_display_aab5e819719646d067216464e3bc3c866}{hideWhenDefault}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00049}\mbox{\hyperlink{class_u_i_1_1_text_display_a3091f3616f264e5b18a6b808442ea8cf}{00049}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_u_i_1_1_text_display_a3091f3616f264e5b18a6b808442ea8cf}{addSeparators}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ [ConditionalField(nameof(\mbox{\hyperlink{class_u_i_1_1_text_display_a3091f3616f264e5b18a6b808442ea8cf}{addSeparators}}))]}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00055}\mbox{\hyperlink{class_u_i_1_1_text_display_a883acae029fb2d80ac05fb397d13af6d}{00055}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_u_i_1_1_text_display_a883acae029fb2d80ac05fb397d13af6d}{separatorInterval}}\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00060}\mbox{\hyperlink{class_u_i_1_1_text_display_ae6765bd280185095bb23d3370f0faa79}{00060}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_u_i_1_1_text_display_ae6765bd280185095bb23d3370f0faa79}{zeroPadding}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TMP\_Text\ \_tmpComponent;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Text\ component\ to\ be\ updated}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ StringBuilder\ \_stringBuilder\ =\ \textcolor{keyword}{new}();\ \ \ \textcolor{comment}{//\ StringBuilder\ to\ be\ used\ for\ formatting}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Unity\ Callbacks\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Subscribe\ to\ the\ PlayerStatus\ event\ of\ the\ specified\ resource\ type}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \_tmpComponent\ =\ GetComponent<TMP\_Text>();}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_status}{PlayerStatus}}.\mbox{\hyperlink{class_player_scripts_1_1_player_status_ab468d4779fc1a9b54ce99dc71555c3fa}{Subscribe}}(\mbox{\hyperlink{class_u_i_1_1_text_display_a5a081c4d3cc97ef24f7039396d49da52}{trackedResource}},\ UpdateText);}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateText(\mbox{\hyperlink{class_u_i_1_1_text_display_ae9a50054b4ccbe11fda7b55f5b53caf6}{defaultValue}});}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ OnValidate()}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_tmpComponent\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_tmpComponent\ =\ GetComponent<TMP\_Text>();}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateText(\mbox{\hyperlink{class_u_i_1_1_text_display_a19a1f5b6e7bf5a627bccfc1d457881d7}{PREVIEW\_VALUE}});}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Updates\ the\ value\ and\ adds\ padding\ and\ seperators}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ UpdateText(\textcolor{keywordtype}{float}\ value)}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_1_1_text_display_aab5e819719646d067216464e3bc3c866}{hideWhenDefault}}\ \&\&\ value\ ==\ \mbox{\hyperlink{class_u_i_1_1_text_display_ae9a50054b4ccbe11fda7b55f5b53caf6}{defaultValue}})}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_tmpComponent.text\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \_stringBuilder.Clear();}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ targetString\ =\ value.ToString();}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ targetString\ =\ targetString.PadLeft(\mbox{\hyperlink{class_u_i_1_1_text_display_ae6765bd280185095bb23d3370f0faa79}{zeroPadding}},\ \textcolor{charliteral}{'0'});}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \_stringBuilder.Append(targetString);}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_1_1_text_display_a3091f3616f264e5b18a6b808442ea8cf}{addSeparators}})\ AddSeparators();}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ newText\ =\ String.Format(\mbox{\hyperlink{class_u_i_1_1_text_display_a578255b360c9bb86a17fab48cb065b6f}{format}},\ \_stringBuilder);}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \_tmpComponent.text\ =\ newText;}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Adds\ separators\ to\ the\ string}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AddSeparators()}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_u_i_1_1_text_display_a883acae029fb2d80ac05fb397d13af6d}{separatorInterval}}\ <=\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ (separatorInterval\ ==\ null)\ return;}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ length\ =\ \_stringBuilder.Length;}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ offset\ =\ length\ \%\ \mbox{\hyperlink{class_u_i_1_1_text_display_a883acae029fb2d80ac05fb397d13af6d}{separatorInterval}};}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (offset\ ==\ 0)\ offset\ =\ \mbox{\hyperlink{class_u_i_1_1_text_display_a883acae029fb2d80ac05fb397d13af6d}{separatorInterval}};}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ offset;\ i\ <\ \_stringBuilder.Length;\ i\ +=\ \mbox{\hyperlink{class_u_i_1_1_text_display_a883acae029fb2d80ac05fb397d13af6d}{separatorInterval}}\ +\ 1)}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_stringBuilder.Insert(i,\ \textcolor{charliteral}{'.'});}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00126}00126\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_text_display_8cs_source_l00127}00127\ \}}
+
+\end{DoxyCode}

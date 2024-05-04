@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_path_creation_editor_1_1_path_handle_1_1_handle_colours" xml:lang="en-US">
+<title>PathCreationEditor.PathHandle.HandleColours Struct Reference</title>
+<indexterm><primary>PathCreationEditor.PathHandle.HandleColours</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a882463750642111a86f0c67833f4f34b">HandleColours</link> (Color defaultColour, Color highlightedColour, Color selectedColour, Color disabledColour)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Color <link linkend="_struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a4129c495d35e25e1c77fc87e75b9eaa1">defaultColour</link></para>
+</listitem>
+            <listitem><para>Color <link linkend="_struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a8f847db043bbfe81f01e7bac9179419b">highlightedColour</link></para>
+</listitem>
+            <listitem><para>Color <link linkend="_struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1af157261a069c6071fdb82294ea2c58e5">selectedColour</link></para>
+</listitem>
+            <listitem><para>Color <link linkend="_struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a1729c1cd5f2619fbb6ca1788353e1cb9">disabledColour</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__path_handle_8cs_source_1l00182">182</link> of file <link linkend="__path_handle_8cs_source">PathHandle.cs</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a882463750642111a86f0c67833f4f34b"/><section>
+    <title>HandleColours()</title>
+<indexterm><primary>HandleColours</primary><secondary>PathCreationEditor.PathHandle.HandleColours</secondary></indexterm>
+<indexterm><primary>PathCreationEditor.PathHandle.HandleColours</primary><secondary>HandleColours</secondary></indexterm>
+<para><computeroutput>PathCreationEditor.PathHandle.HandleColours.HandleColours (Color defaultColour, Color highlightedColour, Color selectedColour, Color disabledColour)</computeroutput></para><para>
+Definition at line <link linkend="__path_handle_8cs_source_1l00189">189</link> of file <link linkend="__path_handle_8cs_source">PathHandle.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a4129c495d35e25e1c77fc87e75b9eaa1"/><section>
+    <title>defaultColour</title>
+<indexterm><primary>defaultColour</primary><secondary>PathCreationEditor.PathHandle.HandleColours</secondary></indexterm>
+<indexterm><primary>PathCreationEditor.PathHandle.HandleColours</primary><secondary>defaultColour</secondary></indexterm>
+<para><computeroutput>Color PathCreationEditor.PathHandle.HandleColours.defaultColour</computeroutput></para><para>
+Definition at line <link linkend="__path_handle_8cs_source_1l00184">184</link> of file <link linkend="__path_handle_8cs_source">PathHandle.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a1729c1cd5f2619fbb6ca1788353e1cb9"/><section>
+    <title>disabledColour</title>
+<indexterm><primary>disabledColour</primary><secondary>PathCreationEditor.PathHandle.HandleColours</secondary></indexterm>
+<indexterm><primary>PathCreationEditor.PathHandle.HandleColours</primary><secondary>disabledColour</secondary></indexterm>
+<para><computeroutput>Color PathCreationEditor.PathHandle.HandleColours.disabledColour</computeroutput></para><para>
+Definition at line <link linkend="__path_handle_8cs_source_1l00187">187</link> of file <link linkend="__path_handle_8cs_source">PathHandle.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1a8f847db043bbfe81f01e7bac9179419b"/><section>
+    <title>highlightedColour</title>
+<indexterm><primary>highlightedColour</primary><secondary>PathCreationEditor.PathHandle.HandleColours</secondary></indexterm>
+<indexterm><primary>PathCreationEditor.PathHandle.HandleColours</primary><secondary>highlightedColour</secondary></indexterm>
+<para><computeroutput>Color PathCreationEditor.PathHandle.HandleColours.highlightedColour</computeroutput></para><para>
+Definition at line <link linkend="__path_handle_8cs_source_1l00185">185</link> of file <link linkend="__path_handle_8cs_source">PathHandle.cs</link>.</para>
+</section>
+<anchor xml:id="_struct_path_creation_editor_1_1_path_handle_1_1_handle_colours_1af157261a069c6071fdb82294ea2c58e5"/><section>
+    <title>selectedColour</title>
+<indexterm><primary>selectedColour</primary><secondary>PathCreationEditor.PathHandle.HandleColours</secondary></indexterm>
+<indexterm><primary>PathCreationEditor.PathHandle.HandleColours</primary><secondary>selectedColour</secondary></indexterm>
+<para><computeroutput>Color PathCreationEditor.PathHandle.HandleColours.selectedColour</computeroutput></para><para>
+Definition at line <link linkend="__path_handle_8cs_source_1l00186">186</link> of file <link linkend="__path_handle_8cs_source">PathHandle.cs</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Core/Editor/Helper/PathHandle.cs</section>
+</section>

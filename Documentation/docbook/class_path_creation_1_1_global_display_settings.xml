@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_path_creation_1_1_global_display_settings" xml:lang="en-US">
+<title>PathCreation.GlobalDisplaySettings Class Reference</title>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary></indexterm>
+Inheritance diagram for PathCreation.GlobalDisplaySettings:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_global_display_settings__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for PathCreation.GlobalDisplaySettings:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_path_creation_1_1_global_display_settings__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <emphasis role="strong">HandleType</emphasis> { <emphasis role="strong">Sphere</emphasis>
+, <emphasis role="strong">Circle</emphasis>
+, <emphasis role="strong">Square</emphasis>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_class_path_creation_1_1_global_display_settings_1a5341f71a1210e8ef55bc28f1fb3fe341">anchorSize</link> = 10</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_path_creation_1_1_global_display_settings_1af1c146126f3768067aab2ddba81cfbf0">controlSize</link> = 7f</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_path_creation_1_1_global_display_settings_1a822cfda1f2c2771fe2a96e36e80cfde1">visibleBehindObjects</link> = true</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_path_creation_1_1_global_display_settings_1a7d3694583d748de8e0445a3f3f68567c">visibleWhenNotSelected</link> = true</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_path_creation_1_1_global_display_settings_1af5abf2bfb6dc06f975a4ecd870b74129">hideAutoControls</link> = true</para>
+</listitem>
+            <listitem><para>HandleType <link linkend="_class_path_creation_1_1_global_display_settings_1a754988171dd87186dff8b04f1bb4ddf1">anchorShape</link></para>
+</listitem>
+            <listitem><para>HandleType <link linkend="_class_path_creation_1_1_global_display_settings_1abc21bf58f8059ea7856fceed892d8f2a">controlShape</link></para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1ae07394c16f472edd8c5e86802ce27eb2">anchor</link> = new Color(0.95f, 0.25f, 0.25f, 0.85f)</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1a75d418ff81d93c4e496fc4cd31579e32">anchorHighlighted</link> = new Color(1, 0.57f, 0.4f)</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1a7e438bb136f39fa6817558b7c7cc7df2">anchorSelected</link> = Color.white</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1a994dcb53ca04ffe78807eecc9fab01fa">control</link> = new Color(0.35f, 0.6f, 1, 0.85f)</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1a524be4fba5167404b75b62d24bc0ec18">controlHighlighted</link> = new Color(0.8f, 0.67f, 0.97f)</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1a33f398e92e1ed6b04ba6982f31d3fc8f">controlSelected</link> = Color.white</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1a9bb00c86172fc29c59c13a7dc48c7e1e">handleDisabled</link> = new Color(1, 1, 1, 0.2f)</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1a5cca0181018f233e5a14828823c4b766">controlLine</link> = new Color(0, 0, 0, 0.35f)</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1a5c3a95f9f448a910347d5b8cfa762434">bezierPath</link> = Color.green</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1aee4f7dfb8f4ddffca8be34d12d044724">highlightedPath</link> = new Color(1, 0.6f, 0)</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1a07791eb5deb43cfa8b090b9cb2f6a6ac">bounds</link> = new Color(1, 1, 1, .4f)</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1adb8a87d6d7bfa3ee11f7709dffa2c5a1">segmentBounds</link> = new Color(1, 1, 1, .4f)</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1a26b73f81cda50c05e055475059f79b6c">vertexPath</link> = Color.white</para>
+</listitem>
+            <listitem><para>Color <link linkend="_class_path_creation_1_1_global_display_settings_1a0dfb7f8c9ee58c36da1b78b607c4266b">normals</link> = Color.yellow</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_path_creation_1_1_global_display_settings_1a28cb2a8728998e5d90733673d43d5eda">normalsLength</link> = .1f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00008">8</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1ad3afbe63a3855b82ae5bf24068eaca75"/><section>
+    <title>HandleType</title>
+<indexterm><primary>HandleType</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>HandleType</secondary></indexterm>
+<para><computeroutput>enum PathCreation.GlobalDisplaySettings.HandleType</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00011">11</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1ae07394c16f472edd8c5e86802ce27eb2"/><section>
+    <title>anchor</title>
+<indexterm><primary>anchor</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>anchor</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.anchor = new Color(0.95f, 0.25f, 0.25f, 0.85f)</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00028">28</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a75d418ff81d93c4e496fc4cd31579e32"/><section>
+    <title>anchorHighlighted</title>
+<indexterm><primary>anchorHighlighted</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>anchorHighlighted</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.anchorHighlighted = new Color(1, 0.57f, 0.4f)</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00029">29</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a7e438bb136f39fa6817558b7c7cc7df2"/><section>
+    <title>anchorSelected</title>
+<indexterm><primary>anchorSelected</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>anchorSelected</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.anchorSelected = Color.white</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00030">30</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a754988171dd87186dff8b04f1bb4ddf1"/><section>
+    <title>anchorShape</title>
+<indexterm><primary>anchorShape</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>anchorShape</secondary></indexterm>
+<para><computeroutput>HandleType PathCreation.GlobalDisplaySettings.anchorShape</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00023">23</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a5341f71a1210e8ef55bc28f1fb3fe341"/><section>
+    <title>anchorSize</title>
+<indexterm><primary>anchorSize</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>anchorSize</secondary></indexterm>
+<para><computeroutput>float PathCreation.GlobalDisplaySettings.anchorSize = 10</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00014">14</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a5c3a95f9f448a910347d5b8cfa762434"/><section>
+    <title>bezierPath</title>
+<indexterm><primary>bezierPath</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>bezierPath</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.bezierPath = Color.green</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00040">40</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a07791eb5deb43cfa8b090b9cb2f6a6ac"/><section>
+    <title>bounds</title>
+<indexterm><primary>bounds</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>bounds</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.bounds = new Color(1, 1, 1, .4f)</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00042">42</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a994dcb53ca04ffe78807eecc9fab01fa"/><section>
+    <title>control</title>
+<indexterm><primary>control</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>control</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.control = new Color(0.35f, 0.6f, 1, 0.85f)</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00033">33</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a524be4fba5167404b75b62d24bc0ec18"/><section>
+    <title>controlHighlighted</title>
+<indexterm><primary>controlHighlighted</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>controlHighlighted</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.controlHighlighted = new Color(0.8f, 0.67f, 0.97f)</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00034">34</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a5cca0181018f233e5a14828823c4b766"/><section>
+    <title>controlLine</title>
+<indexterm><primary>controlLine</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>controlLine</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.controlLine = new Color(0, 0, 0, 0.35f)</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00037">37</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a33f398e92e1ed6b04ba6982f31d3fc8f"/><section>
+    <title>controlSelected</title>
+<indexterm><primary>controlSelected</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>controlSelected</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.controlSelected = Color.white</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00035">35</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1abc21bf58f8059ea7856fceed892d8f2a"/><section>
+    <title>controlShape</title>
+<indexterm><primary>controlShape</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>controlShape</secondary></indexterm>
+<para><computeroutput>HandleType PathCreation.GlobalDisplaySettings.controlShape</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00024">24</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1af1c146126f3768067aab2ddba81cfbf0"/><section>
+    <title>controlSize</title>
+<indexterm><primary>controlSize</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>controlSize</secondary></indexterm>
+<para><computeroutput>float PathCreation.GlobalDisplaySettings.controlSize = 7f</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00015">15</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a9bb00c86172fc29c59c13a7dc48c7e1e"/><section>
+    <title>handleDisabled</title>
+<indexterm><primary>handleDisabled</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>handleDisabled</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.handleDisabled = new Color(1, 1, 1, 0.2f)</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00036">36</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1af5abf2bfb6dc06f975a4ecd870b74129"/><section>
+    <title>hideAutoControls</title>
+<indexterm><primary>hideAutoControls</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>hideAutoControls</secondary></indexterm>
+<para><computeroutput>bool PathCreation.GlobalDisplaySettings.hideAutoControls = true</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00022">22</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1aee4f7dfb8f4ddffca8be34d12d044724"/><section>
+    <title>highlightedPath</title>
+<indexterm><primary>highlightedPath</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>highlightedPath</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.highlightedPath = new Color(1, 0.6f, 0)</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00041">41</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a0dfb7f8c9ee58c36da1b78b607c4266b"/><section>
+    <title>normals</title>
+<indexterm><primary>normals</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>normals</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.normals = Color.yellow</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00049">49</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a28cb2a8728998e5d90733673d43d5eda"/><section>
+    <title>normalsLength</title>
+<indexterm><primary>normalsLength</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>normalsLength</secondary></indexterm>
+<para><computeroutput>float PathCreation.GlobalDisplaySettings.normalsLength = .1f</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00051">51</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1adb8a87d6d7bfa3ee11f7709dffa2c5a1"/><section>
+    <title>segmentBounds</title>
+<indexterm><primary>segmentBounds</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>segmentBounds</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.segmentBounds = new Color(1, 1, 1, .4f)</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00043">43</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a26b73f81cda50c05e055475059f79b6c"/><section>
+    <title>vertexPath</title>
+<indexterm><primary>vertexPath</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>vertexPath</secondary></indexterm>
+<para><computeroutput>Color PathCreation.GlobalDisplaySettings.vertexPath = Color.white</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00046">46</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a822cfda1f2c2771fe2a96e36e80cfde1"/><section>
+    <title>visibleBehindObjects</title>
+<indexterm><primary>visibleBehindObjects</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>visibleBehindObjects</secondary></indexterm>
+<para><computeroutput>bool PathCreation.GlobalDisplaySettings.visibleBehindObjects = true</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00018">18</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<anchor xml:id="_class_path_creation_1_1_global_display_settings_1a7d3694583d748de8e0445a3f3f68567c"/><section>
+    <title>visibleWhenNotSelected</title>
+<indexterm><primary>visibleWhenNotSelected</primary><secondary>PathCreation.GlobalDisplaySettings</secondary></indexterm>
+<indexterm><primary>PathCreation.GlobalDisplaySettings</primary><secondary>visibleWhenNotSelected</secondary></indexterm>
+<para><computeroutput>bool PathCreation.GlobalDisplaySettings.visibleWhenNotSelected = true</computeroutput></para><para>
+Definition at line <link linkend="__global_display_settings_8cs_source_1l00020">20</link> of file <link linkend="__global_display_settings_8cs_source">GlobalDisplaySettings.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs</section>
+</section>

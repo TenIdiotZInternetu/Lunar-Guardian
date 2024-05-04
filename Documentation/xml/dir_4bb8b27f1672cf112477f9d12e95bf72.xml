@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_4bb8b27f1672cf112477f9d12e95bf72" kind="dir">
+    <compoundname>Kodiky/Unity/Lunar Guardian/Assets/Scripts/UI</compoundname>
+    <innerdir refid="dir_8e5f756b31bf9a5a15fca1e4b3c00ff9">Kodiky/Unity/Lunar Guardian/Assets/Scripts/UI/Menus</innerdir>
+    <innerfile refid="_menu_screen_8cs">MenuScreen.cs</innerfile>
+    <innerfile refid="_text_display_8cs">TextDisplay.cs</innerfile>
+    <innerfile refid="_u_i_bar_8cs">UIBar.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/UI/"/>
+  </compounddef>
+</doxygen>

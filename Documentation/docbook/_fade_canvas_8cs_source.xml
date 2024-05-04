@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__fade_canvas_8cs_source" xml:lang="en-US">
+<title>FadeCanvas.cs</title>
+<indexterm><primary>Scripts/VFX/FadeCanvas.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__fade_canvas_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System.Collections;
+<anchor xml:id="__fade_canvas_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__fade_canvas_8cs_source_1l00003"/>00003 
+<anchor xml:id="__fade_canvas_8cs_source_1l00004"/>00004 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_v_f_x">VFX</link>
+<anchor xml:id="__fade_canvas_8cs_source_1l00005"/>00005 {
+<anchor xml:id="__fade_canvas_8cs_source_1l00009"/>00009 &#32;&#32;&#32;&#32;[RequireComponent(typeof(CanvasGroup))]
+<anchor xml:id="__fade_canvas_8cs_source_1l00010"/><link linkend="_class_v_f_x_1_1_fade_canvas">00010</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_v_f_x_1_1_fade_canvas">FadeCanvas</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__fade_canvas_8cs_source_1l00011"/>00011 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__fade_canvas_8cs_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------------&#32;Public&#32;Fields&#32;--------------------*/</emphasis>
+<anchor xml:id="__fade_canvas_8cs_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00017"/><link linkend="_class_v_f_x_1_1_fade_canvas_1a120ff4ee3aab964959da68032a0fc061">00017</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_v_f_x_1_1_fade_canvas_1a120ff4ee3aab964959da68032a0fc061">fadeInDelay</link>;
+<anchor xml:id="__fade_canvas_8cs_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00022"/><link linkend="_class_v_f_x_1_1_fade_canvas_1a50a0d1597750af40fa53cb13c01821f5">00022</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_class_v_f_x_1_1_fade_canvas_1a50a0d1597750af40fa53cb13c01821f5">fadeOutDelay</link>;
+<anchor xml:id="__fade_canvas_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------------&#32;Private&#32;Fields&#32;--------------------*/</emphasis>
+<anchor xml:id="__fade_canvas_8cs_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;CanvasGroup&#32;_canvas;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Canvas&#32;to&#32;fade</emphasis>
+<anchor xml:id="__fade_canvas_8cs_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------------&#32;Unity&#32;Callbacks&#32;--------------------*/</emphasis>
+<anchor xml:id="__fade_canvas_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__fade_canvas_8cs_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__fade_canvas_8cs_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_canvas&#32;=&#32;GetComponent&lt;CanvasGroup&gt;();
+<anchor xml:id="__fade_canvas_8cs_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__fade_canvas_8cs_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------------&#32;Public&#32;Methods&#32;--------------------*/</emphasis>
+<anchor xml:id="__fade_canvas_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00041"/><link linkend="_class_v_f_x_1_1_fade_canvas_1ae2c4f195150adc0cabf7f4fa4afe0c7a">00041</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_v_f_x_1_1_fade_canvas_1ae2c4f195150adc0cabf7f4fa4afe0c7a">FadeIn</link>(<emphasis role="keywordtype">float</emphasis>&#32;fadeInTime)
+<anchor xml:id="__fade_canvas_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__fade_canvas_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartCoroutine(LerpAlpha(1,&#32;fadeInTime,&#32;<link linkend="_class_v_f_x_1_1_fade_canvas_1a120ff4ee3aab964959da68032a0fc061">fadeInDelay</link>));
+<anchor xml:id="__fade_canvas_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__fade_canvas_8cs_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00050"/><link linkend="_class_v_f_x_1_1_fade_canvas_1ac1978d4dd30acb338999e1adad433d9c">00050</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_v_f_x_1_1_fade_canvas_1ac1978d4dd30acb338999e1adad433d9c">FadeOut</link>(<emphasis role="keywordtype">float</emphasis>&#32;fadeOutTime)
+<anchor xml:id="__fade_canvas_8cs_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__fade_canvas_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;StartCoroutine(LerpAlpha(0,&#32;fadeOutTime,&#32;<link linkend="_class_v_f_x_1_1_fade_canvas_1a50a0d1597750af40fa53cb13c01821f5">fadeOutDelay</link>));
+<anchor xml:id="__fade_canvas_8cs_source_1l00053"/>00053 
+<anchor xml:id="__fade_canvas_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__fade_canvas_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*--------------------&#32;Private&#32;Methods&#32;--------------------*/</emphasis>
+<anchor xml:id="__fade_canvas_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;IEnumerator&#32;LerpAlpha(<emphasis role="keywordtype">float</emphasis>&#32;targetAlpha,&#32;<emphasis role="keywordtype">float</emphasis>&#32;duration,&#32;<emphasis role="keywordtype">float</emphasis>&#32;delay)
+<anchor xml:id="__fade_canvas_8cs_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__fade_canvas_8cs_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;currentAlpha&#32;=&#32;_canvas.alpha;
+<anchor xml:id="__fade_canvas_8cs_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;timePassed&#32;=&#32;0;
+<anchor xml:id="__fade_canvas_8cs_source_1l00063"/>00063 
+<anchor xml:id="__fade_canvas_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;WaitForSeconds(delay);
+<anchor xml:id="__fade_canvas_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__fade_canvas_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(timePassed&#32;&lt;&#32;duration)
+<anchor xml:id="__fade_canvas_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__fade_canvas_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_canvas.alpha&#32;=&#32;Mathf.Lerp(currentAlpha,&#32;targetAlpha,&#32;timePassed&#32;/&#32;duration);
+<anchor xml:id="__fade_canvas_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;timePassed&#32;+=&#32;Time.unscaledDeltaTime;
+<anchor xml:id="__fade_canvas_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;yield&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__fade_canvas_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__fade_canvas_8cs_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__fade_canvas_8cs_source_1l00073"/>00073 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__fade_canvas_8cs_source_1l00074"/>00074 }
+</programlisting></section>

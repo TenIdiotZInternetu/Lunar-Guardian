@@ -1,0 +1,76 @@
+\doxysection{Global\+Display\+Settings.\+cs}
+\hypertarget{_global_display_settings_8cs_source}{}\label{_global_display_settings_8cs_source}\index{Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs@{Tools/PathCreator/Core/Runtime/Objects/GlobalDisplaySettings.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_path_creation}{PathCreation}}}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//[CreateAssetMenu()]}}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }GlobalDisplaySettings\ :\ ScriptableObject}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ HandleType\ \{\ Sphere,\ Circle,\ Square\ \};}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Appearance"{}})]}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ anchorSize\ =\ 10;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ controlSize\ =\ 7f;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ [Tooltip(\textcolor{stringliteral}{"{}Should\ the\ path\ still\ be\ drawn\ when\ behind\ objects\ in\ the\ scene?"{}})]}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ visibleBehindObjects\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ [Tooltip(\textcolor{stringliteral}{"{}Should\ the\ path\ be\ drawn\ even\ when\ the\ path\ object\ is\ not\ selected?"{}})]}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ visibleWhenNotSelected\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ [Tooltip(\textcolor{stringliteral}{"{}If\ true,\ control\ points\ will\ be\ hidden\ when\ the\ control\ point\ mode\ is\ set\ to\ automatic.\ Otherwise\ they\ will\ inactive,\ but\ still\ visible."{}})]}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ hideAutoControls\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ HandleType\ anchorShape;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ HandleType\ controlShape;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Anchor\ Colours"{}})]}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ anchor\ =\ \textcolor{keyword}{new}\ Color(0.95f,\ 0.25f,\ 0.25f,\ 0.85f);}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ anchorHighlighted\ =\ \textcolor{keyword}{new}\ Color(1,\ 0.57f,\ 0.4f);}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ anchorSelected\ =\ Color.white;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Control\ Colours"{}})]}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ control\ =\ \textcolor{keyword}{new}\ Color(0.35f,\ 0.6f,\ 1,\ 0.85f);}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ controlHighlighted\ =\ \textcolor{keyword}{new}\ Color(0.8f,\ 0.67f,\ 0.97f);}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ controlSelected\ =\ Color.white;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ handleDisabled\ =\ \textcolor{keyword}{new}\ Color(1,\ 1,\ 1,\ 0.2f);}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ controlLine\ =\ \textcolor{keyword}{new}\ Color(0,\ 0,\ 0,\ 0.35f);}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Bezier\ Path\ Colours"{}})]}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ bezierPath\ =\ Color.green;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ highlightedPath\ =\ \textcolor{keyword}{new}\ Color(1,\ 0.6f,\ 0);}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ bounds\ =\ \textcolor{keyword}{new}\ Color(1,\ 1,\ 1,\ .4f);}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ segmentBounds\ =\ \textcolor{keyword}{new}\ Color(1,\ 1,\ 1,\ .4f);}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Vertex\ Path\ Colours"{}})]}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ vertexPath\ =\ Color.white;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Normals"{}})]}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Color\ normals\ =\ Color.yellow;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ [Range(0,1)]}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ normalsLength\ =\ .1f;}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00053}00053\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ GlobalDisplaySettings\ Load()\ \{}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[]\ guids\ =\ UnityEditor.AssetDatabase.FindAssets(\textcolor{stringliteral}{"{}t:GlobalDisplaySettings"{}});}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (guids.Length\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\textcolor{stringliteral}{"{}Could\ not\ find\ DisplaySettings\ asset.\ Will\ use\ default\ settings\ instead."{}});}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ScriptableObject.CreateInstance<GlobalDisplaySettings>();}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ path\ =\ UnityEditor.AssetDatabase.GUIDToAssetPath(guids[0]);}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ UnityEditor.AssetDatabase.LoadAssetAtPath<GlobalDisplaySettings>(path);}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00067}00067\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_global_display_settings_8cs_source_l00070}00070\ \}}
+
+\end{DoxyCode}

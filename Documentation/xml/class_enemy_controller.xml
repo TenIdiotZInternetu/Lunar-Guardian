@@ -1,0 +1,449 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_enemy_controller" kind="class" language="C#" prot="public">
+    <compoundname>EnemyController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_enemy_controller_1a848c6e6d77f361c4ec148ddd406e1313" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string EnemyController.PLAYER_PROJECTILE_TAG</definition>
+        <argsstring></argsstring>
+        <name>PLAYER_PROJECTILE_TAG</name>
+        <qualifiedname>EnemyController.PLAYER_PROJECTILE_TAG</qualifiedname>
+        <initializer>= &quot;PlayerProjectile&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="17" column="26" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_controller_1af4b2f14bdd67174ae9f1a883dd4998d7" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string EnemyController.BORDER_TAG</definition>
+        <argsstring></argsstring>
+        <name>BORDER_TAG</name>
+        <qualifiedname>EnemyController.BORDER_TAG</qualifiedname>
+        <initializer>= &quot;PlayfieldBorder&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="18" column="26" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_controller_1acd278187786f853dfa071673d11a6c3c" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float EnemyController.TRIGGER_DEBOUNCE_TIME</definition>
+        <argsstring></argsstring>
+        <name>TRIGGER_DEBOUNCE_TIME</name>
+        <qualifiedname>EnemyController.TRIGGER_DEBOUNCE_TIME</qualifiedname>
+        <initializer>= 0.01f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="19" column="25" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_enemy_controller_1ae7bdfbd336776df88b959a29eccd33f6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool EnemyController.hasAggro</definition>
+        <argsstring></argsstring>
+        <name>hasAggro</name>
+        <qualifiedname>EnemyController.hasAggro</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="21" column="17" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_controller_1a88e9ae4fff417ea370ab9e5a464b7992" prot="public" static="no" mutable="no">
+        <type><ref refid="class_spawnables_1_1_projectiles_1_1_weapon" kindref="compound">Weapon</ref></type>
+        <definition>Weapon EnemyController.weapon</definition>
+        <argsstring></argsstring>
+        <name>weapon</name>
+        <qualifiedname>EnemyController.weapon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="22" column="19" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="event">
+      <memberdef kind="event" id="class_enemy_controller_1a3f474973d3ce84bb3a36f99bf9b351f7" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action EnemyController.ShootsEvent</definition>
+        <argsstring></argsstring>
+        <name>ShootsEvent</name>
+        <qualifiedname>EnemyController.ShootsEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="23" column="25" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_enemy_controller_1a46ba1c2ca481e784c564b86532414b21" prot="private" static="no" mutable="no">
+        <type><ref refid="class_tools_1_1_game_object_event" kindref="compound">GameObjectEvent</ref></type>
+        <definition>GameObjectEvent EnemyController.onTakesHitEvent</definition>
+        <argsstring></argsstring>
+        <name>onTakesHitEvent</name>
+        <qualifiedname>EnemyController.onTakesHitEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="25" column="30" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_controller_1aef6eee1f4be7cc013213dc0f1bf8de2e" prot="private" static="no" mutable="no">
+        <type>UnityEvent</type>
+        <definition>UnityEvent EnemyController.onDeathEvent</definition>
+        <argsstring></argsstring>
+        <name>onDeathEvent</name>
+        <qualifiedname>EnemyController.onDeathEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="26" column="25" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_controller_1a5326e16a61ea20c0b0a3e4972a329d4a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_spawnables_1_1_projectiles_1_1_enemy" kindref="compound">Enemy</ref></type>
+        <definition>Enemy EnemyController._enemyVariables</definition>
+        <argsstring></argsstring>
+        <name>_enemyVariables</name>
+        <qualifiedname>EnemyController._enemyVariables</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="28" column="19" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_controller_1ac824a0ef8908e0ad6fd2462a861b4480" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EnemyController._currentHealth</definition>
+        <argsstring></argsstring>
+        <name>_currentHealth</name>
+        <qualifiedname>EnemyController._currentHealth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="29" column="17" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_controller_1a04fecc93d9babd16d659a6e76d33847f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float EnemyController._timeOfLastTrigger</definition>
+        <argsstring></argsstring>
+        <name>_timeOfLastTrigger</name>
+        <qualifiedname>EnemyController._timeOfLastTrigger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="30" column="19" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_enemy_controller_1a6fc5ecf600353d0ba4aea79071eaf09f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.OnEnable</definition>
+        <argsstring>()</argsstring>
+        <name>OnEnable</name>
+        <qualifiedname>EnemyController.OnEnable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="32" column="10" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="32" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_controller_1a41090510cff98622fe675d1f6e3ecd82" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>EnemyController.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="44" column="10" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_controller_1a03bb033800af2a2be33c61d918c855f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.OnTriggerEnter2D</definition>
+        <argsstring>(Collider2D other)</argsstring>
+        <name>OnTriggerEnter2D</name>
+        <qualifiedname>EnemyController.OnTriggerEnter2D</qualifiedname>
+        <param>
+          <type>Collider2D</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="49" column="10" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="49" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_controller_1a4e64b2794993f3361d17d5724eade730" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.OnTriggerExit2D</definition>
+        <argsstring>(Collider2D other)</argsstring>
+        <name>OnTriggerExit2D</name>
+        <qualifiedname>EnemyController.OnTriggerExit2D</qualifiedname>
+        <param>
+          <type>Collider2D</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="63" column="10" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="63" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_controller_1a87c032bff8ee40091af2ce7a9727d806" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.OnProjectileCollision</definition>
+        <argsstring>(GameObject projectile)</argsstring>
+        <name>OnProjectileCollision</name>
+        <qualifiedname>EnemyController.OnProjectileCollision</qualifiedname>
+        <param>
+          <type>GameObject</type>
+          <declname>projectile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="87" column="18" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="87" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_controller_1a878369a9e0db144c24d015773d087441" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.SwitchAggro</definition>
+        <argsstring>()</argsstring>
+        <name>SwitchAggro</name>
+        <qualifiedname>EnemyController.SwitchAggro</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="94" column="18" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="94" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_controller_1a89e4c36833fbb9d8cc6123dd51fabbb9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.RotateTowardsPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>RotateTowardsPlayer</name>
+        <qualifiedname>EnemyController.RotateTowardsPlayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="101" column="18" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="101" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_controller_1aa2585b33cdd57288a0c5a669f188f6ca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.Die</definition>
+        <argsstring>()</argsstring>
+        <name>Die</name>
+        <qualifiedname>EnemyController.Die</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="110" column="18" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="110" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_controller_1a98b4f2b8c651189ef6b419e6400abc36" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.DropLoot</definition>
+        <argsstring>()</argsstring>
+        <name>DropLoot</name>
+        <qualifiedname>EnemyController.DropLoot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="120" column="18" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="120" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_controller_1ab3cf14e10606551bc8f720eb9bb5e202" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.OnBombDamageTick</definition>
+        <argsstring>(int damage)</argsstring>
+        <name>OnBombDamageTick</name>
+        <qualifiedname>EnemyController.OnBombDamageTick</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>damage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="137" column="18" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_controller_1a14ba7d01865bf9b5e110a4497d774952" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.OnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroy</name>
+        <qualifiedname>EnemyController.OnDestroy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="142" column="18" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="142" bodyend="145"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_enemy_controller_1a141583151be3cc9a01658b0c3d39b566" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.TakeDamage</definition>
+        <argsstring>(int damage, GameObject damageSource)</argsstring>
+        <name>TakeDamage</name>
+        <qualifiedname>EnemyController.TakeDamage</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>damage</declname>
+        </param>
+        <param>
+          <type>GameObject</type>
+          <declname>damageSource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="73" column="17" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="73" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_controller_1a40c4d059fce2a70bad2b87d1ff1e1173" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnemyController.SetVariables</definition>
+        <argsstring>(Enemy enemyVariables)</argsstring>
+        <name>SetVariables</name>
+        <qualifiedname>EnemyController.SetVariables</qualifiedname>
+        <param>
+          <type><ref refid="class_spawnables_1_1_projectiles_1_1_enemy" kindref="compound">Enemy</ref></type>
+          <declname>enemyVariables</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="82" column="17" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="82" bodyend="85"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>EnemyController</label>
+        <link refid="class_enemy_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>EnemyController</label>
+        <link refid="class_enemy_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>weapon</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="3">
+        <label>Spawnables.Projectiles.Weapon</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_weapon"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" line="15" column="7" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/EnemyScripts/EnemyController.cs" bodystart="16" bodyend="146"/>
+    <listofallmembers>
+      <member refid="class_enemy_controller_1ac824a0ef8908e0ad6fd2462a861b4480" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>_currentHealth</name></member>
+      <member refid="class_enemy_controller_1a5326e16a61ea20c0b0a3e4972a329d4a" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>_enemyVariables</name></member>
+      <member refid="class_enemy_controller_1a04fecc93d9babd16d659a6e76d33847f" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>_timeOfLastTrigger</name></member>
+      <member refid="class_enemy_controller_1af4b2f14bdd67174ae9f1a883dd4998d7" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>BORDER_TAG</name></member>
+      <member refid="class_enemy_controller_1aa2585b33cdd57288a0c5a669f188f6ca" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>Die</name></member>
+      <member refid="class_enemy_controller_1a98b4f2b8c651189ef6b419e6400abc36" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>DropLoot</name></member>
+      <member refid="class_enemy_controller_1ae7bdfbd336776df88b959a29eccd33f6" prot="public" virt="non-virtual"><scope>EnemyController</scope><name>hasAggro</name></member>
+      <member refid="class_enemy_controller_1ab3cf14e10606551bc8f720eb9bb5e202" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>OnBombDamageTick</name></member>
+      <member refid="class_enemy_controller_1aef6eee1f4be7cc013213dc0f1bf8de2e" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>onDeathEvent</name></member>
+      <member refid="class_enemy_controller_1a14ba7d01865bf9b5e110a4497d774952" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>OnDestroy</name></member>
+      <member refid="class_enemy_controller_1a6fc5ecf600353d0ba4aea79071eaf09f" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>OnEnable</name></member>
+      <member refid="class_enemy_controller_1a87c032bff8ee40091af2ce7a9727d806" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>OnProjectileCollision</name></member>
+      <member refid="class_enemy_controller_1a46ba1c2ca481e784c564b86532414b21" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>onTakesHitEvent</name></member>
+      <member refid="class_enemy_controller_1a03bb033800af2a2be33c61d918c855f0" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>OnTriggerEnter2D</name></member>
+      <member refid="class_enemy_controller_1a4e64b2794993f3361d17d5724eade730" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>OnTriggerExit2D</name></member>
+      <member refid="class_enemy_controller_1a848c6e6d77f361c4ec148ddd406e1313" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>PLAYER_PROJECTILE_TAG</name></member>
+      <member refid="class_enemy_controller_1a89e4c36833fbb9d8cc6123dd51fabbb9" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>RotateTowardsPlayer</name></member>
+      <member refid="class_enemy_controller_1a40c4d059fce2a70bad2b87d1ff1e1173" prot="public" virt="non-virtual"><scope>EnemyController</scope><name>SetVariables</name></member>
+      <member refid="class_enemy_controller_1a3f474973d3ce84bb3a36f99bf9b351f7" prot="public" virt="non-virtual"><scope>EnemyController</scope><name>ShootsEvent</name></member>
+      <member refid="class_enemy_controller_1a878369a9e0db144c24d015773d087441" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>SwitchAggro</name></member>
+      <member refid="class_enemy_controller_1a141583151be3cc9a01658b0c3d39b566" prot="public" virt="non-virtual"><scope>EnemyController</scope><name>TakeDamage</name></member>
+      <member refid="class_enemy_controller_1acd278187786f853dfa071673d11a6c3c" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>TRIGGER_DEBOUNCE_TIME</name></member>
+      <member refid="class_enemy_controller_1a41090510cff98622fe675d1f6e3ecd82" prot="private" virt="non-virtual"><scope>EnemyController</scope><name>Update</name></member>
+      <member refid="class_enemy_controller_1a88e9ae4fff417ea370ab9e5a464b7992" prot="public" virt="non-virtual"><scope>EnemyController</scope><name>weapon</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

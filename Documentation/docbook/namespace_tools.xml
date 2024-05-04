@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_tools" xml:lang="en-US">
+<title>Tools Namespace Reference</title>
+<indexterm><primary>Tools</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_tools_1_1_component_utils">ComponentUtils</link></para>
+
+<para>A collection of utilities for working with Components. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_tools_1_1_game_object_event">GameObjectEvent</link></para>
+
+<para>Unity Event with GameObject parameter. </para>
+</listitem>
+            <listitem><para>class <link linkend="_class_tools_1_1_game_state_event">GameStateEvent</link></para>
+
+<para>Unity Event with GameState parameter. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

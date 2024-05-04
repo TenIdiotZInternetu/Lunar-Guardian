@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_bd79789affcc55005b088fc254a18d50" kind="dir">
+    <compoundname>Scripts/PlayerScripts</compoundname>
+    <innerfile refid="_bomb_controller_8cs">BombController.cs</innerfile>
+    <innerfile refid="_controls_8cs">Controls.cs</innerfile>
+    <innerfile refid="_player_8cs">Player.cs</innerfile>
+    <innerfile refid="_player_hitbox_8cs">PlayerHitbox.cs</innerfile>
+    <innerfile refid="_player_status_8cs">PlayerStatus.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/PlayerScripts/"/>
+  </compounddef>
+</doxygen>

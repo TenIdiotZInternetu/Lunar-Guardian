@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spawnables_1_1_game_manager" xml:lang="en-US">
+<title>Spawnables.GameManager Class Reference</title>
+<indexterm><primary>Spawnables.GameManager</primary></indexterm>
+<para>
+
+<para>A state machine that controls the flow of the gameplay. </para>
+ 
+</para>
+Inheritance diagram for Spawnables.GameManager:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_game_manager__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Spawnables.GameManager:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_game_manager__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_spawnables_1_1_game_manager_1a0615686d1bec5225721995ea7b70bb66">Awake</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_spawnables_1_1_game_manager_1aa14f4da9423e8c4e35eae1b54da0b9f1">ChangeState</link> (<link linkend="_class_game_states_1_1_game_state">GameState</link> newState)</para>
+
+<para>Activates the given state and deactivates the current state. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_spawnables_1_1_game_manager_1a4fa557edb780cc051e9b7c2c68defb94">SaveAndQuit</link> (string playersName)</para>
+
+<para>Saves the obtained score and returns to the main menu. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_game_states_1_1_game_state">GameState</link> <link linkend="_class_spawnables_1_1_game_manager_1a80fe9c54bca19e026dba46bcf9ee6d43">initialState</link></para>
+
+<para>State to set upon loading a scene. </para>
+</listitem>
+            <listitem><para><link linkend="_class_tymski_1_1_scene_reference">SceneReference</link> <link linkend="_class_spawnables_1_1_game_manager_1aac79c7b5597c5e61589da6f92b2531f2">mainMenuScene</link></para>
+
+<para>A scene to return to upon quitting the gameplay. </para>
+</listitem>
+            <listitem><para><link linkend="_class_tools_1_1_game_state_event">GameStateEvent</link> <link linkend="_class_spawnables_1_1_game_manager_1a836dc3d2c52222fad7d5538d60b6a705">onStateChanged</link></para>
+
+<para>Event with GameState parameter that is invoked when the state of the game changes. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_spawnables_1_1_game_manager">GameManager</link> <link linkend="_class_spawnables_1_1_game_manager_1abd608174557d9eb5c119329878927ce4">Instance</link></para>
+
+<para>Singleton instance of the GameManager. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A state machine that controls the flow of the gameplay. </para>
+<para>
+Definition at line <link linkend="__game_manager_8cs_source_1l00015">15</link> of file <link linkend="__game_manager_8cs_source">GameManager.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_game_manager_1a0615686d1bec5225721995ea7b70bb66"/><section>
+    <title>Awake()</title>
+<indexterm><primary>Awake</primary><secondary>Spawnables.GameManager</secondary></indexterm>
+<indexterm><primary>Spawnables.GameManager</primary><secondary>Awake</secondary></indexterm>
+<para><computeroutput>void Spawnables.GameManager.Awake ( )</computeroutput></para><para>
+Definition at line <link linkend="__game_manager_8cs_source_1l00049">49</link> of file <link linkend="__game_manager_8cs_source">GameManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_game_manager_1aa14f4da9423e8c4e35eae1b54da0b9f1"/><section>
+    <title>ChangeState()</title>
+<indexterm><primary>ChangeState</primary><secondary>Spawnables.GameManager</secondary></indexterm>
+<indexterm><primary>Spawnables.GameManager</primary><secondary>ChangeState</secondary></indexterm>
+<para><computeroutput>void Spawnables.GameManager.ChangeState (<link linkend="_class_game_states_1_1_game_state">GameState</link> newState)</computeroutput></para><para>
+
+<para>Activates the given state and deactivates the current state. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>newState</entry><entry>
+<para>The newly activated state </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__game_manager_8cs_source_1l00064">64</link> of file <link linkend="__game_manager_8cs_source">GameManager.cs</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spawnables_1_1_game_manager_aa14f4da9423e8c4e35eae1b54da0b9f1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_game_manager_1a4fa557edb780cc051e9b7c2c68defb94"/><section>
+    <title>SaveAndQuit()</title>
+<indexterm><primary>SaveAndQuit</primary><secondary>Spawnables.GameManager</secondary></indexterm>
+<indexterm><primary>Spawnables.GameManager</primary><secondary>SaveAndQuit</secondary></indexterm>
+<para><computeroutput>void Spawnables.GameManager.SaveAndQuit (string playersName)</computeroutput></para><para>
+
+<para>Saves the obtained score and returns to the main menu. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>playersName</entry><entry>
+<para>Name of the player to save to the leaderboards </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__game_manager_8cs_source_1l00077">77</link> of file <link linkend="__game_manager_8cs_source">GameManager.cs</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_spawnables_1_1_game_manager_1a80fe9c54bca19e026dba46bcf9ee6d43"/><section>
+    <title>initialState</title>
+<indexterm><primary>initialState</primary><secondary>Spawnables.GameManager</secondary></indexterm>
+<indexterm><primary>Spawnables.GameManager</primary><secondary>initialState</secondary></indexterm>
+<para><computeroutput><link linkend="_class_game_states_1_1_game_state">GameState</link> Spawnables.GameManager.initialState</computeroutput></para><para>
+
+<para>State to set upon loading a scene. </para>
+</para>
+<para>
+Definition at line <link linkend="__game_manager_8cs_source_1l00029">29</link> of file <link linkend="__game_manager_8cs_source">GameManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_game_manager_1abd608174557d9eb5c119329878927ce4"/><section>
+    <title>Instance</title>
+<indexterm><primary>Instance</primary><secondary>Spawnables.GameManager</secondary></indexterm>
+<indexterm><primary>Spawnables.GameManager</primary><secondary>Instance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_spawnables_1_1_game_manager">GameManager</link> Spawnables.GameManager.Instance<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Singleton instance of the GameManager. </para>
+</para>
+<para>
+Definition at line <link linkend="__game_manager_8cs_source_1l00022">22</link> of file <link linkend="__game_manager_8cs_source">GameManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_game_manager_1aac79c7b5597c5e61589da6f92b2531f2"/><section>
+    <title>mainMenuScene</title>
+<indexterm><primary>mainMenuScene</primary><secondary>Spawnables.GameManager</secondary></indexterm>
+<indexterm><primary>Spawnables.GameManager</primary><secondary>mainMenuScene</secondary></indexterm>
+<para><computeroutput><link linkend="_class_tymski_1_1_scene_reference">SceneReference</link> Spawnables.GameManager.mainMenuScene</computeroutput></para><para>
+
+<para>A scene to return to upon quitting the gameplay. </para>
+</para>
+<para>
+Definition at line <link linkend="__game_manager_8cs_source_1l00034">34</link> of file <link linkend="__game_manager_8cs_source">GameManager.cs</link>.</para>
+</section>
+<anchor xml:id="_class_spawnables_1_1_game_manager_1a836dc3d2c52222fad7d5538d60b6a705"/><section>
+    <title>onStateChanged</title>
+<indexterm><primary>onStateChanged</primary><secondary>Spawnables.GameManager</secondary></indexterm>
+<indexterm><primary>Spawnables.GameManager</primary><secondary>onStateChanged</secondary></indexterm>
+<para><computeroutput><link linkend="_class_tools_1_1_game_state_event">GameStateEvent</link> Spawnables.GameManager.onStateChanged</computeroutput></para><para>
+
+<para>Event with GameState parameter that is invoked when the state of the game changes. </para>
+</para>
+<para>
+Definition at line <link linkend="__game_manager_8cs_source_1l00041">41</link> of file <link linkend="__game_manager_8cs_source">GameManager.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates/GameManager.cs</section>
+</section>

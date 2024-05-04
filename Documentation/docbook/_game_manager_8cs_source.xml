@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__game_manager_8cs_source" xml:lang="en-US">
+<title>GameManager.cs</title>
+<indexterm><primary>Scripts/GameManager/GameManager.cs</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__game_manager_8cs_source_1l00001"/>00001 <emphasis role="keyword">using&#32;</emphasis>System;
+<anchor xml:id="__game_manager_8cs_source_1l00002"/>00002 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_serialization">Serialization</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00003"/>00003 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_player_scripts">PlayerScripts</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00004"/>00004 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_tools">Tools</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00005"/>00005 <emphasis role="keyword">using&#32;</emphasis><link linkend="_namespace_tymski">Tymski</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00006"/>00006 <emphasis role="keyword">using&#32;</emphasis>UnityEngine;
+<anchor xml:id="__game_manager_8cs_source_1l00007"/>00007 <emphasis role="keyword">using&#32;</emphasis>UnityEngine.SceneManagement;
+<anchor xml:id="__game_manager_8cs_source_1l00008"/>00008 
+<anchor xml:id="__game_manager_8cs_source_1l00009"/><link linkend="_namespace_game_manager">00009</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespace_game_manager">GameManager</link>
+<anchor xml:id="__game_manager_8cs_source_1l00010"/>00010 {
+<anchor xml:id="__game_manager_8cs_source_1l00014"/><link linkend="_class_game_manager_1_1_game_manager">00014</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_namespace_game_manager">GameManager</link>&#32;:&#32;MonoBehaviour
+<anchor xml:id="__game_manager_8cs_source_1l00015"/>00015 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_manager_8cs_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*-----------------&#32;Static&#32;Fields&#32;-----------------*/</emphasis>
+<anchor xml:id="__game_manager_8cs_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_manager_8cs_source_1l00021"/><link linkend="_class_game_manager_1_1_game_manager_1a6276f9bdbe9295f7060832971cc39f18">00021</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_namespace_game_manager">GameManager</link>&#32;<link linkend="_class_game_manager_1_1_game_manager_1a6276f9bdbe9295f7060832971cc39f18">Instance</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_manager_8cs_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*-----------------&#32;Public&#32;Fields&#32;-----------------*/</emphasis>
+<anchor xml:id="__game_manager_8cs_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_manager_8cs_source_1l00028"/><link linkend="_class_game_manager_1_1_game_manager_1a0a71679655b87f85bd97d18fd089d6d4">00028</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_game_manager_1_1_game_state">GameState</link>&#32;<link linkend="_class_game_manager_1_1_game_manager_1a0a71679655b87f85bd97d18fd089d6d4">initialState</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_manager_8cs_source_1l00033"/><link linkend="_class_game_manager_1_1_game_manager_1aa6a3316bd7b321507aa6695fd4255262">00033</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_tymski_1_1_scene_reference">SceneReference</link>&#32;<link linkend="_class_game_manager_1_1_game_manager_1aa6a3316bd7b321507aa6695fd4255262">mainMenuScene</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00034"/>00034 
+<anchor xml:id="__game_manager_8cs_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*---------------------&#32;Events&#32;---------------------*/</emphasis>
+<anchor xml:id="__game_manager_8cs_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_manager_8cs_source_1l00040"/><link linkend="_class_game_manager_1_1_game_manager_1ac8b6e6aaaa700863dd2ca9d30c0681dd">00040</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_tools_1_1_game_state_event">GameStateEvent</link>&#32;<link linkend="_class_game_manager_1_1_game_manager_1ac8b6e6aaaa700863dd2ca9d30c0681dd">onStateChanged</link>;
+<anchor xml:id="__game_manager_8cs_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_manager_8cs_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*-----------------&#32;Private&#32;Fields&#32;-----------------*/</emphasis>
+<anchor xml:id="__game_manager_8cs_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_manager_8cs_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_class_game_manager_1_1_game_state">GameState</link>&#32;_currentState;
+<anchor xml:id="__game_manager_8cs_source_1l00045"/>00045 
+<anchor xml:id="__game_manager_8cs_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*------------------&#32;Unity&#32;Callbacks&#32;---------------*/</emphasis>
+<anchor xml:id="__game_manager_8cs_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_manager_8cs_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;Awake()
+<anchor xml:id="__game_manager_8cs_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_manager_8cs_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Instance&#32;=&#32;<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="__game_manager_8cs_source_1l00051"/>00051 
+<anchor xml:id="__game_manager_8cs_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_currentState&#32;=&#32;initialState;
+<anchor xml:id="__game_manager_8cs_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_currentState.<link linkend="_class_game_manager_1_1_game_state_1ad02ad005cb741028d1049d7731cb4c27">ChangeToThisState</link>();
+<anchor xml:id="__game_manager_8cs_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;onStateChanged?.Invoke(_currentState);
+<anchor xml:id="__game_manager_8cs_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_manager_8cs_source_1l00056"/>00056 
+<anchor xml:id="__game_manager_8cs_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*-----------------&#32;Public&#32;Methods&#32;-----------------*/</emphasis>
+<anchor xml:id="__game_manager_8cs_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_manager_8cs_source_1l00063"/><link linkend="_class_game_manager_1_1_game_manager_1a0e7b307d6a6d5a4a71cb7fea674c0387">00063</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_game_manager_1_1_game_manager_1a0e7b307d6a6d5a4a71cb7fea674c0387">ChangeState</link>(<link linkend="_class_game_manager_1_1_game_state">GameState</link>&#32;newState)
+<anchor xml:id="__game_manager_8cs_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_manager_8cs_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_currentState.<link linkend="_class_game_manager_1_1_game_state_1a4e3e4431ac6f41ff62706d0e3d2f6878">LeaveThisState</link>();
+<anchor xml:id="__game_manager_8cs_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_currentState&#32;=&#32;newState;
+<anchor xml:id="__game_manager_8cs_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;_currentState.<link linkend="_class_game_manager_1_1_game_state_1ad02ad005cb741028d1049d7731cb4c27">ChangeToThisState</link>();
+<anchor xml:id="__game_manager_8cs_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_manager_8cs_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Instance.<link linkend="_class_game_manager_1_1_game_manager_1ac8b6e6aaaa700863dd2ca9d30c0681dd">onStateChanged</link>?.Invoke(_currentState);
+<anchor xml:id="__game_manager_8cs_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_manager_8cs_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_manager_8cs_source_1l00076"/><link linkend="_class_game_manager_1_1_game_manager_1adef25384ad2ee4c9637f3661c1541298">00076</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_game_manager_1_1_game_manager_1adef25384ad2ee4c9637f3661c1541298">SaveAndQuit</link>(<emphasis role="keywordtype">string</emphasis>&#32;playersName)
+<anchor xml:id="__game_manager_8cs_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__game_manager_8cs_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;scoreData&#32;=&#32;<link linkend="_class_serialization_1_1_score_data">ScoreData</link>.<link linkend="_class_serialization_1_1_score_data_1a74cf69194846ff3656b5e1377c39cbda">LoadScores</link>();
+<anchor xml:id="__game_manager_8cs_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scoreData.<link linkend="_class_serialization_1_1_score_data_1a02238a4e4ab88f5e93908f6dd4c098da">AddScoreAndSave</link>(<link linkend="_class_player_scripts_1_1_player_status">PlayerStatus</link>.<link linkend="_class_player_scripts_1_1_player_status_1aeac2eae8e304f20bc75eb574b2df8964">Instance</link>.Score,&#32;playersName);
+<anchor xml:id="__game_manager_8cs_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__game_manager_8cs_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SceneManager.LoadScene(mainMenuScene);
+<anchor xml:id="__game_manager_8cs_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_manager_8cs_source_1l00083"/>00083 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__game_manager_8cs_source_1l00084"/>00084 }
+</programlisting></section>

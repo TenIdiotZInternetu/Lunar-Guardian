@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_1a25dc729e19057cde4caac20c0785e4" kind="dir">
+    <compoundname>Kodiky</compoundname>
+    <innerdir refid="dir_16aabae593b60cb4011beccc96c5da88">Kodiky/Unity</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/"/>
+  </compounddef>
+</doxygen>

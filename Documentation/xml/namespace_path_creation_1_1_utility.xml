@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_path_creation_1_1_utility" kind="namespace" language="C#">
+    <compoundname>PathCreation::Utility</compoundname>
+    <innerclass refid="class_path_creation_1_1_utility_1_1_cubic_bezier_utility" prot="public">PathCreation::Utility::CubicBezierUtility</innerclass>
+    <innerclass refid="class_path_creation_1_1_utility_1_1_math_utility" prot="public">PathCreation::Utility::MathUtility</innerclass>
+    <innerclass refid="class_path_creation_1_1_utility_1_1_vertex_path_utility" prot="public">PathCreation::Utility::VertexPathUtility</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Runtime/Utility/CubicBezierUtility.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

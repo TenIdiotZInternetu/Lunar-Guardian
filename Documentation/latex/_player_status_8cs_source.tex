@@ -1,0 +1,230 @@
+\doxysection{Player\+Status.\+cs}
+\hypertarget{_player_status_8cs_source}{}\label{_player_status_8cs_source}\index{Scripts/PlayerScripts/PlayerStatus.cs@{Scripts/PlayerScripts/PlayerStatus.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Reflection;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }MyBox;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_player_scripts}{PlayerScripts}}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00011}\mbox{\hyperlink{class_player_scripts_1_1_player_status}{00011}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_scripts_1_1_player_status}{PlayerStatus}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00012}00012\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00018}\mbox{\hyperlink{class_player_scripts_1_1_player_status_a8571efa4409be32e28abf3ea74a0dbb1}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a8571efa4409be32e28abf3ea74a0dbb1}{ResourceType}}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ Health,}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ Bombs,}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ Power,}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ Score,}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ ScoreMultiplier}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Substrings\ to\ attach\ when\ Subscribing\ to\ resource\ agnostic\ Subscribe\ and\ ChangeResource\ methods}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ CHANGE\_METHOD\_PREFIX\ =\ \textcolor{stringliteral}{"{}Change"{}};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ EVENT\_NAME\_SUFFIX\ =\ \textcolor{stringliteral}{"{}ChangedEvent"{}};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Amount\ of\ power\ needed\ to\ increase\ power\ level}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Increasing\ power\ level\ unlocks\ more\ powerful\ weapons}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{int}[]\ POWER\_LEVELS\ =\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ 25,\ 50,\ 75,\ 100,\ 150,\ 200}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Score\ multiplier\ at\ each\ level}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{float}[]\ MULTIPLIER\_LEVELS\ =\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ 1,\ 1.15f,\ 1.3f,\ 1.45f,\ 1.6f,\ 1.75f,\ 2,\ 2.2f,\ 2.4f,\ 2.6f,\ 2.8f,\ 3,\ 3.5f,\ 4,\ 4.5f,\ 5}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Static\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00051}\mbox{\hyperlink{class_player_scripts_1_1_player_status_aeac2eae8e304f20bc75eb574b2df8964}{00051}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status}{PlayerStatus}}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_aeac2eae8e304f20bc75eb574b2df8964}{Instance}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Inspector\ variables\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ maxHealth\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ startingHealth\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ maxBombsHeld\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ startingBombsHeld\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ maxPower\ =\ 200;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ startingPower\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ [Separator]}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00067}\mbox{\hyperlink{class_player_scripts_1_1_player_status_adf08962e6157777feae044d2ad6c1ca5}{00067}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_adf08962e6157777feae044d2ad6c1ca5}{maxMultiplierScoreBonus}}\ =\ 100;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00072}\mbox{\hyperlink{class_player_scripts_1_1_player_status_a7336b6cd8782708a2ffaa32505111436}{00072}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a7336b6cd8782708a2ffaa32505111436}{healthUpRequirementIncrement}}\ =\ 1000000;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00077}\mbox{\hyperlink{class_player_scripts_1_1_player_status_a003c51d423b7d53fcc827089df709e5e}{00077}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a003c51d423b7d53fcc827089df709e5e}{healthOverflowBonus}}\ =\ 20000;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Events\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00084}\mbox{\hyperlink{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02}{00084}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ delegate\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02}{ChangedValueListener}}(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02}{ChangedValueListener}}\ HealthChangedEvent;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02}{ChangedValueListener}}\ BombsChangedEvent;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02}{ChangedValueListener}}\ PowerChangedEvent;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02}{ChangedValueListener}}\ PowerLevelChangedEvent;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02}{ChangedValueListener}}\ ScoreChangedEvent;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02}{ChangedValueListener}}\ ScoreMultiplierChangedEvent;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00096}\mbox{\hyperlink{class_player_scripts_1_1_player_status_a18f932a93b76c23809add1bf070899bf}{00096}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{event}\ Action\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a18f932a93b76c23809add1bf070899bf}{GameOverEvent}};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_health;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Current\ health\ of\ the\ player}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \_bombsHeld;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Current\ amount\ of\ bombs\ held\ by\ the\ player}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_power;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Current\ power\ of\ the\ player}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \_scoreMultiplier;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Current\ score\ multiplier\ of\ the\ player}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_scoreMultiplierLevel;\ \ \ \ \ \ \textcolor{comment}{//\ Amount\ of\ Multiplier\ pickups\ caught\ in\ a\ row}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_healthUpRequirement;\ \ \ \ \ \ \ \textcolor{comment}{//\ Next\ extra\ health\ gained\ at\ this\ score}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Score\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Unity\ Callbacks\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ Start()}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_status_aeac2eae8e304f20bc75eb574b2df8964}{Instance}}\ =\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a372de693ad40b3f42839c8ec6ac845f4}{Reset}}();}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Static\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00125}\mbox{\hyperlink{class_player_scripts_1_1_player_status_ab468d4779fc1a9b54ce99dc71555c3fa}{00125}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab468d4779fc1a9b54ce99dc71555c3fa}{Subscribe}}(\mbox{\hyperlink{class_player_scripts_1_1_player_status_a8571efa4409be32e28abf3ea74a0dbb1}{ResourceType}}\ resourceType,\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab970fa018b4d8649819392b0ce20eb02}{ChangedValueListener}}\ listener)}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ Type\ playerStatusType\ =\ typeof(\mbox{\hyperlink{class_player_scripts_1_1_player_status}{PlayerStatus}});}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ eventName\ =\ resourceType\ +\ EVENT\_NAME\_SUFFIX;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ EventInfo\ statusEvent\ =\ playerStatusType.GetEvent(eventName);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ statusEvent.AddEventHandler(\textcolor{keyword}{null},\ listener);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00138}\mbox{\hyperlink{class_player_scripts_1_1_player_status_a3fd9672e4dfe8040bd6f7011ef2e0f86}{00138}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a3fd9672e4dfe8040bd6f7011ef2e0f86}{ChangeResource}}(\mbox{\hyperlink{class_player_scripts_1_1_player_status_a8571efa4409be32e28abf3ea74a0dbb1}{ResourceType}}\ resourceType,\ \textcolor{keywordtype}{int}\ amount)}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ Type\ playerStatusType\ =\ typeof(\mbox{\hyperlink{class_player_scripts_1_1_player_status}{PlayerStatus}});}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ methodName\ =\ CHANGE\_METHOD\_PREFIX\ +\ resourceType;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ MethodInfo\ statusMethod\ =\ playerStatusType.GetMethod(methodName);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ statusMethod.Invoke(\mbox{\hyperlink{class_player_scripts_1_1_player_status_aeac2eae8e304f20bc75eb574b2df8964}{Instance}},\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{object}[]\ \{amount\});}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00151}\mbox{\hyperlink{class_player_scripts_1_1_player_status_a372de693ad40b3f42839c8ec6ac845f4}{00151}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a372de693ad40b3f42839c8ec6ac845f4}{Reset}}()}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \_health\ =\ startingHealth;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ HealthChangedEvent?.Invoke(\_health);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \_bombsHeld\ =\ startingBombsHeld;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ BombsChangedEvent?.Invoke(\_bombsHeld);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \_power\ =\ startingPower;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ PowerChangedEvent?.Invoke(\_power);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ Score\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ ScoreChangedEvent?.Invoke(Score);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \_scoreMultiplier\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ ScoreMultiplierChangedEvent?.Invoke(\_scoreMultiplier);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \_scoreMultiplierLevel\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \_healthUpRequirement\ =\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a7336b6cd8782708a2ffaa32505111436}{healthUpRequirementIncrement}};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00179}\mbox{\hyperlink{class_player_scripts_1_1_player_status_af41d014aba881a7ec30a9cddaf9e0b3a}{00179}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_af41d014aba881a7ec30a9cddaf9e0b3a}{ChangeHealth}}(\textcolor{keywordtype}{int}\ amount)}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \_health\ +=\ amount;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_health\ >\ maxHealth)}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab2e34c964f801ca064cdcd5aaf430c45}{ChangeScore}}(\mbox{\hyperlink{class_player_scripts_1_1_player_status_a003c51d423b7d53fcc827089df709e5e}{healthOverflowBonus}});}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_health\ =\ maxHealth;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_health\ <\ 0)\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a18f932a93b76c23809add1bf070899bf}{GameOverEvent}}?.Invoke();}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ HealthChangedEvent?.Invoke(\_health);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00198}\mbox{\hyperlink{class_player_scripts_1_1_player_status_a93b8c4270f1e17b9624d0dd78b593e98}{00198}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a93b8c4270f1e17b9624d0dd78b593e98}{ChangeBombs}}(\textcolor{keywordtype}{int}\ amount)}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \_bombsHeld\ +=\ amount;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ Math.Clamp(\_bombsHeld,\ 0,\ maxBombsHeld);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ BombsChangedEvent?.Invoke(\_bombsHeld);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00209}\mbox{\hyperlink{class_player_scripts_1_1_player_status_abd2e8bf17dab02c7807a61f445c930bf}{00209}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_abd2e8bf17dab02c7807a61f445c930bf}{ChangePower}}(\textcolor{keywordtype}{int}\ amount)}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \_power\ +=\ amount;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ Math.Clamp(\_power,\ 0,\ maxPower);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ PowerChangedEvent?.Invoke(\_power);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ POWER\_LEVELS.Length;\ i++)}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ level\ =\ POWER\_LEVELS.Length\ -\/\ i;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_power\ >=\ POWER\_LEVELS[level\ -\/\ 1])}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}level:\ "{}}\ +\ level);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PowerLevelChangedEvent?.Invoke(level);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00232}\mbox{\hyperlink{class_player_scripts_1_1_player_status_ab2e34c964f801ca064cdcd5aaf430c45}{00232}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab2e34c964f801ca064cdcd5aaf430c45}{ChangeScore}}(\textcolor{keywordtype}{int}\ amount)}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ Score\ +=\ (int)Math.Ceiling(amount\ *\ \_scoreMultiplier);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Score\ >=\ \_healthUpRequirement)}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_healthUpRequirement\ +=\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a7336b6cd8782708a2ffaa32505111436}{healthUpRequirementIncrement}};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_status_af41d014aba881a7ec30a9cddaf9e0b3a}{ChangeHealth}}(1);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ ScoreChangedEvent?.Invoke(Score);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00249}\mbox{\hyperlink{class_player_scripts_1_1_player_status_a48bde3035abda30d99b282527cdd1bf0}{00249}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a48bde3035abda30d99b282527cdd1bf0}{ChangeScoreMultiplier}}(\textcolor{keywordtype}{int}\ amount)}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_scoreMultiplierLevel\ >=\ MULTIPLIER\_LEVELS.Length\ -\/\ 1)}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_status_ab2e34c964f801ca064cdcd5aaf430c45}{ChangeScore}}(\mbox{\hyperlink{class_player_scripts_1_1_player_status_adf08962e6157777feae044d2ad6c1ca5}{maxMultiplierScoreBonus}});}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \_scoreMultiplierLevel\ +=\ amount;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \_scoreMultiplier\ =\ MULTIPLIER\_LEVELS[\_scoreMultiplierLevel];}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ ScoreMultiplierChangedEvent?.Invoke(\_scoreMultiplier);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00260}00260\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00261}00261\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00265}\mbox{\hyperlink{class_player_scripts_1_1_player_status_a012607dd27a930aa340ffa15fd32cb28}{00265}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a012607dd27a930aa340ffa15fd32cb28}{ResetScoreMultiplier}}()}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00266}00266\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \_scoreMultiplierLevel\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a48bde3035abda30d99b282527cdd1bf0}{ChangeScoreMultiplier}}(0);}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00269}00269\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00270}00270\ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00271}00271\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00272}00272\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00273}00273\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Unsubscribes\ all\ event\ listeners\ when\ this\ object\ is\ destroyed}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00274}00274\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDestroy()}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00275}00275\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ HealthChangedEvent\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ BombsChangedEvent\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ PowerChangedEvent\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ PowerLevelChangedEvent\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ ScoreChangedEvent\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ ScoreMultiplierChangedEvent\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_player_scripts_1_1_player_status_a18f932a93b76c23809add1bf070899bf}{GameOverEvent}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00283}00283\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00284}00284\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_player_status_8cs_source_l00285}00285\ \}}
+
+\end{DoxyCode}

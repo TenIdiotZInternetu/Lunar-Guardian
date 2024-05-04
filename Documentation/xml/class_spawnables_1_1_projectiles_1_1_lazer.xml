@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_spawnables_1_1_projectiles_1_1_lazer" kind="class" language="C#" prot="public">
+    <compoundname>Spawnables::Projectiles::Lazer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <basecompoundref refid="interface_spawnables_1_1_projectiles_1_1_i_shootable" prot="public" virt="non-virtual">Spawnables.Projectiles.IShootable</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1a8af7b65ef9ed37737d56910509c74691" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float Spawnables.Projectiles.Lazer.MAX_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>MAX_LENGTH</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.MAX_LENGTH</qualifiedname>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="10" column="29" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1a4d0ef6b22dd523758a0dddd39e4e702b" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string Spawnables.Projectiles.Lazer.HITBOX_LAYER_NAME</definition>
+        <argsstring></argsstring>
+        <name>HITBOX_LAYER_NAME</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.HITBOX_LAYER_NAME</qualifiedname>
+        <initializer>= &quot;PlayerHitbox&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="11" column="30" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1a9bf4584038259eb018240ce057453cae" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Spawnables.Projectiles.Lazer.cooldown</definition>
+        <argsstring></argsstring>
+        <name>cooldown</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.cooldown</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="13" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1a362e84fce241717c7b5f667f800209a1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Spawnables.Projectiles.Lazer.telegraphDuration</definition>
+        <argsstring></argsstring>
+        <name>telegraphDuration</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.telegraphDuration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="14" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1aff4e6c290d21b01d09005f33fe41f181" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Spawnables.Projectiles.Lazer.releaseDuration</definition>
+        <argsstring></argsstring>
+        <name>releaseDuration</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.releaseDuration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="15" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1a8441c2011d78dc08ae8c91ab67c53858" prot="public" static="no" mutable="no">
+        <type>Material</type>
+        <definition>Material Spawnables.Projectiles.Lazer.telegraphMaterial</definition>
+        <argsstring></argsstring>
+        <name>telegraphMaterial</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.telegraphMaterial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="17" column="25" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1a46030a8f510888c49542aabd5759edb0" prot="public" static="no" mutable="no">
+        <type>Material</type>
+        <definition>Material Spawnables.Projectiles.Lazer.releaseMaterial</definition>
+        <argsstring></argsstring>
+        <name>releaseMaterial</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.releaseMaterial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="18" column="25" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1a3ea079e8cb2bb7f79d0bdf71ff6990b1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Spawnables.Projectiles.Lazer.telegraphWidth</definition>
+        <argsstring></argsstring>
+        <name>telegraphWidth</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.telegraphWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="19" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1adc09c637e8d157b01610b439c0510cdb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Spawnables.Projectiles.Lazer.releaseWidth</definition>
+        <argsstring></argsstring>
+        <name>releaseWidth</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.releaseWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="20" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1a5088c51372729d0fa87161774be8c374" prot="private" static="no" mutable="no">
+        <type>LineRenderer</type>
+        <definition>LineRenderer Spawnables.Projectiles.Lazer._lineRenderer</definition>
+        <argsstring></argsstring>
+        <name>_lineRenderer</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer._lineRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="22" column="30" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1a117d04eaf393fcc4ab706fe914f6eaab" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Spawnables.Projectiles.Lazer._playerHitboxLayer</definition>
+        <argsstring></argsstring>
+        <name>_playerHitboxLayer</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer._playerHitboxLayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="23" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1a6e9f1cd3faf40f89e6bacdc0d336797b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Spawnables.Projectiles.Lazer._emitting</definition>
+        <argsstring></argsstring>
+        <name>_emitting</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer._emitting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="25" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spawnables_1_1_projectiles_1_1_lazer_1a8f7bb8dbd2758db51110df99d6ddf034" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Spawnables.Projectiles.Lazer._timeOfLastShot</definition>
+        <argsstring></argsstring>
+        <name>_timeOfLastShot</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer._timeOfLastShot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="26" column="23" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_lazer_1afe684deb6c132d1a57848dd359460fee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.Lazer.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="29" column="14" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="29" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_lazer_1a2ce7830b9a274d9db9ded46aa07c6fc3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator Spawnables.Projectiles.Lazer.Telegraph</definition>
+        <argsstring>()</argsstring>
+        <name>Telegraph</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.Telegraph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="50" column="29" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="50" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_lazer_1a644a3d7f8399b4a6725b73f9eb99673d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IEnumerator</type>
+        <definition>IEnumerator Spawnables.Projectiles.Lazer.Release</definition>
+        <argsstring>()</argsstring>
+        <name>Release</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.Release</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="65" column="29" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="65" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_lazer_1a552489dab24dd6ce55d26789080c6cb3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.Lazer.UpdatePosition</definition>
+        <argsstring>()</argsstring>
+        <name>UpdatePosition</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.UpdatePosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="82" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="82" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_lazer_1ad5c6e1be4bb62fdc8e5c449e174e47f0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.Lazer.CheckDamages</definition>
+        <argsstring>()</argsstring>
+        <name>CheckDamages</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.CheckDamages</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="91" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="91" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_lazer_1a883cef930c220ac46a50ab8acc714b1e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.Lazer.ChangeAppearance</definition>
+        <argsstring>(Material material, float width)</argsstring>
+        <name>ChangeAppearance</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.ChangeAppearance</qualifiedname>
+        <param>
+          <type>Material</type>
+          <declname>material</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="105" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="105" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_lazer_1ac79372ab9b8b95a71131c4380b5fe637" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.Lazer.OnDrawGizmos</definition>
+        <argsstring>()</argsstring>
+        <name>OnDrawGizmos</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.OnDrawGizmos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="111" column="22" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="111" bodyend="115"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spawnables_1_1_projectiles_1_1_lazer_1a0ef18114ac207dc6872de820e0fc2288" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Spawnables.Projectiles.Lazer.OnShoot</definition>
+        <argsstring>()</argsstring>
+        <name>OnShoot</name>
+        <qualifiedname>Spawnables.Projectiles.Lazer.OnShoot</qualifiedname>
+        <reimplements refid="interface_spawnables_1_1_projectiles_1_1_i_shootable_1a423c156efd6ff3cbd303b405a80d306f">OnShoot</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="41" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="41" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>IShootable</label>
+        <link refid="interface_spawnables_1_1_projectiles_1_1_i_shootable"/>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.Projectiles.Lazer</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_lazer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>IShootable</label>
+        <link refid="interface_spawnables_1_1_projectiles_1_1_i_shootable"/>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>Spawnables.Projectiles.Lazer</label>
+        <link refid="class_spawnables_1_1_projectiles_1_1_lazer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" line="8" column="11" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables/Weapons/Shootables/Lazer.cs" bodystart="9" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a6e9f1cd3faf40f89e6bacdc0d336797b" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>_emitting</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a5088c51372729d0fa87161774be8c374" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>_lineRenderer</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a117d04eaf393fcc4ab706fe914f6eaab" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>_playerHitboxLayer</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a8f7bb8dbd2758db51110df99d6ddf034" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>_timeOfLastShot</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a883cef930c220ac46a50ab8acc714b1e" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>ChangeAppearance</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1ad5c6e1be4bb62fdc8e5c449e174e47f0" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>CheckDamages</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a9bf4584038259eb018240ce057453cae" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>cooldown</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a4d0ef6b22dd523758a0dddd39e4e702b" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>HITBOX_LAYER_NAME</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a8af7b65ef9ed37737d56910509c74691" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>MAX_LENGTH</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1ac79372ab9b8b95a71131c4380b5fe637" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>OnDrawGizmos</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a0ef18114ac207dc6872de820e0fc2288" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>OnShoot</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a644a3d7f8399b4a6725b73f9eb99673d" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>Release</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1aff4e6c290d21b01d09005f33fe41f181" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>releaseDuration</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a46030a8f510888c49542aabd5759edb0" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>releaseMaterial</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1adc09c637e8d157b01610b439c0510cdb" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>releaseWidth</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1afe684deb6c132d1a57848dd359460fee" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>Start</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a2ce7830b9a274d9db9ded46aa07c6fc3" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>Telegraph</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a362e84fce241717c7b5f667f800209a1" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>telegraphDuration</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a8441c2011d78dc08ae8c91ab67c53858" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>telegraphMaterial</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a3ea079e8cb2bb7f79d0bdf71ff6990b1" prot="public" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>telegraphWidth</name></member>
+      <member refid="class_spawnables_1_1_projectiles_1_1_lazer_1a552489dab24dd6ce55d26789080c6cb3" prot="private" virt="non-virtual"><scope>Spawnables::Projectiles::Lazer</scope><name>UpdatePosition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

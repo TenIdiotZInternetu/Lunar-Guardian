@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_default_namespace_1_1_serialization_1_1_score_data" kind="class" language="C#" prot="public">
+    <compoundname>DefaultNamespace::Serialization::ScoreData</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_default_namespace_1_1_serialization_1_1_score_data_1a242be1f030fa057d41934a65d6eacc67" prot="public" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string DefaultNamespace.Serialization.ScoreData.SAVE_PATH</definition>
+        <argsstring></argsstring>
+        <name>SAVE_PATH</name>
+        <qualifiedname>DefaultNamespace.Serialization.ScoreData.SAVE_PATH</qualifiedname>
+        <initializer>= &quot;scores.dat&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" line="13" column="29" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_default_namespace_1_1_serialization_1_1_score_data_1a20a0e21e495b04cc044b6af76d7fc946" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int DefaultNamespace.Serialization.ScoreData.MAX_SAVED_SCORES</definition>
+        <argsstring></argsstring>
+        <name>MAX_SAVED_SCORES</name>
+        <qualifiedname>DefaultNamespace.Serialization.ScoreData.MAX_SAVED_SCORES</qualifiedname>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" line="14" column="27" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_default_namespace_1_1_serialization_1_1_score_data_1a9577c8888be5443b46d2b7af90483c52" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int DefaultNamespace.Serialization.ScoreData.AUTHORS_PB</definition>
+        <argsstring></argsstring>
+        <name>AUTHORS_PB</name>
+        <qualifiedname>DefaultNamespace.Serialization.ScoreData.AUTHORS_PB</qualifiedname>
+        <initializer>= 2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" line="16" column="27" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_default_namespace_1_1_serialization_1_1_score_data_1adadb198b81bfec6ec388c391e9cc9e6d" prot="private" static="yes" mutable="no">
+        <type>const string</type>
+        <definition>const string DefaultNamespace.Serialization.ScoreData.AUTHOR</definition>
+        <argsstring></argsstring>
+        <name>AUTHOR</name>
+        <qualifiedname>DefaultNamespace.Serialization.ScoreData.AUTHOR</qualifiedname>
+        <initializer>= &quot;TIZI&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" line="17" column="30" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_default_namespace_1_1_serialization_1_1_score_data_1a6059eda160a9533d246164a90ad959d3" prot="public" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] DefaultNamespace.Serialization.ScoreData.names</definition>
+        <argsstring></argsstring>
+        <name>names</name>
+        <qualifiedname>DefaultNamespace.Serialization.ScoreData.names</qualifiedname>
+        <initializer>= new string[MAX_SAVED_SCORES]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" line="19" column="23" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_default_namespace_1_1_serialization_1_1_score_data_1a8563e791e691ed8e6fa3a8e0ed8ee849" prot="public" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] DefaultNamespace.Serialization.ScoreData.sortedScores</definition>
+        <argsstring></argsstring>
+        <name>sortedScores</name>
+        <qualifiedname>DefaultNamespace.Serialization.ScoreData.sortedScores</qualifiedname>
+        <initializer>= new int[MAX_SAVED_SCORES]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" line="20" column="20" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_default_namespace_1_1_serialization_1_1_score_data_1ad64291a18e8b57a46a4d1f5ac142c2aa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_default_namespace_1_1_serialization_1_1_score_data" kindref="compound">ScoreData</ref></type>
+        <definition>static ScoreData DefaultNamespace.Serialization.ScoreData.LoadScores</definition>
+        <argsstring>()</argsstring>
+        <name>LoadScores</name>
+        <qualifiedname>DefaultNamespace.Serialization.ScoreData.LoadScores</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" line="22" column="33" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" bodystart="22" bodyend="35"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_default_namespace_1_1_serialization_1_1_score_data_1acaad3df7e0bd9fd9fd44350796d9bca3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DefaultNamespace.Serialization.ScoreData.AddScore</definition>
+        <argsstring>(int score, string name)</argsstring>
+        <name>AddScore</name>
+        <qualifiedname>DefaultNamespace.Serialization.ScoreData.AddScore</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>score</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" line="37" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" bodystart="37" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_default_namespace_1_1_serialization_1_1_score_data_1ae96f9195917d6ee672d3a2e2f087a0ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DefaultNamespace.Serialization.ScoreData.AddScoreAndSave</definition>
+        <argsstring>(int score, string name)</argsstring>
+        <name>AddScoreAndSave</name>
+        <qualifiedname>DefaultNamespace.Serialization.ScoreData.AddScoreAndSave</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>score</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" line="59" column="21" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" bodystart="59" bodyend="63"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" line="11" column="11" bodyfile="Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization/ScoreData.cs" bodystart="12" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_default_namespace_1_1_serialization_1_1_score_data_1acaad3df7e0bd9fd9fd44350796d9bca3" prot="public" virt="non-virtual"><scope>DefaultNamespace::Serialization::ScoreData</scope><name>AddScore</name></member>
+      <member refid="class_default_namespace_1_1_serialization_1_1_score_data_1ae96f9195917d6ee672d3a2e2f087a0ea" prot="public" virt="non-virtual"><scope>DefaultNamespace::Serialization::ScoreData</scope><name>AddScoreAndSave</name></member>
+      <member refid="class_default_namespace_1_1_serialization_1_1_score_data_1adadb198b81bfec6ec388c391e9cc9e6d" prot="private" virt="non-virtual"><scope>DefaultNamespace::Serialization::ScoreData</scope><name>AUTHOR</name></member>
+      <member refid="class_default_namespace_1_1_serialization_1_1_score_data_1a9577c8888be5443b46d2b7af90483c52" prot="private" virt="non-virtual"><scope>DefaultNamespace::Serialization::ScoreData</scope><name>AUTHORS_PB</name></member>
+      <member refid="class_default_namespace_1_1_serialization_1_1_score_data_1ad64291a18e8b57a46a4d1f5ac142c2aa" prot="public" virt="non-virtual"><scope>DefaultNamespace::Serialization::ScoreData</scope><name>LoadScores</name></member>
+      <member refid="class_default_namespace_1_1_serialization_1_1_score_data_1a20a0e21e495b04cc044b6af76d7fc946" prot="private" virt="non-virtual"><scope>DefaultNamespace::Serialization::ScoreData</scope><name>MAX_SAVED_SCORES</name></member>
+      <member refid="class_default_namespace_1_1_serialization_1_1_score_data_1a6059eda160a9533d246164a90ad959d3" prot="public" virt="non-virtual"><scope>DefaultNamespace::Serialization::ScoreData</scope><name>names</name></member>
+      <member refid="class_default_namespace_1_1_serialization_1_1_score_data_1a242be1f030fa057d41934a65d6eacc67" prot="public" virt="non-virtual"><scope>DefaultNamespace::Serialization::ScoreData</scope><name>SAVE_PATH</name></member>
+      <member refid="class_default_namespace_1_1_serialization_1_1_score_data_1a8563e791e691ed8e6fa3a8e0ed8ee849" prot="public" virt="non-virtual"><scope>DefaultNamespace::Serialization::ScoreData</scope><name>sortedScores</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

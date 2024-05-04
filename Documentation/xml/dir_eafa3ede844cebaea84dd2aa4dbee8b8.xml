@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_eafa3ede844cebaea84dd2aa4dbee8b8" kind="dir">
+    <compoundname>Kodiky/Unity/Lunar Guardian/Assets/Scripts</compoundname>
+    <innerdir refid="dir_f94be6ace42b96f1fcb9560ac4042a6f">Kodiky/Unity/Lunar Guardian/Assets/Scripts/GameStates</innerdir>
+    <innerdir refid="dir_5978307bc3818379698b6668695d0f19">Kodiky/Unity/Lunar Guardian/Assets/Scripts/MovementPatterns</innerdir>
+    <innerdir refid="dir_45d9d605a41c40c2efaba5c902a368e9">Kodiky/Unity/Lunar Guardian/Assets/Scripts/PlayerScripts</innerdir>
+    <innerdir refid="dir_55c683271e8c58654a7fb91ef07b8f4b">Kodiky/Unity/Lunar Guardian/Assets/Scripts/Serialization</innerdir>
+    <innerdir refid="dir_112ce5a565d33a11be33b429bfe568c9">Kodiky/Unity/Lunar Guardian/Assets/Scripts/Spawnables</innerdir>
+    <innerdir refid="dir_4bb8b27f1672cf112477f9d12e95bf72">Kodiky/Unity/Lunar Guardian/Assets/Scripts/UI</innerdir>
+    <innerdir refid="dir_c59314bdb02f19eacd9df648360605e0">Kodiky/Unity/Lunar Guardian/Assets/Scripts/VFX</innerdir>
+    <innerfile refid="_credits_so_8cs">CreditsSo.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Kodiky/Unity/Lunar Guardian/Assets/Scripts/"/>
+  </compounddef>
+</doxygen>

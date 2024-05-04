@@ -1,0 +1,68 @@
+\doxysection{Entity.\+cs}
+\hypertarget{_entity_8cs_source}{}\label{_entity_8cs_source}\index{Scripts/Spawnables/Entity.cs@{Scripts/Spawnables/Entity.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_movement_patterns}{MovementPatterns}};}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }UnityEditor;}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }UnityEngine.SceneManagement;}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_spawnables}{Spawnables}}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00012}\mbox{\hyperlink{class_spawnables_1_1_entity}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Properties\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00019}\mbox{\hyperlink{class_spawnables_1_1_entity_a8f2052c5dc85bf163c873f99c285216a}{00019}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_spawnables_1_1_entity_a8f2052c5dc85bf163c873f99c285216a}{LifeTime}}\ =>\ Time.time\ -\/\ \_timeEnabled;}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00024}\mbox{\hyperlink{class_spawnables_1_1_entity_a3f4ec4fa85ad2f8f95ea03016cf311ba}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_spawnables_1_1_entity_a3f4ec4fa85ad2f8f95ea03016cf311ba}{MPLifeTime}}\ =>\ Time.time\ -\/\ \_timeMPChanged;}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00031}\mbox{\hyperlink{class_spawnables_1_1_entity_ae6c36b72f5f81ee019373bd0411a4fc2}{00031}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern}{MovementPattern}}\ \mbox{\hyperlink{class_spawnables_1_1_entity_ae6c36b72f5f81ee019373bd0411a4fc2}{movementPattern}};}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00036}\mbox{\hyperlink{class_spawnables_1_1_entity_a2d356d7b3c35033282092fae9a836766}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_spawnables_1_1_entity_a2d356d7b3c35033282092fae9a836766}{SpawnKey}};}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Private\ Fields\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_isMoving\ =\ \textcolor{keyword}{true};\ \ \ \ \ \ \textcolor{comment}{//\ True\ if\ the\ entity\ should\ be\ moved\ by\ the\ MovementPattern}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \_timeEnabled;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Time\ when\ the\ entity\ was\ enabled\ in\ seconds}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \_timeMPChanged;\ \ \ \ \ \ \ \textcolor{comment}{//\ Time\ when\ the\ MovementPattern\ was\ last\ set\ in\ seconds}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Unity\ Callbacks\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ OnEnable()}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \_timeEnabled\ =\ Time.time;}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_spawnables_1_1_entity_ae6c36b72f5f81ee019373bd0411a4fc2}{movementPattern}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_spawnables_1_1_entity_a145fca95d4ded24a179596d960ea54ef}{SetMovementPattern}}(\mbox{\hyperlink{class_spawnables_1_1_entity_ae6c36b72f5f81ee019373bd0411a4fc2}{movementPattern}});}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_spawnables_1_1_entity_ae6c36b72f5f81ee019373bd0411a4fc2}{movementPattern}}\ !=\ \textcolor{keyword}{null}\ \&\&\ \_isMoving)}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ transform.position\ =\ \mbox{\hyperlink{class_spawnables_1_1_entity_ae6c36b72f5f81ee019373bd0411a4fc2}{movementPattern}}.\mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern_a784a22d17e4193114212035e8eb6ac0f}{GetNextPosition}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Public\ Methods\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00070}\mbox{\hyperlink{class_spawnables_1_1_entity_a145fca95d4ded24a179596d960ea54ef}{00070}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_spawnables_1_1_entity_a145fca95d4ded24a179596d960ea54ef}{SetMovementPattern}}(\mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern}{MovementPattern}}\ newMovementPattern)}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_spawnables_1_1_entity_ae6c36b72f5f81ee019373bd0411a4fc2}{movementPattern}}\ =\ newMovementPattern;}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_spawnables_1_1_entity_ae6c36b72f5f81ee019373bd0411a4fc2}{movementPattern}}.\mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern_a04f0e6cf979d3b51e259545b3d33933d}{Initialize}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \_timeMPChanged\ =\ Time.time;}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00080}\mbox{\hyperlink{class_spawnables_1_1_entity_aa71998873389201c17d7773339f63ebe}{00080}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_spawnables_1_1_entity_aa71998873389201c17d7773339f63ebe}{StartMoving}}()\ =>\ \_isMoving\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00085}\mbox{\hyperlink{class_spawnables_1_1_entity_a147504656ad9822da09c2c6461aad435}{00085}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_spawnables_1_1_entity_a147504656ad9822da09c2c6461aad435}{StopMoving}}()\ =>\ \_isMoving\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_entity_8cs_source_l00087}00087\ \}}
+
+\end{DoxyCode}

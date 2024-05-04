@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_examples_1_1_path_follower" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::Examples::PathFollower</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_path_follower_1a3e5fa7ee8f7d749982ca79cfb1a570f5" prot="public" static="no" mutable="no">
+        <type>PathCreator</type>
+        <definition>PathCreator pathCreator</definition>
+        <argsstring></argsstring>
+        <name>pathCreator</name>
+        <qualifiedname>PathCreation.Examples.PathFollower.pathCreator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathFollower.cs" line="9" column="28" bodyfile="Tools/PathCreator/Examples/Scripts/PathFollower.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_path_follower_1a01f46aac8d88a2418a6494266c0a1f6c" prot="public" static="no" mutable="no">
+        <type>EndOfPathInstruction</type>
+        <definition>EndOfPathInstruction endOfPathInstruction</definition>
+        <argsstring></argsstring>
+        <name>endOfPathInstruction</name>
+        <qualifiedname>PathCreation.Examples.PathFollower.endOfPathInstruction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathFollower.cs" line="10" column="37" bodyfile="Tools/PathCreator/Examples/Scripts/PathFollower.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_path_follower_1a7f7e4724cf57d59513b39c5ecc81adc8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <qualifiedname>PathCreation.Examples.PathFollower.speed</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathFollower.cs" line="11" column="22" bodyfile="Tools/PathCreator/Examples/Scripts/PathFollower.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_path_follower_1aed8561007effc8b6a55c49c34f27e363" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float distanceTravelled</definition>
+        <argsstring></argsstring>
+        <name>distanceTravelled</name>
+        <qualifiedname>PathCreation.Examples.PathFollower.distanceTravelled</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathFollower.cs" line="12" column="15" bodyfile="Tools/PathCreator/Examples/Scripts/PathFollower.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_path_creation_1_1_examples_1_1_path_follower_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>PathCreation.Examples.PathFollower.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathFollower.cs" line="14" column="14" bodyfile="Tools/PathCreator/Examples/Scripts/PathFollower.cs" bodystart="14" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_examples_1_1_path_follower_1aec0783b5a136e042adcc47bae4fe5291" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>PathCreation.Examples.PathFollower.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathFollower.cs" line="22" column="14" bodyfile="Tools/PathCreator/Examples/Scripts/PathFollower.cs" bodystart="22" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_examples_1_1_path_follower_1aa637d7185bd9bbb75641dd22ffef743a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnPathChanged</definition>
+        <argsstring>()</argsstring>
+        <name>OnPathChanged</name>
+        <qualifiedname>PathCreation.Examples.PathFollower.OnPathChanged</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/PathFollower.cs" line="34" column="14" bodyfile="Tools/PathCreator/Examples/Scripts/PathFollower.cs" bodystart="34" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Examples/Scripts/PathFollower.cs" line="7" column="11" bodyfile="Tools/PathCreator/Examples/Scripts/PathFollower.cs" bodystart="8" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_examples_1_1_path_follower_1aed8561007effc8b6a55c49c34f27e363" prot="private" virt="non-virtual"><scope>PathCreation::Examples::PathFollower</scope><name>distanceTravelled</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_follower_1a01f46aac8d88a2418a6494266c0a1f6c" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathFollower</scope><name>endOfPathInstruction</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_follower_1aa637d7185bd9bbb75641dd22ffef743a" prot="private" virt="non-virtual"><scope>PathCreation::Examples::PathFollower</scope><name>OnPathChanged</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_follower_1a3e5fa7ee8f7d749982ca79cfb1a570f5" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathFollower</scope><name>pathCreator</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_follower_1a7f7e4724cf57d59513b39c5ecc81adc8" prot="public" virt="non-virtual"><scope>PathCreation::Examples::PathFollower</scope><name>speed</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_follower_1a07aaf1227e4d645f15e0a964f54ef291" prot="private" virt="non-virtual"><scope>PathCreation::Examples::PathFollower</scope><name>Start</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_follower_1aec0783b5a136e042adcc47bae4fe5291" prot="private" virt="non-virtual"><scope>PathCreation::Examples::PathFollower</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

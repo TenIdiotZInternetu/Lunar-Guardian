@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_game_manager_1_1_game_state" kind="class" language="C#" prot="public" abstract="yes">
+    <compoundname>GameManager::GameState</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <derivedcompoundref refid="class_game_manager_1_1_game_over_state" prot="public" virt="non-virtual">GameOverState</derivedcompoundref>
+    <derivedcompoundref refid="class_game_manager_1_1_paused_state" prot="public" virt="non-virtual">PausedState</derivedcompoundref>
+    <derivedcompoundref refid="class_game_manager_1_1_playing_state" prot="public" virt="non-virtual">PlayingState</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_manager_1_1_game_state_1ad02ad005cb741028d1049d7731cb4c27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeToThisState</definition>
+        <argsstring>()</argsstring>
+        <name>ChangeToThisState</name>
+        <qualifiedname>GameManager.GameState.ChangeToThisState</qualifiedname>
+        <briefdescription>
+<para>Takes actions needed to define this state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/GameState.cs" line="15" column="30"/>
+        <referencedby refid="class_game_manager_1_1_game_manager_1a0e7b307d6a6d5a4a71cb7fea674c0387" compoundref="_game_manager_8cs" startline="63" endline="70">GameManager.ChangeState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_manager_1_1_game_state_1a4e3e4431ac6f41ff62706d0e3d2f6878" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LeaveThisState</definition>
+        <argsstring>()</argsstring>
+        <name>LeaveThisState</name>
+        <qualifiedname>GameManager.GameState.LeaveThisState</qualifiedname>
+        <briefdescription>
+<para>Undoes changes made by this state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/GameManager/GameState.cs" line="20" column="30"/>
+        <referencedby refid="class_game_manager_1_1_game_manager_1a0e7b307d6a6d5a4a71cb7fea674c0387" compoundref="_game_manager_8cs" startline="63" endline="70">GameManager.ChangeState</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A state governed by the <ref refid="namespace_game_manager" kindref="compound">GameManager</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>GameOverState</label>
+        <link refid="class_game_manager_1_1_game_over_state"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PausedState</label>
+        <link refid="class_game_manager_1_1_paused_state"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PlayingState</label>
+        <link refid="class_game_manager_1_1_playing_state"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>GameState</label>
+        <link refid="class_game_manager_1_1_game_state"/>
+      </node>
+    </inheritancegraph>
+    <location file="Scripts/GameManager/GameState.cs" line="8" column="21" bodyfile="Scripts/GameManager/GameState.cs" bodystart="9" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_game_manager_1_1_game_state_1ad02ad005cb741028d1049d7731cb4c27" prot="public" virt="non-virtual"><scope>GameManager::GameState</scope><name>ChangeToThisState</name></member>
+      <member refid="class_game_manager_1_1_game_state_1a4e3e4431ac6f41ff62706d0e3d2f6878" prot="public" virt="non-virtual"><scope>GameManager::GameState</scope><name>LeaveThisState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

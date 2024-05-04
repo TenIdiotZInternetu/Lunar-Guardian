@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_editor_1_1_mouse_utility" kind="class" language="C#" prot="public">
+    <compoundname>PathCreationEditor::MouseUtility</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_path_creation_editor_1_1_mouse_utility_1a9fe8e9d18a5fc7b3ea49db9e6db8b751" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 GetMouseWorldPosition</definition>
+        <argsstring>(PathSpace space, float depthFor3DSpace=10)</argsstring>
+        <name>GetMouseWorldPosition</name>
+        <qualifiedname>PathCreationEditor.MouseUtility.GetMouseWorldPosition</qualifiedname>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>depthFor3DSpace</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Determines mouse position in world. If PathSpace is xy/xz, the position will be locked to that plane. If PathSpace is xyz, then depthFor3DSpace will be used as distance from scene camera. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Editor/Helper/MouseUtility.cs" line="13" column="31" bodyfile="Tools/PathCreator/Core/Editor/Helper/MouseUtility.cs" bodystart="13" bodyend="40"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Editor/Helper/MouseUtility.cs" line="7" column="19" bodyfile="Tools/PathCreator/Core/Editor/Helper/MouseUtility.cs" bodystart="8" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_path_creation_editor_1_1_mouse_utility_1a9fe8e9d18a5fc7b3ea49db9e6db8b751" prot="public" virt="non-virtual"><scope>PathCreationEditor::MouseUtility</scope><name>GetMouseWorldPosition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

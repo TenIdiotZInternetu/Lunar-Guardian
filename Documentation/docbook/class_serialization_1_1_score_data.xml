@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_serialization_1_1_score_data" xml:lang="en-US">
+<title>ScoreData Class Reference</title>
+<indexterm><primary>ScoreData</primary></indexterm>
+<para>
+
+<para>Serializable data of highest achieved scores. </para>
+ 
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_serialization_1_1_score_data_1a886e39b99d6ac17e2906dc536227ecbe">AddScore</link> (int score, string name)</para>
+
+<para>Checks if the score is high enough to be saved and adds it to the array of scores in the correct position. If yes the score at the lowest position will be lost! </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_serialization_1_1_score_data_1a02238a4e4ab88f5e93908f6dd4c098da">AddScoreAndSave</link> (int score, string name)</para>
+
+<para>Checks if the score is high enough to be saved and adds it to the array of scores in the correct position. If yes the score at the lowest position will be lost! Then the data are saved to the scores save file. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_serialization_1_1_score_data">ScoreData</link> <link linkend="_class_serialization_1_1_score_data_1a74cf69194846ff3656b5e1377c39cbda">LoadScores</link> ()</para>
+
+<para>Loads data from the scores save file. Create a new save file if it doesn&apos;t exist. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_serialization_1_1_score_data_1adc99decbd8f765a5af197c2c88211e4e"/>string[] <emphasis role="strong">names</emphasis> = new string[MAX_SAVED_SCORES]</para>
+
+<para>Setters of the scores sorted by score achieved. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_serialization_1_1_score_data_1ade11c9990d17f7c70b0869f760e0d5cf"/>int[] <emphasis role="strong">sortedScores</emphasis> = new int[MAX_SAVED_SCORES]</para>
+
+<para>Highest achieved scores sorted from highest to lowest. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_serialization_1_1_score_data_1a69d2493e8a51b7aba3af2e2fe74d8d37"/>int <emphasis role="strong">savedScoresCount</emphasis> = 0</para>
+
+<para>Number of saved scores. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__score_data_8cs_source_1l00014">14</link> of file <link linkend="__score_data_8cs_source">ScoreData.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_serialization_1_1_score_data_1a74cf69194846ff3656b5e1377c39cbda"/><section>
+    <title>LoadScores()</title>
+<indexterm><primary>LoadScores</primary><secondary>ScoreData</secondary></indexterm>
+<indexterm><primary>ScoreData</primary><secondary>LoadScores</secondary></indexterm>
+<para><computeroutput>static <link linkend="_class_serialization_1_1_score_data">ScoreData</link> LoadScores ( )<computeroutput>[static]</computeroutput></computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>Object with values retrieved from the scores save file </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__score_data_8cs_source_1l00047">47</link> of file <link linkend="__score_data_8cs_source">ScoreData.cs</link>.</para>
+</section>
+<anchor xml:id="_class_serialization_1_1_score_data_1a886e39b99d6ac17e2906dc536227ecbe"/><section>
+    <title>AddScore()</title>
+<indexterm><primary>AddScore</primary><secondary>ScoreData</secondary></indexterm>
+<indexterm><primary>ScoreData</primary><secondary>AddScore</secondary></indexterm>
+<para><computeroutput>void AddScore (int score, string name)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>score</entry><entry>
+<para>Score achieved </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name</entry><entry>
+<para>Setter of the score </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__score_data_8cs_source_1l00068">68</link> of file <link linkend="__score_data_8cs_source">ScoreData.cs</link>.</para>
+</section>
+<anchor xml:id="_class_serialization_1_1_score_data_1a02238a4e4ab88f5e93908f6dd4c098da"/><section>
+    <title>AddScoreAndSave()</title>
+<indexterm><primary>AddScoreAndSave</primary><secondary>ScoreData</secondary></indexterm>
+<indexterm><primary>ScoreData</primary><secondary>AddScoreAndSave</secondary></indexterm>
+<para><computeroutput>void AddScoreAndSave (int score, string name)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>score</entry><entry>
+<para>Achieved score </para>
+</entry>
+                            </row>
+                            <row>
+<entry>name</entry><entry>
+<para>Setter of the score </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__score_data_8cs_source_1l00098">98</link> of file <link linkend="__score_data_8cs_source">ScoreData.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/Serialization/ScoreData.cs</section>
+</section>

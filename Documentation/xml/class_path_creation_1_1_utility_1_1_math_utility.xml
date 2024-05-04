@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_utility_1_1_math_utility" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::Utility::MathUtility</compoundname>
+    <innerclass refid="class_path_creation_1_1_utility_1_1_math_utility_1_1_pos_rot_scale" prot="private">PathCreation::Utility::MathUtility::PosRotScale</innerclass>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1acd983d2826d9157530709cac59622396" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PosRotScale</type>
+        <definition>static PosRotScale LockTransformToSpace</definition>
+        <argsstring>(Transform t, PathSpace space)</argsstring>
+        <name>LockTransformToSpace</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.LockTransformToSpace</qualifiedname>
+        <param>
+          <type>Transform</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="7" column="28" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="7" bodyend="23"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1a843ed68d322b2b78d7b40b61e6d7c6ec" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 TransformPoint</definition>
+        <argsstring>(Vector3 p, Transform t, PathSpace space)</argsstring>
+        <name>TransformPoint</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.TransformPoint</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="25" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="25" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1acd8a21c53fd7f9b1ec693bbb68e7d45c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 InverseTransformPoint</definition>
+        <argsstring>(Vector3 p, Transform t, PathSpace space)</argsstring>
+        <name>InverseTransformPoint</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.InverseTransformPoint</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="32" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1a5cf9426374b354c418692ca544b929eb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 TransformVector</definition>
+        <argsstring>(Vector3 p, Transform t, PathSpace space)</argsstring>
+        <name>TransformVector</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.TransformVector</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="39" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="39" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1a1e4a01edf97458af9a6819111e34ebfc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 InverseTransformVector</definition>
+        <argsstring>(Vector3 p, Transform t, PathSpace space)</argsstring>
+        <name>InverseTransformVector</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.InverseTransformVector</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="46" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="46" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1a19a10489c5b270fd7a40aacafe3163a1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 TransformDirection</definition>
+        <argsstring>(Vector3 p, Transform t, PathSpace space)</argsstring>
+        <name>TransformDirection</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.TransformDirection</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="53" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="53" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1a8b281af6a406ac1bc158ff91b933f142" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 InverseTransformDirection</definition>
+        <argsstring>(Vector3 p, Transform t, PathSpace space)</argsstring>
+        <name>InverseTransformDirection</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.InverseTransformDirection</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Transform</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>PathSpace</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="60" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="60" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1ac2ae4167305e01fcde20e80668c6d226" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool LineSegmentsIntersect</definition>
+        <argsstring>(Vector2 a1, Vector2 a2, Vector2 b1, Vector2 b2)</argsstring>
+        <name>LineSegmentsIntersect</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.LineSegmentsIntersect</qualifiedname>
+        <param>
+          <type>Vector2</type>
+          <declname>a1</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>a2</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>b1</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>b2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="67" column="28" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="67" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1adb188ba2f76949a52c1d001759797526" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool LinesIntersect</definition>
+        <argsstring>(Vector2 a1, Vector2 a2, Vector2 a3, Vector2 a4)</argsstring>
+        <name>LinesIntersect</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.LinesIntersect</qualifiedname>
+        <param>
+          <type>Vector2</type>
+          <declname>a1</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>a2</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>a3</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>a4</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="77" column="28" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1ae7e49266a7df6af7cb39feaec4d5d22e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector2</type>
+        <definition>static Vector2 PointOfLineLineIntersection</definition>
+        <argsstring>(Vector2 a1, Vector2 a2, Vector2 a3, Vector2 a4)</argsstring>
+        <name>PointOfLineLineIntersection</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.PointOfLineLineIntersection</qualifiedname>
+        <param>
+          <type>Vector2</type>
+          <declname>a1</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>a2</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>a3</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>a4</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="81" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="81" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1a7118d0f65de371ce4526fbd5d47ab6f2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector2</type>
+        <definition>static Vector2 ClosestPointOnLineSegment</definition>
+        <argsstring>(Vector2 p, Vector2 a, Vector2 b)</argsstring>
+        <name>ClosestPointOnLineSegment</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.ClosestPointOnLineSegment</qualifiedname>
+        <param>
+          <type>Vector2</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="93" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="93" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1af449017bd617c5f5cc40917a48e473d0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3</type>
+        <definition>static Vector3 ClosestPointOnLineSegment</definition>
+        <argsstring>(Vector3 p, Vector3 a, Vector3 b)</argsstring>
+        <name>ClosestPointOnLineSegment</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.ClosestPointOnLineSegment</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="105" column="31" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="105" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1afb3e9467d19fe5787709e6c100fb0a1c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SideOfLine</definition>
+        <argsstring>(Vector2 a, Vector2 b, Vector2 c)</argsstring>
+        <name>SideOfLine</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.SideOfLine</qualifiedname>
+        <param>
+          <type>Vector2</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="117" column="27" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="117" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1af81579bd5405cc07f1eb3822308050d2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float MinAngle</definition>
+        <argsstring>(Vector3 a, Vector3 b, Vector3 c)</argsstring>
+        <name>MinAngle</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.MinAngle</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>returns the smallest angle between ABC. Never greater than 180 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="122" column="29" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="122" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1a1d10dc68d8d0bb8cdc7e17c0b5f2f487" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool PointInTriangle</definition>
+        <argsstring>(Vector2 a, Vector2 b, Vector2 c, Vector2 p)</argsstring>
+        <name>PointInTriangle</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.PointInTriangle</qualifiedname>
+        <param>
+          <type>Vector2</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="126" column="28" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="126" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_utility_1_1_math_utility_1a674cd7147ecf937618e861e8d22d7fc6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool PointsAreClockwise</definition>
+        <argsstring>(Vector2[] points)</argsstring>
+        <name>PointsAreClockwise</name>
+        <qualifiedname>PathCreation.Utility.MathUtility.PointsAreClockwise</qualifiedname>
+        <param>
+          <type>Vector2[]</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="133" column="28" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="133" bodyend="141"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" line="5" column="19" bodyfile="Tools/PathCreator/Core/Runtime/Utility/MathUtility.cs" bodystart="5" bodyend="161"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a7118d0f65de371ce4526fbd5d47ab6f2" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>ClosestPointOnLineSegment</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1af449017bd617c5f5cc40917a48e473d0" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>ClosestPointOnLineSegment</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a8b281af6a406ac1bc158ff91b933f142" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>InverseTransformDirection</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1acd8a21c53fd7f9b1ec693bbb68e7d45c" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>InverseTransformPoint</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a1e4a01edf97458af9a6819111e34ebfc" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>InverseTransformVector</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1ac2ae4167305e01fcde20e80668c6d226" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>LineSegmentsIntersect</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1adb188ba2f76949a52c1d001759797526" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>LinesIntersect</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1acd983d2826d9157530709cac59622396" prot="private" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>LockTransformToSpace</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1af81579bd5405cc07f1eb3822308050d2" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>MinAngle</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a1d10dc68d8d0bb8cdc7e17c0b5f2f487" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>PointInTriangle</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1ae7e49266a7df6af7cb39feaec4d5d22e" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>PointOfLineLineIntersection</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a674cd7147ecf937618e861e8d22d7fc6" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>PointsAreClockwise</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1afb3e9467d19fe5787709e6c100fb0a1c" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>SideOfLine</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a19a10489c5b270fd7a40aacafe3163a1" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>TransformDirection</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a843ed68d322b2b78d7b40b61e6d7c6ec" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>TransformPoint</name></member>
+      <member refid="class_path_creation_1_1_utility_1_1_math_utility_1a5cf9426374b354c418692ca544b929eb" prot="public" virt="non-virtual"><scope>PathCreation::Utility::MathUtility</scope><name>TransformVector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

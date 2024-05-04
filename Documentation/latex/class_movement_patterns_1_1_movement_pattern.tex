@@ -1,0 +1,60 @@
+\doxysection{Movement\+Pattern Class Reference}
+\hypertarget{class_movement_patterns_1_1_movement_pattern}{}\label{class_movement_patterns_1_1_movement_pattern}\index{MovementPattern@{MovementPattern}}
+
+
+Defines calculations for the position of an entity in the next frame based on its properties.  
+
+
+Inheritance diagram for Movement\+Pattern\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.898305cm]{class_movement_patterns_1_1_movement_pattern}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern_a04f0e6cf979d3b51e259545b3d33933d}{Initialize}} (\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Sets parameters of the movement pattern based on the entity\textquotesingle{}s state. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_movement_patterns_1_1_movement_pattern_a784a22d17e4193114212035e8eb6ac0f}{Get\+Next\+Position}} (\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Calculates the position of the entity in the next frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_movement_pattern_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_movement_pattern_8cs_source}{Movement\+Pattern.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_movement_patterns_1_1_movement_pattern_a04f0e6cf979d3b51e259545b3d33933d}\label{class_movement_patterns_1_1_movement_pattern_a04f0e6cf979d3b51e259545b3d33933d} 
+\index{MovementPattern@{MovementPattern}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!MovementPattern@{MovementPattern}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}}}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & Entity to adjust the parameters to \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_movement_patterns_1_1_movement_pattern_a784a22d17e4193114212035e8eb6ac0f}\label{class_movement_patterns_1_1_movement_pattern_a784a22d17e4193114212035e8eb6ac0f} 
+\index{MovementPattern@{MovementPattern}!GetNextPosition@{GetNextPosition}}
+\index{GetNextPosition@{GetNextPosition}!MovementPattern@{MovementPattern}}
+\doxysubsubsection{\texorpdfstring{GetNextPosition()}{GetNextPosition()}}
+{\footnotesize\ttfamily Vector3 Get\+Next\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_spawnables_1_1_entity}{Entity}}}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & Entity of which position is calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The calculated position 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Movement\+Patterns/Movement\+Pattern.\+cs\end{DoxyCompactItemize}

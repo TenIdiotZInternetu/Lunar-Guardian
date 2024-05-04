@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_player_scripts_1_1_player_status" xml:lang="en-US">
+<title>PlayerStatus Class Reference</title>
+<indexterm><primary>PlayerStatus</primary></indexterm>
+<para>
+
+<para>Records state of player&apos;s resources and provides methods to change them. </para>
+ 
+</para>
+<para>
+Inherits MonoBehaviour.</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1"/>enum <link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">ResourceType</link> </para>
+
+<para>Type of resource maintained by the PlayerStatus. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02"/>delegate void <emphasis role="strong">ChangedValueListener</emphasis> (float value)</para>
+
+<para>Method signature for events that are invoked upon a resource change. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_status_1a372de693ad40b3f42839c8ec6ac845f4"/>void <emphasis role="strong">Reset</emphasis> ()</para>
+
+<para>Sets all resources to their starting values. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_scripts_1_1_player_status_1af41d014aba881a7ec30a9cddaf9e0b3a">ChangeHealth</link> (int amount)</para>
+
+<para>Increases health. If health is already at max, increases score instead. When health reaches 0, invokes GameOverEvent. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_scripts_1_1_player_status_1a93b8c4270f1e17b9624d0dd78b593e98">ChangeBombs</link> (int amount)</para>
+
+<para>Increases bombs held by a given amount. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_scripts_1_1_player_status_1abd2e8bf17dab02c7807a61f445c930bf">ChangePower</link> (int amount)</para>
+
+<para>Increases power and changes power level if POWER_LEVELS requirement is met. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45">ChangeScore</link> (int amount)</para>
+
+<para>Increases score, rewards extra health if requirement are met. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_player_scripts_1_1_player_status_1a48bde3035abda30d99b282527cdd1bf0">ChangeScoreMultiplier</link> (int amount)</para>
+
+<para>Changes score multiplier, awards bonus score if max multiplier is reached. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_status_1a012607dd27a930aa340ffa15fd32cb28"/>void <emphasis role="strong">ResetScoreMultiplier</emphasis> ()</para>
+
+<para>Sets Score Multiplier back to 1. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_player_scripts_1_1_player_status_1ab468d4779fc1a9b54ce99dc71555c3fa">Subscribe</link> (<link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">ResourceType</link> resourceType, <link linkend="_class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02">ChangedValueListener</link> listener)</para>
+
+<para>Subscribes a listener to an appropriate resource change event. </para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_player_scripts_1_1_player_status_1a3fd9672e4dfe8040bd6f7011ef2e0f86">ChangeResource</link> (<link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">ResourceType</link> resourceType, int amount)</para>
+
+<para>Change a resource by a given amount. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_status_1aeac2eae8e304f20bc75eb574b2df8964"/>static <link linkend="_class_player_scripts_1_1_player_status">PlayerStatus</link> <emphasis role="strong">Instance</emphasis><computeroutput> [get, private set]</computeroutput>
+</para>
+
+<para>Singleton instance of the PlayerStatus. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_status_1a18f932a93b76c23809add1bf070899bf"/>static Action <emphasis role="strong">GameOverEvent</emphasis></para>
+
+<para>Invoked when the player&apos;s health reaches less than 0. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_status_1adf08962e6157777feae044d2ad6c1ca5"/>int <emphasis role="strong">maxMultiplierScoreBonus</emphasis> = 100</para>
+
+<para>Score gained for catching Multiplier pickups while at max multiplier. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_status_1a7336b6cd8782708a2ffaa32505111436"/>int <emphasis role="strong">healthUpRequirementIncrement</emphasis> = 1000000</para>
+
+<para>Amount of score required to gain extra health. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_player_scripts_1_1_player_status_1a003c51d423b7d53fcc827089df709e5e"/>int <emphasis role="strong">healthOverflowBonus</emphasis> = 20000</para>
+
+<para>Score gained for gaining health while already at max health. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__player_status_8cs_source_1l00011">11</link> of file <link linkend="__player_status_8cs_source">PlayerStatus.cs</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_player_scripts_1_1_player_status_1ab468d4779fc1a9b54ce99dc71555c3fa"/><section>
+    <title>Subscribe()</title>
+<indexterm><primary>Subscribe</primary><secondary>PlayerStatus</secondary></indexterm>
+<indexterm><primary>PlayerStatus</primary><secondary>Subscribe</secondary></indexterm>
+<para><computeroutput>static void Subscribe (<link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">ResourceType</link> resourceType, <link linkend="_class_player_scripts_1_1_player_status_1ab970fa018b4d8649819392b0ce20eb02">ChangedValueListener</link> listener)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>resourceType</entry><entry>
+<para>Type of resource the listener subscribes to </para>
+</entry>
+                            </row>
+                            <row>
+<entry>listener</entry><entry>
+<para>Method that responses to triggering of the appropriate event </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_status_8cs_source_1l00125">125</link> of file <link linkend="__player_status_8cs_source">PlayerStatus.cs</link>.</para>
+</section>
+<anchor xml:id="_class_player_scripts_1_1_player_status_1a3fd9672e4dfe8040bd6f7011ef2e0f86"/><section>
+    <title>ChangeResource()</title>
+<indexterm><primary>ChangeResource</primary><secondary>PlayerStatus</secondary></indexterm>
+<indexterm><primary>PlayerStatus</primary><secondary>ChangeResource</secondary></indexterm>
+<para><computeroutput>static void ChangeResource (<link linkend="_class_player_scripts_1_1_player_status_1a8571efa4409be32e28abf3ea74a0dbb1">ResourceType</link> resourceType, int amount)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>resourceType</entry><entry>
+<para>Resource to change </para>
+</entry>
+                            </row>
+                            <row>
+<entry>amount</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_status_8cs_source_1l00138">138</link> of file <link linkend="__player_status_8cs_source">PlayerStatus.cs</link>.</para>
+</section>
+<anchor xml:id="_class_player_scripts_1_1_player_status_1af41d014aba881a7ec30a9cddaf9e0b3a"/><section>
+    <title>ChangeHealth()</title>
+<indexterm><primary>ChangeHealth</primary><secondary>PlayerStatus</secondary></indexterm>
+<indexterm><primary>PlayerStatus</primary><secondary>ChangeHealth</secondary></indexterm>
+<para><computeroutput>void ChangeHealth (int amount)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>amount</entry><entry>
+<para>Amount of health to be changed </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_status_8cs_source_1l00179">179</link> of file <link linkend="__player_status_8cs_source">PlayerStatus.cs</link>.</para>
+</section>
+<anchor xml:id="_class_player_scripts_1_1_player_status_1a93b8c4270f1e17b9624d0dd78b593e98"/><section>
+    <title>ChangeBombs()</title>
+<indexterm><primary>ChangeBombs</primary><secondary>PlayerStatus</secondary></indexterm>
+<indexterm><primary>PlayerStatus</primary><secondary>ChangeBombs</secondary></indexterm>
+<para><computeroutput>void ChangeBombs (int amount)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>amount</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_status_8cs_source_1l00198">198</link> of file <link linkend="__player_status_8cs_source">PlayerStatus.cs</link>.</para>
+</section>
+<anchor xml:id="_class_player_scripts_1_1_player_status_1abd2e8bf17dab02c7807a61f445c930bf"/><section>
+    <title>ChangePower()</title>
+<indexterm><primary>ChangePower</primary><secondary>PlayerStatus</secondary></indexterm>
+<indexterm><primary>PlayerStatus</primary><secondary>ChangePower</secondary></indexterm>
+<para><computeroutput>void ChangePower (int amount)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>amount</entry><entry>
+<para>Amount of health to be changed </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_status_8cs_source_1l00209">209</link> of file <link linkend="__player_status_8cs_source">PlayerStatus.cs</link>.</para>
+</section>
+<anchor xml:id="_class_player_scripts_1_1_player_status_1ab2e34c964f801ca064cdcd5aaf430c45"/><section>
+    <title>ChangeScore()</title>
+<indexterm><primary>ChangeScore</primary><secondary>PlayerStatus</secondary></indexterm>
+<indexterm><primary>PlayerStatus</primary><secondary>ChangeScore</secondary></indexterm>
+<para><computeroutput>void ChangeScore (int amount)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>amount</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_status_8cs_source_1l00232">232</link> of file <link linkend="__player_status_8cs_source">PlayerStatus.cs</link>.</para>
+</section>
+<anchor xml:id="_class_player_scripts_1_1_player_status_1a48bde3035abda30d99b282527cdd1bf0"/><section>
+    <title>ChangeScoreMultiplier()</title>
+<indexterm><primary>ChangeScoreMultiplier</primary><secondary>PlayerStatus</secondary></indexterm>
+<indexterm><primary>PlayerStatus</primary><secondary>ChangeScoreMultiplier</secondary></indexterm>
+<para><computeroutput>void ChangeScoreMultiplier (int amount)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>amount</entry><entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__player_status_8cs_source_1l00249">249</link> of file <link linkend="__player_status_8cs_source">PlayerStatus.cs</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Scripts/PlayerScripts/PlayerStatus.cs</section>
+</section>

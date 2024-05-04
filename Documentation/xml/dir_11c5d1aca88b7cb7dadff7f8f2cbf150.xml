@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_11c5d1aca88b7cb7dadff7f8f2cbf150" kind="dir">
+    <compoundname>Tools/PathCreator/Examples/Scripts</compoundname>
+    <innerdir refid="dir_15d4082597dd64286d84c179f48a6b50">Tools/PathCreator/Examples/Scripts/Editor</innerdir>
+    <innerfile refid="_generate_path_example_8cs">GeneratePathExample.cs</innerfile>
+    <innerfile refid="_path_follower_8cs">PathFollower.cs</innerfile>
+    <innerfile refid="_path_placer_8cs">PathPlacer.cs</innerfile>
+    <innerfile refid="_path_scene_tool_8cs">PathSceneTool.cs</innerfile>
+    <innerfile refid="_path_spawner_8cs">PathSpawner.cs</innerfile>
+    <innerfile refid="_road_mesh_creator_8cs">RoadMeshCreator.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Examples/Scripts/"/>
+  </compounddef>
+</doxygen>

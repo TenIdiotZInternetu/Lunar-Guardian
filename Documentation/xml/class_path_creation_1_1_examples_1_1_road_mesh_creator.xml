@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_path_creation_1_1_examples_1_1_road_mesh_creator" kind="class" language="C#" prot="public">
+    <compoundname>PathCreation::Examples::RoadMeshCreator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">PathSceneTool</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1aa3f0ee8c04a40f6f68d6044d212d12f7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float roadWidth</definition>
+        <argsstring></argsstring>
+        <name>roadWidth</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.roadWidth</qualifiedname>
+        <initializer>= .4f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="8" column="22" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a9bddad7a0f5d61aefe107acf47f09549" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float thickness</definition>
+        <argsstring></argsstring>
+        <name>thickness</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.thickness</qualifiedname>
+        <initializer>= .15f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="10" column="22" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a8cf8b7cd8b99238dcd27fa53a693abf0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool flattenSurface</definition>
+        <argsstring></argsstring>
+        <name>flattenSurface</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.flattenSurface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="11" column="21" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a2bd3aa616d5073d2c31c5f07fdbaf1a5" prot="public" static="no" mutable="no">
+        <type>Material</type>
+        <definition>Material roadMaterial</definition>
+        <argsstring></argsstring>
+        <name>roadMaterial</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.roadMaterial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="14" column="25" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1acc36a22094e2d0f7ea884f0561f43182" prot="public" static="no" mutable="no">
+        <type>Material</type>
+        <definition>Material undersideMaterial</definition>
+        <argsstring></argsstring>
+        <name>undersideMaterial</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.undersideMaterial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="15" column="25" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1aaf71c124e11296b474d10d977ed12372" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float textureTiling</definition>
+        <argsstring></argsstring>
+        <name>textureTiling</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.textureTiling</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="16" column="22" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1ad64c2a0380b50417b48b90665cab8c27" prot="private" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject meshHolder</definition>
+        <argsstring></argsstring>
+        <name>meshHolder</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.meshHolder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="19" column="20" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a55b9cf66da3908331a67b34643b73cc4" prot="private" static="no" mutable="no">
+        <type>MeshFilter</type>
+        <definition>MeshFilter meshFilter</definition>
+        <argsstring></argsstring>
+        <name>meshFilter</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.meshFilter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="21" column="20" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1ace59c8e64ecb09d141278da03ac01795" prot="private" static="no" mutable="no">
+        <type>MeshRenderer</type>
+        <definition>MeshRenderer meshRenderer</definition>
+        <argsstring></argsstring>
+        <name>meshRenderer</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.meshRenderer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="22" column="22" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a7b3d47f25e4b65dc13c94392a3da8076" prot="private" static="no" mutable="no">
+        <type>Mesh</type>
+        <definition>Mesh mesh</definition>
+        <argsstring></argsstring>
+        <name>mesh</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.mesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="23" column="14" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a33561722c7f3a8c711f902daafe6ee0c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void PathUpdated</definition>
+        <argsstring>()</argsstring>
+        <name>PathUpdated</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.PathUpdated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="25" column="33" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="25" bodyend="31"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a0b6dc66bda04d2c617addce0f57e4f8a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateRoadMesh</definition>
+        <argsstring>()</argsstring>
+        <name>CreateRoadMesh</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.CreateRoadMesh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="33" column="14" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="33" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1af2ebb8d799d9ef7a121734cd215d150b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssignMeshComponents</definition>
+        <argsstring>()</argsstring>
+        <name>AssignMeshComponents</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.AssignMeshComponents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="121" column="14" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="121" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a68c39815f079aceed7cc109464fc99c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssignMaterials</definition>
+        <argsstring>()</argsstring>
+        <name>AssignMaterials</name>
+        <qualifiedname>PathCreation.Examples.RoadMeshCreator.AssignMaterials</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="147" column="14" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="147" bodyend="152"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" line="6" column="11" bodyfile="Tools/PathCreator/Examples/Scripts/RoadMeshCreator.cs" bodystart="6" bodyend="154"/>
+    <listofallmembers>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a68c39815f079aceed7cc109464fc99c8" prot="private" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>AssignMaterials</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1af2ebb8d799d9ef7a121734cd215d150b" prot="private" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>AssignMeshComponents</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a85625f1795d00ceac2bf81b4f37dc762" prot="public" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>autoUpdate</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a0b6dc66bda04d2c617addce0f57e4f8a" prot="private" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>CreateRoadMesh</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a8cf8b7cd8b99238dcd27fa53a693abf0" prot="public" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>flattenSurface</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a7b3d47f25e4b65dc13c94392a3da8076" prot="private" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>mesh</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a55b9cf66da3908331a67b34643b73cc4" prot="private" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>meshFilter</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1ad64c2a0380b50417b48b90665cab8c27" prot="private" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>meshHolder</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1ace59c8e64ecb09d141278da03ac01795" prot="private" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>meshRenderer</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a1be5f5b23715843a7bfc4f2ebd6c7894" prot="protected" virt="virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>OnDestroy</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a672894ed718b5d8f0fffcf806e162321" prot="public" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>onDestroyed</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a3eb739a083bdb5ade4c81c07af150bd7" prot="protected" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>path</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a3e5fa7ee8f7d749982ca79cfb1a570f5" prot="public" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>pathCreator</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a33561722c7f3a8c711f902daafe6ee0c" prot="protected" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>PathUpdated</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a2bd3aa616d5073d2c31c5f07fdbaf1a5" prot="public" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>roadMaterial</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1aa3f0ee8c04a40f6f68d6044d212d12f7" prot="public" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>roadWidth</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1aaf71c124e11296b474d10d977ed12372" prot="public" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>textureTiling</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1a9bddad7a0f5d61aefe107acf47f09549" prot="public" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>thickness</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_path_scene_tool_1a62f2d6c011abac5a7b991a8561c60b5a" prot="public" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>TriggerUpdate</name></member>
+      <member refid="class_path_creation_1_1_examples_1_1_road_mesh_creator_1acc36a22094e2d0f7ea884f0561f43182" prot="public" virt="non-virtual"><scope>PathCreation::Examples::RoadMeshCreator</scope><name>undersideMaterial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
