@@ -1,29 +1,14 @@
-# README #
+# How to play
+Head into the releases tab and choose a version of your liking.
+Extract the content of the .zip file and run LunarGuardian
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## Controls ##
+* Move - WASD / Arrows
+* Shoot - K / Z
+* Deploy Bomb - L / X
+* Focus - Shift
 
-### What is this repository for? ###
+Navigate the menus using mouse
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+## Commits
+For more comprehensive commit history look at my [BitBucket](https://bitbucket.org/lunarguardian/lunarguardian/commits/?page=3). 
